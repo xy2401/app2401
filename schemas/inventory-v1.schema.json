@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-atlas.example/metadata/v1/inventory-v1.schema.json",
+  "title": "软件源地图 Inventory v1",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "system", "packages"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "system": {
+      "type": "object",
+      "required": ["os", "arch"],
+      "properties": {
+        "os": { "enum": ["windows", "macos", "linux", "unknown"] },
+        "arch": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["manager", "name", "version"],
+        "properties": {
+          "manager": { "enum": ["scoop", "chocolatey", "homebrew"] },
+          "collection": { "type": "string" },
+          "name": { "type": "string", "minLength": 1 },
+          "version": { "type": "string" },
+          "scope": { "enum": ["user", "system", "unknown"] },
+          "path": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
