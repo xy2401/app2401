@@ -126,23 +126,24 @@ function parseTsv(text, versionId, kind) {
   });
 }
 
-function parseRpmJsonLines(text, versionId) {
-  return text.split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line)).map((entry) => packageRecord({
-    name: entry.name,
-    epoch: entry.epoch,
-    version: entry.version,
-    release: entry.release,
-    architecture: entry.architecture,
-    summary: entry.summary,
-    description: entry.description,
-    homepage: entry.homepage,
-    license: entry.license,
-    repository: entry.repository,
-    downloadSize: entry.downloadSize,
-    sourcePackage: entry.sourcePackage,
+function parseRpmRecords(text, versionId) {
+  return text.split("\x1e").map((record) => record.replace(/^\r?\n/, "")).filter(Boolean).map((record) => record.split("\x1f")).filter((fields) => fields[0]).map((fields) => packageRecord({
+    name: fields[0],
+    epoch: fields[1],
+    version: fields[2],
+    release: fields[3],
+    architecture: fields[4],
+    summary: fields[5],
+    description: fields[6],
+    homepage: fields[7],
+    license: fields[8],
+    repository: fields[9],
+    downloadSize: fields[10],
+    installedSize: fields[11],
+    sourcePackage: fields[12],
     dependencies: {
-      requires: unique(entry.requires), recommends: unique(entry.recommends), suggests: unique(entry.suggests),
-      provides: unique(entry.provides), conflicts: unique(entry.conflicts), replaces: unique(entry.replaces),
+      requires: depList(fields[13]), recommends: depList(fields[14]), suggests: depList(fields[15]),
+      provides: depList(fields[16]), conflicts: depList(fields[17]), replaces: depList(fields[18]),
     },
   }, versionId));
 }
@@ -201,15 +202,16 @@ if (source.family === "debian") packages = parseApt(await optionalText(join(rawD
 else if (source.family === "alpine") packages = parseApk(await optionalText(join(rawDir, "packages.txt")), versionId);
 else if (source.family === "arch") packages = parseTsv(await optionalText(join(rawDir, "packages.tsv")), versionId, "arch");
 else if (source.id === "opensuse-leap") packages = parseZypper(await optionalText(join(rawDir, "packages.xml")), versionId);
-else packages = parseRpmJsonLines(await optionalText(join(rawDir, "packages.jsonl")), versionId);
+else packages = parseRpmRecords(await optionalText(join(rawDir, "packages.records")), versionId);
 
 const deduped = new Map();
 for (const item of packages) if (item.name) deduped.set([item.repository, item.name, item.architecture].join("\u0000"), item);
 packages = [...deduped.values()].sort((a, b) => compareText(a.id, b.id));
-const repositories = (await optionalText(join(rawDir, "repositories.tsv"))).split(/\r?\n/).filter(Boolean).map((line) => {
+const repositoryJson = await optionalText(join(rawDir, "repositories.json"));
+const repositories = (repositoryJson ? JSON.parse(repositoryJson).filter((entry) => entry.is_enabled !== false).map((entry) => ({ id: entry.id, name: entry.name || entry.id, ...(entry.base_url?.[0] || entry.mirrorlist || entry.metalink ? { url: entry.base_url?.[0] || entry.mirrorlist || entry.metalink } : {}), ...(entry.revision ? { revision: String(entry.revision) } : {}) })) : (await optionalText(join(rawDir, "repositories.tsv"))).split(/\r?\n/).filter(Boolean).map((line) => {
   const [id, name, url, revision] = line.split("\t");
   return { id, name: name || id, ...(url ? { url } : {}), ...(revision ? { revision } : {}) };
-}).sort((a, b) => compareText(a.id, b.id));
+})).sort((a, b) => compareText(a.id, b.id));
 const comps = await parseComps();
 
 await writeJson(resolve(args.output), {

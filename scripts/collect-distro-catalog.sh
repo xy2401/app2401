@@ -58,48 +58,26 @@ case "$FAMILY:$DISTRO" in
     mkdir -p "$RAW_DIR/export"
     docker run --rm --platform linux/amd64 -v "$RAW_DIR/export:/out" "$IMAGE" bash -lc '
       set -euo pipefail
-      dnf -q makecache --refresh
-      dnf -q group list --hidden >/dev/null || true
-      python3 - <<'"'"'PY'"'"' > /out/packages.jsonl
-import dnf
-import json
-
-base = dnf.Base()
-base.read_all_repos()
-base.fill_sack(load_system_repo=False)
-
-def values(value):
-    return sorted({str(item) for item in (value or [])})
-
-for package in base.sack.query().available():
-    print(json.dumps({
-        "name": package.name,
-        "epoch": str(package.epoch or ""),
-        "version": package.version or "",
-        "release": package.release or "",
-        "architecture": package.arch or "",
-        "summary": package.summary or "",
-        "description": package.description or "",
-        "homepage": package.url or "",
-        "license": package.license or "",
-        "repository": package.reponame or "",
-        "downloadSize": int(package.downloadsize or 0),
-        "sourcePackage": package.sourcerpm or "",
-        "requires": values(package.requires),
-        "recommends": values(package.recommends),
-        "suggests": values(package.suggests),
-        "provides": values(package.provides),
-        "conflicts": values(package.conflicts),
-        "replaces": values(package.obsoletes),
-    }, ensure_ascii=False, separators=(",", ":")))
-PY
-      dnf -q repolist -v | awk -F":" "/^Repo-id|^Repo-name|^Repo-baseurl/{sub(/^[[:space:]]+/, \"\", \$2); printf \"%s%s\", \$2, (++n % 3 ? \"\\t\" : \"\\n\")}" > /out/repositories.tsv || true
+      if command -v dnf5 >/dev/null; then DNF=dnf5; elif command -v dnf >/dev/null; then DNF=dnf; else echo "Neither dnf5 nor dnf is installed" >&2; exit 127; fi
+      echo "Using $DNF for repository metadata" >&2
+      if [[ "$DNF" == dnf ]] && ! "$DNF" -q repoquery --help >/dev/null 2>&1; then "$DNF" -y install dnf-plugins-core >/dev/null; fi
+      "$DNF" -q makecache --refresh
+      "$DNF" -q group list --hidden >/dev/null || true
+      unit_separator=$'"'"'\x1f'"'"'
+      record_separator=$'"'"'\x1e'"'"'
+      query_format="%{name}${unit_separator}%{epoch}${unit_separator}%{version}${unit_separator}%{release}${unit_separator}%{arch}${unit_separator}%{summary}${unit_separator}%{description}${unit_separator}%{url}${unit_separator}%{license}${unit_separator}%{repoid}${unit_separator}%{downloadsize}${unit_separator}%{installsize}${unit_separator}%{sourcerpm}${unit_separator}%{requires}${unit_separator}%{recommends}${unit_separator}%{suggests}${unit_separator}%{provides}${unit_separator}%{conflicts}${unit_separator}%{obsoletes}${record_separator}"
+      "$DNF" -q repoquery --available --queryformat "$query_format" > /out/packages.records
+      if [[ "$DNF" == dnf5 ]]; then
+        "$DNF" repo info --json > /out/repositories.json
+      else
+        "$DNF" -q repolist -v | awk -F":" "/^Repo-id|^Repo-name|^Repo-baseurl/{sub(/^[[:space:]]+/, \"\", \$2); printf \"%s%s\", \$2, (++n % 3 ? \"\\t\" : \"\\n\")}" > /out/repositories.tsv || true
+      fi
       cp /etc/os-release /out/os-release
       i=0
       while IFS= read -r file; do
-        if [[ "$file" == *.gz ]]; then gzip -dc "$file" > "/out/comps-$i.xml"; elif [[ "$file" == *.xz ]]; then xz -dc "$file" > "/out/comps-$i.xml"; else cp "$file" "/out/comps-$i.xml"; fi
+        if [[ "$file" == *.gz ]]; then gzip -dc "$file" > "/out/comps-$i.xml"; elif [[ "$file" == *.xz ]]; then xz -dc "$file" > "/out/comps-$i.xml"; elif [[ "$file" == *.zck ]]; then if command -v unzck >/dev/null; then unzck -c "$file" > "/out/comps-$i.xml"; else continue; fi; else cp "$file" "/out/comps-$i.xml"; fi
         i=$((i + 1))
-      done < <(find /var/cache/dnf -type f \( -iname "*comps*.xml" -o -iname "*comps*.xml.gz" -o -iname "*comps*.xml.xz" \) 2>/dev/null)
+      done < <(find /var/cache -type f \( -iname "*comps*.xml" -o -iname "*comps*.xml.gz" -o -iname "*comps*.xml.xz" -o -iname "*comps*.xml.zck" \) 2>/dev/null)
       chmod -R a+rwx /out
     '
     cp -R "$RAW_DIR/export/." "$RAW_DIR/"

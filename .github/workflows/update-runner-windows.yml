@@ -15,18 +15,18 @@ concurrency:
 jobs:
   collect:
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         runner:
           - windows-2022
           - windows-2025
     runs-on: ${{ matrix.runner }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Collect installed software
         shell: pwsh
         run: ./scripts/collect-runner-windows.ps1 -Output "out/${{ matrix.runner }}.json" -RunnerLabel "${{ matrix.runner }}" -Strict
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: runner-windows-${{ matrix.runner }}
           path: out/${{ matrix.runner }}.json
@@ -36,17 +36,17 @@ jobs:
     needs: collect
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v7
         with:
           pattern: runner-windows-*
           path: out
           merge-multiple: true
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
       - run: npm ci
       - name: Merge and validate

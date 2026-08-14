@@ -15,7 +15,7 @@ concurrency:
 jobs:
   collect:
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         distro:
           - ubuntu-24.04
@@ -27,15 +27,15 @@ jobs:
           - opensuse-leap
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
       - run: npm ci
       - name: Read official repository metadata
         run: bash scripts/collect-distro-catalog.sh --distro "${{ matrix.distro }}" --output "out/${{ matrix.distro }}.json" --strict
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: distro-${{ matrix.distro }}
           path: out/${{ matrix.distro }}.json
@@ -45,17 +45,17 @@ jobs:
     needs: collect
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v7
         with:
           pattern: distro-*
           path: out
           merge-multiple: true
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
       - run: npm ci
       - name: Build static shards and validate

@@ -15,20 +15,17 @@ concurrency:
 jobs:
   collect:
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         runner:
           - ubuntu-22.04
           - ubuntu-24.04
     runs-on: ${{ matrix.runner }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
+      - uses: actions/checkout@v6
       - name: Collect installed software
         run: bash scripts/collect-runner-linux.sh --output "out/${{ matrix.runner }}.json" --runner-label "${{ matrix.runner }}" --strict
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: runner-linux-${{ matrix.runner }}
           path: out/${{ matrix.runner }}.json
@@ -38,17 +35,17 @@ jobs:
     needs: collect
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v7
         with:
           pattern: runner-linux-*
           path: out
           merge-multiple: true
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
       - run: npm ci
       - name: Merge and validate

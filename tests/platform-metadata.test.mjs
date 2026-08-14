@@ -40,7 +40,7 @@ test("normalizes all distribution adapters and preserves DNF comps semantics", a
       await write(join(raw, "packages.txt"), "Package: atlas-demo\nVersion: 1:2.3-4\nArchitecture: amd64\nMaintainer: Example <example@example.invalid>\nDescription: Demo package\n A readable long description.\nHomepage: https://example.invalid/atlas\nSection: utils\nDepends: libc6 (>= 2)\nProvides: atlas-command\n\n");
     } else if (["fedora", "rocky-9"].includes(id)) {
       await write(join(raw, "os-release"), `NAME="${id}"\nVERSION_ID="9"\n`);
-      await write(join(raw, "packages.jsonl"), `${JSON.stringify({ name: "atlas-demo", epoch: "1", version: "2.3", release: "4", architecture: "x86_64", summary: "Demo package", description: "Detailed RPM description", homepage: "https://example.invalid/atlas", license: "MIT", repository: "official", downloadSize: 1024, sourcePackage: "atlas-demo", requires: ["libc.so.6"], recommends: ["weak-dep"], suggests: ["suggested"], provides: ["atlas-command"], conflicts: ["old-atlas"], replaces: ["atlas-old"] })}\n`);
+      await write(join(raw, "packages.records"), ["atlas-demo", "1", "2.3", "4", "x86_64", "Demo package", "Detailed RPM description", "https://example.invalid/atlas", "MIT", "official", "1024", "2048", "atlas-demo-2.3-4.src.rpm", "libc.so.6", "weak-dep", "suggested", "atlas-command", "old-atlas", "atlas-old"].join("\x1f") + "\x1e");
       if (id === "fedora") await write(join(raw, "comps-0.xml"), `<?xml version="1.0" encoding="UTF-8"?>
 <comps>
   <group>
