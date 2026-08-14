@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-source-atlas.example/schemas/distribution-collections-v1.schema.json",
+  "title": "Distribution-maintained software collections",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "distributionId",
+    "collections"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "distributionId": {
+      "type": "string"
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "sourceId",
+          "type",
+          "names",
+          "descriptions",
+          "visible",
+          "default",
+          "installTarget",
+          "members",
+          "children"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "environment",
+              "task",
+              "pattern",
+              "group",
+              "metapackage"
+            ]
+          },
+          "names": {
+            "$ref": "#/$defs/localized"
+          },
+          "descriptions": {
+            "$ref": "#/$defs/localized"
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "default": {
+            "type": "boolean"
+          },
+          "installTarget": {
+            "type": "string"
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "name",
+                "role"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "role": {
+                  "enum": [
+                    "mandatory",
+                    "default",
+                    "optional",
+                    "conditional"
+                  ]
+                },
+                "condition": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "role"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "role": {
+                  "enum": [
+                    "default",
+                    "optional"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "localized": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

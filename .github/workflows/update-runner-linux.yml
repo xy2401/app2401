@@ -50,14 +50,14 @@ jobs:
       - run: npm ci
       - name: Merge and validate
         run: |
-          node scripts/merge-runner-environments.mjs --platform linux --input out --output public/metadata/environments/v1/linux.json
+          node scripts/merge-runner-environments.mjs --platform linux --input out --output public/metadata/environments/v1/github-actions
           npm run metadata:schemas
           npm run metadata:platform:verify
       - name: Commit current snapshot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/metadata/environments/v1
+          git add public/metadata/environments/v1/github-actions
           git diff --cached --quiet && exit 0
           git commit -m "data: update Linux runner metadata"
           for attempt in 1 2 3; do

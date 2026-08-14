@@ -32,12 +32,16 @@ test("normalizes all distribution adapters and preserves DNF comps semantics", a
   const temporary = await mkdtemp(join(tmpdir(), "atlas-distros-"));
   const normalized = join(temporary, "normalized");
   await mkdir(normalized);
-  const ids = ["ubuntu-24.04", "debian-stable", "fedora", "rocky-9", "arch", "alpine", "opensuse-leap"];
-  for (const id of ids) {
-    const raw = await rawFixture(temporary, id);
+  const sources = [
+    ["ubuntu-24.04", "ubuntu-24.04"], ["debian-stable", "debian-stable"], ["fedora", "fedora-latest"], ["rocky-9", "rocky-9"],
+    ["arch", "arch-latest"], ["alpine", "alpine-latest"], ["opensuse-leap", "opensuse-leap-latest"],
+  ];
+  for (const [id, slug] of sources) {
+    const raw = await rawFixture(temporary, slug);
     if (["ubuntu-24.04", "debian-stable"].includes(id)) {
       await write(join(raw, "os-release"), `NAME="${id}"\nVERSION_ID="1"\n`);
       await write(join(raw, "packages.txt"), "Package: atlas-demo\nVersion: 1:2.3-4\nArchitecture: amd64\nMaintainer: Example <example@example.invalid>\nDescription: Demo package\n A readable long description.\nHomepage: https://example.invalid/atlas\nSection: utils\nDepends: libc6 (>= 2)\nProvides: atlas-command\n\n");
+      await write(join(raw, "tasks.tsv"), "developer-tools\tDeveloper tools\tatlas-demo,gcc\n");
     } else if (["fedora", "rocky-9"].includes(id)) {
       await write(join(raw, "os-release"), `NAME="${id}"\nVERSION_ID="9"\n`);
       await write(join(raw, "packages.records"), ["atlas-demo", "1", "2.3", "4", "x86_64", "Demo package", "Detailed RPM description", "https://example.invalid/atlas", "MIT", "official", "1024", "2048", "atlas-demo-2.3-4.src.rpm", "libc.so.6", "weak-dep", "suggested", "atlas-command", "old-atlas", "atlas-old"].join("\x1f") + "\x1e");
@@ -51,7 +55,7 @@ test("normalizes all distribution adapters and preserves DNF comps semantics", a
     <uservisible>true</uservisible>
     <default>false</default>
     <packagelist>
-      <packagereq type="mandatory">gcc</packagereq>
+      <packagereq type="mandatory">atlas-demo</packagereq>
       <packagereq type="default">git</packagereq>
       <packagereq type="optional">cmake</packagereq>
       <packagereq type="conditional" requires="rust">cargo</packagereq>
@@ -73,6 +77,7 @@ test("normalizes all distribution adapters and preserves DNF comps semantics", a
     } else if (id === "arch") {
       await write(join(raw, "os-release"), "NAME=Arch Linux\nVERSION_ID=rolling\n");
       await write(join(raw, "packages.tsv"), "atlas-demo\t2.3-4\tx86_64\tDemo package\thttps://example.invalid/atlas\tMIT\tcore\t2048\t1024\tglibc\toptional-tool\tatlas-command\told-atlas\tatlas-old\n");
+      await write(join(raw, "groups.tsv"), "development\tatlas-demo\n");
     } else if (id === "alpine") {
       await write(join(raw, "os-release"), "NAME=Alpine Linux\nVERSION_ID=3.22\n");
       await write(join(raw, "packages.txt"), "P:atlas-demo\nV:2.3-r0\nA:x86_64\nT:Demo package\nU:https://example.invalid/atlas\nL:MIT\nm:Example\no:atlas-demo\nI:2048\nS:1024\nD:musl so:libc.musl-x86_64.so.1\np:cmd:atlas=2.3-r0\n\n");
@@ -87,25 +92,42 @@ test("normalizes all distribution adapters and preserves DNF comps semantics", a
   </search-result>
 </stream>
 `);
+      await write(join(raw, "patterns.xml"), `<?xml version="1.0" encoding="UTF-8"?>
+<stream>
+  <search-result>
+    <solvable-list>
+      <solvable name="devel_basis" edition="1" arch="noarch" repository="repo-oss" summary="Base Development" />
+    </solvable-list>
+  </search-result>
+</stream>
+`);
     }
-    run("normalize-distro.mjs", ["--distro", id, "--raw-dir", raw, "--output", join(normalized, `${id}.json`), "--generated-at", generatedAt]);
+    run("normalize-distro.mjs", ["--distro", id, "--raw-dir", raw, "--output", join(normalized, `${slug}.json`), "--generated-at", generatedAt]);
   }
 
-  const fedora = JSON.parse(await readFile(join(normalized, "fedora.json"), "utf8"));
+  const fedora = JSON.parse(await readFile(join(normalized, "fedora-latest.json"), "utf8"));
   assert.equal(fedora.groups[0].names.zh_CN, "开发工具");
   assert.deepEqual(fedora.groups[0].packages.map((item) => item.type), ["mandatory", "default", "optional", "conditional"]);
   assert.deepEqual(fedora.environments[0].groups, ["development-tools"]);
   assert.deepEqual(fedora.environments[0].optionalGroups, ["editors"]);
+  const ubuntu = JSON.parse(await readFile(join(normalized, "ubuntu-24.04.json"), "utf8"));
+  assert.equal(ubuntu.collections[0].id, "developer-tools");
+  const arch = JSON.parse(await readFile(join(normalized, "arch-latest.json"), "utf8"));
+  assert.equal(arch.collections[0].members[0].name, "atlas-demo");
+  const opensuse = JSON.parse(await readFile(join(normalized, "opensuse-leap-latest.json"), "utf8"));
+  assert.equal(opensuse.collections[0].type, "pattern");
 
   const output = join(temporary, "public-metadata");
-  run("build-distro-snapshot.mjs", ["--input", normalized, "--output", output, "--generated-at", generatedAt]);
-  const current = JSON.parse(await readFile(join(output, "current.json"), "utf8"));
-  const manifest = JSON.parse(await readFile(join(output, current.manifest), "utf8"));
-  assert.equal(manifest.distributions.length, 7);
-  assert.equal(Object.keys(manifest.distributions[0].files.details.shards).length, 256);
-  assert.equal((await readdir(join(output, "snapshots", current.snapshotId, "fedora", "packages", "details"))).length, 256);
-  const currentBody = await readFile(join(output, "current.json"), "utf8");
-  assert.equal(currentBody, `${JSON.stringify(current, null, 2)}\n`);
+  run("build-distro-catalog.mjs", ["--input", normalized, "--output", output, "--generated-at", generatedAt]);
+  const index = JSON.parse(await readFile(join(output, "index.json"), "utf8"));
+  assert.equal(index.distributions.length, 7);
+  assert.equal(Object.keys(index.distributions[0].files.details.shards).length, 256);
+  assert.ok(index.distributions.some((entry) => entry.collectionCount > 0));
+  assert.ok(index.distributions.find((entry) => entry.id === "fedora-latest").curatedPackageCount > 0);
+  assert.equal(JSON.parse(await readFile(join(output, "fedora-latest", "collections.json"), "utf8")).collections[0].type, "environment");
+  assert.equal((await readdir(join(output, "fedora-latest", "packages", "details"))).length, 256);
+  const indexBody = await readFile(join(output, "index.json"), "utf8");
+  assert.equal(indexBody, `${JSON.stringify(index, null, 2)}\n`);
 });
 
 test("environment schema rejects machine identity fields", async () => {
@@ -118,7 +140,7 @@ test("environment schema rejects machine identity fields", async () => {
     generatedAt,
     provider: "github-actions",
     platform: "linux",
-    images: [{ runnerLabel: "ubuntu-24.04", imageVersion: "1", os: { name: "Ubuntu", version: "24.04", arch: "amd64" }, sourceRefs: [], collectors: [], software: [], hostname: "private-host" }],
+    image: { runnerLabel: "ubuntu-24.04", imageVersion: "1", os: { name: "Ubuntu", version: "24.04", arch: "amd64" }, sourceRefs: [], collectors: [], software: [], hostname: "private-host" },
   };
   assert.equal(validate(document), false);
 });

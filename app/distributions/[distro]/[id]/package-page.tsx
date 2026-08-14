@@ -23,13 +23,13 @@ export function DistributionPackagePage({ distro, id }: { distro: string; id: st
   useEffect(() => {
     let active = true;
     const shard = params.get("shard") || id.slice(0, 2);
-    void fetch("/metadata/distributions/v1/current.json", { cache: "no-store" }).then((response) => response.json() as Promise<{ snapshotId: string }>).then(async (current) => {
-      const response = await fetch(`/metadata/distributions/v1/snapshots/${current.snapshotId}/${distro}/packages/details/${shard}.json`);
+    void Promise.resolve().then(async () => {
+      const response = await fetch(`/metadata/distributions/v1/${distro}/packages/details/${shard}.json`);
       if (!response.ok) throw new Error("无法读取软件详情分片。");
       return response.json() as Promise<{ items: Package[] }>;
     }).then((document) => {
       const found = document.items.find((entry) => entry.id === id);
-      if (!found) throw new Error("这个软件不在当前发行版快照中。");
+      if (!found) throw new Error("这个软件不在当前发行版数据中。");
       if (active) setItem(found);
     }).catch((cause) => { if (active) setError(cause instanceof Error ? cause.message : String(cause)); });
     return () => { active = false; };

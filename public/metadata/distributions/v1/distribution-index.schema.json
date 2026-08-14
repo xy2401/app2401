@@ -6,25 +6,82 @@
   "additionalProperties": false,
   "required": [
     "schemaVersion",
-    "snapshotId",
     "generatedAt",
-    "manifest"
+    "revision",
+    "distributions"
   ],
   "properties": {
     "schemaVersion": {
       "const": "1.0.0"
     },
-    "snapshotId": {
-      "type": "string",
-      "minLength": 1
-    },
     "generatedAt": {
       "type": "string",
       "format": "date-time"
     },
-    "manifest": {
+    "revision": {
       "type": "string",
-      "pattern": "^snapshots/[^/]+/manifest\\.json$"
+      "pattern": "^[a-f0-9]{12}$"
+    },
+    "distributions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "canonicalId",
+          "label",
+          "distribution",
+          "image",
+          "packageCount",
+          "groupCount",
+          "environmentCount",
+          "collectionCount",
+          "curatedPackageCount",
+          "files"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9.-]+$"
+          },
+          "canonicalId": {
+            "type": "string",
+            "pattern": "^[a-z0-9.-]+$"
+          },
+          "label": {
+            "type": "string"
+          },
+          "distribution": {
+            "type": "object"
+          },
+          "image": {
+            "type": "object"
+          },
+          "packageCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "groupCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "environmentCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "collectionCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "curatedPackageCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "files": {
+            "type": "object"
+          }
+        }
+      }
     }
   }
 }

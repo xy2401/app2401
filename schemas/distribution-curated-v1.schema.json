@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-source-atlas.example/schemas/distribution-curated-v1.schema.json",
+  "title": "Distribution curated package index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "distributionId",
+    "packages"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "distributionId": {
+      "type": "string"
+    },
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "version",
+          "architecture",
+          "summary",
+          "category",
+          "repository",
+          "shard",
+          "reasons"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{20}$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "architecture": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string"
+          },
+          "shard": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{2}$"
+          },
+          "reasons": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "collectionId",
+                "role"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "collection-target",
+                    "collection-member"
+                  ]
+                },
+                "collectionId": {
+                  "type": "string"
+                },
+                "role": {
+                  "enum": [
+                    "mandatory",
+                    "default",
+                    "optional",
+                    "conditional"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

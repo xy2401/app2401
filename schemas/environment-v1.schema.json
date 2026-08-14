@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://software-source-atlas.example/schemas/environment-v1.schema.json",
-  "title": "GitHub runner environment snapshot",
+  "title": "GitHub Actions runner environment",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -9,7 +9,7 @@
     "generatedAt",
     "provider",
     "platform",
-    "images"
+    "image"
   ],
   "properties": {
     "schemaVersion": {
@@ -28,11 +28,8 @@
         "linux"
       ]
     },
-    "images": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/image"
-      }
+    "image": {
+      "$ref": "#/$defs/image"
     }
   },
   "$defs": {

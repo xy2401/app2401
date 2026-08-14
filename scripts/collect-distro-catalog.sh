@@ -23,13 +23,14 @@ if [[ -z "$DISTRO" || -z "$OUTPUT" ]]; then
   exit 2
 fi
 
-readarray -t SOURCE < <(node -e 'const c=require(process.argv[1]);const d=c.distributions.find(x=>x.id===process.argv[2]);if(!d)process.exit(2);console.log(d.image);console.log(d.family)' "$PROJECT_ROOT/data/distribution-sources.json" "$DISTRO")
-if ((${#SOURCE[@]} != 2)); then echo "Unsupported distribution: $DISTRO" >&2; exit 2; fi
-IMAGE="${SOURCE[0]}"
-FAMILY="${SOURCE[1]}"
+readarray -t SOURCE < <(node -e 'const c=require(process.argv[1]);const d=c.distributions.find(x=>x.slug===process.argv[2]||x.id===process.argv[2]);if(!d)process.exit(2);console.log(d.id);console.log(d.image);console.log(d.family)' "$PROJECT_ROOT/data/distribution-sources.json" "$DISTRO")
+if ((${#SOURCE[@]} != 3)); then echo "Unsupported distribution: $DISTRO" >&2; exit 2; fi
+SOURCE_ID="${SOURCE[0]}"
+IMAGE="${SOURCE[1]}"
+FAMILY="${SOURCE[2]}"
 
 if [[ -n "$FIXTURE" ]]; then
-  node "$SCRIPT_DIR/normalize-distro.mjs" --distro "$DISTRO" --raw-dir "$FIXTURE" --output "$OUTPUT" --generated-at "$GENERATED_AT"
+  node "$SCRIPT_DIR/normalize-distro.mjs" --distro "$SOURCE_ID" --raw-dir "$FIXTURE" --output "$OUTPUT" --generated-at "$GENERATED_AT"
   exit
 fi
 
@@ -41,7 +42,7 @@ trap cleanup EXIT
 docker pull --platform linux/amd64 "$IMAGE" >/dev/null
 DIGEST="$(docker image inspect "$IMAGE" --format '{{index .RepoDigests 0}}' 2>/dev/null || true)"
 
-case "$FAMILY:$DISTRO" in
+case "$FAMILY:$SOURCE_ID" in
   debian:*)
     mkdir -p "$RAW_DIR/export"
     docker run --rm --platform linux/amd64 -v "$RAW_DIR/export:/out" "$IMAGE" sh -lc '
@@ -49,6 +50,16 @@ case "$FAMILY:$DISTRO" in
       apt-get update -qq
       apt-cache dumpavail > /out/packages.txt
       apt-get indextargets --format "\$(IDENTIFIER)\t\$(SITE)\t\$(RELEASE)" | sort -u > /out/repositories.tsv
+      if apt-get install -y -qq --no-install-recommends tasksel >/dev/null 2>&1; then
+        tasksel --list-tasks 2>/dev/null | while read -r state id description; do
+          [ -n "$id" ] || continue
+          packages="$(tasksel --task-packages "$id" 2>/dev/null | paste -sd, - || true)"
+          description="$(printf "%s" "$description" | tr "\t" " ")"
+          printf "%s\t%s\t%s\n" "$id" "$description" "$packages"
+        done > /out/tasks.tsv
+      else
+        : > /out/tasks.tsv
+      fi
       cp /etc/os-release /out/os-release
       chmod -R a+rwx /out
     '
@@ -63,6 +74,7 @@ case "$FAMILY:$DISTRO" in
       if [[ "$DNF" == dnf ]] && ! "$DNF" -q repoquery --help >/dev/null 2>&1; then "$DNF" -y install dnf-plugins-core >/dev/null; fi
       "$DNF" -q makecache --refresh
       "$DNF" -q group list --hidden >/dev/null || true
+      if ! command -v zstd >/dev/null && ! command -v unzstd >/dev/null; then "$DNF" -y install zstd >/dev/null 2>&1 || true; fi
       unit_separator=$'"'"'\x1f'"'"'
       record_separator=$'"'"'\x1e'"'"'
       query_format="%{name}${unit_separator}%{epoch}${unit_separator}%{version}${unit_separator}%{release}${unit_separator}%{arch}${unit_separator}%{summary}${unit_separator}%{description}${unit_separator}%{url}${unit_separator}%{license}${unit_separator}%{repoid}${unit_separator}%{downloadsize}${unit_separator}%{installsize}${unit_separator}%{sourcerpm}${unit_separator}%{requires}${unit_separator}%{recommends}${unit_separator}%{suggests}${unit_separator}%{provides}${unit_separator}%{conflicts}${unit_separator}%{obsoletes}${record_separator}"
@@ -75,15 +87,16 @@ case "$FAMILY:$DISTRO" in
       cp /etc/os-release /out/os-release
       i=0
       while IFS= read -r file; do
-        if [[ "$file" == *.gz ]]; then gzip -dc "$file" > "/out/comps-$i.xml"; elif [[ "$file" == *.xz ]]; then xz -dc "$file" > "/out/comps-$i.xml"; elif [[ "$file" == *.zck ]]; then if command -v unzck >/dev/null; then unzck -c "$file" > "/out/comps-$i.xml"; else continue; fi; else cp "$file" "/out/comps-$i.xml"; fi
+        if [[ "$file" == *.gz ]]; then gzip -dc "$file" > "/out/comps-$i.xml"; elif [[ "$file" == *.xz ]]; then xz -dc "$file" > "/out/comps-$i.xml"; elif [[ "$file" == *.zst ]]; then if command -v zstd >/dev/null; then zstd -qdc "$file" > "/out/comps-$i.xml"; elif command -v unzstd >/dev/null; then unzstd -c "$file" > "/out/comps-$i.xml"; else continue; fi; elif [[ "$file" == *.zck ]]; then if command -v unzck >/dev/null; then unzck -c "$file" > "/out/comps-$i.xml"; else continue; fi; else cp "$file" "/out/comps-$i.xml"; fi
         i=$((i + 1))
-      done < <(find /var/cache -type f \( -iname "*comps*.xml" -o -iname "*comps*.xml.gz" -o -iname "*comps*.xml.xz" -o -iname "*comps*.xml.zck" \) 2>/dev/null)
+      done < <(find /var/cache -type f \( -iname "*comps*.xml" -o -iname "*comps*.xml.gz" -o -iname "*comps*.xml.xz" -o -iname "*comps*.xml.zst" -o -iname "*comps*.xml.zck" \) 2>/dev/null)
       chmod -R a+rwx /out
     '
     cp -R "$RAW_DIR/export/." "$RAW_DIR/"
     ;;
   arch:arch)
     docker run --rm --platform linux/amd64 "$IMAGE" bash -lc 'pacman -Sy --noconfirm --needed expac >/dev/null; expac -S "%n\t%v\t%a\t%d\t%u\t%L\t%r\t%m\t%k\t%D\t%O\t%P\t%C\t%R"' > "$RAW_DIR/packages.tsv"
+    docker run --rm --platform linux/amd64 "$IMAGE" bash -lc 'pacman -Sy >/dev/null; pacman -Sg | awk "{print \$1 \"\\t\" \$2}" | sort -u' > "$RAW_DIR/groups.tsv"
     docker run --rm --platform linux/amd64 "$IMAGE" sh -lc 'cat /etc/os-release' > "$RAW_DIR/os-release"
     printf 'official\tOfficial enabled repositories\n' > "$RAW_DIR/repositories.tsv"
     ;;
@@ -102,6 +115,7 @@ case "$FAMILY:$DISTRO" in
     ;;
   rpm:opensuse-leap)
     docker run --rm --platform linux/amd64 "$IMAGE" sh -lc 'zypper --gpg-auto-import-keys --non-interactive refresh >/dev/null; zypper --xmlout --non-interactive search -s -t package' > "$RAW_DIR/packages.xml"
+    docker run --rm --platform linux/amd64 "$IMAGE" sh -lc 'zypper --gpg-auto-import-keys --non-interactive refresh >/dev/null; zypper --xmlout --non-interactive search -s -t pattern' > "$RAW_DIR/patterns.xml"
     docker run --rm --platform linux/amd64 "$IMAGE" sh -lc 'cat /etc/os-release' > "$RAW_DIR/os-release"
     printf 'official\tOfficial enabled repositories\n' > "$RAW_DIR/repositories.tsv"
     ;;
@@ -109,4 +123,4 @@ case "$FAMILY:$DISTRO" in
 esac
 
 node -e 'const fs=require("fs");const path=process.argv[1];const value={generatedAt:process.argv[2],digest:process.argv[3]||"unknown"};fs.writeFileSync(path,JSON.stringify(value,null,2)+"\n",{encoding:"utf8"})' "$RAW_DIR/meta.json" "$GENERATED_AT" "$DIGEST"
-node "$SCRIPT_DIR/normalize-distro.mjs" --distro "$DISTRO" --raw-dir "$RAW_DIR" --output "$OUTPUT" --generated-at "$GENERATED_AT"
+node "$SCRIPT_DIR/normalize-distro.mjs" --distro "$SOURCE_ID" --raw-dir "$RAW_DIR" --output "$OUTPUT" --generated-at "$GENERATED_AT"

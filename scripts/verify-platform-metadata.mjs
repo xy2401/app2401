@@ -27,29 +27,47 @@ function failSchema(label, validate) {
 }
 
 const environmentSchema = await readJson(join(root, "schemas", "environment-v1.schema.json"));
+const environmentIndexSchema = await readJson(join(root, "schemas", "environment-index-v1.schema.json"));
 const validateEnvironment = ajv.compile(environmentSchema);
+const validateEnvironmentIndex = ajv.compile(environmentIndexSchema);
 for (const platform of ["windows", "linux"]) {
-  const path = join(root, "public", "metadata", "environments", "v1", `${platform}.json`);
-  if (!await exists(path)) continue;
-  if (!validateEnvironment(await readJson(path))) failSchema(path, validateEnvironment);
+  const environmentRoot = join(root, "public", "metadata", "environments", "v1", "github-actions");
+  const indexPath = join(environmentRoot, `${platform}.json`);
+  if (!await exists(indexPath)) continue;
+  const index = await readJson(indexPath);
+  if (!validateEnvironmentIndex(index)) failSchema(indexPath, validateEnvironmentIndex);
+  for (const descriptor of index.runners) {
+    const path = join(environmentRoot, ...descriptor.path.split("/"));
+    const body = Buffer.from((await readFile(path, "utf8")).replaceAll("\r\n", "\n"), "utf8");
+    if (body.byteLength !== descriptor.bytes || sha256(body) !== descriptor.sha256) throw new Error(`Runner file integrity mismatch: ${descriptor.path}`);
+    const document = JSON.parse(body);
+    if (!validateEnvironment(document)) failSchema(path, validateEnvironment);
+    if (document.platform !== platform || document.image.runnerLabel !== descriptor.runnerLabel) throw new Error(`Runner index mismatch: ${descriptor.runnerLabel}`);
+  }
 }
 
 const distroRoot = join(root, "public", "metadata", "distributions", "v1");
-const currentPath = join(distroRoot, "current.json");
-if (await exists(currentPath)) {
+const distroIndexPath = join(distroRoot, "index.json");
+if (await exists(distroIndexPath)) {
   const indexSchema = await readJson(join(root, "schemas", "distribution-index-v1.schema.json"));
+  const collectionsSchema = await readJson(join(root, "schemas", "distribution-collections-v1.schema.json"));
+  const curatedSchema = await readJson(join(root, "schemas", "distribution-curated-v1.schema.json"));
   const validateIndex = ajv.compile(indexSchema);
-  const current = await readJson(currentPath);
-  if (!validateIndex(current)) failSchema(currentPath, validateIndex);
-  const manifestPath = join(distroRoot, ...current.manifest.split("/"));
-  const manifest = await readJson(manifestPath);
-  if (manifest.snapshotId !== current.snapshotId) throw new Error("Distribution current.json and manifest snapshot IDs differ");
-  for (const distro of manifest.distributions) {
-    for (const file of [distro.files.search, distro.files.repositories, distro.files.groups, ...Object.values(distro.files.details.shards)]) {
-      const path = join(manifestPath, "..", ...file.path.split("/"));
+  const validateCollections = ajv.compile(collectionsSchema);
+  const validateCurated = ajv.compile(curatedSchema);
+  const index = await readJson(distroIndexPath);
+  if (!validateIndex(index)) failSchema(distroIndexPath, validateIndex);
+  for (const distro of index.distributions) {
+    for (const file of [distro.files.search, distro.files.repositories, distro.files.groups, distro.files.collections, distro.files.curated, ...Object.values(distro.files.details.shards)]) {
+      const path = join(distroRoot, ...file.path.split("/"));
       const body = Buffer.from((await readFile(path, "utf8")).replaceAll("\r\n", "\n"), "utf8");
       if (body.byteLength !== file.bytes || sha256(body) !== file.sha256) throw new Error(`Distribution file integrity mismatch: ${file.path}`);
     }
+    const collections = await readJson(join(distroRoot, ...distro.files.collections.path.split("/")));
+    const curated = await readJson(join(distroRoot, ...distro.files.curated.path.split("/")));
+    if (!validateCollections(collections)) failSchema(distro.files.collections.path, validateCollections);
+    if (!validateCurated(curated)) failSchema(distro.files.curated.path, validateCurated);
+    if (collections.collections.length !== distro.collectionCount || curated.packages.length !== distro.curatedPackageCount) throw new Error(`Distribution curated counts differ: ${distro.id}`);
   }
 }
 

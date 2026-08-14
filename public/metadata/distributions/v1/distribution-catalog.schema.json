@@ -12,7 +12,8 @@
     "repositories",
     "packages",
     "groups",
-    "environments"
+    "environments",
+    "collections"
   ],
   "properties": {
     "schemaVersion": {
@@ -112,6 +113,12 @@
       "type": "array",
       "items": {
         "$ref": "#/$defs/environment"
+      }
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/collection"
       }
     }
   },
@@ -280,6 +287,92 @@
                 ]
               },
               "requires": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "collection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "names",
+        "descriptions",
+        "members"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "task",
+            "pattern",
+            "group"
+          ]
+        },
+        "names": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "descriptions": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "default": {
+          "type": "boolean"
+        },
+        "installTarget": {
+          "type": "string"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "role"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "role": {
+                "enum": [
+                  "mandatory",
+                  "default",
+                  "optional",
+                  "conditional"
+                ]
+              },
+              "requires": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "role": {
                 "type": "string"
               }
             }

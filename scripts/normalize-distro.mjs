@@ -194,6 +194,49 @@ async function parseComps() {
   return { groups, environments };
 }
 
+async function parseCollections() {
+  const collections = [];
+  const taskText = await optionalText(join(rawDir, "tasks.tsv"));
+  for (const line of taskText.split(/\r?\n/).filter(Boolean)) {
+    const [id, description = "", packageList = ""] = line.split("\t");
+    if (!id) continue;
+    collections.push({
+      id,
+      type: "task",
+      names: { en: description || id },
+      descriptions: {},
+      visible: true,
+      default: false,
+      installTarget: id,
+      members: unique(packageList.split(",").map((name) => name.trim()).filter(Boolean)).map((name) => ({ name, role: "default" })),
+    });
+  }
+
+  const groupMembers = new Map();
+  const groupText = await optionalText(join(rawDir, "groups.tsv"));
+  for (const line of groupText.split(/\r?\n/).filter(Boolean)) {
+    const [id, name] = line.split("\t");
+    if (!id || !name) continue;
+    const members = groupMembers.get(id) || [];
+    members.push({ name, role: "default" });
+    groupMembers.set(id, members);
+  }
+  for (const [id, members] of groupMembers) collections.push({ id, type: "group", names: { en: id }, descriptions: {}, visible: true, default: false, installTarget: id, members });
+
+  const patternsText = await optionalText(join(rawDir, "patterns.xml"));
+  if (patternsText.trim()) {
+    const parsed = xmlParser.parse(patternsText);
+    const nodes = parsed?.stream?.["search-result"]?.["solvable-list"]?.solvable || [];
+    for (const entry of asArray(nodes)) {
+      const id = entry["@_name"];
+      if (!id) continue;
+      const summary = entry["@_summary"] || id;
+      collections.push({ id, type: "pattern", names: { en: summary }, descriptions: {}, visible: true, default: false, installTarget: id, members: [] });
+    }
+  }
+  return collections.sort((a, b) => compareText(`${a.type}\0${a.id}`, `${b.type}\0${b.id}`));
+}
+
 const meta = await readJson(join(rawDir, "meta.json"));
 const osRelease = parseOsRelease(await optionalText(join(rawDir, "os-release")));
 const versionId = osRelease.VERSION_ID || meta.versionId || "rolling";
@@ -213,6 +256,7 @@ const repositories = (repositoryJson ? JSON.parse(repositoryJson).filter((entry)
   return { id, name: name || id, ...(url ? { url } : {}), ...(revision ? { revision } : {}) };
 })).sort((a, b) => compareText(a.id, b.id));
 const comps = await parseComps();
+const collections = await parseCollections();
 
 await writeJson(resolve(args.output), {
   schemaVersion: "1.0.0",
@@ -223,4 +267,5 @@ await writeJson(resolve(args.output), {
   packages,
   groups: comps.groups.sort((a, b) => compareText(a.id, b.id)),
   environments: comps.environments.sort((a, b) => compareText(a.id, b.id)),
+  collections,
 });

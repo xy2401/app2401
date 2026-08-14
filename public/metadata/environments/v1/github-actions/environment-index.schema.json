@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-source-atlas.example/schemas/environment-index-v1.schema.json",
+  "title": "GitHub Actions runner environment index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "provider",
+    "platform",
+    "runners"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "provider": {
+      "const": "github-actions"
+    },
+    "platform": {
+      "enum": [
+        "windows",
+        "linux"
+      ]
+    },
+    "runners": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "runnerLabel",
+          "imageVersion",
+          "os",
+          "softwareCount",
+          "path",
+          "bytes",
+          "sha256"
+        ],
+        "properties": {
+          "runnerLabel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "imageVersion": {
+            "type": "string"
+          },
+          "os": {
+            "type": "object"
+          },
+          "softwareCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^runners/[a-z0-9.-]+\\.json$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

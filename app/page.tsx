@@ -22,7 +22,7 @@ export default function Home() {
 
     <section className="landing-capabilities page-shell">
       <article><span className="section-kicker">SOFTWARE</span><h2>软件是什么</h2><p>查看用途、官网、源码、许可证、平台、架构和不同包管理器中的安装方式。</p><Link href="/catalog">进入软件目录 →</Link></article>
-      <article><span className="section-kicker">LINUX REPOS</span><h2>发行版提供什么</h2><p>浏览 Ubuntu、Debian、Fedora、Rocky、Arch、Alpine 和 openSUSE 的官方软件索引与 DNF 软件组。</p><Link href="/distributions">浏览 Linux 仓库 →</Link></article>
+      <article><span className="section-kicker">LINUX PICKS</span><h2>发行版推荐什么</h2><p>先看 Ubuntu、Debian、Fedora、Rocky、Arch、Alpine 和 openSUSE 维护的软件集合、开发环境和元包，需要时再进入完整仓库。</p><Link href="/distributions">浏览发行版精选 →</Link></article>
       <article><span className="section-kicker">COMMANDS</span><h2>命令怎么用</h2><p>TLDR 提供多语言完整命令模板与解释，中文优先、缺译回退英文；Fish 补充可静态确认的命令路径。</p><Link href="/catalog?query=git">查看命令示例 →</Link></article>
       <article><span className="section-kicker">INVENTORY</span><h2>电脑装了什么</h2><p>把本机清单交给浏览器本地匹配。没有上传接口、账号、数据库或用户追踪。</p><Link href="/inventory">分析本机清单 →</Link></article>
     </section>

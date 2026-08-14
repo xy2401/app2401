@@ -34,7 +34,7 @@ test("renders static inventory and sources routes", async () => {
   assert.match(await inventory.text(), /本机清单|看懂这台电脑装了什么/);
   assert.match(await sources.text(), /数据源|从哪里来/);
   assert.equal(distributions.status, 200);
-  assert.match(await distributions.text(), /发行版官方软件仓库|Linux 仓库/);
+  assert.match(await distributions.text(), /发行版精选的软件与环境/);
 });
 
 test("keeps catalog data outside JavaScript bundles", async () => {

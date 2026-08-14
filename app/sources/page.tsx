@@ -24,18 +24,18 @@ function PlatformSources() {
     let active = true;
     const json = async (url: string) => { const response = await fetch(url, { cache: "no-store" }); if (!response.ok) throw new Error(url); return response.json(); };
     void Promise.allSettled([
-      json("/metadata/environments/v1/windows.json"),
-      json("/metadata/environments/v1/linux.json"),
-      json("/metadata/distributions/v1/current.json").then(async (current) => json(`/metadata/distributions/v1/${current.manifest}`)),
+      json("/metadata/environments/v1/github-actions/windows.json"),
+      json("/metadata/environments/v1/github-actions/linux.json"),
+      json("/metadata/distributions/v1/index.json"),
     ]).then((results) => {
       if (!active) return;
       const next: PlatformSummary[] = [];
       const windows = results[0].status === "fulfilled" ? results[0].value : null;
       const linux = results[1].status === "fulfilled" ? results[1].value : null;
       const distros = results[2].status === "fulfilled" ? results[2].value : null;
-      if (windows) next.push({ label: "GitHub Runner · Windows", count: windows.images.reduce((sum: number, image: { software: unknown[] }) => sum + image.software.length, 0), detail: `${windows.images.length} 个稳定镜像环境` });
-      if (linux) next.push({ label: "GitHub Runner · Linux", count: linux.images.reduce((sum: number, image: { software: unknown[] }) => sum + image.software.length, 0), detail: `${linux.images.length} 个稳定镜像环境` });
-      if (distros) next.push({ label: "Linux 官方仓库", count: distros.distributions.reduce((sum: number, distro: { packageCount: number }) => sum + distro.packageCount, 0), detail: `${distros.distributions.length} 个发行版 · 按需分片` });
+      if (windows) next.push({ label: "GitHub Runner · Windows", count: windows.runners.reduce((sum: number, runner: { softwareCount: number }) => sum + runner.softwareCount, 0), detail: `${windows.runners.length} 个稳定镜像环境` });
+      if (linux) next.push({ label: "GitHub Runner · Linux", count: linux.runners.reduce((sum: number, runner: { softwareCount: number }) => sum + runner.softwareCount, 0), detail: `${linux.runners.length} 个稳定镜像环境` });
+      if (distros) next.push({ label: "Linux 发行版精选与仓库", count: distros.distributions.reduce((sum: number, distro: { curatedPackageCount: number }) => sum + distro.curatedPackageCount, 0), detail: `${distros.distributions.reduce((sum: number, distro: { collectionCount: number }) => sum + distro.collectionCount, 0).toLocaleString()} 个发行版维护集合 · 完整仓库按需加载` });
       setItems(next);
     });
     return () => { active = false; };
