@@ -27,11 +27,20 @@ function Get-StableId {
 }
 
 function Normalize-Architecture([string]$Value) {
-  switch ($Value.ToLowerInvariant()) {
+  $normalized = if ($Value) { $Value.ToLowerInvariant() } else { "" }
+  switch ($normalized) {
     { $_ -in @("x64", "x86_64", "amd64") } { return "amd64" }
     { $_ -in @("aarch64", "arm64") } { return "arm64" }
     default { if ($Value) { return $Value.ToLowerInvariant() }; return "unknown" }
   }
+}
+
+function Get-OptionalProperty {
+  param([object]$Object, [string]$Name, [object]$Default = "")
+  if ($null -eq $Object) { return $Default }
+  $property = $Object.PSObject.Properties[$Name]
+  if ($null -eq $property -or $null -eq $property.Value) { return $Default }
+  return $property.Value
 }
 
 $architecture = Normalize-Architecture $env:PROCESSOR_ARCHITECTURE
@@ -102,7 +111,8 @@ Invoke-Collector "registry-uninstall" {
   )
   foreach ($location in $locations) {
     foreach ($entry in @(Get-ItemProperty $location.Path -ErrorAction SilentlyContinue)) {
-      if ($entry.DisplayName) { Add-Software -Name $entry.DisplayName -Version $entry.DisplayVersion -Kind "application" -Ecosystem "windows-uninstall" -Publisher $entry.Publisher -Scope $location.Scope -Method "registry-uninstall" }
+      $name = Get-OptionalProperty $entry "DisplayName"
+      if ($name) { Add-Software -Name $name -Version (Get-OptionalProperty $entry "DisplayVersion") -Kind "application" -Ecosystem "windows-uninstall" -Publisher (Get-OptionalProperty $entry "Publisher") -Scope $location.Scope -Method "registry-uninstall" }
     }
   }
 } -Required
@@ -121,22 +131,22 @@ Invoke-Collector "winget" {
   & winget export --output $temporary --accept-source-agreements --disable-interactivity | Out-Null
   if ($LASTEXITCODE -ne 0) { throw "winget export failed with exit code $LASTEXITCODE" }
   $document = Get-Content -Raw $temporary | ConvertFrom-Json
-  foreach ($source in @($document.Sources)) {
-    foreach ($package in @($source.Packages)) { Add-Software -Name $package.PackageIdentifier -Version $package.Version -Kind "application" -Ecosystem "winget" -Scope "system" -Method "winget" }
+  foreach ($source in @(Get-OptionalProperty $document "Sources" @())) {
+    foreach ($package in @(Get-OptionalProperty $source "Packages" @())) { Add-Software -Name (Get-OptionalProperty $package "PackageIdentifier") -Version (Get-OptionalProperty $package "Version") -Kind "application" -Ecosystem "winget" -Scope "system" -Method "winget" }
   }
   Remove-Item -LiteralPath $temporary -Force -ErrorAction SilentlyContinue
 }
 
 Invoke-Collector "appx" {
-  foreach ($package in @(Get-AppxPackage -AllUsers -ErrorAction Stop)) { Add-Software -Name $package.Name -Version $package.Version -Kind "application" -Ecosystem "appx" -Architecture $package.Architecture -Publisher $package.Publisher -Scope "system" -Method "appx" }
+  foreach ($package in @(Get-AppxPackage -AllUsers -ErrorAction Stop)) { Add-Software -Name (Get-OptionalProperty $package "Name") -Version (Get-OptionalProperty $package "Version") -Kind "application" -Ecosystem "appx" -Architecture (Get-OptionalProperty $package "Architecture" $architecture) -Publisher (Get-OptionalProperty $package "Publisher") -Scope "system" -Method "appx" }
 }
 
 Invoke-Collector "windows-features" {
-  foreach ($feature in @(Get-WindowsOptionalFeature -Online | Where-Object State -eq "Enabled")) { Add-Software -Name $feature.FeatureName -Kind "feature" -Ecosystem "windows-feature" -Scope "system" -Method "windows-features" }
+  foreach ($feature in @(Get-WindowsOptionalFeature -Online | Where-Object State -eq "Enabled")) { Add-Software -Name (Get-OptionalProperty $feature "FeatureName") -Kind "feature" -Ecosystem "windows-feature" -Scope "system" -Method "windows-features" }
 }
 
 Invoke-Collector "windows-capabilities" {
-  foreach ($capability in @(Get-WindowsCapability -Online | Where-Object State -eq "Installed")) { Add-Software -Name $capability.Name -Kind "capability" -Ecosystem "windows-capability" -Scope "system" -Method "windows-capabilities" }
+  foreach ($capability in @(Get-WindowsCapability -Online | Where-Object State -eq "Installed")) { Add-Software -Name (Get-OptionalProperty $capability "Name") -Kind "capability" -Ecosystem "windows-capability" -Scope "system" -Method "windows-capabilities" }
 }
 
 Invoke-Collector "visual-studio" {
@@ -144,10 +154,8 @@ Invoke-Collector "visual-studio" {
   if (-not (Test-Path $vswhere)) { throw "vswhere not found" }
   $instances = & $vswhere -all -prerelease -format json -utf8 | ConvertFrom-Json
   foreach ($instance in @($instances)) {
-    Add-Software -Name $instance.displayName -Version $instance.installationVersion -Kind "application" -Ecosystem "visual-studio" -Publisher "Microsoft" -Scope "system" -Path $instance.installationPath -Method "vswhere"
-    if ($instance.PSObject.Properties.Name -contains "packages") {
-      foreach ($package in @($instance.packages)) { Add-Software -Name $package.id -Version $package.version -Kind "component" -Ecosystem "visual-studio-component" -Architecture $package.architecture -Publisher $package.publisher -Scope "system" -Method "vswhere" }
-    }
+    Add-Software -Name (Get-OptionalProperty $instance "displayName") -Version (Get-OptionalProperty $instance "installationVersion") -Kind "application" -Ecosystem "visual-studio" -Publisher "Microsoft" -Scope "system" -Path (Get-OptionalProperty $instance "installationPath") -Method "vswhere"
+    foreach ($package in @(Get-OptionalProperty $instance "packages" @())) { Add-Software -Name (Get-OptionalProperty $package "id") -Version (Get-OptionalProperty $package "version") -Kind "component" -Ecosystem "visual-studio-component" -Architecture (Get-OptionalProperty $package "architecture" $architecture) -Publisher (Get-OptionalProperty $package "publisher") -Scope "system" -Method "vswhere" }
   }
 }
 
@@ -173,7 +181,11 @@ Invoke-Collector "allowlisted-version-probes" {
   }
 }
 
-$os = Get-CimInstance Win32_OperatingSystem
+try {
+  $os = Get-CimInstance Win32_OperatingSystem
+} catch {
+  $os = [pscustomobject]@{ Caption = "Windows"; Version = [Environment]::OSVersion.Version.ToString(); BuildNumber = [Environment]::OSVersion.Version.Build.ToString() }
+}
 $readmeLabel = if ($RunnerLabel -eq "windows-2025") { "Windows2025" } else { "Windows2022" }
 $readmeSource = "https://github.com/actions/runner-images/blob/main/images/windows/$readmeLabel-Readme.md"
 Invoke-Collector "official-image-manifest" {
@@ -190,7 +202,7 @@ Invoke-Collector "official-image-manifest" {
 $image = [ordered]@{
   runnerLabel = $RunnerLabel
   imageVersion = $(if ($env:ImageVersion) { $env:ImageVersion } else { "" })
-  os = [ordered]@{ name = $os.Caption; version = $os.Version; build = $os.BuildNumber; arch = $architecture }
+  os = [ordered]@{ name = Get-OptionalProperty $os "Caption" "Windows"; version = Get-OptionalProperty $os "Version"; build = Get-OptionalProperty $os "BuildNumber"; arch = $architecture }
   sourceRefs = @($readmeSource)
   collectors = @($collectors | Sort-Object id)
   software = @($software.Values | Sort-Object id)
