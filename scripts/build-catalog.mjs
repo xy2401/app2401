@@ -1,16 +1,24 @@
 import { createHash } from "node:crypto";
-import { readFile, readdir, writeFile, mkdir, copyFile } from "node:fs/promises";
+import { readFile, readdir, writeFile, mkdir, copyFile, rm } from "node:fs/promises";
 import { basename, dirname, join, relative, resolve, sep } from "node:path";
 import { execFileSync } from "node:child_process";
 import { XMLParser } from "fast-xml-parser";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
+import { parseFishCompletionFile } from "./lib/parse-fish-completions.mjs";
+import { parseTldrPage } from "./lib/parse-tldr-page.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const outputRoot = join(root, "public", "metadata", "v1");
 const schemaPath = join(root, "schemas", "catalog-v1.schema.json");
 const inventorySchemaPath = join(root, "schemas", "inventory-v1.schema.json");
+const indexSchemaPath = join(root, "schemas", "catalog-index-v1.schema.json");
+const commandSchemaPath = join(root, "schemas", "command-v1.schema.json");
+const tldrSchemaPath = join(root, "schemas", "tldr-v1.schema.json");
 const overridesPath = join(root, "data", "identity-overrides.json");
+const formatRevision = "sharded-4";
+const detailShardNames = Array.from({ length: 256 }, (_, index) => index.toString(16).padStart(2, "0"));
+const tldrShardNames = Array.from({ length: 16 }, (_, index) => index.toString(16));
 const xml = new XMLParser({ ignoreAttributes: false, removeNSPrefix: true, textNodeName: "#text" });
 
 const array = (value) => value == null ? [] : Array.isArray(value) ? value : [value];
@@ -21,6 +29,7 @@ const sha = (value, length = 12) => createHash("sha256").update(String(value)).d
 const slugify = (value) => String(value).normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "software";
 const posix = (path) => path.split(sep).join("/");
 const gitWebUrl = (value) => String(value || "").replace(/\.git$/i, "");
+const normalizeName = (value) => String(value || "").normalize("NFKC").toLowerCase().replace(/[._\s/\\-]+/g, " ").trim();
 
 function normalizeUrl(value) {
   if (!value) return "";
@@ -322,6 +331,184 @@ async function parseHomebrew() {
   };
 }
 
+async function parseFish(packages) {
+  const repo = join(root, "sources", "fish", "fish-shell");
+  const completionsRoot = join(repo, "share", "completions");
+  const files = (await readdir(completionsRoot)).filter((name) => name.endsWith(".fish")).sort();
+  const commit = git(repo, ["rev-parse", "HEAD"]);
+  const remote = git(repo, ["remote", "get-url", "origin"]);
+  const records = new Map();
+  for (const file of files) {
+    const source = await readFile(join(completionsRoot, file), "utf8");
+    for (const parsed of parseFishCompletionFile(source, file)) {
+      const key = parsed.name;
+      if (!records.has(key)) records.set(key, { name: key, wraps: [], commandPaths: [], sourceRefs: [], statementCount: 0, dynamicStatementCount: 0 });
+      const record = records.get(key);
+      const sourceBase = `${gitWebUrl(remote)}/blob/${commit}/share/completions/${file}`;
+      record.wraps.push(...parsed.wraps);
+      record.commandPaths.push(...parsed.commandPaths.map((item) => ({ ...item, dynamic: false, sourceRef: `${sourceBase}#L${item.line}` })));
+      record.sourceRefs.push(sourceBase);
+      record.statementCount += parsed.statementCount;
+      record.dynamicStatementCount += parsed.dynamicStatementCount;
+    }
+  }
+
+  const explicitProviders = new Map();
+  const nameProviders = new Map();
+  const addProvider = (map, name, softwareId) => {
+    const key = normalizeName(name);
+    if (!key) return;
+    if (!map.has(key)) map.set(key, new Set());
+    map.get(key).add(softwareId);
+  };
+  for (const pkg of packages) {
+    for (const command of pkg.commands) addProvider(explicitProviders, command, pkg.softwareId);
+    addProvider(nameProviders, pkg.name, pkg.softwareId);
+  }
+
+  const uniqueObjects = (items) => [...new Map(items.map((item) => [JSON.stringify(item), item])).values()];
+  const commands = [...records.values()].map((record) => {
+    const explicit = explicitProviders.get(normalizeName(record.name)) || new Set();
+    const fallback = nameProviders.get(normalizeName(record.name)) || new Set();
+    const softwareIds = explicit.size ? [...explicit].sort() : fallback.size === 1 ? [...fallback] : [];
+    const candidateSoftwareIds = explicit.size || fallback.size < 2 ? [] : [...fallback].sort();
+    const commandPaths = uniqueObjects(record.commandPaths).sort((a, b) => a.command.localeCompare(b.command) || a.line - b.line);
+    return {
+      id: `command--${sha(record.name, 12)}`,
+      name: record.name,
+      shell: "fish",
+      wraps: sortUnique(record.wraps),
+      softwareIds,
+      candidateSoftwareIds,
+      commandCount: commandPaths.length,
+      statementCount: record.statementCount,
+      dynamicStatementCount: record.dynamicStatementCount,
+      commands: commandPaths,
+      sourceRefs: sortUnique(record.sourceRefs),
+    };
+  }).sort((a, b) => a.id.localeCompare(b.id));
+  return {
+    source: {
+      id: "fish:completions",
+      type: "command-completions",
+      label: "Fish Shell Completions",
+      tier: "official-repository",
+      itemCount: files.length,
+      recordCount: commands.length,
+      snapshot: commit,
+      snapshotAt: git(repo, ["show", "-s", "--format=%cI", "HEAD"]),
+      sourceUrl: remote,
+    },
+    commands,
+  };
+}
+
+async function parseTldr(packages) {
+  const repo = join(root, "sources", "tldr", "tldr");
+  const commit = git(repo, ["rev-parse", "HEAD"]);
+  const remote = git(repo, ["remote", "get-url", "origin"]);
+  const pageDirectories = (await readdir(repo, { withFileTypes: true }))
+    .filter((entry) => entry.isDirectory() && (entry.name === "pages" || entry.name.startsWith("pages.")))
+    .map((entry) => entry.name)
+    .sort((a, b) => a === "pages" ? -1 : b === "pages" ? 1 : a.localeCompare(b, "en"));
+
+  const explicitProviders = new Map();
+  const nameProviders = new Map();
+  const addProvider = (map, name, softwareId) => {
+    const key = normalizeName(name);
+    if (!key) return;
+    if (!map.has(key)) map.set(key, new Set());
+    map.get(key).add(softwareId);
+  };
+  for (const pkg of packages) {
+    for (const command of pkg.commands) addProvider(explicitProviders, command, pkg.softwareId);
+    addProvider(nameProviders, pkg.name, pkg.softwareId);
+  }
+
+  const providerLink = (command) => {
+    const explicit = explicitProviders.get(normalizeName(command)) || new Set();
+    const fallback = nameProviders.get(normalizeName(command)) || new Set();
+    return {
+      softwareIds: explicit.size ? [...explicit].sort() : fallback.size === 1 ? [...fallback] : [],
+      candidateSoftwareIds: explicit.size || fallback.size < 2 ? [] : [...fallback].sort(),
+    };
+  };
+  const parseDirectory = async (directoryName) => {
+    const pagesRoot = join(repo, directoryName);
+    const sourceLocale = directoryName === "pages" ? "en" : directoryName.slice("pages.".length);
+    const locale = sourceLocale.replaceAll("_", "-");
+    const files = (await walk(pagesRoot, (path) => path.endsWith(".md"))).sort();
+    const records = [];
+    for (const file of files) {
+      const relativePath = posix(relative(pagesRoot, file));
+      const parsed = parseTldrPage(await readFile(file, "utf8"), relativePath);
+      const encodedPath = relativePath.split("/").map(encodeURIComponent).join("/");
+      const sourceRef = `${gitWebUrl(remote)}/blob/${commit}/${directoryName}/${encodedPath}`;
+      records.push({
+        id: `tldr--${sha(relativePath, 12)}`,
+        canonicalPath: relativePath,
+        locale,
+        sourceLocale,
+        name: parsed.rootCommand,
+        title: parsed.title,
+        summary: parsed.summary,
+        platform: parsed.platform,
+        ...providerLink(parsed.rootCommand),
+        exampleCount: parsed.examples.length,
+        examples: parsed.examples.map((example) => ({ ...example, sourceRef: `${sourceRef}#L${example.line}` })),
+        sourceRef,
+      });
+    }
+    records.sort((a, b) => a.id.localeCompare(b.id));
+    return { locale, sourceLocale, sourceDirectory: directoryName, records };
+  };
+
+  const parsedLocales = [];
+  for (const directoryName of pageDirectories) parsedLocales.push(await parseDirectory(directoryName));
+  const english = parsedLocales.find((item) => item.locale === "en");
+  if (!english) throw new Error("TLDR English pages directory is missing");
+  const canonicalByPath = new Map(english.records.map((page) => [page.canonicalPath, page]));
+  const translations = parsedLocales.filter((item) => item.locale !== "en").map((item) => ({
+    ...item,
+    records: item.records.map((record) => {
+      const canonical = canonicalByPath.get(record.canonicalPath);
+      return canonical ? {
+        ...record,
+        name: canonical.name,
+        softwareIds: canonical.softwareIds,
+        candidateSoftwareIds: canonical.candidateSoftwareIds,
+      } : record;
+    }),
+  }));
+  const allPages = parsedLocales.flatMap((item) => item.records);
+  const locales = parsedLocales.map(({ locale, sourceLocale, sourceDirectory, records }) => ({
+    locale,
+    sourceLocale,
+    sourceDirectory,
+    itemCount: records.length,
+    coverage: Number((records.length / english.records.length).toFixed(6)),
+  }));
+  return {
+    source: {
+      id: "tldr:pages",
+      type: "command-examples",
+      label: "TLDR Pages",
+      tier: "curated-community",
+      itemCount: allPages.length,
+      recordCount: english.records.length,
+      localeCount: locales.length,
+      translationCount: allPages.length - english.records.length,
+      exampleCount: allPages.reduce((sum, page) => sum + page.exampleCount, 0),
+      snapshot: commit,
+      snapshotAt: git(repo, ["show", "-s", "--format=%cI", "HEAD"]),
+      sourceUrl: remote,
+    },
+    pages: english.records,
+    translations,
+    locales,
+  };
+}
+
 class UnionFind {
   constructor(items) { this.parent = new Map(items.map((item) => [item, item])); }
   find(item) { const parent = this.parent.get(item); if (parent !== item) this.parent.set(item, this.find(parent)); return this.parent.get(item); }
@@ -395,8 +582,26 @@ async function main() {
   const [scoop, chocolatey, homebrew] = await Promise.all([parseScoop(), parseChocolatey(), parseHomebrew()]);
   const packages = [...scoop.packages, ...chocolatey.packages, ...homebrew.packages].sort((a, b) => a.id.localeCompare(b.id));
   const software = await buildSoftware(packages);
+  const [fish, tldr] = await Promise.all([parseFish(packages), parseTldr(packages)]);
+  const fishCommandsBySoftware = new Map();
+  for (const command of fish.commands) {
+    for (const softwareId of command.softwareIds) {
+      if (!fishCommandsBySoftware.has(softwareId)) fishCommandsBySoftware.set(softwareId, []);
+      fishCommandsBySoftware.get(softwareId).push(command);
+    }
+  }
+  const tldrPagesBySoftware = new Map();
+  for (const page of tldr.pages) {
+    for (const softwareId of page.softwareIds) {
+      if (!tldrPagesBySoftware.has(softwareId)) tldrPagesBySoftware.set(softwareId, []);
+      tldrPagesBySoftware.get(softwareId).push(page);
+    }
+  }
+  for (const item of software) item.commandIds = sortUnique((fishCommandsBySoftware.get(item.id) || []).map((command) => command.id));
+  for (const item of software) item.tldrPageIds = sortUnique((tldrPagesBySoftware.get(item.id) || []).map((page) => page.id));
   const sources = [...scoop.sources, ...chocolatey.sources, ...homebrew.sources].sort((a, b) => a.id.localeCompare(b.id));
-  const snapshotTimes = sources.map((source) => Date.parse(source.snapshotAt)).filter(Number.isFinite);
+  const knowledgeSources = [fish.source, tldr.source];
+  const snapshotTimes = [...sources, ...knowledgeSources].map((source) => Date.parse(source.snapshotAt)).filter(Number.isFinite);
   const catalog = {
     schemaVersion: "1.0.0",
     generatedAt: process.env.CATALOG_GENERATED_AT || new Date(Math.max(...snapshotTimes)).toISOString(),
@@ -408,13 +613,314 @@ async function main() {
   const ajv = new Ajv2020({ allErrors: true, strict: false });
   addFormats(ajv);
   if (!ajv.validate(schema, catalog)) throw new Error(ajv.errorsText(ajv.errors, { separator: "\n" }));
-  const stable = `${JSON.stringify(catalog)}\n`;
+
+  const overridesHash = createHash("sha256").update(await readFile(overridesPath)).digest("hex");
+  const snapshotHashInput = JSON.stringify({
+    schemaVersion: catalog.schemaVersion,
+    formatRevision,
+    overridesHash,
+    sources: [...sources, ...knowledgeSources].map(({ id, snapshot }) => ({ id, snapshot })),
+  });
+  const snapshotId = `${catalog.generatedAt.slice(0, 7)}-${sha(snapshotHashInput, 10)}`;
+  const snapshotRoot = join(outputRoot, "snapshots", snapshotId);
+  const packageGroups = Map.groupBy(packages, (item) => item.softwareId);
+  const softwareById = new Map(software.map((item) => [item.id, item]));
+  const detailShard = (softwareId) => createHash("sha256").update(softwareId).digest("hex").slice(0, 2);
+  const summaryFor = (item) => {
+    const related = packageGroups.get(item.id) || [];
+    return {
+      id: item.id,
+      name: item.name,
+      aliases: item.aliases,
+      summary: item.summary,
+      platforms: item.platforms,
+      managers: sortUnique(related.map((pkg) => pkg.manager)),
+      packageCount: related.length,
+      commands: sortUnique([
+        ...related.flatMap((pkg) => pkg.commands),
+        ...(fishCommandsBySoftware.get(item.id) || []).map((command) => command.name),
+        ...(tldrPagesBySoftware.get(item.id) || []).flatMap((page) => [page.name, page.title]),
+      ]).slice(0, 18),
+      packageNames: sortUnique(related.map((pkg) => pkg.name)),
+      shard: detailShard(item.id),
+    };
+  };
+  const searchItems = software.map(summaryFor);
+
   await mkdir(outputRoot, { recursive: true });
-  await writeFile(join(outputRoot, "catalog.json"), stable);
+  await mkdir(snapshotRoot, { recursive: true });
+
+  const writeDataFile = async (relativePath, value) => {
+    const target = join(snapshotRoot, ...relativePath.split("/"));
+    const body = `${JSON.stringify(value)}\n`;
+    await mkdir(dirname(target), { recursive: true });
+    await writeFile(target, body);
+    return {
+      path: relativePath,
+      bytes: Buffer.byteLength(body),
+      sha256: createHash("sha256").update(body).digest("hex"),
+    };
+  };
+
+  const searchFile = await writeDataFile("search.json", {
+    schemaVersion: catalog.schemaVersion,
+    snapshotId,
+    items: searchItems,
+  });
+  searchFile.records = searchItems.length;
+
+  const commandDetailShard = (commandId) => createHash("sha256").update(commandId).digest("hex").slice(0, 2);
+  const commandIndexItems = fish.commands.map((command) => ({
+    id: command.id,
+    name: command.name,
+    shell: command.shell,
+    wraps: command.wraps,
+    softwareIds: command.softwareIds,
+    candidateSoftwareIds: command.candidateSoftwareIds,
+    commandCount: command.commandCount,
+    dynamicStatementCount: command.dynamicStatementCount,
+    shard: commandDetailShard(command.id),
+  }));
+  const commandIndexFile = await writeDataFile("commands/index.json", {
+    schemaVersion: catalog.schemaVersion,
+    snapshotId,
+    sourceId: fish.source.id,
+    items: commandIndexItems,
+  });
+  commandIndexFile.records = commandIndexItems.length;
+  const commandDetailFiles = {};
+  for (const shard of detailShardNames) {
+    const items = fish.commands.filter((command) => commandDetailShard(command.id) === shard);
+    commandDetailFiles[shard] = await writeDataFile(`commands/details/${shard}.json`, {
+      schemaVersion: catalog.schemaVersion,
+      snapshotId,
+      shard,
+      items,
+    });
+    commandDetailFiles[shard].records = items.length;
+  }
+
+  const tldrDetailShard = (page) => createHash("sha256").update(normalizeName(page.name)).digest("hex").slice(0, 1);
+  const tldrIndexItems = tldr.pages.map((page) => ({
+    id: page.id,
+    name: page.name,
+    title: page.title,
+    summary: page.summary,
+    platform: page.platform,
+    softwareIds: page.softwareIds,
+    candidateSoftwareIds: page.candidateSoftwareIds,
+    exampleCount: page.exampleCount,
+    shard: tldrDetailShard(page),
+  }));
+  const tldrIndexFile = await writeDataFile("tldr/index.json", {
+    schemaVersion: catalog.schemaVersion,
+    snapshotId,
+    sourceId: tldr.source.id,
+    items: tldrIndexItems,
+  });
+  tldrIndexFile.records = tldrIndexItems.length;
+  const tldrDetailFiles = {};
+  for (const shard of tldrShardNames) {
+    const items = tldr.pages.filter((page) => tldrDetailShard(page) === shard);
+    tldrDetailFiles[shard] = await writeDataFile(`tldr/details/${shard}.json`, {
+      schemaVersion: catalog.schemaVersion,
+      snapshotId,
+      shard,
+      items,
+    });
+    tldrDetailFiles[shard].records = items.length;
+  }
+  const tldrLocaleFiles = {};
+  for (const locale of tldr.translations) {
+    const localeShardFiles = {};
+    for (const shard of tldrShardNames) {
+      const items = locale.records.filter((page) => tldrDetailShard(page) === shard);
+      localeShardFiles[shard] = await writeDataFile(`tldr/locales/${locale.locale}/details/${shard}.json`, {
+        schemaVersion: catalog.schemaVersion,
+        snapshotId,
+        locale: locale.locale,
+        sourceLocale: locale.sourceLocale,
+        shard,
+        items,
+      });
+      localeShardFiles[shard].records = items.length;
+    }
+    tldrLocaleFiles[locale.locale] = {
+      locale: locale.locale,
+      sourceLocale: locale.sourceLocale,
+      sourceDirectory: locale.sourceDirectory,
+      itemCount: locale.records.length,
+      algorithm: "sha256-command-prefix",
+      prefixLength: 1,
+      pathTemplate: `tldr/locales/${locale.locale}/details/{shard}.json`,
+      shards: localeShardFiles,
+    };
+  }
+  const tldrLocalesFile = await writeDataFile("tldr/locales.json", {
+    schemaVersion: catalog.schemaVersion,
+    snapshotId,
+    defaultLocale: "en",
+    locales: tldr.locales,
+  });
+  tldrLocalesFile.records = tldr.locales.length;
+
+  const inventoryFiles = {};
+  for (const manager of ["scoop", "chocolatey", "homebrew"]) {
+    const index = {};
+    for (const pkg of packages.filter((item) => item.manager === manager)) {
+      const key = normalizeName(pkg.name);
+      if (!index[key]) index[key] = [];
+      index[key].push({
+        packageId: pkg.id,
+        softwareId: pkg.softwareId,
+        collection: pkg.collection,
+        status: pkg.status,
+        shard: detailShard(pkg.softwareId),
+      });
+    }
+    for (const key of Object.keys(index)) index[key].sort((a, b) => a.packageId.localeCompare(b.packageId));
+    const orderedIndex = Object.fromEntries(Object.entries(index).sort(([a], [b]) => a.localeCompare(b, "en")));
+    inventoryFiles[manager] = await writeDataFile(`inventory/${manager}.json`, {
+      schemaVersion: catalog.schemaVersion,
+      snapshotId,
+      manager,
+      packages: orderedIndex,
+    });
+    inventoryFiles[manager].records = packages.filter((item) => item.manager === manager).length;
+  }
+
+  const detailFiles = {};
+  for (const shard of detailShardNames) {
+    const items = software
+      .filter((item) => detailShard(item.id) === shard)
+      .map((item) => ({ software: item, packages: packageGroups.get(item.id) || [] }));
+    detailFiles[shard] = await writeDataFile(`details/${shard}.json`, {
+      schemaVersion: catalog.schemaVersion,
+      snapshotId,
+      shard,
+      items,
+    });
+    detailFiles[shard].records = items.length;
+  }
+
+  const sourceIndexes = {};
+  const sourcePageSize = 250;
+  for (const source of sources) {
+    const sourcePackages = packages.filter((item) => item.sourceId === source.id);
+    const pages = [];
+    for (let offset = 0; offset < sourcePackages.length; offset += sourcePageSize) {
+      const page = Math.floor(offset / sourcePageSize);
+      const items = sourcePackages.slice(offset, offset + sourcePageSize).map((pkg) => {
+        const softwareItem = softwareById.get(pkg.softwareId);
+        return {
+          package: {
+            id: pkg.id,
+            softwareId: pkg.softwareId,
+            manager: pkg.manager,
+            sourceId: pkg.sourceId,
+            collection: pkg.collection,
+            name: pkg.name,
+            title: pkg.title,
+            version: pkg.version,
+            description: pkg.description,
+            platforms: pkg.platforms,
+            status: pkg.status,
+          },
+          software: {
+            id: softwareItem.id,
+            name: softwareItem.name,
+            summary: softwareItem.summary,
+            platforms: softwareItem.platforms,
+          },
+        };
+      });
+      const descriptor = await writeDataFile(`sources/${slugify(source.id)}/${String(page).padStart(3, "0")}.json`, {
+        schemaVersion: catalog.schemaVersion,
+        snapshotId,
+        sourceId: source.id,
+        page,
+        pageSize: sourcePageSize,
+        total: sourcePackages.length,
+        items,
+      });
+      descriptor.records = items.length;
+      pages.push(descriptor);
+    }
+    sourceIndexes[source.id] = { total: sourcePackages.length, pageSize: sourcePageSize, pages };
+  }
+
+  const manifest = {
+    schemaVersion: catalog.schemaVersion,
+    formatRevision,
+    snapshotId,
+    generatedAt: catalog.generatedAt,
+    softwareCount: software.length,
+    packageCount: packages.length,
+    commandCount: fish.commands.length,
+    tldrPageCount: tldr.pages.length,
+    tldrTranslationCount: tldr.source.translationCount,
+    tldrLocaleCount: tldr.source.localeCount,
+    sources,
+    knowledgeSources,
+    files: {
+      search: searchFile,
+      commands: {
+        index: commandIndexFile,
+        details: {
+          algorithm: "sha256-prefix",
+          prefixLength: 2,
+          pathTemplate: "commands/details/{shard}.json",
+          shards: commandDetailFiles,
+        },
+      },
+      tldr: {
+        index: tldrIndexFile,
+        localesIndex: tldrLocalesFile,
+        details: {
+          algorithm: "sha256-command-prefix",
+          prefixLength: 1,
+          pathTemplate: "tldr/details/{shard}.json",
+          shards: tldrDetailFiles,
+        },
+        locales: tldrLocaleFiles,
+      },
+      inventory: inventoryFiles,
+      details: {
+        algorithm: "sha256-prefix",
+        prefixLength: 2,
+        pathTemplate: "details/{shard}.json",
+        shards: detailFiles,
+      },
+      sources: sourceIndexes,
+    },
+  };
+  const manifestBody = `${JSON.stringify(manifest, null, 2)}\n`;
+  const manifestPath = join(snapshotRoot, "manifest.json");
+  await writeFile(manifestPath, manifestBody);
+  const current = {
+    schemaVersion: catalog.schemaVersion,
+    snapshotId,
+    generatedAt: catalog.generatedAt,
+    manifest: `snapshots/${snapshotId}/manifest.json`,
+    manifestBytes: Buffer.byteLength(manifestBody),
+    manifestSha256: createHash("sha256").update(manifestBody).digest("hex"),
+  };
+  await writeFile(join(outputRoot, "current.json"), `${JSON.stringify(current, null, 2)}\n`);
+  await rm(join(outputRoot, "catalog.json"), { force: true });
+  await rm(join(outputRoot, "manifest.json"), { force: true });
   await copyFile(schemaPath, join(outputRoot, "catalog.schema.json"));
+  await copyFile(indexSchemaPath, join(outputRoot, "catalog-index.schema.json"));
+  await copyFile(commandSchemaPath, join(outputRoot, "command.schema.json"));
+  await copyFile(tldrSchemaPath, join(outputRoot, "tldr.schema.json"));
   await copyFile(inventorySchemaPath, join(outputRoot, "inventory.schema.json"));
-  await writeFile(join(outputRoot, "manifest.json"), `${JSON.stringify({ schemaVersion: catalog.schemaVersion, generatedAt: catalog.generatedAt, bytes: Buffer.byteLength(stable), sha256: createHash("sha256").update(stable).digest("hex"), softwareCount: software.length, packageCount: packages.length, sources: catalog.sources.map(({ id, itemCount, snapshot }) => ({ id, itemCount, snapshot })) }, null, 2)}\n`);
-  console.log(`catalog: ${software.length} software, ${packages.length} packages, ${(Buffer.byteLength(stable) / 1024 / 1024).toFixed(1)} MiB`);
+  const snapshotBytes = Object.values(detailFiles).reduce((sum, item) => sum + item.bytes, 0)
+    + Object.values(commandDetailFiles).reduce((sum, item) => sum + item.bytes, 0)
+    + Object.values(tldrDetailFiles).reduce((sum, item) => sum + item.bytes, 0)
+    + Object.values(tldrLocaleFiles).flatMap((item) => Object.values(item.shards)).reduce((sum, item) => sum + item.bytes, 0)
+    + Object.values(inventoryFiles).reduce((sum, item) => sum + item.bytes, 0)
+    + Object.values(sourceIndexes).flatMap((item) => item.pages).reduce((sum, item) => sum + item.bytes, 0)
+    + searchFile.bytes + commandIndexFile.bytes + tldrIndexFile.bytes + tldrLocalesFile.bytes + Buffer.byteLength(manifestBody);
+  console.log(`snapshot ${snapshotId}: ${software.length} software, ${packages.length} packages, ${fish.commands.length} Fish commands, ${tldr.pages.length} TLDR pages + ${tldr.source.translationCount} translations in ${tldr.source.localeCount} locales, ${(snapshotBytes / 1024 / 1024).toFixed(1)} MiB total`);
 }
 
 await main();

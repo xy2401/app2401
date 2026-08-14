@@ -14,8 +14,17 @@ test("renders the finished product shell", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /软件源地图/);
-  assert.match(html, /一份元数据/);
+  assert.match(html, /看懂软件|开始查软件/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
+});
+
+test("separates the introduction from the searchable catalog", async () => {
+  const [home, catalog] = await Promise.all([render("/"), render("/catalog")]);
+  const homeHtml = await home.text();
+  const catalogHtml = await catalog.text();
+  assert.doesNotMatch(homeHtml, /placeholder="搜索软件/);
+  assert.match(catalogHtml, /查软件|搜索软件/);
+  assert.match(catalogHtml, /placeholder="搜索软件/);
 });
 
 test("renders static inventory and sources routes", async () => {
@@ -27,14 +36,17 @@ test("renders static inventory and sources routes", async () => {
 });
 
 test("keeps catalog data outside JavaScript bundles", async () => {
-  const catalog = JSON.parse(await readFile(new URL("../public/metadata/v1/catalog.json", import.meta.url), "utf8"));
+  const current = JSON.parse(await readFile(new URL("../public/metadata/v1/current.json", import.meta.url), "utf8"));
+  const manifest = JSON.parse(await readFile(new URL(`../public/metadata/v1/${current.manifest}`, import.meta.url), "utf8"));
+  const detail = JSON.parse(await readFile(new URL(`../public/metadata/v1/snapshots/${current.snapshotId}/${manifest.files.details.shards["00"].path}`, import.meta.url), "utf8"));
   const files = await (await import("node:fs/promises")).readdir(new URL("../dist/client/assets/", import.meta.url), { recursive: true });
   const scripts = files.filter((file) => String(file).endsWith(".js"));
-  const needle = catalog.packages.find((item) => item.name === "ffmpeg" && item.artifacts[0]?.hash)?.artifacts[0]?.hash;
+  const needle = detail.items.flatMap((item) => item.packages).find((item) => item.artifacts[0]?.hash)?.artifacts[0]?.hash;
   assert.ok(needle);
   for (const file of scripts) {
     const content = await readFile(new URL(`../dist/client/assets/${String(file).replaceAll("\\", "/")}`, import.meta.url), "utf8");
     assert.doesNotMatch(content, new RegExp(needle));
   }
-  await access(new URL("../dist/client/metadata/v1/catalog.json", import.meta.url)).catch(async () => access(new URL("../dist/metadata/v1/catalog.json", import.meta.url)));
+  await access(new URL("../dist/client/metadata/v1/current.json", import.meta.url)).catch(async () => access(new URL("../dist/metadata/v1/current.json", import.meta.url)));
+  await assert.rejects(access(new URL("../dist/client/metadata/v1/catalog.json", import.meta.url)));
 });

@@ -11,15 +11,39 @@ export type CatalogSource = {
   sourceUrl?: string;
 };
 
+export type KnowledgeSource = {
+  id: string;
+  type: "command-completions" | "command-examples";
+  label: string;
+  tier: "official-repository" | "curated-community";
+  itemCount: number;
+  recordCount: number;
+  exampleCount?: number;
+  localeCount?: number;
+  translationCount?: number;
+  snapshot: string;
+  snapshotAt?: string;
+  sourceUrl?: string;
+};
+
 export type CatalogMeta = {
   schemaVersion: string;
   generatedAt: string;
+  snapshotId: string;
   softwareCount: number;
   packageCount: number;
+  commandCount: number;
+  tldrPageCount: number;
+  tldrTranslationCount: number;
+  tldrLocaleCount: number;
   sources: CatalogSource[];
+  knowledgeSources: KnowledgeSource[];
   mode: "online" | "local";
   fileName?: string;
 };
+
+export type SourcePackageRecord = Pick<PackageRecord, "id" | "softwareId" | "manager" | "sourceId" | "collection" | "name" | "title" | "version" | "description" | "platforms" | "status">;
+export type SourceSoftwareRecord = Pick<SoftwareRecord, "id" | "name" | "summary" | "platforms">;
 
 export type SoftwareSummary = {
   id: string;
@@ -45,6 +69,53 @@ export type SoftwareRecord = {
   packageIds: string[];
   sourceIds: string[];
   candidateSoftwareIds: string[];
+  commandIds?: string[];
+  tldrPageIds?: string[];
+};
+
+export type FishCommandPath = {
+  command: string;
+  description: string;
+  dynamic: boolean;
+  line: number;
+  sourceRef: string;
+};
+
+export type FishCommandRecord = {
+  id: string;
+  name: string;
+  shell: "fish";
+  wraps: string[];
+  softwareIds: string[];
+  candidateSoftwareIds: string[];
+  commandCount: number;
+  statementCount: number;
+  dynamicStatementCount: number;
+  commands: FishCommandPath[];
+  sourceRefs: string[];
+};
+
+export type TldrExample = {
+  command: string;
+  description: string;
+  line: number;
+  sourceRef: string;
+};
+
+export type TldrPageRecord = {
+  id: string;
+  canonicalPath: string;
+  locale: string;
+  sourceLocale: string;
+  name: string;
+  title: string;
+  summary: string;
+  platform: string;
+  softwareIds: string[];
+  candidateSoftwareIds: string[];
+  exampleCount: number;
+  examples: TldrExample[];
+  sourceRef: string;
 };
 
 export type PackageRecord = {
@@ -75,6 +146,8 @@ export type SoftwareDetail = {
   software: SoftwareRecord;
   packages: PackageRecord[];
   candidates: SoftwareSummary[];
+  commands: FishCommandRecord[];
+  tldrPages: TldrPageRecord[];
 };
 
 export type Inventory = {

@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useCatalog } from "../../catalog-context";
-import type { PackageRecord, SoftwareRecord } from "../../catalog-types";
+import type { SourcePackageRecord, SourceSoftwareRecord } from "../../catalog-types";
 import { EmptyState, LoadingBlock, ManagerBadge, PlatformBadges } from "../../ui";
 
-type Row = { package: PackageRecord; software: SoftwareRecord };
+type Row = { package: SourcePackageRecord; software: SourceSoftwareRecord };
 
 export function SourcePage({ sourceId }: { sourceId: string }) {
   const { status, meta, browseSource } = useCatalog();

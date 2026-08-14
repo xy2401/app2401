@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-atlas.example/metadata/v1/tldr-v1.schema.json",
+  "title": "软件源地图 TLDR 命令页记录 v1",
+  "type": "object",
+  "required": ["id", "canonicalPath", "locale", "sourceLocale", "name", "title", "summary", "platform", "softwareIds", "candidateSoftwareIds", "exampleCount", "examples", "sourceRef"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^tldr--[a-f0-9]{12}$" },
+    "canonicalPath": { "type": "string", "pattern": "^[^/]+/.+\\.md$" },
+    "locale": { "type": "string", "pattern": "^[a-z]{2,3}(?:-[A-Z]{2})?$" },
+    "sourceLocale": { "type": "string", "pattern": "^[a-z]{2,3}(?:_[A-Z]{2})?$" },
+    "name": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string" },
+    "platform": { "type": "string", "minLength": 1 },
+    "softwareIds": { "$ref": "#/$defs/strings" },
+    "candidateSoftwareIds": { "$ref": "#/$defs/strings" },
+    "exampleCount": { "type": "integer", "minimum": 0 },
+    "examples": { "type": "array", "items": { "$ref": "#/$defs/example" } },
+    "sourceRef": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "strings": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "example": {
+      "type": "object",
+      "required": ["description", "command", "line", "sourceRef"],
+      "properties": {
+        "description": { "type": "string" },
+        "command": { "type": "string", "minLength": 1 },
+        "line": { "type": "integer", "minimum": 1 },
+        "sourceRef": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    }
+  }
+}

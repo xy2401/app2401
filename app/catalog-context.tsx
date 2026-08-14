@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
-import type { CatalogMeta, Inventory, InventoryResult, SoftwareDetail, SoftwareSummary } from "./catalog-types";
+import type { CatalogMeta, Inventory, InventoryResult, SoftwareDetail, SoftwareSummary, SourcePackageRecord, SourceSoftwareRecord } from "./catalog-types";
 
 type Status = "loading" | "ready" | "error";
 type CatalogApi = {
@@ -9,10 +9,10 @@ type CatalogApi = {
   error: string;
   meta: CatalogMeta | null;
   loadOnlineCatalog(): Promise<void>;
-  loadLocalCatalog(file: File): Promise<void>;
+  loadLocalCatalog(files: File[]): Promise<void>;
   search(query: string, managers?: string[]): Promise<SoftwareSummary[]>;
   detail(id: string): Promise<SoftwareDetail>;
-  browseSource(sourceId: string, query?: string, offset?: number): Promise<{ total: number; items: Array<{ package: import("./catalog-types").PackageRecord; software: import("./catalog-types").SoftwareRecord }> }>;
+  browseSource(sourceId: string, query?: string, offset?: number): Promise<{ total: number; items: Array<{ package: SourcePackageRecord; software: SourceSoftwareRecord }> }>;
   matchInventory(inventory: Inventory): Promise<InventoryResult>;
 };
 
@@ -38,9 +38,9 @@ export function CatalogProvider({ children }: { children: React.ReactNode }) {
     catch (cause) { setError(cause instanceof Error ? cause.message : String(cause)); setStatus("error"); throw cause; }
   }, [call]);
 
-  const loadLocalCatalog = useCallback(async (file: File) => {
+  const loadLocalCatalog = useCallback(async (files: File[]) => {
     setStatus("loading"); setError("");
-    try { const next = await call<CatalogMeta>("loadFile", { file }); setMeta(next); setStatus("ready"); }
+    try { const next = await call<CatalogMeta>("loadFolder", { files }); setMeta(next); setStatus("ready"); }
     catch (cause) { setError(cause instanceof Error ? cause.message : String(cause)); setStatus("error"); throw cause; }
   }, [call]);
 
@@ -61,13 +61,11 @@ export function CatalogProvider({ children }: { children: React.ReactNode }) {
     return () => { worker.terminate(); tasks.forEach((task) => task.reject(new Error("Worker stopped"))); tasks.clear(); };
   }, []);
 
-  const value: CatalogApi = {
-    status, error, meta, loadOnlineCatalog, loadLocalCatalog,
-    search: (query, managers = []) => call("search", { query, managers }),
-    detail: (id) => call("detail", { id }),
-    browseSource: (sourceId, query = "", offset = 0) => call("browseSource", { sourceId, query, offset }),
-    matchInventory: (inventory) => call("matchInventory", { inventory }),
-  };
+  const search = useCallback((query: string, managers: string[] = []) => call<SoftwareSummary[]>("search", { query, managers }), [call]);
+  const detail = useCallback((id: string) => call<SoftwareDetail>("detail", { id }), [call]);
+  const browseSource = useCallback((sourceId: string, query = "", offset = 0) => call<{ total: number; items: Array<{ package: SourcePackageRecord; software: SourceSoftwareRecord }> }>("browseSource", { sourceId, query, offset }), [call]);
+  const matchInventory = useCallback((inventory: Inventory) => call<InventoryResult>("matchInventory", { inventory }), [call]);
+  const value: CatalogApi = { status, error, meta, loadOnlineCatalog, loadLocalCatalog, search, detail, browseSource, matchInventory };
   return <CatalogContext.Provider value={value}>{children}</CatalogContext.Provider>;
 }
 
