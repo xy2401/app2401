@@ -47,7 +47,7 @@ if (await exists(currentPath)) {
   for (const distro of manifest.distributions) {
     for (const file of [distro.files.search, distro.files.repositories, distro.files.groups, ...Object.values(distro.files.details.shards)]) {
       const path = join(manifestPath, "..", ...file.path.split("/"));
-      const body = await readFile(path);
+      const body = Buffer.from((await readFile(path, "utf8")).replaceAll("\r\n", "\n"), "utf8");
       if (body.byteLength !== file.bytes || sha256(body) !== file.sha256) throw new Error(`Distribution file integrity mismatch: ${file.path}`);
     }
   }
@@ -61,7 +61,7 @@ for (const path of (await Promise.all(formattedRoots.map(walk))).flat()) {
   if (!path.endsWith(".json") && !path.endsWith(".xml")) continue;
   const catalogSnapshotsRoot = join(root, "public", "metadata", "v1", "snapshots");
   if (path.startsWith(catalogSnapshotsRoot) && !path.startsWith(activeCatalogSnapshot)) continue;
-  const body = await readFile(path, "utf8");
+  const body = (await readFile(path, "utf8")).replaceAll("\r\n", "\n");
   if (body.charCodeAt(0) === 0xfeff) throw new Error(`UTF-8 BOM is forbidden: ${path}`);
   if (!body.endsWith("\n")) throw new Error(`Missing final newline: ${path}`);
   if (path.endsWith(".json")) {
