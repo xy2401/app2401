@@ -4,6 +4,7 @@ import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { compareText, parseArgs, prettyJson, readJson, sha256, writeJson } from "../lib/metadata-common.mjs";
 import { buildCollections, buildCuratedPackages } from "../lib/distro-curation.mjs";
+import { buildDistributionSearchShards } from "../lib/distribution-search.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 if (!args.input || !args.output) throw new Error("Usage: --input <directory> --output <metadata directory> [--generated-at <ISO date>]");
@@ -43,11 +44,22 @@ for (const { document, source } of documents.sort((a, b) => compareText(a.source
   const id = source.slug || source.id;
   const shards = Object.fromEntries(Array.from({ length: 256 }, (_, index) => [index.toString(16).padStart(2, "0"), []]));
   for (const item of document.packages) shards[item.id.slice(0, 2)].push(item);
-  const search = await writeData(`${id}/search.json`, {
+  const searchShards = {};
+  for (const [shard, packages] of Object.entries(buildDistributionSearchShards(document.packages))) {
+    searchShards[shard] = await writeData(`${id}/search/${shard}.json`, {
+      schemaVersion: "1.0.0",
+      generatedAt,
+      distributionId: document.distribution.id,
+      shard,
+      packages,
+    });
+  }
+  const search = await writeData(`${id}/search/index.json`, {
     schemaVersion: "1.0.0",
     generatedAt,
     distribution: document.distribution,
-    packages: document.packages.map((item) => ({ id: item.id, name: item.name, version: item.version, architecture: item.architecture, summary: item.summary, category: item.category || "", repository: item.repository, shard: item.id.slice(0, 2) })),
+    packageCount: document.packages.length,
+    shards: searchShards,
   });
   const repositories = await writeData(`${id}/repositories.json`, { schemaVersion: "1.0.0", generatedAt, distributionId: document.distribution.id, repositories: document.repositories });
   const groups = await writeData(`${id}/groups.json`, { schemaVersion: "1.0.0", generatedAt, distributionId: document.distribution.id, groups: document.groups, environments: document.environments });
@@ -77,6 +89,7 @@ await copyFile(join(projectRoot, "catalog", "schemas", "distribution-index-v1.sc
 await copyFile(join(projectRoot, "catalog", "schemas", "distribution-catalog-v1.schema.json"), join(temporaryRoot, "distribution-catalog.schema.json"));
 await copyFile(join(projectRoot, "catalog", "schemas", "distribution-collections-v1.schema.json"), join(temporaryRoot, "distribution-collections.schema.json"));
 await copyFile(join(projectRoot, "catalog", "schemas", "distribution-curated-v1.schema.json"), join(temporaryRoot, "distribution-curated.schema.json"));
+await copyFile(join(projectRoot, "catalog", "schemas", "distribution-search-v1.schema.json"), join(temporaryRoot, "distribution-search.schema.json"));
 
 await rm(previousRoot, { recursive: true, force: true });
 try { await rename(outputRoot, previousRoot); } catch (error) { if (error.code !== "ENOENT") throw error; }

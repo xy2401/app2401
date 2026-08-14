@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-source-atlas.example/schemas/distribution-search-v1.schema.json",
+  "title": "Linux distribution search index or shard",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "generatedAt",
+        "distribution",
+        "packageCount",
+        "shards"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": "1.0.0"
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "distribution": {
+          "type": "object"
+        },
+        "packageCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "shards": {
+          "type": "object",
+          "minProperties": 16,
+          "maxProperties": 16,
+          "patternProperties": {
+            "^[0-9a-f]$": {
+              "$ref": "#/$defs/file"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "generatedAt",
+        "distributionId",
+        "shard",
+        "packages"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": "1.0.0"
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "distributionId": {
+          "type": "string"
+        },
+        "shard": {
+          "type": "string",
+          "pattern": "^[0-9a-f]$"
+        },
+        "packages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "version",
+              "architecture",
+              "summary",
+              "category",
+              "repository",
+              "shard"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              },
+              "architecture": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "repository": {
+                "type": "string"
+              },
+              "shard": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{2}$"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
-import { readFile } from "node:fs/promises";
+import { readFile, rm } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { buildCollections, buildCuratedPackages } from "../lib/distro-curation.mjs";
+import { buildDistributionSearchShards } from "../lib/distribution-search.mjs";
 import { parseArgs, prettyJson, readJson, sha256, writeJson } from "../lib/metadata-common.mjs";
 
 const args = parseArgs(process.argv.slice(2));
@@ -28,7 +29,13 @@ for (const entry of index.distributions) {
   entry.curatedPackageCount = curated.length;
   entry.files.collections = await descriptor(`${entry.id}/collections.json`, { schemaVersion: "1.0.0", generatedAt: index.generatedAt, distributionId: entry.canonicalId, collections });
   entry.files.curated = await descriptor(`${entry.id}/curated.json`, { schemaVersion: "1.0.0", generatedAt: index.generatedAt, distributionId: entry.canonicalId, packages: curated });
-  console.log(`${entry.id}: ${collections.length} collections, ${curated.length} curated packages`);
+  const searchShards = {};
+  for (const [shard, items] of Object.entries(buildDistributionSearchShards(packages))) {
+    searchShards[shard] = await descriptor(`${entry.id}/search/${shard}.json`, { schemaVersion: "1.0.0", generatedAt: index.generatedAt, distributionId: entry.canonicalId, shard, packages: items });
+  }
+  entry.files.search = await descriptor(`${entry.id}/search/index.json`, { schemaVersion: "1.0.0", generatedAt: index.generatedAt, distribution: entry.distribution, packageCount: packages.length, shards: searchShards });
+  await rm(join(root, entry.id, "search.json"), { force: true });
+  console.log(`${entry.id}: ${collections.length} collections, ${curated.length} curated packages, ${Object.keys(searchShards).length} search shards`);
 }
 
 index.revision = sha256(prettyJson({ ...index, revision: "" })).slice(0, 12);

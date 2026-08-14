@@ -122,6 +122,9 @@ test("normalizes all distribution adapters and preserves DNF comps semantics", a
   const index = JSON.parse(await readFile(join(output, "index.json"), "utf8"));
   assert.equal(index.distributions.length, 7);
   assert.equal(Object.keys(index.distributions[0].files.details.shards).length, 256);
+  const searchIndex = JSON.parse(await readFile(join(output, "fedora-latest", "search", "index.json"), "utf8"));
+  assert.equal(Object.keys(searchIndex.shards).length, 16);
+  assert.equal((await readdir(join(output, "fedora-latest", "search"))).length, 17);
   assert.ok(index.distributions.some((entry) => entry.collectionCount > 0));
   assert.ok(index.distributions.find((entry) => entry.id === "fedora-latest").curatedPackageCount > 0);
   assert.equal(JSON.parse(await readFile(join(output, "fedora-latest", "collections.json"), "utf8")).collections[0].type, "environment");

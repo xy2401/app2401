@@ -9,11 +9,10 @@ Scoop / Chocolatey / Homebrew / Fish / TLDR → 版本化 JSON 快照 → 网站
 ## 目录结构
 
 ```text
-app/                 网站页面与浏览器端逻辑
+src/                 React 网站、浏览器路由与页面逻辑
 catalog/             元数据配置、Schema、文档和构建脚本
 public/metadata/     网站和终端客户端读取的公开 JSON
 sources/             Scoop、Chocolatey、Fish、TLDR 等外部数据源
-runtime/             本地网站运行入口
 tests/               数据解析与网站验收测试
 ```
 
@@ -74,9 +73,15 @@ npm run metadata:verify
 # 启动网站
 npm run dev
 
+# 构建纯静态 Cloudflare Pages 目录
+npm run build
+
 # 完整生产验收
 npm test
 ```
+
+网站构建结果位于 `dist/`，只包含静态 HTML、CSS、JavaScript 和公开 JSON。
+Cloudflare Pages 的构建命令使用 `npm run build`，输出目录使用 `dist`；项目没有 Pages Functions、Worker 或 Wrangler 配置。
 
 Git 数据源每月可通过以下命令更新：
 

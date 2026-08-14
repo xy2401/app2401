@@ -9,6 +9,7 @@ const targets = [
   ["distribution-catalog-v1.schema.json", join("public", "metadata", "distributions", "v1", "distribution-catalog.schema.json")],
   ["distribution-collections-v1.schema.json", join("public", "metadata", "distributions", "v1", "distribution-collections.schema.json")],
   ["distribution-curated-v1.schema.json", join("public", "metadata", "distributions", "v1", "distribution-curated.schema.json")],
+  ["distribution-search-v1.schema.json", join("public", "metadata", "distributions", "v1", "distribution-search.schema.json")],
 ];
 for (const [source, target] of targets) {
   const output = join(root, target);

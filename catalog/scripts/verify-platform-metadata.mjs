@@ -52,9 +52,11 @@ if (await exists(distroIndexPath)) {
   const indexSchema = await readJson(join(root, "catalog", "schemas", "distribution-index-v1.schema.json"));
   const collectionsSchema = await readJson(join(root, "catalog", "schemas", "distribution-collections-v1.schema.json"));
   const curatedSchema = await readJson(join(root, "catalog", "schemas", "distribution-curated-v1.schema.json"));
+  const searchSchema = await readJson(join(root, "catalog", "schemas", "distribution-search-v1.schema.json"));
   const validateIndex = ajv.compile(indexSchema);
   const validateCollections = ajv.compile(collectionsSchema);
   const validateCurated = ajv.compile(curatedSchema);
+  const validateSearch = ajv.compile(searchSchema);
   const index = await readJson(distroIndexPath);
   if (!validateIndex(index)) failSchema(distroIndexPath, validateIndex);
   for (const distro of index.distributions) {
@@ -65,9 +67,22 @@ if (await exists(distroIndexPath)) {
     }
     const collections = await readJson(join(distroRoot, ...distro.files.collections.path.split("/")));
     const curated = await readJson(join(distroRoot, ...distro.files.curated.path.split("/")));
+    const searchIndex = await readJson(join(distroRoot, ...distro.files.search.path.split("/")));
     if (!validateCollections(collections)) failSchema(distro.files.collections.path, validateCollections);
     if (!validateCurated(curated)) failSchema(distro.files.curated.path, validateCurated);
+    if (!validateSearch(searchIndex)) failSchema(distro.files.search.path, validateSearch);
     if (collections.collections.length !== distro.collectionCount || curated.packages.length !== distro.curatedPackageCount) throw new Error(`Distribution curated counts differ: ${distro.id}`);
+    let searchCount = 0;
+    for (const [shard, file] of Object.entries(searchIndex.shards)) {
+      const path = join(distroRoot, ...file.path.split("/"));
+      const body = Buffer.from((await readFile(path, "utf8")).replaceAll("\r\n", "\n"), "utf8");
+      if (body.byteLength !== file.bytes || sha256(body) !== file.sha256) throw new Error(`Distribution search shard integrity mismatch: ${file.path}`);
+      const document = JSON.parse(body);
+      if (!validateSearch(document)) failSchema(file.path, validateSearch);
+      if (document.shard !== shard || document.distributionId !== distro.canonicalId) throw new Error(`Distribution search shard identity mismatch: ${file.path}`);
+      searchCount += document.packages.length;
+    }
+    if (searchCount !== distro.packageCount || searchIndex.packageCount !== distro.packageCount) throw new Error(`Distribution search counts differ: ${distro.id}`);
   }
 }
 
