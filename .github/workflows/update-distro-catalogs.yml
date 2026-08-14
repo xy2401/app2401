@@ -1,0 +1,77 @@
+name: Update Linux distribution catalogs
+
+on:
+  schedule:
+    - cron: "17 4 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: metadata-linux-distributions
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    strategy:
+      fail-fast: true
+      matrix:
+        distro:
+          - ubuntu-24.04
+          - debian-stable
+          - fedora
+          - rocky-9
+          - arch
+          - alpine
+          - opensuse-leap
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Read official repository metadata
+        run: bash scripts/collect-distro-catalog.sh --distro "${{ matrix.distro }}" --output "out/${{ matrix.distro }}.json" --strict
+      - uses: actions/upload-artifact@v4
+        with:
+          name: distro-${{ matrix.distro }}
+          path: out/${{ matrix.distro }}.json
+          retention-days: 1
+
+  publish:
+    needs: collect
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: distro-*
+          path: out
+          merge-multiple: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build static shards and validate
+        run: |
+          node scripts/build-distro-snapshot.mjs --input out --output public/metadata/distributions/v1
+          npm run metadata:schemas
+          npm run metadata:platform:verify
+      - name: Commit current snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/metadata/distributions/v1
+          git diff --cached --quiet && exit 0
+          git commit -m "data: update Linux distribution catalogs"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((attempt * 3))
+          done
+          exit 1

@@ -1,0 +1,319 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-source-atlas.example/schemas/distribution-catalog-v1.schema.json",
+  "title": "Linux distribution normalized catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "distribution",
+    "image",
+    "repositories",
+    "packages",
+    "groups",
+    "environments"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "distribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "versionId",
+        "family",
+        "arch"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "versionId": {
+          "type": "string"
+        },
+        "family": {
+          "enum": [
+            "debian",
+            "rpm",
+            "arch",
+            "alpine"
+          ]
+        },
+        "arch": {
+          "const": "amd64"
+        }
+      }
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reference",
+        "digest"
+      ],
+      "properties": {
+        "reference": {
+          "type": "string"
+        },
+        "digest": {
+          "type": "string"
+        }
+      }
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "packages": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/package"
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/group"
+      }
+    },
+    "environments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/environment"
+      }
+    }
+  },
+  "$defs": {
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "version",
+        "architecture",
+        "summary",
+        "description",
+        "repository",
+        "dependencies"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{20}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epoch": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "release": {
+          "type": "string"
+        },
+        "architecture": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "homepage": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "maintainer": {
+          "type": "string"
+        },
+        "sourcePackage": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "installedSize": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "downloadSize": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "dependencies": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "requires",
+            "recommends",
+            "suggests",
+            "provides",
+            "conflicts",
+            "replaces"
+          ],
+          "properties": {
+            "requires": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "recommends": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "suggests": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "provides": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "conflicts": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "replaces": {
+              "$ref": "#/$defs/stringArray"
+            }
+          }
+        }
+      }
+    },
+    "localizedText": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "names",
+        "descriptions",
+        "visible",
+        "default",
+        "packages"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "names": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "descriptions": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "default": {
+          "type": "boolean"
+        },
+        "langOnly": {
+          "type": "string"
+        },
+        "packages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "type"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "mandatory",
+                  "default",
+                  "optional",
+                  "conditional"
+                ]
+              },
+              "requires": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "names",
+        "descriptions",
+        "groups",
+        "optionalGroups"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "names": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "descriptions": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "groups": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "optionalGroups": {
+          "$ref": "#/$defs/stringArray"
+        }
+      }
+    }
+  }
+}

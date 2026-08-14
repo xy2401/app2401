@@ -3,104 +3,295 @@
   "$id": "https://software-atlas.example/metadata/v1/catalog-v1.schema.json",
   "title": "软件源地图 Catalog v1",
   "type": "object",
-  "required": ["schemaVersion", "generatedAt", "sources", "software", "packages"],
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "sources",
+    "software",
+    "packages"
+  ],
   "properties": {
-    "schemaVersion": { "const": "1.0.0" },
-    "generatedAt": { "type": "string", "format": "date-time" },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
     "sources": {
       "type": "array",
-      "items": { "$ref": "#/$defs/source" }
+      "items": {
+        "$ref": "#/$defs/source"
+      }
     },
     "software": {
       "type": "array",
-      "items": { "$ref": "#/$defs/software" }
+      "items": {
+        "$ref": "#/$defs/software"
+      }
     },
     "packages": {
       "type": "array",
-      "items": { "$ref": "#/$defs/package" }
+      "items": {
+        "$ref": "#/$defs/package"
+      }
     }
   },
   "additionalProperties": false,
   "$defs": {
     "stringArray": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "uniqueItems": true
     },
     "source": {
       "type": "object",
-      "required": ["id", "manager", "label", "tier", "itemCount", "snapshot"],
+      "required": [
+        "id",
+        "manager",
+        "label",
+        "tier",
+        "itemCount",
+        "snapshot"
+      ],
       "properties": {
-        "id": { "type": "string", "minLength": 1 },
-        "manager": { "enum": ["scoop", "chocolatey", "homebrew"] },
-        "label": { "type": "string", "minLength": 1 },
-        "tier": { "enum": ["known-bucket", "curated-community", "official-index"] },
-        "itemCount": { "type": "integer", "minimum": 0 },
-        "snapshot": { "type": "string", "minLength": 1 },
-        "sourceUrl": { "type": "string" }
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manager": {
+          "enum": [
+            "scoop",
+            "chocolatey",
+            "homebrew"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tier": {
+          "enum": [
+            "known-bucket",
+            "curated-community",
+            "official-index"
+          ]
+        },
+        "itemCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "snapshot": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceUrl": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "software": {
       "type": "object",
-      "required": ["id", "name", "aliases", "summary", "homepages", "repositories", "licenses", "platforms", "packageIds", "sourceIds", "candidateSoftwareIds"],
+      "required": [
+        "id",
+        "name",
+        "aliases",
+        "summary",
+        "homepages",
+        "repositories",
+        "licenses",
+        "platforms",
+        "packageIds",
+        "sourceIds",
+        "candidateSoftwareIds"
+      ],
       "properties": {
-        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*--[a-f0-9]{8}$" },
-        "name": { "type": "string", "minLength": 1 },
-        "aliases": { "$ref": "#/$defs/stringArray" },
-        "summary": { "type": "string" },
-        "homepages": { "$ref": "#/$defs/stringArray" },
-        "repositories": { "$ref": "#/$defs/stringArray" },
-        "licenses": { "$ref": "#/$defs/stringArray" },
-        "platforms": { "$ref": "#/$defs/stringArray" },
-        "packageIds": { "$ref": "#/$defs/stringArray" },
-        "sourceIds": { "$ref": "#/$defs/stringArray" },
-        "candidateSoftwareIds": { "$ref": "#/$defs/stringArray" }
-        ,"commandIds": { "$ref": "#/$defs/stringArray" }
-        ,"tldrPageIds": { "$ref": "#/$defs/stringArray" }
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*--[a-f0-9]{8}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "homepages": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "repositories": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "licenses": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "platforms": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "packageIds": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "sourceIds": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "candidateSoftwareIds": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "commandIds": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "tldrPageIds": {
+          "$ref": "#/$defs/stringArray"
+        }
       },
       "additionalProperties": false
     },
     "artifact": {
       "type": "object",
-      "required": ["url"],
+      "required": [
+        "url"
+      ],
       "properties": {
-        "url": { "type": "string" },
-        "hash": { "type": "string" },
-        "architecture": { "type": "string" },
-        "kind": { "type": "string" }
+        "url": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string"
+        },
+        "architecture": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        }
       },
       "additionalProperties": false
     },
     "package": {
       "type": "object",
-      "required": ["id", "softwareId", "manager", "sourceId", "collection", "name", "title", "version", "description", "homepage", "repository", "licenses", "platforms", "architectures", "installCommand", "artifacts", "dependencies", "commands", "status", "sourceRef", "sourceDetails"],
+      "required": [
+        "id",
+        "softwareId",
+        "manager",
+        "sourceId",
+        "collection",
+        "name",
+        "title",
+        "version",
+        "description",
+        "homepage",
+        "repository",
+        "licenses",
+        "platforms",
+        "architectures",
+        "installCommand",
+        "artifacts",
+        "dependencies",
+        "commands",
+        "status",
+        "sourceRef",
+        "sourceDetails"
+      ],
       "properties": {
-        "id": { "type": "string", "minLength": 1 },
-        "softwareId": { "type": "string", "minLength": 1 },
-        "manager": { "enum": ["scoop", "chocolatey", "homebrew"] },
-        "sourceId": { "type": "string", "minLength": 1 },
-        "collection": { "type": "string", "minLength": 1 },
-        "name": { "type": "string", "minLength": 1 },
-        "title": { "type": "string", "minLength": 1 },
-        "version": { "type": "string" },
-        "description": { "type": "string" },
-        "homepage": { "type": "string" },
-        "repository": { "type": "string" },
-        "licenses": { "$ref": "#/$defs/stringArray" },
-        "platforms": { "$ref": "#/$defs/stringArray" },
-        "architectures": { "$ref": "#/$defs/stringArray" },
-        "installCommand": { "type": "string" },
-        "artifacts": { "type": "array", "items": { "$ref": "#/$defs/artifact" } },
-        "dependencies": { "$ref": "#/$defs/stringArray" },
-        "commands": { "$ref": "#/$defs/stringArray" },
-        "status": { "enum": ["active", "deprecated", "disabled", "unlisted"] },
-        "sourceRef": { "type": "string" },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "softwareId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manager": {
+          "enum": [
+            "scoop",
+            "chocolatey",
+            "homebrew"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "collection": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "homepage": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "licenses": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "platforms": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "architectures": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "installCommand": {
+          "type": "string"
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/artifact"
+          }
+        },
+        "dependencies": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "commands": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "deprecated",
+            "disabled",
+            "unlisted"
+          ]
+        },
+        "sourceRef": {
+          "type": "string"
+        },
         "sourceDetails": {
           "type": "object",
-          "required": ["type"],
+          "required": [
+            "type"
+          ],
           "properties": {
-            "type": { "enum": ["scoop", "chocolatey", "homebrew-formula", "homebrew-cask"] }
+            "type": {
+              "enum": [
+                "scoop",
+                "chocolatey",
+                "homebrew-formula",
+                "homebrew-cask"
+              ]
+            }
           },
           "additionalProperties": true
         }

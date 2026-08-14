@@ -3,32 +3,99 @@
   "$id": "https://software-atlas.example/metadata/v1/command-v1.schema.json",
   "title": "软件源地图 Fish 完整命令记录 v1",
   "type": "object",
-  "required": ["id", "name", "shell", "wraps", "softwareIds", "candidateSoftwareIds", "commandCount", "statementCount", "dynamicStatementCount", "commands", "sourceRefs"],
+  "required": [
+    "id",
+    "name",
+    "shell",
+    "wraps",
+    "softwareIds",
+    "candidateSoftwareIds",
+    "commandCount",
+    "statementCount",
+    "dynamicStatementCount",
+    "commands",
+    "sourceRefs"
+  ],
   "properties": {
-    "id": { "type": "string", "pattern": "^command--[a-f0-9]{12}$" },
-    "name": { "type": "string", "minLength": 1 },
-    "shell": { "const": "fish" },
-    "wraps": { "$ref": "#/$defs/strings" },
-    "softwareIds": { "$ref": "#/$defs/strings" },
-    "candidateSoftwareIds": { "$ref": "#/$defs/strings" },
-    "commandCount": { "type": "integer", "minimum": 0 },
-    "statementCount": { "type": "integer", "minimum": 0 },
-    "dynamicStatementCount": { "type": "integer", "minimum": 0 },
-    "commands": { "type": "array", "items": { "$ref": "#/$defs/command" } },
-    "sourceRefs": { "$ref": "#/$defs/strings" }
+    "id": {
+      "type": "string",
+      "pattern": "^command--[a-f0-9]{12}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "shell": {
+      "const": "fish"
+    },
+    "wraps": {
+      "$ref": "#/$defs/strings"
+    },
+    "softwareIds": {
+      "$ref": "#/$defs/strings"
+    },
+    "candidateSoftwareIds": {
+      "$ref": "#/$defs/strings"
+    },
+    "commandCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "statementCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "dynamicStatementCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/command"
+      }
+    },
+    "sourceRefs": {
+      "$ref": "#/$defs/strings"
+    }
   },
   "additionalProperties": false,
   "$defs": {
-    "strings": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "strings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
     "command": {
       "type": "object",
-      "required": ["command", "description", "dynamic", "line", "sourceRef"],
+      "required": [
+        "command",
+        "description",
+        "dynamic",
+        "line",
+        "sourceRef"
+      ],
       "properties": {
-        "command": { "type": "string", "minLength": 1 },
-        "description": { "type": "string" },
-        "dynamic": { "type": "boolean" },
-        "line": { "type": "integer", "minimum": 1 },
-        "sourceRef": { "type": "string", "minLength": 1 }
+        "command": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "dynamic": {
+          "type": "boolean"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sourceRef": {
+          "type": "string",
+          "minLength": 1
+        }
       },
       "additionalProperties": false
     }

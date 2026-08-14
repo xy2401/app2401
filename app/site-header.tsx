@@ -19,6 +19,7 @@ export function SiteHeader() {
         <nav aria-label="主导航">
           <Link href="/">介绍</Link>
           <Link href="/catalog">查软件</Link>
+          <Link href="/distributions">Linux 仓库</Link>
           <Link href="/sources">数据源</Link>
           <Link href="/inventory">本机清单</Link>
         </nav>

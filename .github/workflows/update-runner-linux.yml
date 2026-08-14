@@ -1,0 +1,70 @@
+name: Update Linux runner metadata
+
+on:
+  schedule:
+    - cron: "17 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: metadata-runner-linux
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    strategy:
+      fail-fast: true
+      matrix:
+        runner:
+          - ubuntu-22.04
+          - ubuntu-24.04
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Collect installed software
+        run: bash scripts/collect-runner-linux.sh --output "out/${{ matrix.runner }}.json" --runner-label "${{ matrix.runner }}" --strict
+      - uses: actions/upload-artifact@v4
+        with:
+          name: runner-linux-${{ matrix.runner }}
+          path: out/${{ matrix.runner }}.json
+          retention-days: 1
+
+  publish:
+    needs: collect
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: runner-linux-*
+          path: out
+          merge-multiple: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Merge and validate
+        run: |
+          node scripts/merge-runner-environments.mjs --platform linux --input out --output public/metadata/environments/v1/linux.json
+          npm run metadata:schemas
+          npm run metadata:platform:verify
+      - name: Commit current snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/metadata/environments/v1
+          git diff --cached --quiet && exit 0
+          git commit -m "data: update Linux runner metadata"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((attempt * 3))
+          done
+          exit 1

@@ -28,11 +28,13 @@ test("separates the introduction from the searchable catalog", async () => {
 });
 
 test("renders static inventory and sources routes", async () => {
-  const [inventory, sources] = await Promise.all([render("/inventory"), render("/sources")]);
+  const [inventory, sources, distributions] = await Promise.all([render("/inventory"), render("/sources"), render("/distributions")]);
   assert.equal(inventory.status, 200);
   assert.equal(sources.status, 200);
   assert.match(await inventory.text(), /本机清单|看懂这台电脑装了什么/);
   assert.match(await sources.text(), /数据源|从哪里来/);
+  assert.equal(distributions.status, 200);
+  assert.match(await distributions.text(), /发行版官方软件仓库|Linux 仓库/);
 });
 
 test("keeps catalog data outside JavaScript bundles", async () => {

@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://software-source-atlas.example/schemas/environment-v1.schema.json",
+  "title": "GitHub runner environment snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "provider",
+    "platform",
+    "images"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "provider": {
+      "const": "github-actions"
+    },
+    "platform": {
+      "enum": [
+        "windows",
+        "linux"
+      ]
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/image"
+      }
+    }
+  },
+  "$defs": {
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runnerLabel",
+        "imageVersion",
+        "os",
+        "sourceRefs",
+        "collectors",
+        "software"
+      ],
+      "properties": {
+        "runnerLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "imageVersion": {
+          "type": "string"
+        },
+        "os": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "version",
+            "arch"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "build": {
+              "type": "string"
+            },
+            "kernel": {
+              "type": "string"
+            },
+            "arch": {
+              "type": "string"
+            }
+          }
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "collectors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "status",
+              "count"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "ok",
+                  "unavailable",
+                  "error"
+                ]
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "error": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "software": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/software"
+          }
+        }
+      }
+    },
+    "software": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "version",
+        "kind",
+        "ecosystem",
+        "architecture",
+        "discoveryMethods"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{16}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "package",
+            "application",
+            "feature",
+            "capability",
+            "tool",
+            "runtime",
+            "component"
+          ]
+        },
+        "ecosystem": {
+          "type": "string",
+          "minLength": 1
+        },
+        "architecture": {
+          "type": "string"
+        },
+        "publisher": {
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "user",
+            "system",
+            "unknown"
+          ]
+        },
+        "path": {
+          "type": "string"
+        },
+        "sourceRef": {
+          "type": "string",
+          "format": "uri"
+        },
+        "discoveryMethods": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

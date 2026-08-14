@@ -652,7 +652,7 @@ async function main() {
 
   const writeDataFile = async (relativePath, value) => {
     const target = join(snapshotRoot, ...relativePath.split("/"));
-    const body = `${JSON.stringify(value)}\n`;
+    const body = `${JSON.stringify(value, null, 2)}\n`;
     await mkdir(dirname(target), { recursive: true });
     await writeFile(target, body);
     return {

@@ -3,68 +3,196 @@
   "$id": "https://software-atlas.example/metadata/v1/catalog-index-v1.schema.json",
   "title": "软件源地图分片索引 v1",
   "oneOf": [
-    { "$ref": "#/$defs/current" },
-    { "$ref": "#/$defs/manifest" }
+    {
+      "$ref": "#/$defs/current"
+    },
+    {
+      "$ref": "#/$defs/manifest"
+    }
   ],
   "$defs": {
     "descriptor": {
       "type": "object",
-      "required": ["path", "bytes", "sha256"],
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
       "properties": {
-        "path": { "type": "string", "minLength": 1 },
-        "bytes": { "type": "integer", "minimum": 0 },
-        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
-        "records": { "type": "integer", "minimum": 0 }
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "records": {
+          "type": "integer",
+          "minimum": 0
+        }
       },
       "additionalProperties": false
     },
     "current": {
       "type": "object",
-      "required": ["schemaVersion", "snapshotId", "generatedAt", "manifest", "manifestBytes", "manifestSha256"],
+      "required": [
+        "schemaVersion",
+        "snapshotId",
+        "generatedAt",
+        "manifest",
+        "manifestBytes",
+        "manifestSha256"
+      ],
       "properties": {
-        "schemaVersion": { "const": "1.0.0" },
-        "snapshotId": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[a-f0-9]{10}$" },
-        "generatedAt": { "type": "string", "format": "date-time" },
-        "manifest": { "type": "string", "pattern": "^snapshots/.+/manifest\\.json$" },
-        "manifestBytes": { "type": "integer", "minimum": 1 },
-        "manifestSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        "schemaVersion": {
+          "const": "1.0.0"
+        },
+        "snapshotId": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[a-f0-9]{10}$"
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "manifest": {
+          "type": "string",
+          "pattern": "^snapshots/.+/manifest\\.json$"
+        },
+        "manifestBytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "manifestSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
       },
       "additionalProperties": false
     },
     "manifest": {
       "type": "object",
-      "required": ["schemaVersion", "formatRevision", "snapshotId", "generatedAt", "softwareCount", "packageCount", "commandCount", "tldrPageCount", "tldrTranslationCount", "tldrLocaleCount", "sources", "knowledgeSources", "files"],
+      "required": [
+        "schemaVersion",
+        "formatRevision",
+        "snapshotId",
+        "generatedAt",
+        "softwareCount",
+        "packageCount",
+        "commandCount",
+        "tldrPageCount",
+        "tldrTranslationCount",
+        "tldrLocaleCount",
+        "sources",
+        "knowledgeSources",
+        "files"
+      ],
       "properties": {
-        "schemaVersion": { "const": "1.0.0" },
-        "formatRevision": { "const": "sharded-4" },
-        "snapshotId": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[a-f0-9]{10}$" },
-        "generatedAt": { "type": "string", "format": "date-time" },
-        "softwareCount": { "type": "integer", "minimum": 0 },
-        "packageCount": { "type": "integer", "minimum": 0 },
-        "commandCount": { "type": "integer", "minimum": 0 },
-        "tldrPageCount": { "type": "integer", "minimum": 0 },
-        "tldrTranslationCount": { "type": "integer", "minimum": 0 },
-        "tldrLocaleCount": { "type": "integer", "minimum": 1 },
-        "sources": { "type": "array", "items": { "type": "object" } },
-        "knowledgeSources": { "type": "array", "items": { "type": "object" } },
+        "schemaVersion": {
+          "const": "1.0.0"
+        },
+        "formatRevision": {
+          "const": "sharded-4"
+        },
+        "snapshotId": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[a-f0-9]{10}$"
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "softwareCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "packageCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "commandCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tldrPageCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tldrTranslationCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tldrLocaleCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "knowledgeSources": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
         "files": {
           "type": "object",
-          "required": ["search", "commands", "tldr", "inventory", "details", "sources"],
+          "required": [
+            "search",
+            "commands",
+            "tldr",
+            "inventory",
+            "details",
+            "sources"
+          ],
           "properties": {
-            "search": { "$ref": "#/$defs/descriptor" },
+            "search": {
+              "$ref": "#/$defs/descriptor"
+            },
             "commands": {
               "type": "object",
-              "required": ["index", "details"],
+              "required": [
+                "index",
+                "details"
+              ],
               "properties": {
-                "index": { "$ref": "#/$defs/descriptor" },
+                "index": {
+                  "$ref": "#/$defs/descriptor"
+                },
                 "details": {
                   "type": "object",
-                  "required": ["algorithm", "prefixLength", "pathTemplate", "shards"],
+                  "required": [
+                    "algorithm",
+                    "prefixLength",
+                    "pathTemplate",
+                    "shards"
+                  ],
                   "properties": {
-                    "algorithm": { "const": "sha256-prefix" },
-                    "prefixLength": { "const": 2 },
-                    "pathTemplate": { "const": "commands/details/{shard}.json" },
-                    "shards": { "type": "object", "minProperties": 256, "maxProperties": 256, "additionalProperties": { "$ref": "#/$defs/descriptor" } }
+                    "algorithm": {
+                      "const": "sha256-prefix"
+                    },
+                    "prefixLength": {
+                      "const": 2
+                    },
+                    "pathTemplate": {
+                      "const": "commands/details/{shard}.json"
+                    },
+                    "shards": {
+                      "type": "object",
+                      "minProperties": 256,
+                      "maxProperties": 256,
+                      "additionalProperties": {
+                        "$ref": "#/$defs/descriptor"
+                      }
+                    }
                   },
                   "additionalProperties": false
                 }
@@ -73,42 +201,98 @@
             },
             "tldr": {
               "type": "object",
-              "required": ["index", "localesIndex", "details", "locales"],
+              "required": [
+                "index",
+                "localesIndex",
+                "details",
+                "locales"
+              ],
               "properties": {
-                "index": { "$ref": "#/$defs/descriptor" },
-                "localesIndex": { "$ref": "#/$defs/descriptor" },
+                "index": {
+                  "$ref": "#/$defs/descriptor"
+                },
+                "localesIndex": {
+                  "$ref": "#/$defs/descriptor"
+                },
                 "details": {
                   "type": "object",
-                  "required": ["algorithm", "prefixLength", "pathTemplate", "shards"],
+                  "required": [
+                    "algorithm",
+                    "prefixLength",
+                    "pathTemplate",
+                    "shards"
+                  ],
                   "properties": {
-                    "algorithm": { "const": "sha256-command-prefix" },
-                    "prefixLength": { "const": 1 },
-                    "pathTemplate": { "const": "tldr/details/{shard}.json" },
-                    "shards": { "type": "object", "minProperties": 16, "maxProperties": 16, "additionalProperties": { "$ref": "#/$defs/descriptor" } }
+                    "algorithm": {
+                      "const": "sha256-command-prefix"
+                    },
+                    "prefixLength": {
+                      "const": 1
+                    },
+                    "pathTemplate": {
+                      "const": "tldr/details/{shard}.json"
+                    },
+                    "shards": {
+                      "type": "object",
+                      "minProperties": 16,
+                      "maxProperties": 16,
+                      "additionalProperties": {
+                        "$ref": "#/$defs/descriptor"
+                      }
+                    }
                   },
                   "additionalProperties": false
                 },
-                "locales": { "type": "object", "minProperties": 1 }
+                "locales": {
+                  "type": "object",
+                  "minProperties": 1
+                }
               },
               "additionalProperties": false
             },
             "inventory": {
               "type": "object",
-              "required": ["scoop", "chocolatey", "homebrew"],
-              "additionalProperties": { "$ref": "#/$defs/descriptor" }
+              "required": [
+                "scoop",
+                "chocolatey",
+                "homebrew"
+              ],
+              "additionalProperties": {
+                "$ref": "#/$defs/descriptor"
+              }
             },
             "details": {
               "type": "object",
-              "required": ["algorithm", "prefixLength", "pathTemplate", "shards"],
+              "required": [
+                "algorithm",
+                "prefixLength",
+                "pathTemplate",
+                "shards"
+              ],
               "properties": {
-                "algorithm": { "const": "sha256-prefix" },
-                "prefixLength": { "const": 2 },
-                "pathTemplate": { "const": "details/{shard}.json" },
-                "shards": { "type": "object", "minProperties": 256, "maxProperties": 256, "additionalProperties": { "$ref": "#/$defs/descriptor" } }
+                "algorithm": {
+                  "const": "sha256-prefix"
+                },
+                "prefixLength": {
+                  "const": 2
+                },
+                "pathTemplate": {
+                  "const": "details/{shard}.json"
+                },
+                "shards": {
+                  "type": "object",
+                  "minProperties": 256,
+                  "maxProperties": 256,
+                  "additionalProperties": {
+                    "$ref": "#/$defs/descriptor"
+                  }
+                }
               },
               "additionalProperties": false
             },
-            "sources": { "type": "object" }
+            "sources": {
+              "type": "object"
+            }
           },
           "additionalProperties": false
         }

@@ -9,7 +9,7 @@
 - [ ] 来源允许精选和不完整，但必须准确说明覆盖边界，不能把精选仓库描述为完整生态。
 - [ ] 所有脚本、安装声明和命令示例只作为文本解析，永不在构建器中执行。
 - [ ] 新来源先做体量与字段分析，通过后再加入正式快照；优先浅克隆、稀疏检出或官方 JSON API。
-- [ ] 元数据保持普通 UTF-8 JSON，并继续使用不可变快照、哈希校验和按需分片。
+- [x] 元数据保持格式化的普通 UTF-8 JSON/XML：无 BOM、2 空格缩进、稳定顺序、末尾换行，并继续使用不可变快照、哈希校验和按需分片。
 - [ ] v1 只增加可选字段；任何破坏性协议变化进入 `/metadata/v2/`。
 
 ## P0：让现有数据真正可独立使用
@@ -42,6 +42,17 @@
 
 ## P1：优先增加的元数据源
 
+### GitHub Runner 与 Linux 发行版静态元数据
+
+- [x] 增加 Windows Runner 2022/2025 已安装软件采集脚本和月度 GitHub Actions。
+- [x] 增加 Ubuntu Runner 22.04/24.04 已安装软件采集脚本和月度 GitHub Actions。
+- [x] 增加 Ubuntu、Debian、Fedora、Rocky、Arch、Alpine、openSUSE 七个发行版的容器化索引采集入口。
+- [x] 把发行版搜索索引、仓库、DNF 软件组和 256 个详情分片直接发布为网站静态 JSON。
+- [x] 增加 Runner/发行版 Schema、隐私限制、格式检查、Fixture 和分片回归测试。
+- [x] 网站增加 Linux 仓库浏览、搜索、详情和 DNF 软件组入口。
+
+后续：观察首次月度完整采集的体积与耗时，按实际数据补充命令提供关系，并为 PS1/Bash 增加这些独立数据集的缓存查询。
+
 ### AppStream：Linux 桌面软件资料
 
 - [ ] 先接入 Freedesktop AppStream XML/YAML 元数据规范和一个官方发行版的 AppStream 索引。
@@ -66,26 +77,26 @@
 
 ### Debian/Ubuntu APT 官方包索引
 
-- [ ] 不使用 Docker 拉取发行版镜像；直接下载官方仓库的 `InRelease/Release` 与压缩 `Packages` 索引。
+- [x] 使用临时 Docker 环境读取官方 APT 索引；镜像和软件包正文不进入仓库。
 - [ ] 验证 Release 哈希；记录发行版、版本、组件、架构和仓库快照。
-- [ ] 提取 Package、Version、Architecture、Description、Homepage、Depends、Provides、Section、Priority 和 Source。
+- [x] 提取 Package、Version、Architecture、Description、Homepage、Depends、Provides、Section 和 Source。
 - [ ] 按 suite/component/architecture 独立分片，避免把重复架构记录全部塞进搜索索引。
 
 验收：先完成一个 Ubuntu LTS 或 Debian stable 的 amd64 主仓库；不下载任何 `.deb`。
 
 ### Fedora/RHEL 系 DNF 官方仓库元数据
 
-- [ ] 直接读取官方 `repomd.xml`、primary/filelists/comps 元数据，不拉取容器镜像和 RPM。
+- [x] 在临时 Fedora/Rocky 容器中读取 repoquery 与 comps 元数据，不保存镜像或 RPM。
 - [ ] 校验 repomd 中的 checksum，记录仓库、发行版、架构与 revision。
-- [ ] 提取名称、摘要、描述、URL、许可证、依赖、provides、文件/命令映射和软件组。
+- [x] 提取名称、摘要、描述、URL、许可证、结构化依赖、provides 和软件组；文件/命令映射留待后续。
 
 验收：先完成一个当前 Fedora 版本的 x86_64 官方仓库，并能回答“哪个包提供某个命令”。
 
 ## P2：Linux 覆盖扩展
 
-- [ ] Arch Linux：读取官方仓库数据库，提取 desc/depends/provides/files；不下载包文件。
-- [ ] Alpine Linux：读取官方 `APKINDEX.tar.gz`，提取包描述、依赖、provides、origin 和架构。
-- [ ] openSUSE：读取官方 repository metadata，与 RPM 通用解析器复用。
+- [x] Arch Linux：读取官方仓库索引，提取描述、依赖和 provides；不保存包文件。
+- [x] Alpine Linux：读取官方 APKINDEX，提取描述、依赖、provides、origin 和架构。
+- [x] openSUSE：读取官方 Zypper repository metadata。
 - [ ] Nixpkgs：优先评估官方/社区已有 JSON 索引或一次性 evaluation 导出，避免完整构建与下载 store paths。
 - [ ] Snap：先确认可持续的官方公开索引与使用条款；没有稳定批量接口前不抓取网页。
 - [ ] Flatpak/Flathub：读取 AppStream 与 summary 元数据，不下载 runtimes 或应用 bundles。
