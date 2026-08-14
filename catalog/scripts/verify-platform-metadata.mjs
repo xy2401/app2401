@@ -4,7 +4,7 @@ import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { prettyJson, readJson, sha256 } from "./lib/metadata-common.mjs";
 
-const root = resolve(import.meta.dirname, "..");
+const root = resolve(import.meta.dirname, "../..");
 const ajv = new Ajv2020({ allErrors: true, strict: false });
 addFormats(ajv);
 
@@ -26,8 +26,8 @@ function failSchema(label, validate) {
   if (validate.errors) throw new Error(`${label}: ${ajv.errorsText(validate.errors, { separator: "\n" })}`);
 }
 
-const environmentSchema = await readJson(join(root, "schemas", "environment-v1.schema.json"));
-const environmentIndexSchema = await readJson(join(root, "schemas", "environment-index-v1.schema.json"));
+const environmentSchema = await readJson(join(root, "catalog", "schemas", "environment-v1.schema.json"));
+const environmentIndexSchema = await readJson(join(root, "catalog", "schemas", "environment-index-v1.schema.json"));
 const validateEnvironment = ajv.compile(environmentSchema);
 const validateEnvironmentIndex = ajv.compile(environmentIndexSchema);
 for (const platform of ["windows", "linux"]) {
@@ -49,9 +49,9 @@ for (const platform of ["windows", "linux"]) {
 const distroRoot = join(root, "public", "metadata", "distributions", "v1");
 const distroIndexPath = join(distroRoot, "index.json");
 if (await exists(distroIndexPath)) {
-  const indexSchema = await readJson(join(root, "schemas", "distribution-index-v1.schema.json"));
-  const collectionsSchema = await readJson(join(root, "schemas", "distribution-collections-v1.schema.json"));
-  const curatedSchema = await readJson(join(root, "schemas", "distribution-curated-v1.schema.json"));
+  const indexSchema = await readJson(join(root, "catalog", "schemas", "distribution-index-v1.schema.json"));
+  const collectionsSchema = await readJson(join(root, "catalog", "schemas", "distribution-collections-v1.schema.json"));
+  const curatedSchema = await readJson(join(root, "catalog", "schemas", "distribution-curated-v1.schema.json"));
   const validateIndex = ajv.compile(indexSchema);
   const validateCollections = ajv.compile(collectionsSchema);
   const validateCurated = ajv.compile(curatedSchema);
@@ -71,7 +71,7 @@ if (await exists(distroIndexPath)) {
   }
 }
 
-const formattedRoots = [join(root, "schemas"), join(root, "data"), join(root, "public", "metadata")];
+const formattedRoots = [join(root, "catalog", "schemas"), join(root, "catalog", "config"), join(root, "public", "metadata")];
 const catalogCurrentPath = join(root, "public", "metadata", "v1", "current.json");
 const catalogCurrent = await exists(catalogCurrentPath) ? await readJson(catalogCurrentPath) : null;
 const activeCatalogSnapshot = catalogCurrent ? join(root, "public", "metadata", "v1", "snapshots", catalogCurrent.snapshotId) : "";

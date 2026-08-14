@@ -1,12 +1,12 @@
 import { readFile, readdir } from "node:fs/promises";
 import { basename, join, resolve } from "node:path";
 import { XMLParser } from "fast-xml-parser";
-import { parseArgs, parseOsRelease, readJson, sha256, unique, writeJson, compareText } from "./lib/metadata-common.mjs";
+import { parseArgs, parseOsRelease, readJson, sha256, unique, writeJson, compareText } from "../lib/metadata-common.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 if (!args.distro || !args["raw-dir"] || !args.output) throw new Error("Usage: --distro <id> --raw-dir <directory> --output <file>");
-const root = resolve(import.meta.dirname, "..");
-const config = await readJson(join(root, "data", "distribution-sources.json"));
+const root = resolve(import.meta.dirname, "../../..");
+const config = await readJson(join(root, "catalog", "config", "distribution-sources.json"));
 const source = config.distributions.find((entry) => entry.id === args.distro);
 if (!source) throw new Error(`Unsupported distribution: ${args.distro}`);
 const rawDir = resolve(args["raw-dir"]);

@@ -1,6 +1,6 @@
 import { readdir } from "node:fs/promises";
 import { join, resolve } from "node:path";
-import { compareText, parseArgs, prettyJson, readJson, sha256, writeJson } from "./lib/metadata-common.mjs";
+import { compareText, parseArgs, prettyJson, readJson, sha256, writeJson } from "../lib/metadata-common.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 if (!args.platform || !args.input || !args.output) throw new Error("Usage: --platform windows|linux --input <directory> --output <directory>");

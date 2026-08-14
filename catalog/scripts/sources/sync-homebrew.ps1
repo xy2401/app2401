@@ -3,7 +3,7 @@ param()
 
 $ErrorActionPreference = 'Stop'
 
-$projectRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
+$projectRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..\..\..')).Path
 $sourceRoot = Join-Path $projectRoot 'sources\homebrew'
 $apiRoot = Join-Path $sourceRoot 'api'
 $snapshotPath = Join-Path $sourceRoot 'snapshot.json'

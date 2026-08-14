@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { parseCompleteStatement, parseFishCompletionFile } from "../scripts/lib/parse-fish-completions.mjs";
+import { parseCompleteStatement, parseFishCompletionFile } from "../catalog/scripts/lib/parse-fish-completions.mjs";
 
 test("parses Fish short and long options without executing expressions", () => {
   const parsed = parseCompleteStatement("complete -c demo -s h -l help -d 'Show help' -r -n '(__fish_seen_subcommand_from run)'", 7);

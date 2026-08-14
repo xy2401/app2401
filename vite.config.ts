@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 
 const localBindingConfig = {
-  main: "./worker/index.ts",
+  main: "./runtime/worker.ts",
   compatibility_flags: ["nodejs_compat"],
 };
 

@@ -1,7 +1,7 @@
 import { execFileSync } from "node:child_process";
 import { readdirSync, statSync, readFileSync } from "node:fs";
 import { resolve, join } from "node:path";
-import { parseArgs, normalizeArch, parseOsRelease, readJson, stableSoftwareId, unique, writeJson, compareText } from "./lib/metadata-common.mjs";
+import { parseArgs, normalizeArch, parseOsRelease, readJson, stableSoftwareId, unique, writeJson, compareText } from "../lib/metadata-common.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 if (!args.output || !args["runner-label"]) throw new Error("Usage: --output <file> --runner-label <label> [--strict]");

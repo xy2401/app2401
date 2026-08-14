@@ -2,16 +2,16 @@ import { copyFile, mkdir, rename, rm } from "node:fs/promises";
 import { basename, dirname, join, resolve } from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
-import { compareText, parseArgs, prettyJson, readJson, sha256, writeJson } from "./lib/metadata-common.mjs";
-import { buildCollections, buildCuratedPackages } from "./lib/distro-curation.mjs";
+import { compareText, parseArgs, prettyJson, readJson, sha256, writeJson } from "../lib/metadata-common.mjs";
+import { buildCollections, buildCuratedPackages } from "../lib/distro-curation.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 if (!args.input || !args.output) throw new Error("Usage: --input <directory> --output <metadata directory> [--generated-at <ISO date>]");
-const projectRoot = resolve(import.meta.dirname, "..");
+const projectRoot = resolve(import.meta.dirname, "../../..");
 const inputDir = resolve(args.input);
 const outputRoot = resolve(args.output);
-const sourceConfig = await readJson(join(projectRoot, "data", "distribution-sources.json"));
-const schema = await readJson(join(projectRoot, "schemas", "distribution-catalog-v1.schema.json"));
+const sourceConfig = await readJson(join(projectRoot, "catalog", "config", "distribution-sources.json"));
+const schema = await readJson(join(projectRoot, "catalog", "schemas", "distribution-catalog-v1.schema.json"));
 const ajv = new Ajv2020({ allErrors: true, strict: false });
 addFormats(ajv);
 const validate = ajv.compile(schema);
@@ -73,10 +73,10 @@ for (const { document, source } of documents.sort((a, b) => compareText(a.source
 }
 
 await writeData("index.json", { schemaVersion: "1.0.0", generatedAt, revision, distributions });
-await copyFile(join(projectRoot, "schemas", "distribution-index-v1.schema.json"), join(temporaryRoot, "distribution-index.schema.json"));
-await copyFile(join(projectRoot, "schemas", "distribution-catalog-v1.schema.json"), join(temporaryRoot, "distribution-catalog.schema.json"));
-await copyFile(join(projectRoot, "schemas", "distribution-collections-v1.schema.json"), join(temporaryRoot, "distribution-collections.schema.json"));
-await copyFile(join(projectRoot, "schemas", "distribution-curated-v1.schema.json"), join(temporaryRoot, "distribution-curated.schema.json"));
+await copyFile(join(projectRoot, "catalog", "schemas", "distribution-index-v1.schema.json"), join(temporaryRoot, "distribution-index.schema.json"));
+await copyFile(join(projectRoot, "catalog", "schemas", "distribution-catalog-v1.schema.json"), join(temporaryRoot, "distribution-catalog.schema.json"));
+await copyFile(join(projectRoot, "catalog", "schemas", "distribution-collections-v1.schema.json"), join(temporaryRoot, "distribution-collections.schema.json"));
+await copyFile(join(projectRoot, "catalog", "schemas", "distribution-curated-v1.schema.json"), join(temporaryRoot, "distribution-curated.schema.json"));
 
 await rm(previousRoot, { recursive: true, force: true });
 try { await rename(outputRoot, previousRoot); } catch (error) { if (error.code !== "ENOENT") throw error; }

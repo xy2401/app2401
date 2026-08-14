@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v6
       - name: Collect installed software
         shell: pwsh
-        run: ./scripts/collect-runner-windows.ps1 -Output "out/${{ matrix.runner }}.json" -RunnerLabel "${{ matrix.runner }}" -Strict
+        run: ./catalog/scripts/runners/collect-runner-windows.ps1 -Output "out/${{ matrix.runner }}.json" -RunnerLabel "${{ matrix.runner }}" -Strict
       - uses: actions/upload-artifact@v6
         with:
           name: runner-windows-${{ matrix.runner }}
@@ -51,7 +51,7 @@ jobs:
       - run: npm ci
       - name: Merge and validate
         run: |
-          node scripts/merge-runner-environments.mjs --platform windows --input out --output public/metadata/environments/v1/github-actions
+          node catalog/scripts/runners/merge-runner-environments.mjs --platform windows --input out --output public/metadata/environments/v1/github-actions
           npm run metadata:schemas
           npm run metadata:platform:verify
       - name: Commit current snapshot

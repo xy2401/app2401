@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 DISTRO=""
 OUTPUT=""
 FIXTURE=""
@@ -23,7 +23,7 @@ if [[ -z "$DISTRO" || -z "$OUTPUT" ]]; then
   exit 2
 fi
 
-readarray -t SOURCE < <(node -e 'const c=require(process.argv[1]);const d=c.distributions.find(x=>x.slug===process.argv[2]||x.id===process.argv[2]);if(!d)process.exit(2);console.log(d.id);console.log(d.image);console.log(d.family)' "$PROJECT_ROOT/data/distribution-sources.json" "$DISTRO")
+readarray -t SOURCE < <(node -e 'const c=require(process.argv[1]);const d=c.distributions.find(x=>x.slug===process.argv[2]||x.id===process.argv[2]);if(!d)process.exit(2);console.log(d.id);console.log(d.image);console.log(d.family)' "$PROJECT_ROOT/catalog/config/distribution-sources.json" "$DISTRO")
 if ((${#SOURCE[@]} != 3)); then echo "Unsupported distribution: $DISTRO" >&2; exit 2; fi
 SOURCE_ID="${SOURCE[0]}"
 IMAGE="${SOURCE[1]}"

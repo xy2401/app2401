@@ -2,7 +2,7 @@ import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { prettyJson, readJson } from "./lib/metadata-common.mjs";
 
-const root = resolve(import.meta.dirname, "..");
+const root = resolve(import.meta.dirname, "../..");
 
 async function walk(directory) {
   const output = [];
@@ -16,8 +16,8 @@ async function walk(directory) {
 
 const current = await readJson(join(root, "public", "metadata", "v1", "current.json"));
 const paths = [
-  ...await walk(join(root, "schemas")),
-  ...await walk(join(root, "data")),
+  ...await walk(join(root, "catalog", "schemas")),
+  ...await walk(join(root, "catalog", "config")),
   ...await walk(join(root, "public", "metadata", "environments")),
   ...await walk(join(root, "public", "metadata", "distributions")),
   ...await walk(join(root, "public", "metadata", "v1", "snapshots", current.snapshotId)),

@@ -16,7 +16,7 @@ async function write(path, body) {
 }
 
 function run(script, args) {
-  const result = spawnSync(process.execPath, [join(root, "scripts", script), ...args], { cwd: root, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+  const result = spawnSync(process.execPath, [join(root, "catalog", "scripts", "distributions", script), ...args], { cwd: root, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
   assert.equal(result.status, 0, result.stderr || result.stdout);
 }
 
@@ -131,7 +131,7 @@ test("normalizes all distribution adapters and preserves DNF comps semantics", a
 });
 
 test("environment schema rejects machine identity fields", async () => {
-  const schema = JSON.parse(await readFile(join(root, "schemas", "environment-v1.schema.json"), "utf8"));
+  const schema = JSON.parse(await readFile(join(root, "catalog", "schemas", "environment-v1.schema.json"), "utf8"));
   const ajv = new Ajv2020({ strict: false });
   addFormats(ajv);
   const validate = ajv.compile(schema);

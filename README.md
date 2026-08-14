@@ -6,6 +6,19 @@
 Scoop / Chocolatey / Homebrew / Fish / TLDR → 版本化 JSON 快照 → 网站 / PowerShell / Bash
 ```
 
+## 目录结构
+
+```text
+app/                 网站页面与浏览器端逻辑
+catalog/             元数据配置、Schema、文档和构建脚本
+public/metadata/     网站和终端客户端读取的公开 JSON
+sources/             Scoop、Chocolatey、Fish、TLDR 等外部数据源
+runtime/             本地网站运行入口
+tests/               数据解析与网站验收测试
+```
+
+`catalog/` 是构建输入和工具，`public/metadata/` 是可直接发布、下载和缓存的构建输出。
+
 网站不会把软件记录编译进 JavaScript。它先读取
 `public/metadata/v1/current.json`，再按需读取搜索索引、包管理器索引和详情分片，
 并在 Web Worker 中完成搜索、详情查询和本机清单匹配。
@@ -52,7 +65,7 @@ TLDR 解析器保留每种语言完整的命令模板、占位符、平台与原
 
 ```powershell
 # 同步 Homebrew 官方 JSON
-./scripts/sync-homebrew.ps1
+./catalog/scripts/sources/sync-homebrew.ps1
 
 # 生成并校验分片元数据快照
 npm run metadata:build
@@ -74,13 +87,13 @@ git submodule update --remote --depth 1
 
 ## 开放协议
 
-- `schemas/catalog-v1.schema.json`：统一软件和来源包数据协议。
-- `schemas/catalog-index-v1.schema.json`：当前快照指针与分片 manifest 协议。
-- `schemas/command-v1.schema.json`：Fish 完整命令路径与解释协议。
-- `schemas/tldr-v1.schema.json`：TLDR 完整命令模板、解释和平台协议。
-- `schemas/inventory-v1.schema.json`：PS1/Bash 将来输出的本机清单协议。
+- `catalog/schemas/catalog-v1.schema.json`：统一软件和来源包数据协议。
+- `catalog/schemas/catalog-index-v1.schema.json`：当前快照指针与分片 manifest 协议。
+- `catalog/schemas/command-v1.schema.json`：Fish 完整命令路径与解释协议。
+- `catalog/schemas/tldr-v1.schema.json`：TLDR 完整命令模板、解释和平台协议。
+- `catalog/schemas/inventory-v1.schema.json`：PS1/Bash 将来输出的本机清单协议。
 - `public/examples/inventory.example.json`：可直接导入网页的示例清单。
-- `data/identity-overrides.json`：人工合并和拆分不同来源的软件身份。
+- `catalog/config/identity-overrides.json`：人工合并和拆分不同来源的软件身份。
 
 catalog v1 允许增加可选字段；破坏性变化必须发布到新的 `/metadata/v2/` 路径。
 `catalog-v1.schema.json` 描述分片组合后的逻辑数据集，传输层由快照 manifest 组织。

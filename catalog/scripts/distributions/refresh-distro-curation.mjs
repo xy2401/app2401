@@ -1,10 +1,10 @@
 import { readFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
-import { buildCollections, buildCuratedPackages } from "./lib/distro-curation.mjs";
-import { parseArgs, prettyJson, readJson, sha256, writeJson } from "./lib/metadata-common.mjs";
+import { buildCollections, buildCuratedPackages } from "../lib/distro-curation.mjs";
+import { parseArgs, prettyJson, readJson, sha256, writeJson } from "../lib/metadata-common.mjs";
 
 const args = parseArgs(process.argv.slice(2));
-const root = resolve(args.root || join(import.meta.dirname, "..", "public", "metadata", "distributions", "v1"));
+const root = resolve(args.root || join(import.meta.dirname, "../../..", "public", "metadata", "distributions", "v1"));
 const indexPath = join(root, "index.json");
 const index = await readJson(indexPath);
 

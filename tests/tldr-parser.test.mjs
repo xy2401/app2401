@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { parseTldrPage } from "../scripts/lib/parse-tldr-page.mjs";
+import { parseTldrPage } from "../catalog/scripts/lib/parse-tldr-page.mjs";
 
 test("parses a TLDR page as full commands with descriptions", () => {
   const page = parseTldrPage(`# git clone

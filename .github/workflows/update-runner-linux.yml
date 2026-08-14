@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Collect installed software
-        run: bash scripts/collect-runner-linux.sh --output "out/${{ matrix.runner }}.json" --runner-label "${{ matrix.runner }}" --strict
+        run: bash catalog/scripts/runners/collect-runner-linux.sh --output "out/${{ matrix.runner }}.json" --runner-label "${{ matrix.runner }}" --strict
       - uses: actions/upload-artifact@v6
         with:
           name: runner-linux-${{ matrix.runner }}
@@ -50,7 +50,7 @@ jobs:
       - run: npm ci
       - name: Merge and validate
         run: |
-          node scripts/merge-runner-environments.mjs --platform linux --input out --output public/metadata/environments/v1/github-actions
+          node catalog/scripts/runners/merge-runner-environments.mjs --platform linux --input out --output public/metadata/environments/v1/github-actions
           npm run metadata:schemas
           npm run metadata:platform:verify
       - name: Commit current snapshot
