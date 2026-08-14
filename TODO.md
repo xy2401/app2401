@@ -2,6 +2,9 @@
 
 这份清单记录下一阶段建议。排序原则不是“来源越多越好”，而是优先增加能解释软件是什么、如何使用、由什么提供的公开元数据。
 
+当前下一阶段以 [`spec.md`](./spec.md) 为实现规格：先让 PowerShell 与 Bash 使用同一套
+远程 catalog、缓存协议和终端命令，再继续增加数据源。
+
 ## 边界与原则
 
 - [ ] 只同步清单、索引、文档和描述，不镜像安装包、容器镜像、源码压缩包或二进制文件。
@@ -18,10 +21,11 @@
 
 - [x] 实现独立下载即可运行的 `software-atlas.ps1`，识别 Scoop 和 Chocolatey 并生成 inventory v1 JSON。
 - [x] 始终保存格式化 JSON，并尝试通过 Base64URL Fragment 打开网页；超长时回退文件导入。
-- [ ] 支持 `--json`、`--catalog <URL|PATH>`、`--refresh`、`--offline` 和缓存目录选项。
-- [ ] 根据稳定入口索引和 SHA-256 只下载所需索引与详情分片。
-- [ ] 终端显示软件名称、用途、版本、包管理器和未识别项目。
-- [ ] 默认不收集用户名、主机名、序列号、IP 或其他机器身份信息。
+- [x] 默认不收集用户名、主机名、序列号、IP 或其他机器身份信息。
+- [ ] 按 `spec.md` 增加 `sync`、`search`、`info` 和带 catalog 匹配的 `inventory` 命令。
+- [ ] 支持远程网站、本地 catalog、刷新、离线和自定义缓存目录。
+- [ ] 根据 manifest 的字节数和 SHA-256 只下载需要的索引与详情分片。
+- [ ] 终端显示软件名称、用途、版本、包管理器、来源和未识别项目。
 
 验收：在没有 Node.js、没有项目源码的 Windows 环境中，单个 PS1 能完成同步、识别和离线复用缓存。
 
@@ -29,17 +33,25 @@
 
 - [x] 实现独立下载即可运行的 `software-atlas.sh`，第一版识别 Homebrew Formula 与 Cask。
 - [x] 与 PowerShell 使用相同的 inventory v1 和 Base64URL Fragment，并保留文件导入兜底。
-- [ ] 与 PowerShell 使用同一份 catalog、同一缓存规则和同一 inventory v1 输出。
-- [ ] 终端输出、`--json`、本地 catalog、离线模式和隐私约束与 PowerShell 对齐。
+- [x] 终端清单采集、文件输出、自动打开、超长回退和隐私约束与 PowerShell 对齐。
+- [ ] 按 `spec.md` 实现与 PowerShell 相同的 `sync`、`search`、`info`、缓存和离线语义。
+- [ ] 在 macOS Bash 3.2 上验证；JSON 解析优先使用现有 `jq`/`python3`，否则使用 macOS 自带能力并给出明确诊断。
 
 验收：macOS 上单个 Bash 文件可以运行；网页能够无差别导入 PS1 与 Bash 生成的清单。
 
 ### 元数据同步与缓存协议
 
-- [ ] 写明脚本端缓存目录结构、条件请求、哈希验证、失败回滚和旧快照清理策略。
-- [ ] 增加“给脚本用的最小引导文件”，仅包含当前快照位置、协议版本和完整性信息。
+- [x] 在 `spec.md` 定义脚本端缓存目录、哈希验证、失败回滚、并发锁和旧数据清理策略。
+- [x] 现有 `current.json` 作为最小引导文件，包含协议版本、当前 manifest、字节数和 SHA-256。
 - [ ] 为远程 catalog、本地 catalog、损坏分片、断网和快照切换增加集成测试。
-- [ ] 生成 `checksums.txt` 或等价机器可读校验清单，方便非 JavaScript 客户端实现。
+- [x] manifest 已作为机器可读校验清单，为每个客户端文件提供相对路径、字节数和 SHA-256。
+
+### 网页清单交接
+
+- [x] 支持选择和拖放本地 `inventory.json`，只在浏览器内匹配。
+- [x] 支持 `#inventory=v1.base64.<payload>`，读取后立即清除地址栏 Fragment。
+- [x] URL 超限、编码损坏或匹配失败时保留可恢复的文件导入入口。
+- [ ] 增加“从剪贴板读取”作为可选便利入口；不得替代文件导入。
 
 ## P1：优先增加的元数据源
 
@@ -145,11 +157,12 @@
 ## P3：发布与维护（需要时再做）
 
 - [ ] 月度同步命令统一为一个只读采集入口，再依次构建、验证并原位更新固定版本或明确通道的数据目录。
-- [ ] 生成月度变更摘要；公共静态元数据只保留当前数据，不保留历史快照目录。
+- [x] 公共静态元数据只保留当前数据，不保留历史快照。
 - [x] 公共 catalog 自动清理非当前快照，仓库和网站只发布 `current.json` 指向的一份数据。
 - [x] 增加 Cloudflare Pages 静态缓存头；Brotli/Gzip 由 HTTP 层负责，磁盘文件继续保持普通 JSON。
-- [ ] 为每个分片记录 ETag/哈希，PS1、Bash 和网页共享缓存命中逻辑。
-- [ ] 真正准备发布时再设计私有预览、CDN 缓存和月度自动化；当前阶段不部署。
+- [x] manifest 为每个公开 catalog 分片记录字节数和 SHA-256。
+- [ ] 生成月度变更摘要，并让 PS1、Bash 和网页共享缓存命中规则。
+- [ ] 真正发布时只配置 Cloudflare Pages 的静态构建，不增加 Functions、Worker、后台 API 或数据库。
 
 ## 暂缓或默认不做
 
@@ -162,12 +175,11 @@
 
 ## 建议执行顺序
 
-1. PowerShell 清单工具与共享缓存协议。
-2. Bash/Homebrew 清单工具。
-3. AppStream 元数据。
-4. Winget 官方清单。
-5. 一个 APT 官方仓库索引。
-6. 一个 DNF 官方仓库索引。
-7. TLDR 语言选择器与中文搜索。
-8. man 页面摘要和命令映射。
-9. Arch、Alpine、Flatpak 等其他 Linux 来源。
+1. 完成 `spec.md`：两份客户端的同步、缓存、搜索、详情和清单匹配。
+2. Winget 官方清单，并让 PowerShell inventory 识别 Winget。
+3. AppStream 桌面软件资料与 Linux 包名关联。
+4. TLDR 语言选择器与中文搜索。
+5. 校验 APT Release、DNF repomd 和发行版仓库快照。
+6. 月度差异报告、身份证据和人工覆盖冲突检查。
+7. man 页面摘要、命令映射和其他 shell 补全来源。
+8. Flatpak、Nixpkgs 等边界清晰的新来源。
