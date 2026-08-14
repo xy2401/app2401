@@ -23,7 +23,8 @@ export function AppRouter() {
 
   useEffect(() => {
     if (location.hash) {
-      document.querySelector(location.hash)?.scrollIntoView();
+      const id = decode(location.hash.slice(1));
+      document.getElementById(id)?.scrollIntoView();
     } else {
       window.scrollTo({ top: 0 });
     }

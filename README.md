@@ -14,6 +14,7 @@ catalog/             元数据配置、Schema、文档和构建脚本
 public/metadata/     网站和终端客户端读取的公开 JSON
 sources/             Scoop、Chocolatey、Fish、TLDR 等外部数据源
 tests/               数据解析与网站验收测试
+clients/             可独立下载运行的 PowerShell 与 Bash 本机清单工具
 ```
 
 `catalog/` 是构建输入和工具，`public/metadata/` 是可直接发布、下载和缓存的构建输出。
@@ -80,6 +81,30 @@ npm run build
 # 完整生产验收
 npm test
 ```
+
+## 本机清单脚本
+
+两份客户端使用相同的 `inventory` 命令和 URL Fragment 协议。它们始终先生成一份
+格式化的 `inventory.json`，再尝试把 Base64URL 编码的清单放入网站地址；地址超过
+默认的 16,000 字符时只打开普通导入页，JSON 文件仍可选择或拖入网页。
+
+```powershell
+./clients/software-atlas.ps1 inventory `
+  -Output ./inventory.json `
+  -SiteUrl https://你的站点.pages.dev
+```
+
+```bash
+./clients/software-atlas.sh inventory \
+  --output ./inventory.json \
+  --site-url https://你的站点.pages.dev
+```
+
+也可以设置 `SOFTWARE_ATLAS_URL`，或者使用 `-NoOpen` / `--no-open` 只生成文件。
+PowerShell 第一版识别 Scoop 与 Chocolatey，Bash 第一版识别 Homebrew Formula 与 Cask。
+清单只包含包管理器、包名、版本、集合、范围以及系统类型和架构，不包含用户名、主机名、
+IP、序列号或完整环境变量。网页读取 Fragment 后会立即从地址栏清除它；无论自动打开是否
+成功，终端都会提示 JSON 文件路径和手动导入方式。
 
 网站构建结果位于 `dist/`，只包含静态 HTML、CSS、JavaScript 和公开 JSON。
 Cloudflare Pages 的构建命令使用 `npm run build`，输出目录使用 `dist`。构建只复制仓库中已经

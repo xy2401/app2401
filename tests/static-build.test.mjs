@@ -22,10 +22,12 @@ test("builds a static Cloudflare Pages shell", async () => {
 });
 
 test("keeps introduction, catalog and dynamic routes in the browser router", async () => {
-  const [home, catalog, router] = await Promise.all([
+  const [home, catalog, router, inventory, fragment] = await Promise.all([
     readFile(new URL("../src/pages/home.tsx", import.meta.url), "utf8"),
     readFile(new URL("../src/pages/catalog.tsx", import.meta.url), "utf8"),
     readFile(new URL("../src/router.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/pages/inventory.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/inventory-fragment.ts", import.meta.url), "utf8"),
   ]);
   assert.doesNotMatch(home, /placeholder="搜索软件/);
   assert.match(home, /开始查软件/);
@@ -33,6 +35,10 @@ test("keeps introduction, catalog and dynamic routes in the browser router", asy
   assert.match(router, /SoftwarePage/);
   assert.match(router, /SourcePage/);
   assert.match(router, /DistributionPackagePage/);
+  assert.match(router, /getElementById/);
+  assert.match(inventory, /decodeInventoryFragment/);
+  assert.match(inventory, /history\.replaceState/);
+  assert.match(fragment, /#inventory=v1\.base64\./);
 });
 
 test("keeps catalog data outside JavaScript bundles", async () => {

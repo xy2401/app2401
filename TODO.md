@@ -16,8 +16,8 @@
 
 ### PowerShell 本机清单工具
 
-- [ ] 实现独立下载即可运行的 `software-atlas.ps1`，不要求检出项目。
-- [ ] 识别 Scoop 和 Chocolatey 已安装包，生成符合 `inventory-v1.schema.json` 的 JSON。
+- [x] 实现独立下载即可运行的 `software-atlas.ps1`，识别 Scoop 和 Chocolatey 并生成 inventory v1 JSON。
+- [x] 始终保存格式化 JSON，并尝试通过 Base64URL Fragment 打开网页；超长时回退文件导入。
 - [ ] 支持 `--json`、`--catalog <URL|PATH>`、`--refresh`、`--offline` 和缓存目录选项。
 - [ ] 根据稳定入口索引和 SHA-256 只下载所需索引与详情分片。
 - [ ] 终端显示软件名称、用途、版本、包管理器和未识别项目。
@@ -27,7 +27,8 @@
 
 ### Bash 本机清单工具
 
-- [ ] 实现独立下载即可运行的 `software-atlas.sh`，第一版识别 Homebrew Formula 与 Cask。
+- [x] 实现独立下载即可运行的 `software-atlas.sh`，第一版识别 Homebrew Formula 与 Cask。
+- [x] 与 PowerShell 使用相同的 inventory v1 和 Base64URL Fragment，并保留文件导入兜底。
 - [ ] 与 PowerShell 使用同一份 catalog、同一缓存规则和同一 inventory v1 输出。
 - [ ] 终端输出、`--json`、本地 catalog、离线模式和隐私约束与 PowerShell 对齐。
 
