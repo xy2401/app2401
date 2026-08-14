@@ -913,6 +913,11 @@ async function main() {
   await copyFile(commandSchemaPath, join(outputRoot, "command.schema.json"));
   await copyFile(tldrSchemaPath, join(outputRoot, "tldr.schema.json"));
   await copyFile(inventorySchemaPath, join(outputRoot, "inventory.schema.json"));
+  const inactiveSnapshots = (await readdir(join(outputRoot, "snapshots"), { withFileTypes: true }))
+    .filter((entry) => entry.isDirectory() && entry.name !== snapshotId);
+  for (const entry of inactiveSnapshots) {
+    await rm(join(outputRoot, "snapshots", entry.name), { recursive: true, force: true });
+  }
   const snapshotBytes = Object.values(detailFiles).reduce((sum, item) => sum + item.bytes, 0)
     + Object.values(commandDetailFiles).reduce((sum, item) => sum + item.bytes, 0)
     + Object.values(tldrDetailFiles).reduce((sum, item) => sum + item.bytes, 0)
@@ -920,7 +925,7 @@ async function main() {
     + Object.values(inventoryFiles).reduce((sum, item) => sum + item.bytes, 0)
     + Object.values(sourceIndexes).flatMap((item) => item.pages).reduce((sum, item) => sum + item.bytes, 0)
     + searchFile.bytes + commandIndexFile.bytes + tldrIndexFile.bytes + tldrLocalesFile.bytes + Buffer.byteLength(manifestBody);
-  console.log(`snapshot ${snapshotId}: ${software.length} software, ${packages.length} packages, ${fish.commands.length} Fish commands, ${tldr.pages.length} TLDR pages + ${tldr.source.translationCount} translations in ${tldr.source.localeCount} locales, ${(snapshotBytes / 1024 / 1024).toFixed(1)} MiB total`);
+  console.log(`snapshot ${snapshotId}: ${software.length} software, ${packages.length} packages, ${fish.commands.length} Fish commands, ${tldr.pages.length} TLDR pages + ${tldr.source.translationCount} translations in ${tldr.source.localeCount} locales, ${(snapshotBytes / 1024 / 1024).toFixed(1)} MiB total; removed ${inactiveSnapshots.length} inactive snapshot(s)`);
 }
 
 await main();

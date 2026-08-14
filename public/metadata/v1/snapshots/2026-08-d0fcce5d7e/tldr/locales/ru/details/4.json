@@ -1,0 +1,2197 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "ru",
+  "sourceLocale": "ru",
+  "shard": "4",
+  "items": [
+    {
+      "id": "tldr--0fbfd8990678",
+      "canonicalPath": "osx/gshuf.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gshuf",
+      "title": "gshuf",
+      "summary": "Эта команда — псевдоним для GNU `shuf`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr {{[-p|--platform]}} common shuf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gshuf.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gshuf.md"
+    },
+    {
+      "id": "tldr--1156a5990ad8",
+      "canonicalPath": "common/fgrep.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "fgrep",
+      "title": "fgrep",
+      "summary": "Эта команда — псевдоним для `grep --fixed-strings`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "grep--aeeff087",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr grep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/fgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/fgrep.md"
+    },
+    {
+      "id": "tldr--15b62ca37b94",
+      "canonicalPath": "common/openssl.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "openssl",
+      "title": "openssl",
+      "summary": "Криптографический набор инструментов OpenSSL. Некоторые подкоманды, такие как `req`, имеют собственную документацию по использованию.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "openssl-light--f20c20ec",
+        "openssl-lts-light--f20c20ec",
+        "openssl1--f20c20ec",
+        "openssl1-light--f20c20ec"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Сгенерировать приватный ключ и зашифровать выходной файл с помощью AES-256:",
+          "command": "openssl genpkey -algorithm {{rsa|ec}} -out {{путь/к/приватному_ключу.key}} -aes256",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/openssl.md#L9"
+        },
+        {
+          "description": "Сгенерировать соответствующий публичный ключ из приватного ключа с помощью `rsa`:",
+          "command": "openssl rsa -in {{путь/к/приватному_ключу.key}} -pubout -out {{путь/к/публичному_ключу.key}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/openssl.md#L13"
+        },
+        {
+          "description": "Сгенерировать самоподписанный сертификат, действительный указанное количество дней (365):",
+          "command": "openssl req -new -x509 -key {{путь/к/приватному_ключу.key}} -out {{путь/к/сертификату.crt}} -days 365",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/openssl.md#L17"
+        },
+        {
+          "description": "Конвертировать сертификат в формат `.pem` или `.der`:",
+          "command": "openssl x509 -in {{путь/к/сертификату.crt}} -out {{путь/к/сертификату.pem|путь/к/сертификату.der}} -outform {{pem|der}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/openssl.md#L21"
+        },
+        {
+          "description": "Просмотреть детали сертификата:",
+          "command": "openssl x509 -in {{путь/к/сертификату.crt}} -text -noout",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/openssl.md#L25"
+        },
+        {
+          "description": "Сгенерировать запрос на подпись сертификата (CSR):",
+          "command": "openssl req -new -key {{путь/к/приватному_ключу.key}} -out {{путь/к/запросу.csr}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/openssl.md#L29"
+        },
+        {
+          "description": "Показать справку:",
+          "command": "openssl help",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/openssl.md#L33"
+        },
+        {
+          "description": "Показать версию:",
+          "command": "openssl version",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/openssl.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/openssl.md"
+    },
+    {
+      "id": "tldr--15b82814baa2",
+      "canonicalPath": "common/curl.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "curl",
+      "title": "curl",
+      "summary": "Передавать данные с сервера или на сервер. Поддерживает большинство протоколов, включая HTTP, HTTPS, FTP, SCP и другие. Смотрите также: `wcurl`, `wget`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "curl--5459a6f1",
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Выполнить HTTP GET-запрос и вывести содержимое в `stdout`:",
+          "command": "curl {{https://example.com}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/curl.md#L10"
+        },
+        {
+          "description": "Выполнить HTTP GET-запрос, следуя перенаправлениям `3xx`, и вывести заголовки ответа и содержимое в `stdout`:",
+          "command": "curl {{[-L|--location]}} {{[-D|--dump-header]}} - {{https://example.com}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/curl.md#L14"
+        },
+        {
+          "description": "Скачать файл, сохранив его под именем, указанным в URL:",
+          "command": "curl {{[-O|--remote-name]}} {{https://example.com/filename.zip}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/curl.md#L18"
+        },
+        {
+          "description": "Отправить данные формы (POST-запрос типа `application/x-www-form-urlencoded`). Используйте `--data @file_name` или `--data @'-'` для чтения из `stdin`:",
+          "command": "curl {{[-X|--request]}} POST {{[-d|--data]}} '{{name=bob}}' {{http://example.com/form}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/curl.md#L22"
+        },
+        {
+          "description": "Отправить запрос с дополнительным заголовком, используя пользовательский HTTP-метод через прокси (например, BurpSuite), игнорируя самоподписанные сертификаты:",
+          "command": "curl {{[-k|--insecure]}} {{[-x|--proxy]}} {{http://127.0.0.1:8080}} {{[-H|--header]}} '{{Authorization: Bearer token}}' {{[-X|--request]}} {{GET|PUT|POST|DELETE|PATCH|...}} {{https://example.com}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/curl.md#L26"
+        },
+        {
+          "description": "Отправить данные в формате JSON, указав соответствующий заголовок Content-Type:",
+          "command": "curl {{[-d|--data]}} '{{{\"name\":\"bob\"}}}' {{[-H|--header]}} '{{Content-Type: application/json}}' {{http://example.com/users/1234}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/curl.md#L30"
+        },
+        {
+          "description": "Передать клиентский сертификат и приватный ключ для запроса, пропуская проверку сертификата:",
+          "command": "curl {{[-E|--cert]}} {{client.pem}} --key {{key.pem}} {{[-k|--insecure]}} {{https://example.com}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/curl.md#L34"
+        },
+        {
+          "description": "Привязать имя хоста к определённому IP-адресу с подробным выводом (аналог редактирования `/etc/hosts` для пользовательского разрешения DNS):",
+          "command": "curl {{[-v|--verbose]}} --resolve {{example.com}}:{{80}}:{{127.0.0.1}} {{http://example.com}}",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/curl.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/curl.md"
+    },
+    {
+      "id": "tldr--169e963af4fa",
+      "canonicalPath": "common/pnmdepth.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pnmdepth",
+      "title": "pnmdepth",
+      "summary": "Эта команда — псевдоним для `pamdepth`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pamdepth",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/pnmdepth.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/pnmdepth.md"
+    },
+    {
+      "id": "tldr--1966eb89d78c",
+      "canonicalPath": "common/go.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "go",
+      "title": "go",
+      "summary": "Управляйте исходным кодом Go. Некоторые подкоманды, такие как `build`, имеют собственную документацию по использованию.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "go--2c250569",
+        "go--659909c6",
+        "go113--659909c6",
+        "go114--659909c6",
+        "go115--659909c6",
+        "go116--659909c6",
+        "go117--659909c6",
+        "go118--659909c6",
+        "go119--659909c6",
+        "go120--659909c6",
+        "go121--659909c6",
+        "go122--659909c6",
+        "go123--659909c6",
+        "go124--659909c6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Скачать и установить пакет, указанный по его пути импорта:",
+          "command": "go get {{путь/к/пакету}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go.md#L9"
+        },
+        {
+          "description": "Скомпилировать и запустить исходный файл (он должен содержать пакет `main`):",
+          "command": "go run {{файл}}.go",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go.md#L13"
+        },
+        {
+          "description": "Скомпилировать исходный файл в исполняемый файл с указанным именем:",
+          "command": "go build -o {{исполняемый_файл}} {{файл}}.go",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go.md#L17"
+        },
+        {
+          "description": "Скомпилировать пакет, находящийся в текущем каталоге:",
+          "command": "go build",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go.md#L21"
+        },
+        {
+          "description": "Выполнить все тесты для текущего пакета (файлы должны иметь окончание `_test.go`):",
+          "command": "go test",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go.md#L25"
+        },
+        {
+          "description": "Скомпилировать и установить текущий пакет:",
+          "command": "go install",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go.md#L29"
+        },
+        {
+          "description": "Инициализировать новый модуль в текущем каталоге:",
+          "command": "go mod init {{имя_модуля}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go.md"
+    },
+    {
+      "id": "tldr--1a1fcb848218",
+      "canonicalPath": "osx/gcut.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gcut",
+      "title": "gcut",
+      "summary": "Эта команда — псевдоним для GNU `cut`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr {{[-p|--platform]}} common cut",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gcut.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gcut.md"
+    },
+    {
+      "id": "tldr--210f7e88cb6e",
+      "canonicalPath": "linux/pacman-r.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pacman",
+      "title": "pacman -R",
+      "summary": "Эта команда — псевдоним для `pacman --remove`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pacman remove",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-r.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-r.md"
+    },
+    {
+      "id": "tldr--223197e38ac7",
+      "canonicalPath": "linux/dnf-deplist.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dnf",
+      "title": "dnf deplist",
+      "summary": "Эта команда — псевдоним для `dnf repoquery --deplist`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr dnf repoquery",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-deplist.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-deplist.md"
+    },
+    {
+      "id": "tldr--25c8a5154b5f",
+      "canonicalPath": "common/host.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "host",
+      "title": "host",
+      "summary": "Искать информацию на сервере доменных имён. Смотрите также: `dig`, `resolvectl`, `nslookup`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bind--35fceaa5"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Найти A-, AAAA- и MX-записи домена:",
+          "command": "host {{домен}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/host.md#L9"
+        },
+        {
+          "description": "Найти определённое поле (CNAME, TXT, ...) домена:",
+          "command": "host -t {{поле}} {{домен}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/host.md#L13"
+        },
+        {
+          "description": "Выполнить обратный поиск IP-адреса:",
+          "command": "host {{ip_адрес}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/host.md#L17"
+        },
+        {
+          "description": "Указать альтернативный DNS-сервер для запроса:",
+          "command": "host {{домен}} {{8.8.8.8}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/host.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/host.md"
+    },
+    {
+      "id": "tldr--2a8808dde8dc",
+      "canonicalPath": "common/rustup-uninstall.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "rustup",
+      "title": "rustup uninstall",
+      "summary": "Эта команда — псевдоним для `rustup toolchain uninstall`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rustup--ae84adcc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr rustup toolchain",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rustup-uninstall.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rustup-uninstall.md"
+    },
+    {
+      "id": "tldr--2d9cebe0fce6",
+      "canonicalPath": "osx/gegrep.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gegrep",
+      "title": "gegrep",
+      "summary": "Эта команда — псевдоним для GNU `egrep`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr egrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gegrep.md"
+    },
+    {
+      "id": "tldr--2e34a5a7bb41",
+      "canonicalPath": "linux/dnf-group.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dnf",
+      "title": "dnf group",
+      "summary": "Управление виртуальными коллекциями пакетов в системах на базе Fedora.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Показать список групп DNF с указанием статуса установки в таблице:",
+          "command": "dnf {{[grp|group]}} list",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-group.md#L8"
+        },
+        {
+          "description": "Показать информацию о группе DNF, включая репозиторий и опциональные пакеты:",
+          "command": "dnf {{[grp|group]}} info {{имя_группы}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-group.md#L12"
+        },
+        {
+          "description": "Установить группу DNF:",
+          "command": "dnf {{[grp|group]}} install {{имя_группы}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-group.md#L16"
+        },
+        {
+          "description": "Удалить группу DNF:",
+          "command": "dnf {{[grp|group]}} remove {{имя_группы}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-group.md#L20"
+        },
+        {
+          "description": "Обновить группу DNF:",
+          "command": "dnf {{[grp|group]}} upgrade {{имя_группы}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-group.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-group.md"
+    },
+    {
+      "id": "tldr--306f1a172890",
+      "canonicalPath": "windows/get-clipboard.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "Get-Clipboard",
+      "title": "Get-Clipboard",
+      "summary": "Команда PowerShell для получения содержимого буфера обмена. Примечание: в качестве псевдонима для `Get-Clipboard` можно использовать `gcb`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Получить текст из буфера обмена:",
+          "command": "Get-Clipboard",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-clipboard.md#L9"
+        },
+        {
+          "description": "Получить содержимое буфера обмена в определённом текстовом формате:",
+          "command": "Get-Clipboard -TextFormatType {{Text|Html|Rtf}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-clipboard.md#L13"
+        },
+        {
+          "description": "Получить необработанное (raw) содержимое буфера обмена:",
+          "command": "Get-Clipboard -Raw",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-clipboard.md#L17"
+        },
+        {
+          "description": "Извлечь изображение:",
+          "command": "Get-Clipboard -Format Image",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-clipboard.md#L21"
+        },
+        {
+          "description": "Получить список путей к файлам, скопированным в Проводнике:",
+          "command": "Get-Clipboard -Format FileDropList",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-clipboard.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-clipboard.md"
+    },
+    {
+      "id": "tldr--30c20f1e9111",
+      "canonicalPath": "linux/batcat.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "batcat",
+      "title": "batcat",
+      "summary": "Эта команда — псевдоним для `bat`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr bat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/batcat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/batcat.md"
+    },
+    {
+      "id": "tldr--3253e9a8335a",
+      "canonicalPath": "osx/gpathchk.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gpathchk",
+      "title": "gpathchk",
+      "summary": "Эта команда — псевдоним для GNU `pathchk`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pathchk",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gpathchk.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gpathchk.md"
+    },
+    {
+      "id": "tldr--3f209523b2c7",
+      "canonicalPath": "common/platformio.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "platformio",
+      "title": "platformio",
+      "summary": "Эта команда — псевдоним для `pio`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "platformio--331df29a"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pio",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/platformio.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/platformio.md"
+    },
+    {
+      "id": "tldr--4080e482c1e0",
+      "canonicalPath": "linux/pacman-u.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pacman",
+      "title": "pacman -U",
+      "summary": "Эта команда — псевдоним для `pacman --upgrade`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pacman upgrade",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-u.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-u.md"
+    },
+    {
+      "id": "tldr--457459f7e392",
+      "canonicalPath": "linux/nmtui-hostname.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "nmtui-hostname",
+      "title": "nmtui-hostname",
+      "summary": "Эта команда — псевдоним для `nmtui hostname`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui-hostname.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui-hostname.md"
+    },
+    {
+      "id": "tldr--45e0fff5e181",
+      "canonicalPath": "linux/login.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "login",
+      "title": "login",
+      "summary": "Начать сеанс для пользователя.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Войти как пользователь:",
+          "command": "login {{пользователь}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/login.md#L8"
+        },
+        {
+          "description": "Войти как пользователь без аутентификации (если он уже аутентифицирован):",
+          "command": "login -f {{пользователь}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/login.md#L12"
+        },
+        {
+          "description": "Войти как пользователь с сохранением окружения:",
+          "command": "login -p {{пользователь}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/login.md#L16"
+        },
+        {
+          "description": "Войти как пользователь на удаленный хост:",
+          "command": "login -h {{хост}} {{пользователь}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/login.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/login.md"
+    },
+    {
+      "id": "tldr--4739e42339e4",
+      "canonicalPath": "common/impacket-mssqlclient.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "impacket-mssqlclient",
+      "title": "impacket-mssqlclient",
+      "summary": "Эта команда — псевдоним для `mssqlclient.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr mssqlclient.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-mssqlclient.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-mssqlclient.md"
+    },
+    {
+      "id": "tldr--541bdbdb4370",
+      "canonicalPath": "linux/lookandfeeltool.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "lookandfeeltool",
+      "title": "lookandfeeltool",
+      "summary": "Эта команда — псевдоним для `plasma-apply-lookandfeel`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr plasma-apply-lookandfeel",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/lookandfeeltool.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/lookandfeeltool.md"
+    },
+    {
+      "id": "tldr--560e25e908bf",
+      "canonicalPath": "common/impacket-dumpntlminfo.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "impacket-DumpNTLMInfo",
+      "title": "impacket-DumpNTLMInfo",
+      "summary": "Эта команда — псевдоним для `DumpNTLMInfo.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr DumpNTLMInfo.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-dumpntlminfo.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-dumpntlminfo.md"
+    },
+    {
+      "id": "tldr--5a6800686f77",
+      "canonicalPath": "osx/gtouch.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gtouch",
+      "title": "gtouch",
+      "summary": "Эта команда — псевдоним для GNU `touch`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr touch",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtouch.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtouch.md"
+    },
+    {
+      "id": "tldr--5cc93792416d",
+      "canonicalPath": "osx/gdircolors.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gdircolors",
+      "title": "gdircolors",
+      "summary": "Эта команда — псевдоним для GNU `dircolors`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr dircolors",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gdircolors.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gdircolors.md"
+    },
+    {
+      "id": "tldr--671b623dc229",
+      "canonicalPath": "common/rustup-install.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "rustup",
+      "title": "rustup install",
+      "summary": "Эта команда — псевдоним для `rustup toolchain install`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rustup--ae84adcc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr rustup toolchain",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rustup-install.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rustup-install.md"
+    },
+    {
+      "id": "tldr--737ba18ac566",
+      "canonicalPath": "linux/mkfs.vfat.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "mkfs.vfat",
+      "title": "mkfs.vfat",
+      "summary": "Эта команда — псевдоним для `mkfs.fat`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr mkfs.fat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/mkfs.vfat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/mkfs.vfat.md"
+    },
+    {
+      "id": "tldr--74121033f15d",
+      "canonicalPath": "linux/pacman-q.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pacman",
+      "title": "pacman -Q",
+      "summary": "Эта команда — псевдоним для `pacman --query`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pacman query",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-q.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-q.md"
+    },
+    {
+      "id": "tldr--7639de513a7e",
+      "canonicalPath": "linux/dnf-install.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dnf",
+      "title": "dnf install",
+      "summary": "Устанавливать пакеты в дистрибутивах на базе Red Hat.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Установить пакеты по имени:",
+          "command": "sudo dnf {{[in|install]}} {{пакет1 пакет2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-install.md#L8"
+        },
+        {
+          "description": "Установить пакет из локального файла:",
+          "command": "sudo dnf {{[in|install]}} {{путь/к/файлу}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-install.md#L12"
+        },
+        {
+          "description": "Установить пакет из интернета:",
+          "command": "sudo dnf {{[in|install]}} {{https://example.com/package.rpm}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-install.md#L16"
+        },
+        {
+          "description": "Добавить репозиторий несвободных пакетов Fedora:",
+          "command": "sudo dnf {{[in|install]}} https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-install.md#L20"
+        },
+        {
+          "description": "Добавить репозитории Extra Packages for Enterprise Linux (EPEL):",
+          "command": "sudo dnf {{[in|install]}} https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{10}}.noarch.rpm",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-install.md#L24"
+        },
+        {
+          "description": "Добавить RPM-репозиторий Remi:",
+          "command": "sudo dnf {{[in|install]}} https://rpms.remirepo.net/enterprise/remi-release-{{8}}.rpm",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-install.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-install.md"
+    },
+    {
+      "id": "tldr--79b635381f0b",
+      "canonicalPath": "linux/dnf-module.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dnf",
+      "title": "dnf module",
+      "summary": "Управление модульностью пакетов.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Просмотр общего обзора модульности:",
+          "command": "dnf module list",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-module.md#L8"
+        },
+        {
+          "description": "Просмотр модульности конкретной программы:",
+          "command": "dnf module list {{имя_пакета}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-module.md#L12"
+        },
+        {
+          "description": "Включить пакет:",
+          "command": "sudo dnf module enable {{имя_пакета}}:{{поток}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-module.md#L16"
+        },
+        {
+          "description": "Включить и установить конкретную версию:",
+          "command": "dnf module install {{имя_пакета}}:{{поток}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-module.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-module.md"
+    },
+    {
+      "id": "tldr--7bea1df1914d",
+      "canonicalPath": "common/r.zsh.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "r",
+      "title": "r",
+      "summary": "Эта команда — псевдоним для `fc -e -`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "r--b13c44bf"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr fc",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/r.zsh.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/r.zsh.md"
+    },
+    {
+      "id": "tldr--8189dba396d7",
+      "canonicalPath": "common/less.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "less",
+      "title": "less",
+      "summary": "Открывать файл для интерактивного чтения с возможностью прокрутки и поиска.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "less--2145edda",
+        "less--9ddef832",
+        "less-beta--ba425f30",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Открыть файл для интерактивного чтения:",
+          "command": "less {{путь/к/исходному_файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/less.md#L8"
+        },
+        {
+          "description": "Прокрутить страницу вниз/вверх:",
+          "command": "{{<Space>|<b>}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/less.md#L12"
+        },
+        {
+          "description": "Перейти в конец/начало файла:",
+          "command": "{{<G>|<g>}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/less.md#L16"
+        },
+        {
+          "description": "Найти строку вперёд (нажать `<n>`/`<N>` для перехода к следующему/предыдущему совпадению):",
+          "command": "</>{{строка}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/less.md#L20"
+        },
+        {
+          "description": "Найти строку назад (нажать `<n>`/`<N>` для перехода к следующему/предыдущему совпадению):",
+          "command": "<?>{{строка}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/less.md#L24"
+        },
+        {
+          "description": "Включить слежение за выводом текущего открытого файла:",
+          "command": "<F>",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/less.md#L28"
+        },
+        {
+          "description": "Открыть текущий файл в редакторе:",
+          "command": "<v>",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/less.md#L32"
+        },
+        {
+          "description": "Выйти:",
+          "command": "<q>",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/less.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/less.md"
+    },
+    {
+      "id": "tldr--8a9a1d490418",
+      "canonicalPath": "common/pnmtoplainpnm.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pnmtoplainpnm",
+      "title": "pnmtoplainpnm",
+      "summary": "Эта команда — псевдоним для `pamtopnm -plain`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pamtopnm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/pnmtoplainpnm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/pnmtoplainpnm.md"
+    },
+    {
+      "id": "tldr--8dec749c899d",
+      "canonicalPath": "osx/glogname.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "glogname",
+      "title": "glogname",
+      "summary": "Эта команда — псевдоним для GNU `logname`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr logname",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/glogname.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/glogname.md"
+    },
+    {
+      "id": "tldr--8ec1a1bae8d1",
+      "canonicalPath": "linux/pacman-f.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pacman",
+      "title": "pacman -F",
+      "summary": "Эта команда — псевдоним для `pacman --files`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pacman files",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-f.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-f.md"
+    },
+    {
+      "id": "tldr--9132652c7874",
+      "canonicalPath": "common/zip.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "zip",
+      "title": "zip",
+      "summary": "Упаковывает и сжимает (архивирует) файлы в файл zip. Смотрите также: `unzip`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unxutils--5bef4004",
+        "zip--cd5c7072",
+        "zip--d51707ee",
+        "zip-beta--fcfc22d8"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Добавить файлы/каталоги в указанный архив:",
+          "command": "zip {{[-r|--recurse-paths]}} {{путь/к/архиву.zip}} {{путь/к/файлу_или_каталогу1 путь/к/файлу_или_каталогу2 ...}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/zip.md#L9"
+        },
+        {
+          "description": "Удалить файлы/каталоги из указанного архива:",
+          "command": "zip {{[-d|--delete]}} {{путь/к/архиву.zip}} {{путь/к/файлу_или_каталогу1 путь/к/файлу_или_каталогу2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/zip.md#L13"
+        },
+        {
+          "description": "Заархивировать файлы/каталоги, исключая некоторые:",
+          "command": "zip {{[-r|--recurse-paths]}} {{путь/к/архиву.zip}} {{путь/к/файлу_или_каталогу1 путь/к/файлу_или_каталогу2 ...}} {{[-x|--exclude]}} {{путь/к/исключаемым_файлам_или_каталогам}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/zip.md#L17"
+        },
+        {
+          "description": "Заархивировать файлы/каталоги с заданной степенью сжатия (`0` — без сжатия, `9` — максимальная):",
+          "command": "zip {{[-r|--recurse-paths]}} -{{0..9}} {{путь/к/архиву.zip}} {{путь/к/файлу_или_каталогу1 путь/к/файлу_или_каталогу2 ...}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/zip.md#L21"
+        },
+        {
+          "description": "Создать зашифрованный паролем архив:",
+          "command": "zip {{[-re|--recurse-paths --encrypt]}} {{путь/к/архиву.zip}} {{путь/к/файлу_или_каталогу1 путь/к/файлу_или_каталогу2 ...}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/zip.md#L25"
+        },
+        {
+          "description": "Заархивировать файлы/каталоги в многотомный архив (например, частями по 3 Гб):",
+          "command": "zip {{[-rs|--recurse-paths --split-size]}} {{3g}} {{путь/к/архиву.zip}} {{путь/к/файлу_или_каталогу1 путь/к/файлу_или_каталогу2 ...}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/zip.md#L29"
+        },
+        {
+          "description": "Вывести содержимое указанного архива:",
+          "command": "zip {{[-sf|--split-size --freshen]}} {{путь/к/архиву.zip}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/zip.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/zip.md"
+    },
+    {
+      "id": "tldr--9199449e8b64",
+      "canonicalPath": "windows/wsl.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "wsl",
+      "title": "wsl",
+      "summary": "Управлять Подсистемой Windows для Linux.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Запустить оболочку Linux (в дистрибутиве по умолчанию):",
+          "command": "wsl {{команда_оболочки}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/wsl.md#L8"
+        },
+        {
+          "description": "Запустить команду Linux без использования оболочки:",
+          "command": "wsl {{[-e|--exec]}} {{команда}} {{аргументы_команды}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/wsl.md#L12"
+        },
+        {
+          "description": "Указать конкретный дистрибутив:",
+          "command": "wsl {{[-d|--distribution]}} {{дистрибутив}} {{команда_оболочки}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/wsl.md#L16"
+        },
+        {
+          "description": "Показать список доступных дистрибутивов:",
+          "command": "wsl {{[-l|--list]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/wsl.md#L20"
+        },
+        {
+          "description": "Экспортировать дистрибутив в `.tar`-файл:",
+          "command": "wsl --export {{дистрибутив}} {{путь\\к\\файлу_дистрибутива.tar}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/wsl.md#L24"
+        },
+        {
+          "description": "Импортировать дистрибутив из `.tar`-файла:",
+          "command": "wsl --import {{дистрибутив}} {{путь\\к\\месту_установки}} {{путь\\к\\файлу_дистрибутива.tar}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/wsl.md#L28"
+        },
+        {
+          "description": "Изменить версию WSL, используемую для указанного дистрибутива:",
+          "command": "wsl --set-version {{дистрибутив}} {{версия}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/wsl.md#L32"
+        },
+        {
+          "description": "Завершить работу Подсистемы Windows для Linux:",
+          "command": "wsl --shutdown",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/wsl.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/wsl.md"
+    },
+    {
+      "id": "tldr--94bf47ac55e1",
+      "canonicalPath": "osx/glibtool.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "glibtool",
+      "title": "glibtool",
+      "summary": "Эта команда — псевдоним для GNU `libtool`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr {{[-p|--platform]}} linux libtool",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/glibtool.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/glibtool.md"
+    },
+    {
+      "id": "tldr--9795c6607eda",
+      "canonicalPath": "linux/dnf-repoquery.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dnf",
+      "title": "dnf repoquery",
+      "summary": "Запрос информации о пакетах.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Запросить зависимости пакета:",
+          "command": "dnf {{[rq|repoquery]}} --deplist {{пакет}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-repoquery.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-repoquery.md"
+    },
+    {
+      "id": "tldr--a026e80e1ad9",
+      "canonicalPath": "linux/pacman-s.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pacman",
+      "title": "pacman -S",
+      "summary": "Эта команда — псевдоним для `pacman --sync`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pacman sync",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-s.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-s.md"
+    },
+    {
+      "id": "tldr--a242b0495036",
+      "canonicalPath": "linux/dnf-download.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dnf",
+      "title": "dnf download",
+      "summary": "Загрузка RPM-пакетов из репозиториев DNF. Не является частью основной команды `dnf`, но поддерживается через плагин `dnf-plugins-core`. Смотрите также: `dnf`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Скачать последнюю версию пакета в текущий каталог:",
+          "command": "dnf download {{пакет}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-download.md#L10"
+        },
+        {
+          "description": "Скачать пакет в указанный каталог (каталог должен существовать):",
+          "command": "dnf download {{пакет}} --destdir {{путь/к/каталогу}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-download.md#L14"
+        },
+        {
+          "description": "Вывести URL, откуда можно скачать RPM-пакет:",
+          "command": "dnf download --url {{пакет}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-download.md#L18"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf-download.md"
+    },
+    {
+      "id": "tldr--a2e295745cdb",
+      "canonicalPath": "osx/gchmod.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gchmod",
+      "title": "gchmod",
+      "summary": "Эта команда — псевдоним для GNU `chmod`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr chmod",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gchmod.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gchmod.md"
+    },
+    {
+      "id": "tldr--a408f36513f9",
+      "canonicalPath": "common/go-test.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "go",
+      "title": "go test",
+      "summary": "Тестируйте пакеты Go (файлы должны иметь окончание `_test.go`).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "go--2c250569",
+        "go--659909c6",
+        "go113--659909c6",
+        "go114--659909c6",
+        "go115--659909c6",
+        "go116--659909c6",
+        "go117--659909c6",
+        "go118--659909c6",
+        "go119--659909c6",
+        "go120--659909c6",
+        "go121--659909c6",
+        "go122--659909c6",
+        "go123--659909c6",
+        "go124--659909c6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Протестировать пакет, находящийся в текущем каталоге:",
+          "command": "go test",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-test.md#L8"
+        },
+        {
+          "description": "Протестировать пакет в текущем каталоге с подробным выводом ([v]erbose):",
+          "command": "go test -v",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-test.md#L12"
+        },
+        {
+          "description": "Протестировать пакеты в текущем каталоге и всех подкаталогах (обратите внимание на `...`):",
+          "command": "go test -v ./...",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-test.md#L16"
+        },
+        {
+          "description": "Протестировать пакет в текущем каталоге и запустить все бенчмарки:",
+          "command": "go test -v -bench .",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-test.md#L20"
+        },
+        {
+          "description": "Протестировать пакет в текущем каталоге и запустить все бенчмарки в течение 50 секунд:",
+          "command": "go test -v -bench . -benchtime 50s",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-test.md#L24"
+        },
+        {
+          "description": "Протестировать пакет с анализом покрытия:",
+          "command": "go test -cover",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-test.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-test.md"
+    },
+    {
+      "id": "tldr--a8c07f26fa66",
+      "canonicalPath": "windows/sls.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "sls",
+      "title": "sls",
+      "summary": "Эта команда — псевдоним для `Select-String`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr select-string",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/sls.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/sls.md"
+    },
+    {
+      "id": "tldr--ab96c3d2ce33",
+      "canonicalPath": "linux/pacman-t.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pacman",
+      "title": "pacman -T",
+      "summary": "Эта команда — псевдоним для `pacman --deptest`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pacman deptest",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-t.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-t.md"
+    },
+    {
+      "id": "tldr--aba6226bf909",
+      "canonicalPath": "common/man.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "man",
+      "title": "man",
+      "summary": "Форматировать и отображать страницы руководства. Смотрите также: `whatis`, `apropos`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Показать страницу руководства для команды:",
+          "command": "man {{команда}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/man.md#L9"
+        },
+        {
+          "description": "Открыть страницу руководства для команды в браузере (переменная окружения `$BROWSER` может заменить `=browser_name`):",
+          "command": "man {{[-H|--html=]}}{{имя_браузера}} {{команда}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/man.md#L13"
+        },
+        {
+          "description": "Показать страницу руководства для команды из раздела 7:",
+          "command": "man 7 {{команда}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/man.md#L17"
+        },
+        {
+          "description": "Показать все доступные разделы для команды:",
+          "command": "man {{[-f|--whatis]}} {{команда}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/man.md#L21"
+        },
+        {
+          "description": "Показать пути, по которым выполняется поиск страниц руководства:",
+          "command": "man {{[-w|--path]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/man.md#L25"
+        },
+        {
+          "description": "Показать расположение файла страницы руководства, а не саму страницу:",
+          "command": "man {{[-w|--where]}} {{команда}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/man.md#L29"
+        },
+        {
+          "description": "Показать страницу руководства, используя определенную локаль:",
+          "command": "man {{[-L|--locale]}} {{локаль}} {{команда}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/man.md#L33"
+        },
+        {
+          "description": "Найти страницы руководства, содержащие строку поиска:",
+          "command": "man {{[-k|--apropos]}} \"{{строка_поиска}}\"",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/man.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/man.md"
+    },
+    {
+      "id": "tldr--ac89b567943c",
+      "canonicalPath": "common/pio-init.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pio",
+      "title": "pio init",
+      "summary": "Эта команда — псевдоним для `pio project init`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pio project",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/pio-init.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/pio-init.md"
+    },
+    {
+      "id": "tldr--bc04b53e3c1a",
+      "canonicalPath": "osx/gfmt.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gfmt",
+      "title": "gfmt",
+      "summary": "Эта команда — псевдоним для GNU `fmt`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr fmt",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfmt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfmt.md"
+    },
+    {
+      "id": "tldr--c106b75dcb58",
+      "canonicalPath": "osx/gcomm.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gcomm",
+      "title": "gcomm",
+      "summary": "Эта команда — псевдоним для GNU `comm`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr comm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gcomm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gcomm.md"
+    },
+    {
+      "id": "tldr--c41cf49ee770",
+      "canonicalPath": "linux/pacman-d.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pacman",
+      "title": "pacman -D",
+      "summary": "Эта команда — псевдоним для `pacman --database`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pacman database",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-d.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman-d.md"
+    },
+    {
+      "id": "tldr--c645cb9a7ae7",
+      "canonicalPath": "windows/get-history.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "Get-History",
+      "title": "Get-History",
+      "summary": "Отображать историю команд PowerShell. Примечание: эта команда доступна только в PowerShell.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Показать историю команд с их ID:",
+          "command": "Get-History",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-history.md#L9"
+        },
+        {
+          "description": "Получить запись истории по ID:",
+          "command": "Get-History -Id {{id}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-history.md#L13"
+        },
+        {
+          "description": "Показать последние `n` команд:",
+          "command": "Get-History -Count {{n}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-history.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/get-history.md"
+    },
+    {
+      "id": "tldr--c68bd6214746",
+      "canonicalPath": "linux/lrunzip.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "lrunzip",
+      "title": "lrunzip",
+      "summary": "Эта команда — псевдоним для `lrzip --decompress`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr lrzip",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/lrunzip.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/lrunzip.md"
+    },
+    {
+      "id": "tldr--c733a91b75cb",
+      "canonicalPath": "osx/gfgrep.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gfgrep",
+      "title": "gfgrep",
+      "summary": "Эта команда — псевдоним для GNU `fgrep`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr fgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfgrep.md"
+    },
+    {
+      "id": "tldr--ca3974ac88d6",
+      "canonicalPath": "osx/gwhois.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gwhois",
+      "title": "gwhois",
+      "summary": "Эта команда — псевдоним для GNU `whois`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr whois",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gwhois.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gwhois.md"
+    },
+    {
+      "id": "tldr--cc11e7bfed16",
+      "canonicalPath": "osx/gchown.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gchown",
+      "title": "gchown",
+      "summary": "Эта команда — псевдоним для GNU `chown`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr chown",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gchown.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gchown.md"
+    },
+    {
+      "id": "tldr--d2a5087ef6a2",
+      "canonicalPath": "linux/dnf.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dnf",
+      "title": "dnf",
+      "summary": "Менеджер пакетов для Fedora 41+ и RHEL 10.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Обновить установленные пакеты до новейших доступных версий:",
+          "command": "sudo dnf {{[up|upgrade]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf.md#L9"
+        },
+        {
+          "description": "Искать пакеты по ключевым словам:",
+          "command": "dnf {{[se|search]}} {{ключевое_слово1 ключевое_слово2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf.md#L13"
+        },
+        {
+          "description": "Отобразить подробную информацию о пакете:",
+          "command": "dnf {{[if|info]}} {{пакет}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf.md#L17"
+        },
+        {
+          "description": "Установить новые пакеты (используйте `--assumeyes` для автоматического подтверждения всех запросов):",
+          "command": "sudo dnf {{[in|install]}} {{пакет1 пакет2 ...}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf.md#L21"
+        },
+        {
+          "description": "Удалить пакеты:",
+          "command": "sudo dnf {{[rm|remove]}} {{пакет1 пакет2 ...}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf.md#L25"
+        },
+        {
+          "description": "Вывести список установленных пакетов:",
+          "command": "dnf {{[ls|list]}} --installed",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf.md#L29"
+        },
+        {
+          "description": "Найти, какие пакеты предоставляют данную команду:",
+          "command": "dnf provides {{команда}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf.md#L33"
+        },
+        {
+          "description": "Очистить кэшированные данные:",
+          "command": "sudo dnf clean {{all|dbcache|expire-cache|metadata|packages}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf.md"
+    },
+    {
+      "id": "tldr--d354cc711581",
+      "canonicalPath": "common/clojure.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "clojure",
+      "title": "clojure",
+      "summary": "Эта команда — псевдоним для `clj`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "clojure--a80379ec"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr clj",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/clojure.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/clojure.md"
+    },
+    {
+      "id": "tldr--d4d33507d51c",
+      "canonicalPath": "common/stat.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "stat",
+      "title": "stat",
+      "summary": "Отображать информацию о файле и файловой системе. Смотрите также: `file`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Показать свойства файла, такие как размер, права доступа, даты создания и последнего обращения и другие:",
+          "command": "stat {{путь/к/файлу}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/stat.md#L9"
+        },
+        {
+          "description": "Показать свойства файла в сжатом виде (без меток данных):",
+          "command": "stat {{[-t|--terse]}} {{путь/к/файлу}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/stat.md#L13"
+        },
+        {
+          "description": "Показать информацию о файловой системе, на которой расположен указанный файл:",
+          "command": "stat {{[-f|--file-system]}} {{путь/к/файлу}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/stat.md#L17"
+        },
+        {
+          "description": "Показать только права доступа в восьмеричном виде:",
+          "command": "stat {{[-c|--format]}} \"%a %n\" {{путь/к/файлу}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/stat.md#L21"
+        },
+        {
+          "description": "Показать владельца и группу файла:",
+          "command": "stat {{[-c|--format]}} \"%U %G\" {{путь/к/файлу}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/stat.md#L25"
+        },
+        {
+          "description": "Показать размер файла в байтах:",
+          "command": "stat {{[-c|--format]}} \"%s %n\" {{путь/к/файлу}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/stat.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/stat.md"
+    },
+    {
+      "id": "tldr--d8ee9854887e",
+      "canonicalPath": "common/wget2.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "wget2",
+      "title": "wget2",
+      "summary": "Улучшенная версия `wget` для скачивания файлов из интернета. Поддерживает протоколы HTTP, HTTPS и HTTP/2 с повышенной производительностью. По умолчанию `wget2` использует несколько потоков для более быстрого скачивания.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "wget2--280a8869",
+        "wget2--931f9a8d"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Скачать содержимое URL в файл, используя несколько потоков (поведение по умолчанию отличается от `wget`):",
+          "command": "wget2 {{https://example.com/resource}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wget2.md#L10"
+        },
+        {
+          "description": "Ограничить количество потоков, используемых для скачивания (по умолчанию 5 потоков):",
+          "command": "wget2 --max-threads {{10}} {{https://example.com/resource}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wget2.md#L14"
+        },
+        {
+          "description": "Скачать одну веб-страницу и все её ресурсы (скрипты, таблицы стилей, изображения и т.д.):",
+          "command": "wget2 {{[-p|--page-requisites]}} {{[-k|--convert-links]}} {{https://example.com/somepage.html}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wget2.md#L18"
+        },
+        {
+          "description": "Создать зеркальную копию веб-сайта, но не переходить в родительский каталог (не скачивает встроенные элементы страницы):",
+          "command": "wget2 {{[-m|--mirror]}} {{[-np|--no-parent]}} {{https://example.com/somepath/}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wget2.md#L22"
+        },
+        {
+          "description": "Ограничить скорость скачивания и количество попыток подключения:",
+          "command": "wget2 --limit-rate {{300k}} {{[-t|--tries]}} {{100}} {{https://example.com/somepath/}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wget2.md#L26"
+        },
+        {
+          "description": "Продолжить незавершённое скачивание (поведение совпадает с `wget`):",
+          "command": "wget2 {{[-c|--continue]}} {{https://example.com}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wget2.md#L30"
+        },
+        {
+          "description": "Скачать все URL, сохранённые в текстовом файле, в указанный каталог:",
+          "command": "wget2 {{[-P|--directory-prefix]}} {{путь/к/каталогу}} {{[-i|--input-file]}} {{URLs.txt}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wget2.md#L34"
+        },
+        {
+          "description": "Скачать файл с HTTP-сервера, используя базовую аутентификацию (также работает для HTTPS):",
+          "command": "wget2 --user {{имя_пользователя}} --password {{пароль}} {{https://example.com}}",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wget2.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wget2.md"
+    },
+    {
+      "id": "tldr--e4802aebc14a",
+      "canonicalPath": "osx/gln.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gln",
+      "title": "gln",
+      "summary": "Эта команда — псевдоним для GNU `ln`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr ln",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gln.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gln.md"
+    },
+    {
+      "id": "tldr--e761932ae23a",
+      "canonicalPath": "windows/slmgr.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "slmgr",
+      "title": "slmgr",
+      "summary": "Эта команда — псевдоним для `slmgr.vbs`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr slmgr.vbs",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/slmgr.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/slmgr.md"
+    },
+    {
+      "id": "tldr--eea6b1d6181e",
+      "canonicalPath": "linux/a2enconf.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "a2enconf",
+      "title": "a2enconf",
+      "summary": "Включать конфигурационные файлы Apache в операционных системах на базе Debian.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Включить конфигурационный файл:",
+          "command": "sudo a2enconf {{конфигурационный_файл}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/a2enconf.md#L8"
+        },
+        {
+          "description": "Не выводить информационные сообщения:",
+          "command": "sudo a2enconf {{[-q|--quiet]}} {{конфигурационный_файл}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/a2enconf.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/a2enconf.md"
+    },
+    {
+      "id": "tldr--efb596f0044d",
+      "canonicalPath": "common/go-build.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "go",
+      "title": "go build",
+      "summary": "Скомпилировать исходники Go.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "go--2c250569",
+        "go--659909c6",
+        "go113--659909c6",
+        "go114--659909c6",
+        "go115--659909c6",
+        "go116--659909c6",
+        "go117--659909c6",
+        "go118--659909c6",
+        "go119--659909c6",
+        "go120--659909c6",
+        "go121--659909c6",
+        "go122--659909c6",
+        "go123--659909c6",
+        "go124--659909c6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Скомпилировать файл с пакетом `main` (выходным файлом будет имя файла без расширения):",
+          "command": "go build {{путь/к/main.go}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-build.md#L8"
+        },
+        {
+          "description": "Скомпилировать с указанием имени выходного файла:",
+          "command": "go build -o {{путь/к/исполняемому_файлу}} {{путь/к/исходному_файлу.go}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-build.md#L12"
+        },
+        {
+          "description": "Скомпилировать пакет:",
+          "command": "go build -o {{путь/к/исполняемому_файлу}} {{путь/к/пакету}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-build.md#L16"
+        },
+        {
+          "description": "Скомпилировать пакет `main` в исполняемый файл, включив обнаружение гонки данных:",
+          "command": "go build -race -o {{путь/к/исполняемому_файлу}} {{путь/к/пакету_main}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-build.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/go-build.md"
+    },
+    {
+      "id": "tldr--f227cc578507",
+      "canonicalPath": "linux/pacman.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pacman",
+      "title": "pacman",
+      "summary": "Утилита для управления пакетами в Arch Linux. Смотрите также: `pacman-sync`, `pacman-remove`, `pacman-query`, `pacman-upgrade`, `pacman-files`, `pacman-database`, `pacman-deptest`, `pacman-key`, `pacman-mirrors`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "[S]инхронизировать и обновить все пакеты:",
+          "command": "sudo pacman -Syu",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman.md#L10"
+        },
+        {
+          "description": "Установить новый пакет:",
+          "command": "sudo pacman -S {{пакет}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman.md#L14"
+        },
+        {
+          "description": "Удалить [R] пакет и его зависимости:",
+          "command": "sudo pacman -Rs {{пакет}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman.md#L18"
+        },
+        {
+          "description": "И[s]кать в базе данных пакетов по `regex` или ключевому слову:",
+          "command": "pacman -Ss \"{{шаблон_поиска}}\"",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman.md#L22"
+        },
+        {
+          "description": "Искать в базе данных пакеты, содержащие определенный [F]айл:",
+          "command": "pacman -F \"{{имя_файла}}\"",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman.md#L26"
+        },
+        {
+          "description": "Показать только явно [e] установленные пакеты и их версии:",
+          "command": "pacman -Qe",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman.md#L30"
+        },
+        {
+          "description": "Показать пакеты-сироты (установленные как зависимости [d], но не требующиеся ни одному пакету):",
+          "command": "pacman -Qtdq",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman.md#L34"
+        },
+        {
+          "description": "Полностью очистить кэш `pacman`:",
+          "command": "sudo pacman -Scc",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pacman.md"
+    },
+    {
+      "id": "tldr--f30e32b117c4",
+      "canonicalPath": "common/cola.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "cola",
+      "title": "cola",
+      "summary": "Эта команда — псевдоним для `git-cola`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr git-cola",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/cola.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/cola.md"
+    },
+    {
+      "id": "tldr--fbe9e4733af1",
+      "canonicalPath": "linux/limine-scan.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "limine-scan",
+      "title": "limine-scan",
+      "summary": "Эта команда — псевдоним для `limine-entry-tool --scan`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr limine-entry-tool",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/limine-scan.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/limine-scan.md"
+    }
+  ]
+}

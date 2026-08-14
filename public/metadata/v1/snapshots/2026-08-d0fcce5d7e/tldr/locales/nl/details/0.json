@@ -1,0 +1,3801 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "nl",
+  "sourceLocale": "nl",
+  "shard": "0",
+  "items": [
+    {
+      "id": "tldr--03da635f46e2",
+      "canonicalPath": "common/echo.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "echo",
+      "title": "echo",
+      "summary": "Toont gegeven argumenten. Zie ook: `printf`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Toon een tekstbericht. Let op: aanhalingstekens zijn optioneel:",
+          "command": "echo \"{{Hallo Wereld}}\"",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/echo.md#L9"
+        },
+        {
+          "description": "Toon een bericht met omgevingsvariabelen:",
+          "command": "echo \"{{Mijn pad is $PATH}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/echo.md#L13"
+        },
+        {
+          "description": "Toont een bericht zonder te volgen met een nieuwe regel:",
+          "command": "echo -n \"{{Hallo Wereld}}\"",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/echo.md#L17"
+        },
+        {
+          "description": "Voeg een bericht aan een bestand toe:",
+          "command": "echo \"{{Hallo Wereld}}\" >> {{bestand.txt}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/echo.md#L21"
+        },
+        {
+          "description": "Interpretatie van backslash-escapes (speciale tekens) inschakelen:",
+          "command": "echo -e \"{{kolom 1\\kolom 2}}\"",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/echo.md#L25"
+        },
+        {
+          "description": "Toon de afsluitstatus van de laatst uitgevoerde opdracht (Let op: in Windows Command Prompt en PowerShell zijn de equivalente opdrachten respectievelijk `echo %errorlevel%` en `$lastexitcode`):",
+          "command": "echo $?",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/echo.md#L29"
+        },
+        {
+          "description": "Geef tekst door aan een ander programma via `stdin`:",
+          "command": "echo \"{{Hallo Wereld}}\" | {{programma}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/echo.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/echo.md"
+    },
+    {
+      "id": "tldr--040fb5c1a9b2",
+      "canonicalPath": "osx/date.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "date",
+      "title": "date",
+      "summary": "Stel de systeemdatum in of toon deze.",
+      "platform": "macos",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Toon de huidige datum in het standaardformaat van de locale:",
+          "command": "date +%c",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/date.md#L8"
+        },
+        {
+          "description": "Toon de huidige datum in UTC en ISO 8601-formaat:",
+          "command": "date -u +%Y-%m-%dT%H:%M:%SZ",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/date.md#L12"
+        },
+        {
+          "description": "Toon de huidige datum als een Unix timestamp (seconden sinds de Unix-epoch):",
+          "command": "date +%s",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/date.md#L16"
+        },
+        {
+          "description": "Toon een specifieke datum (gerepresenteerd als een Unix timestamp) met het standaard formaat:",
+          "command": "date -r {{1473305798}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/date.md#L20"
+        },
+        {
+          "description": "Toon een datum relatief aan de huidige datum met het standaard formaat:",
+          "command": "date -v {{+1d}} -v {{-20m}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/date.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/date.md"
+    },
+    {
+      "id": "tldr--069a2a62357d",
+      "canonicalPath": "linux/sleep.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "sleep",
+      "title": "sleep",
+      "summary": "Wacht voor een gespecificeerde hoeveelheid tijd.",
+      "platform": "linux",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "rktools2k3--c5a81681",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Wacht in seconden:",
+          "command": "sleep {{seconden}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/sleep.md#L8"
+        },
+        {
+          "description": "Wacht in [m]inuten. (Andere eenheden zoals [d]ag, [u]ur, [s]econde, [inf]initeit kunnen ook worden gebruikt):",
+          "command": "sleep {{minuten}}m",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/sleep.md#L12"
+        },
+        {
+          "description": "Wacht 1 [d]ag en 3 uur ([h]):",
+          "command": "sleep 1d 3h",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/sleep.md#L16"
+        },
+        {
+          "description": "Voer een specifiek commando uit na een wachttijd van 20 [m]inuten:",
+          "command": "sleep 20m && {{commando}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/sleep.md#L20"
+        },
+        {
+          "description": "Wacht voor altijd:",
+          "command": "sleep {{[inf|infinity]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/sleep.md#L24"
+        },
+        {
+          "description": "Toon de help:",
+          "command": "sleep --help",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/sleep.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/sleep.md"
+    },
+    {
+      "id": "tldr--072b835cc9b4",
+      "canonicalPath": "common/getnpusers.py.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "GetNPUsers.py",
+      "title": "GetNPUsers.py",
+      "summary": "Ga over alle Active Directory accounts met Kerberos pre-authentication uitgeschakeld, die vatbaar kunnen zijn voor AS-REP roasing aanvallen. Onderdeel van de Impacket-suite.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Ga over alle gebruikers met Kerberos pre-authentication uitgeschakeld (standaard anonieme enumeration):",
+          "command": "GetNPUsers.py {{domein}}/ -usersfile {{pad/naar/gebruikerslijst}} -dc-ip {{domain_controller_ip}} -no-pass",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getnpusers.py.md#L9"
+        },
+        {
+          "description": "Voer AS-REP roasting uit en dump kraakbare hashes voor offline kraking:",
+          "command": "GetNPUsers.py {{domein}}/ -usersfile {{pad/naar/gebruikerslijst}} -dc-ip {{domain_controller_ip}} -no-pass -request",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getnpusers.py.md#L13"
+        },
+        {
+          "description": "Authenticeer met valide credentials (als anonieme binding is uitgeschakeld):",
+          "command": "GetNPUsers.py {{domein}}/{{gebruikersnaam}}:{{wachtwoord}} -usersfile {{pad/naar/gebruikerslijst}} -dc-ip {{domain_controller_ip}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getnpusers.py.md#L17"
+        },
+        {
+          "description": "Gebruik pass-the-hash authenticatie in plaats van een wachtwoord:",
+          "command": "GetNPUsers.py {{domein}}/{{gebruikersnaam}} -hashes {{LM_Hash}}:{{NT_Hash}} -usersfile {{pad/naar/gebruikerslijst}} -dc-ip {{domain_controller_ip}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getnpusers.py.md#L21"
+        },
+        {
+          "description": "Sla de output op in een bestand:",
+          "command": "GetNPUsers.py {{domein}}/ -usersfile {{pad/naar/gebruikerslijst}} -dc-ip {{domain_controller_ip}} -request > {{pad/naar/output.txt}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getnpusers.py.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getnpusers.py.md"
+    },
+    {
+      "id": "tldr--082c4f68ca29",
+      "canonicalPath": "windows/date.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "date",
+      "title": "date",
+      "summary": "Toon of stel de systeemdatum in.",
+      "platform": "windows",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Toon de huidige systeemdatum en vraag voor een nieuwe datum (laat leeg om niet te veranderen):",
+          "command": "date",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/date.md#L8"
+        },
+        {
+          "description": "Toon de huidige systeemdatum zonder te vragen voor een nieuwe datum:",
+          "command": "date /t",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/date.md#L12"
+        },
+        {
+          "description": "Verander de huidige systeemdatum naar een specifieke datum:",
+          "command": "date {{maand}}-{{dag}}-{{jaar}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/date.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/date.md"
+    },
+    {
+      "id": "tldr--0997de4527cd",
+      "canonicalPath": "common/bun-c.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bun",
+      "title": "bun c",
+      "summary": "Dit commando is een alias van `bun create`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr bun create",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-c.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-c.md"
+    },
+    {
+      "id": "tldr--09dd80fa16f7",
+      "canonicalPath": "linux/semanage-boolean.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "semanage",
+      "title": "semanage boolean",
+      "summary": "Beheer persistente SELinux-boolean-instellingen. Zie ook: `semanage`, `getsebool`, `setsebool`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Toon alle boolean-instellingen:",
+          "command": "sudo semanage boolean {{[-l|--list]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-boolean.md#L9"
+        },
+        {
+          "description": "Toon alle door de gebruiker gedefinieerde boolean-instellingen zonder koppen:",
+          "command": "sudo semanage boolean {{[-l|--list]}} {{[-C|--locallist]}} {{[-n|--noheading]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-boolean.md#L13"
+        },
+        {
+          "description": "Stel een boolean blijvend in of uit:",
+          "command": "sudo semanage boolean {{[-m|--modify]}} {{-1|--on|-0|--off}} {{haproxy_connect_any}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-boolean.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-boolean.md"
+    },
+    {
+      "id": "tldr--0b54478ca8e5",
+      "canonicalPath": "linux/mknod.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "mknod",
+      "title": "mknod",
+      "summary": "Maak speciale bestanden voor blok- of tekenapparaten aan.",
+      "platform": "linux",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Maak een blokapparaat aan:",
+          "command": "sudo mknod {{pad/naar/apparaat_bestand}} b {{groot_apparaatnummer}} {{klein_apparaatnummer}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mknod.md#L8"
+        },
+        {
+          "description": "Maak een tekenapparaat aan:",
+          "command": "sudo mknod {{pad/naar/apparaat_bestand}} c {{groot_apparaatnummer}} {{klein_apparaatnummer}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mknod.md#L12"
+        },
+        {
+          "description": "Maak een FIFO (queue) apparaat aan:",
+          "command": "sudo mknod {{pad/naar/apparaat_bestand}} p",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mknod.md#L16"
+        },
+        {
+          "description": "Maak een apparaatbestand aan met de standaard SELinux-beveiligingscontext:",
+          "command": "sudo mknod {{[-Z|--context]}} {{pad/naar/apparaat_bestand}} {{type}} {{groot_apparaatnummer}} {{klein_apparaatnummer}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mknod.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mknod.md"
+    },
+    {
+      "id": "tldr--0e22ef597855",
+      "canonicalPath": "common/tldr-lint.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "tldr-lint",
+      "title": "tldr-lint",
+      "summary": "Controleer en formatteer `tldr` pagina's. Opmerking: `tldrl` kan gebruikt worden als een alias voor `tldr-lint`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Controleer een enkele pagina of alle pagina's in een map:",
+          "command": "tldr-lint {{pad/naar/pagina_of_map}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tldr-lint.md#L9"
+        },
+        {
+          "description": "Negeer specifieke `tldr-lint` foutcodes tijdens het controleren:",
+          "command": "tldr-lint {{[-I|--ignore]}} {{TLDR001,TLDR002,...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tldr-lint.md#L13"
+        },
+        {
+          "description": "Formatteer een specifieke pagina naar `stdout`:",
+          "command": "tldr-lint {{[-f|--format]}} {{pad/naar/pagina.md}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tldr-lint.md#L17"
+        },
+        {
+          "description": "Formatteer een pagina in place:",
+          "command": "tldr-lint {{[-f|--format]}} {{[-i|--in-place]}} {{pad/naar/pagina.md}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tldr-lint.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tldr-lint.md"
+    },
+    {
+      "id": "tldr--122367070ea8",
+      "canonicalPath": "common/tail.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "tail",
+      "title": "tail",
+      "summary": "Toon het laatste deel van een bestand. Zie ook: `head`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "rktools2k3--c5a81681",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Toon de laatste 10 regels van een bestand:",
+          "command": "tail {{pad/naar/bestand}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tail.md#L9"
+        },
+        {
+          "description": "Toon de laatste 10 regels van meerdere bestanden:",
+          "command": "tail {{pad/naar/bestand1 pad/naar/bestand2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tail.md#L13"
+        },
+        {
+          "description": "Toon laatste 5 regels in een bestand:",
+          "command": "tail {{[-5|--lines 5]}} {{pad/naar/bestand}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tail.md#L17"
+        },
+        {
+          "description": "Toon een bestand vanaf een specifiek regelnummer:",
+          "command": "tail {{[-n|--lines]}} +{{aantal}} {{pad/naar/bestand}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tail.md#L21"
+        },
+        {
+          "description": "Toon een specifiek aantal bytes vanaf het einde van een opgegeven bestand:",
+          "command": "tail {{[-c|--bytes]}} {{aantal}} {{pad/naar/bestand}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tail.md#L25"
+        },
+        {
+          "description": "Toon de laatste regels van een bestand en blijf het bestand lezen tot `<Ctrl c>`:",
+          "command": "tail {{[-f|--follow]}} {{pad/naar/bestand}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tail.md#L29"
+        },
+        {
+          "description": "Blijf het bestand lezen tot `<Ctrl c>`, ook als het bestand niet toegangelijk is:",
+          "command": "tail {{[-F|--retry --follow]}} {{pad/naar/bestand}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tail.md#L33"
+        },
+        {
+          "description": "Toon de laatste `aantal` regels in een bestand en ververs iedere `seconden` seconden:",
+          "command": "tail {{[-n|--lines]}} {{aantal}} {{[-s|--sleep-interval]}} {{seconden}} {{[-f|--follow]}} {{pad/naar/bestand}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tail.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tail.md"
+    },
+    {
+      "id": "tldr--17509c3df167",
+      "canonicalPath": "common/zerotier-one.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "zerotier-one",
+      "title": "zerotier-one",
+      "summary": "Start de ZeroTier One daemon. Zie ook: `zerotier-cli`, `zerotier-idtool`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "zerotier-one--c89b5156"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Start de ZeroTier One [d]aemon:",
+          "command": "sudo zerotier-one -d",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/zerotier-one.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/zerotier-one.md"
+    },
+    {
+      "id": "tldr--19bcb26b33bc",
+      "canonicalPath": "common/$.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "$",
+      "title": "$",
+      "summary": "Breid een Bash-variabele uit.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Toon een variabele:",
+          "command": "echo ${{VARIABELE}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%24.md#L8"
+        },
+        {
+          "description": "Voer een variabele uit als een commando:",
+          "command": "${{VARIABELE}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%24.md#L12"
+        },
+        {
+          "description": "Toon de exitstatus van het vorige commando:",
+          "command": "echo $?",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%24.md#L16"
+        },
+        {
+          "description": "Toon een willekeurig getal tussen 0 en 32767:",
+          "command": "echo $RANDOM",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%24.md#L20"
+        },
+        {
+          "description": "Toon een van de promptstrings:",
+          "command": "echo ${{PS0|PS1|PS2|PS3|PS4}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%24.md#L24"
+        },
+        {
+          "description": "Breid uit met de uitvoer van `command` en voer het uit. Hetzelfde als het commando tussen backticks plaatsen:",
+          "command": "$({{commando}})",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%24.md#L28"
+        },
+        {
+          "description": "Toon hoeveel argumenten de huidige context heeft:",
+          "command": "echo $#",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%24.md#L32"
+        },
+        {
+          "description": "Toon een Bash array:",
+          "command": "echo ${{{array_naam[@]}}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%24.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%24.md"
+    },
+    {
+      "id": "tldr--19d72df0db83",
+      "canonicalPath": "common/nc.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "nc",
+      "title": "nc",
+      "summary": "Netcat is een veelzijdig hulpprogramma voor het omleiden van IO naar een netwerkstream.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Start een [l]uisteraar op de opgegeven TCP-[p]oort en stuur er een bestand in:",
+          "command": "nc < {{bestandsnaam}} -l -p {{poort}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nc.md#L8"
+        },
+        {
+          "description": "Maak verbinding met een doelluisteraar op de opgegeven poort en ontvang er een bestand uit:",
+          "command": "nc {{host}} {{poort}} > {{ontvangen_bestandsnaam}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nc.md#L12"
+        },
+        {
+          "description": "Scan de open TCP-poorten van een opgegeven host:",
+          "command": "nc -v -z -w {{timeout_in_seconden}} {{host}} {{start_poort}}-{{eind_poort}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nc.md#L16"
+        },
+        {
+          "description": "Start een [l]uisteraar op de opgegeven TCP-[p]oort en geef uw lokale shell toegang tot de verbonden partij (dit is gevaarlijk en kan worden misbruikt):",
+          "command": "nc -l -p {{poort}} -e {{shell_executable}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nc.md#L20"
+        },
+        {
+          "description": "Maak verbinding met een doelluisteraar en geef uw lokale shell toegang tot de externe partij (dit is gevaarlijk en kan worden misbruikt):",
+          "command": "nc {{host}} {{poort}} -e {{shell_executable}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nc.md#L24"
+        },
+        {
+          "description": "Fungeer als een proxy en stuur gegevens door van een lokale TCP-[p]oort naar de opgegeven externe host:",
+          "command": "nc -l -p {{lokale_poort}} | nc {{host}} {{externe_poort}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nc.md#L28"
+        },
+        {
+          "description": "Stuur een HTTP GET verzoek:",
+          "command": "echo -e \"GET / HTTP/1.1\\nHost: {{host}}\\n\\n\" | nc {{host}} 80",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nc.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nc.md"
+    },
+    {
+      "id": "tldr--1aa962c36c80",
+      "canonicalPath": "linux/iostat.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "iostat",
+      "title": "iostat",
+      "summary": "Geeft statistieken weer voor apparaten en partities.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Toon een rapport van CPU- en schijfstatistieken sinds het opstarten van het systeem:",
+          "command": "iostat",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iostat.md#L8"
+        },
+        {
+          "description": "Toon een rapport van CPU- en schijfstatistieken met eenheden omgezet naar megabytes:",
+          "command": "iostat -m",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iostat.md#L12"
+        },
+        {
+          "description": "Toon CPU-statistieken:",
+          "command": "iostat {{[-c|--compact]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iostat.md#L16"
+        },
+        {
+          "description": "Toon schijfstatistieken met schijfnamen (inclusief LVM):",
+          "command": "iostat -N",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iostat.md#L20"
+        },
+        {
+          "description": "Toon uitgebreide schijfstatistieken met schijfnamen voor apparaat \"sda\":",
+          "command": "iostat -xN {{sda}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iostat.md#L24"
+        },
+        {
+          "description": "Toon incrementele rapporten van CPU- en schijfstatistieken elke 2 seconden:",
+          "command": "iostat {{2}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iostat.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iostat.md"
+    },
+    {
+      "id": "tldr--1d8f468270fa",
+      "canonicalPath": "linux/ausearch.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "ausearch",
+      "title": "ausearch",
+      "summary": "Zoek in het Linux audit logboek naar gebeurtenissen. Onderdeel van het `audit`-pakket. Zie ook: `audit2why`, `audit2allow`, `aureport`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Zoek naar alle SELinux AVC-denial gebeurtenissen:",
+          "command": "sudo ausearch {{[-m|--message]}} avc",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/ausearch.md#L10"
+        },
+        {
+          "description": "Zoek naar gebeurtenissen die verband houden met een specifiek uitvoerbaar bestand:",
+          "command": "sudo ausearch {{[-c|--comm]}} {{httpd}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/ausearch.md#L14"
+        },
+        {
+          "description": "Zoek naar gebeurtenissen van een specifieke gebruiker:",
+          "command": "sudo ausearch {{[-ui|--uid]}} {{1000}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/ausearch.md#L18"
+        },
+        {
+          "description": "Zoek naar gebeurtenissen in de laatste 10 minuten:",
+          "command": "sudo ausearch {{[-ts|--start]}} recent",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/ausearch.md#L22"
+        },
+        {
+          "description": "Zoek naar gefaalde inlogpogingen:",
+          "command": "sudo ausearch {{[-m|--message]}} user_login {{[-sv|--success]}} no",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/ausearch.md#L26"
+        },
+        {
+          "description": "Zoek naar gebeurtenissen die verband houden met een specifiek bestand:",
+          "command": "sudo ausearch {{[-f|--file]}} {{pad/naar/bestand}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/ausearch.md#L30"
+        },
+        {
+          "description": "Toon resultaten in ruwe vorm voor verdere verwerking:",
+          "command": "sudo ausearch {{[-m|--message]}} avc --raw",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/ausearch.md#L34"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/ausearch.md"
+    },
+    {
+      "id": "tldr--1f1f0f9deaf0",
+      "canonicalPath": "windows/scb.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "scb",
+      "title": "scb",
+      "summary": "Dit commando is een alias van `Set-Clipboard`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr Set-Clipboard",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/scb.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/scb.md"
+    },
+    {
+      "id": "tldr--263dabf7cefe",
+      "canonicalPath": "windows/shutdown.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "shutdown",
+      "title": "shutdown",
+      "summary": "Een tool om een machine af te sluiten, her op te starten of af te melden.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Sluit de huidige machine af:",
+          "command": "shutdown /s",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/shutdown.md#L8"
+        },
+        {
+          "description": "Sluit de huidige machine af en sluit alle applicaties:",
+          "command": "shutdown /s /f",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/shutdown.md#L12"
+        },
+        {
+          "description": "Herstart de huidige machine:",
+          "command": "shutdown /r /t 0",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/shutdown.md#L16"
+        },
+        {
+          "description": "Zet de huidige machine in slaapstand:",
+          "command": "shutdown /h",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/shutdown.md#L20"
+        },
+        {
+          "description": "Log uit van de huidige machine:",
+          "command": "shutdown /l",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/shutdown.md#L24"
+        },
+        {
+          "description": "Zet een timer in aantal seconden voor het afsluiten van de huidige machine:",
+          "command": "shutdown /s /t {{seconden}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/shutdown.md#L28"
+        },
+        {
+          "description": "Breek een afsluit sequentie af vooraleer de timer was afgelopen:",
+          "command": "shutdown /a",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/shutdown.md#L32"
+        },
+        {
+          "description": "Sluit een machine af op afstand:",
+          "command": "shutdown /m {{\\\\hostnaam}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/shutdown.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/shutdown.md"
+    },
+    {
+      "id": "tldr--2a65aa4e4bb0",
+      "canonicalPath": "common/bzip2.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bzip2",
+      "title": "bzip2",
+      "summary": "Een blok-sorteer bestandscompressor. Zie ook: `bzcat`, `bunzip2`, `bzip2recover`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bzip2--54ee0691",
+        "bzip2--ea87c95f",
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Comprimeer een bestand:",
+          "command": "bzip2 {{pad/naar/bestand_te_comprimeren}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzip2.md#L9"
+        },
+        {
+          "description": "Decomprimeer een bestand:",
+          "command": "bzip2 {{[-d|--decompress]}} {{pad/naar/gecomprimeerd_bestand.bz2}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzip2.md#L13"
+        },
+        {
+          "description": "Decomprimeer een bestand naar `stdout`:",
+          "command": "bzip2 {{[-dc|--decompress --stdout]}} {{pad/naar/gecomprimeerd_bestand.bz2}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzip2.md#L17"
+        },
+        {
+          "description": "Test de integriteit van elk bestand in het archiefbestand:",
+          "command": "bzip2 {{[-t|--test]}} {{pad/naar/gecomprimeerd_bestand.bz2}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzip2.md#L21"
+        },
+        {
+          "description": "Toon de compressieverhouding voor elk verwerkt bestand met gedetailleerde informatie:",
+          "command": "bzip2 {{[-v|--verbose]}} {{pad/naar/gecomprimeerd_bestand.bz2}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzip2.md#L25"
+        },
+        {
+          "description": "Decomprimeer een bestand en overschrijf bestaande bestanden:",
+          "command": "bzip2 {{[-f|--force]}} {{pad/naar/gecomprimeerd_bestanden.bz2}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzip2.md#L29"
+        },
+        {
+          "description": "Toon de help:",
+          "command": "bzip2 {{[-h|--help]}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzip2.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzip2.md"
+    },
+    {
+      "id": "tldr--2c7a59122d6d",
+      "canonicalPath": "common/set-nodeversion.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "Set-NodeVersion",
+      "title": "Set-NodeVersion",
+      "summary": "Stel de standaard Node.js versie in voor `ps-nvm`. Onderdeel van `ps-nvm` en kan alleen uitgevoerd worden in PowerShell.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Gebruik een specifieke versie van Node.js in de huidige PowerShell sessie:",
+          "command": "Set-NodeVersion {{versie}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/set-nodeversion.md#L9"
+        },
+        {
+          "description": "Gebruik de laatst geïnstalleerde Node.js versie van 20.x:",
+          "command": "Set-NodeVersion ^20",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/set-nodeversion.md#L13"
+        },
+        {
+          "description": "Stel de standaard Node.js versie in voor de huidige gebruiker (geldt alleen voor toekomstige PowerShell sessies):",
+          "command": "Set-NodeVersion {{versie}} -Persist User",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/set-nodeversion.md#L17"
+        },
+        {
+          "description": "Stel de standaard Node.js versie in voor alle gebruikers (dient uitgevoerd te worden als Administrator/root en geldt alleen voor toekomstige PowerShell sessies):",
+          "command": "Set-NodeVersion {{versie}} -Persist Machine",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/set-nodeversion.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/set-nodeversion.md"
+    },
+    {
+      "id": "tldr--2d84e2e814f6",
+      "canonicalPath": "common/lzmore.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "lzmore",
+      "title": "lzmore",
+      "summary": "Dit commando is een alias van `xzmore`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr xzmore",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lzmore.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lzmore.md"
+    },
+    {
+      "id": "tldr--32ae18e88bdf",
+      "canonicalPath": "linux/semanage-fcontext.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "semanage",
+      "title": "semanage fcontext",
+      "summary": "Beheer persistente SELinux-beveiligingscontextregels op bestanden/mappen. Zie ook: `semanage`, `matchpathcon`, `secon`, `chcon`, `restorecon`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Toon alle bestandslabelregels:",
+          "command": "sudo semanage fcontext {{[-l|--list]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-fcontext.md#L9"
+        },
+        {
+          "description": "Toon alle door de gebruiker gedefinieerde bestandslabelregels zonder koppen:",
+          "command": "sudo semanage fcontext {{[-lCn|--list --locallist --noheading]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-fcontext.md#L13"
+        },
+        {
+          "description": "Voeg een door de gebruiker gedefinieerde regel toe die elk pad labelt dat overeenkomt met een PCRE-`regex`:",
+          "command": "sudo semanage fcontext {{[-a|--add]}} {{[-t|--type]}} {{samba_share_t}} '{{/mnt/share(/.*)?}}'",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-fcontext.md#L17"
+        },
+        {
+          "description": "Voeg een door de gebruiker gedefinieerde regel toe die labelgelijkwaardigheid creëert tussen twee subpaden:",
+          "command": "sudo semanage fcontext {{[-a|--add]}} {{[-e|--equal]}} /{{pad/naar/ref}} /{{pad/naar/doel}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-fcontext.md#L21"
+        },
+        {
+          "description": "Verwijder een door de gebruiker gedefinieerde regel met behulp van zijn PCRE-`regex`:",
+          "command": "sudo semanage fcontext {{[-d|--delete]}} '{{/mnt/share(/.*)?}}'",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-fcontext.md#L25"
+        },
+        {
+          "description": "Herlabel een map recursief door de nieuwe regels toe te passen:",
+          "command": "restorecon -Rv {{pad/naar/map}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-fcontext.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-fcontext.md"
+    },
+    {
+      "id": "tldr--34534074e26b",
+      "canonicalPath": "common/identify.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "identify",
+      "title": "identify",
+      "summary": "Dit commando is een alias van `magick identify`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "imagemagick-ffmpeg--1a1f6843"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr magick identify",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/identify.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/identify.md"
+    },
+    {
+      "id": "tldr--34b8e909bb21",
+      "canonicalPath": "common/pnmtotiff.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pnmtotiff",
+      "title": "pnmtotiff",
+      "summary": "Dit commando is vervangen door `pamtotiff`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het huidige commando:",
+          "command": "tldr pamtotiff",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pnmtotiff.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pnmtotiff.md"
+    },
+    {
+      "id": "tldr--35b0fc84d2e7",
+      "canonicalPath": "windows/slmgr.vbs.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "slmgr.vbs",
+      "title": "slmgr.vbs",
+      "summary": "Installeer, activeer en beheer Windows licenties. Gebruik `cscript` om dit programma te gebruiken via de CLI, of `wscript` voor een GUI. Opmerking: dit commando kan uw huidige Windows licentie overschrijven, deactiveren en/of verwijderen, ga dus met voorzichtigheid verder.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Toon de huidige Windows [l]icentie [i]nformatie:",
+          "command": "cscript slmgr.vbs /dli",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/slmgr.vbs.md#L10"
+        },
+        {
+          "description": "Toon de installatie [i]D voor het huidige apparaat. Nuttig voor offline licentie activatie:",
+          "command": "cscript slmgr.vbs /dti",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/slmgr.vbs.md#L14"
+        },
+        {
+          "description": "Toon de verloopdatum en -tijd van de huidige licentie:",
+          "command": "cscript slmgr.vbs /xpr",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/slmgr.vbs.md#L18"
+        },
+        {
+          "description": "[i]nstalleer een nieuwe Windows licentie [p]roduct sleutel. Vereist beheerdersrechten en zal de bestaande licentie overschrijven:",
+          "command": "cscript slmgr.vbs /ipk {{product_sleutel}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/slmgr.vbs.md#L22"
+        },
+        {
+          "description": "[a]c[t]iveer de Windows product licentie [o]nline. Vereist beheerdersrechten:",
+          "command": "cscript slmgr.vbs /ato",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/slmgr.vbs.md#L26"
+        },
+        {
+          "description": "[a]c[t]iveer de Windows [p]roduct licentie offline. Vereist beheerdersrechten een bevestigings ID verstrekt door Microsoft Product Activation Center:",
+          "command": "cscript slmgr.vbs /atp {{bevestigings_id}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/slmgr.vbs.md#L30"
+        },
+        {
+          "description": "Wis de huidige licentie [p]roduct sleutel van het Windows register. Dit zal de huidige licentie niet deactiveren of verwijderen, maar voorkomt dat de sleutel in de toekomst wordt gestolen door kwaadaardige programma's:",
+          "command": "cscript slmgr.vbs /cpky",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/slmgr.vbs.md#L34"
+        },
+        {
+          "description": "Deinstalleer de huidigie licentie (door zijn [p]roduct sleutel):",
+          "command": "cscript slmgr.vbs /upk",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/slmgr.vbs.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/slmgr.vbs.md"
+    },
+    {
+      "id": "tldr--4351db2b4538",
+      "canonicalPath": "common/codium.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "codium",
+      "title": "codium",
+      "summary": "Dit commando is een alias van `code`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr code",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/codium.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/codium.md"
+    },
+    {
+      "id": "tldr--458700035839",
+      "canonicalPath": "common/xzfgrep.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "xzfgrep",
+      "title": "xzfgrep",
+      "summary": "Dit commando is een alias van `xzgrep --fixed-strings`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzfgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzfgrep.md"
+    },
+    {
+      "id": "tldr--4c9647486246",
+      "canonicalPath": "common/sha256sum.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "sha256sum",
+      "title": "sha256sum",
+      "summary": "Bereken SHA256 cryptografische checksums.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Bereken de SHA256 checksum voor één of meer bestanden:",
+          "command": "sha256sum {{pad/naar/bestand1 pad/naar/bestand2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sha256sum.md#L8"
+        },
+        {
+          "description": "Bereken en sla de lijst van SHA256 checksums op in een bestand:",
+          "command": "sha256sum {{pad/naar/bestand1 pad/naar/bestand2 ...}} > {{pad/naar/bestand.sha256}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sha256sum.md#L12"
+        },
+        {
+          "description": "Bereken een SHA256 checksum van `stdin`:",
+          "command": "{{commando}} | sha256sum",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sha256sum.md#L16"
+        },
+        {
+          "description": "Lees een bestand met SHA256 checksums en bestandsnamen en verifieer dat alle bestanden overeenkomende checksums hebben:",
+          "command": "sha256sum {{[-c|--check]}} {{pad/naar/bestand.sha256}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sha256sum.md#L20"
+        },
+        {
+          "description": "Toon alleen een bericht voor ontbrekende bestanden of wanneer verificatie mislukt:",
+          "command": "sha256sum {{[-c|--check]}} --quiet {{pad/naar/bestand.sha256}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sha256sum.md#L24"
+        },
+        {
+          "description": "Toon alleen een bericht wanneer verificatie mislukt, negeer ontbrekende bestanden:",
+          "command": "sha256sum --ignore-missing {{[-c|--check]}} --quiet {{pad/naar/bestand.sha256}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sha256sum.md#L28"
+        },
+        {
+          "description": "Controleer een bekende SHA256 checksum van een bestand:",
+          "command": "echo {{bekende_sha256_checksum_van_een_bestand}} {{pad/naar/bestand}} | sha256sum {{[-c|--check]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sha256sum.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sha256sum.md"
+    },
+    {
+      "id": "tldr--4ef7db6ca7a9",
+      "canonicalPath": "common/bun-list.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bun",
+      "title": "bun list",
+      "summary": "Dit commando is een alias van `bun pm ls`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr bun pm ls",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-list.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-list.md"
+    },
+    {
+      "id": "tldr--54ce1a0214e1",
+      "canonicalPath": "osx/gtac.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gtac",
+      "title": "gtac",
+      "summary": "Dit commando is een alias van GNU `tac`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr tac",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gtac.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gtac.md"
+    },
+    {
+      "id": "tldr--56df06f30d1c",
+      "canonicalPath": "osx/gnohup.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gnohup",
+      "title": "gnohup",
+      "summary": "Dit commando is een alias van GNU `nohup`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr nohup",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gnohup.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gnohup.md"
+    },
+    {
+      "id": "tldr--58c40b3c519e",
+      "canonicalPath": "linux/genisoimage.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "genisoimage",
+      "title": "genisoimage",
+      "summary": "Dit commando is een alias van `mkisofs`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr mkisofs",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/genisoimage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/genisoimage.md"
+    },
+    {
+      "id": "tldr--592c941b9a7a",
+      "canonicalPath": "common/bun-create.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bun",
+      "title": "bun create",
+      "summary": "Maak een nieuw project van een sjabloon.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Maak interactief een nieuw project van een officieel sjabloon:",
+          "command": "bun {{[c|create]}} {{template}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-create.md#L8"
+        },
+        {
+          "description": "Maak een nieuw project van een officiële sjabloon in een nieuwe map:",
+          "command": "bun {{[c|create]}} {{template}} {{pad/naar/bestemming}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-create.md#L12"
+        },
+        {
+          "description": "Maak een nieuw project van een GitHub repository sjabloon:",
+          "command": "bun {{[c|create]}} {{https://github.com/gebruikersnaam/repo}} {{pad/naar/bestemming}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-create.md#L16"
+        },
+        {
+          "description": "Maak een nieuw project van een lokaal sjabloon:",
+          "command": "bun {{[c|create]}} {{pad/naar/template}} {{pad/naar/bestemming}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-create.md#L20"
+        },
+        {
+          "description": "Maak een nieuw project en overschrijf de doelmap als deze bestaat:",
+          "command": "bun {{[c|create]}} {{template}} {{pad/naar/bestemming}} --force",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-create.md#L24"
+        },
+        {
+          "description": "Maak een nieuw project zonder automatisch een Git repository te initialiseren:",
+          "command": "bun {{[c|create]}} {{template}} {{pad/naar/bestemming}} --no-git",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-create.md#L28"
+        },
+        {
+          "description": "Maak een nieuw project zonder automatisch afhankelijkheden te installeren:",
+          "command": "bun {{[c|create]}} {{template}} {{pad/naar/bestemming}} --no-install",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-create.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-create.md"
+    },
+    {
+      "id": "tldr--5ab3f15e1343",
+      "canonicalPath": "common/b2sum.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "b2sum",
+      "title": "b2sum",
+      "summary": "Bereken BLAKE2 cryptografische checksums.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "b2sum--de0fadfc",
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Bereken de BLAKE2 checksum voor een of meerdere bestanden:",
+          "command": "b2sum {{pad/naar/bestand1 pad/naar/bestand2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/b2sum.md#L8"
+        },
+        {
+          "description": "Bereken en sla de lijst van BLAKE2 checksums op in een bestand:",
+          "command": "b2sum {{pad/naar/bestand1 pad/naar/bestand2 ...}} > {{pad/naar/bestand.b2}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/b2sum.md#L12"
+        },
+        {
+          "description": "Bereken de BLAKE2 checksum voor `stdin`:",
+          "command": "{{commando}} | b2sum",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/b2sum.md#L16"
+        },
+        {
+          "description": "Lees een bestand van BLAKE2 sums en bestandsnamen en verifieer dat alle bestanden overeenkomende checksums hebben:",
+          "command": "b2sum {{[-c|--check]}} {{pad/naar/bestand.b2}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/b2sum.md#L20"
+        },
+        {
+          "description": "Toon alleen een melding voor missende bestanden of als verificatie faalt:",
+          "command": "b2sum {{[-c|--check]}} --quiet {{pad/naar/bestand.b2}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/b2sum.md#L24"
+        },
+        {
+          "description": "Toon alleen een melding als een verificatie faalt en negeer missende bestanden:",
+          "command": "b2sum --ignore-missing {{[-c|--check]}} --quiet {{pad/naar/bestand.b2}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/b2sum.md#L28"
+        },
+        {
+          "description": "Controleer een bekende BLAKE2 checksum van een bestand:",
+          "command": "echo {{bekende_blake2_checksum_van_het_bestand}} {{pad/naar/bestand}} | b2sum {{[-c|--check]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/b2sum.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/b2sum.md"
+    },
+    {
+      "id": "tldr--5b03c8d72157",
+      "canonicalPath": "linux/semanage-permissive.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "semanage",
+      "title": "semanage permissive",
+      "summary": "Beheer persistente SELinux permissieve domeinen. Let op dat dit het proces effectief onbeperkt maakt. Voor langdurig gebruik wordt aanbevolen om SELinux correct te configureren. Zie ook: `semanage`, `getenforce`, `setenforce`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Toon alle procestypen (ook wel domeinen genoemd) die in permissieve modus zijn:",
+          "command": "sudo semanage permissive {{[-l|--list]}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-permissive.md#L10"
+        },
+        {
+          "description": "Stel de permissieve modus in voor een domein:",
+          "command": "sudo semanage permissive {{[-a|--add]}} {{httpd_t}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-permissive.md#L14"
+        },
+        {
+          "description": "Zet de permissieve modus uit voor een domein:",
+          "command": "sudo semanage permissive {{[-d|--delete]}} {{httpd_t}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-permissive.md#L18"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-permissive.md"
+    },
+    {
+      "id": "tldr--612e243beef3",
+      "canonicalPath": "common/xzgrep.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "xzgrep",
+      "title": "xzgrep",
+      "summary": "Zoek bestanden die mogelijk worden gecomprimeerd met `xz`, `lzma`, `gzip`, `bzip2`, `lzop`, of `zstd` met behulp van reguliere expressies. Zie ook: `grep`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Zoek naar een patroon in een bestand:",
+          "command": "xzgrep \"{{zoekpatroon}}\" {{pad/naar/bestand}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzgrep.md#L9"
+        },
+        {
+          "description": "Zoek naar een exacte tekenreeks (schakelt reguliere expressies uit):",
+          "command": "xzgrep {{[-F|--fixed-strings]}} \"{{exact_string}}\" {{pad/naar/bestand}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzgrep.md#L13"
+        },
+        {
+          "description": "Zoek naar een patroon in alle bestanden en geef de regelnummers weer van de overeenkomsten:",
+          "command": "xzgrep {{[-n|--line-number]}} \"{{zoekpatroon}}\" {{pad/naar/bestand}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzgrep.md#L17"
+        },
+        {
+          "description": "Toon 3 regels met [C]ontext rond, voor ([B]) of n[A] elke overeenkomst:",
+          "command": "xzgrep {{--context|--before-context|--after-context}} 3 \"{{zoekpatroon}}\" {{pad/naar/bestand}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzgrep.md#L21"
+        },
+        {
+          "description": "Toon bestandsnaam en regelnummer voor elke overeenkomst met kleuren:",
+          "command": "xzgrep {{[-H|--with-filename]}} {{[-n|--line-number]}} --color=always \"{{zoekpatroon}}\" {{pad/naar/bestand}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzgrep.md#L25"
+        },
+        {
+          "description": "Zoek naar regels die overeenkomen met een patroon en toon alleen de gematchte tekst:",
+          "command": "xzgrep {{[-o|--only-matching]}} \"{{zoekpatroon}}\" {{pad/naar/bestand}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzgrep.md#L29"
+        },
+        {
+          "description": "Gebruik uitgebreide `regex` (ondersteund `?`, `+`, `{}`, `()` en `|`), in hoofdletterongevoelig modus:",
+          "command": "xzgrep {{[-E|--extended-regexp]}} {{[-i|--ignore-case]}} \"{{zoekpatroon}}\" {{pad/naar/bestand}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzgrep.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xzgrep.md"
+    },
+    {
+      "id": "tldr--6169b1302d4c",
+      "canonicalPath": "osx/gtalk.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gtalk",
+      "title": "gtalk",
+      "summary": "Dit commando is een alias van GNU `talk`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr {{[-p|--platform]}} linux talk",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gtalk.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gtalk.md"
+    },
+    {
+      "id": "tldr--618803f6f06a",
+      "canonicalPath": "common/ptpython.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "ptpython",
+      "title": "ptpython",
+      "summary": "Een betere Python REPL.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "ptpython--1410cbf7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Start een REPL (interactieve shell):",
+          "command": "ptpython",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ptpython.md#L8"
+        },
+        {
+          "description": "Voer een specifiek Python bestand uit:",
+          "command": "ptpython {{pad/naar/bestand.py}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ptpython.md#L12"
+        },
+        {
+          "description": "Voer een specfiek Python bestand uit en start een REPL:",
+          "command": "ptpython {{[-i|--interactive]}} {{pad/naar/bestand.py}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ptpython.md#L16"
+        },
+        {
+          "description": "Open het menu:",
+          "command": "<F2>",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ptpython.md#L20"
+        },
+        {
+          "description": "Open de geschiedenis pagina:",
+          "command": "<F3>",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ptpython.md#L24"
+        },
+        {
+          "description": "Wissel de plak modus:",
+          "command": "<F6>",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ptpython.md#L28"
+        },
+        {
+          "description": "Sluit af:",
+          "command": "<Ctrl d>",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ptpython.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ptpython.md"
+    },
+    {
+      "id": "tldr--648dd3b63882",
+      "canonicalPath": "windows/cmd.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "cmd",
+      "title": "cmd",
+      "summary": "De Windows-opdrachtinterpreter.",
+      "platform": "windows",
+      "softwareIds": [
+        "cmd--449cd18f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Start een interactieve shell-sessie:",
+          "command": "cmd",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cmd.md#L8"
+        },
+        {
+          "description": "Voer specifieke [c]ommandos uit:",
+          "command": "cmd /c {{echo Hello world}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cmd.md#L12"
+        },
+        {
+          "description": "Voer een specifiek script uit:",
+          "command": "cmd {{pad\\naar\\script.bat}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cmd.md#L16"
+        },
+        {
+          "description": "Voer specifieke commando's uit en start vervolgens een interactieve shell:",
+          "command": "cmd /k {{echo Hello world}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cmd.md#L20"
+        },
+        {
+          "description": "Start een interactieve shell-sessie waarbij `echo` is uitgeschakeld in de opdrachtuitvoer:",
+          "command": "cmd /q",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cmd.md#L24"
+        },
+        {
+          "description": "Start een interactieve shell-sessie met vertraagde [v]ariabele-expansie in- of uitgeschakeld:",
+          "command": "cmd /v:{{on|off}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cmd.md#L28"
+        },
+        {
+          "description": "Start een interactieve shell-sessie met opdracht[e]xtensies in- of uitgeschakeld:",
+          "command": "cmd /e:{{on|off}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cmd.md#L32"
+        },
+        {
+          "description": "Start een interactieve shell-sessie met gebruikte [u]nicode-codering:",
+          "command": "cmd /u",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cmd.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cmd.md"
+    },
+    {
+      "id": "tldr--6c8cc61dfe43",
+      "canonicalPath": "linux/iptables.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "iptables",
+      "title": "iptables",
+      "summary": "Configureer tabellen, ketens en regels van de Linux kernel IPv4 firewall. Gebruik `ip6tables` om regels in te stellen voor IPv6 verkeer. Zie ook: `iptables-save`, `iptables-restore`.",
+      "platform": "linux",
+      "softwareIds": [
+        "iptables--7526fa26"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Bekijk ketens, regels, pakket/byte tellers en regelnummers voor de filter tabel:",
+          "command": "sudo iptables {{[-vnL --line-numbers|--verbose --numeric --list --line-numbers]}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iptables.md#L10"
+        },
+        {
+          "description": "Zet keten [P]olicy regel:",
+          "command": "sudo iptables {{[-P|--policy]}} {{keten}} {{regel}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iptables.md#L14"
+        },
+        {
+          "description": "Voeg regel toe aan keten policy voor IP:",
+          "command": "sudo iptables {{[-A|--append]}} {{keten}} {{[-s|--source]}} {{ip}} {{[-j|--jump]}} {{regel}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iptables.md#L18"
+        },
+        {
+          "description": "Voeg regel toe aan keten policy voor IP met [p]rotocol en poort in overweging:",
+          "command": "sudo iptables {{[-A|--append]}} {{keten}} {{[-s|--source]}} {{ip}} {{[-p|--protocol]}} {{tcp|udp|icmp|...}} --dport {{poort}} {{[-j|--jump]}} {{regel}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iptables.md#L22"
+        },
+        {
+          "description": "Voeg een NAT regel toe om al het verkeer van `192.168.0.0/24` subnet te vertalen naar de host's publieke IP:",
+          "command": "sudo iptables {{[-t|--table]}} {{nat}} {{[-A|--append]}} {{POSTROUTING}} {{[-s|--source]}} {{192.168.0.0/24}} {{[-j|--jump]}} {{MASQUERADE}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iptables.md#L26"
+        },
+        {
+          "description": "Verwij[D]er keten regel:",
+          "command": "sudo iptables {{[-D|--delete]}} {{keten}} {{regelnummer}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iptables.md#L30"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iptables.md"
+    },
+    {
+      "id": "tldr--6df5f4ae99ea",
+      "canonicalPath": "common/nvim.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "nvim",
+      "title": "nvim",
+      "summary": "Neovim, een programmeurs tekstbewerker gebaseerd op Vim, welke verschillende modi aanbied voor verschillende soorten text manipulatie. Op `<i>` drukken in de normale modus, gaat naar de invoer modus. `<Esc>` gaat terug naar de normale modus, die geen reguliere tekst invoer accepteert. Zie ook: `vim`, `vimtutor`, `vimdiff`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "neovim--d6cd4006",
+        "neovim-nightly--cd74ca87"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Open een bestand:",
+          "command": "nvim {{pad/naar/bestand}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvim.md#L10"
+        },
+        {
+          "description": "Ga naar de modus om tekst aan te passen (insert mode):",
+          "command": "<Esc><i>",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvim.md#L14"
+        },
+        {
+          "description": "Kopieer (\"yank\") of knip (\"delete\") de huidige regel (plak het met `<p>`):",
+          "command": "<Esc>{{<y><y>|<d><d>}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvim.md#L18"
+        },
+        {
+          "description": "Ga naar de normale modus en maak de laatste operatie ongedaan:",
+          "command": "<Esc><u>",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvim.md#L22"
+        },
+        {
+          "description": "Zoek voor een patroon in het bestand (druk op `<n>`/`<N>` om naar de volgende/vorige overeenkomst te gaan):",
+          "command": "<Esc></>{{zoek_patroon}}<Enter>",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvim.md#L26"
+        },
+        {
+          "description": "Voer een reguliere expressie vervanging uit in het volledige bestand:",
+          "command": "<Esc><:>%s/{{reguliere_expressie}}/{{vervanging}}/g<Enter>",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvim.md#L30"
+        },
+        {
+          "description": "Ga naar de normale modus, sla (write) het bestand op en sluit af:",
+          "command": "{{<Esc><Z><Z>|<Esc><:>x<Enter>|<Esc><:>wq<Enter>}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvim.md#L34"
+        },
+        {
+          "description": "Sluit af zonder op te slaan:",
+          "command": "<Esc><:>q!<Enter>",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvim.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvim.md"
+    },
+    {
+      "id": "tldr--6e3aee9d4a9b",
+      "canonicalPath": "osx/ghostname.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "ghostname",
+      "title": "ghostname",
+      "summary": "Dit commando is een alias van GNU `hostname`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr hostname",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/ghostname.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/ghostname.md"
+    },
+    {
+      "id": "tldr--70fb8eae8be2",
+      "canonicalPath": "android/getprop.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "getprop",
+      "title": "getprop",
+      "summary": "Toon informatie over Android systeemeigenschappen.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Toon informatie over Android systeemeigenschappen:",
+          "command": "getprop",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/getprop.md#L8"
+        },
+        {
+          "description": "Toon informatie over een specifieke eigenschap:",
+          "command": "getprop {{property}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/getprop.md#L12"
+        },
+        {
+          "description": "Toon het SDK API level:",
+          "command": "getprop {{ro.build.version.sdk}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/getprop.md#L16"
+        },
+        {
+          "description": "Toon de Android versie:",
+          "command": "getprop {{ro.build.version.release}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/getprop.md#L20"
+        },
+        {
+          "description": "Toon het Android apparaatmodel:",
+          "command": "getprop {{ro.vendor.product.model}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/getprop.md#L24"
+        },
+        {
+          "description": "Toon de OEM ontgrendelingsstatus:",
+          "command": "getprop {{ro.oem_unlock_supported}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/getprop.md#L28"
+        },
+        {
+          "description": "Toon het MAC adres van de Android's Wi-Fi kaart:",
+          "command": "getprop {{ro.boot.wifimacaddr}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/getprop.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/getprop.md"
+    },
+    {
+      "id": "tldr--728d1c604e19",
+      "canonicalPath": "common/bun-x.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bun",
+      "title": "bun x",
+      "summary": "Dit commando is een alias van `bunx`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr bunx",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-x.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-x.md"
+    },
+    {
+      "id": "tldr--7616b52ed93f",
+      "canonicalPath": "common/bun-pm-ls.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bun",
+      "title": "bun pm ls",
+      "summary": "Toon geïnstalleerde afhankelijkheden en hun versies.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Toon afhankelijkheden in het huidige project:",
+          "command": "bun pm {{[ls|list]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-pm-ls.md#L8"
+        },
+        {
+          "description": "Toon alle transitieve afhankelijkheden:",
+          "command": "bun pm {{[ls|list]}} {{[-a|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-pm-ls.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-pm-ls.md"
+    },
+    {
+      "id": "tldr--7f0618cb0abc",
+      "canonicalPath": "osx/caffeinate.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "caffeinate",
+      "title": "caffeinate",
+      "summary": "Voorkom dat macOS in slaapstand gaat.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Voorkom dat het scherm in slaapstand gaat:",
+          "command": "caffeinate -d",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/caffeinate.md#L8"
+        },
+        {
+          "description": "Voorkom dat het scherm gedurende 1 uur (3600 seconden) in slaapstand gaat:",
+          "command": "caffeinate -u -t 3600",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/caffeinate.md#L12"
+        },
+        {
+          "description": "Splits een proces, voer daarin \"make\" uit en voorkom dat het scherm in slaapstand gaat zolang dat proces actief is:",
+          "command": "caffeinate -i make",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/caffeinate.md#L16"
+        },
+        {
+          "description": "Voorkom dat het scherm in slaapstand gaat totdat een proces met het opgegeven PID is voltooid:",
+          "command": "caffeinate -w {{pid}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/caffeinate.md#L20"
+        },
+        {
+          "description": "Voorkom dat de schijf in slaapstand gaat (gebruik `<Ctrl c>` om te stoppen):",
+          "command": "caffeinate -m",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/caffeinate.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/caffeinate.md"
+    },
+    {
+      "id": "tldr--7fca3671f6e4",
+      "canonicalPath": "freebsd/procstat.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "procstat",
+      "title": "procstat",
+      "summary": "Geef gedetailleerde informatie weer over processen in FreeBSD.",
+      "platform": "freebsd",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Bestandsdescriptors van een specifiek proces weergeven:",
+          "command": "procstat fds {{pid}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/freebsd/procstat.md#L8"
+        },
+        {
+          "description": "Toon virtuele geheugentoewijzingen van een proces:",
+          "command": "procstat vm {{pid}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/freebsd/procstat.md#L12"
+        },
+        {
+          "description": "Geef procesargumenten weer:",
+          "command": "procstat arguments {{pid}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/freebsd/procstat.md#L16"
+        },
+        {
+          "description": "Toon bron limieten van een proces:",
+          "command": "procstat rlimit {{pid}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/freebsd/procstat.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/freebsd/procstat.md"
+    },
+    {
+      "id": "tldr--85aefb2e044a",
+      "canonicalPath": "linux/systemd-resolve.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "systemd-resolve",
+      "title": "systemd-resolve",
+      "summary": "Resolve domeinnamen, IPV4 en IPv6 adressen, DNS resource records en services. Opmerking: deze tool is hernoemd naar `resolvectl` in nieuwere versies van `systemd`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie voor `resolvectl`:",
+          "command": "tldr resolvectl",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/systemd-resolve.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/systemd-resolve.md"
+    },
+    {
+      "id": "tldr--86670fdfe727",
+      "canonicalPath": "linux/lrzuntar.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "lrzuntar",
+      "title": "lrzuntar",
+      "summary": "Dit commando is een alias van `lrztar --decompress`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr lrztar",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/lrzuntar.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/lrzuntar.md"
+    },
+    {
+      "id": "tldr--89b249c1c128",
+      "canonicalPath": "linux/pacremove.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pacremove",
+      "title": "pacremove",
+      "summary": "Dit commando is een alias van `pactrans --remove`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr pactrans",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/pacremove.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/pacremove.md"
+    },
+    {
+      "id": "tldr--8d9b83bf53fc",
+      "canonicalPath": "common/passwd.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "passwd",
+      "title": "passwd",
+      "summary": "Verander het wachtwoord van een gebruiker. Zie ook: `chpasswd`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Verander het wachtwoord van de huidige gebruiker interactief:",
+          "command": "passwd",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/passwd.md#L9"
+        },
+        {
+          "description": "Verander het wachtwoord van een specifieke gebruiker:",
+          "command": "sudo passwd {{gebruikersnaam}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/passwd.md#L13"
+        },
+        {
+          "description": "Toon de huidige status van de gebruiker:",
+          "command": "passwd {{[-S|--status]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/passwd.md#L17"
+        },
+        {
+          "description": "Maak het wachtwoord van het account leeg (hiermee wordt de opgegeven account wachtwoordloos):",
+          "command": "passwd {{[-d|--delete]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/passwd.md#L21"
+        },
+        {
+          "description": "Stel het wachtwoord programmatisch in (handig voor installatiescripts):",
+          "command": "yes {{wachtwoord}} | passwd",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/passwd.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/passwd.md"
+    },
+    {
+      "id": "tldr--97b06375bc27",
+      "canonicalPath": "common/frp.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "frp",
+      "title": "frp",
+      "summary": "Fast Reverse Proxy: snel netwerktunnels opzetten om bepaalde services bloot te stellen aan het internet of andere externe netwerken. Opmerking: `frp` is geen commando, maar een set van commando's.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "frp--8993593f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie voor `frpc`, het `frp`-clientcomponent:",
+          "command": "tldr frpc",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/frp.md#L9"
+        },
+        {
+          "description": "Bekijk de documentatie voor `frps`, het `frp`-servercomponent:",
+          "command": "tldr frps",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/frp.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/frp.md"
+    },
+    {
+      "id": "tldr--97e360c4fa72",
+      "canonicalPath": "android/cmd.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "cmd",
+      "title": "cmd",
+      "summary": "Android service manager.",
+      "platform": "android",
+      "softwareIds": [
+        "cmd--449cd18f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Toon een [l]ijst met alle draaiende services:",
+          "command": "cmd -l",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/cmd.md#L8"
+        },
+        {
+          "description": "Roep een specifieke service aan:",
+          "command": "cmd {{service}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/cmd.md#L12"
+        },
+        {
+          "description": "Roep een specifieke service aan met specifieke argumenten:",
+          "command": "cmd {{service}} {{argument1 argument2 ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/cmd.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/cmd.md"
+    },
+    {
+      "id": "tldr--995993975ce8",
+      "canonicalPath": "osx/tail.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "tail",
+      "title": "tail",
+      "summary": "Toon het laatste deel van een bestand. Zie ook: `head`.",
+      "platform": "macos",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "rktools2k3--c5a81681",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Toon de laatste acht regels in een bestand:",
+          "command": "tail -n 8 {{pad/naar/bestand}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/tail.md#L9"
+        },
+        {
+          "description": "Toon een bestand vanaf een specifiek regelnummer:",
+          "command": "tail -n +{{8}} {{pad/naar/bestand}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/tail.md#L13"
+        },
+        {
+          "description": "Toon een specifiek aantal bytes vanaf het einde van een opgegeven bestand:",
+          "command": "tail -c {{8}} {{pad/naar/bestand}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/tail.md#L17"
+        },
+        {
+          "description": "Toon de laatste regels van een bestand en blijf het bestand lezen tot `<Ctrl c>`:",
+          "command": "tail -f {{pad/naar/bestand}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/tail.md#L21"
+        },
+        {
+          "description": "Blijf het bestand lezen tot `<Ctrl c>`, ook als het bestand niet toegangelijk is:",
+          "command": "tail -F {{pad/naar/bestand}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/tail.md#L25"
+        },
+        {
+          "description": "Toon de laatste `aantal` regels in een bestand en ververs iedere `seconden` seconden:",
+          "command": "tail -n {{aantal}} -s {{seconden}} -f {{pad/naar/bestand}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/tail.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/tail.md"
+    },
+    {
+      "id": "tldr--a1af782392fa",
+      "canonicalPath": "android/dalvikvm.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "dalvikvm",
+      "title": "dalvikvm",
+      "summary": "Android Java virtuele machine.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Start een specifiek Java programma:",
+          "command": "dalvikvm -classpath {{pad/naar/bestand.jar}} {{classnaam}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/dalvikvm.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/android/dalvikvm.md"
+    },
+    {
+      "id": "tldr--a2745e8e0405",
+      "canonicalPath": "linux/semanage-port.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "semanage",
+      "title": "semanage port",
+      "summary": "Beheer persistente SELinux-poortdefinities. Zie ook: `semanage`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Toon alle poortlabelregels:",
+          "command": "sudo semanage port {{[-l|--list]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-port.md#L9"
+        },
+        {
+          "description": "Toon alle door de gebruiker gedefinieerde poortlabelregels zonder koppen:",
+          "command": "sudo semanage port {{[-l|--list]}} {{[-C|--locallist]}} {{[-n|--noheading]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-port.md#L13"
+        },
+        {
+          "description": "Voeg een door de gebruiker gedefinieerde regel toe die een label toekent aan een protocol-poortpaar:",
+          "command": "sudo semanage port {{[-a|--add]}} {{[-t|--type]}} {{ssh_port_t}} {{[-p|--proto]}} {{tcp}} {{22000}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-port.md#L17"
+        },
+        {
+          "description": "Voeg een door de gebruiker gedefinieerde regel toe die een label toekent aan een protocol-poort-bereikpaar:",
+          "command": "sudo semanage port {{[-a|--add]}} {{[-t|--type]}} {{http_port_t}} {{[-p|--proto]}} {{tcp}} {{80-88}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-port.md#L21"
+        },
+        {
+          "description": "Verwijder een door de gebruiker gedefinieerde regel met behulp van zijn protocol-poortpaar:",
+          "command": "sudo semanage port {{[-d|--delete]}} {{[-p|--proto]}} {{udp}} {{11940}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-port.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage-port.md"
+    },
+    {
+      "id": "tldr--a48dbb6903b7",
+      "canonicalPath": "common/ppmquant.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "ppmquant",
+      "title": "ppmquant",
+      "summary": "Dit commando is vervangen met `pnmquant` en `pnmremap`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie voor `pnmquant`:",
+          "command": "tldr pnmquant",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ppmquant.md#L8"
+        },
+        {
+          "description": "Bekijk de documentatie voor `pnmremap`:",
+          "command": "tldr pnmremap",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ppmquant.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ppmquant.md"
+    },
+    {
+      "id": "tldr--a7f7e2cdfa4a",
+      "canonicalPath": "common/sum.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "sum",
+      "title": "sum",
+      "summary": "Bereken checksums en het aantal blokken voor een bestand. Een voorloper van de modernere `cksum`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Bereken een checksum met een BSD-compatibel algoritme en 1024-byte blokken:",
+          "command": "sum {{pad/naar/bestand}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sum.md#L9"
+        },
+        {
+          "description": "Bereken een checksum met een System V-compatibel algoritme en 512-byte blokken:",
+          "command": "sum {{[-s|--sysv]}} {{pad/naar/bestand}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sum.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sum.md"
+    },
+    {
+      "id": "tldr--ade7716b2cb8",
+      "canonicalPath": "linux/fdisk.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "fdisk",
+      "title": "fdisk",
+      "summary": "Beheer partitietabellen en partities op een opslagschijf. Zie ook: `partprobe`, `parted`, `cfdisk`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Toon partities:",
+          "command": "sudo fdisk {{[-l|--list]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/fdisk.md#L9"
+        },
+        {
+          "description": "Start de partitiemanipulator:",
+          "command": "sudo fdisk {{/dev/sdX}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/fdisk.md#L13"
+        },
+        {
+          "description": "Maak een [n]ieuwe partitie:",
+          "command": "<n>",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/fdisk.md#L17"
+        },
+        {
+          "description": "Selecteer een partitie om te verwij[d]eren:",
+          "command": "<d>",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/fdisk.md#L21"
+        },
+        {
+          "description": "Toon de [p]artitietabel:",
+          "command": "<p>",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/fdisk.md#L25"
+        },
+        {
+          "description": "Schrijf ([w]) gemaakte veranderingen:",
+          "command": "<w>",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/fdisk.md#L29"
+        },
+        {
+          "description": "Verwijder gemaakte veranderingen en sluit ([q]) het programma af:",
+          "command": "<q>",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/fdisk.md#L33"
+        },
+        {
+          "description": "Open een hulp[m]enu:",
+          "command": "<m>",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/fdisk.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/fdisk.md"
+    },
+    {
+      "id": "tldr--aeb6ee9d6a84",
+      "canonicalPath": "common/unexpand.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "unexpand",
+      "title": "unexpand",
+      "summary": "Converteer spaties naar tabs.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Converteer spaties in elk bestand naar tabs en schrijf naar `stdout`:",
+          "command": "unexpand {{pad/naar/bestand}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unexpand.md#L8"
+        },
+        {
+          "description": "Converteer spaties naar tabs en lees van `stdin`:",
+          "command": "unexpand",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unexpand.md#L12"
+        },
+        {
+          "description": "Converteer alle spaties, in plaats van alleen de voorloopspaties:",
+          "command": "unexpand {{[-a|--all]}} {{pad/naar/bestand}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unexpand.md#L16"
+        },
+        {
+          "description": "Converteer alleen leidende reeksen van spaties (overschrijft -a):",
+          "command": "unexpand --first-only {{pad/naar/bestand}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unexpand.md#L20"
+        },
+        {
+          "description": "Plaats tabs een bepaald aantal tekens uit elkaar, niet 8 (activeert -a):",
+          "command": "unexpand {{[-t|--tabs]}} {{nummer}} {{pad/naar/bestand}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unexpand.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unexpand.md"
+    },
+    {
+      "id": "tldr--b36cdb441ef7",
+      "canonicalPath": "common/pgmedge.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pgmedge",
+      "title": "pgmedge",
+      "summary": "Dit commando is vervangen door `pamedge`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het huidige commando:",
+          "command": "tldr pamedge",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pgmedge.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pgmedge.md"
+    },
+    {
+      "id": "tldr--b710a6586e12",
+      "canonicalPath": "common/musescore.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "musescore",
+      "title": "musescore",
+      "summary": "MuseScore bladmuziek bewerker. Zie ook: `lilypond`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "musescore--76959afa",
+        "musescore-nightly--ca3b0527",
+        "musescore3-nightly--ca3b0527"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Stel de MP3 uitvoer bitsnelheid in kbit/s:",
+          "command": "musescore {{[-b|--bitrate]}} {{bitsnelheid}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/musescore.md#L9"
+        },
+        {
+          "description": "Open MuseScore in debug modus:",
+          "command": "musescore {{[-d|--debug]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/musescore.md#L13"
+        },
+        {
+          "description": "Schakel experimentele funcies in, bijvoorbeeld lagen:",
+          "command": "musescore {{[-e|--experimental]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/musescore.md#L17"
+        },
+        {
+          "description": "Exporteer het gegeven bestand naar het gegeven uitvoer bestand. Het bestandstype hangt af van de gegeven extentie:",
+          "command": "musescore {{[-o|--export-to]}} {{uitvoer_bestand}} {{invoer_bestand}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/musescore.md#L21"
+        },
+        {
+          "description": "Geef het verschil tussen de gegeven partituren:",
+          "command": "musescore --diff {{pad/naar/bestand1}} {{pad/naar/bestand2}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/musescore.md#L25"
+        },
+        {
+          "description": "Specificeer een MIDI invoer operaties bestand:",
+          "command": "musescore {{[-M|--midi-operations]}} {{pad/naar/bestand}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/musescore.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/musescore.md"
+    },
+    {
+      "id": "tldr--b825e79dcda7",
+      "canonicalPath": "common/hugo-serve.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "hugo",
+      "title": "hugo serve",
+      "summary": "Dit commando is een alias van `hugo server`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "hugo--626f54e9",
+        "hugo-extended--626f54e9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr hugo server",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/hugo-serve.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/hugo-serve.md"
+    },
+    {
+      "id": "tldr--bbf33b4af54c",
+      "canonicalPath": "common/date.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "date",
+      "title": "date",
+      "summary": "Stel de systeemdatum in of toon deze.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Toon de huidige datum in het standaardformaat van de locale:",
+          "command": "date +%c",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/date.md#L8"
+        },
+        {
+          "description": "Toon de huidige datum in UTC, in het ISO 8601-formaat:",
+          "command": "date {{[-u|--utc]}} +%Y-%m-%dT%H:%M:%S%Z",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/date.md#L12"
+        },
+        {
+          "description": "Toon de huidige datum als een Unix timestamp (seconden sinds de Unix-epoch):",
+          "command": "date +%s",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/date.md#L16"
+        },
+        {
+          "description": "Converteer een datum gespecificeerd als een Unix timestamp naar het standaard formaat:",
+          "command": "date {{[-d|--date]}} @{{1473305798}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/date.md#L20"
+        },
+        {
+          "description": "Converteer een opgegeven datum naar het Unix timestamp formaat:",
+          "command": "date {{[-d|--date]}} \"{{2018-09-01 00:00}}\" +%s {{[-u|--utc]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/date.md#L24"
+        },
+        {
+          "description": "Toon de huidige datum in het RFC-3339 formaat (`YYYY-MM-DD hh:mm:ss TZ`) en specificeer de precisie ervan:",
+          "command": "date --rfc-3339 {{date|seconds|s}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/date.md#L28"
+        },
+        {
+          "description": "Stel de huidige datum in met het formaat `MMDDhhmmYYYY.ss` (`YYYY` en `.ss` zijn optioneel):",
+          "command": "sudo date {{093023592021.59}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/date.md#L32"
+        },
+        {
+          "description": "Toon het huidige ISO-weeknummer:",
+          "command": "date +%V",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/date.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/date.md"
+    },
+    {
+      "id": "tldr--bd69075e7165",
+      "canonicalPath": "windows/gal.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gal",
+      "title": "gal",
+      "summary": "In PowerShell is dit commando een alias van `Get-Alias`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr get-alias",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/gal.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/gal.md"
+    },
+    {
+      "id": "tldr--be9b7a90d820",
+      "canonicalPath": "common/minetest.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "minetest",
+      "title": "minetest",
+      "summary": "Dit commando is een alias van `luanti`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr luanti",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/minetest.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/minetest.md"
+    },
+    {
+      "id": "tldr--c0052abfbefd",
+      "canonicalPath": "linux/pw-play.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pw-play",
+      "title": "pw-play",
+      "summary": "Dit commando is een alias van `pw-cat --playback`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/pw-play.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/pw-play.md"
+    },
+    {
+      "id": "tldr--c2e9aebb7584",
+      "canonicalPath": "common/tlmgr-arch.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "tlmgr",
+      "title": "tlmgr arch",
+      "summary": "Dit commando is een alias van `tlmgr platform`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr tlmgr platform",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tlmgr-arch.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tlmgr-arch.md"
+    },
+    {
+      "id": "tldr--c3396d84dc80",
+      "canonicalPath": "common/{.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "{",
+      "title": "{",
+      "summary": "Multifunctionele shell-syntax.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Isoleer variabele namen:",
+          "command": "echo ${{{HOME}work}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%7B.md#L8"
+        },
+        {
+          "description": "Breid reeksen uit:",
+          "command": "echo {{{1..3}}} {{{a..c}}}{{{dir1,dir2,dir3}}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%7B.md#L12"
+        },
+        {
+          "description": "Controleer of `variabele` is ingesteld voordat tekst wordt geretourneerd:",
+          "command": "echo ${{{variabele:+variabele is set and contains $variabele}}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%7B.md#L16"
+        },
+        {
+          "description": "Stel standaardwaarden in als `variabele` niet is ingesteld:",
+          "command": "echo ${{{variabele:-default}}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%7B.md#L20"
+        },
+        {
+          "description": "Geef de lengte van `variabele` in tekens:",
+          "command": "echo ${{{#variabele}}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%7B.md#L24"
+        },
+        {
+          "description": "Geef een sliced string terug:",
+          "command": "echo ${{{variabele:3:7}}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%7B.md#L28"
+        },
+        {
+          "description": "Breid een `variabele` recursief uit:",
+          "command": "echo ${{{!variabele}}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%7B.md#L32"
+        },
+        {
+          "description": "Groepeer commando uitvoer:",
+          "command": "{ {{commando1; commando2; ...}} } | {{ander_commando}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%7B.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%7B.md"
+    },
+    {
+      "id": "tldr--c57bb695b1c9",
+      "canonicalPath": "common/tlmgr-platform.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "tlmgr",
+      "title": "tlmgr platform",
+      "summary": "Beheer TeX Live platforms.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Toon alle beschikbare platforms in een pakket repository:",
+          "command": "tlmgr {{[arch|platform]}} list",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tlmgr-platform.md#L8"
+        },
+        {
+          "description": "Voeg de uitvoerbare bestanden toe aan een specifiek platform:",
+          "command": "sudo tlmgr {{[arch|platform]}} add {{platform}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tlmgr-platform.md#L12"
+        },
+        {
+          "description": "Verwijder de uitvoerbare bestanden uit een specifiek platform:",
+          "command": "sudo tlmgr {{[arch|platform]}} remove {{platform}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tlmgr-platform.md#L16"
+        },
+        {
+          "description": "Detecteer automatisch en wissel naar het huidige platform:",
+          "command": "sudo tlmgr {{[arch|platform]}} set auto",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tlmgr-platform.md#L20"
+        },
+        {
+          "description": "Wissel naar een specifiek platform:",
+          "command": "sudo tlmgr {{[arch|platform]}} set {{platform}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tlmgr-platform.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/tlmgr-platform.md"
+    },
+    {
+      "id": "tldr--caca24c4ea71",
+      "canonicalPath": "common/bun-remove.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bun",
+      "title": "bun remove",
+      "summary": "Verwijder een afhankelijkheid uit `package.json`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Verwijder een afhankelijkheid:",
+          "command": "bun {{[rm|remove]}} {{pakket_naam}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-remove.md#L8"
+        },
+        {
+          "description": "Verwijder meerdere afhankelijkheden:",
+          "command": "bun {{[rm|remove]}} {{pakket_naam1 pakket_naam2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-remove.md#L12"
+        },
+        {
+          "description": "Verwijder een globaal geïnstalleerd pakket:",
+          "command": "bun {{[rm|remove]}} {{[-g|--global]}} {{pakket_naam}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-remove.md#L16"
+        },
+        {
+          "description": "Verwijder een afhankelijkheid zonder het `package.json` bestand bij te werken:",
+          "command": "bun {{[rm|remove]}} --no-save {{pakket_naam}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-remove.md#L20"
+        },
+        {
+          "description": "Voer de opdracht uit zonder daadwerkelijk pakketten te verwijderen (simuleer de verwijdering):",
+          "command": "bun {{[rm|remove]}} --dry-run {{pakket_naam}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-remove.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-remove.md"
+    },
+    {
+      "id": "tldr--d746d102dc73",
+      "canonicalPath": "common/pbmtoxbm.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pbmtoxbm",
+      "title": "pbmtoxbm",
+      "summary": "Converteer een PBM afbeelding naar een X11 of X10 bitmap.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Converteer een PPM afbeelding naar een X11 XBM bestand:",
+          "command": "pbmtoxbm {{pad/naar/invoer_bestand.pbm}} > {{pad/naar/uitvoer_bestand.xbm}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pbmtoxbm.md#L8"
+        },
+        {
+          "description": "Specificeer expliciet of een X11 of X10 bitmap gegenereerd moet worden:",
+          "command": "pbmtoxbm -{{x11|x10}} {{pad/naar/invoer_bestand.pbm}} > {{pad/naar/uitvoer_bestand.xbm}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pbmtoxbm.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pbmtoxbm.md"
+    },
+    {
+      "id": "tldr--dbb473d209c0",
+      "canonicalPath": "linux/caffeinate.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "caffeinate",
+      "title": "caffeinate",
+      "summary": "Voorkom dat de desktop in slaapstand gaat.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voorkom dat de desktop in slaapstand gaat (gebruik `<Ctrl c>` om te stoppen):",
+          "command": "caffeinate",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/caffeinate.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/caffeinate.md"
+    },
+    {
+      "id": "tldr--df592785e74e",
+      "canonicalPath": "common/unzstd.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "unzstd",
+      "title": "unzstd",
+      "summary": "Dit commando is een alias van `zstd --decompress`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr zstd",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unzstd.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unzstd.md"
+    },
+    {
+      "id": "tldr--e07f3789d3cf",
+      "canonicalPath": "common/bun-rm.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bun",
+      "title": "bun rm",
+      "summary": "Dit commando is een alias van `bun remove`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr bun remove",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-rm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-rm.md"
+    },
+    {
+      "id": "tldr--e1d8c49c31ef",
+      "canonicalPath": "osx/iostat.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "iostat",
+      "title": "iostat",
+      "summary": "Geeft statistieken weer voor apparaten.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Toon snapshot-apparaatstatistieken (KB/t, transfers per seconde, MB per seconde), CPU-statistieken (percentages van de tijd besteed in gebruikersmodus, systeemmodus en inactieve modus), en systeembelastinggemiddelden (voor de afgelopen 1, 5 en 15 minuten):",
+          "command": "iostat",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/iostat.md#L8"
+        },
+        {
+          "description": "Toon alleen apparaatstatistieken:",
+          "command": "iostat -d",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/iostat.md#L12"
+        },
+        {
+          "description": "Toon incrementele rapporten van CPU- en schijfstatistieken elke 2 seconden:",
+          "command": "iostat 2",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/iostat.md#L16"
+        },
+        {
+          "description": "Toon statistieken voor de eerste schijf elke seconde, oneindig:",
+          "command": "iostat -w 1 disk0",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/iostat.md#L20"
+        },
+        {
+          "description": "Toon statistieken voor de tweede schijf elke 3 seconden, 10 keer:",
+          "command": "iostat -w 3 -c 10 disk1",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/iostat.md#L24"
+        },
+        {
+          "description": "Toon met de oude `iostat` weergave. Laat sectoren per seconde zien, overdrachten per seconde, gemiddelde milliseconden per transactie, en CPU-statistieken + belastinggemiddelden uit de standaardweergave:",
+          "command": "iostat -o",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/iostat.md#L28"
+        },
+        {
+          "description": "Toon totale apparaatstatistieken (KB/t: kilobytes per overdracht zoals voorheen, xfrs: totaal aantal overdrachten, MB: totaal aantal overgedragen megabytes):",
+          "command": "iostat -I",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/iostat.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/iostat.md"
+    },
+    {
+      "id": "tldr--e3ba276df4fd",
+      "canonicalPath": "common/bun-i.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bun",
+      "title": "bun i",
+      "summary": "Dit commando is een alias van `bun install`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr bun install",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-i.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-i.md"
+    },
+    {
+      "id": "tldr--e4122e1915cd",
+      "canonicalPath": "common/lima.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "lima",
+      "title": "lima",
+      "summary": "Dit commando is een alias van `limactl shell` voor de default VM instantie. Je kan ook de omgevingsvariabele `$LIMA_INSTANCE` zetten om te werken op een andere instantie.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "lima--da4586e2"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr limactl",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lima.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lima.md"
+    },
+    {
+      "id": "tldr--e55a4ed181f0",
+      "canonicalPath": "common/ansible.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "ansible",
+      "title": "ansible",
+      "summary": "Beheer een groep van computers op afstand over SSH. (Gebruik het `/etc/ansible/hosts` bestand om nieuwe groepen/hosts toe te voegen). Sommige subcommando's zoals `galaxy` hebben hun eigen documentatie.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "ansible--d395ed9b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Toon de hosts die tot een groep behoren:",
+          "command": "ansible {{groep}} --list-hosts",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ansible.md#L9"
+        },
+        {
+          "description": "Ping een groep met hosts, met gebruik van de ping module:",
+          "command": "ansible {{groep}} {{[-m|--module-name]}} ping",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ansible.md#L13"
+        },
+        {
+          "description": "Toon feiten van een groep met hosts, met gebruik van de installatie module:",
+          "command": "ansible {{groep}} {{[-m|--module-name]}} setup",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ansible.md#L17"
+        },
+        {
+          "description": "Voer een commando op een groep met hosts uit. met gebruik van de commando module met argumenten:",
+          "command": "ansible {{groep}} {{[-m|--module-name]}} command {{[-a|--args]}} '{{mijn_commando}}'",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ansible.md#L21"
+        },
+        {
+          "description": "Voer een commando uit met administratieve rechten:",
+          "command": "ansible {{groep}} {{[-b|--become]}} --ask-become-pass {{[-m|--module-name]}} command {{[-a|--args]}} '{{mijn_commando}}'",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ansible.md#L25"
+        },
+        {
+          "description": "Voer een commando uit met een aangepast inventaris bestand:",
+          "command": "ansible {{groep}} {{[-i|--inventory]}} {{inventaris_bestand}} {{[-m|--module-name]}} command {{[-a|--args]}} '{{mijn_commando}}'",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ansible.md#L29"
+        },
+        {
+          "description": "Toon de groepen in een inventaris:",
+          "command": "ansible localhost {{[-m|--module-name]}} debug {{[-a|--args]}} '{{var=groups.keys()}}'",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ansible.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ansible.md"
+    },
+    {
+      "id": "tldr--e71e7b5a3fae",
+      "canonicalPath": "linux/semanage.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "semanage",
+      "title": "semanage",
+      "summary": "SELinux persistent beleid beheertool. Sommige subcommando's zoals `boolean`, `fcontext`, `port`, etc. hebben hun eigen documentatie.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Stel een SELinux-boolean in of uit. Booleans stellen de beheerder in staat om aan te passen hoe beleidsregels invloed hebben op ingesloten procestypes (ook wel domeinen genoemd):",
+          "command": "sudo semanage boolean {{[-m|--modify]}} {{-1|--on|-0|--off}} {{haproxy_connect_any}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage.md#L9"
+        },
+        {
+          "description": "Voeg een door de gebruiker gedefinieerde bestandscontextlabelregel toe. Bestandscontexten definiëren welke bestanden ingesloten domeinen mogen openen:",
+          "command": "sudo semanage fcontext {{[-a|--add]}} {{[-t|--type]}} {{samba_share_t}} '/mnt/share(/.*)?'",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage.md#L13"
+        },
+        {
+          "description": "Voeg een door de gebruiker gedefinieerde poortlabelregel toe. Poortlabels definiëren op welke poorten ingesloten domeinen mogen luisteren:",
+          "command": "sudo semanage port {{[-a|--add]}} {{[-t|--type]}} {{ssh_port_t}} {{[-p|--proto]}} {{tcp}} {{22000}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage.md#L17"
+        },
+        {
+          "description": "Stel de permissieve modus in of uit voor een ingesloten domein. Per-domein permissieve modus biedt meer gedetailleerde controle vergeleken met `setenforce`:",
+          "command": "sudo semanage permissive {{-a|--add|-d|--delete}} {{httpd_t}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage.md#L21"
+        },
+        {
+          "description": "Exporteer lokale aanpassingen in de standaardopslag:",
+          "command": "sudo semanage export {{[-f|--output_file]}} {{pad/naar/bestand}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage.md#L25"
+        },
+        {
+          "description": "Importeer een bestand gegenereerd door `semanage export` in lokale aanpassingen (VOORZICHTIG: kan huidige aanpassingen verwijderen!):",
+          "command": "sudo semanage import {{[-f|--input_file]}} {{pad/naar/bestand}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/semanage.md"
+    },
+    {
+      "id": "tldr--e787578d3e7a",
+      "canonicalPath": "common/age.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "age",
+      "title": "age",
+      "summary": "Een eenvoudige, moderne en veilige tool voor het versleutelen van bestanden. Zie ook: `age-keygen`, `age-inspect`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "age--33aba6a6",
+        "age--527f8a04"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Genereer een versleuteld bestand dat kan worden ontsleuteld met een wachtwoordzin:",
+          "command": "age {{[-p|--passphrase]}} {{[-o|--output]}} {{pad/naar/versleuteld_bestand}} {{pad/naar/niet-versleuteld_bestand}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/age.md#L9"
+        },
+        {
+          "description": "Versleutel een bestand met een of meer openbare sleutels die als letterlijke waarden worden ingevoerd (herhaal de `--recipient` flag om meerdere openbare sleutels op te geven):",
+          "command": "age {{[-r|--recipient]}} {{openbare_sleutel}} {{[-o|--output]}} {{pad/naar/versleuteld_bestand}} {{pad/naar/niet-versleuteld_bestand}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/age.md#L13"
+        },
+        {
+          "description": "Versleutel een bestand met een of meer openbare sleutels die zijn opgegeven in het bestand van een ontvanger:",
+          "command": "age {{[-R|--recipients-file]}} {{pad/naar/ontvangers_bestand}} {{[-o|--output]}} {{pad/naar/versleuteld_bestand}} {{pad/naar/niet-versleuteld_bestand}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/age.md#L17"
+        },
+        {
+          "description": "Decodeer een bestand met een wachtwoordzin:",
+          "command": "age {{[-d|--decrypt]}} {{[-o|--output]}} {{pad/naar/gedecodeerd_bestand}} {{pad/naar/versleuteld_bestand}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/age.md#L21"
+        },
+        {
+          "description": "Ontsleutel een bestand met een privésleutelbestand:",
+          "command": "age {{[-d|--decrypt]}} {{[-i|--identity]}} {{pad/naar/privé_sleutel_bestand}} {{[-o|--output]}} {{pad/naar/gedecodeerd_bestand}} {{pad/naar/versleuteld_bestand}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/age.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/age.md"
+    },
+    {
+      "id": "tldr--ea3930756f6a",
+      "canonicalPath": "common/ugrep.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "ugrep",
+      "title": "ugrep",
+      "summary": "Ultrasnelle bestandszoeker met interactive UI.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "ugrep--b73df044"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Open een interactieve TUI om recursief bestanden te zoeken (`<Ctrl z>` voor hulp):",
+          "command": "ugrep {{[-Q|--query]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ugrep.md#L8"
+        },
+        {
+          "description": "Zoek recursief met een `regex` zoekpatroon in de huidige map naar passende bestanden:",
+          "command": "ugrep \"{{zoekpatroon}}\"",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ugrep.md#L12"
+        },
+        {
+          "description": "Zoek een gegeven bestand of bestanden in een gegeven map en laat de passende regelnummers zien:",
+          "command": "ugrep {{[-n|--line-number]}} \"{{zoekpatroon}}\" {{pad/naar/bestand_of_map}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ugrep.md#L16"
+        },
+        {
+          "description": "Zoek recursief in de huidige map en geef een lijst met passende bestanden:",
+          "command": "ugrep {{[-l|--files-with-matches]}} \"{{zoekpatroon}}\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ugrep.md#L20"
+        },
+        {
+          "description": "Zoek \"fuzzy\" met maximaal 3 extra, missende of verwisselende karakters in het patroon:",
+          "command": "ugrep {{[-Z|--fuzzy=]}}{{3}} \"{{zoekpatroon}}\"",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ugrep.md#L24"
+        },
+        {
+          "description": "Zoek passende gecomprimeerde bestanden, zip en `.tar` archieven recursief in de huidige map:",
+          "command": "ugrep {{[-z|--decompress]}} \"{{zoekpatroon}}\"",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ugrep.md#L28"
+        },
+        {
+          "description": "Zoek alleen naar bestanden met namen die overeenkomen met een specifieke glob patroon:",
+          "command": "ugrep {{[-g |--glob=]}}\"{{glob_patroon}}\" \"{{zoekpatroon}}\"",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ugrep.md#L32"
+        },
+        {
+          "description": "Zoek alleen passende bestanden van het type C++ (gebruik `--type=list` voor een lijst van typenamen):",
+          "command": "ugrep {{[-t |--file-type=]}}cpp \"{{zoekpatroon}}\"",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ugrep.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/ugrep.md"
+    },
+    {
+      "id": "tldr--eae9f040d831",
+      "canonicalPath": "common/bunzip2.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bunzip2",
+      "title": "bunzip2",
+      "summary": "Dit commando is een alias van `bzip2 --decompress`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bzip2--ea87c95f",
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr bzip2",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bunzip2.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bunzip2.md"
+    },
+    {
+      "id": "tldr--ebe5c50f865f",
+      "canonicalPath": "osx/gping6.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gping6",
+      "title": "gping6",
+      "summary": "Dit commando is een alias van GNU `ping6`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr ping6",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gping6.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gping6.md"
+    },
+    {
+      "id": "tldr--ec7e5c293d61",
+      "canonicalPath": "common/lp.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "lp",
+      "title": "lp",
+      "summary": "Print bestanden.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Toon de output van een commando met de standaard printer (bekijk het `lpstat` commando):",
+          "command": "echo \"test\" | lp",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lp.md#L8"
+        },
+        {
+          "description": "Toon een bestand met de standaard printer:",
+          "command": "lp {{pad/naar/bestandsnaam}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lp.md#L12"
+        },
+        {
+          "description": "Toon een bestand met een printer met naam (bekijk het `lpstat` commando):",
+          "command": "lp -d {{printer_naam}} {{pad/naar/bestandsnaam}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lp.md#L16"
+        },
+        {
+          "description": "Toon N kopieën van een bestand met de standaard printer (vervang N met het gewenste aantal kopieën):",
+          "command": "lp -n {{N}} {{pad/naar/bestandsnaam}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lp.md#L20"
+        },
+        {
+          "description": "Toon alleen specifieke pagina's met de standaard printer (print pagina's 1, 3-5, and 16):",
+          "command": "lp -P 1,3-5,16 {{pad/naar/bestandsnaam}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lp.md#L24"
+        },
+        {
+          "description": "Hervat het printen van een taak:",
+          "command": "lp -i {{taak_id}} -H resume",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lp.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lp.md"
+    },
+    {
+      "id": "tldr--ee0525f782e6",
+      "canonicalPath": "common/bun-install.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bun",
+      "title": "bun install",
+      "summary": "Installeer JavaScript afhankelijkheden voor een project vanuit `package.json`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Installeer alle afhankelijkheden vermeld in `package.json`:",
+          "command": "bun {{[i|install]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-install.md#L8"
+        },
+        {
+          "description": "Installeer een enkel pakket (dit is een alias voor `bun add`):",
+          "command": "bun {{[i|install]}} {{pakket_naam}}@{{versie}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-install.md#L12"
+        },
+        {
+          "description": "Installeer een pakket globaal:",
+          "command": "bun {{[i|install]}} {{[-g|--global]}} {{pakket_naam}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-install.md#L16"
+        },
+        {
+          "description": "Installeer alleen productieafhankelijkheden (slaat `devDependencies` over):",
+          "command": "bun {{[i|install]}} {{[-p|--production]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-install.md#L20"
+        },
+        {
+          "description": "Installeer afhankelijkheden precies vanuit het `bun.lockb` lockbestand (bevroren lockbestand):",
+          "command": "bun {{[i|install]}} --frozen-lockfile",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-install.md#L24"
+        },
+        {
+          "description": "Forceer het opnieuw downloaden van alle pakketten uit het register, waarbij de cache wordt genegeerd:",
+          "command": "bun {{[i|install]}} {{[-f|--force]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-install.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bun-install.md"
+    },
+    {
+      "id": "tldr--eea3b488e7f6",
+      "canonicalPath": "linux/su.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "su",
+      "title": "su",
+      "summary": "Wissel shell naar een andere gebruiker.",
+      "platform": "linux",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Wissel naar superuser (vereist het root wachtwoord):",
+          "command": "su",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/su.md#L8"
+        },
+        {
+          "description": "Wissel naar een gegeven gebruiker (vereist het wachtwoord van de gebruiker):",
+          "command": "su {{gebruikersnaam}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/su.md#L12"
+        },
+        {
+          "description": "Wissel naar een gegeven gebruiker en simuleer een volledige login shell:",
+          "command": "su - {{gebruikersnaam}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/su.md#L16"
+        },
+        {
+          "description": "Voer een commando uit als een andere gebruiker:",
+          "command": "su - {{gebruikersnaam}} {{[-c|--command]}} \"{{commando}}\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/su.md#L20"
+        },
+        {
+          "description": "Wissel naar een bepaalde gebruiker en gebruik een specifieke shell (bijv. Zsh, fish, Bash):",
+          "command": "su {{[-s|--shell]}} /{{pad/naar/shell}} {{gebruikersnaam}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/su.md#L24"
+        },
+        {
+          "description": "Toon de help:",
+          "command": "su {{[-h|--help]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/su.md#L28"
+        },
+        {
+          "description": "Toon de versie:",
+          "command": "su {{[-V|--version]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/su.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/su.md"
+    },
+    {
+      "id": "tldr--ef232bce6755",
+      "canonicalPath": "common/[[.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "[[",
+      "title": "[[",
+      "summary": "Controleer bestandstypen en vergelijk waarden. Retourneert een status van 0 als de voorwaarde resulteert in waar, 1 als deze resulteert in onwaar.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Test of een gegeven variabele gelijk is aan de opgegeven string:",
+          "command": "[[ ${{variabele}} == \"{{string}}\" ]]",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%5B%5B.md#L9"
+        },
+        {
+          "description": "Test of een gegeven string voldoet aan de opgegeven `regex`:",
+          "command": "[[ ${{variabele}} =~ {{patroon}} ]]",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%5B%5B.md#L13"
+        },
+        {
+          "description": "Test of een bepaalde variabele gelijk/niet gelijk/groter dan/kleiner dan/groter dan of gelijk/kleiner dan of gelijk aan het opgegeven getal is:",
+          "command": "[[ ${{variabele}} -{{eq|ne|gt|lt|ge|le}} {{geheel_getal}} ]]",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%5B%5B.md#L17"
+        },
+        {
+          "description": "Test of de opgegeven variabele een [n]iet-lege waarde heeft:",
+          "command": "[[ -n ${{variabele}} ]]",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%5B%5B.md#L21"
+        },
+        {
+          "description": "Test of de opgegeven variabele een lege ([z]) waarde heeft:",
+          "command": "[[ -z ${{variabele}} ]]",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%5B%5B.md#L25"
+        },
+        {
+          "description": "Test of het opgegeven bestand ([f]) bestaat:",
+          "command": "[[ -f {{pad/naar/bestand}} ]]",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%5B%5B.md#L29"
+        },
+        {
+          "description": "Test of de opgegeven map ([d]) bestaat:",
+          "command": "[[ -d {{pad/naar/map}} ]]",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%5B%5B.md#L33"
+        },
+        {
+          "description": "Test of het opgegeven bestand of de opgegeven map bestaat ([e]):",
+          "command": "[[ -e {{pad/naar/bestand_of_map}} ]]",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%5B%5B.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/%5B%5B.md"
+    },
+    {
+      "id": "tldr--f1166e44bc1b",
+      "canonicalPath": "common/sleep.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "sleep",
+      "title": "sleep",
+      "summary": "Wacht voor een gespecificeerde hoeveelheid tijd.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "rktools2k3--c5a81681",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Wacht in seconden:",
+          "command": "sleep {{seconden}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sleep.md#L8"
+        },
+        {
+          "description": "Voer een specifiek commando uit na een wachttijd van 20 seconden:",
+          "command": "sleep 20 && {{commando}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sleep.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sleep.md"
+    },
+    {
+      "id": "tldr--f92b5f1a4ebf",
+      "canonicalPath": "common/pr.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pr",
+      "title": "pr",
+      "summary": "Pagineer of kolomeer bestanden voor afdrukken.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Toon meerdere bestanden met een standaardkop- en voettekst:",
+          "command": "pr {{pad/naar/bestand1 pad/naar/bestand2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pr.md#L8"
+        },
+        {
+          "description": "Toon met een aangepaste gecentreerde koptekst:",
+          "command": "pr {{[-h|--header]}} \"{{koptekst}}\" {{pad/naar/bestand1 pad/naar/bestand2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pr.md#L12"
+        },
+        {
+          "description": "Toon met genummerde regels en een aangepast datumnotatieformaat:",
+          "command": "pr {{[-n|--number-lines]}} {{[-D|--date-format]}} \"{{formaat}}\" {{pad/naar/bestand1 pad/naar/bestand2 ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pr.md#L16"
+        },
+        {
+          "description": "Toon alle bestanden samen, één in elke kolom, zonder kop- of voettekst:",
+          "command": "pr {{[-m|--merge]}} {{[-T|--omit-pagination]}} {{pad/naar/bestand1 pad/naar/bestand2 ...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pr.md#L20"
+        },
+        {
+          "description": "Toon, beginnend bij pagina 2 en tot en met pagina 5, met een gegeven paginalengte (inclusief kop- en voettekst):",
+          "command": "pr +2:5 {{[-l|--length]}} {{paginalengte}} {{pad/naar/bestand1 pad/naar/bestand2 ...}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pr.md#L24"
+        },
+        {
+          "description": "Toon met een offset voor elke regel en een afkappende aangepaste paginabreedte:",
+          "command": "pr {{[-o|--indent]}} {{offset}} {{[-W|--page_width]}} {{breedte}} {{pad/naar/bestand1 pad/naar/bestand2 ...}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pr.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pr.md"
+    },
+    {
+      "id": "tldr--fc73dc4d077c",
+      "canonicalPath": "linux/pct-move_volume.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pct",
+      "title": "pct move_volume",
+      "summary": "Dit commando is een alias van `pct move-volume`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr pct move-volume",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/pct-move_volume.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/pct-move_volume.md"
+    },
+    {
+      "id": "tldr--ff680fe31e3a",
+      "canonicalPath": "common/vim.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "vim",
+      "title": "vim",
+      "summary": "Vim (Vi IMproved), een command-line tekst bewerker, geeft toegang tot verschillende manieren van tekst manipulatie. Drukken op `<i>` begint invoegmodus. `<Esc>` begint normale modus, wat toegang geeft tot de Vim commando's. Zie ook: `vimdiff`, `vimtutor`, `nvim`, `gvim`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "vim--9266ef09",
+        "vim-nightly--339fc25c",
+        "vim-tux--8f39cf5c"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Open een bestand:",
+          "command": "vim {{pad/naar/bestand}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/vim.md#L10"
+        },
+        {
+          "description": "Open een bestand bij een bepaald regelnummer:",
+          "command": "vim +{{regelnummer}} {{pad/naar/bestand}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/vim.md#L14"
+        },
+        {
+          "description": "Bekijk de handleiding van Vim:",
+          "command": "<:>help<Enter>",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/vim.md#L18"
+        },
+        {
+          "description": "Opslaan en afsluiten:",
+          "command": "{{<Esc><Z><Z>|<Esc><:>x<Enter>|<Esc><:>wq<Enter>}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/vim.md#L22"
+        },
+        {
+          "description": "Terug naar normale modues en maak de laatste verandering ongedaan:",
+          "command": "<Esc><u>",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/vim.md#L26"
+        },
+        {
+          "description": "Zoek een patroon in het bestand (druk op `<n>`/`<N>` om naar de volgende/vorige overeenkomst te gaan):",
+          "command": "</>{{zoek_patroon}}<Enter>",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/vim.md#L30"
+        },
+        {
+          "description": "Voer een reguliere expressie substitutie uit in het hele bestand:",
+          "command": "<:>%s/{{reguliere_expressie}}/{{vervanging}}/g<Enter>",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/vim.md#L34"
+        },
+        {
+          "description": "Geef de regelnummers weer:",
+          "command": "<:>set nu<Enter>",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/vim.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/vim.md"
+    }
+  ]
+}

@@ -1,0 +1,732 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "bn",
+  "sourceLocale": "bn",
+  "shard": "9",
+  "items": [
+    {
+      "id": "tldr--05b2bfff85f3",
+      "canonicalPath": "common/git-whatchanged.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "git",
+      "title": "git whatchanged",
+      "summary": "এই কমান্ডটি `git log --raw --no-merges` এর একটি উপনাম (প্রতিটি কমিটের জন্য raw diffs সহ লগ)। নোট: এই কমান্ডটি deprecated এবং ভবিষ্যতে সরানো হবে।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr git log",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-whatchanged.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-whatchanged.md"
+    },
+    {
+      "id": "tldr--23b1aa76ee00",
+      "canonicalPath": "common/clang++.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "clang++",
+      "title": "clang++",
+      "summary": "C++ সোর্স ফাইল কম্পাইল করে। LLVM-এর অংশ।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "একটি সেট সোর্স কোড ফাইল একটি এক্সিকিউটেবল বাইনারিতে কম্পাইল করুন:",
+          "command": "clang++ {{সোর্স১/এর/পাথ.cpp সোর্স২/এর/পাথ.cpp ...}} {{[-o|--output]}} {{আউটপুট_এক্সিকিউটেবল/এর/পাথ}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/clang%2B%2B.md#L9"
+        },
+        {
+          "description": "সকল ত্রুটি ও সতর্কবার্তার আউটপুট সক্রিয় করুন:",
+          "command": "clang++ {{সোর্স/এর/পাথ.cpp}} -Wall {{[-o|--output]}} {{আউটপুট_এক্সিকিউটেবল}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/clang%2B%2B.md#L13"
+        },
+        {
+          "description": "সাধারণ সতর্কবার্তা দেখুন, আউটপুটে ডিবাগ চিহ্ন যোগ করুন এবং ডিবাগিং প্রভাবিত না করে অপ্টিমাইজ করুন:",
+          "command": "clang++ {{সোর্স/এর/পাথ.cpp}} -Wall {{[-g|--debug]}} -Og {{[-o|--output]}} {{আউটপুট_এক্সিকিউটেবল/এর/পাথ}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/clang%2B%2B.md#L17"
+        },
+        {
+          "description": "কম্পাইল করার জন্য একটি ল্যাঙ্গুয়েজ স্ট্যান্ডার্ড নির্বাচন করুন:",
+          "command": "clang++ {{সোর্স/এর/পাথ.cpp}} -std={{c++20}} {{[-o|--output]}} {{আউটপুট_এক্সিকিউটেবল/এর/পাথ}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/clang%2B%2B.md#L21"
+        },
+        {
+          "description": "সোর্স ফাইলের চেয়ে ভিন্ন পাথে থাকা, লাইব্রেরি অন্তর্ভুক্ত করুন:",
+          "command": "clang++ {{সোর্স/এর/পাথ.cpp}} {{[-o|--output]}} {{আউটপুট_এক্সিকিউটেবল/এর/পাথ}} -I{{হেডার_পাথ/এর/পাথ}} -L{{লাইব্রেরি_পাথ/এর/পাথ}} -l{{লাইব্রেরি_নাম/এর/পাথ}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/clang%2B%2B.md#L25"
+        },
+        {
+          "description": "সোর্স কোড LLVM Intermediate Representation (IR)-এ কম্পাইল করুন:",
+          "command": "clang++ {{[-S|--assemble]}} -emit-llvm {{সোর্স/এর/পাথ.cpp}} {{[-o|--output]}} {{আউটপুট/এর/পাথ.ll}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/clang%2B%2B.md#L29"
+        },
+        {
+          "description": "পারফরম্যান্সের জন্য কম্পাইলকৃত প্রোগ্রাম অপ্টিমাইজ করুন:",
+          "command": "clang++ {{সোর্স/এর/পাথ.cpp}} -O{{1|2|3|fast}} {{[-o|--output]}} {{আউটপুট_এক্সিকিউটেবল/এর/পাথ}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/clang%2B%2B.md#L33"
+        },
+        {
+          "description": "সংস্করণ (version) প্রদর্শন করুন:",
+          "command": "clang++ --version",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/clang%2B%2B.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/clang%2B%2B.md"
+    },
+    {
+      "id": "tldr--2e08d822adcf",
+      "canonicalPath": "common/git-continue.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "git",
+      "title": "git continue",
+      "summary": "এই কমান্ডটি `git abort` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr git abort",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-continue.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-continue.md"
+    },
+    {
+      "id": "tldr--411475af713b",
+      "canonicalPath": "common/lzegrep.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "lzegrep",
+      "title": "lzegrep",
+      "summary": "এই কমান্ডটি `xzgrep --extended-regexp` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/lzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/lzegrep.md"
+    },
+    {
+      "id": "tldr--497fec0a60c9",
+      "canonicalPath": "common/impacket-getst.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "impacket-getST",
+      "title": "impacket-getST",
+      "summary": "এই কমান্ডটি `getST.py` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr getST.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/impacket-getst.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/impacket-getst.md"
+    },
+    {
+      "id": "tldr--4d289aee08fc",
+      "canonicalPath": "common/unxz.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "unxz",
+      "title": "unxz",
+      "summary": "এই কমান্ডটি `xz --decompress` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr xz",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/unxz.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/unxz.md"
+    },
+    {
+      "id": "tldr--5f587af12926",
+      "canonicalPath": "linux/pw-record.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "pw-record",
+      "title": "pw-record",
+      "summary": "এই কমান্ডটি `pw-cat --record` - এর একটি উপনাম।",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/pw-record.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/pw-record.md"
+    },
+    {
+      "id": "tldr--6d4afd4c6408",
+      "canonicalPath": "common/((.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "((",
+      "title": "((",
+      "summary": "এই কমান্ডটি `let` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr let",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/((.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/((.md"
+    },
+    {
+      "id": "tldr--807c1b03ce59",
+      "canonicalPath": "common/rehash.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "rehash",
+      "title": "rehash",
+      "summary": "এই কমান্ডটি `hash -r` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr hash",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/rehash.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/rehash.md"
+    },
+    {
+      "id": "tldr--8a0a9eb68d60",
+      "canonicalPath": "windows/chrome.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "chrome",
+      "title": "chrome",
+      "summary": "এই কমান্ডটি `chromium` - এর একটি উপনাম।",
+      "platform": "windows",
+      "softwareIds": [
+        "googlechrome--90e5e298"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr chromium",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/chrome.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/chrome.md"
+    },
+    {
+      "id": "tldr--8bc97416a339",
+      "canonicalPath": "common/huggingface-cli.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "huggingface-cli",
+      "title": "huggingface-cli",
+      "summary": "এই কমান্ডটি `hf` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr hf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/huggingface-cli.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/huggingface-cli.md"
+    },
+    {
+      "id": "tldr--91b0c6209d1c",
+      "canonicalPath": "common/impacket-rpcdump.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "impacket-rpcdump",
+      "title": "impacket-rpcdump",
+      "summary": "এই কমান্ডটি `rpcdump.py` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr rpcdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/impacket-rpcdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/impacket-rpcdump.md"
+    },
+    {
+      "id": "tldr--96ed40d47e12",
+      "canonicalPath": "windows/mkdir.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "mkdir",
+      "title": "mkdir",
+      "summary": "একটি নির্দেশিকা তৈরি করে।",
+      "platform": "windows",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "একটি নির্দেশিকা তৈরি করুন:",
+          "command": "mkdir {{নির্দেশিকা\\এর\\পথ}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/mkdir.md#L8"
+        },
+        {
+          "description": "পুনরাবৃত্তি হিসেবে একটি নেস্টেড নির্দেশিকা ট্রি তৈরি করুন:",
+          "command": "mkdir {{উপনির্দেশিকা\\এর\\পথ}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/mkdir.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/mkdir.md"
+    },
+    {
+      "id": "tldr--9e4bf094fa26",
+      "canonicalPath": "common/hping.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "hping",
+      "title": "hping",
+      "summary": "এই কমান্ডটি `hping3` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr hping3",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/hping.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/hping.md"
+    },
+    {
+      "id": "tldr--a2e697f1fd03",
+      "canonicalPath": "common/impacket-psexec.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "impacket-psexec",
+      "title": "impacket-psexec",
+      "summary": "এই কমান্ডটি `psexec.py` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr psexec.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/impacket-psexec.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/impacket-psexec.md"
+    },
+    {
+      "id": "tldr--a57a6d44fd2a",
+      "canonicalPath": "linux/nmtui-connect.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "nmtui-connect",
+      "title": "nmtui-connect",
+      "summary": "এই কমান্ডটি `nmtui connect` - এর একটি উপনাম।",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/nmtui-connect.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/nmtui-connect.md"
+    },
+    {
+      "id": "tldr--a618d302e8ef",
+      "canonicalPath": "common/llvm-gcc.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "llvm-gcc",
+      "title": "llvm-gcc",
+      "summary": "এই কমান্ডটি `clang` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr clang",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/llvm-gcc.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/llvm-gcc.md"
+    },
+    {
+      "id": "tldr--add80c6cf4c0",
+      "canonicalPath": "common/git-cherry-pick.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "git",
+      "title": "git cherry-pick",
+      "summary": "বিদ্যমান কমিট দ্বারা প্রবর্তিত পরিবর্তনগুলি বর্তমান ব্র্যাঞ্চে প্রয়োগ করুন। অন্য ব্র্যাঞ্চে পরিবর্তনগুলি প্রয়োগ করতে, প্রথমে পছন্দসই ব্র্যাঞ্চে স্যুইচ করতে `git checkout` ব্যবহার করুন।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "বর্তমান ব্র্যাঞ্চে কমিট করুন:",
+          "command": "git cherry-pick {{কমিট}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-cherry-pick.md#L9"
+        },
+        {
+          "description": "বর্তমান ব্র্যাঞ্চে বিভিন্ন ধরনের কমিট করুন (এছাড়াও দেখুন `git rebase --onto`):",
+          "command": "git cherry-pick {{শুরুর_কমিট}}~..{{শেষের_কমিট}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-cherry-pick.md#L13"
+        },
+        {
+          "description": "বর্তমান ব্র্যাঞ্চে  একাধিক (অ-ক্রমিক) কমিট  করুন:",
+          "command": "git cherry-pick {{কমিট_১ কমিট_২ ...}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-cherry-pick.md#L17"
+        },
+        {
+          "description": "কমিট তৈরি না করেই ওয়ার্কিং ডিরেক্টরিতে কমিটের পরিবর্তন যোগ করুন:",
+          "command": "git cherry-pick {{[-n|--no-commit]}} {{কমিট}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-cherry-pick.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-cherry-pick.md"
+    },
+    {
+      "id": "tldr--b05b4bc2d4f1",
+      "canonicalPath": "android/pm.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "pm",
+      "title": "pm",
+      "summary": "অ্যান্ড্রয়েড ডিভাইসে থাকা অ্যাপগুলো সম্পর্কে তথ্য দেখুন।",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "ইনস্টল করা সমস্ত অ্যাপের তালিকা দেখুন:",
+          "command": "pm list packages",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/android/pm.md#L8"
+        },
+        {
+          "description": "ইনস্টল করা সমস্ত সিস্টেম অ্যাপের তালিকা দেখুন:",
+          "command": "pm list packages -s",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/android/pm.md#L12"
+        },
+        {
+          "description": "ইনস্টল করা সমস্ত থার্ড-পার্টি অ্যাপের তালিকা দেখুন:",
+          "command": "pm list packages -3",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/android/pm.md#L16"
+        },
+        {
+          "description": "নির্দিষ্ট কীওয়ার্ডের সাথে মিল থাকা অ্যাপগুলোর তালিকা দেখুন:",
+          "command": "pm list packages {{কীওয়ার্ড১ কীওয়ার্ড২...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/android/pm.md#L20"
+        },
+        {
+          "description": "নির্দিষ্ট কোনো অ্যাপের APK ফাইলের পাথ দেখুন:",
+          "command": "pm path {{অ্যাপ}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/android/pm.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/android/pm.md"
+    },
+    {
+      "id": "tldr--b6a7a8e35235",
+      "canonicalPath": "windows/rename-item.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "Rename-Item",
+      "title": "Rename-Item",
+      "summary": "একটি আইটেমের নাম পরিবর্তন করার জন্য PowerShell কমান্ড। নোট: `ren` এবং `rni` উভয়ই `Rename-Item`-এর উপনাম হিসেবে ব্যবহার করা যেতে পারে।",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "একটি ফাইলের নাম পরিবর্তন করুন:",
+          "command": "Rename-Item -Path \"{{ফাইলের_পাথ}}\" -NewName \"{{নতুন_ফাইলের_নাম}}\"",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/rename-item.md#L9"
+        },
+        {
+          "description": "একটি ডিরেক্টরির নাম পরিবর্তন করুন:",
+          "command": "Rename-Item -Path \"{{ডিরেক্টরির_পাথ}}\" -NewName \"{{নতুন_ডিরেক্টরির_নাম}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/rename-item.md#L13"
+        },
+        {
+          "description": "একটি ফাইলের নাম বদলে অন্য স্থানে রাখুন:",
+          "command": "Rename-Item -Path \"{{ফাইলের_পাথ}}\" -NewName \"{{নতুন_ফাইলের_পাথ}}\"",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/rename-item.md#L17"
+        },
+        {
+          "description": "একটি ফাইলের নাম জোর করে পরিবর্তন করুন:",
+          "command": "Rename-Item -Path \"{{ফাইলের_পাথ}}\" -NewName \"{{নতুন_ফাইলের_নাম}}\" -Force",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/rename-item.md#L21"
+        },
+        {
+          "description": "একটি ফাইলের নাম পরিবর্তনের আগে নিশ্চিতকরণ চাওয়ার জন্য অনুরোধ করুন:",
+          "command": "Rename-Item -Path \"{{ফাইলের_পাথ}}\" -NewName \"{{নতুন_ফাইলের_নাম}}\" {{[-Confirm|-cf]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/rename-item.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/rename-item.md"
+    },
+    {
+      "id": "tldr--bca92a75fabb",
+      "canonicalPath": "common/git-stage.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "git",
+      "title": "git stage",
+      "summary": "এই কমান্ডটি `git add` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr git add",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-stage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/git-stage.md"
+    },
+    {
+      "id": "tldr--caff5147878b",
+      "canonicalPath": "osx/aa.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "aa",
+      "title": "aa",
+      "summary": "এই কমান্ডটি `yaa` - এর একটি উপনাম।",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr yaa",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/osx/aa.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/osx/aa.md"
+    },
+    {
+      "id": "tldr--ddca73d046bf",
+      "canonicalPath": "common/getln.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "getln",
+      "title": "getln",
+      "summary": "এই কমান্ডটি `read -zr` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr read",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/getln.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/getln.md"
+    },
+    {
+      "id": "tldr--e77a5e04b7b0",
+      "canonicalPath": "common/librewolf.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "librewolf",
+      "title": "librewolf",
+      "summary": "এই কমান্ডটি `firefox` এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "librewolf--271e1a3d"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr firefox",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/librewolf.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/librewolf.md"
+    },
+    {
+      "id": "tldr--ebce857fe663",
+      "canonicalPath": "common/impacket-secretsdump.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "impacket-secretsdump",
+      "title": "impacket-secretsdump",
+      "summary": "এই কমান্ডটি `secretsdump.py` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr secretsdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/impacket-secretsdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/impacket-secretsdump.md"
+    },
+    {
+      "id": "tldr--f91e0b338118",
+      "canonicalPath": "osx/gbasename.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "gbasename",
+      "title": "gbasename",
+      "summary": "এই কমান্ডটি GNU `basename` - এর একটি উপনাম।",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr basename",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/osx/gbasename.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/osx/gbasename.md"
+    }
+  ]
+}

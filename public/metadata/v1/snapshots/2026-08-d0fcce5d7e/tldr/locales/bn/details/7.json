@@ -1,0 +1,736 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "bn",
+  "sourceLocale": "bn",
+  "shard": "7",
+  "items": [
+    {
+      "id": "tldr--0229e0b0f9ac",
+      "canonicalPath": "windows/scoop.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "scoop",
+      "title": "scoop",
+      "summary": "Scoop প্যাকেজ ম্যানেজার। কিছু সাবকমান্ড (যেমন `bucket`)–এর নিজস্ব ব্যবহারসংক্রান্ত ডকুমেন্টেশন রয়েছে।",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "একটি প্যাকেজ ইনস্টল করুন:",
+          "command": "scoop install {{প্যাকেজ}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/scoop.md#L9"
+        },
+        {
+          "description": "একটি প্যাকেজ সরিয়ে ফেলুন:",
+          "command": "scoop uninstall {{প্যাকেজ}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/scoop.md#L13"
+        },
+        {
+          "description": "ইনস্টল করা সব প্যাকেজ আপডেট করুন:",
+          "command": "scoop update --all",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/scoop.md#L17"
+        },
+        {
+          "description": "ইনস্টল করা সব প্যাকেজের তালিকা দেখান:",
+          "command": "scoop list",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/scoop.md#L21"
+        },
+        {
+          "description": "নির্দিষ্ট একটি প্যাকেজ সম্পর্কে তথ্য দেখান:",
+          "command": "scoop info {{প্যাকেজ}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/scoop.md#L25"
+        },
+        {
+          "description": "একটি প্যাকেজ অনুসন্ধান করুন:",
+          "command": "scoop search {{প্যাকেজ}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/scoop.md#L29"
+        },
+        {
+          "description": "সব প্যাকেজের পুরোনো ভার্সন সরিয়ে ফেলুন এবং ডাউনলোড ক্যাশ পরিষ্কার করুন:",
+          "command": "scoop cleanup --cache --all",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/scoop.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/scoop.md"
+    },
+    {
+      "id": "tldr--165c2c8fcac1",
+      "canonicalPath": "common/acme.sh.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "acme.sh",
+      "title": "acme.sh",
+      "summary": "এটি একটি শেল স্ক্রিপ্ট, যা ACME ক্লায়েন্ট প্রোটোকল বাস্তবায়ন করে, এটি `certbot`-এর একটি বিকল্প। আরও দেখুন: `acme.sh dns`।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "acme-sh--cd6f6523"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "webroot মোড ব্যবহার করে একটি সার্টিফিকেট ইস্যু করুন:",
+          "command": "acme.sh --issue {{[-d|--domain]}} {{example.com}} {{[-w|--webroot]}} /{{webroot/এর/পাথ}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh.md#L9"
+        },
+        {
+          "description": "পোর্ট ৮০ ব্যবহার করে standalone মোডে একাধিক ডোমেইনের জন্য একটি সার্টিফিকেট ইস্যু করুন:",
+          "command": "acme.sh --issue --standalone {{[-d|--domain]}} {{example.com}} {{[-d|--domain]}} {{www.example.com}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh.md#L13"
+        },
+        {
+          "description": "পোর্ট ৪৪৩ ব্যবহার করে standalone TLS মোডে একটি সার্টিফিকেট ইস্যু করুন:",
+          "command": "acme.sh --issue --alpn {{[-d|--domain]}} {{example.com}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh.md#L17"
+        },
+        {
+          "description": "কার্যকর (working) `nginx` কনফিগারেশন ব্যবহার করে একটি সার্টিফিকেট ইস্যু করুন:",
+          "command": "acme.sh --issue --nginx {{[-d|--domain]}} {{example.com}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh.md#L21"
+        },
+        {
+          "description": "কার্যকর (working) Apache কনফিগারেশন ব্যবহার করে একটি সার্টিফিকেট ইস্যু করুন:",
+          "command": "acme.sh --issue --apache {{[-d|--domain]}} {{example.com}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh.md#L25"
+        },
+        {
+          "description": "স্বয়ংক্রিয় DNS API মোড ব্যবহার করে একটি ওয়াইল্ডকার্ড (`*`) সার্টিফিকেট ইস্যু করুন:",
+          "command": "acme.sh --issue --dns {{dns_cf}} {{[-d|--domain]}} {{*.example.com}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh.md#L29"
+        },
+        {
+          "description": "নির্দিষ্ট লোকেশনে সার্টিফিকেট ফাইল ইনস্টল করুন (স্বয়ংক্রিয় সার্টিফিকেট নবায়নের জন্য উপকারী):",
+          "command": "acme.sh {{[-i|--install-cert]}} {{[-d|--domain]}} {{example.com}} --key-file /{{example.com.key/এর/পাথ}} --fullchain-file /{{example.com.cer/এর/পাথ}} --reloadcmd \"{{systemctl force-reload nginx}}\"",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh.md"
+    },
+    {
+      "id": "tldr--2f1312eed31a",
+      "canonicalPath": "linux/aa-enforce.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "aa-enforce",
+      "title": "aa-enforce",
+      "summary": "কোনো অ্যাপআর্মর (AppArmor) প্রোফাইলকে এনফোর্স (enforce) মোডে সেট করার জন্য ব্যবহৃত হয়। আরও দেখুন: `aa-complain`, `aa-disable`, `aa-status`।",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "নির্দিষ্ট প্রোফাইলকে এনফোর্স (enforce) মোডে চালু করতে:",
+          "command": "sudo aa-enforce {{[-d|--dir]}} {{প্রোফাইল/এর/পাথ}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/aa-enforce.md#L9"
+        },
+        {
+          "description": "একাধিক প্রোফাইল এনফোর্স (enforce) মোডে চালু করতে:",
+          "command": "sudo aa-enforce {{প্রোফাইল/এর/পাথ1 প্রোফাইল/এর/পাথ2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/aa-enforce.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/aa-enforce.md"
+    },
+    {
+      "id": "tldr--37a89bee79ba",
+      "canonicalPath": "common/ntl.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "ntl",
+      "title": "ntl",
+      "summary": "এই কমান্ডটি `netlify` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "ntl--00eeea3a"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr netlify",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/ntl.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/ntl.md"
+    },
+    {
+      "id": "tldr--3a428127aecc",
+      "canonicalPath": "common/mscore.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "mscore",
+      "title": "mscore",
+      "summary": "এই কমান্ডটি `musescore` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "musescore--76959afa",
+        "musescore-nightly--ca3b0527",
+        "musescore3-nightly--ca3b0527"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr musescore",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/mscore.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/mscore.md"
+    },
+    {
+      "id": "tldr--45a0b253e7c9",
+      "canonicalPath": "linux/linux64.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "linux64",
+      "title": "linux64",
+      "summary": "এই কমান্ডটি `setarch linux64` - এর একটি উপনাম।",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr setarch",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/linux64.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/linux64.md"
+    },
+    {
+      "id": "tldr--528748c247c7",
+      "canonicalPath": "linux/dnf5.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "dnf5",
+      "title": "dnf5",
+      "summary": "এই কমান্ডটি `dnf` - এর একটি উপনাম।",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr dnf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/dnf5.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/dnf5.md"
+    },
+    {
+      "id": "tldr--57102f1cfbb7",
+      "canonicalPath": "common/trash-cli.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "trash-cli",
+      "title": "trash-cli",
+      "summary": "এই কমান্ডটি `trash` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "trash-cli--2858ced0"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr trash",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/trash-cli.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/trash-cli.md"
+    },
+    {
+      "id": "tldr--57b640551144",
+      "canonicalPath": "linux/nmtui-edit.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "nmtui-edit",
+      "title": "nmtui-edit",
+      "summary": "এই কমান্ডটি `nmtui edit` - এর একটি উপনাম।",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/nmtui-edit.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/nmtui-edit.md"
+    },
+    {
+      "id": "tldr--5d9a4ffaead6",
+      "canonicalPath": "windows/wsl-open.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "wsl-open",
+      "title": "wsl-open",
+      "summary": "Windows Subsystem for Linux এর মধ্যে থেকে ব্যবহারকারীর ডিফল্ট Windows GUI অ্যাপ্লিকেশনটিতে একটি ফাইল বা ইউআরএল খুলুন।",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "বর্তমান ডিরেক্টরিটি উইন্ডোজ এক্সপ্লোরারে খুলুন:",
+          "command": "wsl-open .",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/wsl-open.md#L8"
+        },
+        {
+          "description": "উইন্ডোজে ব্যবহারকারীর ডিফল্ট ওয়েব ব্রাউজারে একটি URL খুলুন:",
+          "command": "wsl-open {{https://example.com}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/wsl-open.md#L12"
+        },
+        {
+          "description": "উইন্ডোজে ব্যবহারকারীর ডিফল্ট অ্যাপ্লিকেশনটিতে একটি নির্দিষ্ট ফাইল খুলুন:",
+          "command": "wsl-open {{ফাইল/এর/পাথ}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/wsl-open.md#L16"
+        },
+        {
+          "description": "`wsl-open` কে shell এর ওয়েব ব্রাউজার হিসাবে সেট করুন (লিঙ্কগুলি `wsl-open` দিয়ে খুলুন):",
+          "command": "wsl-open -w",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/wsl-open.md#L20"
+        },
+        {
+          "description": "সাহায্য প্রদর্শন করুন:",
+          "command": "wsl-open -h",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/wsl-open.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/wsl-open.md"
+    },
+    {
+      "id": "tldr--72b8033d4908",
+      "canonicalPath": "linux/aa-genprof.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "aa-genprof",
+      "title": "aa-genprof",
+      "summary": "প্রোগ্রামের আচরণ পর্যবেক্ষণ করে অ্যাপআর্মর (AppArmor) নিরাপত্তা প্রোফাইল তৈরি করুন।",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "কোনো প্রোগ্রামের জন্য প্রোফাইল জেনারেট করুন:",
+          "command": "sudo aa-genprof {{প্রোগ্রামের_পাথ}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/aa-genprof.md#L8"
+        },
+        {
+          "description": "নির্দিষ্ট একটি ডিরেক্টরিতে প্রোফাইল সংরক্ষণ করুন:",
+          "command": "sudo aa-genprof {{[-d|--dir]}} /{{প্রোফাইলসমূহ/এর/পাথ}} {{প্রোগ্রামের_পাথ}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/aa-genprof.md#L12"
+        },
+        {
+          "description": "প্রোফাইলিংয়ের জন্য কাস্টম লগফাইল নির্ধারণ করুন:",
+          "command": "sudo aa-genprof {{[-f|--file]}} /{{লগফাইল/এর/পাথ}} {{প্রোগ্রামের_পাথ}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/aa-genprof.md#L16"
+        },
+        {
+          "description": "সাহায্য মেনু দেখুন:",
+          "command": "aa-genprof {{[-h|--help]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/aa-genprof.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/aa-genprof.md"
+    },
+    {
+      "id": "tldr--73753442330a",
+      "canonicalPath": "linux/ip6tables.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "ip6tables",
+      "title": "ip6tables",
+      "summary": "এই কমান্ডটি IPv6 ফায়ারওয়ালের জন্য `iptables` - এর একটি উপনাম।",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr iptables",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/ip6tables.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/ip6tables.md"
+    },
+    {
+      "id": "tldr--7a825c9a1b47",
+      "canonicalPath": "common/npx.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "npx",
+      "title": "npx",
+      "summary": "এই কমান্ডটি `npm exec` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr npm exec",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/npx.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/npx.md"
+    },
+    {
+      "id": "tldr--7d372e8faead",
+      "canonicalPath": "common/acme.sh-dns.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "acme.sh",
+      "title": "acme.sh --dns",
+      "summary": "TLS সার্টিফিকেট ইস্যু করার জন্য DNS-01 চ্যালেঞ্জ ব্যবহার করুন।",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "acme-sh--cd6f6523"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "স্বয়ংক্রিয় DNS API মোড ব্যবহার করে একটি সার্টিফিকেট ইস্যু করুন:",
+          "command": "acme.sh --issue --dns {{dns_gd}} --domain {{example.com}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh-dns.md#L8"
+        },
+        {
+          "description": "স্বয়ংক্রিয় DNS API মোড ব্যবহার করে একটি উইল্ডকার্ড সার্টিফিকেট (যা একটি পূর্বনির্দেশিত চিহ্ন (*) দ্বারা চিহ্নিত) ইস্যু করুন:",
+          "command": "acme.sh --issue --dns {{dns_namesilo}} --domain {{example.com}} --domain {{*.example.com}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh-dns.md#L12"
+        },
+        {
+          "description": "DNS অ্যালিয়াস মোড ব্যবহার করে একটি সার্টিফিকেট ইস্যু করুন:",
+          "command": "acme.sh --issue --dns {{dns_cf}} --domain {{example.com}} --challenge-alias {{alias-for-example-validation.com}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh-dns.md#L16"
+        },
+        {
+          "description": "DNS রেকর্ড যোগ করার পর স্বয়ংক্রিয় Cloudflare/Google DNS পোলিং বন্ধ করে একটি সার্টিফিকেট ইস্যু করুন, সেকেন্ডে নির্দিষ্ট কাস্টম প্রতীক্ষার সময় স্পেসিফাই করে:",
+          "command": "acme.sh --issue --dns {{dns_namecheap}} --domain {{example.com}} --dnssleep {{300}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh-dns.md#L20"
+        },
+        {
+          "description": "ম্যানুয়াল DNS মোড ব্যবহার করে একটি সার্টিফিকেট ইস্যু করুন:",
+          "command": "acme.sh --issue --dns --domain {{example.com}} --yes-I-know-dns-manual-mode-enough-go-ahead-please",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh-dns.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/acme.sh-dns.md"
+    },
+    {
+      "id": "tldr--958c93fa0fd4",
+      "canonicalPath": "common/aapt.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "aapt",
+      "title": "aapt",
+      "summary": "Android Asset Packaging Tool: একটি Android অ্যাপের রিসোর্স কম্পাইল এবং প্যাকেজ করার জন্য ব্যবহৃত হয়।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "একটি APK আর্কাইভের ভেতরে থাকা ফাইলগুলোর তালিকা দেখান:",
+          "command": "aapt list {{app/এর/পাথ}}.apk",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/aapt.md#L8"
+        },
+        {
+          "description": "একটি অ্যাপের মেটাডেটা (ভার্সন, পারমিশন ইত্যাদি) দেখান:",
+          "command": "aapt dump badging {{app/এর/পাথ}}.apk",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/aapt.md#L12"
+        },
+        {
+          "description": "নির্দিষ্ট ডিরেক্টরি থেকে ফাইল ব্যবহার করে একটি নতুন APK আর্কাইভ তৈরি করুন:",
+          "command": "aapt package -F {{app/এর/পাথ}}.apk {{ডিরেক্টরি/এর/পাথ}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/aapt.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/aapt.md"
+    },
+    {
+      "id": "tldr--ac3a856da84c",
+      "canonicalPath": "common/argospm.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "argospm",
+      "title": "argospm",
+      "summary": "এই কমান্ডটি `argos-translate` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr argos-translate",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/argospm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/argospm.md"
+    },
+    {
+      "id": "tldr--b916b3287fab",
+      "canonicalPath": "common/jco.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "jco",
+      "title": "jco",
+      "summary": "এই কমান্ডটি `autojump` - এর একটি উপনাম।",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr autojump",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/jco.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/common/jco.md"
+    },
+    {
+      "id": "tldr--edcd33fa5bb6",
+      "canonicalPath": "linux/systemd-umount.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "systemd-umount",
+      "title": "systemd-umount",
+      "summary": "এই কমান্ডটি `systemd-mount --umount` - এর একটি উপনাম।",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "মূল কমান্ডের ডকুমেন্টেশন দেখুন:",
+          "command": "tldr systemd-mount",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/systemd-umount.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/systemd-umount.md"
+    },
+    {
+      "id": "tldr--f715bda68e84",
+      "canonicalPath": "windows/color.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "color",
+      "title": "color",
+      "summary": "কনসোল পূর্বপরক্ষ এবং পৃষ্ঠভূমির রঙ নির্ধারণ করুন।",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "কনসোল রঙগুলি ডিফল্ট মানে নির্ধারণ করুন:",
+          "command": "color",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/color.md#L8"
+        },
+        {
+          "description": "উপলব্ধ রঙের মান এবং বিস্তারিত তথ্য দেখুন:",
+          "command": "color /?",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/color.md#L12"
+        },
+        {
+          "description": "হেক্সাডেসিমাল নম্বর (`1-9,a-f`) ব্যবহার করে কনসোল পূর্বপরক্ষ এবং পৃষ্ঠভূমি নির্ধারণ করুন:",
+          "command": "color {{ফোরগ্রাউন্ড_কোড}}{{পটভূমি_কোড}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/color.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/windows/color.md"
+    },
+    {
+      "id": "tldr--f73ab5a1958b",
+      "canonicalPath": "linux/cat.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "cat",
+      "title": "cat",
+      "summary": "ফাইলের বিষয়বস্তু প্রিন্ট করা এবং একাধিক ফাইল একত্রিত করার জন্য ব্যবহৃত হয়। আরও দেখুন: `bat`।",
+      "platform": "linux",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "একটি ফাইলের বিষয়বস্তু `stdout`-এ দেখুন:",
+          "command": "cat {{ফাইল/এর/পাথ}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/cat.md#L9"
+        },
+        {
+          "description": "একাধিক ফাইল একত্রিত করে একটি আউটপুট ফাইলে লিখুন:",
+          "command": "cat {{ফাইল১/এর/পাথ ফাইল২/এর/পাথ ...}} > {{ফাইল/এর/পাথ}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/cat.md#L13"
+        },
+        {
+          "description": "একাধিক ফাইলের বিষয়বস্তু একটি বিদ্যমান আউটপুট ফাইলে যোগ করুন:",
+          "command": "cat {{ফাইল১/এর/পাথ ফাইল২/এর/পাথ ...}} >> {{ফাইল/এর/পাথ}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/cat.md#L17"
+        },
+        {
+          "description": "ইন্টারঅ্যাকটিভভাবে একটি ফাইলে লিখুন:",
+          "command": "cat > {{ফাইল/এর/পাথ}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/cat.md#L21"
+        },
+        {
+          "description": "সব আউটপুট লাইনে নম্বর যুক্ত করে দেখুন:",
+          "command": "cat {{[-n|--number]}} {{ফাইল/এর/পাথ}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/cat.md#L25"
+        },
+        {
+          "description": "ট্যাব, লাইন এন্ডিং এবং নন-প্রিন্টিং ক্যারেক্টারসহ সব ক্যারেক্টার দেখুন:",
+          "command": "cat {{[-A|--show-all]}} {{ফাইল/এর/পাথ}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/cat.md#L29"
+        },
+        {
+          "description": "`stdin` ব্যবহার করে ফাইলের বিষয়বস্তু অন্য একটি প্রোগ্রামে পাঠান:",
+          "command": "cat {{ফাইল/এর/পাথ}} | {{প্রোগ্রাম}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/cat.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/cat.md"
+    },
+    {
+      "id": "tldr--fba84959cb58",
+      "canonicalPath": "linux/flameshot.md",
+      "locale": "bn",
+      "sourceLocale": "bn",
+      "name": "flameshot",
+      "title": "flameshot",
+      "summary": "GUI সহ স্ক্রিনশট ইউটিলিটি। টেক্সট, শেইপ, কালার এবং imgur এর মতো বেসিক ইমেজ এডিটিং সাপোর্ট করে।",
+      "platform": "linux",
+      "softwareIds": [
+        "flameshot--acfa3861"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "সম্পূর্ণ স্ক্রিনের স্ক্রিনশট নিতে:",
+          "command": "flameshot full",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/flameshot.md#L9"
+        },
+        {
+          "description": "ইন্টারঅ্যাকটিভভাবে স্ক্রিনশট নিতে:",
+          "command": "flameshot gui",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/flameshot.md#L13"
+        },
+        {
+          "description": "নির্দিষ্ট পাথে স্ক্রিনশট সেভ করতে:",
+          "command": "flameshot gui {{[-p|--path]}} {{ডিরেক্টরি/এর/পাথ}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/flameshot.md#L17"
+        },
+        {
+          "description": "সরলীকৃত মোডে (simplified mode) ইন্টারঅ্যাকটিভভাবে স্ক্রিনশট নিতে:",
+          "command": "flameshot launcher",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/flameshot.md#L21"
+        },
+        {
+          "description": "নির্দিষ্ট মনিটর থেকে স্ক্রিনশট নিতে:",
+          "command": "flameshot screen {{[-n|--number]}} {{2}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/flameshot.md#L25"
+        },
+        {
+          "description": "স্ক্রিনশট নিয়ে `stdout`-এ প্রিন্ট করতে:",
+          "command": "flameshot gui {{[-r|--raw]}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/flameshot.md#L29"
+        },
+        {
+          "description": "স্ক্রিনশট নিয়ে ক্লিপবোর্ডে কপি করতে:",
+          "command": "flameshot gui {{[-c|--clipboard]}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/flameshot.md#L33"
+        },
+        {
+          "description": "নির্দিষ্ট বিলম্বসহ (মিলিসেকেন্ডে) স্ক্রিনশট নিতে:",
+          "command": "flameshot full {{[-d|--delay]}} {{5000}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/flameshot.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.bn/linux/flameshot.md"
+    }
+  ]
+}

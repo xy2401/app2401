@@ -1,0 +1,1256 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "pl",
+  "sourceLocale": "pl",
+  "shard": "c",
+  "items": [
+    {
+      "id": "tldr--025210dd0dc3",
+      "canonicalPath": "linux/apt-cache.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "apt-cache",
+      "title": "apt-cache",
+      "summary": "Narzędzie do zapytań o pakiety w Debianie i Ubuntu.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Wyszukaj pakiet w aktualnych źródłach:",
+          "command": "apt-cache search {{zapytanie}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/apt-cache.md#L8"
+        },
+        {
+          "description": "Wyświetl informacje o pakiecie:",
+          "command": "apt-cache show {{pakiet}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/apt-cache.md#L12"
+        },
+        {
+          "description": "Wyświetl, czy pakiet jest zainstalowany w aktualnej wersji:",
+          "command": "apt-cache policy {{pakiet}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/apt-cache.md#L16"
+        },
+        {
+          "description": "Wyświetl zależności pakietu:",
+          "command": "apt-cache depends {{pakiet}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/apt-cache.md#L20"
+        },
+        {
+          "description": "Wyświetl pakiety zależne od konkretnego pakietu:",
+          "command": "apt-cache rdepends {{pakiet}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/apt-cache.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/apt-cache.md"
+    },
+    {
+      "id": "tldr--110ad348cfc3",
+      "canonicalPath": "common/astronomer.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "astronomer",
+      "title": "astronomer",
+      "summary": "Wykrywaj fałszywe gwiazdki z kont botów w projektach GitHub.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Skanuj repozytorium:",
+          "command": "astronomer {{tldr-pages/tldr-node-client}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/astronomer.md#L8"
+        },
+        {
+          "description": "Skanuj maksymalną liczbę gwiazdek w repozytorium:",
+          "command": "astronomer {{tldr-pages/tldr-node-client}} {{[-s|--stars]}} {{50}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/astronomer.md#L12"
+        },
+        {
+          "description": "Skanuj repozytorium, w tym raporty porównawcze:",
+          "command": "astronomer {{tldr-pages/tldr-node-client}} {{[-v|--verbose]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/astronomer.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/astronomer.md"
+    },
+    {
+      "id": "tldr--11fdcaa4eec6",
+      "canonicalPath": "common/pdftk.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "pdftk",
+      "title": "pdftk",
+      "summary": "Zestaw narzędzi PDF.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "pdftk--bc7012ab"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Wyodrębnij strony 1-3, 5 i 6-10 z pliku PDF oraz zapisz je jako inny plik PDF:",
+          "command": "pdftk {{plik_wejściowy.pdf}} cat {{1-3 5 6-10}} output {{plik_wyjściowy.pdf}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/pdftk.md#L8"
+        },
+        {
+          "description": "Połącz listę plików PDF i zapisz połączony plik jako:",
+          "command": "pdftk {{plik1.pdf plik2.pdf ...}} cat output {{plik_wyjściowy.pdf}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/pdftk.md#L12"
+        },
+        {
+          "description": "Podziel każdą stronę pliku PDF do osobnych plików, o nazwie nadanej według zdefiniowanego wzoru:",
+          "command": "pdftk {{plik_wejściowy.pdf}} burst output {{plik_wyjściowy_%d.pdf}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/pdftk.md#L16"
+        },
+        {
+          "description": "Obróć wszystkie strony o 180 stopni zgodnie ze wskazówkami zegara:",
+          "command": "pdftk {{plik_wejściowy.pdf}} cat {{1-endsouth}} output {{plik_wyjściowy.pdf}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/pdftk.md#L20"
+        },
+        {
+          "description": "Obóć trzecią stronę o 90 stopni zgodnie ze wskazówkami zegara oraz pozostaw pozostałe strony bez zmian:",
+          "command": "pdftk {{plik_wejściowy.pdf}} cat {{1-2 3east 4-end}} output {{plik_wyjściowy.pdf}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/pdftk.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/pdftk.md"
+    },
+    {
+      "id": "tldr--128497a4fbb9",
+      "canonicalPath": "common/bat.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "bat",
+      "title": "bat",
+      "summary": "Wypisz i łącz pliki. Klon `cat` z podświetlaniem składni i integracją z Gitem. Zobacz także: `cat`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bat--5892de4d"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Wypisz zawartość pliku na standardowe wyjście:",
+          "command": "bat {{ścieżka/do/pliku}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/bat.md#L10"
+        },
+        {
+          "description": "Połącz kilka plików w plik docelowy:",
+          "command": "bat {{plik1}} {{plik2}} > {{plik_docelowy}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/bat.md#L14"
+        },
+        {
+          "description": "Dodaj kilka plików do pliku docelowego:",
+          "command": "bat {{plik1}} {{plik2}} >> {{plik_docelowy}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/bat.md#L18"
+        },
+        {
+          "description": "Ponumeruj wszystkie linie:",
+          "command": "bat {{[-n|--number]}} {{ścieżka/do/pliku}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/bat.md#L22"
+        },
+        {
+          "description": "Podświetl składnię pliku JSON:",
+          "command": "bat {{[-l|--language]}} json {{plik.json}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/bat.md#L26"
+        },
+        {
+          "description": "Wyświetl wszystkie obsługiwane języki:",
+          "command": "bat {{[-L|--list-languages]}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/bat.md#L30"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/bat.md"
+    },
+    {
+      "id": "tldr--1343fedc3b2a",
+      "canonicalPath": "osx/gls.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "gls",
+      "title": "gls",
+      "summary": "To polecenie jest aliasem GNU `ls`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr ls",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gls.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gls.md"
+    },
+    {
+      "id": "tldr--1ae2084b0c77",
+      "canonicalPath": "windows/clist.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "clist",
+      "title": "clist",
+      "summary": "To polecenie jest aliasem `choco list`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr choco list",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/windows/clist.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/windows/clist.md"
+    },
+    {
+      "id": "tldr--22137d130384",
+      "canonicalPath": "common/mogrify.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "mogrify",
+      "title": "mogrify",
+      "summary": "To polecenie jest aliasem `magick mogrify`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "imagemagick-ffmpeg--1a1f6843"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr magick mogrify",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/mogrify.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/mogrify.md"
+    },
+    {
+      "id": "tldr--2605b26feff6",
+      "canonicalPath": "osx/gwho.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "gwho",
+      "title": "gwho",
+      "summary": "To polecenie jest aliasem GNU `who`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr who",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gwho.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gwho.md"
+    },
+    {
+      "id": "tldr--275973886109",
+      "canonicalPath": "linux/pw-encplay.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "pw-encplay",
+      "title": "pw-encplay",
+      "summary": "To polecenie jest aliasem `pw-cat --playback --encoded`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/pw-encplay.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/pw-encplay.md"
+    },
+    {
+      "id": "tldr--277d739d1375",
+      "canonicalPath": "linux/abrt.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "abrt",
+      "title": "abrt",
+      "summary": "To polecenie jest aliasem `abrt-cli`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr abrt-cli",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/abrt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/abrt.md"
+    },
+    {
+      "id": "tldr--27a437a747a0",
+      "canonicalPath": "osx/grsh.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "grsh",
+      "title": "grsh",
+      "summary": "To polecenie jest aliasem GNU `rsh`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr {{[-p|--platform]}} linux rsh",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/grsh.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/grsh.md"
+    },
+    {
+      "id": "tldr--37fe0f63ef7f",
+      "canonicalPath": "linux/systemd-analyze.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "systemd-analyze",
+      "title": "systemd-analyze",
+      "summary": "Analizuj i debuguj menedżera systemu. Wyświetl szczegóły dotyczące czasiu procesu uruchamiania jednostek (usług, punktów montowania, urządzeń, gniazd).",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Wyświetl wszystkie uruchomione jednostki, uporządkowane według czasu ich inicjalizacji:",
+          "command": "systemd-analyze blame",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/systemd-analyze.md#L9"
+        },
+        {
+          "description": "Wyświetl drzewo krytycznego czasowo łańcucha jednostek:",
+          "command": "systemd-analyze critical-chain",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/systemd-analyze.md#L13"
+        },
+        {
+          "description": "Utwórz plik SVG pokazujący kiedy każda usługa wystartowała, zaznaczając czas wykorzystany na inicjalizację:",
+          "command": "systemd-analyze plot > {{ścieżka/do/pliku.svg}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/systemd-analyze.md#L17"
+        },
+        {
+          "description": "Sporządź wykres zależności i przekonwertuj go do pliku SVG:",
+          "command": "systemd-analyze dot | dot -T{{svg}} > {{ścieżka/do/pliku.svg}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/systemd-analyze.md#L21"
+        },
+        {
+          "description": "Wyświetl wyniki bezpieczeństwa działających jednostek:",
+          "command": "systemd-analyze security",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/systemd-analyze.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/systemd-analyze.md"
+    },
+    {
+      "id": "tldr--4867e61119d8",
+      "canonicalPath": "common/python3.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "python3",
+      "title": "python3",
+      "summary": "To polecenie jest aliasem `python`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "anaconda3--0cae96a6",
+        "anaconda3-2022-05--0cae96a6",
+        "miniconda3--29389c27",
+        "miniconda3-4-12-0--be07816c",
+        "miniconda3-py310--be07816c",
+        "miniconda3-py311--be07816c",
+        "miniconda3-py37--be07816c",
+        "miniconda3-py38--be07816c",
+        "miniconda3-py39--be07816c",
+        "miniforge3--191245de",
+        "python--ee5066aa",
+        "python-alpha--ee5066aa",
+        "python-beta--ee5066aa",
+        "python-pre--ee5066aa",
+        "python-rc--ee5066aa",
+        "python310--ee5066aa",
+        "python311--ee5066aa",
+        "python312--ee5066aa",
+        "python313--ee5066aa",
+        "python314--ee5066aa",
+        "python35--ee5066aa",
+        "python36--ee5066aa",
+        "python37--ee5066aa",
+        "python38--ee5066aa",
+        "python39--ee5066aa",
+        "winpython--27854e2a",
+        "winpython37--27854e2a",
+        "winpython3741--27854e2a",
+        "winpython37cod--27854e2a",
+        "winpython37ps2--27854e2a",
+        "winpython38--27854e2a",
+        "winpython38cod--27854e2a",
+        "winpython38ps2--27854e2a"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr python",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/python3.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/python3.md"
+    },
+    {
+      "id": "tldr--50265ccec804",
+      "canonicalPath": "common/arp.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "arp",
+      "title": "arp",
+      "summary": "Pokaż i manipuluj systemową pamięcią podręczną ARP.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Pokaż bieżącą tabelę ARP:",
+          "command": "arp -a",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/arp.md#L8"
+        },
+        {
+          "description": "Usuń konkretny wpis:",
+          "command": "arp -d {{adres}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/arp.md#L12"
+        },
+        {
+          "description": "Utwórz nowy wpis w tabeli ARP:",
+          "command": "arp -s {{adres}} {{adres_mac}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/arp.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/arp.md"
+    },
+    {
+      "id": "tldr--5143c3e6bb28",
+      "canonicalPath": "common/gemtopbm.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "gemtopbm",
+      "title": "gemtopbm",
+      "summary": "To polecenie zostało zastąpione przez `gemtopnm`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację aktualnego polecenia:",
+          "command": "tldr gemtopnm",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/gemtopbm.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/gemtopbm.md"
+    },
+    {
+      "id": "tldr--55e751af84a4",
+      "canonicalPath": "common/sr.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "sr",
+      "title": "sr",
+      "summary": "To polecenie jest aliasem `surfraw`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr surfraw",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/sr.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/sr.md"
+    },
+    {
+      "id": "tldr--58e83c91a326",
+      "canonicalPath": "android/input.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "input",
+      "title": "input",
+      "summary": "Wysyłaj kody zdarzeń lub gestów na ekranie dotykowym do urządzenia Android. Ta komenda może być używana tylko poprzez `adb shell`.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Wyślij kod zdarzenia dla pojedynczego znaku do urządzenia Android:",
+          "command": "input keyevent {{kod_zdarzenia}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/input.md#L9"
+        },
+        {
+          "description": "Wyślij tekst do urządzenia z systemem Android (`%s` reprezentuje spacje):",
+          "command": "input text \"{{tekst}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/input.md#L13"
+        },
+        {
+          "description": "Wyślij pojedyncze stuknięcie do urządzenia Android:",
+          "command": "input tap {{pozycja_x}} {{pozycja_y}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/input.md#L17"
+        },
+        {
+          "description": "Wyślij gest przesunięcia do urządzenia Android:",
+          "command": "input swipe {{x_start}} {{y_start}} {{x_koniec}} {{y_koniec}} {{czas_trwania_w_ms}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/input.md#L21"
+        },
+        {
+          "description": "Wyślij długie naciśnięcie do urządzenia Android za pomocą gestu przesunięcia:",
+          "command": "input swipe {{pozycja_x}} {{pozycja_y}} {{pozycja_x}} {{pozycja_y}} {{czas_trwania_w_ms}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/input.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/input.md"
+    },
+    {
+      "id": "tldr--6b67b3ea0969",
+      "canonicalPath": "osx/gsync.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "gsync",
+      "title": "gsync",
+      "summary": "To polecenie jest aliasem GNU `sync`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr sync",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gsync.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gsync.md"
+    },
+    {
+      "id": "tldr--6c64192fb17b",
+      "canonicalPath": "osx/grlogin.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "grlogin",
+      "title": "grlogin",
+      "summary": "To polecenie jest aliasem GNU `rlogin`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr {{[-p|--platform]}} linux rlogin",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/grlogin.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/grlogin.md"
+    },
+    {
+      "id": "tldr--7ec454c78c50",
+      "canonicalPath": "osx/gftp.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "gftp",
+      "title": "gftp",
+      "summary": "To polecenie jest aliasem GNU `ftp`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr ftp",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gftp.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gftp.md"
+    },
+    {
+      "id": "tldr--806eaed6eb77",
+      "canonicalPath": "common/jo.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "jo",
+      "title": "jo",
+      "summary": "To polecenie jest aliasem `autojump`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "jo--7077aefa"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr autojump",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/jo.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/jo.md"
+    },
+    {
+      "id": "tldr--8e29036a713e",
+      "canonicalPath": "osx/gunits.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "gunits",
+      "title": "gunits",
+      "summary": "To polecenie jest aliasem GNU `units`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr units",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gunits.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gunits.md"
+    },
+    {
+      "id": "tldr--8ea79f893406",
+      "canonicalPath": "windows/print.win.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "print",
+      "title": "print",
+      "summary": "Wyślij plik tekstowy do drukarki.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Drukuj plik tekstowy używając domyślnej drukarki:",
+          "command": "print {{ścieżka/do/pliku}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/windows/print.win.md#L8"
+        },
+        {
+          "description": "Drukuj plik tekstowy używakąc wybranej drukarki:",
+          "command": "print /d:{{drukarka}} {{ścieżka/do/pliku}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/windows/print.win.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/windows/print.win.md"
+    },
+    {
+      "id": "tldr--93fa601e7044",
+      "canonicalPath": "common/pnmtopnm.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "pnmtopnm",
+      "title": "pnmtopnm",
+      "summary": "To polecenie jest aliasem `pamtopnm`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr pamtopnm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/pnmtopnm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/pnmtopnm.md"
+    },
+    {
+      "id": "tldr--9817c240ea52",
+      "canonicalPath": "osx/gtraceroute.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "gtraceroute",
+      "title": "gtraceroute",
+      "summary": "To polecenie jest aliasem GNU `traceroute`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr traceroute",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gtraceroute.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gtraceroute.md"
+    },
+    {
+      "id": "tldr--9b1547f4d208",
+      "canonicalPath": "linux/mate-about.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "mate-about",
+      "title": "mate-about",
+      "summary": "Pokaż informacje o środowisku desktopowym MATE.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Wyświetl wersję MATE:",
+          "command": "mate-about --version",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/mate-about.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/mate-about.md"
+    },
+    {
+      "id": "tldr--9f894f8efb19",
+      "canonicalPath": "osx/gtsort.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "gtsort",
+      "title": "gtsort",
+      "summary": "To polecenie jest aliasem GNU `tsort`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr tsort",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gtsort.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gtsort.md"
+    },
+    {
+      "id": "tldr--a25a9e743b57",
+      "canonicalPath": "common/montage.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "montage",
+      "title": "montage",
+      "summary": "To polecenie jest aliasem `magick montage`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "imagemagick-ffmpeg--1a1f6843",
+        "montage--e55d2f04"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr magick montage",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/montage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/montage.md"
+    },
+    {
+      "id": "tldr--ad18f467123b",
+      "canonicalPath": "common/bmptoppm.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "bmptoppm",
+      "title": "bmptoppm",
+      "summary": "To polecenie zostało zastąpione przez `bmptopnm`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację aktualnego polecenia:",
+          "command": "tldr bmptopnm",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/bmptoppm.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/bmptoppm.md"
+    },
+    {
+      "id": "tldr--b41b8a1126e6",
+      "canonicalPath": "common/tldr.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "tldr",
+      "title": "tldr",
+      "summary": "Wyświetl proste strony pomocy dla narzędzi wiersza poleceń z projektu tldr-pages. Uwaga: opcje `--language` i `--list` nie są wymagane przez specyfikację, ale większość klientów je implementuje.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "tealdeer--251e563d",
+        "tldr--1f34cbae",
+        "tldr--20c1a45b",
+        "tlrc--36ec9796"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Wyświetl stronę tldr dla podanej komendy (wskazówka: w ten sposób tu trafiłeś/aś!):",
+          "command": "tldr {{komenda}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/tldr.md#L9"
+        },
+        {
+          "description": "Wyświetl stronę tldr dla podanej podkomendy:",
+          "command": "tldr {{komenda}} {{podkomenda}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/tldr.md#L13"
+        },
+        {
+          "description": "Wyświetl stronę tldr dla komendy w podanym języku (jeżeli jest dostępna, w przeciwnym razie po angielsku):",
+          "command": "tldr {{[-L|--language]}} {{kod_języka}} {{komenda}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/tldr.md#L17"
+        },
+        {
+          "description": "Wyświetl stronę tldr dla komendy z podanej platformy:",
+          "command": "tldr {{[-p|--platform]}} {{android|cisco-ios|common|dos|freebsd|linux|netbsd|openbsd|osx|sunos|windows}} {{komenda}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/tldr.md#L21"
+        },
+        {
+          "description": "Zaktualizuj lokalną pamięć podręczną stron tldr:",
+          "command": "tldr {{[-u|--update]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/tldr.md#L25"
+        },
+        {
+          "description": "Wyświetl listę stron tldr dla aktualnej platformy i `common`:",
+          "command": "tldr {{[-l|--list]}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/tldr.md#L29"
+        },
+        {
+          "description": "Przeglądaj strony tldr w oknie terminala (`fzf` musi być zainstalowany):",
+          "command": "tldr {{[-l|--list]}} | fzf --preview \"tldr {1} --color=always\" --preview-window=right,70% | xargs tldr",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/tldr.md#L33"
+        },
+        {
+          "description": "Wyświetl stronę tldr dla losowej komendy:",
+          "command": "tldr {{[-l|--list]}} | shuf {{[-n|--head-count]}} 1 | xargs tldr",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/tldr.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/tldr.md"
+    },
+    {
+      "id": "tldr--c0720004d446",
+      "canonicalPath": "android/settings.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "settings",
+      "title": "settings",
+      "summary": "Uzyskaj informacje o systemie operacyjnym Android.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Wypisz ustawienia w przestrzeni `global`:",
+          "command": "settings list global",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/settings.md#L8"
+        },
+        {
+          "description": "Wyświetl wartość określonego ustawienia:",
+          "command": "settings get {{global}} {{airplane_mode_on}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/settings.md#L12"
+        },
+        {
+          "description": "Ustaw wartość określonego ustawienia:",
+          "command": "settings put {{system}} {{screen_brightness}} {{42}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/settings.md#L16"
+        },
+        {
+          "description": "Usuń określone ustawienie:",
+          "command": "settings delete {{secure}} {{screensaver_enabled}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/settings.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/android/settings.md"
+    },
+    {
+      "id": "tldr--d32a36fa5a3e",
+      "canonicalPath": "common/vi.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "vi",
+      "title": "vi",
+      "summary": "To polecenie jest aliasem `vim`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "vim--9266ef09",
+        "vim-nightly--339fc25c",
+        "vim-tux--8f39cf5c"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr vim",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/vi.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/vi.md"
+    },
+    {
+      "id": "tldr--d3457790824e",
+      "canonicalPath": "osx/hdid.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "hdid",
+      "title": "hdid",
+      "summary": "To polecenie jest aliasem `hdiutil attach`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr hdiutil",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/hdid.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/hdid.md"
+    },
+    {
+      "id": "tldr--d91b8ffead1f",
+      "canonicalPath": "common/impacket-mqtt_check.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "impacket-mqtt_check",
+      "title": "impacket-mqtt_check",
+      "summary": "To polecenie jest aliasem `mqtt_check.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr mqtt_check.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/impacket-mqtt_check.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/impacket-mqtt_check.md"
+    },
+    {
+      "id": "tldr--da20154b7389",
+      "canonicalPath": "linux/groupdel.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "groupdel",
+      "title": "groupdel",
+      "summary": "Usuwa istniejącą grupę użytkowników z systemu. Zobacz także: `groups`, `groupadd`, `groupmod`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Usuń istniejącą grupę użytkowników:",
+          "command": "sudo groupdel {{nazwa_grupy}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/groupdel.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/groupdel.md"
+    },
+    {
+      "id": "tldr--da4f2fbe4443",
+      "canonicalPath": "osx/gsha384sum.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "gsha384sum",
+      "title": "gsha384sum",
+      "summary": "To polecenie jest aliasem GNU `sha384sum`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr sha384sum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gsha384sum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/osx/gsha384sum.md"
+    },
+    {
+      "id": "tldr--daa255cec734",
+      "canonicalPath": "common/convert.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "convert",
+      "title": "convert",
+      "summary": "To polecenie jest aliasem `magick convert`. Uwaga: ten alias jest wycofany od ImageMagick 7. Został on zastąpiony przez `magick`. Użyj `magick convert` jeśli potrzebujesz użyć starego narzędzia w wersjach 7+.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "imagemagick-ffmpeg--1a1f6843"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr magick convert",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/convert.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/convert.md"
+    },
+    {
+      "id": "tldr--e1e07e55762f",
+      "canonicalPath": "common/jfrog.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "jfrog",
+      "title": "jfrog",
+      "summary": "To polecenie jest aliasem `jf`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "jfrog--642c82c3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr jf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/jfrog.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/jfrog.md"
+    },
+    {
+      "id": "tldr--e7b6f3f8f352",
+      "canonicalPath": "common/ls.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "ls",
+      "title": "ls",
+      "summary": "Wypisz zawartość katalogu.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Wypisz po jednym pliku w linijce:",
+          "command": "ls -1",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/ls.md#L8"
+        },
+        {
+          "description": "Wypisz wszystkie pliki, w tym ukryte:",
+          "command": "ls {{[-a|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/ls.md#L12"
+        },
+        {
+          "description": "Wypisz wszystkie pliki z `/` na końcu nazw katalogów:",
+          "command": "ls {{[-F|--classify]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/ls.md#L16"
+        },
+        {
+          "description": "Wypisz listę w długim formacie (uprawnienia, własność, rozmiar i data modyfikacji) wszystkich plików:",
+          "command": "ls {{[-la|-l --all]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/ls.md#L20"
+        },
+        {
+          "description": "Wypisz listę w długim formacie z rozmiarem w jednostkach z przedrostkami dwójkowymi (KiB, MiB, GiB):",
+          "command": "ls {{[-lh|-l --human-readable]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/ls.md#L24"
+        },
+        {
+          "description": "Wypisz listę rekurencyjnie w długim formacie, posortowaną po rozmiarze (malejąco):",
+          "command": "ls {{[-lSR|-lS --recursive]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/ls.md#L28"
+        },
+        {
+          "description": "Wypisz listę wszystkich plików w długim formacie posortowaną według daty modyfikacji (od najstarszych):",
+          "command": "ls {{[-ltr|-lt --reverse]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/ls.md#L32"
+        },
+        {
+          "description": "Wypisz tylko katalogi:",
+          "command": "ls {{[-d|--directory]}} */",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/ls.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/ls.md"
+    },
+    {
+      "id": "tldr--e95f7480deb6",
+      "canonicalPath": "windows/ver.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "ver",
+      "title": "ver",
+      "summary": "Wyświetl aktualną wersję systemu DOS lub Windows.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Wyświetl aktualną wersję systemu:",
+          "command": "ver",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/windows/ver.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/windows/ver.md"
+    },
+    {
+      "id": "tldr--f22737c3bda7",
+      "canonicalPath": "linux/tcpflow.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "tcpflow",
+      "title": "tcpflow",
+      "summary": "Przechwytuje ruch TCP do debugowania i analizy.",
+      "platform": "linux",
+      "softwareIds": [
+        "tcpflow--fcf7188d"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Pokaż wszystkie dane z interfejsu `eth0` i portu `80`:",
+          "command": "tcpflow -c -i {{eth0}} port {{80}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/tcpflow.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/linux/tcpflow.md"
+    },
+    {
+      "id": "tldr--fc00ceb94be0",
+      "canonicalPath": "common/c++.md",
+      "locale": "pl",
+      "sourceLocale": "pl",
+      "name": "c++",
+      "title": "c++",
+      "summary": "To polecenie jest aliasem `g++`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zobacz dokumentację oryginalnego polecenia:",
+          "command": "tldr g++",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/c%2B%2B.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pl/common/c%2B%2B.md"
+    }
+  ]
+}

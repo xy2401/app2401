@@ -1,0 +1,727 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "ja",
+  "sourceLocale": "ja",
+  "shard": "e",
+  "items": [
+    {
+      "id": "tldr--11fc648b2dd5",
+      "canonicalPath": "common/gpg2.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "gpg2",
+      "title": "gpg2",
+      "summary": "このコマンドは `gpg` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr gpg",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/gpg2.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/gpg2.md"
+    },
+    {
+      "id": "tldr--14ac7af2157b",
+      "canonicalPath": "windows/rni.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "rni",
+      "title": "rni",
+      "summary": "このコマンドは `Rename-Item` のエイリアスです。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr Rename-Item",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/rni.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/rni.md"
+    },
+    {
+      "id": "tldr--16ed77dea912",
+      "canonicalPath": "common/chmod.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "chmod",
+      "title": "chmod",
+      "summary": "ファイルやディレクトリのアクセス権限を変更します。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "ファイルを所有する [u]ser に、そのファイルを実行 ([x]ecute) する権限を付与する:",
+          "command": "chmod u+x {{path/to/file}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/chmod.md#L8"
+        },
+        {
+          "description": "[u]ser に、ファイル/ディレクトリの 読み取り ([r]ead) と 書き込み ([w]rite) の権限を付与する:",
+          "command": "chmod u+rw {{path/to/file_or_directory}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/chmod.md#L12"
+        },
+        {
+          "description": "[g]roup から 実行 (e[x]ecutable) 権限を削除する:",
+          "command": "chmod g-x {{path/to/file}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/chmod.md#L16"
+        },
+        {
+          "description": "全て ([a]ll) のユーザに [r]ead と e[x]ecute の権限を付与する:",
+          "command": "chmod a+rx {{path/to/file}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/chmod.md#L20"
+        },
+        {
+          "description": "(ファイル所有者のグループに属していない) その他のユーザ ([o]thers) に [g]roup と同じ権限を付与する:",
+          "command": "chmod o=g {{path/to/file}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/chmod.md#L24"
+        },
+        {
+          "description": "その他のユーザ ([o]thers) から全ての権限を削除する:",
+          "command": "chmod o= {{path/to/file}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/chmod.md#L28"
+        },
+        {
+          "description": "[g]roup と [o]thers に [w]rite 権限を再帰的に付与する:",
+          "command": "chmod {{[-R|--recursive]}} g+w,o+w {{path/to/directory}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/chmod.md#L32"
+        },
+        {
+          "description": "全て ([a]ll) のユーザーに、ファイルへの [r]ead 権限と、ディレクトリ内のサブディレクトリへの e[X]ecute 権限を再帰的に付与する:",
+          "command": "chmod {{[-R|--recursive]}} a+rX {{path/to/directory}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/chmod.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/chmod.md"
+    },
+    {
+      "id": "tldr--2ad12874ad9b",
+      "canonicalPath": "windows/find.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "find",
+      "title": "find",
+      "summary": "1つ以上のファイルで指定された文字列を検索します。",
+      "platform": "windows",
+      "softwareIds": [
+        "findutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004",
+        "uutils-findutils--77d666d2"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "指定された文字列を含む行を検索します:",
+          "command": "find \"{{文字列}}\" {{ファイルまたはディレクトリのパス}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/find.md#L8"
+        },
+        {
+          "description": "指定された文字列を含まない行を表示します:",
+          "command": "find \"{{文字列}}\" {{ファイルまたはディレクトリのパス}} /v",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/find.md#L12"
+        },
+        {
+          "description": "指定された文字列を含む行数を表示します:",
+          "command": "find \"{{文字列}}\" {{ファイルまたはディレクトリのパス}} /c",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/find.md#L16"
+        },
+        {
+          "description": "行リストとともに行番号を表示します:",
+          "command": "find \"{{文字列}}\" {{ファイルまたはディレクトリのパス}} /n",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/find.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/find.md"
+    },
+    {
+      "id": "tldr--776bbeb629ef",
+      "canonicalPath": "common/ptpython3.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "ptpython3",
+      "title": "ptpython3",
+      "summary": "このコマンドは `ptpython` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr ptpython",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/ptpython3.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/ptpython3.md"
+    },
+    {
+      "id": "tldr--7c48488d4d3d",
+      "canonicalPath": "common/lzcat.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "lzcat",
+      "title": "lzcat",
+      "summary": "このコマンドは `xz --format lzma --decompress --stdout` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr xz",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/lzcat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/lzcat.md"
+    },
+    {
+      "id": "tldr--9c5c413d0d1a",
+      "canonicalPath": "common/..md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": ".",
+      "title": ".",
+      "summary": "このコマンドは `source` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr source",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/..md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/..md"
+    },
+    {
+      "id": "tldr--a5636b821400",
+      "canonicalPath": "common/find.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "find",
+      "title": "find",
+      "summary": "ディレクトリツリー下のファイルやディレクトリを再帰的に検索します。 参照: `fd`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "findutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004",
+        "uutils-findutils--77d666d2"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "拡張子でファイル検索する:",
+          "command": "find {{ルートパス}} -name '{{*.ext}}'",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/find.md#L9"
+        },
+        {
+          "description": "複数のパス/名前パターンに一致するファイルを検索する:",
+          "command": "find {{ルートパス}} -path '{{*/path/*/*.ext}}' -or -name '{{*pattern*}}'",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/find.md#L13"
+        },
+        {
+          "description": "大文字小文字を区別しないモードで、指定された名前にマッチするディレクトリを検索する:",
+          "command": "find {{ルートパス}} -type d -iname '{{*lib*}}'",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/find.md#L17"
+        },
+        {
+          "description": "特定のパスを除いて、与えられたパターンにマッチするファイルを検索する:",
+          "command": "find {{ルートパス}} -name '{{*.py}}' -not -path '{{*/site-packages/*}}'",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/find.md#L21"
+        },
+        {
+          "description": "与えられたサイズ範囲にマッチするファイルを検索し、再帰的な深さを\"1\"に制限する:",
+          "command": "find {{ルートパス}} -maxdepth 1 -size {{+500k}} -size {{-10M}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/find.md#L25"
+        },
+        {
+          "description": "各ファイルに対してコマンドを実行する (ファイル名にアクセスするにはコマンド内で`{}`を使用):",
+          "command": "find {{ルートパス}} -name '{{*.ext}}' -exec {{wc -l}} {} \\;",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/find.md#L29"
+        },
+        {
+          "description": "今日変更されたすべてのファイルを検索し、その結果を引数として1つのコマンドに渡す:",
+          "command": "find {{ルートパス}} -daystart -mtime {{-1}} -exec {{tar -cvf archive.tar}} {} \\+",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/find.md#L33"
+        },
+        {
+          "description": "空のファイルまたはディレクトリを検索し、冗長に削除する:",
+          "command": "find {{ルートパス}} -type {{f|d}} -empty -delete -print",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/find.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/find.md"
+    },
+    {
+      "id": "tldr--af31c6eba51b",
+      "canonicalPath": "linux/steamos-boot-install.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "steamos-boot-install",
+      "title": "steamos-boot-install",
+      "summary": "このコマンドは `steamos-finalize-install` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr steamos-finalize-install",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/steamos-boot-install.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/steamos-boot-install.md"
+    },
+    {
+      "id": "tldr--b0dc69c2735e",
+      "canonicalPath": "windows/chkdsk.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "chkdsk",
+      "title": "chkdsk",
+      "summary": "ファイルシステムとボリュームのメタデータにエラーがないかチェックします。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "チェックするドライブ文字(コロンの後に続く)、マウントポイント、またはボリューム名を指定する:",
+          "command": "chkdsk {{ボリューム名}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/chkdsk.md#L8"
+        },
+        {
+          "description": "特定のボリュームのエラーを修正する:",
+          "command": "chkdsk {{ボリューム名}} /f",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/chkdsk.md#L12"
+        },
+        {
+          "description": "チェックする前に指定ボリュームをマウント解除する:",
+          "command": "chkdsk {{ボリューム名}} /x",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/chkdsk.md#L16"
+        },
+        {
+          "description": "ログファイルのサイズを指定したサイズに変更する (NTFS の場合のみ):",
+          "command": "chkdsk /l{{サイズ数}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/chkdsk.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/chkdsk.md"
+    },
+    {
+      "id": "tldr--bd6375e45231",
+      "canonicalPath": "android/pkg.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pkg",
+      "title": "pkg",
+      "summary": "Termux 用パッケージ管理ユーティリティ。",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "すべてのインストールされたパッケージをアップグレードします:",
+          "command": "pkg upgrade",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/pkg.md#L8"
+        },
+        {
+          "description": "パッケージをインストールします:",
+          "command": "pkg install {{package}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/pkg.md#L12"
+        },
+        {
+          "description": "パッケージをアンインストールします:",
+          "command": "pkg uninstall {{package}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/pkg.md#L16"
+        },
+        {
+          "description": "パッケージを再インストールします:",
+          "command": "pkg reinstall {{package}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/pkg.md#L20"
+        },
+        {
+          "description": "パッケージを検索します:",
+          "command": "pkg search {{package}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/pkg.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/pkg.md"
+    },
+    {
+      "id": "tldr--c2c7bd0a109d",
+      "canonicalPath": "linux/pw-midiplay.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pw-midiplay",
+      "title": "pw-midiplay",
+      "summary": "このコマンドは `pw-cat --playback --midi` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pw-midiplay.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pw-midiplay.md"
+    },
+    {
+      "id": "tldr--c2fe16eaac9d",
+      "canonicalPath": "common/cp.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "cp",
+      "title": "cp",
+      "summary": "ファイルやディレクトリをコピーします。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "ファイルを別の場所にコピー:",
+          "command": "cp {{コピー元ファイルへのパス}} {{コピー先ファイルへのパス}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/cp.md#L8"
+        },
+        {
+          "description": "ファイル名を維持したまま、ファイルを別のディレクトリにコピーする:",
+          "command": "cp {{コピー元ファイルへのパス}} {{コピー先ディレクトリへのパス}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/cp.md#L12"
+        },
+        {
+          "description": "ディレクトリの内容を別の場所に再帰的にコピーする（コピー先が存在する場合は、その中にディレクトリがコピーされる):",
+          "command": "cp -R {{コピー元ディレクトリへのパス}} {{コピー先ディレクトリへのパス}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/cp.md#L16"
+        },
+        {
+          "description": "詳細モードでディレクトリを再帰的にコピーする（コピーされたファイルが表示される）:",
+          "command": "cp -vR {{コピー元ディレクトリへのパス}} {{コピー先ディレクトリへのパス}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/cp.md#L20"
+        },
+        {
+          "description": "対話形式でテキストファイルを別の場所にコピーする（上書きする前にユーザーに確認する）:",
+          "command": "cp -i {{*.txt}} {{コピー先ディレクトリへのパス}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/cp.md#L24"
+        },
+        {
+          "description": "コピーする前にシンボリックリンクをたどる:",
+          "command": "cp -L {{link}} {{コピー先ディレクトリへのパス}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/cp.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/cp.md"
+    },
+    {
+      "id": "tldr--c52209d87e7e",
+      "canonicalPath": "common/dig.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "dig",
+      "title": "dig",
+      "summary": "DNS 情報を調べるユーティリティーです。 参照: `resolvectl`, `nslookup`, `host`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bind--35fceaa5"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "ホスト名に関連する IP を検索（A レコード）:",
+          "command": "dig +short {{example.com}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/dig.md#L9"
+        },
+        {
+          "description": "指定したドメインの詳細な回答を得る（A レコード）:",
+          "command": "dig +noall +answer {{example.com}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/dig.md#L13"
+        },
+        {
+          "description": "指定されたドメイン名に関連する特定の DNS レコードタイプを取得する:",
+          "command": "dig +short {{example.com}} {{A|MX|TXT|CNAME|NS}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/dig.md#L17"
+        },
+        {
+          "description": "問い合わせる別の DNS サーバーを指定する:",
+          "command": "dig @{{8.8.8.8}} {{example.com}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/dig.md#L21"
+        },
+        {
+          "description": "IP アドレスの DNS 逆引きの実行（PTR レコード）:",
+          "command": "dig -x {{8.8.8.8}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/dig.md#L25"
+        },
+        {
+          "description": "ゾーンの権威ネームサーバーの検索と SOA レコードの表示:",
+          "command": "dig +nssearch {{example.com}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/dig.md#L29"
+        },
+        {
+          "description": "ドメイン名を解決するための反復的なクエリの実行と、そのトレースパス全体を表示する:",
+          "command": "dig +trace {{example.com}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/dig.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/dig.md"
+    },
+    {
+      "id": "tldr--c659d1b99036",
+      "canonicalPath": "android/dumpsys.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "dumpsys",
+      "title": "dumpsys",
+      "summary": "Android システムサービスの情報を取得します。 このコマンドは `adb shell` 経由でのみ実行できます。",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "すべてのシステムに対して診断を出力します:",
+          "command": "dumpsys",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/dumpsys.md#L9"
+        },
+        {
+          "description": "特定のシステムに対して診断を出力します:",
+          "command": "dumpsys {{service}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/dumpsys.md#L13"
+        },
+        {
+          "description": "`dumpsys` で表示できるすべてのサービスの情報を表示します:",
+          "command": "dumpsys -l",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/dumpsys.md#L17"
+        },
+        {
+          "description": "指定したサービスを引数をサービスに表示させます:",
+          "command": "dumpsys {{service}} -h",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/dumpsys.md#L21"
+        },
+        {
+          "description": "指定したサービスを診断から除外して出力します:",
+          "command": "dumpsys --skip {{service}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/dumpsys.md#L25"
+        },
+        {
+          "description": "タイムアウトを秒数で指定します。(デフォルトは10秒):",
+          "command": "dumpsys -t {{8}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/dumpsys.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/android/dumpsys.md"
+    },
+    {
+      "id": "tldr--c857247906a8",
+      "canonicalPath": "common/7z.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "7z",
+      "title": "7z",
+      "summary": "圧縮率の高いファイルアーカイバです。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "7zip--d4d4b542",
+        "7zip-beta--fcb42f04",
+        "7zip-dark--ba00fe33",
+        "7zip-zstd--863a95a7",
+        "nanazip--1fde7301",
+        "nanazip-beta--5d7f53c7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "ファイルまたはディレクトリを圧縮する:",
+          "command": "7z a {{アーカイブ.7z}} {{ファイルまたはディレクトリへのパス}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/7z.md#L8"
+        },
+        {
+          "description": "既存のアーカイブを暗号化する (ファイル名も含め):",
+          "command": "7z a {{暗号化済み.7z}} -p{{パスワード}} -mhe=on {{アーカイブ.7z}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/7z.md#L12"
+        },
+        {
+          "description": "元のディレクトリ構造を保持したまま展開する:",
+          "command": "7z x {{アーカイブ.7z}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/7z.md#L16"
+        },
+        {
+          "description": "展開先のディレクトリを指定して展開する:",
+          "command": "7z x {{アーカイブ.7z}} -o{{出力先のパス}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/7z.md#L20"
+        },
+        {
+          "description": "`stdout`に対してファイルを出力する:",
+          "command": "7z x {{アーカイブ.7z}} -so",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/7z.md#L24"
+        },
+        {
+          "description": "特定のアーカイブ形式を使用した圧縮を行う:",
+          "command": "7z a -t{{7z|bzip2|gzip|lzip|tar|zip}} {{アーカイブ}} {{ファイルまたはディレクトリへのパス}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/7z.md#L28"
+        },
+        {
+          "description": "アーカイブの内容を表示する:",
+          "command": "7z l {{アーカイブ.7z}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/7z.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/7z.md"
+    },
+    {
+      "id": "tldr--d43b6f8c1743",
+      "canonicalPath": "common/zeditor.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "zeditor",
+      "title": "zeditor",
+      "summary": "このコマンドは `zed` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr zed",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zeditor.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zeditor.md"
+    },
+    {
+      "id": "tldr--f0af3151f8f3",
+      "canonicalPath": "windows/mklink.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "mklink",
+      "title": "mklink",
+      "summary": "シンボリックリンクを作成します。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "ファイルへのシンボリックリンクを作成します:",
+          "command": "mklink {{リンクパス}} {{ソースファイルのパス}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/mklink.md#L8"
+        },
+        {
+          "description": "ディレクトリへのシンボリックリンクを作成します:",
+          "command": "mklink /d {{リンクパス}} {{ソースディレクトリパス}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/mklink.md#L12"
+        },
+        {
+          "description": "ファイルへのハードリンクを作成します:",
+          "command": "mklink /h {{リンクパス}} {{ソースファイルのパス}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/mklink.md#L16"
+        },
+        {
+          "description": "ディレクトリジャンクションを作成します:",
+          "command": "mklink /j {{リンクパス}} {{ソースファイルのパス}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/mklink.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/mklink.md"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
@@ -24,6 +24,13 @@ addFormats(ajv);
 if (current.schemaVersion !== "1.0.0" || current.snapshotId !== manifest.snapshotId) throw new Error("current pointer does not match manifest");
 if (Buffer.byteLength(manifestRaw) !== current.manifestBytes || hash(manifestRaw) !== current.manifestSha256) throw new Error("manifest integrity check failed");
 if (manifest.formatRevision !== "sharded-4") throw new Error("unsupported shard format");
+const snapshotDirectories = (await readdir(resolve(metadataRoot, "snapshots"), { withFileTypes: true }))
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name)
+  .sort();
+if (snapshotDirectories.length !== 1 || snapshotDirectories[0] !== current.snapshotId) {
+  throw new Error(`expected only current snapshot ${current.snapshotId}, found: ${snapshotDirectories.join(", ")}`);
+}
 
 async function readDescriptor(descriptor) {
   const raw = await readFile(resolve(snapshotRoot, descriptor.path), "utf8");

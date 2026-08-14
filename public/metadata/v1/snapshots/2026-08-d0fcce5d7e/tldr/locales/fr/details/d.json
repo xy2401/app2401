@@ -1,0 +1,3980 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "fr",
+  "sourceLocale": "fr",
+  "shard": "d",
+  "items": [
+    {
+      "id": "tldr--01b9962a165e",
+      "canonicalPath": "common/docker-exec.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker exec",
+      "summary": "Cette commande est un alias de `docker container exec`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container exec",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-exec.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-exec.md"
+    },
+    {
+      "id": "tldr--01ec6a4ac25f",
+      "canonicalPath": "common/docker-system.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker system",
+      "summary": "Gérer les données Docker et afficher des informations sur l'ensemble du système.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Afficher l'aide :",
+          "command": "docker system",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-system.md#L8"
+        },
+        {
+          "description": "Afficher l'utilisation du disque par Docker :",
+          "command": "docker system df",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-system.md#L12"
+        },
+        {
+          "description": "Afficher des informations détaillées sur l'utilisation du disque par Docker :",
+          "command": "docker system df {{[-v|--verbose]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-system.md#L16"
+        },
+        {
+          "description": "Supprimer les données non utilisées :",
+          "command": "docker system prune",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-system.md#L20"
+        },
+        {
+          "description": "Supprimer les données non utilisées de plus d'un temps donné dans le passé :",
+          "command": "docker system prune --filter \"until={{heures}}h{{minutes}}m\"",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-system.md#L24"
+        },
+        {
+          "description": "Afficher les événements du démon Docker en temps réel :",
+          "command": "docker system events",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-system.md#L28"
+        },
+        {
+          "description": "Afficher les événements du démon Docker en temps réel avec un format JSON :",
+          "command": "docker system events {{[-f|--filter]}} 'type=container' --format '{{json .}}'",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-system.md#L32"
+        },
+        {
+          "description": "Afficher les informations sur le système Docker :",
+          "command": "docker system info",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-system.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-system.md"
+    },
+    {
+      "id": "tldr--02bf90c7ccf0",
+      "canonicalPath": "common/docker-image-rm.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker image rm",
+      "summary": "Supprimer une ou plusieurs images Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Supprimer une ou plusieurs images en fonction de leurs noms :",
+          "command": "docker {{[rmi|image rm]}} {{image1 image2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-rm.md#L8"
+        },
+        {
+          "description": "Supprimer une image en forçant la suppression :",
+          "command": "docker {{[rmi|image rm]}} {{[-f|--force]}} {{image}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-rm.md#L12"
+        },
+        {
+          "description": "Supprimer une image sans supprimer les parents non étiquetés :",
+          "command": "docker {{[rmi|image rm]}} --no-prune {{image}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-rm.md#L16"
+        },
+        {
+          "description": "Afficher l'aide :",
+          "command": "docker {{[rmi|image rm]}} --help",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-rm.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-rm.md"
+    },
+    {
+      "id": "tldr--0401ee0b3dde",
+      "canonicalPath": "common/docker-image-ls.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker image ls",
+      "summary": "Gérer les images Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Lister toutes les images Docker :",
+          "command": "docker {{[images|image ls]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-ls.md#L8"
+        },
+        {
+          "description": "Lister toutes les images Docker, y compris les intermédiaires :",
+          "command": "docker {{[images|image ls]}} {{[-a|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-ls.md#L12"
+        },
+        {
+          "description": "Lister les images Docker en mode silencieux (seulement les IDs numériques) :",
+          "command": "docker {{[images|image ls]}} {{[-q|--quiet]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-ls.md#L16"
+        },
+        {
+          "description": "Lister toutes les images Docker non utilisées par un conteneur :",
+          "command": "docker {{[images|image ls]}} {{[-f|--filter]}} dangling=true",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-ls.md#L20"
+        },
+        {
+          "description": "Lister les images Docker qui contiennent une sous-chaîne dans leur nom :",
+          "command": "docker {{[images|image ls]}} \"{{*nom*}}\"",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-ls.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-ls.md"
+    },
+    {
+      "id": "tldr--0926ca7b111e",
+      "canonicalPath": "common/msedit.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "msedit",
+      "title": "msedit",
+      "summary": "Cette commande est un alias de `edit`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "msedit--027074c6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr edit",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/msedit.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/msedit.md"
+    },
+    {
+      "id": "tldr--0ab218a8ed58",
+      "canonicalPath": "linux/resolvectl.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "resolvectl",
+      "title": "resolvectl",
+      "summary": "Résout les noms de domaine, les adresses IPV4 et IPv6, les enregistrements de ressources DNS et les services. Inspecte et reconfigure le résolveur DNS. Voir aussi : `dig`, `nslookup`, `host`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Affiche les paramètres DNS :",
+          "command": "resolvectl status",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/resolvectl.md#L10"
+        },
+        {
+          "description": "Résout les adresses IPv4 et IPv6 pour un ou plusieurs domaines :",
+          "command": "resolvectl query {{domaine1 domaine2 ...}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/resolvectl.md#L14"
+        },
+        {
+          "description": "Récupère le domaine d'une IP spécifiée :",
+          "command": "resolvectl query {{adresse_ip}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/resolvectl.md#L18"
+        },
+        {
+          "description": "Vide tous les caches DNS locaux :",
+          "command": "resolvectl flush-caches",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/resolvectl.md#L22"
+        },
+        {
+          "description": "Affiche les statistiques DNS (transactions, cache et verdicts DNSSEC) :",
+          "command": "resolvectl statistics",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/resolvectl.md#L26"
+        },
+        {
+          "description": "Récupère un enregistrement MX du domaine :",
+          "command": "resolvectl --legend={{no}} --type={{MX}} query {{domaine}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/resolvectl.md#L30"
+        },
+        {
+          "description": "Résout un enregistrement SRV, par exemple _xmpp-server._tcp gmail.com :",
+          "command": "resolvectl service _{{service}}._{{protocole}} {{nom}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/resolvectl.md#L34"
+        },
+        {
+          "description": "Récupère une clé TLS :",
+          "command": "resolvectl tlsa tcp {{domain}}:443",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/resolvectl.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/resolvectl.md"
+    },
+    {
+      "id": "tldr--0dd218e8e288",
+      "canonicalPath": "common/docker-container-logs.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container logs",
+      "summary": "Affiche les journaux d'un conteneur.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Afficher les journaux d'un conteneur :",
+          "command": "docker {{[logs|container logs]}} {{nom_du_conteneur}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-logs.md#L8"
+        },
+        {
+          "description": "Afficher les journaux d'un conteneur en les suivants :",
+          "command": "docker {{[logs|container logs]}} {{nom_du_conteneur}} {{[-f|--follow]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-logs.md#L12"
+        },
+        {
+          "description": "Afficher les 5 dernière lignes des journaux d'un conteneur :",
+          "command": "docker {{[logs|container logs]}} {{nom_du_conteneur}} {{[-n|--tail]}} 5",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-logs.md#L16"
+        },
+        {
+          "description": "Afficher les journaux d'un conteneur avec l'horodatage :",
+          "command": "docker {{[logs|container logs]}} {{nom_du_conteneur}} {{[-t|--timestamps]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-logs.md#L20"
+        },
+        {
+          "description": "Afficher les journaux d'un conteneur depuis un certain temps (i.e. 23m, 10s, 2013-01-02T13:23:37) :",
+          "command": "docker {{[logs|container logs]}} {{nom_du_conteneur}} --until {{temps}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-logs.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-logs.md"
+    },
+    {
+      "id": "tldr--13b9e1163c51",
+      "canonicalPath": "common/docker-container-exec.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container exec",
+      "summary": "Exécute une commande dans un conteneur déjà en cours d'exécution.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Entre dans un shell interactif dans un conteneur en cours d'exécution :",
+          "command": "docker {{[exec|container exec]}} {{[-it|--interactive --tty]}} {{nom_du_conteneur}} {{/bin/bash}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-exec.md#L8"
+        },
+        {
+          "description": "Exécute une commande en arrière-plan (détachée) dans un conteneur en cours d'exécution :",
+          "command": "docker {{[exec|container exec]}} {{[-d|--detach]}} {{nom_du_conteneur}} {{commande}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-exec.md#L12"
+        },
+        {
+          "description": "Sélectionne le répertoire de travail pour une commande donnée à exécuter :",
+          "command": "docker {{[exec|container exec]}} {{[-it|--interactive --tty]}} {{[-w|--workdir]}} {{chemin/vers/le/répertoire}} {{nom_du_conteneur}} {{commande}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-exec.md#L16"
+        },
+        {
+          "description": "Exécute une commande en arrière-plan sur un conteneur existant mais garde `stdin` ouvert :",
+          "command": "docker {{[exec|container exec]}} {{[-i|--interactive]}} {{[-d|--detach]}} {{nom_du_conteneur}} {{commande}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-exec.md#L20"
+        },
+        {
+          "description": "Définit une variable d'environnement dans une session Bash en cours d'exécution :",
+          "command": "docker {{[exec|container exec]}} {{[-it|--interactive --tty]}} {{[-e|--env]}} {{variable_d_environnement}}={{valeur}} {{nom_du_conteneur}} {{/bin/bash}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-exec.md#L24"
+        },
+        {
+          "description": "Exécute une commande en tant qu'utilisateur spécifique :",
+          "command": "docker {{[exec|container exec]}} {{[-u|--user]}} {{utilisateur}} {{nom_du_conteneur}} {{commande}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-exec.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-exec.md"
+    },
+    {
+      "id": "tldr--153ee761161d",
+      "canonicalPath": "common/docker-container-run.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container run",
+      "summary": "Exécuter une commande dans un nouveau conteneur Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Exécute une commande dans un nouveau conteneur Docker avec une image étiquetée :",
+          "command": "docker {{[run|container run]}} {{image:étiquette}} {{commande}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-run.md#L8"
+        },
+        {
+          "description": "Exécute une commande dans un nouveau conteneur Docker en mode détaché (en arrière-plan) et affiche l'ID du conteneur :",
+          "command": "docker {{[run|container run]}} {{[-d|--detach]}} {{image}} {{commande}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-run.md#L12"
+        },
+        {
+          "description": "Exécute une command dans un conteneur éphémère avec une mode interactif et un terminal pseudo-TTY :",
+          "command": "docker {{[run|container run]}} --rm {{[-it|--interactive --tty]}} {{image}} {{commande}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-run.md#L16"
+        },
+        {
+          "description": "Exécute une commande dans un nouveau conteneur avec des variables d'environnement :",
+          "command": "docker {{[run|container run]}} {{[-e|--env]}} '{{variable}}={{valeur}}' {{[-e|--env]}} {{variable}} {{image}} {{commande}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-run.md#L20"
+        },
+        {
+          "description": "Exécute une commande dans un nouveau conteneur avec des volumes montés :",
+          "command": "docker {{[run|container run]}} {{[-v|--volume]}} /{{chemin/vers/l_hôte}}:/{{chemin/vers/le/conteneur}} {{image}} {{commande}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-run.md#L24"
+        },
+        {
+          "description": "Exécute une commande dans un nouveau conteneur avec des ports publiés :",
+          "command": "docker {{[run|container run]}} {{[-p|--publish]}} {{port_de_l_hôte}}:{{port_du_conteneur}} {{image}} {{commande}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-run.md#L28"
+        },
+        {
+          "description": "Exécute une commande dans un nouveau conteneur en écrasant l'entrée du point d'entrée de l'image :",
+          "command": "docker {{[run|container run]}} --entrypoint {{commande}} {{image}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-run.md#L32"
+        },
+        {
+          "description": "Exécute une commande dans un nouveau conteneur en le connectant à un réseau :",
+          "command": "docker {{[run|container run]}} --network {{reseau}} {{image}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-run.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-run.md"
+    },
+    {
+      "id": "tldr--16b7ecbd49e5",
+      "canonicalPath": "common/impacket-ntfs-read.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "impacket-ntfs-read",
+      "title": "impacket-ntfs-read",
+      "summary": "Cette commande est un alias de `ntfs-read.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr ntfs-read.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-ntfs-read.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-ntfs-read.md"
+    },
+    {
+      "id": "tldr--19061e7e74a9",
+      "canonicalPath": "osx/gsplit.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gsplit",
+      "title": "gsplit",
+      "summary": "Cette commande est un alias de `split`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr {{[-p|--platform]}} common split",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gsplit.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gsplit.md"
+    },
+    {
+      "id": "tldr--199d73a155b9",
+      "canonicalPath": "common/arping.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "arping",
+      "title": "arping",
+      "summary": "Découvre et sonde des hôtes dans un réseau en utilisant le protocol ARP. Très utile pour la découverte d'adresse MAC.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "arping--97222e20"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Ping un hôte par paquets de requête ARP :",
+          "command": "sudo arping {{ip_hôte}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/arping.md#L9"
+        },
+        {
+          "description": "Ping un hôte sur une interface spécifique :",
+          "command": "sudo arping -I {{interface}} {{ip_hôte}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/arping.md#L13"
+        },
+        {
+          "description": "Ping un hôte et arrête à la première réponse :",
+          "command": "sudo arping -f {{ip_hôte}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/arping.md#L17"
+        },
+        {
+          "description": "Ping un hôte un certain nombre de fois :",
+          "command": "sudo arping -c {{nombre_d_appel}} {{ip_hôte}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/arping.md#L21"
+        },
+        {
+          "description": "Diffuse les paquets de requête ARP pour mettre à jour les caches ARP voisin :",
+          "command": "sudo arping -U {{ip_à_diffuser}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/arping.md#L25"
+        },
+        {
+          "description": "Détecte les adresses IP dupliquées dans le réseau en envoyant les requêtes ARP avec une expiration de 3 secondes :",
+          "command": "sudo arping -D -w {{3}} {{ip_à_vérifier}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/arping.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/arping.md"
+    },
+    {
+      "id": "tldr--199ea2210f3e",
+      "canonicalPath": "windows/saracmd-expertexperienceadmintask.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "SaRAcmd",
+      "title": "SaRAcmd ExpertExperienceAdminTask",
+      "summary": "Cette commande est un alias de `GetHelpCmd.exe -S ExpertExperienceAdminTask`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr gethelpcmd-expertexperienceadmintask",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/saracmd-expertexperienceadmintask.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/saracmd-expertexperienceadmintask.md"
+    },
+    {
+      "id": "tldr--1e96212795d7",
+      "canonicalPath": "common/fossil-ci.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "fossil",
+      "title": "fossil ci",
+      "summary": "Cette commande est un alias de `fossil commit`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "fossil--8f832d59",
+        "fossil--ebb34986"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr fossil commit",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/fossil-ci.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/fossil-ci.md"
+    },
+    {
+      "id": "tldr--1f5005c7ce57",
+      "canonicalPath": "common/docker-commit.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker commit",
+      "summary": "Cette commande est un alias de `docker container commit`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container commit",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-commit.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-commit.md"
+    },
+    {
+      "id": "tldr--22b65ac47d8f",
+      "canonicalPath": "common/npm-it.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "npm",
+      "title": "npm it",
+      "summary": "Cette commande est un alias de `npm install-test`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nodejs-lts-np--3e42c32b",
+        "nodejs-np--3e42c32b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr npm install-test",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-it.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-it.md"
+    },
+    {
+      "id": "tldr--2497bd5ea082",
+      "canonicalPath": "common/docker-inspect.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker inspect",
+      "summary": "Retour d'informations de bas niveau sur les objets Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Afficher les informations de configuration d'un conteneur, image ou volume en utilisant un nom ou un ID :",
+          "command": "docker inspect {{conteneur|image|id}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-inspect.md#L8"
+        },
+        {
+          "description": "Afficher l'adresse IP d'un conteneur :",
+          "command": "docker inspect {{[-f|--format]}} '\\{\\{range.NetworkSettings.Networks\\}\\}\\{\\{.IPAddress\\}\\}\\{\\{end\\}\\}' {{conteneur}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-inspect.md#L12"
+        },
+        {
+          "description": "Afficher le chemin du fichier journal d'un conteneur :",
+          "command": "docker inspect {{[-f|--format]}} '\\{\\{.LogPath\\}\\}' {{conteneur}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-inspect.md#L16"
+        },
+        {
+          "description": "Afficher le nom de l'image d'un conteneur :",
+          "command": "docker inspect {{[-f|--format]}} '\\{\\{.Config.Image\\}\\}' {{conteneur}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-inspect.md#L20"
+        },
+        {
+          "description": "Afficher les informations de configuration en JSON :",
+          "command": "docker inspect {{[-f|--format]}} '\\{\\{json .Config\\}\\}' {{conteneur}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-inspect.md#L24"
+        },
+        {
+          "description": "Afficher toutes les liaisons de port :",
+          "command": "docker inspect {{[-f|--format]}} '\\{\\{range $p, $conf := .NetworkSettings.Ports\\}\\} \\{\\{$p\\}\\} -> \\{\\{(index $conf 0).HostPort\\}\\} \\{\\{end\\}\\}' {{conteneur}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-inspect.md#L28"
+        },
+        {
+          "description": "Montrer l'aide :",
+          "command": "docker inspect",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-inspect.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-inspect.md"
+    },
+    {
+      "id": "tldr--2708bb620dd3",
+      "canonicalPath": "common/docker-volume.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker volume",
+      "summary": "Gérer les volumes de Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Créer un volume :",
+          "command": "docker volume create {{nom_du_volume}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-volume.md#L8"
+        },
+        {
+          "description": "Créer un volume avec une étiquette spécifique :",
+          "command": "docker volume create --label {{étiuette}} {{nom_du_volume}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-volume.md#L12"
+        },
+        {
+          "description": "Créer un volume `tmpfs` avec une taille de 100 Mo et un uid de 1000 :",
+          "command": "docker volume create {{[-o|--opt]}} {{type}}={{tmpfs}} {{[-o|--opt]}} {{device}}={{tmpfs}} {{[-o|--opt]}} {{o}}={{size=100m,uid=1000}} {{nom_du_volume}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-volume.md#L16"
+        },
+        {
+          "description": "Lister tous les volumes :",
+          "command": "docker volume ls",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-volume.md#L20"
+        },
+        {
+          "description": "Supprimer un volume :",
+          "command": "docker volume rm {{nom_du_volume}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-volume.md#L24"
+        },
+        {
+          "description": "Afficher des informations sur un volume :",
+          "command": "docker volume inspect {{nom_du_volume}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-volume.md#L28"
+        },
+        {
+          "description": "Supprimer tous les volumes locaux non utilisés :",
+          "command": "docker volume prune",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-volume.md#L32"
+        },
+        {
+          "description": "Afficher l'aide pour une sous-commande :",
+          "command": "docker volume {{sous_commande}} --help",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-volume.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-volume.md"
+    },
+    {
+      "id": "tldr--2a78b3ee189c",
+      "canonicalPath": "common/docker-stop.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker stop",
+      "summary": "Cette commande est un alias de `docker container stop`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container stop",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-stop.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-stop.md"
+    },
+    {
+      "id": "tldr--2b8fda5524ac",
+      "canonicalPath": "common/r2.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "r2",
+      "title": "r2",
+      "summary": "Cette commande est un alias de `radare2`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "radare2--78a65d03"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr radare2",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/r2.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/r2.md"
+    },
+    {
+      "id": "tldr--323131e3d3c0",
+      "canonicalPath": "common/zstdmt.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "zstdmt",
+      "title": "zstdmt",
+      "summary": "Cette commande est un alias de `zstd --threads 0`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr zstd",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/zstdmt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/zstdmt.md"
+    },
+    {
+      "id": "tldr--32a3a9e1a053",
+      "canonicalPath": "common/docker-image.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker image",
+      "summary": "Gérer les images Docker. Voir aussi : `docker build`, `docker image pull`, `docker image rm`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Lister les images Docker locales :",
+          "command": "docker {{[images|image ls]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image.md#L9"
+        },
+        {
+          "description": "Supprimer les images Docker locales inutilisées :",
+          "command": "docker image prune",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image.md#L13"
+        },
+        {
+          "description": "Supprimer toutes les images inutilisées (pas seulement celles sans étiquette) :",
+          "command": "docker image prune {{[-a|--all]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image.md#L17"
+        },
+        {
+          "description": "Afficher l'historique d'une image Docker locale :",
+          "command": "docker {{[history|image history]}} {{image}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image.md"
+    },
+    {
+      "id": "tldr--361927b7894d",
+      "canonicalPath": "linux/apt-get.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "apt-get",
+      "title": "apt-get",
+      "summary": "Utilitaire de gestion des paquets Debian et Ubuntu. Recherche des paquets en utilisant `apt-cache`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Mise à jour de la liste des paquets et des versions disponibles (il est recommandé de l'exécuter avant les autres commandes `apt-get`) :",
+          "command": "sudo apt-get update",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apt-get.md#L9"
+        },
+        {
+          "description": "Installation d'un paquet, ou mise à jour avec la dernière version disponible :",
+          "command": "sudo apt-get install {{package}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apt-get.md#L13"
+        },
+        {
+          "description": "Suppression d'un paquet :",
+          "command": "sudo apt-get remove {{package}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apt-get.md#L17"
+        },
+        {
+          "description": "Suppression d'un paquet et de ses fichiers de configuration :",
+          "command": "sudo apt-get purge {{package}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apt-get.md#L21"
+        },
+        {
+          "description": "Mise à jour de tous les paquets installés vers les dernières versions disponibles :",
+          "command": "sudo apt-get upgrade",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apt-get.md#L25"
+        },
+        {
+          "description": "Nettoyage du dépôt local - supprime les fichiers de paquets (`.deb`) des téléchargements interrompus qui ne peuvent plus être téléchargés :",
+          "command": "sudo apt-get autoclean",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apt-get.md#L29"
+        },
+        {
+          "description": "Suppression de tous les paquets qui ne sont plus nécessaires :",
+          "command": "sudo apt-get autoremove",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apt-get.md#L33"
+        },
+        {
+          "description": "Mise à jour des paquets installés (comme la commande `upgrade`), mais avec suppression des paquets obsolètes et installation des paquets supplémentaires pour répondre aux nouvelles dépendances :",
+          "command": "sudo apt-get dist-upgrade",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apt-get.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apt-get.md"
+    },
+    {
+      "id": "tldr--378a9d4adbb2",
+      "canonicalPath": "linux/xterm.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "xterm",
+      "title": "xterm",
+      "summary": "Emulateur de terminal pour le système de fenêtrage X Window System.",
+      "platform": "linux",
+      "softwareIds": [
+        "xterm--015d0cc1"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Ouvre une nouvelle fenêtre de terminal ayant pour titre `Exemple` :",
+          "command": "xterm -T {{Exemple}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xterm.md#L8"
+        },
+        {
+          "description": "Ouvre une nouvelle fenêtre de terminal en mode plein écran :",
+          "command": "xterm -fullscreen",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xterm.md#L12"
+        },
+        {
+          "description": "Ouvre une fenêtre de terminal avec un fond d'écran bleu sombre (`darkblue`) et une couleur de police jaune (`yellow`) :",
+          "command": "xterm -bg {{darkblue}} -fg {{yellow}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xterm.md#L16"
+        },
+        {
+          "description": "Ouvre une fenêtre de terminal de 100 charactères de large (par ligne) et 35 lignes de hauteur, positionnée sur l'écran au point x=200px, y=20px :",
+          "command": "xterm -geometry {{100}}x{{35}}+{{200}}+{{20}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xterm.md#L20"
+        },
+        {
+          "description": "Ouvre une fenêtre de teminal en utilisant la police `Serif` en taille 20 :",
+          "command": "xterm -fa '{{Serif}}' -fs {{20}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xterm.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xterm.md"
+    },
+    {
+      "id": "tldr--38809eef7fbb",
+      "canonicalPath": "common/docker-image-pull.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker image pull",
+      "summary": "Télécharge une image Docker depuis le registre.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Télécharge une image Docker spécifique :",
+          "command": "docker {{[pull|image pull]}} {{image}}:{{étiquette}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-pull.md#L8"
+        },
+        {
+          "description": "Télécharge une image Docker spécifique en mode silencieux :",
+          "command": "docker {{[pull|image pull]}} {{[-q|--quiet]}} {{image}}:{{étiquette}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-pull.md#L12"
+        },
+        {
+          "description": "Télécharge toutes les étiquettes d'une image Docker spécifique :",
+          "command": "docker {{[pull|image pull]}} {{[-a|--all-tags]}} {{image}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-pull.md#L16"
+        },
+        {
+          "description": "Télécharge un image Docker pour une plateforme spécifique :",
+          "command": "docker {{[pull|image pull]}} --platform {{linux/amd64}} {{image}}:{{étiquette}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-pull.md#L20"
+        },
+        {
+          "description": "Affiche l'aide :",
+          "command": "docker {{[pull|image pull]}} --help",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-pull.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-pull.md"
+    },
+    {
+      "id": "tldr--395051ce6233",
+      "canonicalPath": "common/docker-image-save.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker image save",
+      "summary": "Exporeter une ou plusieurs images Docker dans une archive.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Sauvegarder une image en redirigeant la sortie standard vers une archive `.tar` :",
+          "command": "docker {{[save|image save]}} {{image}}:{{etquette}} > {{chemin/vers/fichier.tar}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-save.md#L8"
+        },
+        {
+          "description": "Sauvegarder une image dans une archive `.tar` :",
+          "command": "docker {{[save|image save]}} {{[-o|--output]}} {{chemin/vers/fichier.tar}} {{image}}:{{etquette}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-save.md#L12"
+        },
+        {
+          "description": "Sauvegarder toutes les étiquettes de l'image :",
+          "command": "docker {{[save|image save]}} {{[-o|--output]}} {{chemin/vers/fichier.tar}} {{nom_de_l_image}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-save.md#L16"
+        },
+        {
+          "description": "Sélectionner des étiquettes particulières d'une image à sauvegarder :",
+          "command": "docker {{[save|image save]}} {{[-o|--output]}} {{chemin/vers/fichier.tar}} {{nom_de_l_image:etquette1 nom_de_l_image:etquette2 ...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-save.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-save.md"
+    },
+    {
+      "id": "tldr--3bd717fa6709",
+      "canonicalPath": "common/docker-container-cp.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container cp",
+      "summary": "Copier des fichiers ou des répertoires entre les systèmes de fichiers hôte et conteneur.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Copier un fichier ou un répertoire de l'hôte vers un conteneur :",
+          "command": "docker {{[cp|container cp]}} {{chemin/vers/le_fichier_ou_le_dossier_de_l_hote}} {{nom_du_conteneur}}:{{chemin/vers/le_fichier_ou_le_dossier_de_conteneur}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-cp.md#L8"
+        },
+        {
+          "description": "Copier un fichier ou un répertoire d'un conteneur vers l'hôte :",
+          "command": "docker {{[cp|container cp]}} {{nom_du_conteneur}}:{{chemin/vers/le_fichier_ou_le_dossier_de_conteneur}} {{chemin/vers/le_fichier_ou_le_dossier_de_l_hote}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-cp.md#L12"
+        },
+        {
+          "description": "Copier un fichier ou un répertoire de l'hôte vers un conteneur, en suivant les liens symboliques (copie les fichiers liés directement, pas les liens symboliques eux-mêmes) :",
+          "command": "docker {{[cp|container cp]}} {{[-L|--follow-link]}} {{chemin/vers/le_lien_symbolique_de_l_hote}} {{nom_du_conteneur}}:{{chemin/vers/le_fichier_ou_le_dossier_de_conteneur}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-cp.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-cp.md"
+    },
+    {
+      "id": "tldr--3bf74097b005",
+      "canonicalPath": "linux/compose.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "compose",
+      "title": "compose",
+      "summary": "Cette commande est un alias de `run-mailcap --action=compose`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr run-mailcap",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/compose.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/compose.md"
+    },
+    {
+      "id": "tldr--3c6395a7bac4",
+      "canonicalPath": "common/docker-save.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker save",
+      "summary": "Cette commande est un alias de `docker image save`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker image save",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-save.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-save.md"
+    },
+    {
+      "id": "tldr--3df39aa3dce1",
+      "canonicalPath": "common/docker-container-rm.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container rm",
+      "summary": "Supprime un ou plusieurs conteneurs.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Supprimer des conteneurs :",
+          "command": "docker {{[rm|container rm]}} {{conteneur1 conteneur2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-rm.md#L8"
+        },
+        {
+          "description": "Supprimer des conteneurs par la force :",
+          "command": "docker {{[rm|container rm]}} {{[-f|--force]}} {{conteneur1 conteneur2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-rm.md#L12"
+        },
+        {
+          "description": "Supprimer un conteneur et ses volumes :",
+          "command": "docker {{[rm|container rm]}} {{[-v|--volumes]}} {{conteneur}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-rm.md#L16"
+        },
+        {
+          "description": "Affiche l'aide :",
+          "command": "docker {{[rm|container rm]}} --help",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-rm.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-rm.md"
+    },
+    {
+      "id": "tldr--3e38ab040dca",
+      "canonicalPath": "common/docker-images.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker images",
+      "summary": "Cette commande est un alias de `docker image ls`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker image ls",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-images.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-images.md"
+    },
+    {
+      "id": "tldr--3f6b798df9d7",
+      "canonicalPath": "common/nix-build.2.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "nix-build",
+      "title": "nix-build",
+      "summary": "Construit une expression Nix. Voir aussi : `nix build.3`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Construit une expression Nix :",
+          "command": "nix-build '<nixpkgs>' {{[-A|--attr]}} {{firefox}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/nix-build.2.md#L9"
+        },
+        {
+          "description": "Construit une expression Nix en mode bac à sable (sur un système non-NixOS) :",
+          "command": "nix-build '<nixpkgs>' {{[-A|--attr]}} {{firefox}} --option sandbox true",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/nix-build.2.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/nix-build.2.md"
+    },
+    {
+      "id": "tldr--420f9167c983",
+      "canonicalPath": "common/docker-container-start.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container start",
+      "summary": "Lancer un ou plusieurs conteneurs arrêtés.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Lancer un conteneur Docker :",
+          "command": "docker {{[start|container start]}} {{conteneur}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-start.md#L8"
+        },
+        {
+          "description": "Lancer un conteneur, en attachant `stdout` et `stderr` et en transférant les signaux :",
+          "command": "docker {{[start|container start]}} {{[-a|--attach]}} {{conteneur}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-start.md#L12"
+        },
+        {
+          "description": "Lancer un ou plusieurs conteneurs séparés par des espaces :",
+          "command": "docker {{[start|container start]}} {{conteneur1 conteneur2 ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-start.md#L16"
+        },
+        {
+          "description": "Afficher l'aide :",
+          "command": "docker {{[start|container start]}} --help",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-start.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-start.md"
+    },
+    {
+      "id": "tldr--42e589450191",
+      "canonicalPath": "common/import.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "import",
+      "title": "import",
+      "summary": "Cette commande est un alias de `magick import`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr magick import",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/import.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/import.md"
+    },
+    {
+      "id": "tldr--46e38abdd8a9",
+      "canonicalPath": "common/docker-container-rename.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container rename",
+      "summary": "Renomme un conteneur.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Renomme un conteneur :",
+          "command": "docker {{[rename|container rename]}} {{conteneur}} {{nouveau_nom}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-rename.md#L8"
+        },
+        {
+          "description": "Affiche l'aide :",
+          "command": "docker {{[rename|container rename]}} --help",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-rename.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-rename.md"
+    },
+    {
+      "id": "tldr--470dc0952961",
+      "canonicalPath": "common/lzgrep.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "lzgrep",
+      "title": "lzgrep",
+      "summary": "Cette commande est un alias de `xzgrep`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/lzgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/lzgrep.md"
+    },
+    {
+      "id": "tldr--48eac75c616d",
+      "canonicalPath": "common/impacket-ping6.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "impacket-ping6",
+      "title": "impacket-ping6",
+      "summary": "Cette commande est un alias de `ping6.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr ping6.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-ping6.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-ping6.md"
+    },
+    {
+      "id": "tldr--4ee94646f1a3",
+      "canonicalPath": "common/npm-start.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "npm",
+      "title": "npm start",
+      "summary": "Cette commande est un alias de `npm run start`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nodejs-lts-np--3e42c32b",
+        "nodejs-np--3e42c32b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr npm run",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-start.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-start.md"
+    },
+    {
+      "id": "tldr--52184ff80bc1",
+      "canonicalPath": "common/docker-top.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker top",
+      "summary": "Cette commande est un alias de `docker container top`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container top",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-top.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-top.md"
+    },
+    {
+      "id": "tldr--575535a5142e",
+      "canonicalPath": "common/fossil-new.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "fossil",
+      "title": "fossil new",
+      "summary": "Cette commande est un alias de `fossil init`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "fossil--8f832d59",
+        "fossil--ebb34986"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr fossil init",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/fossil-new.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/fossil-new.md"
+    },
+    {
+      "id": "tldr--57bdf6b8337e",
+      "canonicalPath": "common/npm-stop.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "npm",
+      "title": "npm stop",
+      "summary": "Cette commande est un alias de `npm run stop`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nodejs-lts-np--3e42c32b",
+        "nodejs-np--3e42c32b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr npm run",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-stop.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-stop.md"
+    },
+    {
+      "id": "tldr--595b3e34c5f2",
+      "canonicalPath": "common/docker-build.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker build",
+      "summary": "Construit une image à partir d'un Dockerfile.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Construire une image Docker en utilisant le Dockerfile du répertoire courant :",
+          "command": "docker build .",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-build.md#L8"
+        },
+        {
+          "description": "Construire une image Docker à partir d'un Dockerfile situé à une URL précisée :",
+          "command": "docker build {{github.com/creack/docker-firefox}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-build.md#L12"
+        },
+        {
+          "description": "Construire une image Docker et l'étiquette :",
+          "command": "docker build {{[-t|--tag]}} {{nom:etiquette}} .",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-build.md#L16"
+        },
+        {
+          "description": "Construit une image Docker sans contexte de construction :",
+          "command": "docker < {{Dockerfile}} build {{[-t|--tag]}} {{nom:etiquette}} -",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-build.md#L20"
+        },
+        {
+          "description": "Ne pas utiliser le cache lors de la construction de l'image :",
+          "command": "docker build --no-cache {{[-t|--tag]}} {{nom:etiquette}} .",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-build.md#L24"
+        },
+        {
+          "description": "Construire une image Docker utilisant un Dockerfile spécifique :",
+          "command": "docker build {{[-f|--file]}} {{Dockerfile}} .",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-build.md#L28"
+        },
+        {
+          "description": "Construire avec des variables personnalisées définies à la volée :",
+          "command": "docker build --build-arg {{HTTP_PROXY=http://10.20.30.2:1234}} --build-arg {{FTP_PROXY=http://40.50.60.5:4567}} .",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-build.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-build.md"
+    },
+    {
+      "id": "tldr--5c9b5e17e6c0",
+      "canonicalPath": "osx/gstat.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gstat",
+      "title": "gstat",
+      "summary": "Cette commande est un alias de `stat`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr {{[-p|--platform]}} common stat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gstat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gstat.md"
+    },
+    {
+      "id": "tldr--5d8307b2b2da",
+      "canonicalPath": "osx/gmake.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gmake",
+      "title": "gmake",
+      "summary": "Cette commande est un alias de `make`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr make",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gmake.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gmake.md"
+    },
+    {
+      "id": "tldr--5f4bc070587d",
+      "canonicalPath": "common/bundler.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "bundler",
+      "title": "bundler",
+      "summary": "Cette commande est un alias de `bundle`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr bundle",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/bundler.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/bundler.md"
+    },
+    {
+      "id": "tldr--5fd6a34ab3af",
+      "canonicalPath": "common/docker-rename.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker rename",
+      "summary": "Cette commande est un alias de `docker container rename`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container rename",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-rename.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-rename.md"
+    },
+    {
+      "id": "tldr--5fdc9664872d",
+      "canonicalPath": "common/npm-restart.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "npm",
+      "title": "npm restart",
+      "summary": "Cette commande est un alias de `npm run restart`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nodejs-lts-np--3e42c32b",
+        "nodejs-np--3e42c32b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr npm run",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-restart.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-restart.md"
+    },
+    {
+      "id": "tldr--650c23cd4cc5",
+      "canonicalPath": "common/docker-container-remove.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container remove",
+      "summary": "Cette commande est un alias de `docker container rm`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container rm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-remove.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-remove.md"
+    },
+    {
+      "id": "tldr--66d9ff30b50f",
+      "canonicalPath": "common/kafkacat.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "kafkacat",
+      "title": "kafkacat",
+      "summary": "Cette commande est un alias de `kcat`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr kcat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/kafkacat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/kafkacat.md"
+    },
+    {
+      "id": "tldr--67daa028aa5b",
+      "canonicalPath": "common/docker-diff.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker diff",
+      "summary": "Cette commande est un alias de `docker container diff`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container diff",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-diff.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-diff.md"
+    },
+    {
+      "id": "tldr--7014ec25deca",
+      "canonicalPath": "common/docker-rm.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker rm",
+      "summary": "Cette commande est un alias de `docker container rm`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container rm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-rm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-rm.md"
+    },
+    {
+      "id": "tldr--70ef3eca944b",
+      "canonicalPath": "common/docker-container.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container",
+      "summary": "Gère les conteneurs Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Liste les conteneurs Dockers en cours d'exécution :",
+          "command": "docker {{[ps|container ls]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container.md#L8"
+        },
+        {
+          "description": "Démarre un ou plusieurs conteneur arrêtés :",
+          "command": "docker {{[start|container start]}} {{nom_conteneur_1 nom_conteneur_2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container.md#L12"
+        },
+        {
+          "description": "Tue un ou plusieurs conteneurs en cours d'exécution :",
+          "command": "docker {{[kill|container kill]}} {{nom_conteneur_1 nom_conteneur_2 ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container.md#L16"
+        },
+        {
+          "description": "Arrête un ou plusieurs conteneurs en cours d'exécution :",
+          "command": "docker {{[stop|container stop]}} {{nom_conteneur_1 nom_conteneur_2 ...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container.md#L20"
+        },
+        {
+          "description": "Mets en pause tous les processus d'un ou plusieurs conteneurs :",
+          "command": "docker {{[pause|container pause]}} {{nom_conteneur_1 nom_conteneur_2 ...}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container.md#L24"
+        },
+        {
+          "description": "Affiche des informations détaillées sur un ou plusieurs conteneurs :",
+          "command": "docker container inspect {{nom_conteneur_1 nom_conteneur_2 ...}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container.md#L28"
+        },
+        {
+          "description": "Exporte le système de fichiers d'un conteneur sous forme d'archive `.tar` :",
+          "command": "docker {{[export|container export]}} {{nom_conteneur}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container.md#L32"
+        },
+        {
+          "description": "Crée une nouvelle image à partir des changements d'un conteneur :",
+          "command": "docker {{[commit|container commit]}} {{nom_conteneur}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container.md"
+    },
+    {
+      "id": "tldr--73d1242756d9",
+      "canonicalPath": "linux/apk.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "apk",
+      "title": "apk",
+      "summary": "Gestionnaire de paquet d'Alpine Linux.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Mets à jour les indexes de tous les dépôts distants :",
+          "command": "apk update",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apk.md#L8"
+        },
+        {
+          "description": "Installe un nouveau paquet :",
+          "command": "apk add {{paquet}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apk.md#L12"
+        },
+        {
+          "description": "Désinstalle un paquet :",
+          "command": "apk del {{paquet}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apk.md#L16"
+        },
+        {
+          "description": "Essaye de réparer un paquet ou de mettre à jour un paquet sans ses dépendances :",
+          "command": "apk fix {{paquet}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apk.md#L20"
+        },
+        {
+          "description": "Recherche des paquets à partir d'un mot-clé :",
+          "command": "apk search {{mot_cle}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apk.md#L24"
+        },
+        {
+          "description": "Obtiens des information à propos d'un paquet précis :",
+          "command": "apk info {{paquet}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apk.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/apk.md"
+    },
+    {
+      "id": "tldr--75c9eb5d660b",
+      "canonicalPath": "windows/ventoy.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "ventoy",
+      "title": "ventoy",
+      "summary": "Cette commande est un alias de `Ventoy2Disk`.",
+      "platform": "windows",
+      "softwareIds": [
+        "ventoy--3371939f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr ventoy2disk",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/ventoy.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/ventoy.md"
+    },
+    {
+      "id": "tldr--7a09878334d2",
+      "canonicalPath": "common/docker-container-ls.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container ls",
+      "summary": "Lister les conteneurs Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Lister les conteneurs Docker en cours d'exécution :",
+          "command": "docker {{[ps|container ls]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-ls.md#L8"
+        },
+        {
+          "description": "Lister tous les conteneurs Docker (en cours d'exécution et arrêtés) :",
+          "command": "docker {{[ps|container ls]}} {{[-a|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-ls.md#L12"
+        },
+        {
+          "description": "Afficher le dernier conteneur Docker créé (avec tous les états) :",
+          "command": "docker {{[ps|container ls]}} {{[-l|--latest]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-ls.md#L16"
+        },
+        {
+          "description": "Afficher les conteneurs avec une chaine de caractère dans leur nom :",
+          "command": "docker {{[ps|container ls]}} {{[-f|--filter]}} \"name={{name}}\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-ls.md#L20"
+        },
+        {
+          "description": "Afficher les conteneurs avec une même image comme parent :",
+          "command": "docker {{[ps|container ls]}} {{[-f|--filter]}} \"ancestor={{image}}:{{etiquette}}\"",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-ls.md#L24"
+        },
+        {
+          "description": "Afficher les conteneurs avec un code de sorti spécifique :",
+          "command": "docker {{[ps|container ls]}} {{[-f|--filter]}} \"exited={{code}}\" {{[-a|--all]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-ls.md#L28"
+        },
+        {
+          "description": "Afficher les conteneurs avec un statut spécifique (créé, en cours d'exécution, en cours de suppresion, en pause, arrêté, mort) :",
+          "command": "docker {{[ps|container ls]}} {{[-f|--filter]}} \"status={{status}}\"",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-ls.md#L32"
+        },
+        {
+          "description": "Afficher les conteneurs avec un point de montage spécifique :",
+          "command": "docker {{[ps|container ls]}} {{[-f|--filter]}} \"volume={{chemin/vers/le/dossier}}\" --format \"table {{.ID}}\\t{{.Image}}\\t{{.Names}}\\t{{.Mounts}}\"",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-ls.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-ls.md"
+    },
+    {
+      "id": "tldr--7e4f9262aeb0",
+      "canonicalPath": "osx/gnproc.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gnproc",
+      "title": "gnproc",
+      "summary": "Cette commande est un alias de `nproc`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr nproc",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gnproc.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gnproc.md"
+    },
+    {
+      "id": "tldr--81af6037f97b",
+      "canonicalPath": "common/docker-swarm.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker swarm",
+      "summary": "Outil d'orchestration de conteneurs.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Initialiser un cluster swarm :",
+          "command": "docker swarm init",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-swarm.md#L8"
+        },
+        {
+          "description": "Afficher le jeton pour rejoindre un cluster swarm en tant que nœud manager ou worker :",
+          "command": "docker swarm join-token {{worker|manager}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-swarm.md#L12"
+        },
+        {
+          "description": "Rejoindre un nouveau nœud au cluster :",
+          "command": "docker swarm join --token {{jeton}} {{url_du_manager:2377}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-swarm.md#L16"
+        },
+        {
+          "description": "Supprimer un worker du cluster (à exécuter dans le nœud worker) :",
+          "command": "docker swarm leave",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-swarm.md#L20"
+        },
+        {
+          "description": "Afficher le certificat CA actuel au format PEM :",
+          "command": "docker swarm ca",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-swarm.md#L24"
+        },
+        {
+          "description": "Changer la certificat CA actuel et afficher le nouveau certificat :",
+          "command": "docker swarm ca --rotate",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-swarm.md#L28"
+        },
+        {
+          "description": "Changer la période de validité des certificats des nœuds :",
+          "command": "docker swarm update --cert-expiry {{heures}}h{{minutes}}m{{secondes}}s",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-swarm.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-swarm.md"
+    },
+    {
+      "id": "tldr--8453c1ca3116",
+      "canonicalPath": "common/impacket-reg.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "impacket-reg",
+      "title": "impacket-reg",
+      "summary": "Cette commande est un alias de `reg.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr reg.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-reg.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-reg.md"
+    },
+    {
+      "id": "tldr--85d212a86e03",
+      "canonicalPath": "common/docker-image-load.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker image load",
+      "summary": "Charge des images Docker depuis des fichiers ou `stdin`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Charge une image Docker depuis `stdin` :",
+          "command": "docker < {{chemin/vers/fichier_image.tar}} {{[load|image load]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-load.md#L8"
+        },
+        {
+          "description": "Charge une image Docker depuis un fichier spécifique :",
+          "command": "docker {{[load|image load]}} {{[-i|--input]}} {{chemin/vers/fichier_image.tar}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-load.md#L12"
+        },
+        {
+          "description": "Charge une image Docker depuis un fichier spécifique en mode silencieux :",
+          "command": "docker {{[load|image load]}} {{[-q|--quiet]}} {{[-i|--input]}} {{chemin/vers/fichier_image.tar}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-load.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-image-load.md"
+    },
+    {
+      "id": "tldr--87f6957c0ee7",
+      "canonicalPath": "windows/saracmd-officeactivationscenario.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "SaRAcmd",
+      "title": "SaRAcmd OfficeActivationScenario",
+      "summary": "Cette commande est un alias de `GetHelpCmd.exe -S OfficeActivationScenario`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr gethelpcmd-officeactivationscenario",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/saracmd-officeactivationscenario.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/saracmd-officeactivationscenario.md"
+    },
+    {
+      "id": "tldr--892db07e768d",
+      "canonicalPath": "common/npm-test.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "npm",
+      "title": "npm test",
+      "summary": "Cette commande est un alias de `npm run test`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nodejs-lts-np--3e42c32b",
+        "nodejs-np--3e42c32b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr npm run",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-test.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-test.md"
+    },
+    {
+      "id": "tldr--8c5d7551a170",
+      "canonicalPath": "common/diff.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "diff",
+      "title": "diff",
+      "summary": "Compare deux fichiers ou répertoires. Voir aussi : `delta`, `difft`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "diffutils--5de20e05",
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Compare deux fichiers (liste les changements pour transformer `ancien_fichier` en `nouveau_fichier`) :",
+          "command": "diff {{ancien_fichier}} {{nouveau_fichier}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/diff.md#L9"
+        },
+        {
+          "description": "Compare deux fichiers, en ignorant l'espacement :",
+          "command": "diff {{[-w|--ignore-all-space]}} {{ancien_fichier}} {{nouveau_fichier}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/diff.md#L13"
+        },
+        {
+          "description": "Compare deux fichiers, en affichant différences côte à côte :",
+          "command": "diff {{[-y|--side-by-side]}} {{ancien_fichier}} {{nouveau_fichier}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/diff.md#L17"
+        },
+        {
+          "description": "Compare deux fichiers, en affichant les différences dans un format unifié (comme `git diff`) :",
+          "command": "diff {{[-u|--unified]}} {{ancien_fichier}} {{nouveau_fichier}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/diff.md#L21"
+        },
+        {
+          "description": "Compare récursivement deux répertoires directories (affiche les noms de fichiers et de répertoires divergents ainsi que les modifications de fichiers) :",
+          "command": "diff {{[-r|--recursive]}} {{ancien_répertoire}} {{nouveau_répertoire}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/diff.md#L25"
+        },
+        {
+          "description": "Compare deux répertoires, en affichant uniquement les fichiers qui diffèrent :",
+          "command": "diff {{[-r|--recursive]}} {{[-q|--brief]}} {{ancien_répertoire}} {{nouveau_répertoire}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/diff.md#L29"
+        },
+        {
+          "description": "Crée un fichier patch des différences entre deux fichiers texte pour Git, en traitant les fichiers inexistants comme fichiers vides :",
+          "command": "diff {{[-a|--text]}} {{[-u|--unified]}} {{[-N|--new-file]}} {{ancien_fichier}} {{nouveau_fichier}} > {{diff.patch}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/diff.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/diff.md"
+    },
+    {
+      "id": "tldr--8f14e017dbfd",
+      "canonicalPath": "common/docker-load.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker load",
+      "summary": "Cette commande est un alias de `docker image load`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker image load",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-load.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-load.md"
+    },
+    {
+      "id": "tldr--8fb54083663c",
+      "canonicalPath": "common/lzless.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "lzless",
+      "title": "lzless",
+      "summary": "Cette commande est un alias de `xzless`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr xzless",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/lzless.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/lzless.md"
+    },
+    {
+      "id": "tldr--9224ea87d30c",
+      "canonicalPath": "common/docker-ps.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker ps",
+      "summary": "Cette commande est un alias de `docker container ls`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container ls",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-ps.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-ps.md"
+    },
+    {
+      "id": "tldr--94f15e44a9dc",
+      "canonicalPath": "common/docker-compose.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker compose",
+      "summary": "Exécute et gère des applications au travers de plusieurs conteneurs Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Liste tous les conteneurs en cours d'exécution :",
+          "command": "docker compose ps",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-compose.md#L8"
+        },
+        {
+          "description": "Crée et démarre en arrière-plan tous les conteneurs décrits dans le fichier `docker-compose.yml` du répertoire courant :",
+          "command": "docker compose up {{[-d|--detach]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-compose.md#L12"
+        },
+        {
+          "description": "Démarre tous les conteneurs après les avoir recréés si nécessaire :",
+          "command": "docker compose up --build",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-compose.md#L16"
+        },
+        {
+          "description": "Démarre tous les conteneurs en spécifiant un nom de projet et un fichier compose alternatif :",
+          "command": "docker compose {{[-p|--project-name]}} {{nom_de_projet}} {{[-f|--file]}} {{chemin/vers/fichier}} up",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-compose.md#L20"
+        },
+        {
+          "description": "Arrête tous les conteneurs en cours d'exécution :",
+          "command": "docker compose stop",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-compose.md#L24"
+        },
+        {
+          "description": "Arrête et supprime tous les conteneurs, réseaux, images et volumes :",
+          "command": "docker compose down --rmi all {{[-v|--volumes]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-compose.md#L28"
+        },
+        {
+          "description": "Affiche et suit la journalisation de tous les conteneurs :",
+          "command": "docker compose logs {{[-f|--follow]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-compose.md#L32"
+        },
+        {
+          "description": "Affiche et suit la journalisation pour un conteneurs spécifique :",
+          "command": "docker compose logs {{[-f|--follow]}} {{nom_container}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-compose.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-compose.md"
+    },
+    {
+      "id": "tldr--966fe53db27f",
+      "canonicalPath": "common/zopflipng.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "zopflipng",
+      "title": "zopflipng",
+      "summary": "Utilitaire de compression d'images PNG.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Optimise une image PNG :",
+          "command": "zopflipng {{entrée.png}} {{sortie.png}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/zopflipng.md#L8"
+        },
+        {
+          "description": "Optimise plusieurs images PNG et sauvegarde avec préfixe donné :",
+          "command": "zopflipng --prefix={{prefix}} {{image1.png image2.png image3.png ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/zopflipng.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/zopflipng.md"
+    },
+    {
+      "id": "tldr--970f6fbceee1",
+      "canonicalPath": "common/chromium.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "chromium",
+      "title": "chromium",
+      "summary": "Navigateur Web open source principalement développé et maintenu par Google.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "chromium--3efd0822",
+        "chromium-nosync--3efd0822",
+        "ungoogled-chromium--d109b2ee"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Ouvre une URL ou un fichier spécifique :",
+          "command": "chromium {{https://exemple.com|chemin/vers/fichier.html}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chromium.md#L8"
+        },
+        {
+          "description": "Ouvre en mode navigation privée :",
+          "command": "chromium --incognito {{exemple.com}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chromium.md#L12"
+        },
+        {
+          "description": "Ouvre dans une nouvelle fenêtre :",
+          "command": "chromium --new-window {{exemple.com}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chromium.md#L16"
+        },
+        {
+          "description": "Ouvre en mode application (sans barres d'outils, barre d'URL, boutons, etc) :",
+          "command": "chromium --app={{https://exemple.com}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chromium.md#L20"
+        },
+        {
+          "description": "Utilise un serveur proxy :",
+          "command": "chromium --proxy-server=\"{{://hostname:66}}\" {{exemple.com}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chromium.md#L24"
+        },
+        {
+          "description": "Ouvre dans un répertoire de profil personnalisé :",
+          "command": "chromium --user-data-dir={{chemin/vers/répertoire}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chromium.md#L28"
+        },
+        {
+          "description": "Ouvre sans validation CORS (utile pour tester une API) :",
+          "command": "chromium --user-data-dir={{chemin/vers/répertoire}} --disable-web-security",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chromium.md#L32"
+        },
+        {
+          "description": "Ouvre avec une fenêtre outils de développement pour chaque onglet ouvert :",
+          "command": "chromium --auto-open-devtools-for-tabs",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chromium.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chromium.md"
+    },
+    {
+      "id": "tldr--9b377ccfd88e",
+      "canonicalPath": "common/docker-stats.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker stats",
+      "summary": "Cette commande est un alias de `docker container stats`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container stats",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-stats.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-stats.md"
+    },
+    {
+      "id": "tldr--9b76ce046146",
+      "canonicalPath": "common/fossil-rm.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "fossil",
+      "title": "fossil rm",
+      "summary": "Cette commande est un alias de `fossil delete`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "fossil--8f832d59",
+        "fossil--ebb34986"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr fossil delete",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/fossil-rm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/fossil-rm.md"
+    },
+    {
+      "id": "tldr--9cd7f543aeb5",
+      "canonicalPath": "common/docker-pull.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker pull",
+      "summary": "Cette commande est un alias de `docker image pull`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker image pull",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-pull.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-pull.md"
+    },
+    {
+      "id": "tldr--9d11a527264e",
+      "canonicalPath": "common/docker-update.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker update",
+      "summary": "Cette commande est un alias de `docker container update`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container update",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-update.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-update.md"
+    },
+    {
+      "id": "tldr--9e640a118596",
+      "canonicalPath": "common/alacritty.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "alacritty",
+      "title": "alacritty",
+      "summary": "Emulateur de terminal propulsé par GPU, Multi-plateforme.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "alacritty--944517c4"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Ouvre une nouvelle fenêtre Alacritty :",
+          "command": "alacritty",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alacritty.md#L8"
+        },
+        {
+          "description": "Lance dans un dossier spécifique :",
+          "command": "alacritty --working-directory {{chemin/vers/dossier}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alacritty.md#L12"
+        },
+        {
+          "description": "Lance une commande dans une nouvelle fenêtre Alacritty :",
+          "command": "alacritty -e {{commande}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alacritty.md#L16"
+        },
+        {
+          "description": "Utilise un autre fichier de configuration (le fichier par défault étant `$XDG_CONFIG_HOME/alacritty/alacritty.toml`) :",
+          "command": "alacritty --config-file {{chemin/vers/config.toml}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alacritty.md#L20"
+        },
+        {
+          "description": "Lance avec la mise à jour en live dès que la configuration est modifiée ( peu également être activé par défaut dans `alacritty.toml`) :",
+          "command": "alacritty --live-config-reload --config-file {{chemin/vers/config.toml}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alacritty.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alacritty.md"
+    },
+    {
+      "id": "tldr--a0ec8467c216",
+      "canonicalPath": "common/kr.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "kr",
+      "title": "kr",
+      "summary": "Cette commande est un alias de `kiterunner`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr kiterunner",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/kr.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/kr.md"
+    },
+    {
+      "id": "tldr--a79c7b4f7566",
+      "canonicalPath": "common/npm-run-script.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "npm",
+      "title": "npm run-script",
+      "summary": "Cette commande est un alias de `npm run`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nodejs-lts-np--3e42c32b",
+        "nodejs-np--3e42c32b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr npm run",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-run-script.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-run-script.md"
+    },
+    {
+      "id": "tldr--a95229b79859",
+      "canonicalPath": "common/docker-container-stats.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container stats",
+      "summary": "Affiche un flux en direct des statistiques d'utilisation des ressources pour les conteneurs.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Affiche un flux en direct des statistiques d'utilisation des ressources pour tous les conteneurs :",
+          "command": "docker {{[stats|container stats]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-stats.md#L8"
+        },
+        {
+          "description": "Affiche un flux en direct des statistiques d'utilisation des ressources pour un ou plusieurs conteneurs séparés par des espaces :",
+          "command": "docker {{[stats|container stats]}} {{nom_du_conteneur}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-stats.md#L12"
+        },
+        {
+          "description": "Change le format de sortie pour afficher l'utilisation CPU du conteneur en pourcentage :",
+          "command": "docker {{[stats|container stats]}} --format \"{{.Name}}:\\t{{.CPUPerc}}\"",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-stats.md#L16"
+        },
+        {
+          "description": "Affiche les statistiques d'utilisation des ressources pour tous les conteneurs (y compris ceux qui ne sont pas en cours d'exécution) :",
+          "command": "docker {{[stats|container stats]}} {{[-a|--all]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-stats.md#L20"
+        },
+        {
+          "description": "Désactive le flux en direct des statistiques d'utilisation des ressources et affiche les statistiques une seule fois :",
+          "command": "docker {{[stats|container stats]}} --no-stream",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-stats.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-stats.md"
+    },
+    {
+      "id": "tldr--ae3e8a731bee",
+      "canonicalPath": "common/npm-list.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "npm",
+      "title": "npm list",
+      "summary": "Cette commande est un alias de `npm ls`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nodejs-lts-np--3e42c32b",
+        "nodejs-np--3e42c32b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr npm ls",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-list.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-list.md"
+    },
+    {
+      "id": "tldr--af243afc82b5",
+      "canonicalPath": "common/docker-service.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker service",
+      "summary": "Gérer les services sur un démon Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Lister les services sur un démon Docker :",
+          "command": "docker service ls",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-service.md#L8"
+        },
+        {
+          "description": "Créer un nouveau service :",
+          "command": "docker service create --name {{nom_du_service}} {{image}}:{{etiquette}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-service.md#L12"
+        },
+        {
+          "description": "Afficher des informations détaillées d'une liste de services séparée par des espaces :",
+          "command": "docker service inspect {{nom_du_service|id}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-service.md#L16"
+        },
+        {
+          "description": "Lister les tâches d'une liste de services séparée par des espaces :",
+          "command": "docker service ps {{nom_du_service|id}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-service.md#L20"
+        },
+        {
+          "description": "Redimensionner à un nombre spécifique de réplicas pour une liste de services séparée par des espaces :",
+          "command": "docker service scale {{nom_du_service}}={{count_of_replicas}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-service.md#L24"
+        },
+        {
+          "description": "Supprimer une liste de services séparée par des espaces :",
+          "command": "docker service rm {{nom_du_service|id}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-service.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-service.md"
+    },
+    {
+      "id": "tldr--afe4c4bd5235",
+      "canonicalPath": "common/docker-container-commit.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container commit",
+      "summary": "Créer une nouvelle image depuis les changement d'un conteneur.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Créer une image à partir d'un conteneur spécifique :",
+          "command": "docker {{[commit|container commit]}} {{conteneur}} {{image}}:{{etiquette}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-commit.md#L8"
+        },
+        {
+          "description": "Appliquer une instruction `CMD` du Dockerfile à l'image créée :",
+          "command": "docker {{[commit|container commit]}} {{[-c|--change]}} \"CMD {{commande}}\" {{conteneur}} {{image}}:{{etiquette}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-commit.md#L12"
+        },
+        {
+          "description": "Appliquer une instruction `ENV` du Dockerfile à l'image créée :",
+          "command": "docker {{[commit|container commit]}} {{[-c|--change]}} \"ENV {{name}}={{value}}\" {{conteneur}} {{image}}:{{etiquette}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-commit.md#L16"
+        },
+        {
+          "description": "Créer une image avec un auteur spécifique dans les métadonnées :",
+          "command": "docker {{[commit|container commit]}} {{[-a|--author]}} \"{{auteur}}\" {{conteneur}} {{image}}:{{etiquette}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-commit.md#L20"
+        },
+        {
+          "description": "Créer une image avec un commentaire spécifique dans les métadonnées :",
+          "command": "docker {{[commit|container commit]}} {{[-m|--message]}} \"{{commentaire}}\" {{conteneur}} {{image}}:{{etiquette}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-commit.md#L24"
+        },
+        {
+          "description": "Créer une image sans mettre en pause le conteneur pendant la création :",
+          "command": "docker {{[commit|container commit]}} {{[-p|--pause]}} false {{conteneur}} {{image}}:{{etiquette}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-commit.md#L28"
+        },
+        {
+          "description": "Afficher l'aide :",
+          "command": "docker {{[commit|container commit]}} --help",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-commit.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-commit.md"
+    },
+    {
+      "id": "tldr--b23035eee618",
+      "canonicalPath": "common/balena.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "balena",
+      "title": "balena",
+      "summary": "Interagis avec balenaCloud, openBAlena et l'API balena depuis la ligne de commande.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "balena-cli--27364af5"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Connexion à balenaCloud :",
+          "command": "balena login",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/balena.md#L8"
+        },
+        {
+          "description": "Crée une application balenaCloud ou openBalena :",
+          "command": "balena app create {{nom_d_application}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/balena.md#L12"
+        },
+        {
+          "description": "Affiche toutes les applications balenaCloud ou openBalena du compte :",
+          "command": "balena apps",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/balena.md#L16"
+        },
+        {
+          "description": "Affiche tous les appareils associés au compte balenaCloud ou openBalena :",
+          "command": "balena devices",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/balena.md#L20"
+        },
+        {
+          "description": "Flash une image balenaOS sur l'appareil local :",
+          "command": "balena local flash {{chemin/vers/balenaos.img}} --drive {{localisation_de_l_appareil}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/balena.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/balena.md"
+    },
+    {
+      "id": "tldr--b2561348cd13",
+      "canonicalPath": "common/chgrp.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "chgrp",
+      "title": "chgrp",
+      "summary": "Change la propriété de groupe des fichiers et des répertoires. Voir aussi : `chown`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Change le groupe propriétaire d'un fichier/répertoire :",
+          "command": "chgrp {{groupe}} {{chemin/vers/fichier_ou_répertoire}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chgrp.md#L9"
+        },
+        {
+          "description": "Change récursivement le groupe propriétaire d'un répertoire et de son contenu :",
+          "command": "chgrp {{[-R|--recursive]}} {{groupe}} {{chemin/vers/répertoire}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chgrp.md#L13"
+        },
+        {
+          "description": "Change le groupe propriétaire d'un lien symbolique :",
+          "command": "chgrp {{[-h|--no-dereference]}} {{groupe}} {{chemin/vers/lien_symbolique}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chgrp.md#L17"
+        },
+        {
+          "description": "Modifie le groupe propriétaire d'un fichier/répertoire pour qu'il corresponde à un fichier de référence :",
+          "command": "chgrp --reference {{chemin/vers/fichier_référence}} {{chemin/vers/fichier_ou_répertoire}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chgrp.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chgrp.md"
+    },
+    {
+      "id": "tldr--b7be6a065f90",
+      "canonicalPath": "common/,.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": ",",
+      "title": ",",
+      "summary": "Lancer des commandes sans les installer.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Lance une commande :",
+          "command": ", {{commande -avec -options}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/%2C.md#L8"
+        },
+        {
+          "description": "Ajoute une commande à un shell enfant :",
+          "command": ", {{[-s|--shell]}} {{commande}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/%2C.md#L12"
+        },
+        {
+          "description": "Vide le cache :",
+          "command": ", {{[-e|--empty-cache]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/%2C.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/%2C.md"
+    },
+    {
+      "id": "tldr--bc9a1912a6e9",
+      "canonicalPath": "common/atuin.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "atuin",
+      "title": "atuin",
+      "summary": "Enregistre votre historique shell dans une base de donnée. Peut également synchroniser votre historique chiffré entre plusieurs machines.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "atuin--f87a1014"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Installe atuin dans votre shell :",
+          "command": "eval \"$(atuin init {{bash|zsh|fish}})\"",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atuin.md#L9"
+        },
+        {
+          "description": "Importe l'historique du shell par défaut :",
+          "command": "atuin import auto",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atuin.md#L13"
+        },
+        {
+          "description": "Recherche dans l'historique shell une commande spécifique :",
+          "command": "atuin search {{commande}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atuin.md#L17"
+        },
+        {
+          "description": "Inscrire un compte sur le serveur de synchronisation par défaut :",
+          "command": "atuin register {{[-u|--username]}} {{nom_d_utilisateur}} {{[-e|--email]}} {{email}} {{[-p|--password]}} {{mot_de_passe}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atuin.md#L21"
+        },
+        {
+          "description": "Connexion au serveur de synchronisation par défaut :",
+          "command": "atuin login {{[-u|--username]}} {{nom_d_utilisateur}} {{[-p|--password]}} {{mot_de_passe}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atuin.md#L25"
+        },
+        {
+          "description": "Synchronise l'historique avec le serveur :",
+          "command": "atuin sync",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atuin.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atuin.md"
+    },
+    {
+      "id": "tldr--c17dbe23b478",
+      "canonicalPath": "windows/saracmd-outlookcalendarchecktask.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "SaRAcmd",
+      "title": "SaRAcmd OutlookCalendarCheckTask",
+      "summary": "Cette commande est un alias de `GetHelpCmd.exe -S OutlookCalendarCheckTask`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr gethelpcmd-outlookcalendarchecktask",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/saracmd-outlookcalendarchecktask.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/saracmd-outlookcalendarchecktask.md"
+    },
+    {
+      "id": "tldr--c2f43645e63f",
+      "canonicalPath": "common/docker-rmi.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker rmi",
+      "summary": "Cette commande est un alias de `docker image rm`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker image rm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-rmi.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-rmi.md"
+    },
+    {
+      "id": "tldr--c30004f032ed",
+      "canonicalPath": "osx/gsha256sum.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gsha256sum",
+      "title": "gsha256sum",
+      "summary": "Cette commande est un alias de `sha256sum`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr sha256sum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gsha256sum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gsha256sum.md"
+    },
+    {
+      "id": "tldr--c4d580cc695a",
+      "canonicalPath": "linux/i386.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "i386",
+      "title": "i386",
+      "summary": "Cette commande est un alias de `setarch i386`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr setarch",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/i386.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/i386.md"
+    },
+    {
+      "id": "tldr--c58c3800721d",
+      "canonicalPath": "common/asciinema.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "asciinema",
+      "title": "asciinema",
+      "summary": "Enregistre et rejoue les sessions de terminal, et également partageable sur asciinema.org. Voir aussi : `terminalizer`, `agg`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "asciinema--dca2f69b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Associe l’installation locale de `asciinema` avec un compte asciinema.org :",
+          "command": "asciinema auth",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/asciinema.md#L9"
+        },
+        {
+          "description": "Crée un nouvel enregistrement (une fois fini, l'utilisateur sera questionné pour l'enregistrer localement ou l'envoyer en ligne) :",
+          "command": "asciinema rec",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/asciinema.md#L13"
+        },
+        {
+          "description": "Crée un nouvel enregistrement et l'enregistre dans un fichier local :",
+          "command": "asciinema rec {{chemin/vers/enregistrement.cast}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/asciinema.md#L17"
+        },
+        {
+          "description": "Rejoue un enregistrement depuis un fichier local :",
+          "command": "asciinema play {{chemin/vers/enregistrement.cast}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/asciinema.md#L21"
+        },
+        {
+          "description": "Rejoue un enregistrement depuis asciinema.org :",
+          "command": "asciinema play https://asciinema.org/a/{{id_d_enregistrement}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/asciinema.md#L25"
+        },
+        {
+          "description": "Crée un nouvel enregistrement, en limitant le temps d’inactivité au maximum à 2.5 secondes :",
+          "command": "asciinema rec {{[-i|--idle-time-limit]}} 2.5",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/asciinema.md#L29"
+        },
+        {
+          "description": "Affiche la sortie complète d'un enregistrement local :",
+          "command": "asciinema cat {{chemin/vers/enregistrement.cast}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/asciinema.md#L33"
+        },
+        {
+          "description": "Envoie un enregistrement local vers asciinema.org :",
+          "command": "asciinema upload {{chemin/vers/enregistrement.cast}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/asciinema.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/asciinema.md"
+    },
+    {
+      "id": "tldr--c60cbcf6b796",
+      "canonicalPath": "windows/ren.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "ren",
+      "title": "ren",
+      "summary": "Cette commande est un alias de `Rename-Item`.",
+      "platform": "windows",
+      "softwareIds": [
+        "ren--cbc63422"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr Rename-Item",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/ren.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/ren.md"
+    },
+    {
+      "id": "tldr--c72bc2074e96",
+      "canonicalPath": "common/ic.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "ic",
+      "title": "ic",
+      "summary": "Cette commande est un alias de `ibmcloud`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr ibmcloud",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/ic.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/ic.md"
+    },
+    {
+      "id": "tldr--c7796bb7941e",
+      "canonicalPath": "common/docker-network.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker network",
+      "summary": "Créer et gérer des réseaux Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Lister tous les réseaux disponible et configuré du service Docker :",
+          "command": "docker network ls",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-network.md#L8"
+        },
+        {
+          "description": "Créer un réseau défini par l'utilisateur :",
+          "command": "docker network create {{[-d|--driver]}} {{nom_du_driver}} {{nom_du_reseau}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-network.md#L12"
+        },
+        {
+          "description": "Afficher les informations détaillées des réseaux séparés par des espaces :",
+          "command": "docker network inspect {{nom_du_reseau}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-network.md#L16"
+        },
+        {
+          "description": "Connecter un conteneur à un réseau en utilisant un nom ou un ID :",
+          "command": "docker network connect {{nom_du_reseau}} {{nom_du_conteneur|id}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-network.md#L20"
+        },
+        {
+          "description": "Déconnecter un conteneur d'un réseau en utilisant un nom ou un ID :",
+          "command": "docker network disconnect {{nom_du_reseau}} {{nom_du_conteneur|id}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-network.md#L24"
+        },
+        {
+          "description": "Supprimer tous les réseaux non utilisés (non reliés à un conteneur) :",
+          "command": "docker network prune",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-network.md#L28"
+        },
+        {
+          "description": "Supprimer les réseaux séparés par des espaces :",
+          "command": "docker network rm {{nom_du_reseau}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-network.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-network.md"
+    },
+    {
+      "id": "tldr--c92eddedad4f",
+      "canonicalPath": "common/docker.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker",
+      "summary": "Gestion des conteneurs et des images Docker. Certaines commandes comme `docker run` ont leur propre documentation.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Liste tous les conteneurs Docker (en cours d'exécution ou arrêtés) :",
+          "command": "docker {{[ps|container ls]}} {{[-a|--all]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker.md#L9"
+        },
+        {
+          "description": "Démarre un conteneur à partir d'une image, avec un nom personnalisé :",
+          "command": "docker {{[run|container run]}} --name {{nom_conteneur}} {{image}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker.md#L13"
+        },
+        {
+          "description": "Démarre ou arrête un conteneur existant :",
+          "command": "docker container {{start|stop}} {{nom_conteneur}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker.md#L17"
+        },
+        {
+          "description": "Télécharge une image depuis un registre Docker :",
+          "command": "docker {{[pull|image pull]}} {{image}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker.md#L21"
+        },
+        {
+          "description": "Affiche les images déjà téléchargées :",
+          "command": "docker {{[images|image ls]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker.md#L25"
+        },
+        {
+          "description": "Ouvre un shell dans un conteneur déjà en cours d'exécution :",
+          "command": "docker {{[exec|container exec]}} {{[-it|--interactive --tty]}} {{nom_conteneur}} {{sh}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker.md#L29"
+        },
+        {
+          "description": "Supprime un conteneur arrêté :",
+          "command": "docker {{[rm|container rm]}} {{nom_conteneur}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker.md#L33"
+        },
+        {
+          "description": "Récupère et suit les journaux de message d'un conteneur :",
+          "command": "docker {{[logs|container logs]}} {{[-f|--follow]}} {{nom_conteneur}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker.md"
+    },
+    {
+      "id": "tldr--cae5ea9fe6e4",
+      "canonicalPath": "common/docker-secret.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker secret",
+      "summary": "Gérer les secrets de Docker swarm.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Créer un nouveau secret depuis l'entrée standard :",
+          "command": "{{commande}} | docker secret create {{nom_du_secret}} -",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-secret.md#L8"
+        },
+        {
+          "description": "Créer un nouveau secret depuis un fichier :",
+          "command": "docker secret create {{nom_du_secret}} {{chemin/vers/fichier}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-secret.md#L12"
+        },
+        {
+          "description": "Lister tous les secrets :",
+          "command": "docker secret ls",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-secret.md#L16"
+        },
+        {
+          "description": "Afficher des informations détaillées sur un ou plusieurs secrets dans un format humain :",
+          "command": "docker secret inspect --pretty {{nom_du_secret1 nom_du_secret2 ...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-secret.md#L20"
+        },
+        {
+          "description": "Supprimer un ou plusieurs secrets :",
+          "command": "docker secret rm {{nom_du_secret1 nom_du_secret2 ...}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-secret.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-secret.md"
+    },
+    {
+      "id": "tldr--cbc532309fe5",
+      "canonicalPath": "common/nix-build.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "nix-build",
+      "title": "nix-build",
+      "summary": "`nix-build` peut faire référence à plusieurs commandes portant le même nom.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Voir la documentation pour le constructeur traditionnel :",
+          "command": "tldr nix-build.2",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/nix-build.md#L7"
+        },
+        {
+          "description": "Voir la documentation pour le constructeur nix3 :",
+          "command": "tldr nix build.3",
+          "line": 11,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/nix-build.md#L11"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/nix-build.md"
+    },
+    {
+      "id": "tldr--cf022612935e",
+      "canonicalPath": "common/docker-run.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker run",
+      "summary": "Cette commande est un alias de `docker container run`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container run",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-run.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-run.md"
+    },
+    {
+      "id": "tldr--d404c51893cb",
+      "canonicalPath": "windows/saracmd-teamsaddinscenario.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "SaRAcmd",
+      "title": "SaRAcmd TeamsAddinScenario",
+      "summary": "Cette commande est un alias de `GetHelpCmd.exe -S TeamsAddinScenario`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr gethelpcmd-teamsaddinscenario",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/saracmd-teamsaddinscenario.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/saracmd-teamsaddinscenario.md"
+    },
+    {
+      "id": "tldr--dcdc93284696",
+      "canonicalPath": "common/docker-logs.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker logs",
+      "summary": "Cette commande est un alias de `docker container logs`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container logs",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-logs.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-logs.md"
+    },
+    {
+      "id": "tldr--ddde024833a8",
+      "canonicalPath": "common/lua.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "lua",
+      "title": "lua",
+      "summary": "Un langage de programmation puissant, léger, et convenable aux systèmes embarqués.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "lua--b0763cee",
+        "lua-for-windows--ba56ec30",
+        "lua-joedf--b0763cee",
+        "lua51--b0763cee",
+        "lua52--b0763cee"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Démarre une session de commandes interactive Lua :",
+          "command": "lua",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/lua.md#L8"
+        },
+        {
+          "description": "Exécute un script Lua :",
+          "command": "lua {{nom_du_script.lua}} {{--arguments-facultatifs}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/lua.md#L12"
+        },
+        {
+          "description": "Exécute une expression Lua :",
+          "command": "lua -e '{{print( \"Hello World\" )}}'",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/lua.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/lua.md"
+    },
+    {
+      "id": "tldr--e0aca325802e",
+      "canonicalPath": "common/llvm-strings.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "llvm-strings",
+      "title": "llvm-strings",
+      "summary": "Cette commande est un alias de `strings`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr strings",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/llvm-strings.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/llvm-strings.md"
+    },
+    {
+      "id": "tldr--e18edec1c35b",
+      "canonicalPath": "common/atoum.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "atoum",
+      "title": "atoum",
+      "summary": "Un framework de test unitaire pour PHP simple, moderne et intuitif.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Initialise un fichier de configuration :",
+          "command": "atoum --init",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atoum.md#L8"
+        },
+        {
+          "description": "Lance les tests :",
+          "command": "atoum",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atoum.md#L12"
+        },
+        {
+          "description": "Lance les tests avec un fichier de configuration donné :",
+          "command": "atoum {{[-c|--configuration]}} {{chemin/vers/fichier}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atoum.md#L16"
+        },
+        {
+          "description": "Lance un fichier de test spécifique :",
+          "command": "atoum {{[-f|--files]}} {{chemin/vers/fichier}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atoum.md#L20"
+        },
+        {
+          "description": "Lance les tests présent dans dossier donné :",
+          "command": "atoum {{[-d|--directories]}} {{chemin/vers/dossier}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atoum.md#L24"
+        },
+        {
+          "description": "Lance tous les tests sous un certain namespace :",
+          "command": "atoum {{[-ns|--namespaces]}} {{namespace}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atoum.md#L28"
+        },
+        {
+          "description": "Lance tous les tests avec un certain tag :",
+          "command": "atoum {{[-t|--tags]}} {{tag}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atoum.md#L32"
+        },
+        {
+          "description": "Charge un fichier d'amorce avant de lancer les tests :",
+          "command": "atoum {{[-bf|--bootstrap-file]}} {{chemin/vers/fichier}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atoum.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atoum.md"
+    },
+    {
+      "id": "tldr--e4ede7701b09",
+      "canonicalPath": "common/docker-tag.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker tag",
+      "summary": "Cette commande est un alias de `docker image tag`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker image tag",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-tag.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-tag.md"
+    },
+    {
+      "id": "tldr--e737654cc665",
+      "canonicalPath": "common/fossil-forget.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "fossil",
+      "title": "fossil forget",
+      "summary": "Cette commande est un alias de `fossil rm`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "fossil--8f832d59",
+        "fossil--ebb34986"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr fossil rm",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/fossil-forget.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/fossil-forget.md"
+    },
+    {
+      "id": "tldr--e7e0924319aa",
+      "canonicalPath": "common/npm-author.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "npm",
+      "title": "npm author",
+      "summary": "Cette commande est un alias de `npm owner`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nodejs-lts-np--3e42c32b",
+        "nodejs-np--3e42c32b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr npm owner",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-author.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/npm-author.md"
+    },
+    {
+      "id": "tldr--e90616198c13",
+      "canonicalPath": "common/docker-container-diff.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container diff",
+      "summary": "Inspecte les changements apportés aux fichiers ou dossiers sur le système de fichiers d'un conteneur.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Inspecte les changements apportés à un conteneur depuis sa création :",
+          "command": "docker {{[diff|container diff]}} {{conteneur}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-diff.md#L8"
+        },
+        {
+          "description": "Affiche l'aide :",
+          "command": "docker {{[diff|container diff]}} --help",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-diff.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-diff.md"
+    },
+    {
+      "id": "tldr--eaf6a12e8467",
+      "canonicalPath": "common/docker-cp.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker cp",
+      "summary": "Cette commande est un alias de `docker container cp`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container cp",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-cp.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-cp.md"
+    },
+    {
+      "id": "tldr--ef7e7db6f943",
+      "canonicalPath": "common/docker-start.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker start",
+      "summary": "Cette commande est un alias de `docker container start`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker container start",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-start.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-start.md"
+    },
+    {
+      "id": "tldr--f06f2b2780fc",
+      "canonicalPath": "common/docker-container-top.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker container top",
+      "summary": "Cette commande est un alias de `docker top`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr docker top",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-top.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-container-top.md"
+    },
+    {
+      "id": "tldr--f14c382e3b47",
+      "canonicalPath": "common/docker-login.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "docker",
+      "title": "docker login",
+      "summary": "Se connecter à un registre Docker.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "docker--710172a5",
+        "docker--a2a6a36d",
+        "docker-nightly--f51c07df"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Se connecter de manière interactive à un registre :",
+          "command": "docker login",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-login.md#L8"
+        },
+        {
+          "description": "Se connecter à un registre avec un nom d'utilisateur spécifique (l'utilisateur sera invité à saisir un mot de passe) :",
+          "command": "docker login {{[-u|--username]}} {{nom_d_utilisateur}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-login.md#L12"
+        },
+        {
+          "description": "Se connecter à un registre avec un nom d'utilisateur et un mot de passe spécifiques :",
+          "command": "docker login {{[-u|--username]}} {{nom_d_utilisateur}} {{[-p|--password]}} {{mot_de_passe}} {{serveur}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-login.md#L16"
+        },
+        {
+          "description": "Se connecter à un registre avec un mot de passe depuis l'entrée standard :",
+          "command": "echo \"{{mot_de_passe}}\" | docker login {{[-u|--username]}} {{nom_d_utilisateur}} --password-stdin",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-login.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/docker-login.md"
+    },
+    {
+      "id": "tldr--f9e96ee2c993",
+      "canonicalPath": "linux/asciiart.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "asciiart",
+      "title": "asciiart",
+      "summary": "Convertit des images en ASCII.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Lit une image depuis un fichier et l'affiche en ASCII :",
+          "command": "asciiart {{chemin/vers/image.jpg}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/asciiart.md#L8"
+        },
+        {
+          "description": "Lit une image depuis une URL et l'affiche en ASCII :",
+          "command": "asciiart {{www.example.com/image.jpg}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/asciiart.md#L12"
+        },
+        {
+          "description": "Choisit la largeur de sortie (valeur par défaut : 100) :",
+          "command": "asciiart {{[-w|--width]}} {{50}} {{chemin/vers/image.jpg}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/asciiart.md#L16"
+        },
+        {
+          "description": "Colorise la sortie ASCII :",
+          "command": "asciiart {{[-c|--color]}} {{chemin/vers/image.jpg}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/asciiart.md#L20"
+        },
+        {
+          "description": "Choisit le format de sortie (format par défaut : textuel) :",
+          "command": "asciiart {{[-f|--format]}} {{text|html}} {{chemin/vers/image.jpg}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/asciiart.md#L24"
+        },
+        {
+          "description": "Inverse la table de caractères :",
+          "command": "asciiart {{[-i|--invert-chars]}} {{chemin/vers/image.jpg}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/asciiart.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/asciiart.md"
+    }
+  ]
+}

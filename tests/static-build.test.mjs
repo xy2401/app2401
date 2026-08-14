@@ -12,6 +12,11 @@ test("builds a static Cloudflare Pages shell", async () => {
 
   const redirects = await readFile(new URL("../dist/_redirects", import.meta.url), "utf8");
   assert.equal(redirects.trim(), "/* /index.html 200");
+  const headers = await readFile(new URL("../dist/_headers", import.meta.url), "utf8");
+  assert.match(headers, /\/metadata\/v1\/snapshots\/\*/);
+  assert.match(headers, /Cache-Control: public, max-age=31536000, immutable/);
+  await access(new URL("../dist/catalog-search-worker.js", import.meta.url));
+  await assert.rejects(access(new URL("../dist/catalog-worker.js", import.meta.url)));
   await assert.rejects(access(new URL("../dist/_worker.js", import.meta.url)));
   await assert.rejects(access(new URL("../dist/server", import.meta.url)));
 });
@@ -56,4 +61,10 @@ test("keeps every Cloudflare Pages asset below 25 MiB", async () => {
     if (size > 25 * 1024 * 1024) oversized.push(`${file.name}: ${size}`);
   }
   assert.deepEqual(oversized, []);
+});
+
+test("publishes only the active catalog snapshot", async () => {
+  const current = JSON.parse(await readFile(new URL("../public/metadata/v1/current.json", import.meta.url), "utf8"));
+  const entries = await readdir(new URL("../public/metadata/v1/snapshots/", import.meta.url), { withFileTypes: true });
+  assert.deepEqual(entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name), [current.snapshotId]);
 });

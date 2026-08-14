@@ -1,0 +1,1361 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "zh-TW",
+  "sourceLocale": "zh_TW",
+  "shard": "4",
+  "items": [
+    {
+      "id": "tldr--0fbfd8990678",
+      "canonicalPath": "osx/gshuf.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gshuf",
+      "title": "gshuf",
+      "summary": "這是 `shuf` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr {{[-p|--platform]}} common shuf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gshuf.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gshuf.md"
+    },
+    {
+      "id": "tldr--1156a5990ad8",
+      "canonicalPath": "common/fgrep.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "fgrep",
+      "title": "fgrep",
+      "summary": "此命令為 `grep --fixed-strings` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "grep--aeeff087",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr grep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/fgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/fgrep.md"
+    },
+    {
+      "id": "tldr--15b82814baa2",
+      "canonicalPath": "common/curl.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "curl",
+      "title": "curl",
+      "summary": "向 / 從一個伺服器傳輸數據。 支持大多數協議，包括 HTTP、FTP 和 POP3。 另請參閱：`wcurl`, `wget`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "curl--5459a6f1",
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "將指定 URL 的內容下載到檔案：",
+          "command": "curl {{http://example.com}} {{[-o|--output]}} {{檔案/完整/路徑}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/curl.md#L10"
+        },
+        {
+          "description": "將檔案從 URL 保存到由 URL 指示的檔名：",
+          "command": "curl {{[-O|--remote-name]}} {{http://example.com/filename}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/curl.md#L14"
+        },
+        {
+          "description": "下載檔案，跟隨重新導向，並且自動續傳（恢復）前序檔案傳輸：",
+          "command": "curl {{[-f|--fail]}} {{[-O|--remote-name]}} {{[-L|--location]}} {{[-C|--continue-at]}} - {{http://example.com/filename}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/curl.md#L18"
+        },
+        {
+          "description": "發送表單編碼數據（`application/x-www-form-urlencoded` 的 POST 請求）：",
+          "command": "curl {{[-d|--data]}} {{'name=bob'}} {{http://example.com/form}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/curl.md#L22"
+        },
+        {
+          "description": "發送帶有額外請求頭，使用自定義請求方法：",
+          "command": "curl {{[-H|--header]}} {{'X-My-Header: 123'}} {{[-X|--request]}} {{PUT}} {{http://example.com}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/curl.md#L26"
+        },
+        {
+          "description": "發送 JSON 格式的數據，並附加正確的 `Content-Type` 請求頭：",
+          "command": "curl {{[-d|--data]}} {{'{\"name\":\"bob\"}'}} {{[-H|--header]}} {{'Content-Type: application/json'}} {{http://example.com/users/1234}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/curl.md#L30"
+        },
+        {
+          "description": "透過使用者名稱和密碼訪問伺服器：",
+          "command": "curl {{[-u|--user]}} {{使用者名稱}} {{http://example.com}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/curl.md#L34"
+        },
+        {
+          "description": "爲指定資源使用客戶端憑證和密鑰，並且跳過憑證驗證：",
+          "command": "curl {{[-E|--cert]}} {{client.pem}} --key {{key.pem}} {{[-k|--insecure]}} {{https://example.com}}",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/curl.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/curl.md"
+    },
+    {
+      "id": "tldr--169e963af4fa",
+      "canonicalPath": "common/pnmdepth.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pnmdepth",
+      "title": "pnmdepth",
+      "summary": "此命令為 `pamdepth` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pamdepth",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/pnmdepth.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/pnmdepth.md"
+    },
+    {
+      "id": "tldr--1a1fcb848218",
+      "canonicalPath": "osx/gcut.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gcut",
+      "title": "gcut",
+      "summary": "這是 `cut` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr {{[-p|--platform]}} common cut",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gcut.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gcut.md"
+    },
+    {
+      "id": "tldr--210f7e88cb6e",
+      "canonicalPath": "linux/pacman-r.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pacman",
+      "title": "pacman -R",
+      "summary": "此命令為 `pacman --remove` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pacman remove",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-r.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-r.md"
+    },
+    {
+      "id": "tldr--223197e38ac7",
+      "canonicalPath": "linux/dnf-deplist.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "dnf",
+      "title": "dnf deplist",
+      "summary": "此命令為 `dnf repoquery --deplist` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr dnf repoquery",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/dnf-deplist.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/dnf-deplist.md"
+    },
+    {
+      "id": "tldr--2a8808dde8dc",
+      "canonicalPath": "common/rustup-uninstall.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "rustup",
+      "title": "rustup uninstall",
+      "summary": "此命令為 `rustup toolchain uninstall` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rustup--ae84adcc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr rustup toolchain",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/rustup-uninstall.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/rustup-uninstall.md"
+    },
+    {
+      "id": "tldr--2d9cebe0fce6",
+      "canonicalPath": "osx/gegrep.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gegrep",
+      "title": "gegrep",
+      "summary": "這是 `egrep` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr egrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gegrep.md"
+    },
+    {
+      "id": "tldr--30c20f1e9111",
+      "canonicalPath": "linux/batcat.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "batcat",
+      "title": "batcat",
+      "summary": "此命令為 `bat` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr bat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/batcat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/batcat.md"
+    },
+    {
+      "id": "tldr--3253e9a8335a",
+      "canonicalPath": "osx/gpathchk.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gpathchk",
+      "title": "gpathchk",
+      "summary": "這是 `pathchk` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr pathchk",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gpathchk.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gpathchk.md"
+    },
+    {
+      "id": "tldr--3f209523b2c7",
+      "canonicalPath": "common/platformio.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "platformio",
+      "title": "platformio",
+      "summary": "此命令為 `pio` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "platformio--331df29a"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pio",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/platformio.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/platformio.md"
+    },
+    {
+      "id": "tldr--4080e482c1e0",
+      "canonicalPath": "linux/pacman-u.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pacman",
+      "title": "pacman -U",
+      "summary": "此命令為 `pacman --upgrade` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pacman upgrade",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-u.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-u.md"
+    },
+    {
+      "id": "tldr--457459f7e392",
+      "canonicalPath": "linux/nmtui-hostname.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "nmtui-hostname",
+      "title": "nmtui-hostname",
+      "summary": "此命令為 `nmtui hostname` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/nmtui-hostname.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/nmtui-hostname.md"
+    },
+    {
+      "id": "tldr--4739e42339e4",
+      "canonicalPath": "common/impacket-mssqlclient.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "impacket-mssqlclient",
+      "title": "impacket-mssqlclient",
+      "summary": "此命令為 `mssqlclient.py` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr mssqlclient.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/impacket-mssqlclient.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/impacket-mssqlclient.md"
+    },
+    {
+      "id": "tldr--541bdbdb4370",
+      "canonicalPath": "linux/lookandfeeltool.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "lookandfeeltool",
+      "title": "lookandfeeltool",
+      "summary": "此命令為 `plasma-apply-lookandfeel` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr plasma-apply-lookandfeel",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/lookandfeeltool.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/lookandfeeltool.md"
+    },
+    {
+      "id": "tldr--560e25e908bf",
+      "canonicalPath": "common/impacket-dumpntlminfo.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "impacket-DumpNTLMInfo",
+      "title": "impacket-DumpNTLMInfo",
+      "summary": "此命令為 `DumpNTLMInfo.py` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr DumpNTLMInfo.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/impacket-dumpntlminfo.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/impacket-dumpntlminfo.md"
+    },
+    {
+      "id": "tldr--5a6800686f77",
+      "canonicalPath": "osx/gtouch.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gtouch",
+      "title": "gtouch",
+      "summary": "這是 `touch` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr touch",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gtouch.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gtouch.md"
+    },
+    {
+      "id": "tldr--5cc93792416d",
+      "canonicalPath": "osx/gdircolors.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gdircolors",
+      "title": "gdircolors",
+      "summary": "這是 `dircolors` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr dircolors",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gdircolors.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gdircolors.md"
+    },
+    {
+      "id": "tldr--671b623dc229",
+      "canonicalPath": "common/rustup-install.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "rustup",
+      "title": "rustup install",
+      "summary": "此命令為 `rustup toolchain install` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rustup--ae84adcc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr rustup toolchain",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/rustup-install.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/rustup-install.md"
+    },
+    {
+      "id": "tldr--737ba18ac566",
+      "canonicalPath": "linux/mkfs.vfat.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "mkfs.vfat",
+      "title": "mkfs.vfat",
+      "summary": "此命令為 `mkfs.fat` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr mkfs.fat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/mkfs.vfat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/mkfs.vfat.md"
+    },
+    {
+      "id": "tldr--74121033f15d",
+      "canonicalPath": "linux/pacman-q.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pacman",
+      "title": "pacman -Q",
+      "summary": "此命令為 `pacman --query` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pacman query",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-q.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-q.md"
+    },
+    {
+      "id": "tldr--7bea1df1914d",
+      "canonicalPath": "common/r.zsh.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "r",
+      "title": "r",
+      "summary": "此命令為 `fc -e -` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "r--b13c44bf"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr fc",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/r.zsh.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/r.zsh.md"
+    },
+    {
+      "id": "tldr--8a421f50ed43",
+      "canonicalPath": "common/delta.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "delta",
+      "title": "delta",
+      "summary": "Git 和 diff 輸出的檢視器。 另請參閱：`diff`, `difft`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "delta--3cb02293"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "比較檔案或目錄：",
+          "command": "delta {{路徑/至/舊檔案或目錄}} {{路徑/至/新檔案或目錄}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/delta.md#L9"
+        },
+        {
+          "description": "比較檔案或目錄，顯示行號：",
+          "command": "delta {{[-n|--line-numbers]}} {{路徑/至/舊檔案或目錄}} {{路徑/至/新檔案或目錄}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/delta.md#L13"
+        },
+        {
+          "description": "比較檔案或目錄，並排顯示差異：",
+          "command": "delta {{[-s|--side-by-side]}} {{路徑/至/舊檔案或目錄}} {{路徑/至/新檔案或目錄}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/delta.md#L17"
+        },
+        {
+          "description": "比較檔案或目錄，忽略任何 Git 配置設定：",
+          "command": "delta --no-gitconfig {{路徑/至/舊檔案或目錄}} {{路徑/至/新檔案或目錄}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/delta.md#L21"
+        },
+        {
+          "description": "比較，根據終端模擬器的超連結規範，將提交雜湊、檔案名稱和行號渲染為超連結：",
+          "command": "delta --hyperlinks {{路徑/至/舊檔案或目錄}} {{路徑/至/新檔案或目錄}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/delta.md#L25"
+        },
+        {
+          "description": "顯示目前設定：",
+          "command": "delta --show-config",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/delta.md#L29"
+        },
+        {
+          "description": "顯示支援的語言及相關檔案副檔名：",
+          "command": "delta --list-languages",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/delta.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/delta.md"
+    },
+    {
+      "id": "tldr--8a9a1d490418",
+      "canonicalPath": "common/pnmtoplainpnm.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pnmtoplainpnm",
+      "title": "pnmtoplainpnm",
+      "summary": "此命令為 `pamtopnm -plain` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pamtopnm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/pnmtoplainpnm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/pnmtoplainpnm.md"
+    },
+    {
+      "id": "tldr--8dec749c899d",
+      "canonicalPath": "osx/glogname.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "glogname",
+      "title": "glogname",
+      "summary": "這是 `logname` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr logname",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/glogname.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/glogname.md"
+    },
+    {
+      "id": "tldr--8ec1a1bae8d1",
+      "canonicalPath": "linux/pacman-f.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pacman",
+      "title": "pacman -F",
+      "summary": "此命令為 `pacman --files` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pacman files",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-f.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-f.md"
+    },
+    {
+      "id": "tldr--9199449e8b64",
+      "canonicalPath": "windows/wsl.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "wsl",
+      "title": "wsl",
+      "summary": "透過命令行管理 Windows 子系統 Linux 版 (WSL)。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "在預設發行版下，開啟 Linux shell：",
+          "command": "wsl {{shell 命令}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/wsl.md#L8"
+        },
+        {
+          "description": "不使用 shell 執行 Linux 命令：",
+          "command": "wsl {{[-e|--exec]}} {{命令}} {{命令參數}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/wsl.md#L12"
+        },
+        {
+          "description": "指定發行版：",
+          "command": "wsl {{[-d|--distribution]}} {{發行版}} {{shell 命令}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/wsl.md#L16"
+        },
+        {
+          "description": "列出可用的發行版：",
+          "command": "wsl {{[-l|--list]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/wsl.md#L20"
+        },
+        {
+          "description": "將發行版匯出至 `.tar` 檔：",
+          "command": "wsl --export {{發行版}} {{檔案\\完整\\distro_fs.tar}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/wsl.md#L24"
+        },
+        {
+          "description": "從 `.tar` 檔匯入發行版：",
+          "command": "wsl --import {{發行版}} {{檔案\\完整\\安裝位置}} {{檔案\\完整\\distro_fs.tar}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/wsl.md#L28"
+        },
+        {
+          "description": "變更執行特定發行版的 Windows 子系統 Linux 版本：",
+          "command": "wsl --set-version {{發行版}} {{WSL 版本}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/wsl.md#L32"
+        },
+        {
+          "description": "終止執行 Windows 子系統 Linux 版：",
+          "command": "wsl --shutdown",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/wsl.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/wsl.md"
+    },
+    {
+      "id": "tldr--9b19a5a258cf",
+      "canonicalPath": "common/exa.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "exa",
+      "title": "exa",
+      "summary": "`ls` 的現代替代品（列出目錄內容）。 注意：`exa` 已不再維護。請改用 `eza`。 另請參閱：`eza`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "eza--73537f07"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "每行列出一個檔案：",
+          "command": "exa {{[-1|--oneline]}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/exa.md#L10"
+        },
+        {
+          "description": "列出所有檔案，包括隱藏檔案：",
+          "command": "exa {{[-a|--all]}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/exa.md#L14"
+        },
+        {
+          "description": "以長格式列出所有檔案（包含權限、所有者、大小和修改日期）：",
+          "command": "exa {{[-l|--long]}} {{[-a|--all]}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/exa.md#L18"
+        },
+        {
+          "description": "列出檔案，最大的排在最上面：",
+          "command": "exa {{[-r|--reverse]}} {{[-s|--sort]}} {{size}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/exa.md#L22"
+        },
+        {
+          "description": "顯示檔案樹，深度為三層：",
+          "command": "exa {{[-l|--long]}} {{[-T|--tree]}} {{[-L|--level]}} {{3}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/exa.md#L26"
+        },
+        {
+          "description": "按修改日期排序列出檔案（從最舊的開始）：",
+          "command": "exa {{[-l|--long]}} {{[-s|--sort]}} {{modified}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/exa.md#L30"
+        },
+        {
+          "description": "列出檔案及其表頭、圖示和 Git 狀態：",
+          "command": "exa {{[-l|--long]}} {{[-h|--header]}} --icons --git",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/exa.md#L34"
+        },
+        {
+          "description": "不列出 `.gitignore` 中提到的檔案：",
+          "command": "exa --git-ignore",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/exa.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/exa.md"
+    },
+    {
+      "id": "tldr--a026e80e1ad9",
+      "canonicalPath": "linux/pacman-s.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pacman",
+      "title": "pacman -S",
+      "summary": "此命令為 `pacman --sync` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pacman sync",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-s.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-s.md"
+    },
+    {
+      "id": "tldr--a2e295745cdb",
+      "canonicalPath": "osx/gchmod.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gchmod",
+      "title": "gchmod",
+      "summary": "這是 `chmod` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr chmod",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gchmod.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gchmod.md"
+    },
+    {
+      "id": "tldr--a8c07f26fa66",
+      "canonicalPath": "windows/sls.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "sls",
+      "title": "sls",
+      "summary": "此命令為 `Select-String` 的別名。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr select-string",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/sls.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/sls.md"
+    },
+    {
+      "id": "tldr--ab96c3d2ce33",
+      "canonicalPath": "linux/pacman-t.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pacman",
+      "title": "pacman -T",
+      "summary": "此命令為 `pacman --deptest` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pacman deptest",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-t.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-t.md"
+    },
+    {
+      "id": "tldr--aba6226bf909",
+      "canonicalPath": "common/man.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "man",
+      "title": "man",
+      "summary": "展示手冊分頁 (manual page)。 另請參閱：`whatis`, `apropos`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "展示一條指令的使用手冊分頁：",
+          "command": "man {{command}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/man.md#L9"
+        },
+        {
+          "description": "在瀏覽器中開啟一條指令的使用手冊分頁 (`$BROWSER` 環境變數可以取代 `=browser_name`)：",
+          "command": "man {{[-Hbrowser_name|--html=browser_name]}} {{command}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/man.md#L13"
+        },
+        {
+          "description": "從第七章節展示一條指令的使用手冊分頁：",
+          "command": "man {{7}} {{command}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/man.md#L17"
+        },
+        {
+          "description": "清單展示一條指令的所有可用章節：",
+          "command": "man {{[-f|--whatis]}} {{command}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/man.md#L21"
+        },
+        {
+          "description": "展示搜尋手冊分頁的路徑：",
+          "command": "man {{[-w|--path]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/man.md#L25"
+        },
+        {
+          "description": "展示使用手冊分頁的位置, 而非手冊分頁本身：",
+          "command": "man {{[-w|--where]}} {{command}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/man.md#L29"
+        },
+        {
+          "description": "使用特定的語言來展示使用手冊分頁：",
+          "command": "man {{[-L|--locale]}} {{locale}} {{command}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/man.md#L33"
+        },
+        {
+          "description": "搜尋包含搜尋字串的手冊頁：",
+          "command": "man {{[-k|--apropos]}} \"{{search_string}}\"",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/man.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/man.md"
+    },
+    {
+      "id": "tldr--ac89b567943c",
+      "canonicalPath": "common/pio-init.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pio",
+      "title": "pio init",
+      "summary": "此命令為 `pio project init` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pio project",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/pio-init.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/pio-init.md"
+    },
+    {
+      "id": "tldr--bc04b53e3c1a",
+      "canonicalPath": "osx/gfmt.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gfmt",
+      "title": "gfmt",
+      "summary": "這是 `fmt` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr fmt",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gfmt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gfmt.md"
+    },
+    {
+      "id": "tldr--c106b75dcb58",
+      "canonicalPath": "osx/gcomm.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gcomm",
+      "title": "gcomm",
+      "summary": "這是 `comm` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr comm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gcomm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gcomm.md"
+    },
+    {
+      "id": "tldr--c41cf49ee770",
+      "canonicalPath": "linux/pacman-d.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "pacman",
+      "title": "pacman -D",
+      "summary": "此命令為 `pacman --database` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr pacman database",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-d.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/pacman-d.md"
+    },
+    {
+      "id": "tldr--c68bd6214746",
+      "canonicalPath": "linux/lrunzip.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "lrunzip",
+      "title": "lrunzip",
+      "summary": "此命令為 `lrzip --decompress` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr lrzip",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/lrunzip.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/lrunzip.md"
+    },
+    {
+      "id": "tldr--c733a91b75cb",
+      "canonicalPath": "osx/gfgrep.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gfgrep",
+      "title": "gfgrep",
+      "summary": "這是 `fgrep` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr fgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gfgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gfgrep.md"
+    },
+    {
+      "id": "tldr--ca3974ac88d6",
+      "canonicalPath": "osx/gwhois.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gwhois",
+      "title": "gwhois",
+      "summary": "這是 `whois` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr whois",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gwhois.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gwhois.md"
+    },
+    {
+      "id": "tldr--cc11e7bfed16",
+      "canonicalPath": "osx/gchown.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gchown",
+      "title": "gchown",
+      "summary": "這是 `chown` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr chown",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gchown.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gchown.md"
+    },
+    {
+      "id": "tldr--d354cc711581",
+      "canonicalPath": "common/clojure.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "clojure",
+      "title": "clojure",
+      "summary": "此命令為 `clj` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "clojure--a80379ec"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr clj",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/clojure.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/clojure.md"
+    },
+    {
+      "id": "tldr--dc207b7a1c01",
+      "canonicalPath": "windows/rd.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "rd",
+      "title": "rd",
+      "summary": "這是 `rmdir` 命令的一個別名。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr rmdir",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/rd.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/rd.md"
+    },
+    {
+      "id": "tldr--e4802aebc14a",
+      "canonicalPath": "osx/gln.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "gln",
+      "title": "gln",
+      "summary": "這是 `ln` 命令的一個別名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文件在：",
+          "command": "tldr ln",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gln.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/osx/gln.md"
+    },
+    {
+      "id": "tldr--e761932ae23a",
+      "canonicalPath": "windows/slmgr.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "slmgr",
+      "title": "slmgr",
+      "summary": "此命令為 `slmgr.vbs` 的別名。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr slmgr.vbs",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/slmgr.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/windows/slmgr.md"
+    },
+    {
+      "id": "tldr--ebb1ddba397d",
+      "canonicalPath": "common/mysql.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "mysql",
+      "title": "mysql",
+      "summary": "MySQL 命令列工具。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "mariadb--79d71061",
+        "mariadb103--79d71061",
+        "mysql--12867f69",
+        "mysql--be41bfa4",
+        "mysql-lts--12867f69",
+        "mysql-workbench--cf9d90a0",
+        "mysql56--aa7b3620",
+        "mysql57--0fa1a6b3",
+        "xampp--0b504b8d",
+        "xampp74--0b504b8d"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "與資料庫連線：",
+          "command": "mysql {{資料庫名稱}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/mysql.md#L8"
+        },
+        {
+          "description": "與資料庫連線，系統將提示使用者輸入密碼：",
+          "command": "mysql {{[-u|--user]}} {{使用者名稱}} {{[-p|--password]}} {{資料庫名稱}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/mysql.md#L12"
+        },
+        {
+          "description": "連線到另一台主機上的資料庫：",
+          "command": "mysql {{[-h|--host]}} {{資料庫主機}} {{資料庫名稱}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/mysql.md#L16"
+        },
+        {
+          "description": "透過 Unix 通訊端連接到資料庫：",
+          "command": "mysql {{[-S|--socket]}} {{sock 檔路徑}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/mysql.md#L20"
+        },
+        {
+          "description": "執行腳本檔案（批次檔）中的 `SQL` 語句：",
+          "command": "mysql {{[-e|--execute]}} \"source {{sql 檔案}}\" {{資料庫名稱}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/mysql.md#L24"
+        },
+        {
+          "description": "用 `mysqldump` 建立的備份還原資料庫（系統將提示使用者輸入密碼）：",
+          "command": "mysql < {{sql 備份檔路徑}} {{[-u|--user]}} {{使用者名稱}} {{[-p|--password]}} {{資料庫名稱}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/mysql.md#L28"
+        },
+        {
+          "description": "從備份中恢復所有資料庫（系統將提示使用者輸入密碼）：",
+          "command": "mysql < {{sql 備份檔路徑}} {{[-u|--user]}} {{使用者名稱}} {{[-p|--password]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/mysql.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/mysql.md"
+    },
+    {
+      "id": "tldr--f30e32b117c4",
+      "canonicalPath": "common/cola.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "cola",
+      "title": "cola",
+      "summary": "此命令為 `git-cola` 的別名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr git-cola",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/cola.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/common/cola.md"
+    },
+    {
+      "id": "tldr--fbe9e4733af1",
+      "canonicalPath": "linux/limine-scan.md",
+      "locale": "zh-TW",
+      "sourceLocale": "zh_TW",
+      "name": "limine-scan",
+      "title": "limine-scan",
+      "summary": "此命令為 `limine-entry-tool --scan` 的別名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "檢視原命令的文件：",
+          "command": "tldr limine-entry-tool",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/limine-scan.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh_TW/linux/limine-scan.md"
+    }
+  ]
+}

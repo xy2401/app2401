@@ -1,0 +1,2654 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "ru",
+  "sourceLocale": "ru",
+  "shard": "9",
+  "items": [
+    {
+      "id": "tldr--0230bc38f600",
+      "canonicalPath": "common/git-bisect.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git bisect",
+      "summary": "Использовать бинарный поиск для нахождения коммита, внесшего ошибку (баг). Git автоматически перемещается по графу коммитов, чтобы постепенно сузить круг поиска ошибочного коммита.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Начать сессию бисекции в диапазоне коммитов между известным плохим и известным хорошим (обычно более старым):",
+          "command": "git bisect start {{плохой_коммит}} {{хороший_коммит}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-bisect.md#L9"
+        },
+        {
+          "description": "Отметить каждый выбираемый `git bisect` коммит как \"плохой\" или \"хороший\" после его проверки на наличие ошибки:",
+          "command": "git bisect {{good|bad}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-bisect.md#L13"
+        },
+        {
+          "description": "Завершить сессию бисекции и вернуться к исходной ветке:",
+          "command": "git bisect reset",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-bisect.md#L17"
+        },
+        {
+          "description": "Пропустить коммит во время бисекции (например, тот, который не проходит тесты из-за другой проблемы):",
+          "command": "git bisect skip",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-bisect.md#L21"
+        },
+        {
+          "description": "Начать сессию бисекции, рассматривая только коммиты, которые изменяют определённый файл или каталог:",
+          "command": "git bisect start {{плохой_коммит}} {{хороший_коммит}} -- {{путь/к/файлу_или_каталогу}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-bisect.md#L25"
+        },
+        {
+          "description": "Автоматизировать процесс бисекции с помощью скрипта, который возвращает код 0 для \"хорошего\" коммита и ненулевой код для \"плохого\":",
+          "command": "git bisect run {{путь/к/тестовому_скрипту}} {{дополнительные_аргументы_скрипта}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-bisect.md#L29"
+        },
+        {
+          "description": "Вывести лог проделанных на данный момент действий:",
+          "command": "git bisect log",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-bisect.md#L33"
+        },
+        {
+          "description": "Показать оставшиеся коммиты-кандидаты для проверки:",
+          "command": "git bisect visualize",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-bisect.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-bisect.md"
+    },
+    {
+      "id": "tldr--0657302d0def",
+      "canonicalPath": "common/git-abort.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git abort",
+      "summary": "Прерывать текущее перебазирование (rebase), слияние (merge) или cherry-pick. Часть `git-extras`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Прервать перебазирование (rebase), слияние (merge) или cherry-pick в Git:",
+          "command": "git abort",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-abort.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-abort.md"
+    },
+    {
+      "id": "tldr--0ca672185525",
+      "canonicalPath": "common/git-add.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git add",
+      "summary": "Добавлять изменённые файлы в индекс для последующего коммита.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Подготовить файл для коммита (добавить в индекс):",
+          "command": "git add {{путь/к/файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-add.md#L8"
+        },
+        {
+          "description": "Добавить все файлы (отслеживаемые и неотслеживаемые):",
+          "command": "git add {{[-A|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-add.md#L12"
+        },
+        {
+          "description": "Рекурсивно добавить все файлы, начиная с текущего каталога:",
+          "command": "git add .",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-add.md#L16"
+        },
+        {
+          "description": "Добавить только уже отслеживаемые файлы:",
+          "command": "git add {{[-u|--update]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-add.md#L20"
+        },
+        {
+          "description": "Добавить игнорируемый файл:",
+          "command": "git add {{[-f|--force]}} {{путь/к/файлу}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-add.md#L24"
+        },
+        {
+          "description": "Интерактивно подготовить части файлов для коммита:",
+          "command": "git add {{[-p|--patch]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-add.md#L28"
+        },
+        {
+          "description": "Интерактивно подготовить части указанного файла для коммита:",
+          "command": "git add {{[-p|--patch]}} {{путь/к/файлу}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-add.md#L32"
+        },
+        {
+          "description": "Интерактивно подготовить файл к коммиту:",
+          "command": "git add {{[-i|--interactive]}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-add.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-add.md"
+    },
+    {
+      "id": "tldr--144c12cc5a25",
+      "canonicalPath": "osx/gshred.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gshred",
+      "title": "gshred",
+      "summary": "Эта команда — псевдоним для GNU `shred`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr shred",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gshred.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gshred.md"
+    },
+    {
+      "id": "tldr--28cdf5016e3f",
+      "canonicalPath": "common/kubectx.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectx",
+      "title": "kubectx",
+      "summary": "Управлять контекстами `kubectl` и переключаться между ними.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectx--c067a6da"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Вывести список контекстов:",
+          "command": "kubectx",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectx.md#L8"
+        },
+        {
+          "description": "Переключиться на указанный контекст:",
+          "command": "kubectx {{имя}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectx.md#L12"
+        },
+        {
+          "description": "Переключиться на предыдущий контекст:",
+          "command": "kubectx -",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectx.md#L16"
+        },
+        {
+          "description": "Переименовать указанный контекст:",
+          "command": "kubectx {{псевдоним}}={{имя}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectx.md#L20"
+        },
+        {
+          "description": "Показать текущий контекст:",
+          "command": "kubectx {{[-c|--current]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectx.md#L24"
+        },
+        {
+          "description": "Удалить указанный контекст:",
+          "command": "kubectx -d {{имя}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectx.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectx.md"
+    },
+    {
+      "id": "tldr--2e08d822adcf",
+      "canonicalPath": "common/git-continue.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git continue",
+      "summary": "Эта команда — псевдоним для `git abort`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr git abort",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-continue.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-continue.md"
+    },
+    {
+      "id": "tldr--3ba59b16054c",
+      "canonicalPath": "osx/gsha224sum.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gsha224sum",
+      "title": "gsha224sum",
+      "summary": "Эта команда — псевдоним для GNU `sha224sum`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr sha224sum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gsha224sum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gsha224sum.md"
+    },
+    {
+      "id": "tldr--3dc8b08d4e9a",
+      "canonicalPath": "common/ed.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "ed",
+      "title": "ed",
+      "summary": "Оригинальный текстовый редактор Unix. Смотрите также: `awk`, `sed`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "ed--e969d1dc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Запустить интерактивную сессию редактора с пустым документом:",
+          "command": "ed",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ed.md#L9"
+        },
+        {
+          "description": "Запустить интерактивную сессию редактора с пустым документом и указанным приглашением:",
+          "command": "ed {{[-p|--prompt]}} '{{> }}'",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ed.md#L13"
+        },
+        {
+          "description": "Запустить интерактивную сессию редактора с подробными (user-friendly) ошибками:",
+          "command": "ed {{[-v|--verbose]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ed.md#L17"
+        },
+        {
+          "description": "Запустить интерактивную сессию редактора с пустым документом, без диагностики, подсчета байтов и приглашения '!':",
+          "command": "ed {{[-q|--quiet]}} {{[-s|--script]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ed.md#L21"
+        },
+        {
+          "description": "Запустить интерактивную сессию редактора без изменения кода выхода при сбое команды:",
+          "command": "ed {{[-l|--loose-exit-status]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ed.md#L25"
+        },
+        {
+          "description": "Редактировать указанный файл (отображает количество байт загруженного файла):",
+          "command": "ed {{путь/к/файлу}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ed.md#L29"
+        },
+        {
+          "description": "[Интерактивно] Заменить строку указанной заменой во всех строках:",
+          "command": ",s/{{регулярное_выражение}}/{{замена}}/g",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ed.md#L33"
+        },
+        {
+          "description": "[Интерактивно] Выйти из `ed`:",
+          "command": "q",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ed.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ed.md"
+    },
+    {
+      "id": "tldr--411475af713b",
+      "canonicalPath": "common/lzegrep.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "lzegrep",
+      "title": "lzegrep",
+      "summary": "Эта команда — псевдоним для `xzgrep --extended-regexp`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/lzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/lzegrep.md"
+    },
+    {
+      "id": "tldr--42069c4c5db4",
+      "canonicalPath": "linux/groupadd.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "groupadd",
+      "title": "groupadd",
+      "summary": "Добавлять группы пользователей в систему. Смотрите также: `groups`, `groupdel`, `groupmod`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Создать новую группу:",
+          "command": "sudo groupadd {{имя_группы}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/groupadd.md#L9"
+        },
+        {
+          "description": "Создать новую системную группу:",
+          "command": "sudo groupadd {{[-r|--system]}} {{имя_группы}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/groupadd.md#L13"
+        },
+        {
+          "description": "Создать новую группу с указанным идентификатором группы (GID):",
+          "command": "sudo groupadd {{[-g|--gid]}} {{id}} {{имя_группы}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/groupadd.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/groupadd.md"
+    },
+    {
+      "id": "tldr--497fec0a60c9",
+      "canonicalPath": "common/impacket-getst.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "impacket-getST",
+      "title": "impacket-getST",
+      "summary": "Эта команда — псевдоним для `getST.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr getST.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-getst.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-getst.md"
+    },
+    {
+      "id": "tldr--4c73a0b0e606",
+      "canonicalPath": "linux/hexdump.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "hexdump",
+      "title": "hexdump",
+      "summary": "Дамп файла в ASCII, десятичном, шестнадцатеричном и восьмеричном форматах. Смотрите также: `hexyl`, `od`, `xxd`.",
+      "platform": "linux",
+      "softwareIds": [
+        "util-linux-ng--5fcde571"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Распечатать шестнадцатеричное представление файла, заменяя повторяющиеся строки на '*':",
+          "command": "hexdump {{путь/к/файлу}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/hexdump.md#L9"
+        },
+        {
+          "description": "Отобразить шестнадцатеричное и ASCII представление в две колонки:",
+          "command": "hexdump {{[-C|--canonical]}} {{путь/к/файлу}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/hexdump.md#L13"
+        },
+        {
+          "description": "Отобразить двухколончатое представление файла, обработав только указанное число байтов с начала:",
+          "command": "hexdump {{[-C|--canonical]}} {{[-n|--length]}} {{количество_байтов}} {{путь/к/файлу}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/hexdump.md#L17"
+        },
+        {
+          "description": "Не заменять повторяющиеся строки на '*':",
+          "command": "hexdump {{[-v|--no-squeezing]}} {{путь/к/файлу}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/hexdump.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/hexdump.md"
+    },
+    {
+      "id": "tldr--4d289aee08fc",
+      "canonicalPath": "common/unxz.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "unxz",
+      "title": "unxz",
+      "summary": "Эта команда — псевдоним для `xz --decompress`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr xz",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/unxz.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/unxz.md"
+    },
+    {
+      "id": "tldr--4f5afb2ec47c",
+      "canonicalPath": "common/doom.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "DOOM",
+      "title": "DOOM",
+      "summary": "Классический шутер с открытым исходным кодом, ориентированный на моддинг и многопользовательский режим. Вы можете заменить `zandronum-server` на практически любой порт DOOM.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Запустить кооперативный многопользовательский режим:",
+          "command": "{{zandronum-server}} -iwad {{wad}} +map {{карта}} -host {{число_игроков}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/doom.md#L9"
+        },
+        {
+          "description": "Запустить многопользовательский режим \"deathmatch\":",
+          "command": "{{zandronum-server}} -iwad {{wad}} +map {{карта}} -host {{число_игроков}} -deathmatch",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/doom.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/doom.md"
+    },
+    {
+      "id": "tldr--5826d7b3fe1c",
+      "canonicalPath": "common/git-am.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git am",
+      "summary": "Применять файлы патчей и создавать коммиты. Полезно при получении коммитов по электронной почте. Смотрите также: `git format-patch`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Применить и зафиксировать изменения из локального файла патча:",
+          "command": "git am {{путь/к/файлу.patch}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-am.md#L9"
+        },
+        {
+          "description": "Применить и зафиксировать изменения из удалённого файла патча:",
+          "command": "curl {{[-L|--location]}} {{https://example.com/file.patch}} | git am",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-am.md#L13"
+        },
+        {
+          "description": "Прервать процесс применения файла патча:",
+          "command": "git am --abort",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-am.md#L17"
+        },
+        {
+          "description": "Применить как можно больше частей файла патча, сохраняя неудачные фрагменты (hunks) в файлы отклонений (.rej):",
+          "command": "git am --reject {{путь/к/файлу.patch}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-am.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-am.md"
+    },
+    {
+      "id": "tldr--597cd77312c9",
+      "canonicalPath": "common/git-commit.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git commit",
+      "summary": "Фиксировать изменения файлов в репозитории (создавать коммиты).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Открыть редактор для написания сообщения и зафиксировать проиндексированные файлы в репозитории:",
+          "command": "git commit",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-commit.md#L8"
+        },
+        {
+          "description": "Зафиксировать проиндексированные файлы с указанным сообщением:",
+          "command": "git commit {{[-m|--message]}} \"{{сообщение}}\"",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-commit.md#L12"
+        },
+        {
+          "description": "Зафиксировать проиндексированные файлы, прочитав сообщение из указанного файла:",
+          "command": "git commit {{[-F|--file]}} {{путь/к/файлу_с_сообщением}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-commit.md#L16"
+        },
+        {
+          "description": "Автоматически проиндексировать все изменённые и удалённые файлы и создать коммит:",
+          "command": "git commit {{[-a|--all]}} {{[-m|--message]}} \"{{сообщение}}\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-commit.md#L20"
+        },
+        {
+          "description": "Зафиксировать проиндексированные файлы и подписать их указанным GPG-ключом (или ключом из конфигурации, если `id_ключа` не указан):",
+          "command": "git commit {{[-S|--gpg-sign]}} {{id_ключа}} {{[-m|--message]}} \"{{сообщение}}\"",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-commit.md#L24"
+        },
+        {
+          "description": "Обновить последний коммит, добавив текущие проиндексированные изменения (это изменит хеш коммита), и открыть редактор для изменения сообщения:",
+          "command": "git commit --amend",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-commit.md#L28"
+        },
+        {
+          "description": "Создать коммит только для указанных файлов:",
+          "command": "git commit {{путь/к/файлу1 путь/к/файлу2 ...}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-commit.md#L32"
+        },
+        {
+          "description": "Создать коммит с указанным сообщением и описанием:",
+          "command": "git commit {{[-m|--message]}} \"{{сообщение}}\" {{[-m|--message]}} \"{{описание}}\"",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-commit.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-commit.md"
+    },
+    {
+      "id": "tldr--5f587af12926",
+      "canonicalPath": "linux/pw-record.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pw-record",
+      "title": "pw-record",
+      "summary": "Эта команда — псевдоним для `pw-cat --record`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pw-record.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pw-record.md"
+    },
+    {
+      "id": "tldr--5f5c8fe9ef93",
+      "canonicalPath": "common/grype.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "grype",
+      "title": "grype",
+      "summary": "Сканировать образы контейнеров и файловые системы на наличие уязвимостей.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "grype--827f1a00"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Просканировать образ контейнера:",
+          "command": "grype {{образ:тег}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/grype.md#L8"
+        },
+        {
+          "description": "Просканировать образ и вывести результаты в определённом формате:",
+          "command": "grype {{образ:тег}} {{[-o|--output]}} {{json|table|cyclonedx|cyclonedx-json|sarif|template}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/grype.md#L12"
+        },
+        {
+          "description": "Просканировать образ, игнорируя неисправленные уязвимости:",
+          "command": "grype {{образ:тег}} --only-fixed",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/grype.md#L16"
+        },
+        {
+          "description": "Просканировать образ и завершить работу с ошибкой, если уровень критичности обнаруженных уязвимостей равен или выше указанного:",
+          "command": "grype {{образ:тег}} {{[-f|--fail-on]}} {{negligible|low|medium|high|critical}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/grype.md#L20"
+        },
+        {
+          "description": "Просканировать локальный каталог и сохранить отчёт в файл:",
+          "command": "grype {{путь/к/каталогу}} --file {{путь/к/отчёту}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/grype.md#L24"
+        },
+        {
+          "description": "Обновить базу данных уязвимостей:",
+          "command": "grype db update",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/grype.md#L28"
+        },
+        {
+          "description": "Показать текущий статус базы данных:",
+          "command": "grype db status",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/grype.md#L32"
+        },
+        {
+          "description": "Показать справку:",
+          "command": "grype {{[-h|--help]}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/grype.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/grype.md"
+    },
+    {
+      "id": "tldr--6a8563513459",
+      "canonicalPath": "common/ag.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "ag",
+      "title": "ag",
+      "summary": "The Silver Searcher. Аналог `ack`, позиционирующийся как более быстрый.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "ag--2a3d1f2e"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Найти файлы, содержащие `string`, и вывести подходящие строки с контекстом:",
+          "command": "ag string",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ag.md#L8"
+        },
+        {
+          "description": "Найти файлы, содержащие `string`, в заданной папке:",
+          "command": "ag string {{путь/к/каталогу}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ag.md#L12"
+        },
+        {
+          "description": "Найти файлы, содержащие `string`, но вывести только имена файлов:",
+          "command": "ag {{[-l|--files-with-matches]}} string",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ag.md#L16"
+        },
+        {
+          "description": "Найти файлы, содержащие `STRING`, независимо от регистра, и вывести только совпадения, а не строки целиком:",
+          "command": "ag {{[-i|--ignore-case]}} {{[-o|--only-matching]}} STRING",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ag.md#L20"
+        },
+        {
+          "description": "Найти `string` в файлах, имя которых совпадает с `file_name`:",
+          "command": "ag string {{[-G|--file-search-regex]}} file_name",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ag.md#L24"
+        },
+        {
+          "description": "Найти файлы, содержимое которых совпадает с регулярным выражением:",
+          "command": "ag '{{^ca(t|r)$}}'",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ag.md#L28"
+        },
+        {
+          "description": "Найти файлы, у которых имя содержит `string`:",
+          "command": "ag {{[-g|--filename-pattern]}} string",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ag.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ag.md"
+    },
+    {
+      "id": "tldr--6d4afd4c6408",
+      "canonicalPath": "common/((.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "((",
+      "title": "((",
+      "summary": "Эта команда — псевдоним для `let`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr let",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/((.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/((.md"
+    },
+    {
+      "id": "tldr--749d25048f4b",
+      "canonicalPath": "common/git-init.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git init",
+      "summary": "Инициализировать новый локальный репозиторий Git.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Инициализировать новый локальный репозиторий:",
+          "command": "git init",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-init.md#L8"
+        },
+        {
+          "description": "Инициализировать репозиторий с указанным именем для начальной ветки:",
+          "command": "git init {{[-b|--initial-branch]}} {{имя_ветки}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-init.md#L12"
+        },
+        {
+          "description": "Инициализировать репозиторий, используя SHA256 для хеширования объектов (требуется Git версии 2.29+):",
+          "command": "git init --object-format sha256",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-init.md#L16"
+        },
+        {
+          "description": "Инициализировать bare-репозиторий, подходящий для использования в качестве удалённого через SSH:",
+          "command": "git init --bare",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-init.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-init.md"
+    },
+    {
+      "id": "tldr--75ca453778a0",
+      "canonicalPath": "common/git-cola.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git cola",
+      "summary": "Мощный графический интерфейс Git с удобным и интуитивно понятным пользовательским интерфейсом.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Запустить графический интерфейс:",
+          "command": "git cola",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-cola.md#L8"
+        },
+        {
+          "description": "Запустить графический интерфейс в режиме исправления (amend):",
+          "command": "git cola --amend",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-cola.md#L12"
+        },
+        {
+          "description": "Запросить выбор Git-репозитория. По умолчанию используется текущий каталог:",
+          "command": "git cola --prompt",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-cola.md#L16"
+        },
+        {
+          "description": "Открыть Git-репозиторий по указанному пути:",
+          "command": "git cola {{[-r|--repo]}} {{путь/к/git_репозиторию}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-cola.md#L20"
+        },
+        {
+          "description": "Применить фильтр пути к виджету статуса:",
+          "command": "git cola {{[-s|--status-filter]}} {{фильтр}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-cola.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-cola.md"
+    },
+    {
+      "id": "tldr--777255b8c1d4",
+      "canonicalPath": "osx/gfind.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gfind",
+      "title": "gfind",
+      "summary": "Эта команда — псевдоним для GNU `find`.",
+      "platform": "macos",
+      "softwareIds": [
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr find",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfind.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfind.md"
+    },
+    {
+      "id": "tldr--78ee41948894",
+      "canonicalPath": "common/git-blame.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git blame",
+      "summary": "Показывать, какой коммит и автор последними изменили каждую строку файла.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Вывести файл с информацией об авторстве (имя автора и хеш коммита):",
+          "command": "git blame {{путь/к/файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-blame.md#L8"
+        },
+        {
+          "description": "Вывести адрес электронной почты автора вместо его имени:",
+          "command": "git blame {{[-e|--show-email]}} {{путь/к/файлу}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-blame.md#L12"
+        },
+        {
+          "description": "Вывести файл с информацией об авторстве на момент определённого коммита:",
+          "command": "git blame {{коммит}} {{путь/к/файлу}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-blame.md#L16"
+        },
+        {
+          "description": "Вывести файл с информацией об авторстве до определённого коммита:",
+          "command": "git blame {{коммит}}~ {{путь/к/файлу}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-blame.md#L20"
+        },
+        {
+          "description": "Вывести файл с информацией об авторстве, начиная с указанной строки:",
+          "command": "git blame -L {{123}} {{путь/к/файлу}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-blame.md#L24"
+        },
+        {
+          "description": "Вывести сведения об авторстве для определённого диапазона строк файла:",
+          "command": "git blame -L {{начальная_строка}},{{конечная_строка}} {{путь/к/файлу}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-blame.md#L28"
+        },
+        {
+          "description": "Вывести сведения об авторстве для 10 строк файла, начиная с первой строки, содержащей указанный текст:",
+          "command": "git blame -L '/{{текст}}/',+10 {{путь/к/файлу}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-blame.md#L32"
+        },
+        {
+          "description": "Вывести сведения об авторстве для файла, игнорируя пробелы и перемещения строк:",
+          "command": "git blame -w -C -C -C {{путь/к/файлу}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-blame.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-blame.md"
+    },
+    {
+      "id": "tldr--7a9b400f8c91",
+      "canonicalPath": "osx/gdate.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gdate",
+      "title": "gdate",
+      "summary": "Эта команда — псевдоним для GNU `date`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr {{[-p|--platform]}} common date",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gdate.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gdate.md"
+    },
+    {
+      "id": "tldr--7b508f015de2",
+      "canonicalPath": "linux/pipetron.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pipetron",
+      "title": "pipetron",
+      "summary": "Управлять узлами Electron для PipeWire.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Запустить демон, указанный в файле конфигурации (по умолчанию запускается демон громкости):",
+          "command": "pipetron {{[-d|--daemon]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pipetron.md#L8"
+        },
+        {
+          "description": "Запустить демон громкости (дублировать настройки громкости):",
+          "command": "pipetron {{[-vd|--volume-daemon]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pipetron.md#L12"
+        },
+        {
+          "description": "Запустить аудио-демон (дублировать аудиоданные):",
+          "command": "pipetron {{[-ad|--audio-daemon]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pipetron.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pipetron.md"
+    },
+    {
+      "id": "tldr--807c1b03ce59",
+      "canonicalPath": "common/rehash.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "rehash",
+      "title": "rehash",
+      "summary": "Эта команда — псевдоним для `hash -r`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr hash",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rehash.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rehash.md"
+    },
+    {
+      "id": "tldr--82fddd6a3af8",
+      "canonicalPath": "osx/gtrue.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gtrue",
+      "title": "gtrue",
+      "summary": "Эта команда — псевдоним для GNU `true`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr true",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtrue.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtrue.md"
+    },
+    {
+      "id": "tldr--8a0a9eb68d60",
+      "canonicalPath": "windows/chrome.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "chrome",
+      "title": "chrome",
+      "summary": "Эта команда — псевдоним для `chromium`.",
+      "platform": "windows",
+      "softwareIds": [
+        "googlechrome--90e5e298"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr chromium",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/chrome.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/chrome.md"
+    },
+    {
+      "id": "tldr--8a60b96e6569",
+      "canonicalPath": "common/netstat.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "netstat",
+      "title": "netstat",
+      "summary": "Отображать сетевую информацию, такую как активные соединения, открытые порты сокетов и т.д. Смотрите также: `ss`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Показать все порты:",
+          "command": "netstat {{[-a|--all]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/netstat.md#L9"
+        },
+        {
+          "description": "Показать все прослушиваемые порты:",
+          "command": "netstat {{[-l|--listening]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/netstat.md#L13"
+        },
+        {
+          "description": "Показать прослушиваемые TCP-порты:",
+          "command": "netstat {{[-t|--tcp]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/netstat.md#L17"
+        },
+        {
+          "description": "Показать идентификатор процесса (PID) и имена программ:",
+          "command": "netstat {{[-p|--program]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/netstat.md#L21"
+        },
+        {
+          "description": "Выводить информацию непрерывно:",
+          "command": "netstat {{[-c|--continuous]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/netstat.md#L25"
+        },
+        {
+          "description": "Показать таблицу маршрутизации и не преобразовывать IP-адреса в имена хостов:",
+          "command": "netstat {{[-rn|--route --numeric]}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/netstat.md#L29"
+        },
+        {
+          "description": "Показать прослушиваемые TCP и UDP порты (с указанием пользователя и процесса, если запущено от имени root):",
+          "command": "netstat {{[-tulpne|--tcp --udp --listening --program --numeric --extend]}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/netstat.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/netstat.md"
+    },
+    {
+      "id": "tldr--8b4aeee8f531",
+      "canonicalPath": "common/git-checkout.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git checkout",
+      "summary": "Переключать ветки или восстанавливать файлы в рабочем дереве.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Создать новую ветку и переключиться на неё:",
+          "command": "git checkout -b {{имя_ветки}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-checkout.md#L8"
+        },
+        {
+          "description": "Создать новую ветку на основе указанной ссылки и переключиться на неё (ссылкой может быть имя ветки, удалённая ветка или тег):",
+          "command": "git checkout -b {{имя_ветки}} {{ссылка}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-checkout.md#L12"
+        },
+        {
+          "description": "Переключиться на существующую локальную ветку:",
+          "command": "git checkout {{имя_ветки}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-checkout.md#L16"
+        },
+        {
+          "description": "Переключиться на предыдущую выбранную ветку:",
+          "command": "git checkout -",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-checkout.md#L20"
+        },
+        {
+          "description": "Переключиться на существующую удалённую ветку:",
+          "command": "git checkout {{[-t|--track]}} {{имя_удалённого_репозитория}}/{{имя_ветки}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-checkout.md#L24"
+        },
+        {
+          "description": "Отменить все непроиндексированные изменения в текущем каталоге (дополнительные команды отмены см. в `git reset`):",
+          "command": "git checkout .",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-checkout.md#L28"
+        },
+        {
+          "description": "Отменить непроиндексированные изменения в указанном файле:",
+          "command": "git checkout {{путь/к/файлу}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-checkout.md#L32"
+        },
+        {
+          "description": "Заменить файл в текущем каталоге его версией из указанной ветки:",
+          "command": "git checkout {{имя_ветки}} -- {{путь/к/файлу}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-checkout.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-checkout.md"
+    },
+    {
+      "id": "tldr--8bc97416a339",
+      "canonicalPath": "common/huggingface-cli.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "huggingface-cli",
+      "title": "huggingface-cli",
+      "summary": "Эта команда — псевдоним для `hf`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr hf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/huggingface-cli.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/huggingface-cli.md"
+    },
+    {
+      "id": "tldr--8cd8fd310dac",
+      "canonicalPath": "common/dotnet-build.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dotnet",
+      "title": "dotnet build",
+      "summary": "Собирает приложение .NET и все его зависимости.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "dotnet--dc94c6e5",
+        "dotnet-nightly--962cc2ef"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Скомпилировать проект или решение в текущем каталоге:",
+          "command": "dotnet build",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-build.md#L8"
+        },
+        {
+          "description": "Скомпилировать проект или решение .NET в режиме debug:",
+          "command": "dotnet build {{путь/к/проекту_или_решению}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-build.md#L12"
+        },
+        {
+          "description": "Скомпилировать в режиме release:",
+          "command": "dotnet build {{[-c|--configuration]}} {{Release}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-build.md#L16"
+        },
+        {
+          "description": "Скомпилировать без восстановления зависимостей:",
+          "command": "dotnet build --no-restore",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-build.md#L20"
+        },
+        {
+          "description": "Скомпилировать с заданным уровнем детализации выводимой информации:",
+          "command": "dotnet build {{[-v|--verbosity]}} {{quiet|minimal|normal|detailed|diagnostic}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-build.md#L24"
+        },
+        {
+          "description": "Скомпилировать для заданной среды исполнения:",
+          "command": "dotnet build {{[-r|--runtime]}} {{идентификатор_среды_исполнения}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-build.md#L28"
+        },
+        {
+          "description": "Указать целевой каталог:",
+          "command": "dotnet build {{[-o|--output]}} {{путь/к/каталогу}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-build.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-build.md"
+    },
+    {
+      "id": "tldr--91b0c6209d1c",
+      "canonicalPath": "common/impacket-rpcdump.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "impacket-rpcdump",
+      "title": "impacket-rpcdump",
+      "summary": "Эта команда — псевдоним для `rpcdump.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr rpcdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-rpcdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-rpcdump.md"
+    },
+    {
+      "id": "tldr--95c2f3790166",
+      "canonicalPath": "common/git.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git",
+      "summary": "Распределённая система управления версиями. Некоторые подкоманды, такие как `commit`, `add`, `branch`, `switch`, `push` и другие, имеют собственную документацию по использованию.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Создать пустой репозиторий Git:",
+          "command": "git init",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git.md#L9"
+        },
+        {
+          "description": "Клонировать удалённый репозиторий Git из интернета:",
+          "command": "git clone {{https://example.com/repo.git}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git.md#L13"
+        },
+        {
+          "description": "Показать состояние локального репозитория:",
+          "command": "git status",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git.md#L17"
+        },
+        {
+          "description": "Добавить все изменения в индекс для коммита:",
+          "command": "git add {{[-A|--all]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git.md#L21"
+        },
+        {
+          "description": "Зафиксировать изменения в истории версий:",
+          "command": "git commit {{[-m|--message]}} {{текст_сообщения}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git.md#L25"
+        },
+        {
+          "description": "Отправить локальные коммиты в удалённый репозиторий:",
+          "command": "git push",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git.md#L29"
+        },
+        {
+          "description": "Получить изменения из удалённого репозитория:",
+          "command": "git pull",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git.md#L33"
+        },
+        {
+          "description": "Сбросить всё к состоянию последнего коммита:",
+          "command": "git reset --hard; git clean {{[-f|--force]}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git.md"
+    },
+    {
+      "id": "tldr--96ed40d47e12",
+      "canonicalPath": "windows/mkdir.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "mkdir",
+      "title": "mkdir",
+      "summary": "Создает каталог или подкаталог в файловой системе.",
+      "platform": "windows",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Создать новый каталог:",
+          "command": "mkdir {{путь\\до\\папки}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/mkdir.md#L8"
+        },
+        {
+          "description": "Чтобы создать дерево каталогов в корневом каталоге введите:",
+          "command": "mkdir {{путь\\до\\под_папки}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/mkdir.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/mkdir.md"
+    },
+    {
+      "id": "tldr--99bcca3d30e9",
+      "canonicalPath": "common/dotnet-restore.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dotnet",
+      "title": "dotnet restore",
+      "summary": "Восстанавливает зависимости и утилиты для проекта .NET.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "dotnet--dc94c6e5",
+        "dotnet-nightly--962cc2ef"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Восстановить зависимости для проекта или решения .NET в текущем каталоге:",
+          "command": "dotnet restore",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-restore.md#L8"
+        },
+        {
+          "description": "Восстановить зависимости для проекта или решения .NET по заданному пути:",
+          "command": "dotnet restore {{путь/к/проекту_или_решению}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-restore.md#L12"
+        },
+        {
+          "description": "Восстановить зависимости без кеширования HTTP-запросов:",
+          "command": "dotnet restore --no-http-cache",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-restore.md#L16"
+        },
+        {
+          "description": "Принудительно разрешать все зависимости, даже если предыдущее восстановление было успешным:",
+          "command": "dotnet restore --force",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-restore.md#L20"
+        },
+        {
+          "description": "Восстановить зависимости, рассматривая ошибки источника пакетов как предупреждения:",
+          "command": "dotnet restore --ignore-failed-sources",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-restore.md#L24"
+        },
+        {
+          "description": "Восстановить зависимости, используя заданный уровень детализации выводимой информации:",
+          "command": "dotnet restore {{[-v|--verbosity]}} {{quiet|minimal|normal|detailed|diagnostic}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-restore.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-restore.md"
+    },
+    {
+      "id": "tldr--9e4bf094fa26",
+      "canonicalPath": "common/hping.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "hping",
+      "title": "hping",
+      "summary": "Эта команда — псевдоним для `hping3`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr hping3",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/hping.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/hping.md"
+    },
+    {
+      "id": "tldr--a20e0ad1d699",
+      "canonicalPath": "common/git-clone.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git clone",
+      "summary": "Клонировать существующий репозиторий.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Клонировать существующий репозиторий в новый каталог (каталогом по умолчанию является имя репозитория):",
+          "command": "git clone {{адрес_удалённого_репозитория}} {{путь/к/каталогу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-clone.md#L8"
+        },
+        {
+          "description": "Клонировать существующий репозиторий и все его подмодули:",
+          "command": "git clone --recursive {{адрес_удалённого_репозитория}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-clone.md#L12"
+        },
+        {
+          "description": "Клонировать только каталог `.git` существующего репозитория:",
+          "command": "git clone {{[-n|--no-checkout]}} {{адрес_удалённого_репозитория}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-clone.md#L16"
+        },
+        {
+          "description": "Клонировать локальный репозиторий:",
+          "command": "git clone {{[-l|--local]}} {{путь/к/локальному_репозиторию}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-clone.md#L20"
+        },
+        {
+          "description": "Клонировать в тихом режиме:",
+          "command": "git clone {{[-q|--quiet]}} {{адрес_удалённого_репозитория}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-clone.md#L24"
+        },
+        {
+          "description": "Клонировать существующий репозиторий, загружая только 10 последних коммитов основной ветки (полезно для экономии времени):",
+          "command": "git clone --depth 10 {{адрес_удалённого_репозитория}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-clone.md#L28"
+        },
+        {
+          "description": "Клонировать существующий репозиторий, загружая только определённую ветку:",
+          "command": "git clone {{[-b|--branch]}} {{имя_ветки}} --single-branch {{адрес_удалённого_репозитория}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-clone.md#L32"
+        },
+        {
+          "description": "Клонировать существующий репозиторий, используя указанную SSH-команду:",
+          "command": "git clone {{[-c|--config]}} core.sshCommand=\"{{ssh -i путь/к/приватному_ssh_ключу}}\" {{адрес_удалённого_репозитория}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-clone.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-clone.md"
+    },
+    {
+      "id": "tldr--a2e697f1fd03",
+      "canonicalPath": "common/impacket-psexec.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "impacket-psexec",
+      "title": "impacket-psexec",
+      "summary": "Эта команда — псевдоним для `psexec.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr psexec.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-psexec.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-psexec.md"
+    },
+    {
+      "id": "tldr--a492ce609131",
+      "canonicalPath": "common/asciidoctor.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "asciidoctor",
+      "title": "asciidoctor",
+      "summary": "Преобразователь AsciiDoc файлов в другие форматы для публикации.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "asciidoctor--0cd55358"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Преобразовать данный `.adoc` файл в HTML (выходной формат по умолчанию):",
+          "command": "asciidoctor {{путь/к/файлу.adoc}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/asciidoctor.md#L8"
+        },
+        {
+          "description": "Преобразовать данный `.adoc` файл в HTML и привязать таблицу стилей CSS:",
+          "command": "asciidoctor {{[-a|--attribute]}} stylesheet={{путь/к/таблице_стилей.css}} {{путь/к/файлу.adoc}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/asciidoctor.md#L12"
+        },
+        {
+          "description": "Преобразовать данный `.adoc` файл во встраиваемый HTML, убрав всё, кроме самого текста:",
+          "command": "asciidoctor {{[-e|--embedded]}} {{путь/к/файлу.adoc}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/asciidoctor.md#L16"
+        },
+        {
+          "description": "Преобразовать данный `.adoc` файл в PDF с помощью библиотеки `asciidoctor-pdf`:",
+          "command": "asciidoctor {{[-b|--backend]}} pdf {{[-r|--require]}} asciidoctor-pdf {{путь/к/файлу.adoc}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/asciidoctor.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/asciidoctor.md"
+    },
+    {
+      "id": "tldr--a529e026045f",
+      "canonicalPath": "common/head.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "head",
+      "title": "head",
+      "summary": "Выводить первую часть файлов.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Вывести первые несколько строк файла:",
+          "command": "head -n {{количество_строк}} {{путь/к/файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/head.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/head.md"
+    },
+    {
+      "id": "tldr--a57a6d44fd2a",
+      "canonicalPath": "linux/nmtui-connect.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "nmtui-connect",
+      "title": "nmtui-connect",
+      "summary": "Эта команда — псевдоним для `nmtui connect`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui-connect.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui-connect.md"
+    },
+    {
+      "id": "tldr--a618d302e8ef",
+      "canonicalPath": "common/llvm-gcc.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "llvm-gcc",
+      "title": "llvm-gcc",
+      "summary": "Эта команда — псевдоним для `clang`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr clang",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/llvm-gcc.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/llvm-gcc.md"
+    },
+    {
+      "id": "tldr--a79d357cd131",
+      "canonicalPath": "common/dotnet-publish.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dotnet",
+      "title": "dotnet publish",
+      "summary": "Публикует .NET-приложение и его зависимости в каталог для развёртывания на целевой системе.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "dotnet--dc94c6e5",
+        "dotnet-nightly--962cc2ef"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Скомпилировать проект .NET в режиме release:",
+          "command": "dotnet publish {{[-c|--configuration]}} Release {{путь/к/файлу_проекта}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-publish.md#L8"
+        },
+        {
+          "description": "Опубликовать ваше приложение с заданной средой исполнения .NET Core:",
+          "command": "dotnet publish {{[-sc|--self-contained]}} true {{[-r|--runtime]}} {{идентификатор_среды_исполнения}} {{путь/к/файлу_проекта}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-publish.md#L12"
+        },
+        {
+          "description": "Упаковать приложение в один исполняемый файл для заданной платформы:",
+          "command": "dotnet publish {{[-r|--runtime]}} {{идентификатор_среды_исполнения}} -p:PublishSingleFile=true {{путь/к/файлу_проекта}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-publish.md#L16"
+        },
+        {
+          "description": "Обрезать неиспользуемые библиотеки чтобы уменьшить размер развёртывания приложения:",
+          "command": "dotnet publish {{[-sc|--self-contained]}} true {{[-r|--runtime]}} {{идентификатор_среды_исполнения}} -p:PublishTrimmed=true {{путь/к/файлу_проекта}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-publish.md#L20"
+        },
+        {
+          "description": "Скомпилировать проект .NET без восстановления зависимостей:",
+          "command": "dotnet publish --no-restore {{путь/к/файлу_проекта}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-publish.md#L24"
+        },
+        {
+          "description": "Указать целевой каталог:",
+          "command": "dotnet publish {{[-o|--output]}} {{путь/к/каталогу}} {{путь/к/файлу_проекта}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-publish.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet-publish.md"
+    },
+    {
+      "id": "tldr--ac2ef6a78186",
+      "canonicalPath": "osx/glibtoolize.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "glibtoolize",
+      "title": "glibtoolize",
+      "summary": "Эта команда — псевдоним для GNU `libtoolize`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr {{[-p|--platform]}} linux libtoolize",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/glibtoolize.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/glibtoolize.md"
+    },
+    {
+      "id": "tldr--ae1691f301a5",
+      "canonicalPath": "osx/gexpr.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gexpr",
+      "title": "gexpr",
+      "summary": "Эта команда — псевдоним для GNU `expr`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr expr",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gexpr.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gexpr.md"
+    },
+    {
+      "id": "tldr--b05b4bc2d4f1",
+      "canonicalPath": "android/pm.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pm",
+      "title": "pm",
+      "summary": "Менеджер пакетов Android.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Показать список установленных пакетов:",
+          "command": "pm list packages",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/android/pm.md#L8"
+        },
+        {
+          "description": "Установить пакет приложения по указанному пути:",
+          "command": "pm install /{{путь/к/приложению}}.apk",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/android/pm.md#L12"
+        },
+        {
+          "description": "Удалить пакет с устройства:",
+          "command": "pm uninstall {{пакет}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/android/pm.md#L16"
+        },
+        {
+          "description": "Очистить все данные приложения для пакета:",
+          "command": "pm clear {{пакет}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/android/pm.md#L20"
+        },
+        {
+          "description": "Включить пакет или компонент:",
+          "command": "pm enable {{пакет_или_класс}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/android/pm.md#L24"
+        },
+        {
+          "description": "Отключить пакет или компонент:",
+          "command": "pm disable-user {{пакет_или_класс}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/android/pm.md#L28"
+        },
+        {
+          "description": "Предоставить разрешение приложению:",
+          "command": "pm grant {{пакет}} {{android.permission.CAMERA|android.permission.ACCESS_FINE_LOCATION|android.permission.READ_CONTACTS|...}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/android/pm.md#L32"
+        },
+        {
+          "description": "Отозвать разрешение у приложения:",
+          "command": "pm revoke {{пакет}} {{android.permission.CAMERA|android.permission.ACCESS_FINE_LOCATION|android.permission.READ_CONTACTS|...}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/android/pm.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/android/pm.md"
+    },
+    {
+      "id": "tldr--b1769f839a59",
+      "canonicalPath": "common/git-status.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git status",
+      "summary": "Показывать изменения файлов в Git-репозитории. Выводить список изменённых, добавленных и удалённых файлов по сравнению с текущим коммитом.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Показать неотслеживаемые и изменённые файлы, которые ещё не подготовлены для коммита:",
+          "command": "git status",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-status.md#L9"
+        },
+        {
+          "description": "Вывести информацию в кратком формате:",
+          "command": "git status {{[-s|--short]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-status.md#L13"
+        },
+        {
+          "description": "Вывести информацию в кратком формате вместе с данными о текущей ветке:",
+          "command": "git status {{[-sb|--short --branch]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-status.md#L17"
+        },
+        {
+          "description": "Показать изменения в проиндексированных (staged) файлах (аналогично `git diff --cached`):",
+          "command": "git status {{[-v|--verbose]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-status.md#L21"
+        },
+        {
+          "description": "Показать изменения во всех отслеживаемых файлах (аналогично `git diff HEAD`):",
+          "command": "git status {{[-vv|--verbose --verbose]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-status.md#L25"
+        },
+        {
+          "description": "Показать количество записей в скрытых изменениях (stash):",
+          "command": "git status --show-stash",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-status.md#L29"
+        },
+        {
+          "description": "Не показывать неотслеживаемые файлы в выводе:",
+          "command": "git status {{[-uno|--untracked-files=no]}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-status.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-status.md"
+    },
+    {
+      "id": "tldr--b3efc150132d",
+      "canonicalPath": "common/git-format-patch.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git format-patch",
+      "summary": "Подготавливать файлы `.patch`. Полезно при отправке коммитов по электронной почте. Смотрите также: `git am`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Создать автоматически именованный файл `.patch` для всех неотправленных коммитов:",
+          "command": "git format-patch {{origin}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-format-patch.md#L9"
+        },
+        {
+          "description": "Записать файл `.patch` для всех коммитов между двумя ревизиями в `stdout`:",
+          "command": "git format-patch {{ревизия_1}}..{{ревизия_2}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-format-patch.md#L13"
+        },
+        {
+          "description": "Записать файл `.patch` для `n` последних коммитов:",
+          "command": "git format-patch -{{n}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-format-patch.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-format-patch.md"
+    },
+    {
+      "id": "tldr--b6a7a8e35235",
+      "canonicalPath": "windows/rename-item.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "Rename-Item",
+      "title": "Rename-Item",
+      "summary": "Команда PowerShell для переименования элемента. Примечание: в качестве псевдонимов для `Rename-Item` можно использовать `ren` и `rni`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Переименовать файл:",
+          "command": "Rename-Item -Path \"{{путь\\к\\файлу}}\" -NewName \"{{новое_имя_файла}}\"",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/rename-item.md#L9"
+        },
+        {
+          "description": "Переименовать каталог:",
+          "command": "Rename-Item -Path \"{{путь\\к\\каталогу}}\" -NewName \"{{новое_имя_каталога}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/rename-item.md#L13"
+        },
+        {
+          "description": "Переименовать и переместить файл:",
+          "command": "Rename-Item -Path \"{{путь\\к\\файлу}}\" -NewName \"{{путь\\к\\новому_имени_файла}}\"",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/rename-item.md#L17"
+        },
+        {
+          "description": "Принудительно переименовать файл:",
+          "command": "Rename-Item -Path \"{{путь\\к\\файлу}}\" -NewName \"{{новое_имя_файла}}\" -Force",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/rename-item.md#L21"
+        },
+        {
+          "description": "Запросить подтверждение перед переименованием файла:",
+          "command": "Rename-Item -Path \"{{путь\\к\\файлу}}\" -NewName \"{{новое_имя_файла}}\" {{[-Confirm|-cf]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/rename-item.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/rename-item.md"
+    },
+    {
+      "id": "tldr--b6f433004e01",
+      "canonicalPath": "osx/gfold.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gfold",
+      "title": "gfold",
+      "summary": "Эта команда — псевдоним для GNU `fold`.",
+      "platform": "macos",
+      "softwareIds": [
+        "gfold--4dcafdf6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr {{[-p|--platform]}} linux fold",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfold.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfold.md"
+    },
+    {
+      "id": "tldr--b8dfc1402a2b",
+      "canonicalPath": "common/git-branch.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git branch",
+      "summary": "Основная команда Git для работы с ветками.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Вывести список всех веток (локальных и удалённых; текущая ветка отмечена символом `*`):",
+          "command": "git branch {{[-a|--all]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-branch.md#L8"
+        },
+        {
+          "description": "Вывести список веток, история которых содержит указанный коммит:",
+          "command": "git branch {{[-a|--all]}} --contains {{хеш_коммита}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-branch.md#L12"
+        },
+        {
+          "description": "Показать имя текущей ветки:",
+          "command": "git branch --show-current",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-branch.md#L16"
+        },
+        {
+          "description": "Создать новую ветку на основе текущего коммита:",
+          "command": "git branch {{имя_ветки}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-branch.md#L20"
+        },
+        {
+          "description": "Создать новую ветку на основе указанного коммита:",
+          "command": "git branch {{имя_ветки}} {{хеш_коммита}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-branch.md#L24"
+        },
+        {
+          "description": "Переименовать ветку (перед этим необходимо переключиться на другую ветку):",
+          "command": "git branch {{[-m|--move]}} {{старое_имя_ветки}} {{новое_имя_ветки}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-branch.md#L28"
+        },
+        {
+          "description": "Удалить локальную ветку (перед этим необходимо переключиться на другую ветку):",
+          "command": "git branch {{[-d|--delete]}} {{имя_ветки}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-branch.md#L32"
+        },
+        {
+          "description": "Удалить удалённую ветку:",
+          "command": "git push {{имя_удалённого_репозитория}} {{[-d|--delete]}} {{имя_удалённой_ветки}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-branch.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-branch.md"
+    },
+    {
+      "id": "tldr--ba438d9c2198",
+      "canonicalPath": "common/vercel.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "vercel",
+      "title": "vercel",
+      "summary": "Выполнять развёртывание и управлять развёртываниями Vercel.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "vercel--6024d29f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Выполнить развёртывание текущего каталога:",
+          "command": "vercel",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/vercel.md#L8"
+        },
+        {
+          "description": "Выполнить развёртывание текущего каталога в продакшен:",
+          "command": "vercel --prod",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/vercel.md#L12"
+        },
+        {
+          "description": "Выполнить развёртывание каталога:",
+          "command": "vercel {{путь/к/проекту}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/vercel.md#L16"
+        },
+        {
+          "description": "Инициализировать пример проекта:",
+          "command": "vercel init",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/vercel.md#L20"
+        },
+        {
+          "description": "Выполнить развёртывание с переменными окружения:",
+          "command": "vercel {{[-e|--env]}} {{ENV}}={{var}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/vercel.md#L24"
+        },
+        {
+          "description": "Собрать с переменными окружения:",
+          "command": "vercel {{[-b|--build-env]}} {{ENV}}={{var}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/vercel.md#L28"
+        },
+        {
+          "description": "Задать регионы по умолчанию для развёртывания:",
+          "command": "vercel --regions {{идентификатор_региона}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/vercel.md#L32"
+        },
+        {
+          "description": "Удалить развёртывание:",
+          "command": "vercel remove {{имя_проекта}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/vercel.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/vercel.md"
+    },
+    {
+      "id": "tldr--bca92a75fabb",
+      "canonicalPath": "common/git-stage.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git stage",
+      "summary": "Эта команда — псевдоним для `git add`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr git add",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-stage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-stage.md"
+    },
+    {
+      "id": "tldr--caff5147878b",
+      "canonicalPath": "osx/aa.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "aa",
+      "title": "aa",
+      "summary": "Эта команда — псевдоним для `yaa`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr yaa",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/aa.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/aa.md"
+    },
+    {
+      "id": "tldr--cd854619eebd",
+      "canonicalPath": "common/mkdir.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "mkdir",
+      "title": "mkdir",
+      "summary": "Создавать каталоги и устанавливать их права доступа.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Создать указанные каталоги:",
+          "command": "mkdir {{путь/к/каталогу1 путь/к/каталогу2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/mkdir.md#L8"
+        },
+        {
+          "description": "Создать указанные каталоги, включая родительские (при необходимости):",
+          "command": "mkdir {{[-p|--parents]}} {{путь/к/каталогу1 путь/к/каталогу2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/mkdir.md#L12"
+        },
+        {
+          "description": "Создать каталоги с указанными правами доступа:",
+          "command": "mkdir {{[-m|--mode]}} {{rwxrw-r--}} {{путь/к/каталогу1 путь/к/каталогу2 ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/mkdir.md#L16"
+        },
+        {
+          "description": "Создать несколько вложенных каталогов рекурсивно:",
+          "command": "mkdir {{[-p|--parents]}} {{путь/к/{a,b}/{x,y,z}/{h,i,j}}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/mkdir.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/mkdir.md"
+    },
+    {
+      "id": "tldr--d00c9ceb5c14",
+      "canonicalPath": "osx/gtar.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gtar",
+      "title": "gtar",
+      "summary": "Эта команда — псевдоним для GNU `tar`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr tar",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtar.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtar.md"
+    },
+    {
+      "id": "tldr--d747b2b46d7c",
+      "canonicalPath": "common/git-pull.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git pull",
+      "summary": "Получать ветку из удалённого репозитория и выполнять её слияние с локальным репозиторием.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Загрузить изменения из удалённого репозитория по умолчанию и выполнить слияние (merge):",
+          "command": "git pull",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-pull.md#L8"
+        },
+        {
+          "description": "Загрузить изменения из удалённого репозитория по умолчанию и использовать перебазирование (rebase):",
+          "command": "git pull {{[-r|--rebase]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-pull.md#L12"
+        },
+        {
+          "description": "Загрузить изменения из указанного удалённого репозитория и ветки, затем выполнить их слияние с `HEAD`:",
+          "command": "git pull {{имя_удалённого_репозитория}} {{ветка}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-pull.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-pull.md"
+    },
+    {
+      "id": "tldr--ddca73d046bf",
+      "canonicalPath": "common/getln.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "getln",
+      "title": "getln",
+      "summary": "Эта команда — псевдоним для `read -zr`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr read",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/getln.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/getln.md"
+    },
+    {
+      "id": "tldr--df89ba85cb2a",
+      "canonicalPath": "common/dotnet.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dotnet",
+      "title": "dotnet",
+      "summary": "Кросс-платформенная утилита командной строки .NET для .NET Core. Некоторые подкоманды, такие как `build`, имеют собственную документацию по использованию.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "dotnet--dc94c6e5",
+        "dotnet-nightly--962cc2ef"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Инициализировать новый проект .NET:",
+          "command": "dotnet new {{короткое_имя_шаблона}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet.md#L9"
+        },
+        {
+          "description": "Восстановить пакеты nuget:",
+          "command": "dotnet restore",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet.md#L13"
+        },
+        {
+          "description": "Собрать и запустить проект .NET в текущей папке:",
+          "command": "dotnet run",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet.md#L17"
+        },
+        {
+          "description": "Запустить собранное приложение .NET (требуется только среда исполнения, для остальных команд требуется установленный .NET Core SDK):",
+          "command": "dotnet {{путь/к/приложению.dll}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dotnet.md"
+    },
+    {
+      "id": "tldr--ebce857fe663",
+      "canonicalPath": "common/impacket-secretsdump.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "impacket-secretsdump",
+      "title": "impacket-secretsdump",
+      "summary": "Эта команда — псевдоним для `secretsdump.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr secretsdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-secretsdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-secretsdump.md"
+    },
+    {
+      "id": "tldr--f52bd62df508",
+      "canonicalPath": "common/git-push.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "git",
+      "title": "git push",
+      "summary": "Отправлять коммиты в удалённый репозиторий.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Отправить локальные изменения текущей ветки в соответствующую ей удалённую ветку по умолчанию:",
+          "command": "git push",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-push.md#L8"
+        },
+        {
+          "description": "Отправить изменения из указанной локальной ветки в соответствующую ей удалённую ветку:",
+          "command": "git push {{имя_удалённого_репозитория}} {{локальная_ветка}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-push.md#L12"
+        },
+        {
+          "description": "Отправить изменения из указанной локальной ветки в соответствующую ей удалённую ветку и установить её в качестве цели по умолчанию для команд push/pull:",
+          "command": "git push {{[-u|--set-upstream]}} {{имя_удалённого_репозитория}} {{локальная_ветка}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-push.md#L16"
+        },
+        {
+          "description": "Отправить изменения из указанной локальной ветки в определённую удалённую ветку:",
+          "command": "git push {{имя_удалённого_репозитория}} {{локальная_ветка}}:{{удалённая_ветка}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-push.md#L20"
+        },
+        {
+          "description": "Отправить изменения всех локальных веток в соответствующие им ветки в указанном удалённом репозитории:",
+          "command": "git push --all {{имя_удалённого_репозитория}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-push.md#L24"
+        },
+        {
+          "description": "Удалить ветку в удалённом репозитории:",
+          "command": "git push {{имя_удалённого_репозитория}} {{[-d|--delete]}} {{удалённая_ветка}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-push.md#L28"
+        },
+        {
+          "description": "Удалить удалённые ветки, для которых нет соответствующих локальных веток:",
+          "command": "git push --prune {{имя_удалённого_репозитория}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-push.md#L32"
+        },
+        {
+          "description": "Опубликовать теги, которых ещё нет в удалённом репозитории:",
+          "command": "git push --tags",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-push.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/git-push.md"
+    },
+    {
+      "id": "tldr--f8667b14a43a",
+      "canonicalPath": "common/tar.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "tar",
+      "title": "tar",
+      "summary": "Утилита архивирования. Обычно используется в сочетании с методом сжатия, таким как `gzip` или `bzip2`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "tar--1bc6b0b1",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Создать ([c]reate) архив и записать его в файл ([f]ile):",
+          "command": "tar cf {{путь/к/целевому.tar}} {{путь/к/файлу1 путь/к/файлу2 ...}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tar.md#L9"
+        },
+        {
+          "description": "Создать ([c]reate) сжатый в g[z]ip архив и записать его в файл ([f]ile):",
+          "command": "tar czf {{путь/к/целевому.tar.gz}} {{путь/к/файлу1 путь/к/файлу2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tar.md#L13"
+        },
+        {
+          "description": "Создать ([c]reate) сжатый в g[z]ip архив из каталога, используя относительные пути:",
+          "command": "tar czf {{путь/к/целевому.tar.gz}} {{[-C|--directory]}} {{путь/к/каталогу}} .",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tar.md#L17"
+        },
+        {
+          "description": "Извлечь (e[x]tract) (сжатый) файл ([f]ile) архива в текущий каталог с подробным ([v]erbosely) выводом:",
+          "command": "tar xvf {{путь/к/исходному.tar[.gz|.bz2|.xz]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tar.md#L21"
+        },
+        {
+          "description": "Извлечь (e[x]tract) (сжатый) файл ([f]ile) архива в указанный каталог:",
+          "command": "tar xf {{путь/к/исходному.tar[.gz|.bz2|.xz]}} {{[-C|--directory]}} {{путь/к/каталогу}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tar.md#L25"
+        },
+        {
+          "description": "Создать ([c]reate) сжатый архив и записать его в файл ([f]ile), используя расширение файла для автоматического ([a]utomatically) определения программы сжатия:",
+          "command": "tar caf {{путь/к/целевому.tar.xz}} {{путь/к/файлу1 путь/к/файлу2 ...}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tar.md#L29"
+        },
+        {
+          "description": "Вывести список (lis[t]) содержимого tar-файла ([f]ile) с подробным ([v]erbosely) выводом:",
+          "command": "tar tvf {{путь/к/исходному.tar}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tar.md#L33"
+        },
+        {
+          "description": "Извлечь (e[x]tract) файлы, соответствующие шаблону, из файла ([f]ile) архива:",
+          "command": "tar xf {{путь/к/исходному.tar}} --wildcards \"{{*.html}}\"",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tar.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tar.md"
+    },
+    {
+      "id": "tldr--f91e0b338118",
+      "canonicalPath": "osx/gbasename.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gbasename",
+      "title": "gbasename",
+      "summary": "Эта команда — псевдоним для GNU `basename`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr basename",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gbasename.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gbasename.md"
+    }
+  ]
+}

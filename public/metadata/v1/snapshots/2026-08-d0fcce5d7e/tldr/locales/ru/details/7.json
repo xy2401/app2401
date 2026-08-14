@@ -1,0 +1,2679 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "ru",
+  "sourceLocale": "ru",
+  "shard": "7",
+  "items": [
+    {
+      "id": "tldr--08b810d77c06",
+      "canonicalPath": "common/kubectl-attach.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl attach",
+      "summary": "Подключаться к процессу, уже работающему внутри существующего контейнера.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Получить вывод из пода:",
+          "command": "kubectl attach {{имя_пода}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-attach.md#L8"
+        },
+        {
+          "description": "Получить вывод из контейнера в указанном поде:",
+          "command": "kubectl attach {{имя_пода}} {{[-c|--container]}} {{имя_контейнера}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-attach.md#L12"
+        },
+        {
+          "description": "Получить вывод из первого пода набора реплик:",
+          "command": "kubectl attach {{[rs|replicaset]}}/{{имя_набора_реплик}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-attach.md#L16"
+        },
+        {
+          "description": "Создать интерактивную сессию с подом:",
+          "command": "kubectl attach {{имя_пода}} {{[-it|--stdin --tty]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-attach.md#L20"
+        },
+        {
+          "description": "Создать интерактивную сессию с определённым контейнером пода:",
+          "command": "kubectl attach {{имя_пода}} {{[-c|--container]}} {{имя_контейнера}} {{[-it|--stdin --tty]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-attach.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-attach.md"
+    },
+    {
+      "id": "tldr--13b58feb0b10",
+      "canonicalPath": "osx/gchroot.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gchroot",
+      "title": "gchroot",
+      "summary": "Эта команда — псевдоним для GNU `chroot`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr chroot",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gchroot.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gchroot.md"
+    },
+    {
+      "id": "tldr--13b7129758ed",
+      "canonicalPath": "common/kubectl-cluster-info.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl cluster-info",
+      "summary": "Отображать информацию об адресах мастера Kubernetes и служб в кластере.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Показать базовую информацию о кластере:",
+          "command": "kubectl cluster-info",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cluster-info.md#L8"
+        },
+        {
+          "description": "Сделать дамп текущего состояния кластера в `stdout` (для отладки):",
+          "command": "kubectl cluster-info dump",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cluster-info.md#L12"
+        },
+        {
+          "description": "Сделать дамп состояния кластера в каталог:",
+          "command": "kubectl cluster-info dump --output-directory {{путь/к/каталогу}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cluster-info.md#L16"
+        },
+        {
+          "description": "Использовать определённый контекст kubeconfig:",
+          "command": "kubectl cluster-info --context {{имя_контекста}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cluster-info.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cluster-info.md"
+    },
+    {
+      "id": "tldr--165c2c8fcac1",
+      "canonicalPath": "common/acme.sh.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "acme.sh",
+      "title": "acme.sh",
+      "summary": "Скрипт оболочки, реализующий протокол ACME-клиента, альтернатива `certbot`. Смотрите также: `acme.sh dns`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "acme-sh--cd6f6523"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Выпустить сертификат, используя режим webroot:",
+          "command": "acme.sh --issue {{[-d|--domain]}} {{example.com}} {{[-w|--webroot]}} /{{путь/к/webroot}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh.md#L9"
+        },
+        {
+          "description": "Выпустить сертификат для нескольких доменов в автономном (standalone) режиме через порт 80:",
+          "command": "acme.sh --issue --standalone {{[-d|--domain]}} {{example.com}} {{[-d|--domain]}} {{www.example.com}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh.md#L13"
+        },
+        {
+          "description": "Выпустить сертификат в автономном режиме TLS через порт 443:",
+          "command": "acme.sh --issue --alpn {{[-d|--domain]}} {{example.com}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh.md#L17"
+        },
+        {
+          "description": "Выпустить сертификат, используя текущую конфигурацию `nginx`:",
+          "command": "acme.sh --issue --nginx {{[-d|--domain]}} {{example.com}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh.md#L21"
+        },
+        {
+          "description": "Выпустить сертификат, используя текущую конфигурацию Apache:",
+          "command": "acme.sh --issue --apache {{[-d|--domain]}} {{example.com}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh.md#L25"
+        },
+        {
+          "description": "Выпустить wildcard-сертификат (\\*), используя автоматический режим DNS API:",
+          "command": "acme.sh --issue --dns {{dns_cf}} {{[-d|--domain]}} {{*.example.com}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh.md#L29"
+        },
+        {
+          "description": "Установить файлы сертификата в указанные места (полезно для автоматического продления сертификатов):",
+          "command": "acme.sh {{[-i|--install-cert]}} {{[-d|--domain]}} {{example.com}} --key-file /{{путь/к/example.com.key}} --fullchain-file /{{путь/к/example.com.cer}} --reloadcmd \"{{systemctl force-reload nginx}}\"",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh.md"
+    },
+    {
+      "id": "tldr--1d782328df9f",
+      "canonicalPath": "common/kubectl-cordon.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl cordon",
+      "summary": "Помечать узел как непланируемый, предотвращая назначение на него новых подов. Смотрите также: `kubectl uncordon`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Пометить узел как непланируемый:",
+          "command": "kubectl cordon {{имя_узла}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cordon.md#L9"
+        },
+        {
+          "description": "Пометить несколько узлов как непланируемые:",
+          "command": "kubectl cordon {{имя_узла1 имя_узла2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cordon.md#L13"
+        },
+        {
+          "description": "Пометить узел как непланируемый в определённом контексте:",
+          "command": "kubectl cordon {{имя_узла}} --context {{имя_контекста}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cordon.md#L17"
+        },
+        {
+          "description": "Пометить узлы, соответствующие селектору меток, как непланируемые:",
+          "command": "kubectl cordon {{[-l|--selector]}} {{ключ_метки}}={{значение_метки}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cordon.md#L21"
+        },
+        {
+          "description": "Выполнить пробный запуск для предварительного просмотра изменений без фактического отключения узлов:",
+          "command": "kubectl cordon {{имя_узла}} --dry-run={{none|server|client}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cordon.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cordon.md"
+    },
+    {
+      "id": "tldr--1f44afe0537b",
+      "canonicalPath": "common/kubectl-uncordon.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl uncordon",
+      "summary": "Помечать узел как планируемый, позволяя назначать на него новые поды. Смотрите также: `kubectl cordon`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Пометить узел как планируемый:",
+          "command": "kubectl uncordon {{имя_узла}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-uncordon.md#L9"
+        },
+        {
+          "description": "Пометить несколько узлов как планируемые:",
+          "command": "kubectl uncordon {{имя_узла1 имя_узла2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-uncordon.md#L13"
+        },
+        {
+          "description": "Пометить узел как планируемый в определённом контексте:",
+          "command": "kubectl uncordon {{имя_узла}} --context {{имя_контекста}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-uncordon.md#L17"
+        },
+        {
+          "description": "Пометить узлы, соответствующие селектору меток, как планируемые:",
+          "command": "kubectl uncordon {{[-l|--selector]}} {{ключ_метки}}={{значение_метки}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-uncordon.md#L21"
+        },
+        {
+          "description": "Выполнить пробный запуск для предварительного просмотра изменений без фактического включения узлов:",
+          "command": "kubectl uncordon {{имя_узла}} --dry-run={{none|server|client}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-uncordon.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-uncordon.md"
+    },
+    {
+      "id": "tldr--204ff4c60a8f",
+      "canonicalPath": "common/^.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "^",
+      "title": "^",
+      "summary": "Встроенная команда Bash для быстрой замены строки в предыдущей команде и выполнения результата. Эквивалентно `!!:s^строка1^строка2`. Смотрите также: `!`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Выполнить предыдущую команду, заменив `строка1` на `строка2`:",
+          "command": "^{{строка1}}^{{строка2}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/%5E.md#L10"
+        },
+        {
+          "description": "Удалить `строка1` из предыдущей команды:",
+          "command": "^{{строка1}}^",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/%5E.md#L14"
+        },
+        {
+          "description": "Заменить `строка1` на `строка2` в предыдущей команде и добавить `строка3` в её конец:",
+          "command": "^{{строка1}}^{{строка2}}^{{строка3}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/%5E.md#L18"
+        },
+        {
+          "description": "Заменить все вхождения `строка1`:",
+          "command": "^{{строка1}}^{{строка2}}^:g&",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/%5E.md#L22"
+        },
+        {
+          "description": "Вывести изменённую команду без её выполнения:",
+          "command": "^{{строка1}}^{{строка2}}^:p",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/%5E.md#L26"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/%5E.md"
+    },
+    {
+      "id": "tldr--223b989a414a",
+      "canonicalPath": "osx/gcksum.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gcksum",
+      "title": "gcksum",
+      "summary": "Эта команда — псевдоним для GNU `cksum`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr cksum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gcksum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gcksum.md"
+    },
+    {
+      "id": "tldr--263a91e84aee",
+      "canonicalPath": "osx/gnumfmt.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gnumfmt",
+      "title": "gnumfmt",
+      "summary": "Эта команда — псевдоним для GNU `numfmt`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr numfmt",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gnumfmt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gnumfmt.md"
+    },
+    {
+      "id": "tldr--27a0839c8d6c",
+      "canonicalPath": "common/kubectl-autoscale.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl autoscale",
+      "summary": "Создавать автомасштабировщик для интеллектуального масштабирования количества подов на основе потребностей кластера Kubernetes.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Настроить автомасштабирование развёртывания без указания целевой загрузки CPU:",
+          "command": "kubectl autoscale {{[deploy|deployment]}} {{имя_развёртывания}} --min {{мин_реплик}} --max {{макс_реплик}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-autoscale.md#L8"
+        },
+        {
+          "description": "Настроить автомасштабирование развёртывания с целевой загрузкой CPU:",
+          "command": "kubectl autoscale {{[deploy|deployment]}} {{имя_развёртывания}} --max {{макс_реплик}} --cpu-percent {{целевой_cpu}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-autoscale.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-autoscale.md"
+    },
+    {
+      "id": "tldr--30b477ba4dc4",
+      "canonicalPath": "common/kubectl-get.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl get",
+      "summary": "Получать объекты и ресурсы Kubernetes.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Получить все пространства имён в текущем кластере:",
+          "command": "kubectl get {{[ns|namespaces]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-get.md#L8"
+        },
+        {
+          "description": "Получить узлы в указанном пространстве имён:",
+          "command": "kubectl get {{[no|nodes]}} {{[-n|--namespace]}} {{пространство_имён}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-get.md#L12"
+        },
+        {
+          "description": "Получить поды в указанном пространстве имён:",
+          "command": "kubectl get {{[po|pods]}} {{[-n|--namespace]}} {{пространство_имён}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-get.md#L16"
+        },
+        {
+          "description": "Получить развёртывания в указанном пространстве имён:",
+          "command": "kubectl get {{[deploy|deployments]}} {{[-n|--namespace]}} {{пространство_имён}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-get.md#L20"
+        },
+        {
+          "description": "Получить сервисы в указанном пространстве имён:",
+          "command": "kubectl get {{[svc|services]}} {{[-n|--namespace]}} {{пространство_имён}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-get.md#L24"
+        },
+        {
+          "description": "Получить другие ресурсы:",
+          "command": "kubectl get {{persistentvolumeclaims|secret|...}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-get.md#L28"
+        },
+        {
+          "description": "Получить все ресурсы во всех пространствах имён:",
+          "command": "kubectl get all {{[-A|--all-namespaces]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-get.md#L32"
+        },
+        {
+          "description": "Получить объекты Kubernetes, определённые в YAML-манифесте:",
+          "command": "kubectl get {{[-f|--filename]}} {{путь/к/манифесту.yaml}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-get.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-get.md"
+    },
+    {
+      "id": "tldr--37a89bee79ba",
+      "canonicalPath": "common/ntl.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "ntl",
+      "title": "ntl",
+      "summary": "Эта команда — псевдоним для `netlify`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "ntl--00eeea3a"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr netlify",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ntl.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ntl.md"
+    },
+    {
+      "id": "tldr--3a428127aecc",
+      "canonicalPath": "common/mscore.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "mscore",
+      "title": "mscore",
+      "summary": "Эта команда — псевдоним для `musescore`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "musescore--76959afa",
+        "musescore-nightly--ca3b0527",
+        "musescore3-nightly--ca3b0527"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr musescore",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/mscore.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/mscore.md"
+    },
+    {
+      "id": "tldr--3bfd494f273e",
+      "canonicalPath": "common/adb.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "adb",
+      "title": "adb",
+      "summary": "Android Debug Bridge: взаимодействовать с экземпляром эмулятора Android или подключенными Android-устройствами. Некоторые подкоманды, такие как `shell`, имеют собственную документацию по использованию.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "adb--bc017ef3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Проверить, запущен ли процесс сервера adb и запустить его:",
+          "command": "adb start-server",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb.md#L9"
+        },
+        {
+          "description": "Завершить процесс сервера adb:",
+          "command": "adb kill-server",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb.md#L13"
+        },
+        {
+          "description": "Запустить удалённую оболочку на целевом эмуляторе/устройстве:",
+          "command": "adb shell",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb.md#L17"
+        },
+        {
+          "description": "Установить приложение Android на эмулятор/устройство:",
+          "command": "adb install -r {{путь/к/файлу}}.apk",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb.md#L21"
+        },
+        {
+          "description": "Скопировать файл/каталог с целевого устройства:",
+          "command": "adb pull {{путь/к/файлу_или_каталогу_устройства}} {{путь/к/локальному_каталогу_назначения}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb.md#L25"
+        },
+        {
+          "description": "Скопировать файл/каталог на целевое устройство:",
+          "command": "adb push {{путь/к/локальному_файлу_или_каталогу}} {{путь/к/каталогу_назначения_устройства}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb.md#L29"
+        },
+        {
+          "description": "Вывести список подключенных устройств:",
+          "command": "adb devices",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb.md#L33"
+        },
+        {
+          "description": "Указать устройство для отправки команд, если подключено несколько устройств:",
+          "command": "adb -s {{id_устройства}} {{shell}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb.md"
+    },
+    {
+      "id": "tldr--3c58e0945d71",
+      "canonicalPath": "osx/gmkdir.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gmkdir",
+      "title": "gmkdir",
+      "summary": "Эта команда — псевдоним для GNU `mkdir`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr mkdir",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gmkdir.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gmkdir.md"
+    },
+    {
+      "id": "tldr--4116218d0b1e",
+      "canonicalPath": "common/dirname.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dirname",
+      "title": "dirname",
+      "summary": "Удалять завершающую часть имени файла из пути. Смотрите также: `basename`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Определить родительский каталог заданного пути:",
+          "command": "dirname {{путь/к/файлу_или_каталогу}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dirname.md#L9"
+        },
+        {
+          "description": "Определить родительский каталог для нескольких путей:",
+          "command": "dirname {{путь/к/файлу_или_каталогу1 путь/к/файлу_или_каталогу2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dirname.md#L13"
+        },
+        {
+          "description": "Использовать символ NUL вместо символа новой строки в качестве разделителя вывода (полезно при использовании с `xargs`):",
+          "command": "dirname {{[-z|--zero]}} {{путь/к/файлу_или_каталогу1 путь/к/файлу_или_каталогу2 ...}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dirname.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/dirname.md"
+    },
+    {
+      "id": "tldr--45a0b253e7c9",
+      "canonicalPath": "linux/linux64.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "linux64",
+      "title": "linux64",
+      "summary": "Эта команда — псевдоним для `setarch linux64`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr setarch",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/linux64.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/linux64.md"
+    },
+    {
+      "id": "tldr--4786515a19ec",
+      "canonicalPath": "common/showmount.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "showmount",
+      "title": "showmount",
+      "summary": "Отображать информацию о монтировании для NFS-сервера.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Показать список клиентов, которые в данный момент монтируют ресурсы сервера:",
+          "command": "showmount {{имя_хоста}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/showmount.md#L8"
+        },
+        {
+          "description": "Показать список экспортируемых ресурсов NFS-сервера:",
+          "command": "showmount {{[-e|--exports]}} {{имя_хоста}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/showmount.md#L12"
+        },
+        {
+          "description": "Показать всех клиентов и каталоги, которые они примонтировали:",
+          "command": "showmount {{[-a|--all]}} {{имя_хоста}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/showmount.md#L16"
+        },
+        {
+          "description": "Показать только каталоги, примонтированные клиентами:",
+          "command": "showmount {{[-d|--directories]}} {{имя_хоста}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/showmount.md#L20"
+        },
+        {
+          "description": "Показать список экспортируемых ресурсов без заголовков:",
+          "command": "showmount {{[-e|--exports]}} --no-headers {{имя_хоста}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/showmount.md#L24"
+        },
+        {
+          "description": "Показать справку:",
+          "command": "showmount {{[-h|--help]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/showmount.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/showmount.md"
+    },
+    {
+      "id": "tldr--4a6c64e1b4ed",
+      "canonicalPath": "common/npm-check.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "npm-check",
+      "title": "npm-check",
+      "summary": "Проверять устаревшие, некорректные и неиспользуемые зависимости npm-пакетов.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Вывести отчёт об устаревших, некорректных и неиспользуемых зависимостях:",
+          "command": "npm-check",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/npm-check.md#L8"
+        },
+        {
+          "description": "Интерактивно обновить устаревшие пакеты:",
+          "command": "npm-check {{[-u|--update]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/npm-check.md#L12"
+        },
+        {
+          "description": "Обновить всё без подтверждения:",
+          "command": "npm-check {{[-y|--update-all]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/npm-check.md#L16"
+        },
+        {
+          "description": "Пропустить проверку неиспользуемых пакетов:",
+          "command": "npm-check {{[-s|--skip-unused]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/npm-check.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/npm-check.md"
+    },
+    {
+      "id": "tldr--4c4013d14809",
+      "canonicalPath": "common/kubectl.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl",
+      "summary": "Выполнять команды в кластерах Kubernetes. Некоторые подкоманды, такие как `run`, имеют собственную документацию по использованию.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Вывести подробную информацию о ресурсе:",
+          "command": "kubectl get {{pods|service|deployment|ingress|...}} {{[-o|--output]}} wide",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl.md#L9"
+        },
+        {
+          "description": "Присвоить указанному поду метку `unhealthy` со значением `true`:",
+          "command": "kubectl label pods {{имя}} unhealthy=true",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl.md#L13"
+        },
+        {
+          "description": "Вывести список всех ресурсов:",
+          "command": "kubectl get all",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl.md#L17"
+        },
+        {
+          "description": "Показать использование ресурсов (CPU/память/хранилище) узлами или подами:",
+          "command": "kubectl top {{pods|nodes}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl.md#L21"
+        },
+        {
+          "description": "Показать адреса мастера и служб кластера:",
+          "command": "kubectl cluster-info",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl.md#L25"
+        },
+        {
+          "description": "Показать описание определённого поля:",
+          "command": "kubectl explain {{pods.spec.containers}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl.md#L29"
+        },
+        {
+          "description": "Вывести логи контейнера в поде:",
+          "command": "kubectl logs {{имя_пода}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl.md#L33"
+        },
+        {
+          "description": "Выполнить команду в существующем поде:",
+          "command": "kubectl exec {{имя_пода}} -- {{ls /}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl.md"
+    },
+    {
+      "id": "tldr--4e8bc506c7af",
+      "canonicalPath": "common/which.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "which",
+      "title": "which",
+      "summary": "Находить программу в переменной `$PATH` пользователя. Смотрите также: `whereis`, `type`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unxutils--5bef4004",
+        "which--ef875582"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Найти переменную окружения `$PATH` и отобразить расположение всех соответствующих исполняемых файлов:",
+          "command": "which {{исполняемый_файл}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/which.md#L9"
+        },
+        {
+          "description": "Если есть несколько исполняемых файлов, которые совпадают, отобразить все:",
+          "command": "which {{[-a|--all]}} {{исполняемый_файл}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/which.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/which.md"
+    },
+    {
+      "id": "tldr--528748c247c7",
+      "canonicalPath": "linux/dnf5.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "dnf5",
+      "title": "dnf5",
+      "summary": "Эта команда — псевдоним для `dnf`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr dnf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf5.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/dnf5.md"
+    },
+    {
+      "id": "tldr--57102f1cfbb7",
+      "canonicalPath": "common/trash-cli.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "trash-cli",
+      "title": "trash-cli",
+      "summary": "Эта команда — псевдоним для `trash`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "trash-cli--2858ced0"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr trash",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/trash-cli.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/trash-cli.md"
+    },
+    {
+      "id": "tldr--57369f041d4c",
+      "canonicalPath": "common/xargs.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "xargs",
+      "title": "xargs",
+      "summary": "Выполнять команду с аргументами, переданными по конвейеру из другой команды, файла и т.д. Ввод обрабатывается как единый блок текста и разбивается на части по пробелам, табуляциям, переводам строк и концу файла. Смотрите также: `parallel`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "findutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004",
+        "uutils-findutils--77d666d2"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Выполнить команду, используя входные данные как аргументы:",
+          "command": "{{источник_аргументов}} | xargs {{команда}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xargs.md#L10"
+        },
+        {
+          "description": "Выполнить несколько команд в цепочке над входными данными:",
+          "command": "{{источник_аргументов}} | xargs sh -c \"{{команда1}} && {{команда2}} | {{команда3}}\"",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xargs.md#L14"
+        },
+        {
+          "description": "Выполнить новую команду для каждого аргумента:",
+          "command": "{{источник_аргументов}} | xargs {{[-n|--max-args]}} 1 {{команда}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xargs.md#L18"
+        },
+        {
+          "description": "Увеличить лимит параллельных процессов до 10 (по умолчанию 1; 0 означает максимально возможное число):",
+          "command": "{{источник_аргументов}} | xargs {{[-P|--max-procs]}} 10 {{[-n|--max-args]}} {{1}} {{команда}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xargs.md#L22"
+        },
+        {
+          "description": "Выполнить команду для каждой входной строки, заменяя вхождения заполнителя (здесь `_`) на входную строку:",
+          "command": "{{источник_аргументов}} | xargs -I _ {{команда}} _ {{дополнительные_аргументы}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xargs.md#L26"
+        },
+        {
+          "description": "Запросить подтверждение перед выполнением команды (подтвердить `y` или `Y`):",
+          "command": "{{источник_аргументов}} | xargs {{[-p|--interactive]}} {{команда}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xargs.md#L30"
+        },
+        {
+          "description": "Прочитать аргументы для команды из файла:",
+          "command": "xargs {{[-a|--arg-file]}} {{путь/к/файлу}} {{команда}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xargs.md#L34"
+        },
+        {
+          "description": "Разрешить команде доступ к терминалу для интерактивного ввода:",
+          "command": "{{источник_аргументов}} | xargs {{[-o|--open-tty]}} {{команда}}",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xargs.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xargs.md"
+    },
+    {
+      "id": "tldr--57b3b73580a6",
+      "canonicalPath": "common/3d-ascii-viewer.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "3d-ascii-viewer",
+      "title": "3d-ascii-viewer",
+      "summary": "Просматривать 3D `.obj` модели в виде анимированного ASCII в терминале.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Отобразить модель:",
+          "command": "3d-ascii-viewer {{путь/к/модели}}.obj",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/3d-ascii-viewer.md#L8"
+        },
+        {
+          "description": "Установить ширину и высоту:",
+          "command": "3d-ascii-viewer -w {{ширина}} -h {{высота}} {{путь/к/модели}}.obj",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/3d-ascii-viewer.md#L12"
+        },
+        {
+          "description": "Включить цвет:",
+          "command": "3d-ascii-viewer --color {{путь/к/модели}}.obj",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/3d-ascii-viewer.md#L16"
+        },
+        {
+          "description": "Установить количество кадров в секунду:",
+          "command": "3d-ascii-viewer -f {{кадры_в_секунду}} {{путь/к/модели}}.obj",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/3d-ascii-viewer.md#L20"
+        },
+        {
+          "description": "Запустить интерактивный режим:",
+          "command": "3d-ascii-viewer --interactive {{путь/к/модели}}.obj",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/3d-ascii-viewer.md#L24"
+        },
+        {
+          "description": "Показать справку:",
+          "command": "3d-ascii-viewer --help",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/3d-ascii-viewer.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/3d-ascii-viewer.md"
+    },
+    {
+      "id": "tldr--57b640551144",
+      "canonicalPath": "linux/nmtui-edit.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "nmtui-edit",
+      "title": "nmtui-edit",
+      "summary": "Эта команда — псевдоним для `nmtui edit`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui-edit.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui-edit.md"
+    },
+    {
+      "id": "tldr--5cd7eaf0df10",
+      "canonicalPath": "common/kubectl-annotate.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl annotate",
+      "summary": "Аннотировать ресурсы Kubernetes.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Добавить аннотацию к поду:",
+          "command": "kubectl annotate {{[po|pods]}} {{имя_пода}} {{ключ}}={{значение}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-annotate.md#L8"
+        },
+        {
+          "description": "Обновить аннотацию пода, перезаписав существующее значение:",
+          "command": "kubectl annotate {{[po|pods]}} {{имя_пода}} {{ключ}}={{значение}} --overwrite",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-annotate.md#L12"
+        },
+        {
+          "description": "Добавить аннотацию ко всем подам в пространстве имён с определённым селектором меток:",
+          "command": "kubectl annotate {{[po|pods]}} {{ключ}}={{значение}} {{[-l|--selector]}} {{ключ_метки}}={{значение_метки}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-annotate.md#L16"
+        },
+        {
+          "description": "Вывести список всех аннотаций пода:",
+          "command": "kubectl annotate {{[po|pods]}} {{имя_пода}} --list",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-annotate.md#L20"
+        },
+        {
+          "description": "Удалить аннотацию с пода:",
+          "command": "kubectl annotate {{[po|pods]}} {{имя_пода}} {{ключ}}-",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-annotate.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-annotate.md"
+    },
+    {
+      "id": "tldr--658cdafe0ade",
+      "canonicalPath": "osx/gtest.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gtest",
+      "title": "gtest",
+      "summary": "Эта команда — псевдоним для GNU `test`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr test",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtest.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtest.md"
+    },
+    {
+      "id": "tldr--6771003ffda3",
+      "canonicalPath": "common/tesseract.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "tesseract",
+      "title": "tesseract",
+      "summary": "Движок оптического распознавания символов (OCR).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "tesseract--678a76fa",
+        "tesseract3--6c2709ef",
+        "tesseract4--6c2709ef"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Распознать текст на изображении и сохранить его по указанному пути (расширение `.txt` добавляется автоматически):",
+          "command": "tesseract {{путь/к/изображению.png}} {{путь/к/выходному_файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tesseract.md#L8"
+        },
+        {
+          "description": "Указать язык ([l]anguage) (по умолчанию английский), используя код ISO 639-2 (например, deu = Deutsch = Немецкий):",
+          "command": "tesseract -l deu {{путь/к/изображению.png}} {{путь/к/выходному_файлу}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tesseract.md#L12"
+        },
+        {
+          "description": "Вывести список кодов ISO 639-2 установленных языков:",
+          "command": "tesseract --list-langs",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tesseract.md#L16"
+        },
+        {
+          "description": "Указать режим сегментации страницы ([p]age [s]egmentation [m]ode) (по умолчанию 3):",
+          "command": "tesseract --psm {{0..13}} {{путь/к/изображению.png}} {{путь/к/выходному_файлу}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tesseract.md#L20"
+        },
+        {
+          "description": "Вывести список режимов сегментации страниц и их описания:",
+          "command": "tesseract --help-psm",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tesseract.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/tesseract.md"
+    },
+    {
+      "id": "tldr--6d83f6ef4d77",
+      "canonicalPath": "common/adb-shell.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "adb",
+      "title": "adb shell",
+      "summary": "Android Debug Bridge Shell: Запуск удалённой командной оболочки на эмуляторе Android или подключенном устройстве Android.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "adb--bc017ef3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Запустить удалённую интерактивную оболочку на эмуляторе или устройстве:",
+          "command": "adb shell",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-shell.md#L8"
+        },
+        {
+          "description": "Получить все свойства от эмулятора или устройства:",
+          "command": "adb shell getprop",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-shell.md#L12"
+        },
+        {
+          "description": "Вернуть всем разрешениям значение по умолчанию:",
+          "command": "adb shell pm reset-permissions",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-shell.md#L16"
+        },
+        {
+          "description": "Отозвать опасные разрешения для приложения:",
+          "command": "adb shell pm revoke {{пакет}} {{разрешения}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-shell.md#L20"
+        },
+        {
+          "description": "Вызвать событие клавиши:",
+          "command": "adb shell input keyevent {{код_клавиши}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-shell.md#L24"
+        },
+        {
+          "description": "Очистить данные приложения на эмуляторе или устройстве:",
+          "command": "adb shell pm clear {{пакет}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-shell.md#L28"
+        },
+        {
+          "description": "Запустить activity на эмуляторе или устройстве:",
+          "command": "adb shell am start -n {{пакет}}/{{активность}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-shell.md#L32"
+        },
+        {
+          "description": "Запустить базовый activity на эмуляторе или устройстве:",
+          "command": "adb shell am start -W -c android.intent.category.HOME -a android.intent.action.MAIN",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-shell.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-shell.md"
+    },
+    {
+      "id": "tldr--776633fdfcb1",
+      "canonicalPath": "common/npm-why.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "npm-why",
+      "title": "npm-why",
+      "summary": "Определять, почему установлен пакет npm.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Показать, почему установлен пакет `npm`:",
+          "command": "npm-why {{пакет}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/npm-why.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/npm-why.md"
+    },
+    {
+      "id": "tldr--7a825c9a1b47",
+      "canonicalPath": "common/npx.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "npx",
+      "title": "npx",
+      "summary": "Эта команда — псевдоним для `npm exec`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr npm exec",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/npx.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/npx.md"
+    },
+    {
+      "id": "tldr--7d372e8faead",
+      "canonicalPath": "common/acme.sh-dns.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "acme.sh",
+      "title": "acme.sh --dns",
+      "summary": "Использовать проверку DNS-01 для выпуска TLS-сертификата.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "acme-sh--cd6f6523"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Выпустить сертификат, используя автоматический режим DNS API:",
+          "command": "acme.sh --issue --dns {{dns_gd}} --domain {{example.com}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh-dns.md#L8"
+        },
+        {
+          "description": "Выпустить wildcard-сертификат (отмеченный звёздочкой), используя автоматический режим DNS API:",
+          "command": "acme.sh --issue --dns {{dns_namesilo}} --domain {{example.com}} --domain {{*.example.com}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh-dns.md#L12"
+        },
+        {
+          "description": "Выпустить сертификат, используя режим DNS-алиаса (псевдонима):",
+          "command": "acme.sh --issue --dns {{dns_cf}} --domain {{example.com}} --challenge-alias {{alias-for-example-validation.com}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh-dns.md#L16"
+        },
+        {
+          "description": "Выпустить сертификат, отключив автоматический опрос DNS Cloudflare/Google после добавления DNS-записи и указав время ожидания в секундах:",
+          "command": "acme.sh --issue --dns {{dns_namecheap}} --domain {{example.com}} --dnssleep {{300}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh-dns.md#L20"
+        },
+        {
+          "description": "Выпустить сертификат, используя ручной режим DNS:",
+          "command": "acme.sh --issue --dns --domain {{example.com}} --yes-I-know-dns-manual-mode-enough-go-ahead-please",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh-dns.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/acme.sh-dns.md"
+    },
+    {
+      "id": "tldr--8b8aa6427234",
+      "canonicalPath": "common/awk.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "awk",
+      "title": "awk",
+      "summary": "Универсальный язык программирования для работы с файлами. Примечание: различные реализации AWK часто делают эту команду символической ссылкой на свой бинарный файл. Смотрите также: `gawk`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "awk--72559405",
+        "gawk--3d177db2",
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Вывести пятый столбец (или поле) в файле, разделённом пробелами:",
+          "command": "awk '{print $5}' {{путь/к/файлу}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/awk.md#L10"
+        },
+        {
+          "description": "Вывести второй столбец строк, содержащих \"foo\", в файле, разделённом пробелами:",
+          "command": "awk '/{{foo}}/ {print $2}' {{путь/к/файлу}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/awk.md#L14"
+        },
+        {
+          "description": "Вывести последний столбец каждой строки в файле, используя запятую (вместо пробела) в качестве разделителя полей:",
+          "command": "awk -F ',' '{print $NF}' {{путь/к/файлу}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/awk.md#L18"
+        },
+        {
+          "description": "Просуммировать значения в первом столбце файла и вывести итог:",
+          "command": "awk '{s+=$1} END {print s}' {{путь/к/файлу}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/awk.md#L22"
+        },
+        {
+          "description": "Вывести каждую третью строку, начиная с первой:",
+          "command": "awk 'NR%3==1' {{путь/к/файлу}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/awk.md#L26"
+        },
+        {
+          "description": "Вывести различные значения в зависимости от условий:",
+          "command": "awk '{if ($1 == \"foo\") print \"Exact match foo\"; else if ($1 ~ \"bar\") print \"Partial match bar\"; else print \"Baz\"}' {{путь/к/файлу}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/awk.md#L30"
+        },
+        {
+          "description": "Вывести все строки, в которых значение 10-го столбца находится между минимальным и максимальным значениями:",
+          "command": "awk '($10 >= {{минимальное_значение}} && $10 <= {{максимальное_значение}})' {{путь/к/файлу}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/awk.md#L34"
+        },
+        {
+          "description": "Вывести таблицу пользователей (UID >=1000) с заголовком и форматированием, разделитель - двоеточие (`%-20s`: 20 символов с выравниванием по левому краю, `%6s`: 6 символов с выравниванием по правому краю):",
+          "command": "awk 'BEGIN {FS=\":\";printf \"%-20s %6s %25s\\n\", \"Name\", \"UID\", \"Shell\"} $4 >= 1000 {printf \"%-20s %6d %25s\\n\", $1, $4, $7}' /etc/passwd",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/awk.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/awk.md"
+    },
+    {
+      "id": "tldr--923db4cec2e1",
+      "canonicalPath": "common/masscan.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "masscan",
+      "title": "masscan",
+      "summary": "Сканировать сети с очень высокой скоростью. Лучше всего работает с правами суперпользователя. Для справки по совместимости с Nmap выполните `masscan --nmap`. Смотрите также: `hping3`, `naabu`, `nmap`, `rustscan`, `zmap`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "masscan--ef0c86bb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Просканировать IP-адрес или сетевую подсеть на порт 80:",
+          "command": "masscan {{ip_адрес|сетевой_префикс}} {{[-p|--ports]}} {{80}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/masscan.md#L10"
+        },
+        {
+          "description": "Просканировать подсеть класса B на 100 самых популярных портов со скоростью 100 000 пакетов в секунду:",
+          "command": "masscan {{10.0.0.0/16}} --top-ports {{100}} --rate {{100000}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/masscan.md#L14"
+        },
+        {
+          "description": "Просканировать подсеть класса B, исключая диапазоны из файла исключений:",
+          "command": "masscan {{10.0.0.0/16}} --top-ports {{100}} --excludefile {{путь/к/файлу}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/masscan.md#L18"
+        },
+        {
+          "description": "Просканировать подсеть класса B с определением версии в стиле Nmap (захват баннеров):",
+          "command": "masscan {{10.0.0.0/16}} {{[-p|--ports]}} {{22,80}} --banners --rate {{100000}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/masscan.md#L22"
+        },
+        {
+          "description": "Просканировать интернет на наличие веб-серверов на портах 80 и 443:",
+          "command": "masscan {{0.0.0.0/0}} {{[-p|--ports]}} {{80,443}} --rate {{10000000}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/masscan.md#L26"
+        },
+        {
+          "description": "Просканировать интернет на наличие DNS-серверов на UDP-порту 53:",
+          "command": "masscan {{0.0.0.0/0}} {{[-p|--ports]}} {{U:53}} --rate {{10000000}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/masscan.md#L30"
+        },
+        {
+          "description": "Просканировать интернет на определённый диапазон портов и экспортировать в файл:",
+          "command": "masscan {{0.0.0.0/0}} {{[-p|--ports]}} {{0-65535}} --output-format {{binary|grepable|json|list|xml}} --output-filename {{путь/к/файлу}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/masscan.md#L34"
+        },
+        {
+          "description": "Прочитать результаты бинарного сканирования из файла и вывести в `stdout`:",
+          "command": "masscan --readscan {{путь/к/файлу}}",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/masscan.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/masscan.md"
+    },
+    {
+      "id": "tldr--958c93fa0fd4",
+      "canonicalPath": "common/aapt.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "aapt",
+      "title": "aapt",
+      "summary": "Android Asset Packaging Tool: компилировать и упаковывать ресурсы приложений Android.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Вывести список файлов, содержащихся в APK-архиве:",
+          "command": "aapt list {{путь/к/приложению}}.apk",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/aapt.md#L8"
+        },
+        {
+          "description": "Отобразить метаданные приложения (версия, разрешения и т.д.):",
+          "command": "aapt dump badging {{путь/к/приложению}}.apk",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/aapt.md#L12"
+        },
+        {
+          "description": "Создать новый APK-архив с файлами из указанного каталога:",
+          "command": "aapt package -F {{путь/к/приложению}}.apk {{путь/к/каталогу}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/aapt.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/aapt.md"
+    },
+    {
+      "id": "tldr--95ddf86a5427",
+      "canonicalPath": "common/kubectl-completion.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl completion",
+      "summary": "Генерировать код автодополнения для команд `kubectl`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Вывести скрипт автодополнения для Bash, Zsh, fish или PowerShell:",
+          "command": "kubectl completion {{bash|zsh|fish|powershell}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-completion.md#L8"
+        },
+        {
+          "description": "Загрузить автодополнение Bash или Zsh в текущую сессию оболочки:",
+          "command": "source <(kubectl completion {{bash|zsh}})",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-completion.md#L12"
+        },
+        {
+          "description": "Добавить скрипт автодополнения Bash в `~/.bashrc`:",
+          "command": "kubectl completion bash >> ~/.bashrc",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-completion.md#L16"
+        },
+        {
+          "description": "Записать скрипт автодополнения Zsh в файл в `fpath`:",
+          "command": "kubectl completion zsh > \"${fpath[1]}/_kubectl\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-completion.md#L20"
+        },
+        {
+          "description": "Загрузить автодополнение fish в текущую сессию оболочки:",
+          "command": "kubectl completion fish | source",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-completion.md#L24"
+        },
+        {
+          "description": "Сохранить автодополнение fish:",
+          "command": "kubectl completion fish > ~/.config/fish/completions/kubectl.fish",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-completion.md#L28"
+        },
+        {
+          "description": "Загрузить автодополнение PowerShell в текущую сессию оболочки:",
+          "command": "kubectl completion powershell | Out-String | Invoke-Expression",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-completion.md#L32"
+        },
+        {
+          "description": "Сохранить автодополнение PowerShell:",
+          "command": "kubectl completion powershell >> $PROFILE",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-completion.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-completion.md"
+    },
+    {
+      "id": "tldr--9b813d7fdec5",
+      "canonicalPath": "common/cat.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "cat",
+      "title": "cat",
+      "summary": "Выводит и объединяет файлы.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Выводит содержимое файла в стандартный вывод:",
+          "command": "cat {{путь/к/файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/cat.md#L8"
+        },
+        {
+          "description": "Объединяет несколько файлов в один итоговый файл:",
+          "command": "cat {{путь/к/файлу1 путь/к/файлу2 ...}} > {{путь/к/итоговому_файлу}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/cat.md#L12"
+        },
+        {
+          "description": "Добавляет несколько файлов в конец итогового файла:",
+          "command": "cat {{путь/к/файлу1 путь/к/файлу2 ...}} >> {{путь/к/итоговому_файлу}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/cat.md#L16"
+        },
+        {
+          "description": "Копирует содержимое файла в итоговый файл без буферизации:",
+          "command": "cat -u {{/dev/tty12}} > {{/dev/tty13}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/cat.md#L20"
+        },
+        {
+          "description": "Записывает данные из стандартного ввода в файл:",
+          "command": "cat - > {{путь/к/файлу}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/cat.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/cat.md"
+    },
+    {
+      "id": "tldr--9c602dc463dd",
+      "canonicalPath": "common/adb-reverse.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "adb",
+      "title": "adb reverse",
+      "summary": "Android Debug Bridge Reverse: обратное соединение от эмулятора Android или подключенного устройства Android.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "adb--bc017ef3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Вывести список всех обратных соединений от эмуляторов и устройств:",
+          "command": "adb reverse --list",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-reverse.md#L8"
+        },
+        {
+          "description": "Создать обратное соединение по TCP-порту от эмулятора или устройства до localhost:",
+          "command": "adb reverse tcp:{{удалённый_порт}} tcp:{{локальный_порт}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-reverse.md#L12"
+        },
+        {
+          "description": "Создать обратное соединение по TCP-порту от определённого эмулятора или устройства (по ID устройства / [s]ерийному номеру) до localhost:",
+          "command": "adb -s {{id_устройства}} reverse tcp:{{удалённый_порт}} tcp:{{локальный_порт}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-reverse.md#L16"
+        },
+        {
+          "description": "Удалить обратное соединение из эмулятора или устройства:",
+          "command": "adb reverse --remove tcp:{{удалённый_порт}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-reverse.md#L20"
+        },
+        {
+          "description": "Удалить все обратные соединения на всех эмуляторах и устройствах:",
+          "command": "adb reverse --remove-all",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-reverse.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-reverse.md"
+    },
+    {
+      "id": "tldr--9cb652f1b4b6",
+      "canonicalPath": "common/kubectl-auth.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl auth",
+      "summary": "Проверять права доступа в кластере Kubernetes.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Проверить, может ли текущий пользователь выполнять все действия со всеми ресурсами в определённом пространстве имён:",
+          "command": "kubectl auth can-i '*' '*' {{[-n|--namespace]}} {{пространство_имён}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-auth.md#L8"
+        },
+        {
+          "description": "Проверить, может ли текущий пользователь выполнить определённое действие с определённым ресурсом:",
+          "command": "kubectl auth can-i {{действие}} {{ресурс}} {{[-n|--namespace]}} {{пространство_имён}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-auth.md#L12"
+        },
+        {
+          "description": "Проверить, может ли определённый пользователь или сервисный аккаунт выполнить действие с ресурсом:",
+          "command": "kubectl auth can-i {{действие}} {{ресурс}} {{[-n|--namespace]}} {{пространство_имён}} --as {{пользователь_или_аккаунт}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-auth.md#L16"
+        },
+        {
+          "description": "Вывести список всех действий, которые текущий пользователь может выполнить в пространстве имён:",
+          "command": "kubectl auth can-i --list {{[-n|--namespace]}} {{пространство_имён}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-auth.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-auth.md"
+    },
+    {
+      "id": "tldr--9e8e9f68cc1f",
+      "canonicalPath": "common/kubectl-create.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl create",
+      "summary": "Создавать ресурс из файла или из `stdin`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Создать ресурс, используя файл определения ресурса:",
+          "command": "kubectl create {{[-f|--filename]}} {{путь/к/файлу.yml}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-create.md#L8"
+        },
+        {
+          "description": "Создать ресурс из `stdin`:",
+          "command": "kubectl create {{[-f|--filename]}} -",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-create.md#L12"
+        },
+        {
+          "description": "Создать развёртывание:",
+          "command": "kubectl create {{[deploy|deployment]}} {{имя_развёртывания}} --image {{образ}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-create.md#L16"
+        },
+        {
+          "description": "Создать развёртывание с репликами:",
+          "command": "kubectl create {{[deploy|deployment]}} {{имя_развёртывания}} --image {{образ}} --replicas {{количество_реплик}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-create.md#L20"
+        },
+        {
+          "description": "Создать сервис:",
+          "command": "kubectl create {{[svc|service]}} {{тип_сервиса}} {{имя_сервиса}} --tcp {{порт}}:{{целевой_порт}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-create.md#L24"
+        },
+        {
+          "description": "Создать пространство имён:",
+          "command": "kubectl create {{[ns|namespace]}} {{имя_пространства_имён}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-create.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-create.md"
+    },
+    {
+      "id": "tldr--9fb97227c7d1",
+      "canonicalPath": "common/kubectl-certificate.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl certificate",
+      "summary": "Управлять запросами на подпись сертификатов.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Одобрить запрос на подпись сертификата по имени:",
+          "command": "kubectl certificate approve {{имя_csr}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-certificate.md#L8"
+        },
+        {
+          "description": "Отклонить запрос на подпись сертификата по имени:",
+          "command": "kubectl certificate deny {{имя_csr}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-certificate.md#L12"
+        },
+        {
+          "description": "Одобрить запрос на подпись сертификата, определённый в файле манифеста:",
+          "command": "kubectl certificate approve --filename {{путь/к/csr.yaml}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-certificate.md#L16"
+        },
+        {
+          "description": "Отклонить запрос на подпись сертификата, определённый в файле манифеста:",
+          "command": "kubectl certificate deny --filename {{путь/к/csr.yaml}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-certificate.md#L20"
+        },
+        {
+          "description": "Принудительно переодобрить запрос на подпись сертификата, который был ранее отклонён:",
+          "command": "kubectl certificate approve --force {{имя_csr}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-certificate.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-certificate.md"
+    },
+    {
+      "id": "tldr--a25638c37664",
+      "canonicalPath": "common/kubectl-apply.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl apply",
+      "summary": "Управлять приложениями через файлы, определяющие ресурсы Kubernetes. Создавать и обновлять ресурсы в кластере.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Применить конфигурацию к ресурсу по имени файла:",
+          "command": "kubectl apply {{[-f|--filename]}} {{путь/к/файлу}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-apply.md#L9"
+        },
+        {
+          "description": "Применить конфигурацию к ресурсу из `kustomization.yaml` в каталоге:",
+          "command": "kubectl apply {{[-k|--kustomize]}} {{путь/к/каталогу}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-apply.md#L13"
+        },
+        {
+          "description": "Применить конфигурацию к ресурсу через `stdin`:",
+          "command": "{{cat pod.json}} | kubectl apply {{[-f|--filename]}} -",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-apply.md#L17"
+        },
+        {
+          "description": "Отредактировать последние аннотации last-applied-configuration ресурсов в редакторе по умолчанию:",
+          "command": "kubectl apply edit-last-applied {{[-f|--filename]}} {{путь/к/файлу}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-apply.md#L21"
+        },
+        {
+          "description": "Установить последние аннотации last-applied-configuration в соответствии с содержимым файла:",
+          "command": "kubectl apply set-last-applied {{[-f|--filename]}} {{путь/к/файлу}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-apply.md#L25"
+        },
+        {
+          "description": "Просмотреть последние аннотации last-applied-configuration по типу/имени или файлу:",
+          "command": "kubectl apply view-last-applied {{[-f|--filename]}} {{путь/к/файлу}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-apply.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-apply.md"
+    },
+    {
+      "id": "tldr--a49fae48892c",
+      "canonicalPath": "common/kubectl-delete.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl delete",
+      "summary": "Удалять ресурсы Kubernetes.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Удалить конкретный под:",
+          "command": "kubectl delete {{[po|pods]}} {{имя_пода}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-delete.md#L8"
+        },
+        {
+          "description": "Удалить конкретное развёртывание:",
+          "command": "kubectl delete {{[deploy|deployments]}} {{имя_развёртывания}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-delete.md#L12"
+        },
+        {
+          "description": "Удалить конкретный узел:",
+          "command": "kubectl delete {{[no|nodes]}} {{имя_узла}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-delete.md#L16"
+        },
+        {
+          "description": "Удалить все поды в указанном пространстве имён:",
+          "command": "kubectl delete {{[po|pods]}} --all {{[-n|--namespace]}} {{пространство_имён}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-delete.md#L20"
+        },
+        {
+          "description": "Удалить все развёртывания и сервисы в указанном пространстве имён:",
+          "command": "kubectl delete {{[deploy|deployments]}},{{[svc|services]}} --all {{[-n|--namespace]}} {{пространство_имён}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-delete.md#L24"
+        },
+        {
+          "description": "Удалить все узлы:",
+          "command": "kubectl delete {{[no|nodes]}} --all",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-delete.md#L28"
+        },
+        {
+          "description": "Удалить ресурсы, определённые в YAML-манифесте:",
+          "command": "kubectl delete {{[-f|--filename]}} {{путь/к/манифесту.yaml}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-delete.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-delete.md"
+    },
+    {
+      "id": "tldr--ac3a856da84c",
+      "canonicalPath": "common/argospm.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "argospm",
+      "title": "argospm",
+      "summary": "Эта команда — псевдоним для `argos-translate`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr argos-translate",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/argospm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/argospm.md"
+    },
+    {
+      "id": "tldr--ae11e8af31d6",
+      "canonicalPath": "common/ping.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "ping",
+      "title": "ping",
+      "summary": "Отправлять пакеты ICMP ECHO_REQUEST сетевым узлам. Смотрите также: `mtr`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Пропинговать хост с IP `10.0.0.1` (Примечание: `10.0.0.1` можно сократить до `10.1`):",
+          "command": "ping 10.0.0.1",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ping.md#L9"
+        },
+        {
+          "description": "Пропинговать хост определенное количество раз:",
+          "command": "ping -c {{количество}} {{хост}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ping.md#L13"
+        },
+        {
+          "description": "Пропинговать хост с заданным интервалом в секундах между запросами (по умолчанию 1 секунда):",
+          "command": "ping -i {{секунды}} {{хост}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ping.md#L17"
+        },
+        {
+          "description": "Пропинговать хост без попытки определить символьные имена для адресов:",
+          "command": "ping -n {{хост}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ping.md#L21"
+        },
+        {
+          "description": "Пропинговать хост со звуковым сигналом при получении пакета (если ваш терминал это поддерживает):",
+          "command": "ping -a {{хост}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ping.md#L25"
+        },
+        {
+          "description": "Также отобразить сообщение, если ответ не был получен:",
+          "command": "ping -O {{хост}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ping.md#L29"
+        },
+        {
+          "description": "Пропинговать хост с определённым количеством запросов, таймаутом ответа для каждого пакета (`-W`) и общим ограничением времени (`-w`) всего выполнения ping:",
+          "command": "ping -c {{количество}} -W {{секунды}} -w {{секунды}} {{хост}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ping.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ping.md"
+    },
+    {
+      "id": "tldr--aea62b226725",
+      "canonicalPath": "osx/gfalse.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gfalse",
+      "title": "gfalse",
+      "summary": "Эта команда — псевдоним для GNU `false`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr false",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfalse.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gfalse.md"
+    },
+    {
+      "id": "tldr--b33a6d7c554b",
+      "canonicalPath": "linux/pihole.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pihole",
+      "title": "pihole",
+      "summary": "Управлять DNS-сервером для блокировки рекламы Pi-hole.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Проверить статус Pi-hole:",
+          "command": "pihole status",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pihole.md#L8"
+        },
+        {
+          "description": "Обновить Pi-hole и Gravity:",
+          "command": "sudo pihole {{[-up|updatePihole]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pihole.md#L12"
+        },
+        {
+          "description": "Запустить или остановить демона:",
+          "command": "pihole {{enable|disable}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pihole.md#L16"
+        },
+        {
+          "description": "Обновить списки и очистить кэш без перезапуска DNS-сервера:",
+          "command": "pihole reloaddns",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pihole.md#L20"
+        },
+        {
+          "description": "Обновить список доменов, раздающих рекламу:",
+          "command": "pihole {{[-g|updateGravity]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pihole.md#L24"
+        },
+        {
+          "description": "Разрешить или запретить указанный домен:",
+          "command": "pihole {{allow|deny}} {{example.com}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pihole.md#L28"
+        },
+        {
+          "description": "Искать домен в списках:",
+          "command": "pihole {{[-q|query]}} {{example.com}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pihole.md#L32"
+        },
+        {
+          "description": "Открыть лог подключений в реальном времени:",
+          "command": "pihole {{[-t|tail]}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pihole.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/pihole.md"
+    },
+    {
+      "id": "tldr--b66e2f3bd9de",
+      "canonicalPath": "common/kubectl-cp.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl cp",
+      "summary": "Копировать файлы и каталоги между локальной файловой системой и контейнером в поде.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Скопировать локальный файл или каталог в под:",
+          "command": "kubectl cp {{путь/к/локальному_файлу}} {{имя_пода}}:/{{путь/к/файлу_в_поде}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cp.md#L8"
+        },
+        {
+          "description": "Скопировать локальный файл или каталог в под в определённом пространстве имён:",
+          "command": "kubectl cp {{путь/к/локальному_файлу}} {{пространство_имён}}/{{имя_пода}}:/{{путь/к/файлу_в_поде}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cp.md#L12"
+        },
+        {
+          "description": "Скопировать файл или каталог из пода на локальную машину:",
+          "command": "kubectl cp {{пространство_имён}}/{{имя_пода}}:/{{путь/к/файлу_в_поде}} {{путь/к/локальному_файлу}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cp.md#L16"
+        },
+        {
+          "description": "Скопировать файл или каталог в определённый контейнер в поде:",
+          "command": "kubectl cp {{путь/к/локальному_файлу}} {{имя_пода}}:/{{путь/к/файлу_в_поде}} {{[-c|--container]}} {{имя_контейнера}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cp.md#L20"
+        },
+        {
+          "description": "Скопировать файл или каталог в под без сохранения владельца и прав доступа:",
+          "command": "kubectl cp {{путь/к/локальному_файлу}} {{пространство_имён}}/{{имя_пода}}:/{{путь/к/файлу_в_поде}} --no-preserve",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cp.md#L24"
+        },
+        {
+          "description": "Скопировать локальный файл или каталог в под с повторными попытками при ошибке:",
+          "command": "kubectl cp {{путь/к/локальному_файлу}} {{имя_пода}}:/{{путь/к/файлу_в_поде}} --retries {{3}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cp.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-cp.md"
+    },
+    {
+      "id": "tldr--b916b3287fab",
+      "canonicalPath": "common/jco.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "jco",
+      "title": "jco",
+      "summary": "Эта команда — псевдоним для `autojump`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr autojump",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/jco.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/jco.md"
+    },
+    {
+      "id": "tldr--c0955f1ddc9a",
+      "canonicalPath": "osx/gyes.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gyes",
+      "title": "gyes",
+      "summary": "Эта команда — псевдоним для GNU `yes`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr yes",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gyes.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gyes.md"
+    },
+    {
+      "id": "tldr--c6ab9d3d0196",
+      "canonicalPath": "osx/gsleep.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gsleep",
+      "title": "gsleep",
+      "summary": "Эта команда — псевдоним для GNU `sleep`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr {{[-p|--platform]}} linux sleep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gsleep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gsleep.md"
+    },
+    {
+      "id": "tldr--cfc9c16ee82b",
+      "canonicalPath": "common/hostname.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "hostname",
+      "title": "hostname",
+      "summary": "Показывать или задавать системное имя хоста.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Показать текущее имя хоста:",
+          "command": "hostname",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/hostname.md#L8"
+        },
+        {
+          "description": "Показать сетевой адрес имени хоста:",
+          "command": "hostname {{[-i|--ip-address]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/hostname.md#L12"
+        },
+        {
+          "description": "Показать полное доменное имя (FQDN):",
+          "command": "hostname {{[-f|--fqdn]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/hostname.md#L16"
+        },
+        {
+          "description": "Задать текущее имя хоста:",
+          "command": "hostname {{новое_имя}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/hostname.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/hostname.md"
+    },
+    {
+      "id": "tldr--d2d461722f29",
+      "canonicalPath": "common/ssh.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "ssh",
+      "title": "ssh",
+      "summary": "Secure Shell (SSH) — это протокол для безопасного входа на удаленные системы. Его можно использовать для входа или выполнения команд на удаленном сервере.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git-with-openssh--49faf317",
+        "gow--4cb149e7",
+        "mina-sshd--7d588911",
+        "mls-software-openssh--6b012d8a",
+        "openssh--7291a89e"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Подключиться к удаленному серверу:",
+          "command": "ssh {{имя_пользователя}}@{{удаленный_хост}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ssh.md#L9"
+        },
+        {
+          "description": "Подключиться к удаленному серверу с использованием определенного приватного ключа:",
+          "command": "ssh {{имя_пользователя}}@{{удаленный_хост}} -i {{путь/к/файлу_ключа}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ssh.md#L13"
+        },
+        {
+          "description": "Подключиться к удаленному серверу с IP-адресом 10.0.0.1, используя определенный порт [p]:",
+          "command": "ssh {{имя_пользователя}}@10.0.0.1 -p {{2222}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ssh.md#L17"
+        },
+        {
+          "description": "Запустить команду на удаленном сервере с выделением [t]ty, что позволяет взаимодействовать с удаленной командой:",
+          "command": "ssh {{имя_пользователя}}@{{удаленный_хост}} -t {{команда}} {{аргументы_команды}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ssh.md#L21"
+        },
+        {
+          "description": "SSH-туннелирование: динамическая [D] переадресация портов (SOCKS-прокси на `localhost:1080`):",
+          "command": "ssh {{имя_пользователя}}@{{удаленный_хост}} -D {{1080}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ssh.md#L25"
+        },
+        {
+          "description": "SSH-туннелирование: переадресовать определенный порт (`localhost:9999` на `example.com:80`) с отключением псевдо-[T]ty и выполне[N]ия удаленных команд:",
+          "command": "ssh {{имя_пользователя}}@{{удаленный_хост}} -L {{9999}}:{{example.com}}:{{80}} -N -T",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ssh.md#L29"
+        },
+        {
+          "description": "SSH-прыжок [J]: подключиться к удаленному серверу через промежуточный хост (можно указать несколько хостов через запятую):",
+          "command": "ssh {{имя_пользователя}}@{{удаленный_хост}} -J {{имя_пользователя}}@{{промежуточный_хост}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ssh.md#L33"
+        },
+        {
+          "description": "Закрыть зависшую сессию:",
+          "command": "<Enter><~><.>",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ssh.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/ssh.md"
+    },
+    {
+      "id": "tldr--deba28b15c12",
+      "canonicalPath": "osx/ggroups.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "ggroups",
+      "title": "ggroups",
+      "summary": "Эта команда — псевдоним для GNU `groups`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr groups",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/ggroups.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/ggroups.md"
+    },
+    {
+      "id": "tldr--e6a6d3c83955",
+      "canonicalPath": "common/adb-install.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "adb",
+      "title": "adb install",
+      "summary": "Устанавливать пакеты на эмулятор Android или подключённое устройство Android.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "adb--bc017ef3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Установить приложение Android на эмулятор/устройство:",
+          "command": "adb install {{путь/к/файлу}}.apk",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-install.md#L8"
+        },
+        {
+          "description": "Установить приложение Android на конкретный эмулятор/устройство (переопределяет `$ANDROID_SERIAL`):",
+          "command": "adb -s {{серийный_номер}} install {{путь/к/файлу}}.apk",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-install.md#L12"
+        },
+        {
+          "description": "Переустановить ([r]einstall) существующее приложение, сохранив его данные:",
+          "command": "adb install -r {{путь/к/файлу}}.apk",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-install.md#L16"
+        },
+        {
+          "description": "Установить приложение Android, разрешив понижение ([d]owngrade) версии (только для отлаживаемых пакетов):",
+          "command": "adb install -d {{путь/к/файлу}}.apk",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-install.md#L20"
+        },
+        {
+          "description": "Предоставить ([g]rant) все разрешения, перечисленные в манифесте приложения:",
+          "command": "adb install -g {{путь/к/файлу}}.apk",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-install.md#L24"
+        },
+        {
+          "description": "Быстро обновить установленный пакет, обновляя только изменившиеся части APK:",
+          "command": "adb install --fastdeploy {{путь/к/файлу}}.apk",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-install.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/adb-install.md"
+    },
+    {
+      "id": "tldr--e6ea15d7380b",
+      "canonicalPath": "common/kubectl-api-resources.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl api-resources",
+      "summary": "Выводить поддерживаемые API-ресурсы на сервере.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Вывести поддерживаемые API-ресурсы:",
+          "command": "kubectl api-resources",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-api-resources.md#L8"
+        },
+        {
+          "description": "Вывести поддерживаемые API-ресурсы с подробной информацией:",
+          "command": "kubectl api-resources {{[-o|--output]}} wide",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-api-resources.md#L12"
+        },
+        {
+          "description": "Вывести поддерживаемые API-ресурсы, отсортированные по столбцу:",
+          "command": "kubectl api-resources --sort-by {{имя}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-api-resources.md#L16"
+        },
+        {
+          "description": "Вывести поддерживаемые ресурсы с пространством имён:",
+          "command": "kubectl api-resources --namespaced",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-api-resources.md#L20"
+        },
+        {
+          "description": "Вывести поддерживаемые ресурсы без пространства имён:",
+          "command": "kubectl api-resources --namespaced=false",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-api-resources.md#L24"
+        },
+        {
+          "description": "Вывести поддерживаемые API-ресурсы с определённой API-группой:",
+          "command": "kubectl api-resources --api-group {{api_группа}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-api-resources.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-api-resources.md"
+    },
+    {
+      "id": "tldr--edcd33fa5bb6",
+      "canonicalPath": "linux/systemd-umount.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "systemd-umount",
+      "title": "systemd-umount",
+      "summary": "Эта команда — псевдоним для `systemd-mount --umount`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr systemd-mount",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/systemd-umount.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/systemd-umount.md"
+    },
+    {
+      "id": "tldr--ee9022aa2d3e",
+      "canonicalPath": "common/kubectl-debug.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl debug",
+      "summary": "Отлаживать ресурсы кластера с помощью интерактивных контейнеров отладки.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Создать интерактивную сессию отладки в поде и сразу подключиться к нему:",
+          "command": "kubectl debug {{имя_пода}} {{[-it|--stdin --tty]}} --image busybox",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-debug.md#L8"
+        },
+        {
+          "description": "Создать контейнер отладки с пользовательским образом и именем:",
+          "command": "kubectl debug --image {{образ}} {{[-c|--container]}} {{имя_контейнера}} {{имя_пода}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-debug.md#L12"
+        },
+        {
+          "description": "Создать интерактивную сессию отладки на узле и сразу подключиться к ней (контейнер будет работать в пространствах имён хоста, а файловая система хоста будет смонтирована в `/host`):",
+          "command": "kubectl debug node/{{имя_узла}} {{[-it|--stdin --tty]}} --image busybox",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-debug.md#L16"
+        },
+        {
+          "description": "Создать копию пода и добавить к ней контейнер отладки:",
+          "command": "kubectl debug {{имя_пода}} {{[-it|--stdin --tty]}} --image {{образ}} --copy-to {{имя_копии_пода}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-debug.md#L20"
+        },
+        {
+          "description": "Создать копию пода и изменить команду определённого контейнера:",
+          "command": "kubectl debug {{имя_пода}} {{[-it|--stdin --tty]}} --copy-to {{имя_копии_пода}} --container {{имя_контейнера}} -- {{команда}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-debug.md#L24"
+        },
+        {
+          "description": "Создать копию пода и изменить образ определённого контейнера:",
+          "command": "kubectl debug {{имя_пода}} --copy-to {{имя_копии_пода}} --set-image {{имя_контейнера}}={{образ}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-debug.md#L28"
+        },
+        {
+          "description": "Создать копию пода и изменить образы всех контейнеров:",
+          "command": "kubectl debug {{имя_пода}} --copy-to {{имя_копии_пода}} --set-image '*={{образ}}'",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-debug.md#L32"
+        },
+        {
+          "description": "Создать эфемерный контейнер отладки и нацелиться на определённый контейнер (полезно для отладки distroless-контейнеров):",
+          "command": "kubectl debug {{имя_пода}} {{[-it|--stdin --tty]}} --image {{образ}} --target {{имя_целевого_контейнера}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-debug.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-debug.md"
+    },
+    {
+      "id": "tldr--f0cbbfa7a6f9",
+      "canonicalPath": "common/kubectl-api-versions.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kubectl",
+      "title": "kubectl api-versions",
+      "summary": "Выводить поддерживаемые API-версии на сервере в формате \"group/version\".",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "kubectl--9612aa42",
+        "microk8s--e60d96ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Вывести поддерживаемые API-версии на сервере в формате \"group/version\":",
+          "command": "kubectl api-versions",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-api-versions.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kubectl-api-versions.md"
+    },
+    {
+      "id": "tldr--f7310c99064d",
+      "canonicalPath": "linux/openvpn3.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "openvpn3",
+      "title": "openvpn3",
+      "summary": "Клиент OpenVPN 3 для Linux.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Запустить новую VPN-сессию:",
+          "command": "openvpn3 session-start {{[-c|--config]}} {{путь/к/конфигурации.conf}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/openvpn3.md#L8"
+        },
+        {
+          "description": "Показать список установленных сессий:",
+          "command": "openvpn3 sessions-list",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/openvpn3.md#L12"
+        },
+        {
+          "description": "Отключить текущую сессию, запущенную с указанной конфигурацией:",
+          "command": "openvpn3 session-manage {{[-c|--config]}} {{путь/к/конфигурации.conf}} {{[-D|--disconnect]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/openvpn3.md#L16"
+        },
+        {
+          "description": "Импортировать конфигурацию VPN:",
+          "command": "openvpn3 config-import {{[-c|--config]}} {{путь/к/конфигурации.conf}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/openvpn3.md#L20"
+        },
+        {
+          "description": "Показать список импортированных конфигураций:",
+          "command": "openvpn3 configs-list",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/openvpn3.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/openvpn3.md"
+    },
+    {
+      "id": "tldr--f73ab5a1958b",
+      "canonicalPath": "linux/cat.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "cat",
+      "title": "cat",
+      "summary": "Выводить и объединять файлы. Смотрите также: `bat`.",
+      "platform": "linux",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Вывести содержимое файла в `stdout`:",
+          "command": "cat {{путь/к/файлу}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cat.md#L9"
+        },
+        {
+          "description": "Объединить несколько файлов в один выходной файл:",
+          "command": "cat {{путь/к/файлу1 путь/к/файлу2 ...}} > {{путь/к/выходному_файлу}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cat.md#L13"
+        },
+        {
+          "description": "Добавить содержимое нескольких файлов в конец выходного файла:",
+          "command": "cat {{путь/к/файлу1 путь/к/файлу2 ...}} >> {{путь/к/выходному_файлу}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cat.md#L17"
+        },
+        {
+          "description": "Записать данные в файл интерактивно:",
+          "command": "cat > {{путь/к/файлу}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cat.md#L21"
+        },
+        {
+          "description": "Пронумеровать все строки вывода:",
+          "command": "cat {{[-n|--number]}} {{путь/к/файлу}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cat.md#L25"
+        },
+        {
+          "description": "Отобразить все символы, включая табуляцию, окончания строк и непечатаемые символы:",
+          "command": "cat {{[-A|--show-all]}} {{путь/к/файлу}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cat.md#L29"
+        },
+        {
+          "description": "Передать содержимое файла другой программе через `stdin`:",
+          "command": "cat {{путь/к/файлу}} | {{программа}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cat.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cat.md"
+    }
+  ]
+}

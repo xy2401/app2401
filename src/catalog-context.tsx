@@ -43,7 +43,7 @@ export function CatalogProvider({ children }: { children: React.ReactNode }) {
   }, [call]);
 
   useEffect(() => {
-    const worker = new Worker("/catalog-worker.js");
+    const worker = new Worker("/catalog-search-worker.js");
     const tasks = pending.current;
     workerRef.current = worker;
     worker.onmessage = (event) => {

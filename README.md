@@ -39,8 +39,9 @@ metadata/v1/
     └── sources/<source>/<page>.json
 ```
 
-`current.json` 只是当前快照指针。快照清单记录每个文件的路径、字节数和
-SHA-256；网页、PowerShell 与 Bash 因而可以校验并缓存完全相同的数据，只同步变化的文件。
+`current.json` 只是当前快照指针。仓库和网站只保留它指向的一份快照；更新构建会在新数据
+完整生成后清理旧快照。快照清单记录每个文件的路径、字节数和 SHA-256；网页、PowerShell
+与 Bash 因而可以校验并缓存完全相同的数据，只同步变化的文件。
 
 ## 数据源
 
@@ -81,7 +82,9 @@ npm test
 ```
 
 网站构建结果位于 `dist/`，只包含静态 HTML、CSS、JavaScript 和公开 JSON。
-Cloudflare Pages 的构建命令使用 `npm run build`，输出目录使用 `dist`；项目没有 Pages Functions、Worker 或 Wrangler 配置。
+Cloudflare Pages 的构建命令使用 `npm run build`，输出目录使用 `dist`。构建只复制仓库中已经
+验证的公开 JSON 并生成浏览器资源，不在 Pages 上重新采集数据；项目没有 Pages Functions、
+Cloudflare Worker 或 Wrangler 配置。`catalog-search-worker.js` 是浏览器本地搜索线程，不是服务端 Worker。
 
 Git 数据源每月可通过以下命令更新：
 

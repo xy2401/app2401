@@ -1,0 +1,1350 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "ja",
+  "sourceLocale": "ja",
+  "shard": "4",
+  "items": [
+    {
+      "id": "tldr--1156a5990ad8",
+      "canonicalPath": "common/fgrep.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "fgrep",
+      "title": "fgrep",
+      "summary": "このコマンドは `grep --fixed-strings` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "grep--aeeff087",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr grep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/fgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/fgrep.md"
+    },
+    {
+      "id": "tldr--15b82814baa2",
+      "canonicalPath": "common/curl.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "curl",
+      "title": "curl",
+      "summary": "データをサーバーから転送、もしくはサーバーへ転送します。 HTTP、FTP、POP3を含むほとんどのプロトコルをサポートしています。 参照: `wcurl`, `wget`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "curl--5459a6f1",
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "URLのコンテンツをファイルにダウンロードする:",
+          "command": "curl {{http://example.com}} {{[-o|--output]}} {{ファイルパス}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/curl.md#L10"
+        },
+        {
+          "description": "ファイルをダウンロードし、URLにより指定されたファイル名で出力を保存する:",
+          "command": "curl {{[-O|--remote-name]}} {{http://example.com/filename}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/curl.md#L14"
+        },
+        {
+          "description": "ファイルをダウンロードし、ロケーションレスポンスヘッダーのリダイレクトに追従しつつ自動的に以前のファイル転送を継続(再開)する。サーバーエラー時にはエラーを返す:",
+          "command": "curl {{[-f|--fail]}} {{[-O|--remote-name]}} {{[-L|--location]}} {{[-C|--continue-at]}} - {{http://example.com/filename}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/curl.md#L18"
+        },
+        {
+          "description": "フォームエンコードされたデータを送信する（`application/x-www-form-urlencoded`型のPOSTリクエスト）。`stdin`(標準入力) から読み込むには、`--data @file_name` または `--data @'-'` を使用する:",
+          "command": "curl {{[-d|--data]}} {{'name=bob'}} {{http://example.com/form}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/curl.md#L22"
+        },
+        {
+          "description": "カスタムHTTPメソッドを用いて追加のヘッダーを持つリクエストを送信する:",
+          "command": "curl {{[-H|--header]}} {{'X-My-Header: 123'}} {{[-X|--request]}} {{PUT}} {{http://example.com}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/curl.md#L26"
+        },
+        {
+          "description": "適切なContent-Type 表現ヘッダーを指定することで、JSONフォーマットでデータを送信する:",
+          "command": "curl {{[-d|--data]}} {{'{\"name\":\"bob\"}'}} {{[-H|--header]}} {{'Content-Type: application/json'}} {{http://example.com/users/1234}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/curl.md#L30"
+        },
+        {
+          "description": "サーバー認証のためユーザー名とパスワードを送る:",
+          "command": "curl {{[-u|--user]}} {{ユーザー名}} {{http://example.com}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/curl.md#L34"
+        },
+        {
+          "description": "リソースのクライアント証明書とキーを送り、証明書の検証をスキップする:",
+          "command": "curl {{[-E|--cert]}} {{client.pem}} --key {{key.pem}} {{[-k|--insecure]}} {{https://example.com}}",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/curl.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/curl.md"
+    },
+    {
+      "id": "tldr--169e963af4fa",
+      "canonicalPath": "common/pnmdepth.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pnmdepth",
+      "title": "pnmdepth",
+      "summary": "このコマンドは `pamdepth` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pamdepth",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pnmdepth.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pnmdepth.md"
+    },
+    {
+      "id": "tldr--1966eb89d78c",
+      "canonicalPath": "common/go.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "go",
+      "title": "go",
+      "summary": "Go のソースコードを管理します。 `build` のようないくつかのサブコマンドには、使用方法についての独自のドキュメントがあります。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "go--2c250569",
+        "go--659909c6",
+        "go113--659909c6",
+        "go114--659909c6",
+        "go115--659909c6",
+        "go116--659909c6",
+        "go117--659909c6",
+        "go118--659909c6",
+        "go119--659909c6",
+        "go120--659909c6",
+        "go121--659909c6",
+        "go122--659909c6",
+        "go123--659909c6",
+        "go124--659909c6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "インポートパスで指定されたパッケージを、ダウンロードしてインストール:",
+          "command": "go get {{パッケージパス}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go.md#L9"
+        },
+        {
+          "description": "ソースファイルをコンパイルして実行 (`main`パッケージを含む必要がある):",
+          "command": "go run {{file}}.go",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go.md#L13"
+        },
+        {
+          "description": "ソースファイルをコンパイルして実行ファイルにする:",
+          "command": "go build -o {{実行ファイル名}} {{file}}.go",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go.md#L17"
+        },
+        {
+          "description": "現在のディレクトリにあるパッケージをコンパイル:",
+          "command": "go build",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go.md#L21"
+        },
+        {
+          "description": "現在のパッケージの全てのテストケースを実行 (ファイル名の末尾は `_test.go` でなければならない):",
+          "command": "go test",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go.md#L25"
+        },
+        {
+          "description": "現在のパッケージをコンパイルしてインストール:",
+          "command": "go install",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go.md#L29"
+        },
+        {
+          "description": "現在のディレクトリで新しいモジュールを初期化:",
+          "command": "go mod init {{モジュール名}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go.md"
+    },
+    {
+      "id": "tldr--210f7e88cb6e",
+      "canonicalPath": "linux/pacman-r.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pacman",
+      "title": "pacman -R",
+      "summary": "このコマンドは `pacman --remove` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pacman remove",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-r.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-r.md"
+    },
+    {
+      "id": "tldr--223197e38ac7",
+      "canonicalPath": "linux/dnf-deplist.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "dnf",
+      "title": "dnf deplist",
+      "summary": "このコマンドは `dnf repoquery --deplist` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr dnf repoquery",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf-deplist.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf-deplist.md"
+    },
+    {
+      "id": "tldr--2a8808dde8dc",
+      "canonicalPath": "common/rustup-uninstall.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "rustup",
+      "title": "rustup uninstall",
+      "summary": "このコマンドは `rustup toolchain uninstall` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rustup--ae84adcc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr rustup toolchain",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup-uninstall.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup-uninstall.md"
+    },
+    {
+      "id": "tldr--30c20f1e9111",
+      "canonicalPath": "linux/batcat.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "batcat",
+      "title": "batcat",
+      "summary": "このコマンドは `bat` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr bat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/batcat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/batcat.md"
+    },
+    {
+      "id": "tldr--3437d933b90d",
+      "canonicalPath": "common/rustup.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "rustup",
+      "title": "rustup",
+      "summary": "Rust ツールチェーンのインストール、管理、更新を行います。 `toolchain`, `target`, `update` のようないくつかのサブコマンドには、使用方法についての独自のドキュメントがあります。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rustup--ae84adcc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "nightly ツールチェーンをシステムにインストール:",
+          "command": "rustup install nightly",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup.md#L9"
+        },
+        {
+          "description": "デフォルトのツールチェーンを nightly に切り替えて、`cargo` コマンドと `rustc` コマンドがそれを使用するようにする:",
+          "command": "rustup default nightly",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup.md#L13"
+        },
+        {
+          "description": "現在のプロジェクト内では nightly ツールチェーンを使用するが、グローバル設定は変更しない:",
+          "command": "rustup override set nightly",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup.md#L17"
+        },
+        {
+          "description": "全てのツールチェーンを更新:",
+          "command": "rustup update",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup.md#L21"
+        },
+        {
+          "description": "インストール済ツールチェーンを一覧表示:",
+          "command": "rustup show",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup.md#L25"
+        },
+        {
+          "description": "特定のツールチェーンで `cargo build` を実行:",
+          "command": "rustup run {{ツールチェーン名}} cargo build",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup.md#L29"
+        },
+        {
+          "description": "デフォルトのウェブブラウザでローカルの Rust ドキュメントを開く:",
+          "command": "rustup doc",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup.md"
+    },
+    {
+      "id": "tldr--3f209523b2c7",
+      "canonicalPath": "common/platformio.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "platformio",
+      "title": "platformio",
+      "summary": "このコマンドは `pio` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "platformio--331df29a"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pio",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/platformio.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/platformio.md"
+    },
+    {
+      "id": "tldr--4080e482c1e0",
+      "canonicalPath": "linux/pacman-u.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pacman",
+      "title": "pacman -U",
+      "summary": "このコマンドは `pacman --upgrade` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pacman upgrade",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-u.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-u.md"
+    },
+    {
+      "id": "tldr--457459f7e392",
+      "canonicalPath": "linux/nmtui-hostname.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "nmtui-hostname",
+      "title": "nmtui-hostname",
+      "summary": "このコマンドは `nmtui hostname` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/nmtui-hostname.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/nmtui-hostname.md"
+    },
+    {
+      "id": "tldr--4739e42339e4",
+      "canonicalPath": "common/impacket-mssqlclient.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "impacket-mssqlclient",
+      "title": "impacket-mssqlclient",
+      "summary": "このコマンドは `mssqlclient.py` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr mssqlclient.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/impacket-mssqlclient.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/impacket-mssqlclient.md"
+    },
+    {
+      "id": "tldr--50f287a5083f",
+      "canonicalPath": "common/go-run.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "go",
+      "title": "go run",
+      "summary": "バイナリを保存せずに Go コードをコンパイルして実行します。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "go--2c250569",
+        "go--659909c6",
+        "go113--659909c6",
+        "go114--659909c6",
+        "go115--659909c6",
+        "go116--659909c6",
+        "go117--659909c6",
+        "go118--659909c6",
+        "go119--659909c6",
+        "go120--659909c6",
+        "go121--659909c6",
+        "go122--659909c6",
+        "go123--659909c6",
+        "go124--659909c6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Go ファイルを実行:",
+          "command": "go run {{パス/宛先/ファイル.go}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go-run.md#L8"
+        },
+        {
+          "description": "main Go パッケージを実行:",
+          "command": "go run {{パス/宛先/パッケージ}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go-run.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go-run.md"
+    },
+    {
+      "id": "tldr--541bdbdb4370",
+      "canonicalPath": "linux/lookandfeeltool.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "lookandfeeltool",
+      "title": "lookandfeeltool",
+      "summary": "このコマンドは `plasma-apply-lookandfeel` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr plasma-apply-lookandfeel",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/lookandfeeltool.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/lookandfeeltool.md"
+    },
+    {
+      "id": "tldr--560e25e908bf",
+      "canonicalPath": "common/impacket-dumpntlminfo.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "impacket-DumpNTLMInfo",
+      "title": "impacket-DumpNTLMInfo",
+      "summary": "このコマンドは `DumpNTLMInfo.py` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr DumpNTLMInfo.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/impacket-dumpntlminfo.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/impacket-dumpntlminfo.md"
+    },
+    {
+      "id": "tldr--671b623dc229",
+      "canonicalPath": "common/rustup-install.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "rustup",
+      "title": "rustup install",
+      "summary": "このコマンドは `rustup toolchain install` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rustup--ae84adcc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr rustup toolchain",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup-install.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/rustup-install.md"
+    },
+    {
+      "id": "tldr--737ba18ac566",
+      "canonicalPath": "linux/mkfs.vfat.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "mkfs.vfat",
+      "title": "mkfs.vfat",
+      "summary": "このコマンドは `mkfs.fat` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr mkfs.fat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/mkfs.vfat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/mkfs.vfat.md"
+    },
+    {
+      "id": "tldr--74121033f15d",
+      "canonicalPath": "linux/pacman-q.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pacman",
+      "title": "pacman -Q",
+      "summary": "このコマンドは `pacman --query` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pacman query",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-q.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-q.md"
+    },
+    {
+      "id": "tldr--7bea1df1914d",
+      "canonicalPath": "common/r.zsh.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "r",
+      "title": "r",
+      "summary": "このコマンドは `fc -e -` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "r--b13c44bf"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr fc",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/r.zsh.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/r.zsh.md"
+    },
+    {
+      "id": "tldr--8189dba396d7",
+      "canonicalPath": "common/less.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "less",
+      "title": "less",
+      "summary": "ファイルを開いて、スクロールや検索などのインタラクティブな読み方ができます。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "less--2145edda",
+        "less--9ddef832",
+        "less-beta--ba425f30",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "ファイルを開く:",
+          "command": "less {{ソースファイル}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/less.md#L8"
+        },
+        {
+          "description": "ページダウン/アップ:",
+          "command": "{{<Space>|<b>}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/less.md#L12"
+        },
+        {
+          "description": "ファイルの最後/最初に移動:",
+          "command": "{{<G>|<g>}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/less.md#L16"
+        },
+        {
+          "description": "文字列の前方検索（`<n>`/`<N>` を押すと、次の/前のマッチに移動する）:",
+          "command": "</>{{検索文字列}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/less.md#L20"
+        },
+        {
+          "description": "文字列の後方検索（`<n>`/`<N>` を押すと次/前のマッチに進む）:",
+          "command": "<?>{{検索文字列}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/less.md#L24"
+        },
+        {
+          "description": "現在開いているファイルの出力を追跡する:",
+          "command": "<F>",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/less.md#L28"
+        },
+        {
+          "description": "現在のファイルをエディターで開く:",
+          "command": "<v>",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/less.md#L32"
+        },
+        {
+          "description": "閉じる:",
+          "command": "<q>",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/less.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/less.md"
+    },
+    {
+      "id": "tldr--8a9a1d490418",
+      "canonicalPath": "common/pnmtoplainpnm.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pnmtoplainpnm",
+      "title": "pnmtoplainpnm",
+      "summary": "このコマンドは `pamtopnm -plain` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pamtopnm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pnmtoplainpnm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pnmtoplainpnm.md"
+    },
+    {
+      "id": "tldr--8ec1a1bae8d1",
+      "canonicalPath": "linux/pacman-f.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pacman",
+      "title": "pacman -F",
+      "summary": "このコマンドは `pacman --files` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pacman files",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-f.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-f.md"
+    },
+    {
+      "id": "tldr--9132652c7874",
+      "canonicalPath": "common/zip.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "zip",
+      "title": "zip",
+      "summary": "ファイルを Zip アーカイブにパッケージして圧縮(アーカイブ)します。 参照: `unzip`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unxutils--5bef4004",
+        "zip--cd5c7072",
+        "zip--d51707ee",
+        "zip-beta--fcfc22d8"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "指定したアーカイブに、ファイル/ディレクトリを追加する ([r]ecursively):",
+          "command": "zip {{[-r|--recurse-paths]}} {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zip.md#L9"
+        },
+        {
+          "description": "指定したアーカイブから、ファイル/ディレクトリを削除する ([d]elete):",
+          "command": "zip {{[-d|--delete]}} {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zip.md#L13"
+        },
+        {
+          "description": "指定されたファイル/ディレクトリ以外 (e[x]cluding) をアーカイブする:",
+          "command": "zip {{[-r|--recurse-paths]}} {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}} {{[-x|--exclude]}} {{path/to/excluded_files_or_directories}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zip.md#L17"
+        },
+        {
+          "description": "ファイルやディレクトリを、指定の圧縮レベルでアーカイブする (`0` - 最低、 `9` - 最高):",
+          "command": "zip {{[-r|--recurse-paths]}} -{{0..9}} {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zip.md#L21"
+        },
+        {
+          "description": "パスワードで暗号化 ([e]ncrypted) されたアーカイブを作成:",
+          "command": "zip {{[-re|--recurse-paths --encrypt]}} {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zip.md#L25"
+        },
+        {
+          "description": "ファイル/ディレクトリを複数に分割 ([s]plit) された Zip アーカイブ(例えば 3GB の部分)にアーカイブする:",
+          "command": "zip {{[-rs|--recurse-paths --split-size]}} {{3g}} {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zip.md#L29"
+        },
+        {
+          "description": "指定したアーカイブの内容を表示する:",
+          "command": "zip {{[-sf|--split-size --freshen]}} {{path/to/compressed.zip}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zip.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/zip.md"
+    },
+    {
+      "id": "tldr--9199449e8b64",
+      "canonicalPath": "windows/wsl.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "wsl",
+      "title": "wsl",
+      "summary": "Windows Subsystem for Linux を管理します。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Linuxシェルを起動する(デフォルトのディストリビューションの場合):",
+          "command": "wsl {{シェルコマンド}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/wsl.md#L8"
+        },
+        {
+          "description": "シェルを使わずにLinuxコマンドを実行する:",
+          "command": "wsl {{[-e|--exec]}} {{コマンド}} {{コマンド引数}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/wsl.md#L12"
+        },
+        {
+          "description": "特定のディストリビューションを指定する:",
+          "command": "wsl {{[-d|--distribution]}} {{ディストリビューション}} {{シェルコマンド}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/wsl.md#L16"
+        },
+        {
+          "description": "利用可能なディストリビューションを一覧表示する:",
+          "command": "wsl {{[-l|--list]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/wsl.md#L20"
+        },
+        {
+          "description": "ディストリビューションを`.tar`ファイルにエクスポートする:",
+          "command": "wsl --export {{ディストリビューション}} {{ディストロファイルパス.tar}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/wsl.md#L24"
+        },
+        {
+          "description": "ディストリビューションを`.tar`ファイルからインポートする:",
+          "command": "wsl --import {{ディストリビューション}} {{インストール先パス}} {{ディストロファイルパス.tar}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/wsl.md#L28"
+        },
+        {
+          "description": "指定したディストリビューションで使用するwslのバージョンを変更する:",
+          "command": "wsl --set-version {{ディストリビューション}} {{バージョン}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/wsl.md#L32"
+        },
+        {
+          "description": "Windows Subsystem for Linux をシャットダウンする:",
+          "command": "wsl --shutdown",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/wsl.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/wsl.md"
+    },
+    {
+      "id": "tldr--983369375b94",
+      "canonicalPath": "common/pyenv.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pyenv",
+      "title": "pyenv",
+      "summary": "複数バージョンのPythonを容易に切り替えします。 参照: `asdf`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "pyenv--4cab25f0"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "利用可能なコマンド全てをリスト表示する:",
+          "command": "pyenv commands",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pyenv.md#L9"
+        },
+        {
+          "description": "`${PYENV_ROOT}/versions`ディレクトリ下のPythonバージョン全てをリスト表示する:",
+          "command": "pyenv versions",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pyenv.md#L13"
+        },
+        {
+          "description": "アップストリーム(Python公式)からインストール可能なPythonのバージョン全てをリスト表示する:",
+          "command": "pyenv install --list",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pyenv.md#L17"
+        },
+        {
+          "description": "`${PYENV_ROOT}/versions`ディレクトリ下に指定のPythonバージョンをインストールする:",
+          "command": "pyenv install {{2.7.10}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pyenv.md#L21"
+        },
+        {
+          "description": "`${PYENV_ROOT}/versions`ディレクトリ下の指定のPythonバージョンをアンインストールする:",
+          "command": "pyenv uninstall {{2.7.10}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pyenv.md#L25"
+        },
+        {
+          "description": "現在のマシンでグローバルに使用するPythonバージョンをセットする:",
+          "command": "pyenv global {{2.7.10}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pyenv.md#L29"
+        },
+        {
+          "description": "カレントディレクトリとその下にある全てのディレクトリ内で使用するPythonバージョンをセットする:",
+          "command": "pyenv local {{2.7.10}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pyenv.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pyenv.md"
+    },
+    {
+      "id": "tldr--a026e80e1ad9",
+      "canonicalPath": "linux/pacman-s.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pacman",
+      "title": "pacman -S",
+      "summary": "このコマンドは `pacman --sync` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pacman sync",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-s.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-s.md"
+    },
+    {
+      "id": "tldr--a8c07f26fa66",
+      "canonicalPath": "windows/sls.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "sls",
+      "title": "sls",
+      "summary": "このコマンドは `Select-String` のエイリアスです。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr select-string",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/sls.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/sls.md"
+    },
+    {
+      "id": "tldr--ab96c3d2ce33",
+      "canonicalPath": "linux/pacman-t.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pacman",
+      "title": "pacman -T",
+      "summary": "このコマンドは `pacman --deptest` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pacman deptest",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-t.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-t.md"
+    },
+    {
+      "id": "tldr--ac89b567943c",
+      "canonicalPath": "common/pio-init.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pio",
+      "title": "pio init",
+      "summary": "このコマンドは `pio project init` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pio project",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pio-init.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/pio-init.md"
+    },
+    {
+      "id": "tldr--b5132314b1c1",
+      "canonicalPath": "common/colorls.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "colorls",
+      "title": "colorls",
+      "summary": "カラー化と Font Awesome アイコンの使用によりターミナルの ls コマンドを美しくした Ruby の gem です。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "ファイルを 1 行ずつ表示する:",
+          "command": "colorls -1",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/colorls.md#L8"
+        },
+        {
+          "description": "隠しファイルを含めた全てのファイルを表示する:",
+          "command": "colorls {{[-a|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/colorls.md#L12"
+        },
+        {
+          "description": "全てのファイルを長文形式（パーミッション、所有者、サイズ、更新日時）で表示する:",
+          "command": "colorls {{[-l|--long]}} {{[-a|--all]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/colorls.md#L16"
+        },
+        {
+          "description": "ディレクトリのみ表示する:",
+          "command": "colorls {{[-d|--dirs]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/colorls.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/colorls.md"
+    },
+    {
+      "id": "tldr--c41cf49ee770",
+      "canonicalPath": "linux/pacman-d.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "pacman",
+      "title": "pacman -D",
+      "summary": "このコマンドは `pacman --database` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr pacman database",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-d.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/pacman-d.md"
+    },
+    {
+      "id": "tldr--c68bd6214746",
+      "canonicalPath": "linux/lrunzip.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "lrunzip",
+      "title": "lrunzip",
+      "summary": "このコマンドは `lrzip --decompress` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr lrzip",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/lrunzip.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/lrunzip.md"
+    },
+    {
+      "id": "tldr--d2a5087ef6a2",
+      "canonicalPath": "linux/dnf.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "dnf",
+      "title": "dnf",
+      "summary": "RHEL、Fedora、CentOS 用のパッケージ管理ユーティリティ (yum の後継)。 `group`, `config-manager` のようないくつかのサブコマンドには、使用方法についての独自のドキュメントがあります。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "インストールされたパッケージを、利用可能な最新バージョンにアップグレードする:",
+          "command": "sudo dnf upgrade",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf.md#L10"
+        },
+        {
+          "description": "キーワードでパッケージを検索:",
+          "command": "dnf search {{キーワード1 キーワード2 ...}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf.md#L14"
+        },
+        {
+          "description": "パッケージの詳細を表示:",
+          "command": "dnf info {{パッケージ}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf.md#L18"
+        },
+        {
+          "description": "新しいパッケージをインストール (`-y` を使用すると、全てのプロンプトを自動的に追認する):",
+          "command": "sudo dnf install {{パッケージ1 パッケージ2 ...}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf.md#L22"
+        },
+        {
+          "description": "パッケージを削除:",
+          "command": "sudo dnf remove {{パッケージ1 パッケージ2 ...}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf.md#L26"
+        },
+        {
+          "description": "インストールされているパッケージを一覧表示:",
+          "command": "dnf list --installed",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf.md#L30"
+        },
+        {
+          "description": "指定したコマンドを提供するパッケージを検索:",
+          "command": "dnf provides {{コマンド}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf.md#L34"
+        },
+        {
+          "description": "過去の全オペレーションを見る:",
+          "command": "dnf history",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/dnf.md"
+    },
+    {
+      "id": "tldr--d354cc711581",
+      "canonicalPath": "common/clojure.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "clojure",
+      "title": "clojure",
+      "summary": "このコマンドは `clj` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "clojure--a80379ec"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr clj",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/clojure.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/clojure.md"
+    },
+    {
+      "id": "tldr--e03b5bfab89e",
+      "canonicalPath": "common/go-bug.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "go",
+      "title": "go bug",
+      "summary": "バグを報告する。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "go--2c250569",
+        "go--659909c6",
+        "go113--659909c6",
+        "go114--659909c6",
+        "go115--659909c6",
+        "go116--659909c6",
+        "go117--659909c6",
+        "go118--659909c6",
+        "go119--659909c6",
+        "go120--659909c6",
+        "go121--659909c6",
+        "go122--659909c6",
+        "go123--659909c6",
+        "go124--659909c6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "バグレポートを開始するウェブページを開く:",
+          "command": "go bug",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go-bug.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/go-bug.md"
+    },
+    {
+      "id": "tldr--e761932ae23a",
+      "canonicalPath": "windows/slmgr.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "slmgr",
+      "title": "slmgr",
+      "summary": "このコマンドは `slmgr.vbs` のエイリアスです。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr slmgr.vbs",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/slmgr.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/windows/slmgr.md"
+    },
+    {
+      "id": "tldr--ebb1ddba397d",
+      "canonicalPath": "common/mysql.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "mysql",
+      "title": "mysql",
+      "summary": "MySQL のコマンドラインツールです。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "mariadb--79d71061",
+        "mariadb103--79d71061",
+        "mysql--12867f69",
+        "mysql--be41bfa4",
+        "mysql-lts--12867f69",
+        "mysql-workbench--cf9d90a0",
+        "mysql56--aa7b3620",
+        "mysql57--0fa1a6b3",
+        "xampp--0b504b8d",
+        "xampp74--0b504b8d"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "データベースへの接続:",
+          "command": "mysql {{データベース名}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/mysql.md#L8"
+        },
+        {
+          "description": "データベースへの接続、ユーザーにはパスワードの入力が求められる:",
+          "command": "mysql {{[-u|--user]}} {{ユーザー}} {{[-p|--password]}} {{データベース名}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/mysql.md#L12"
+        },
+        {
+          "description": "別のホスト上のデータベースに接続する:",
+          "command": "mysql {{[-h|--host]}} {{データベースホスト}} {{データベース名}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/mysql.md#L16"
+        },
+        {
+          "description": "Unix ソケット経由でのデータベースへの接続:",
+          "command": "mysql {{[-S|--socket]}} {{ソケットファイルへのパス}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/mysql.md#L20"
+        },
+        {
+          "description": "スクリプトファイル（バッチファイル）での SQL 文の実行:",
+          "command": "mysql {{[-e|--execute]}} \"source {{sqlファイル}}\" {{データベース名}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/mysql.md#L24"
+        },
+        {
+          "description": "`mysqldump` で作成したバックアップからデータベースをリストアする（ユーザーはパスワードの入力を求められます）:",
+          "command": "mysql < {{バックアップsqlファイルへのパス}} {{[-u|--user]}} {{ユーザー}} {{[-p|--password]}} {{データベース名}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/mysql.md#L28"
+        },
+        {
+          "description": "バックアップからすべてのデータベースを復元する（ユーザーはパスワードの入力を求められます）:",
+          "command": "mysql < {{バックアップsqlファイルへのパス}} {{[-u|--user]}} {{ユーザー}} {{[-p|--password]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/mysql.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/mysql.md"
+    },
+    {
+      "id": "tldr--f30e32b117c4",
+      "canonicalPath": "common/cola.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "cola",
+      "title": "cola",
+      "summary": "このコマンドは `git-cola` のエイリアスです。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr git-cola",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/cola.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/common/cola.md"
+    },
+    {
+      "id": "tldr--fbe9e4733af1",
+      "canonicalPath": "linux/limine-scan.md",
+      "locale": "ja",
+      "sourceLocale": "ja",
+      "name": "limine-scan",
+      "title": "limine-scan",
+      "summary": "このコマンドは `limine-entry-tool --scan` のエイリアスです。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "オリジナルのコマンドのドキュメントを表示する:",
+          "command": "tldr limine-entry-tool",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/limine-scan.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ja/linux/limine-scan.md"
+    }
+  ]
+}

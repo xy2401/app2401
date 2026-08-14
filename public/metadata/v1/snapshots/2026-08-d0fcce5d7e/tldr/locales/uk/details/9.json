@@ -1,0 +1,1664 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "uk",
+  "sourceLocale": "uk",
+  "shard": "9",
+  "items": [
+    {
+      "id": "tldr--0657302d0def",
+      "canonicalPath": "common/git-abort.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git abort",
+      "summary": "Перериває поточне перебазування(rebase), злиття(merge) або вибір(cherry-pick). Частина `git-extras`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Перериває Git перебазування(rebase), злиття(merge) або вибір(cherry-pick):",
+          "command": "git abort",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-abort.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-abort.md"
+    },
+    {
+      "id": "tldr--07d477da427c",
+      "canonicalPath": "common/git-cherry.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git cherry",
+      "summary": "Виявляє коміти, які ще не були застосовані до першоджерела.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Показує коміти (та їхні повідомлення) із відповідними комітами першоджерела:",
+          "command": "git cherry {{[-v|--verbose]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-cherry.md#L8"
+        },
+        {
+          "description": "Визначає інші першоджерело та тематичну гілку:",
+          "command": "git cherry {{origin}} {{topic}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-cherry.md#L12"
+        },
+        {
+          "description": "Обмежує коміти до тих, що у наданих межах:",
+          "command": "git cherry {{origin}} {{topic}} {{base}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-cherry.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-cherry.md"
+    },
+    {
+      "id": "tldr--0871fa88404a",
+      "canonicalPath": "common/git-checkout-index.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git checkout-index",
+      "summary": "Копіює файли з індексу до робочої директорії.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Відновлює усі файли, що були видалені з часу останнього коміту:",
+          "command": "git checkout-index {{[-a|--all]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout-index.md#L8"
+        },
+        {
+          "description": "Відновлює усі файли, що були видалені чи змінені з часу останнього коміту:",
+          "command": "git checkout-index {{[-a|--all]}} {{[-f|--force]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout-index.md#L12"
+        },
+        {
+          "description": "Відновлює усі файли, що були змінені з часу останнього коміту, ігноруючи файли, що були видалені:",
+          "command": "git checkout-index {{[-a|--all]}} {{[-f|--force]}} {{[-n|--no-create]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout-index.md#L16"
+        },
+        {
+          "description": "Експортує копію робочої директорії, у стані останнього коміту, до вказаного каталогу (слеш наприкінці обов'язковий):",
+          "command": "git checkout-index {{[-a|--all]}} {{[-f|--force]}} --prefix {{шлях/до/директорії_експорту}}/",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout-index.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout-index.md"
+    },
+    {
+      "id": "tldr--0ca672185525",
+      "canonicalPath": "common/git-add.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git add",
+      "summary": "Додає змінені файли до індексу.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Додає змінені файли до індексу:",
+          "command": "git add {{шлях/до/файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-add.md#L8"
+        },
+        {
+          "description": "Додає усі файли (контрольовані та неконтрольовані):",
+          "command": "git add {{[-A|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-add.md#L12"
+        },
+        {
+          "description": "Додає тільки ті файли, що вже контрольовані:",
+          "command": "git add {{[-u|--update]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-add.md#L16"
+        },
+        {
+          "description": "Додає й ті файли, що ігноруються:",
+          "command": "git add {{[-f|--force]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-add.md#L20"
+        },
+        {
+          "description": "Інтерактивно індексує частини файлів:",
+          "command": "git add {{[-p|--patch]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-add.md#L24"
+        },
+        {
+          "description": "Інтерактивно індексує частини вказаного файлу:",
+          "command": "git add {{[-p|--patch]}} {{шлях/до/файлу}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-add.md#L28"
+        },
+        {
+          "description": "Інтерактивно індексує файл:",
+          "command": "git add {{[-i|--interactive]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-add.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-add.md"
+    },
+    {
+      "id": "tldr--23f943b80d58",
+      "canonicalPath": "common/git-commit-graph.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git commit-graph",
+      "summary": "Записує та перевіряє файл графіку комітів Git.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Записує файл графіку комітів для спакованих комітів у локальній директорії `.git`:",
+          "command": "git commit-graph write",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit-graph.md#L8"
+        },
+        {
+          "description": "Записує файл графіку комітів, що містить набір усіх досяжних комітів:",
+          "command": "git show-ref {{[-s|--hash]}} | git commit-graph write --stdin-commits",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit-graph.md#L12"
+        },
+        {
+          "description": "Записує файл графіку комітів, що містить усі коміти у поточному файлі графіку комітів разом з тими, до яких можна отримати доступ з `HEAD`:",
+          "command": "git rev-parse {{HEAD}} | git commit-graph write --stdin-commits --append",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit-graph.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit-graph.md"
+    },
+    {
+      "id": "tldr--2e08d822adcf",
+      "canonicalPath": "common/git-continue.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git continue",
+      "summary": "Ця команда є псевдонімом для `git abort`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr git abort",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-continue.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-continue.md"
+    },
+    {
+      "id": "tldr--411475af713b",
+      "canonicalPath": "common/lzegrep.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "lzegrep",
+      "title": "lzegrep",
+      "summary": "Ця команда є псевдонімом для `xzgrep --extended-regexp`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/lzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/lzegrep.md"
+    },
+    {
+      "id": "tldr--4874b25b3583",
+      "canonicalPath": "common/git-fetch.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git fetch",
+      "summary": "Завантажує об'єкти та посилання з віддаленого сховища.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Отримує останні зміни з віддаленого сховища за замовчуванням (якщо встановлено):",
+          "command": "git fetch",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-fetch.md#L8"
+        },
+        {
+          "description": "Отримує нові гілки з конкретного віддаленого сховища:",
+          "command": "git fetch {{назва_сховища}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-fetch.md#L12"
+        },
+        {
+          "description": "Отримує останні зміни з усіх віддалених сховищ:",
+          "command": "git fetch --all",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-fetch.md#L16"
+        },
+        {
+          "description": "Отримує, зокрема, й мітки з віддаленого сховища:",
+          "command": "git fetch {{[-t|--tags]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-fetch.md#L20"
+        },
+        {
+          "description": "Видаляє локальні посилання на віддалені гілки, які були видалені з віддаленого сховища:",
+          "command": "git fetch {{[-p|--prune]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-fetch.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-fetch.md"
+    },
+    {
+      "id": "tldr--497fec0a60c9",
+      "canonicalPath": "common/impacket-getst.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "impacket-getST",
+      "title": "impacket-getST",
+      "summary": "Ця команда є псевдонімом для `getST.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr getST.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-getst.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-getst.md"
+    },
+    {
+      "id": "tldr--4d289aee08fc",
+      "canonicalPath": "common/unxz.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "unxz",
+      "title": "unxz",
+      "summary": "Ця команда є псевдонімом для `xz --decompress`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr xz",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/unxz.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/unxz.md"
+    },
+    {
+      "id": "tldr--597cd77312c9",
+      "canonicalPath": "common/git-commit.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git commit",
+      "summary": "Комітить файли до репозиторію.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Комітить індексовані файли до репозиторію з повідомленням:",
+          "command": "git commit {{[-m|--message]}} \"{{повідомлення}}\"",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit.md#L8"
+        },
+        {
+          "description": "Комітить індексовані файли з повідомленням, що прочитано у файлі:",
+          "command": "git commit {{[-F|--file]}} {{шлях/до/файлу_з_повідомленням}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit.md#L12"
+        },
+        {
+          "description": "Автоматично індексує усі змінені файли і комітить їх з повідомленням:",
+          "command": "git commit {{[-a|--all]}} {{[-m|--message]}} \"{{повідомлення}}\"",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit.md#L16"
+        },
+        {
+          "description": "Оновлює останній коміт додаючи до нього щойно індексовані зміни, також змінює геш коміту:",
+          "command": "git commit --amend",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit.md#L20"
+        },
+        {
+          "description": "Комітить тільки певні (вже індексовані) файли:",
+          "command": "git commit {{шлях/до/файлу1 шлях/до/файлу2 ...}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit.md#L24"
+        },
+        {
+          "description": "Створює коміт, навіть якщо немає жодного індексованого файлу:",
+          "command": "git commit {{[-m|--message]}} \"{{повідомлення}}\" --allow-empty",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit.md"
+    },
+    {
+      "id": "tldr--5f587af12926",
+      "canonicalPath": "linux/pw-record.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "pw-record",
+      "title": "pw-record",
+      "summary": "Ця команда є псевдонімом для `pw-cat --record`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pw-record.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pw-record.md"
+    },
+    {
+      "id": "tldr--6d4afd4c6408",
+      "canonicalPath": "common/((.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "((",
+      "title": "((",
+      "summary": "Ця команда є псевдонімом для `let`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr let",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/((.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/((.md"
+    },
+    {
+      "id": "tldr--78ee41948894",
+      "canonicalPath": "common/git-blame.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git blame",
+      "summary": "Показує хеш коміту та останнього автора на кожному рядку у файлі.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Виводить файл з ім'ям автора та хешем коміту на кожному рядку:",
+          "command": "git blame {{шлях/до/файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-blame.md#L8"
+        },
+        {
+          "description": "Виводить електронну пошту автора замість імені:",
+          "command": "git blame {{[-e|--show-email]}} {{шлях/до/файлу}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-blame.md#L12"
+        },
+        {
+          "description": "Виводить файл з ім'ям автора та хешем коміту на кожному рядку у вказаному коміті:",
+          "command": "git blame {{коміт}} {{шлях/до/файлу}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-blame.md#L16"
+        },
+        {
+          "description": "Виводить файл з ім'ям автора та хешем коміту на кожному рядку до вказаного коміту:",
+          "command": "git blame {{коміт}}~ {{шлях/до/файлу}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-blame.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-blame.md"
+    },
+    {
+      "id": "tldr--7bd8ec532577",
+      "canonicalPath": "linux/pamac.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "pamac",
+      "title": "pamac",
+      "summary": "Утиліта командного рядка для GUI менеджера пакетів pamac. Якщо ви не можете побачити пакети AUR, увімкніть його `/etc/pamac.conf` або в GUI.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Встановити новий пакет:",
+          "command": "pamac install {{назва_пакета}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pamac.md#L9"
+        },
+        {
+          "description": "Видалити пакет і його непотрібні залежності (сироти):",
+          "command": "pamac remove --orphans {{назва_пакета}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pamac.md#L13"
+        },
+        {
+          "description": "Шукати пакет в базі даних пакетів:",
+          "command": "pamac search {{назва_пакета}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pamac.md#L17"
+        },
+        {
+          "description": "Перелічити встановлені пакети:",
+          "command": "pamac list --installed",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pamac.md#L21"
+        },
+        {
+          "description": "Перевірити наявність оновлень пакетів:",
+          "command": "pamac checkupdates",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pamac.md#L25"
+        },
+        {
+          "description": "Оновити всі пакети:",
+          "command": "pamac upgrade",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pamac.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pamac.md"
+    },
+    {
+      "id": "tldr--7d3d91c8ed22",
+      "canonicalPath": "common/git-config.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git config",
+      "summary": "Керує спеціальними параметрами конфігурації для репозиторію Git. Конфігурації можуть бути локальні (для поточного репозиторію) або глобальні (для поточного користувача).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Надає перелік лише локальних налаштувань (що зберігаються у `.git/config` поточного репозиторію):",
+          "command": "git config {{[-l|--list]}} --local",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-config.md#L9"
+        },
+        {
+          "description": "Надає перелік лише глобальних налаштувань (що зберігаються у `~/.gitconfig`):",
+          "command": "git config {{[-l|--list]}} --global",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-config.md#L13"
+        },
+        {
+          "description": "Отримує значення для наданого параметру конфігурації:",
+          "command": "git config alias.unstage",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-config.md#L17"
+        },
+        {
+          "description": "Встановлює глобальне значення для наданого параметру конфігурації:",
+          "command": "git config --global alias.unstage \"reset HEAD --\"",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-config.md#L21"
+        },
+        {
+          "description": "Повертає значення по замовчанню для наданого глобального параметру конфігурації:",
+          "command": "git config --global --unset alias.unstage",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-config.md#L25"
+        },
+        {
+          "description": "Відкриває для редагування файл конфігурацій поточного репозиторію у редакторі по замовчуванню:",
+          "command": "git config {{[-e|--edit]}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-config.md#L29"
+        },
+        {
+          "description": "Відкриває для редагування файл з глобальними конфігураціями у редакторі по замовчанню:",
+          "command": "git config --global {{[-e|--edit]}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-config.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-config.md"
+    },
+    {
+      "id": "tldr--807c1b03ce59",
+      "canonicalPath": "common/rehash.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "rehash",
+      "title": "rehash",
+      "summary": "Ця команда є псевдонімом для `hash -r`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr hash",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/rehash.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/rehash.md"
+    },
+    {
+      "id": "tldr--81c75e698bab",
+      "canonicalPath": "common/git-commit-tree.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git commit-tree",
+      "summary": "Низькорівнева утиліта для створення об'єктів комітів. Дивіться також: `git commit`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Створює об'єкт коміту із певним повідомленням:",
+          "command": "git commit-tree {{tree}} -m \"{{повідомлення}}\"",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit-tree.md#L9"
+        },
+        {
+          "description": "Створює об'єкт коміту читаючи повідомлення з файлу (використовуй `-` для читання зі стандартного введення):",
+          "command": "git commit-tree {{tree}} -F {{шлях/до/файлу}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit-tree.md#L13"
+        },
+        {
+          "description": "Створює GPG-підписаний об'єкт коміту:",
+          "command": "git commit-tree {{tree}} -m \"{{повідомлення}}\" {{[-S|--gpg-sign]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit-tree.md#L17"
+        },
+        {
+          "description": "Створює об'єкт коміту із певним батьківським об'єктом коміту:",
+          "command": "git commit-tree {{tree}} -m \"{{повідомлення}}\" -p {{sha_батьківського_коміту}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit-tree.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commit-tree.md"
+    },
+    {
+      "id": "tldr--850bb0c7f4e2",
+      "canonicalPath": "common/git-merge.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git merge",
+      "summary": "Злиття гілок разом.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Злиття гілки з поточною гілкою:",
+          "command": "git merge {{назва_гілки}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-merge.md#L8"
+        },
+        {
+          "description": "Редагує повідомлення при злитті гілок:",
+          "command": "git merge {{[-e|--edit]}} {{назва_гілки}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-merge.md#L12"
+        },
+        {
+          "description": "Зливає гілки і створює комміт злиття:",
+          "command": "git merge --no-ff {{назва_гілки}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-merge.md#L16"
+        },
+        {
+          "description": "Перериває злиття у випадку конфлікту:",
+          "command": "git merge --abort",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-merge.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-merge.md"
+    },
+    {
+      "id": "tldr--8b4aeee8f531",
+      "canonicalPath": "common/git-checkout.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git checkout",
+      "summary": "Перемикає на гілку чи шлях до робочої директорії.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Створює та перемикає на нову гілку:",
+          "command": "git checkout -b {{назва_гілки}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout.md#L8"
+        },
+        {
+          "description": "Створює та перемикає на нову гілку спираючись на певне посилання (приклади посилань: гілка, віддалена/гілка, тег):",
+          "command": "git checkout -b {{назва_гілки}} {{посилання}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout.md#L12"
+        },
+        {
+          "description": "Перемикає на локальну гілку, що вже існує:",
+          "command": "git checkout {{назва_гілки}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout.md#L16"
+        },
+        {
+          "description": "Перемикає на попередню гілку:",
+          "command": "git checkout -",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout.md#L20"
+        },
+        {
+          "description": "Перемикає на віддалену гілку, що вже існує:",
+          "command": "git checkout {{[-t|--track]}} {{назва_віддаленого_сховища}}/{{назва_гілки}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout.md#L24"
+        },
+        {
+          "description": "Відкидає усі неіндексовані зміни у поточній директорії (дізнайтесь більше про команди, як скасування, ознайомившись із `git reset`):",
+          "command": "git checkout .",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout.md#L28"
+        },
+        {
+          "description": "Скасовує неіндексовані зміну у файлі:",
+          "command": "git checkout {{ім'я_файлу}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout.md#L32"
+        },
+        {
+          "description": "Замінює файл у поточній директорії на його версію, яку було закомічено до вказаної гілки:",
+          "command": "git checkout {{назва_гілки}} -- {{ім'я_файлу}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-checkout.md"
+    },
+    {
+      "id": "tldr--8bc97416a339",
+      "canonicalPath": "common/huggingface-cli.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "huggingface-cli",
+      "title": "huggingface-cli",
+      "summary": "Ця команда є псевдонімом для `hf`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr hf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/huggingface-cli.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/huggingface-cli.md"
+    },
+    {
+      "id": "tldr--91b0c6209d1c",
+      "canonicalPath": "common/impacket-rpcdump.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "impacket-rpcdump",
+      "title": "impacket-rpcdump",
+      "summary": "Ця команда є псевдонімом для `rpcdump.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr rpcdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-rpcdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-rpcdump.md"
+    },
+    {
+      "id": "tldr--95c2f3790166",
+      "canonicalPath": "common/git.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git",
+      "summary": "Розподілена система контролю версій. Деякі команди, як от `git commit`, мають свою власну документацію.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Виконує підкоманду Git:",
+          "command": "git {{підкоманда}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git.md#L9"
+        },
+        {
+          "description": "Виконує підкоманду Git у довільному репозиторії, вказавши шлях до нього:",
+          "command": "git -C {{шлях/до/репозиторію}} {{підкоманда}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git.md#L13"
+        },
+        {
+          "description": "Виконує команду Git із вказаними параметрами:",
+          "command": "git -c '{{config.key}}={{значення}}' {{підкоманда}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git.md#L17"
+        },
+        {
+          "description": "Показує базову допомогу:",
+          "command": "git --help",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git.md#L21"
+        },
+        {
+          "description": "Показує допомогу з певної підкоманди Git (наприклад, `commit`, `log` чи іншої):",
+          "command": "git help {{підкоманда}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git.md#L25"
+        },
+        {
+          "description": "Перевіряє версію Git:",
+          "command": "git --version",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git.md"
+    },
+    {
+      "id": "tldr--9e4bf094fa26",
+      "canonicalPath": "common/hping.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "hping",
+      "title": "hping",
+      "summary": "Ця команда є псевдонімом для `hping3`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr hping3",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/hping.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/hping.md"
+    },
+    {
+      "id": "tldr--9f096aaababb",
+      "canonicalPath": "common/git-commits-since.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git commits-since",
+      "summary": "Виводить коміти починаючи з певного періоду часу або дати. Частина `git-extras`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Виводить коміти починаючи зі вчора:",
+          "command": "git commits-since {{yesterday}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commits-since.md#L9"
+        },
+        {
+          "description": "Виводить коміти починаючи з минулого тижня:",
+          "command": "git commits-since {{last week}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commits-since.md#L13"
+        },
+        {
+          "description": "Виводить коміти починаючи з минулого місяця:",
+          "command": "git commits-since {{last month}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commits-since.md#L17"
+        },
+        {
+          "description": "Виводить коміти починаючи зі вчора з 14:00:",
+          "command": "git commits-since {{yesterday 2pm}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commits-since.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-commits-since.md"
+    },
+    {
+      "id": "tldr--a20e0ad1d699",
+      "canonicalPath": "common/git-clone.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git clone",
+      "summary": "Клонує репозиторій, що існує.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Клонує репозиторій, що існує, у задану директорію:",
+          "command": "git clone {{шлях_до_віддаленого_репозиторію}} {{шлях/до/директорії}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-clone.md#L8"
+        },
+        {
+          "description": "Клонує репозиторій, що існує, та його підмодулі:",
+          "command": "git clone --recursive {{шлях_до_віддаленого_репозиторію}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-clone.md#L12"
+        },
+        {
+          "description": "Клонує локальний репозиторій:",
+          "command": "git clone --local {{шлях/до/локального/репозиторію}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-clone.md#L16"
+        },
+        {
+          "description": "Клонує тихо:",
+          "command": "git clone --quiet {{шлях_до_віддаленого_репозиторію}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-clone.md#L20"
+        },
+        {
+          "description": "Клонує з репозиторію, що існує, тільки 10 останніх комітів з гілки по замовчанню (корисно для заощадження часу):",
+          "command": "git clone --depth 10 {{шлях_до_віддаленого_репозиторію}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-clone.md#L24"
+        },
+        {
+          "description": "Клонує з репозиторію, що існує, тільки конкретну гілку:",
+          "command": "git clone --branch {{ім'я}} --single-branch {{шлях_до_віддаленого_репозиторію}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-clone.md#L28"
+        },
+        {
+          "description": "Клонує репозиторій, що існує, використовуючи задану команду SSH:",
+          "command": "git clone --config core.sshCommand=\"{{ssh -i шлях/до/приватного_ключа_ssh}}\" {{шлях_до_віддаленого_репозиторію}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-clone.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-clone.md"
+    },
+    {
+      "id": "tldr--a2232f2aca5a",
+      "canonicalPath": "common/git-rebase.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git rebase",
+      "summary": "Повторно застосовує коміти з однієї гілки поверх іншої. Зазвичай використовується для дублювання комітів з однієї гілки до іншої, шляхом створення нових комітів у гілці призначення.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Перебазовує активну гілку поверх іншої, вказаної гілки:",
+          "command": "git rebase {{нова_базова_гілка}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-rebase.md#L9"
+        },
+        {
+          "description": "Розпочинає інтерактивне перебазування, яке дозволяє змінювати порядок, оминати, об'єднувати чи редагувати коміти:",
+          "command": "git rebase {{[-i|--interactive]}} {{цільова_базова_гілка_або_хеш_коміту}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-rebase.md#L13"
+        },
+        {
+          "description": "Продовжує перебазування перерване через збій злиття після виправлення конфліктних файлів:",
+          "command": "git rebase --continue",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-rebase.md#L17"
+        },
+        {
+          "description": "Продовжує перебазування призупинене через конфлікти при злитті, пропустивши конфліктний коміт:",
+          "command": "git rebase --skip",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-rebase.md#L21"
+        },
+        {
+          "description": "Перериває поточне перебазування (наприклад, якщо воно було перерване через конфлікт при злитті):",
+          "command": "git rebase --abort",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-rebase.md#L25"
+        },
+        {
+          "description": "Переносить частину поточної гілки поверх нової бази, використавши стару базу, як початок:",
+          "command": "git rebase --onto {{нова_база}} {{стара_база}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-rebase.md#L29"
+        },
+        {
+          "description": "Повторно застосовує останні 5 комітів, зупиняючись аби змінювати порядок, оминати, об'єднувати чи редагувати їх:",
+          "command": "git rebase {{[-i|--interactive]}} {{HEAD~5}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-rebase.md#L33"
+        },
+        {
+          "description": "Автоматично вирішує будь-які конфлікти надавши перевагу робочій версії гілки (ключ `theirs` має обернене значення в цьому випадку):",
+          "command": "git rebase {{[-X|--strategy-option]}} theirs {{назва_гілки}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-rebase.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-rebase.md"
+    },
+    {
+      "id": "tldr--a2e697f1fd03",
+      "canonicalPath": "common/impacket-psexec.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "impacket-psexec",
+      "title": "impacket-psexec",
+      "summary": "Ця команда є псевдонімом для `psexec.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr psexec.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-psexec.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-psexec.md"
+    },
+    {
+      "id": "tldr--a57a6d44fd2a",
+      "canonicalPath": "linux/nmtui-connect.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "nmtui-connect",
+      "title": "nmtui-connect",
+      "summary": "Ця команда є псевдонімом для `nmtui connect`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/nmtui-connect.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/nmtui-connect.md"
+    },
+    {
+      "id": "tldr--a618d302e8ef",
+      "canonicalPath": "common/llvm-gcc.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "llvm-gcc",
+      "title": "llvm-gcc",
+      "summary": "Ця команда є псевдонімом для `clang`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr clang",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/llvm-gcc.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/llvm-gcc.md"
+    },
+    {
+      "id": "tldr--add80c6cf4c0",
+      "canonicalPath": "common/git-cherry-pick.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git cherry-pick",
+      "summary": "Застосовує зміни, зроблені у наявних комітах, до поточної гілки. Для застосування змін до іншої гілки спершу виконайте `git checkout`, аби переключитися на бажану гілку.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Застосовує коміт до поточної гілки:",
+          "command": "git cherry-pick {{коміт}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-cherry-pick.md#L9"
+        },
+        {
+          "description": "Застосовує проміжок комітів до поточної гілки (дивіться також `git rebase --onto`):",
+          "command": "git cherry-pick {{початковий_коміт}}~..{{кінцевий_коміт}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-cherry-pick.md#L13"
+        },
+        {
+          "description": "Застосовує декілька (непослідовних) комітів до поточної гілки:",
+          "command": "git cherry-pick {{коміт1 коміт2 ...}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-cherry-pick.md#L17"
+        },
+        {
+          "description": "Додає зміни з коміту до робочої директорії без створення коміту:",
+          "command": "git cherry-pick {{[-n|--no-commit]}} {{коміт}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-cherry-pick.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-cherry-pick.md"
+    },
+    {
+      "id": "tldr--b05b4bc2d4f1",
+      "canonicalPath": "android/pm.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "pm",
+      "title": "pm",
+      "summary": "Вивести інформацію про застосунки на Android девайсі.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Вивести всі встановлені застосунки:",
+          "command": "pm list packages",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/pm.md#L8"
+        },
+        {
+          "description": "Вивести всі встановлені системні застосунки:",
+          "command": "pm list packages -s",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/pm.md#L12"
+        },
+        {
+          "description": "Вивести всі встановлені сторонні (3d-party) застосунки:",
+          "command": "pm list packages -3",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/pm.md#L16"
+        },
+        {
+          "description": "Вивести застосунки, які підпадають під специфічні ключові слова:",
+          "command": "pm list packages {{ключове_слово1 ключове_слово2 ...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/pm.md#L20"
+        },
+        {
+          "description": "Вивести шлях до APK для специфічного застосунку:",
+          "command": "pm path {{app}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/pm.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/pm.md"
+    },
+    {
+      "id": "tldr--b1434ad19218",
+      "canonicalPath": "common/git-annotate.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git annotate",
+      "summary": "Показує хеш коміту і останнього автора на кожному рядку у файлі. Дивіться `git blame`, якій варто віддати перевагу над `git annotate`. `git annotate` призначена для тих, хто знайомий із іншими системами контролю версій.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Виводить файл з ім'ям автора та хешем коміту доданими поперед кожного рядку:",
+          "command": "git annotate {{шлях/до/файлу}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-annotate.md#L10"
+        },
+        {
+          "description": "Виводить файл з електронною поштою автора та хешем коміту доданими поперед кожного рядку:",
+          "command": "git annotate {{[-e|--show-email]}} {{шлях/до/файлу}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-annotate.md#L14"
+        },
+        {
+          "description": "Виводить лише рядки, які відповідають регулярному виразу:",
+          "command": "git annotate -L :{{регулярний_вираз}} {{шлях/до/файлу}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-annotate.md#L18"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-annotate.md"
+    },
+    {
+      "id": "tldr--b1769f839a59",
+      "canonicalPath": "common/git-status.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git status",
+      "summary": "Показує зміни до файлів у Git-репозиторії. Списки змінених, доданих та видалених файлів в порівнянні до поточного зареєстрованого коміту.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Показує змінені файли які ще не додані до коміту:",
+          "command": "git status",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-status.md#L9"
+        },
+        {
+          "description": "Виводить інформацію у стислому форматі:",
+          "command": "git status {{[-s|--short]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-status.md#L13"
+        },
+        {
+          "description": "Виводить інформацію без неконтрольованих файлів:",
+          "command": "git status {{[-uno|--untracked-files=no]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-status.md#L17"
+        },
+        {
+          "description": "Виводить інформацію у стислому форматі разом з інформацією про гілку:",
+          "command": "git status {{[-sb|--short --branch]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-status.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-status.md"
+    },
+    {
+      "id": "tldr--bca92a75fabb",
+      "canonicalPath": "common/git-stage.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git stage",
+      "summary": "Ця команда є псевдонімом для `git add`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr git add",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-stage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-stage.md"
+    },
+    {
+      "id": "tldr--caff5147878b",
+      "canonicalPath": "osx/aa.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "aa",
+      "title": "aa",
+      "summary": "Ця команда є псевдонімом для `yaa`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr yaa",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/osx/aa.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/osx/aa.md"
+    },
+    {
+      "id": "tldr--d747b2b46d7c",
+      "canonicalPath": "common/git-pull.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git pull",
+      "summary": "Отримує дані з віддаленого репозиторію та зливає їх із локальним.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Завантажити зміни із типового віддаленого репозиторію та злити їх:",
+          "command": "git pull",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-pull.md#L8"
+        },
+        {
+          "description": "Завантажити зміни із типового віддаленого репозиторію та злити їх, використовуючи перемотання:",
+          "command": "git pull {{[-r|--rebase]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-pull.md#L12"
+        },
+        {
+          "description": "Завантажити зміни із певної гілки вказаного віддаленого репозиторію, а потім злити їх у HEAD:",
+          "command": "git pull {{назва_сховища}} {{назва_гілки}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-pull.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-pull.md"
+    },
+    {
+      "id": "tldr--ddca73d046bf",
+      "canonicalPath": "common/getln.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "getln",
+      "title": "getln",
+      "summary": "Ця команда є псевдонімом для `read -zr`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr read",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/getln.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/getln.md"
+    },
+    {
+      "id": "tldr--ebce857fe663",
+      "canonicalPath": "common/impacket-secretsdump.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "impacket-secretsdump",
+      "title": "impacket-secretsdump",
+      "summary": "Ця команда є псевдонімом для `secretsdump.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr secretsdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-secretsdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-secretsdump.md"
+    },
+    {
+      "id": "tldr--f52bd62df508",
+      "canonicalPath": "common/git-push.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "git",
+      "title": "git push",
+      "summary": "Надсилає коміти до віддаленого репозиторію.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Надіслати локальні зміни у поточній гілці до її типового віддаленого відповідника:",
+          "command": "git push",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-push.md#L8"
+        },
+        {
+          "description": "Надіслати зміни із вказаної локальної гілки до її віддаленого відповідника:",
+          "command": "git push {{назва_сховища}} {{локальна_гілка}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-push.md#L12"
+        },
+        {
+          "description": "Надіслати зміни із вказаної локальної гілки до її віддаленого відповідника та встановити цю віддалену гілку як типову для дій надсилання і стягування:",
+          "command": "git push {{[-u|--set-upstream]}} {{назва_сховища}} {{локальна_гілка}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-push.md#L16"
+        },
+        {
+          "description": "Надіслати зміни із вказаної локальної гілки до вказаної віддаленої:",
+          "command": "git push {{назва_сховища}} {{локальна_гілка}}:{{віддалена_гілка}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-push.md#L20"
+        },
+        {
+          "description": "Надіслати зміни з усіх локальних гілок до їх відповідників у вказаному віддаленому репозиторії:",
+          "command": "git push --all {{назва_сховища}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-push.md#L24"
+        },
+        {
+          "description": "Видалити гілку у віддаленому репозиторії:",
+          "command": "git push {{назва_сховища}} {{[-d|--delete]}} {{віддалена_гілка}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-push.md#L28"
+        },
+        {
+          "description": "Видалити віддалену гілку, що не містить локального відповідника:",
+          "command": "git push --prune {{назва_сховища}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-push.md#L32"
+        },
+        {
+          "description": "Надіслати мітки, що відсутні у віддаленому репозиторії:",
+          "command": "git push --tags",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-push.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/git-push.md"
+    },
+    {
+      "id": "tldr--f8667b14a43a",
+      "canonicalPath": "common/tar.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "tar",
+      "title": "tar",
+      "summary": "Утиліта архівування. Часто поєднується з методом стиснення, таким як `gzip` або `bzip2`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "tar--1bc6b0b1",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Створити ([c]reate) архів і записати його у файл ([f]ile):",
+          "command": "tar cf {{шлях/до/цілі.tar}} {{шлях/до/file1 шлях/до/file2 ...}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tar.md#L9"
+        },
+        {
+          "description": "Створити ([c]reate) g[z]ipped архів і записати його у файл ([f]ile):",
+          "command": "tar czf {{шлях/до/цілі.tar.gz}} {{шлях/до/file1 шлях/до/file2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tar.md#L13"
+        },
+        {
+          "description": "Створити ([c]reate) g[z]ipped архів з каталогу, використовуючи відносні шляхи:",
+          "command": "tar czf {{шлях/до/цілі.tar.gz}} {{[-C|--directory]}} {{шлях/до/каталогу}} .",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tar.md#L17"
+        },
+        {
+          "description": "Розпакувати (e[x]tract) стиснутий файл ([f]ile) архіву у поточний каталог детально ([v]erbosely):",
+          "command": "tar xvf {{шлях/до/джерела.tar[.gz|.bz2|.xz]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tar.md#L21"
+        },
+        {
+          "description": "Розпакувати (e[x]tract) стиснутий файл ([f]ile) архіву у певний каталог:",
+          "command": "tar xf {{шлях/до/джерела.tar[.gz|.bz2|.xz]}} {{[-C|--directory]}} {{шлях/до/каталогу}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tar.md#L25"
+        },
+        {
+          "description": "Створити ([c]reate) стиснутий архів і записати його у файл ([f]ile), використовуючи розширення файлу для автоматичного визначення програми стиснення:",
+          "command": "tar caf {{шлях/до/цілі.tar.xz}} {{шлях/до/file1 шлях/до/file2 ...}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tar.md#L29"
+        },
+        {
+          "description": "Вивести ([l]ist) перелік вмісту tar файлу ([f]ile) детально ([v]erbosely):",
+          "command": "tar tvf {{шлях/до/джерела.tar}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tar.md#L33"
+        },
+        {
+          "description": "Розпакувати (e[x]tract) файли, що відповідають шаблону, з файлу ([f]ile) архіву:",
+          "command": "tar xf {{шлях/до/джерела.tar}} --wildcards \"{{*.html}}\"",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tar.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tar.md"
+    }
+  ]
+}

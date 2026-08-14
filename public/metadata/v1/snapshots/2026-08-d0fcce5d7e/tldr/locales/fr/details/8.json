@@ -1,0 +1,1286 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "fr",
+  "sourceLocale": "fr",
+  "shard": "8",
+  "items": [
+    {
+      "id": "tldr--00812f869fbb",
+      "canonicalPath": "common/mapfile.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "mapfile",
+      "title": "mapfile",
+      "summary": "Cette commande est un alias de `readarray`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr readarray",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/mapfile.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/mapfile.md"
+    },
+    {
+      "id": "tldr--00bde973fa89",
+      "canonicalPath": "common/ssh-agent.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "ssh-agent",
+      "title": "ssh-agent",
+      "summary": "Lance un agent SSH. Un agent SSH permet de stocker des clés SSH déchiffrées, jusqu'à ce qu'elle soient retirées ou que l'agent soit arrêté. Voir aussi : `ssh-add`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git-with-openssh--49faf317",
+        "mls-software-openssh--6b012d8a",
+        "openssh--7291a89e"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Démarre un agent SSH pour le shell actuel :",
+          "command": "eval $(ssh-agent)",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/ssh-agent.md#L10"
+        },
+        {
+          "description": "Arrête l'agent actuellement en fonctionnement :",
+          "command": "ssh-agent -k",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/ssh-agent.md#L14"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/ssh-agent.md"
+    },
+    {
+      "id": "tldr--01b05401cd9d",
+      "canonicalPath": "common/rsync.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "rsync",
+      "title": "rsync",
+      "summary": "Transférer des fichiers vers ou depuis un hôte distant (pas entre deux hôtes distants). Peut transférer un ou plusieurs fichiers correspondant à un motif.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rsync--6bcbc5c9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Transfère un fichier :",
+          "command": "rsync {{chemin/vers/origine}} {{chemin/vers/destination}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rsync.md#L9"
+        },
+        {
+          "description": "Utilise le mode archive (copier récursivement les répertoires, copier les liens symboliques sans résolution et conserver les autorisations, la propriété et les délais de modification) :",
+          "command": "rsync {{[-a|--archive]}} {{chemin/vers/origine}} {{chemin/vers/destination}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rsync.md#L13"
+        },
+        {
+          "description": "Transférer le contenu d'un dossier :",
+          "command": "rsync {{[-r|--recursive]}} {{chemin/vers/origine}} {{chemin/vers/destination}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rsync.md#L17"
+        },
+        {
+          "description": "Transférer le contenu d'un dossier (mais pas le dossier lui-même) :",
+          "command": "rsync {{[-r|--recursive]}} {{chemin/vers/origine/}} {{chemin/vers/destination}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rsync.md#L21"
+        },
+        {
+          "description": "Utiliser le mode archive, résolvant les liens symboliques et ignorant les fichiers déjà transférés sauf si plus récents :",
+          "command": "rsync {{[-auL|--archive --update --copy-links]}} {{chemin/vers/origine}} {{chemin/vers/destination}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rsync.md#L25"
+        },
+        {
+          "description": "Transférer un fichier vers un hôte distant exécutant `rsyncd` et supprimez les fichiers sur la destination qui n'existent pas sur l'hôte distant :",
+          "command": "rsync {{[-r|--recursive]}} --delete rsync://{{hote_distant}}:{{chemin/vers/origine}} {{chemin/vers/destination}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rsync.md#L29"
+        },
+        {
+          "description": "Transférer un fichier par SSH et afficher l'avancement global du transfert :",
+          "command": "rsync {{[-e|--rsh]}} 'ssh -p {{port}}' --info=progress2 {{hote_distant}}:{{chemin/vers/origine}} {{chemin/vers/destination}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rsync.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rsync.md"
+    },
+    {
+      "id": "tldr--0281a74271c4",
+      "canonicalPath": "common/kite.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "kite",
+      "title": "kite",
+      "summary": "Cette commande est un alias de `kiterunner`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr kiterunner",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/kite.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/kite.md"
+    },
+    {
+      "id": "tldr--02ef304f3e76",
+      "canonicalPath": "linux/br.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "br",
+      "title": "br",
+      "summary": "Cette commande est un alias de `broot`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr broot",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/br.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/br.md"
+    },
+    {
+      "id": "tldr--0ba0271aa6c6",
+      "canonicalPath": "common/atrm.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "atrm",
+      "title": "atrm",
+      "summary": "Supprime les travaux programmés par la commande `at` ou `batch`. Pour retrouver les numéros des travaux, utilise `atq`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Supprime le travail numéro 10 :",
+          "command": "atrm 10",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atrm.md#L9"
+        },
+        {
+          "description": "Supprime plusieurs travaux, séparés par un espace :",
+          "command": "atrm {{15}} {{17}} {{22}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atrm.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/atrm.md"
+    },
+    {
+      "id": "tldr--19cebd8399b9",
+      "canonicalPath": "common/adscript.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "adscript",
+      "title": "adscript",
+      "summary": "Compilateur pour fichiers Adscript.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Compile un fichier vers un fichier objet :",
+          "command": "adscript --output {{chemin/vers/fichier.o}} {{chemin/vers/fichier_source.adscript}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/adscript.md#L8"
+        },
+        {
+          "description": "Compile et lie un fichier vers un exécutable autonome :",
+          "command": "adscript --executable --output {{chemin/vers/fichier}} {{chemin/vers/fichier_source.adscript}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/adscript.md#L12"
+        },
+        {
+          "description": "Compile un fichier vers LLVM IR à la place du code machine natif :",
+          "command": "adscript --llvm-ir --output {{chemin/vers/fichier.ll}} {{chemin/vers/fichier_source.adscript}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/adscript.md#L16"
+        },
+        {
+          "description": "Fait une compilation croisée d'un fichier vers un fichier objet pour une architecture CPU ou un système d'exploitation distant :",
+          "command": "adscript --target-triple {{i386-linux-elf}} --output {{chemin/vers/fichier.o}} {{chemin/vers/fichier_source.adscript}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/adscript.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/adscript.md"
+    },
+    {
+      "id": "tldr--1b067a29cc28",
+      "canonicalPath": "common/typeset.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "typeset",
+      "title": "typeset",
+      "summary": "Cette commande est un alias de `declare`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr declare",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/typeset.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/typeset.md"
+    },
+    {
+      "id": "tldr--2d5d885e548f",
+      "canonicalPath": "linux/iwctl.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "iwctl",
+      "title": "iwctl",
+      "summary": "Un outil de ligne de commande pour gérer iwd. Voir aussi : `nmcli`, `iw`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Lancer le mode interactif, dans ce mode vous pouvez entrer les commandes directement, avec de l'auto-complétion :",
+          "command": "iwctl",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/iwctl.md#L9"
+        },
+        {
+          "description": "Afficher vos stations wifi :",
+          "command": "iwctl station list",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/iwctl.md#L13"
+        },
+        {
+          "description": "Lancer la recherche de réseaux avec une station :",
+          "command": "iwctl station {{station}} scan",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/iwctl.md#L17"
+        },
+        {
+          "description": "Afficher les réseaux trouvés par une station :",
+          "command": "iwctl station {{station}} get-networks",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/iwctl.md#L21"
+        },
+        {
+          "description": "Se connecter à un réseau avec une station, si des informations de connexion sont nécessaires elles seront demandées :",
+          "command": "iwctl station {{station}} connect {{nom_du_réseau}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/iwctl.md#L25"
+        },
+        {
+          "description": "Avoir l'aide générale :",
+          "command": "iwctl {{[-h|--help]}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/iwctl.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/iwctl.md"
+    },
+    {
+      "id": "tldr--3559dcb7bf58",
+      "canonicalPath": "osx/gtail.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gtail",
+      "title": "gtail",
+      "summary": "Cette commande est un alias de `tail`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr {{[-p|--platform]}} common tail",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gtail.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gtail.md"
+    },
+    {
+      "id": "tldr--5371a9d32482",
+      "canonicalPath": "linux/megadl.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "megadl",
+      "title": "megadl",
+      "summary": "Cette commande est un alias de `megatools-dl`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr megatools-dl",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/megadl.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/megadl.md"
+    },
+    {
+      "id": "tldr--56e85bcd7474",
+      "canonicalPath": "linux/xsel.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "xsel",
+      "title": "xsel",
+      "summary": "Outil de sélection et de manipulation du presse-papiers X11.",
+      "platform": "linux",
+      "softwareIds": [
+        "xsel--02ca3383"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Utilise la sortie d'une commande comme entrée du presse-papiers (équivalent de `<Ctrl c>`) :",
+          "command": "echo 123 | xsel {{[-ib|--input --clipboard]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xsel.md#L8"
+        },
+        {
+          "description": "Utilise le contenu d'un fichier comme entrée du presse-papiers :",
+          "command": "cat {{fichier}} | xsel {{[-ib|--input --clipboard]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xsel.md#L12"
+        },
+        {
+          "description": "Affiche le contenu du presse-papiers dans le terminal (équivalent à `<Ctrl v>`) :",
+          "command": "xsel {{[-ob|--output --clipboard]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xsel.md#L16"
+        },
+        {
+          "description": "Sortie du contenu du presse-papiers dans un fichier :",
+          "command": "xsel {{[-ob|--output --clipboard]}} > {{fichier}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xsel.md#L20"
+        },
+        {
+          "description": "Efface le presse-papiers :",
+          "command": "xsel {{[-cb|--clear --clipboard]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xsel.md#L24"
+        },
+        {
+          "description": "Affiche le contenu de la sélection primaire X11 dans le terminal (équivalent à `<MiddleClick>`) :",
+          "command": "xsel {{[-op|--output --primary]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xsel.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/xsel.md"
+    },
+    {
+      "id": "tldr--58c03fd6f29d",
+      "canonicalPath": "common/impacket-getadusers.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "impacket-GetADUsers",
+      "title": "impacket-GetADUsers",
+      "summary": "Cette commande est un alias de `GetADUsers.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr GetADUsers.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-getadusers.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-getadusers.md"
+    },
+    {
+      "id": "tldr--6206e325fa3c",
+      "canonicalPath": "common/chroot.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "chroot",
+      "title": "chroot",
+      "summary": "Exécute une commande ou un shell interactif avec un répertoire racine spécial.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Exécute la commande en tant que nouveau répertoire racine :",
+          "command": "chroot {{chemin/vers/nouveau/répertoire/racine}} {{command}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chroot.md#L8"
+        },
+        {
+          "description": "Spécifie l'utilisateur et le groupe (ID ou nom) à utiliser :",
+          "command": "chroot --userspec={{utilisateur:groupe}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chroot.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/chroot.md"
+    },
+    {
+      "id": "tldr--6541cd24dc0d",
+      "canonicalPath": "common/gem.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gem",
+      "title": "gem",
+      "summary": "Un gestionnaire de paquets pour le langage de programmation Ruby.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Recherche des gems distantes et affiche toutes les versions disponibles :",
+          "command": "gem search {{expression_régulière}} {{[-a|--all]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gem.md#L8"
+        },
+        {
+          "description": "Installe la dernière version d'une gem :",
+          "command": "gem install {{nom_gem}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gem.md#L12"
+        },
+        {
+          "description": "Installe une version spécifique d'une gem :",
+          "command": "gem install {{nom_gem}} {{[-v|--version]}} {{1.0.0}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gem.md#L16"
+        },
+        {
+          "description": "Installe la dernière version correspondante (SemVer) d'une gem :",
+          "command": "gem install {{nom_gem}} {{[-v|--version]}} '~> {{1.0}}'",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gem.md#L20"
+        },
+        {
+          "description": "Mise à jour d'une gem :",
+          "command": "gem update {{nom_gem}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gem.md#L24"
+        },
+        {
+          "description": "Liste toutes les gems locales :",
+          "command": "gem list",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gem.md#L28"
+        },
+        {
+          "description": "Désinstalle une gem :",
+          "command": "gem uninstall {{nom_gem}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gem.md#L32"
+        },
+        {
+          "description": "Désinstalle une version spécifique d'une gem :",
+          "command": "gem uninstall {{nom_gem}} {{[-v|--version]}} {{1.0.0}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gem.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gem.md"
+    },
+    {
+      "id": "tldr--65aca1fd6c9a",
+      "canonicalPath": "linux/ifdown.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "ifdown",
+      "title": "ifdown",
+      "summary": "Désactive des interfaces réseau.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Désactive l'interface eth0 :",
+          "command": "ifdown {{eth0}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/ifdown.md#L8"
+        },
+        {
+          "description": "Désactive toutes les interfaces déjà actives :",
+          "command": "ifdown {{[-a|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/ifdown.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/ifdown.md"
+    },
+    {
+      "id": "tldr--65e6a3d335a0",
+      "canonicalPath": "common/base32.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "base32",
+      "title": "base32",
+      "summary": "Encode ou décode un fichier ou l'entrée standard vers ou depuis la base 32, et retourne le résultat à la sortie standard.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Encode un fichier :",
+          "command": "base32 {{chemin/vers/fichier}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/base32.md#L8"
+        },
+        {
+          "description": "Envelopper la sortie codée à une largeur spécifique (`0` désactive l'enveloppement) :",
+          "command": "base32 {{[-w|--wrap]}} {{0|76|...}} {{chemin/vers/fichier}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/base32.md#L12"
+        },
+        {
+          "description": "Décode un fichier :",
+          "command": "base32 {{[-d|--decode]}} {{chemin/vers/fichier}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/base32.md#L16"
+        },
+        {
+          "description": "Encode depuis `stdin` :",
+          "command": "{{commande}} | base32",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/base32.md#L20"
+        },
+        {
+          "description": "Décode depuis `stdin` :",
+          "command": "{{commande}} | base32 {{[-d|--decode]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/base32.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/base32.md"
+    },
+    {
+      "id": "tldr--75d7d53380c8",
+      "canonicalPath": "windows/ghy.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "ghy",
+      "title": "ghy",
+      "summary": "Cette commande est un alias de `Get-History`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr Get-History",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/ghy.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/ghy.md"
+    },
+    {
+      "id": "tldr--76bc6c17e26c",
+      "canonicalPath": "common/arch.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "arch",
+      "title": "arch",
+      "summary": "Cette commande est un alias de `uname --machine`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "archwsl--c36105af",
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr uname",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/arch.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/arch.md"
+    },
+    {
+      "id": "tldr--787f0a8bad22",
+      "canonicalPath": "common/yes.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "yes",
+      "title": "yes",
+      "summary": "Envoie un message à répétition en sortie console. Cette commande est souvent utilisée pour éviter de devoir accepter des opérations successives (par exemple des installations via la commande `apt-get`).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Envoyer « message » à répétition :",
+          "command": "yes {{message}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/yes.md#L9"
+        },
+        {
+          "description": "Envoyer « y » à répétition :",
+          "command": "yes",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/yes.md#L13"
+        },
+        {
+          "description": "Répondre « oui » à toutes les questions posées par la commande `apt-get` :",
+          "command": "yes | sudo apt-get install {{program}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/yes.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/yes.md"
+    },
+    {
+      "id": "tldr--79d6fab5585d",
+      "canonicalPath": "common/pamnoraw.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "pamnoraw",
+      "title": "pamnoraw",
+      "summary": "Cette commande est un alias de `pamtopnm -plain`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr pamtopnm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/pamnoraw.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/pamnoraw.md"
+    },
+    {
+      "id": "tldr--7e4b37895a64",
+      "canonicalPath": "windows/cls.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "cls",
+      "title": "cls",
+      "summary": "Efface l'écran. Dans PowerShell, cette commande est un alias de `Clear-Host`. Cette documentation est basée sur la version de `cls` utilisable dans l'Invite de Commande (`cmd`).",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Consulte la documentation relative à la commande PowerShell équivalente :",
+          "command": "tldr clear-host",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/cls.md#L9"
+        },
+        {
+          "description": "Efface l'écran :",
+          "command": "cls",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/cls.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/cls.md"
+    },
+    {
+      "id": "tldr--829439e5e0f9",
+      "canonicalPath": "osx/gpinky.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gpinky",
+      "title": "gpinky",
+      "summary": "Cette commande est un alias de `pinky`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr pinky",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gpinky.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gpinky.md"
+    },
+    {
+      "id": "tldr--84dde4d8b932",
+      "canonicalPath": "osx/gchgrp.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gchgrp",
+      "title": "gchgrp",
+      "summary": "Cette commande est un alias de `chgrp`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr chgrp",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gchgrp.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gchgrp.md"
+    },
+    {
+      "id": "tldr--929b3c9edd97",
+      "canonicalPath": "common/bzegrep.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "bzegrep",
+      "title": "bzegrep",
+      "summary": "Cette commande est un alias de `bzgrep --extended-regexp`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr bzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/bzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/bzegrep.md"
+    },
+    {
+      "id": "tldr--9d78b63b924d",
+      "canonicalPath": "common/gimp.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gimp",
+      "title": "gimp",
+      "summary": "Outil d'édition et de retouche d'image, libre et multiplateforme. Voir aussi : `krita`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gimp--cc23151e",
+        "gimp-dev--67dd02d3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Démarre GIMP :",
+          "command": "gimp",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gimp.md#L9"
+        },
+        {
+          "description": "Ouvre les fichiers spécifiés :",
+          "command": "gimp {{chemin/vers/image1 chemin/vers/image2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gimp.md#L13"
+        },
+        {
+          "description": "Ouvre les fichiers spécifiés avec une nouvelle Démarre une nouvelle cadre :",
+          "command": "gimp --new-instance {{chemin/vers/image1 chemin/vers/image2 ...}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gimp.md#L17"
+        },
+        {
+          "description": "Démarre sans l'écran de démarrage :",
+          "command": "gimp --no-splash",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gimp.md#L21"
+        },
+        {
+          "description": "Affiche les erreurs et les avertissements sur la console au lieu de les afficher dans une boîte de dialogue :",
+          "command": "gimp --console-messages",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gimp.md#L25"
+        },
+        {
+          "description": "Active les routines de débogage des signaux non fatals :",
+          "command": "gimp --debug-handlers",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gimp.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/gimp.md"
+    },
+    {
+      "id": "tldr--9eff7bc15253",
+      "canonicalPath": "common/impacket-gettgt.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "impacket-getTGT",
+      "title": "impacket-getTGT",
+      "summary": "Cette commande est un alias de `getTGT.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr getTGT.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-gettgt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/impacket-gettgt.md"
+    },
+    {
+      "id": "tldr--a97d7ab26730",
+      "canonicalPath": "osx/gsha512sum.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gsha512sum",
+      "title": "gsha512sum",
+      "summary": "Cette commande est un alias de `sha512sum`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr sha512sum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gsha512sum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gsha512sum.md"
+    },
+    {
+      "id": "tldr--af69de551909",
+      "canonicalPath": "common/alembic.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "alembic",
+      "title": "alembic",
+      "summary": "Outil de migration de base de données pour SQLAlchemy.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "alembic--8a559f75"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Initialise Alembic dans un projet :",
+          "command": "alembic init {{chemin/vers/dossier}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alembic.md#L8"
+        },
+        {
+          "description": "Créé un script de migration avec génération automatique :",
+          "command": "alembic revision --autogenerate -m \"{{message}}\"",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alembic.md#L12"
+        },
+        {
+          "description": "Met à jour la base de données vers la dernière révision :",
+          "command": "alembic upgrade head",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alembic.md#L16"
+        },
+        {
+          "description": "Revient à la révision précédente :",
+          "command": "alembic downgrade -1",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alembic.md#L20"
+        },
+        {
+          "description": "Affiche l'historique des migrations :",
+          "command": "alembic history",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alembic.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/alembic.md"
+    },
+    {
+      "id": "tldr--b626391f1233",
+      "canonicalPath": "common/borg.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "borg",
+      "title": "borg",
+      "summary": "Outil de sauvegarde avec dé-duplication. Crée des sauvegardes distantes ou locales qui peuvent être montées comme un système de fichiers.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Initialise un dépôt local :",
+          "command": "borg init {{/chemin/vers/repertoire_du_depot}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/borg.md#L9"
+        },
+        {
+          "description": "Sauvegarde un répertoire dans le dépôt en créant une archive appelée \"Lundi\" :",
+          "command": "borg create --progress {{/chemin/vers/repertoire_du_depot}}::{{Lundi}} {{/chemin/vers/repertoire_source}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/borg.md#L13"
+        },
+        {
+          "description": "Liste toutes les archives d'un dépôt :",
+          "command": "borg list {{/chemin/vers/repertoire_du_depot}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/borg.md#L17"
+        },
+        {
+          "description": "Extrait un répertoire donné de l'archive nommée \"Lundi\" à partir d'un dépôt distant tout en excluant tous les fichiers *.ext :",
+          "command": "borg extract {{utilisateur}}@{{hote}}:{{/chemin/vers/repertoire_du_depot}}::{{Lundi}} {{chemin/vers/repertoire_destination}} --exclude '{{*.ext}}'",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/borg.md#L21"
+        },
+        {
+          "description": "Nettoie un dépôt en effaçant toutes les archives âgées de plus de 7 jours tout en affichant les changements :",
+          "command": "borg prune --keep-within {{7d}} --list {{/chemin/vers/repertoire_du_depot}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/borg.md#L25"
+        },
+        {
+          "description": "Monte un dépôt comme un système de fichiers FUSE :",
+          "command": "borg mount {{/chemin/vers/repertoire_du_depot}}::{{Lundi}} {{/chemin/vers/point_de_montage}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/borg.md#L29"
+        },
+        {
+          "description": "Affiche l'aide sur la création d'archives :",
+          "command": "borg create --help",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/borg.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/borg.md"
+    },
+    {
+      "id": "tldr--c1df869d372e",
+      "canonicalPath": "common/avrdude.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "avrdude",
+      "title": "avrdude",
+      "summary": "Pilotes pour programmer les microcontrôleurs Atmel AVR.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "avr-gcc--c519116c",
+        "avrdude--2dc5f896"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Lire le contenu du microcontrôleur AVR :",
+          "command": "avrdude -p {{part_id}} -c {{programmeur}} -U flash:r:{{fichier.hex}}:i",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/avrdude.md#L8"
+        },
+        {
+          "description": "Programme le microcontrôleur AVR :",
+          "command": "avrdude -p {{part_id}} -c {{programmeur}} -U flash:w:{{fichier.hex}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/avrdude.md#L12"
+        },
+        {
+          "description": "Affiche les appareils AVR disponibles :",
+          "command": "avrdude -p \\?",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/avrdude.md#L16"
+        },
+        {
+          "description": "Affiche les programmeurs AVR disponibles :",
+          "command": "avrdude -c \\?",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/avrdude.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/avrdude.md"
+    },
+    {
+      "id": "tldr--c915fdd0afd8",
+      "canonicalPath": "linux/alternatives.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "alternatives",
+      "title": "alternatives",
+      "summary": "Cette commande est un alias de `update-alternatives`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr update-alternatives",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/alternatives.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/alternatives.md"
+    },
+    {
+      "id": "tldr--ce9d64549964",
+      "canonicalPath": "common/powershell.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "powershell",
+      "title": "powershell",
+      "summary": "Interface en ligne de commande et langage de script spécialement conçu pour l'administration système.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "powershell--d1026578"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Démarre une session Windows PowerShell dans une fenêtre d'invite de commande :",
+          "command": "powershell",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/powershell.md#L8"
+        },
+        {
+          "description": "Charge un fichier de console PowerShell spécifique :",
+          "command": "powershell -PSConsoleFile {{chemin/vers/fichier}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/powershell.md#L12"
+        },
+        {
+          "description": "Démarre une session avec une version spécifiée de PowerShell :",
+          "command": "powershell -Version {{version}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/powershell.md#L16"
+        },
+        {
+          "description": "Empêche l’interface système de se fermer après avoir exécuté les commandes de démarrage :",
+          "command": "powershell -NoExit",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/powershell.md#L20"
+        },
+        {
+          "description": "Décrive le format des données envoyées à PowerShell :",
+          "command": "powershell -InputFormat {{Texte|XML}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/powershell.md#L24"
+        },
+        {
+          "description": "Détermine comment la sortie de PowerShell est formatée :",
+          "command": "powershell -OutputFormat {{Texte|XML}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/powershell.md#L28"
+        },
+        {
+          "description": "Affiche l'aide :",
+          "command": "powershell -Help",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/powershell.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/powershell.md"
+    },
+    {
+      "id": "tldr--d72ca9dd8b5e",
+      "canonicalPath": "common/google-chrome.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "google-chrome",
+      "title": "google-chrome",
+      "summary": "Cette commande est un alias de `chromium`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "google-chrome--90e5e298"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr chromium",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/google-chrome.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/google-chrome.md"
+    },
+    {
+      "id": "tldr--db306fe9bf47",
+      "canonicalPath": "linux/yum-config-manager.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "yum",
+      "title": "yum config-manager",
+      "summary": "Cette commande est un alias de `dnf config-manager`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr dnf config-manager",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/yum-config-manager.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/linux/yum-config-manager.md"
+    },
+    {
+      "id": "tldr--dd9b9362fef7",
+      "canonicalPath": "common/sh.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "sh",
+      "title": "sh",
+      "summary": "Bourne SHell, l'interpréteur de ligne de commande classique. Voir aussi : `!`, `^`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git-with-openssh--49faf317",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Démarre une session shell interactive :",
+          "command": "sh",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/sh.md#L9"
+        },
+        {
+          "description": "Exécute une commande, puis termine la session :",
+          "command": "sh -c \"{{commande}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/sh.md#L13"
+        },
+        {
+          "description": "Exécute un script :",
+          "command": "sh {{chemin/vers/le/script.sh}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/sh.md#L17"
+        },
+        {
+          "description": "Lit et exécute des commandes depuis l'entrée standard `stdin` :",
+          "command": "sh -s",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/sh.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/sh.md"
+    },
+    {
+      "id": "tldr--e6042ee5feb5",
+      "canonicalPath": "common/rcat.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "rcat",
+      "title": "rcat",
+      "summary": "Cette commande est un alias de `rc`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr rc",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rcat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/common/rcat.md"
+    },
+    {
+      "id": "tldr--f2f92bd429de",
+      "canonicalPath": "osx/gstdbuf.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gstdbuf",
+      "title": "gstdbuf",
+      "summary": "Cette commande est un alias de `stdbuf`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Voir la documentation de la commande originale :",
+          "command": "tldr stdbuf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gstdbuf.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/osx/gstdbuf.md"
+    },
+    {
+      "id": "tldr--fd405606b80e",
+      "canonicalPath": "windows/gcb.md",
+      "locale": "fr",
+      "sourceLocale": "fr",
+      "name": "gcb",
+      "title": "gcb",
+      "summary": "Cette commande est un alias de `Get-Clipboard`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Affiche la documentation de la commande originale :",
+          "command": "tldr get-clipboard",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/gcb.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fr/windows/gcb.md"
+    }
+  ]
+}

@@ -1,0 +1,1229 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "ru",
+  "sourceLocale": "ru",
+  "shard": "8",
+  "items": [
+    {
+      "id": "tldr--00812f869fbb",
+      "canonicalPath": "common/mapfile.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "mapfile",
+      "title": "mapfile",
+      "summary": "Эта команда — псевдоним для `readarray`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr readarray",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/mapfile.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/mapfile.md"
+    },
+    {
+      "id": "tldr--01b05401cd9d",
+      "canonicalPath": "common/rsync.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "rsync",
+      "title": "rsync",
+      "summary": "Передавать файлы на удалённый хост или с него (но не между двумя удалёнными хостами), по умолчанию используя SSH. Для указания удалённого пути используйте `пользователь@хост:путь/к/файлу_или_каталогу`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rsync--6bcbc5c9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Передать файл (используйте `--dry-run` для симуляции передачи):",
+          "command": "rsync {{путь/к/источнику}} {{путь/к/назначению}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rsync.md#L9"
+        },
+        {
+          "description": "Использовать режим архивирования (рекурсивно копировать каталоги, копировать символические ссылки как есть, сохранять права доступа, владельцев и время модификации):",
+          "command": "rsync {{[-a|--archive]}} {{путь/к/источнику}} {{путь/к/назначению}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rsync.md#L13"
+        },
+        {
+          "description": "Передать данные со сжатием, выводя подробный прогресс в удобном формате и сохраняя частично переданные файлы при прерывании:",
+          "command": "rsync {{[-zvhP|--compress --verbose --human-readable --partial --progress]}} {{путь/к/источнику}} {{путь/к/назначению}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rsync.md#L17"
+        },
+        {
+          "description": "Рекурсивно скопировать каталоги и принудительно записывать каждый файл на диск (вместо кеширования в оперативной памяти):",
+          "command": "rsync {{[-r|--recursive]}} --fsync {{путь/к/источнику}} {{путь/к/назначению}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rsync.md#L21"
+        },
+        {
+          "description": "Передать содержимое каталога, но не сам каталог:",
+          "command": "rsync {{[-r|--recursive]}} {{путь/к/источнику}}/ {{путь/к/назначению}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rsync.md#L25"
+        },
+        {
+          "description": "Использовать режим архивирования, разрешать символические ссылки (копировать содержимое) и пропускать файлы, которые новее в месте назначения:",
+          "command": "rsync {{[-auL|--archive --update --copy-links]}} {{путь/к/источнику}} {{путь/к/назначению}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rsync.md#L29"
+        },
+        {
+          "description": "Передать каталог с удалённого хоста, на котором запущен `rsyncd`, и удалить в месте назначения файлы, которых нет в источнике:",
+          "command": "rsync {{[-r|--recursive]}} --delete rsync://{{хост}}:{{путь/к/источнику}} {{путь/к/назначению}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rsync.md#L33"
+        },
+        {
+          "description": "Передать файл через SSH, используя порт, отличный от стандартного (22), и показать общий прогресс:",
+          "command": "rsync {{[-e|--rsh]}} 'ssh -p {{порт}}' --info=progress2 {{хост}}:{{путь/к/источнику}} {{путь/к/назначению}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rsync.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rsync.md"
+    },
+    {
+      "id": "tldr--0281a74271c4",
+      "canonicalPath": "common/kite.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "kite",
+      "title": "kite",
+      "summary": "Эта команда — псевдоним для `kiterunner`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr kiterunner",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kite.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/kite.md"
+    },
+    {
+      "id": "tldr--02ef304f3e76",
+      "canonicalPath": "linux/br.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "br",
+      "title": "br",
+      "summary": "Эта команда — псевдоним для `broot`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr broot",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/br.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/br.md"
+    },
+    {
+      "id": "tldr--0993eae96829",
+      "canonicalPath": "linux/setarch.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "setarch",
+      "title": "setarch",
+      "summary": "Изменять сообщаемую архитектуру для выполнения программы, в основном используется для изменения поведения программ в зависимости от архитектуры системы. Полезно для тестирования совместимости или запуска устаревших приложений.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Запустить команду, как если бы архитектура машины была `i686` (полезно для запуска 32-битных приложений на 64-битном ядре):",
+          "command": "setarch i686 {{команда}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/setarch.md#L9"
+        },
+        {
+          "description": "Запустить оболочку с архитектурой `x86_64`:",
+          "command": "setarch x86_64 {{bash}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/setarch.md#L13"
+        },
+        {
+          "description": "Отключить рандомизацию виртуального адресного пространства:",
+          "command": "setarch {{linux32}} {{[-R|--addr-no-randomize]}} {{команда}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/setarch.md#L17"
+        },
+        {
+          "description": "Показать список поддерживаемых архитектур:",
+          "command": "setarch --list",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/setarch.md#L21"
+        },
+        {
+          "description": "Показать справку:",
+          "command": "setarch {{[-h|--help]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/setarch.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/setarch.md"
+    },
+    {
+      "id": "tldr--16e31a4415f5",
+      "canonicalPath": "common/getuserspns.py.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "GetUserSPNs.py",
+      "title": "GetUserSPNs.py",
+      "summary": "Получать имена субъектов-служб (SPN), связанные с учётными записями пользователей Active Directory. Часть набора инструментов Impacket.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Вывести список учётных записей пользователей с SPN и запросить их Kerberos TGS-тикеты:",
+          "command": "GetUserSPNs.py {{домен}}/{{имя_пользователя}}:{{пароль}} -dc-ip {{ip_контроллера_домена}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/getuserspns.py.md#L9"
+        },
+        {
+          "description": "Использовать аутентификацию pass-the-hash:",
+          "command": "GetUserSPNs.py {{домен}}/{{имя_пользователя}} -hashes {{LM_хеш}}:{{NT_хеш}} -dc-ip {{ip_контроллера_домена}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/getuserspns.py.md#L13"
+        },
+        {
+          "description": "Сохранить результаты в файл:",
+          "command": "GetUserSPNs.py {{домен}}/{{имя_пользователя}}:{{пароль}} -dc-ip {{ip_контроллера_домена}} -outputfile {{путь/к/выходному_файлу}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/getuserspns.py.md#L17"
+        },
+        {
+          "description": "Запросить только TGS-тикеты:",
+          "command": "GetUserSPNs.py {{домен}}/{{имя_пользователя}}:{{пароль}} -dc-ip {{ip_контроллера_домена}} -request",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/getuserspns.py.md#L21"
+        },
+        {
+          "description": "Запросить только TGS-тикеты с использованием аутентификации pass-the-hash:",
+          "command": "GetUserSPNs.py {{домен}}/{{имя_пользователя}} -dc-ip {{ip_контроллера_домена}} -hashes {{LM_хеш}}:{{NT_хеш}} -request",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/getuserspns.py.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/getuserspns.py.md"
+    },
+    {
+      "id": "tldr--1b067a29cc28",
+      "canonicalPath": "common/typeset.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "typeset",
+      "title": "typeset",
+      "summary": "Эта команда — псевдоним для `declare`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr declare",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/typeset.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/typeset.md"
+    },
+    {
+      "id": "tldr--3559dcb7bf58",
+      "canonicalPath": "osx/gtail.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gtail",
+      "title": "gtail",
+      "summary": "Эта команда — псевдоним для GNU `tail`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr {{[-p|--platform]}} common tail",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtail.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gtail.md"
+    },
+    {
+      "id": "tldr--5371a9d32482",
+      "canonicalPath": "linux/megadl.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "megadl",
+      "title": "megadl",
+      "summary": "Эта команда — псевдоним для `megatools-dl`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr megatools-dl",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/megadl.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/megadl.md"
+    },
+    {
+      "id": "tldr--58c03fd6f29d",
+      "canonicalPath": "common/impacket-getadusers.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "impacket-GetADUsers",
+      "title": "impacket-GetADUsers",
+      "summary": "Эта команда — псевдоним для `GetADUsers.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr GetADUsers.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-getadusers.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-getadusers.md"
+    },
+    {
+      "id": "tldr--65e6a3d335a0",
+      "canonicalPath": "common/base32.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "base32",
+      "title": "base32",
+      "summary": "Кодировать или декодировать файл или `stdin` в/из Base32 в `stdout`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Закодировать файл:",
+          "command": "base32 {{путь/к/файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/base32.md#L8"
+        },
+        {
+          "description": "Задать ширину переноса закодированного вывода (`0` отключает перенос):",
+          "command": "base32 {{[-w|--wrap]}} {{0|76|...}} {{путь/к/файлу}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/base32.md#L12"
+        },
+        {
+          "description": "Декодировать файл:",
+          "command": "base32 {{[-d|--decode]}} {{путь/к/файлу}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/base32.md#L16"
+        },
+        {
+          "description": "Закодировать из `stdin`:",
+          "command": "{{команда}} | base32",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/base32.md#L20"
+        },
+        {
+          "description": "Декодировать из `stdin`:",
+          "command": "{{команда}} | base32 {{[-d|--decode]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/base32.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/base32.md"
+    },
+    {
+      "id": "tldr--6c7495ca5475",
+      "canonicalPath": "osx/gkill.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gkill",
+      "title": "gkill",
+      "summary": "Эта команда — псевдоним для GNU `kill`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr {{[-p|--platform]}} linux kill",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gkill.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gkill.md"
+    },
+    {
+      "id": "tldr--75d7d53380c8",
+      "canonicalPath": "windows/ghy.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "ghy",
+      "title": "ghy",
+      "summary": "Эта команда — псевдоним для `Get-History`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr Get-History",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/ghy.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/ghy.md"
+    },
+    {
+      "id": "tldr--76bc6c17e26c",
+      "canonicalPath": "common/arch.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "arch",
+      "title": "arch",
+      "summary": "Эта команда — псевдоним для `uname --machine`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "archwsl--c36105af",
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr uname",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/arch.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/arch.md"
+    },
+    {
+      "id": "tldr--787f0a8bad22",
+      "canonicalPath": "common/yes.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "yes",
+      "title": "yes",
+      "summary": "Непрерывно выводить что-либо. Эта команда обычно используется для автоматического подтверждения всех запросов команд установки (например, `apt-get`).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Запустить непрерывный вывод `y`:",
+          "command": "yes",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/yes.md#L9"
+        },
+        {
+          "description": "Запустить непрерывный вывод указанного значения:",
+          "command": "yes {{значение}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/yes.md#L13"
+        },
+        {
+          "description": "Подтвердить все запросы команды `apt-get`:",
+          "command": "yes | sudo apt-get install {{программа}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/yes.md#L17"
+        },
+        {
+          "description": "Запустить непрерывный вывод символа новой строки, чтобы всегда принимать параметр по умолчанию:",
+          "command": "yes ''",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/yes.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/yes.md"
+    },
+    {
+      "id": "tldr--79d6fab5585d",
+      "canonicalPath": "common/pamnoraw.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "pamnoraw",
+      "title": "pamnoraw",
+      "summary": "Эта команда — псевдоним для `pamtopnm -plain`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pamtopnm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/pamnoraw.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/pamnoraw.md"
+    },
+    {
+      "id": "tldr--7e4b37895a64",
+      "canonicalPath": "windows/cls.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "cls",
+      "title": "cls",
+      "summary": "Очищать экран. В PowerShell эта команда является псевдонимом для `Clear-Host`. Данная документация основана на версии `cls` для командной строки (`cmd`).",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Посмотреть документацию для эквивалентной команды PowerShell:",
+          "command": "tldr clear-host",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/cls.md#L9"
+        },
+        {
+          "description": "Очистить экран:",
+          "command": "cls",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/cls.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/cls.md"
+    },
+    {
+      "id": "tldr--81aa4c17641c",
+      "canonicalPath": "linux/nmtui.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "nmtui",
+      "title": "nmtui",
+      "summary": "Текстовый интерфейс для управления NetworkManager. Используйте `<стрелки>` для навигации, `<Enter>` для выбора. Смотрите также: `nmcli`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Открыть пользовательский интерфейс:",
+          "command": "nmtui",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui.md#L10"
+        },
+        {
+          "description": "Показать список доступных подключений с возможностью их активации или деактивации:",
+          "command": "nmtui connect",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui.md#L14"
+        },
+        {
+          "description": "Подключиться к указанной сети:",
+          "command": "nmtui connect {{имя|uuid|устройство|ssid}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui.md#L18"
+        },
+        {
+          "description": "Отредактировать/Добавить/Удалить указанную сеть:",
+          "command": "nmtui edit {{имя|id}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui.md#L22"
+        },
+        {
+          "description": "Задать имя хоста системы:",
+          "command": "nmtui hostname",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui.md#L26"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/nmtui.md"
+    },
+    {
+      "id": "tldr--829439e5e0f9",
+      "canonicalPath": "osx/gpinky.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gpinky",
+      "title": "gpinky",
+      "summary": "Эта команда — псевдоним для GNU `pinky`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr pinky",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gpinky.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gpinky.md"
+    },
+    {
+      "id": "tldr--84dde4d8b932",
+      "canonicalPath": "osx/gchgrp.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gchgrp",
+      "title": "gchgrp",
+      "summary": "Эта команда — псевдоним для GNU `chgrp`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr chgrp",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gchgrp.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gchgrp.md"
+    },
+    {
+      "id": "tldr--867efa8ba170",
+      "canonicalPath": "common/luanti.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "luanti",
+      "title": "luanti",
+      "summary": "Блочная игра-песочница с бесконечным миром.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "luanti--45b137d0"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Запустить Luanti в режиме клиента:",
+          "command": "luanti",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/luanti.md#L8"
+        },
+        {
+          "description": "Вывести список загруженных игровых режимов:",
+          "command": "luanti --gameid list",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/luanti.md#L12"
+        },
+        {
+          "description": "Запустить Luanti в режиме сервера с определённым игровым режимом:",
+          "command": "luanti --server --gameid {{id_игры}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/luanti.md#L16"
+        },
+        {
+          "description": "Запустить сервер с миром по умолчанию (после того, как он был создан):",
+          "command": "luanti --server",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/luanti.md#L20"
+        },
+        {
+          "description": "Запустить сервер с указанным миром:",
+          "command": "luanti --server --world {{название_мира}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/luanti.md#L24"
+        },
+        {
+          "description": "Запустить сервер на указанном порту:",
+          "command": "luanti --server --port {{порт}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/luanti.md#L28"
+        },
+        {
+          "description": "Записывать логи в указанный файл:",
+          "command": "luanti --logfile {{путь/к/файлу}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/luanti.md#L32"
+        },
+        {
+          "description": "Выводить в консоль только ошибки:",
+          "command": "luanti --quiet",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/luanti.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/luanti.md"
+    },
+    {
+      "id": "tldr--8816a7b10bca",
+      "canonicalPath": "windows/msiexec.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "msiexec",
+      "title": "msiexec",
+      "summary": "Установка, обновление, восстановление или удаление программ Windows через пакеты установки MSI и MSP.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Установить программу из MSI-пакета:",
+          "command": "msiexec /package {{путь\\к\\файлу.msi}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/msiexec.md#L8"
+        },
+        {
+          "description": "Установить MSI-пакет с веб-сайта:",
+          "command": "msiexec /package {{https://example.com/installer.msi}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/msiexec.md#L12"
+        },
+        {
+          "description": "Установить MSP-пакет с обновлением (патчем):",
+          "command": "msiexec /update {{путь\\к\\файлу.msp}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/msiexec.md#L16"
+        },
+        {
+          "description": "Удалить программу или обновление, используя соответствующий пакет MSI или MSP:",
+          "command": "msiexec /uninstall {{путь\\к\\файлу}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/msiexec.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/msiexec.md"
+    },
+    {
+      "id": "tldr--8dd10571e340",
+      "canonicalPath": "common/wcurl.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "wcurl",
+      "title": "wcurl",
+      "summary": "Простая обёртка над `curl` для удобной загрузки файлов. Смотрите также: `wget`, `curl`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "wcurl--5c34edc8"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Скачать содержимое URL в файл, указанный в URL (в данном случае `index.html`):",
+          "command": "wcurl {{https://example.com/index.html}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wcurl.md#L9"
+        },
+        {
+          "description": "Скачать содержимое URL в файл с указанным именем:",
+          "command": "wcurl {{[-o|--output]}} {{путь/к/файлу}} {{https://example.com/index.html}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wcurl.md#L13"
+        },
+        {
+          "description": "Скачать содержимое URL с индикатором прогресса и использованием HTTP/2 по умолчанию:",
+          "command": "wcurl --curl-options \"--progress-bar --http2\" {{https://example.com/index.html}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wcurl.md#L17"
+        },
+        {
+          "description": "Возобновить прерванную загрузку:",
+          "command": "wcurl --curl-options \"--clobber --continue-at -\" {{https://example.com/index.html}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wcurl.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/wcurl.md"
+    },
+    {
+      "id": "tldr--929b3c9edd97",
+      "canonicalPath": "common/bzegrep.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "bzegrep",
+      "title": "bzegrep",
+      "summary": "Эта команда — псевдоним для `bzgrep --extended-regexp`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr bzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/bzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/bzegrep.md"
+    },
+    {
+      "id": "tldr--9d78b63b924d",
+      "canonicalPath": "common/gimp.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gimp",
+      "title": "gimp",
+      "summary": "Программа для редактирования изображений GNU. Смотрите также: `krita`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gimp--cc23151e",
+        "gimp-dev--67dd02d3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Запустить GIMP:",
+          "command": "gimp",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/gimp.md#L9"
+        },
+        {
+          "description": "Открыть указанные файлы:",
+          "command": "gimp {{путь/к/изображению1 путь/к/изображению2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/gimp.md#L13"
+        },
+        {
+          "description": "Открыть указанные файлы в новом окне:",
+          "command": "gimp --new-instance {{путь/к/изображению1 путь/к/изображению2 ...}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/gimp.md#L17"
+        },
+        {
+          "description": "Запустить без заставки:",
+          "command": "gimp --no-splash",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/gimp.md#L21"
+        },
+        {
+          "description": "Выводить ошибки и предупреждения в консоль вместо отображения их в диалоговом окне:",
+          "command": "gimp --console-messages",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/gimp.md#L25"
+        },
+        {
+          "description": "Включить обработчики сигналов отладки:",
+          "command": "gimp --debug-handlers",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/gimp.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/gimp.md"
+    },
+    {
+      "id": "tldr--9eff7bc15253",
+      "canonicalPath": "common/impacket-gettgt.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "impacket-getTGT",
+      "title": "impacket-getTGT",
+      "summary": "Эта команда — псевдоним для `getTGT.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr getTGT.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-gettgt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/impacket-gettgt.md"
+    },
+    {
+      "id": "tldr--a391a1df84e0",
+      "canonicalPath": "common/krita.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "krita",
+      "title": "krita",
+      "summary": "Krita - программа для создания эскизов и рисования, разработанная для цифровых художников. Смотрите также: `gimp`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "krita--cd14ec22"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Запустить krita:",
+          "command": "krita",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/krita.md#L9"
+        },
+        {
+          "description": "Открыть указанные файлы:",
+          "command": "krita {{путь/к/изображению1 путь/к/изображению2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/krita.md#L13"
+        },
+        {
+          "description": "Запустить без заставки:",
+          "command": "krita --nosplash",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/krita.md#L17"
+        },
+        {
+          "description": "Запустить с указанным рабочим пространством (`Animation`):",
+          "command": "krita --workspace {{Animation}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/krita.md#L21"
+        },
+        {
+          "description": "Запустить в полноэкранном режиме:",
+          "command": "krita --fullscreen",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/krita.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/krita.md"
+    },
+    {
+      "id": "tldr--a97d7ab26730",
+      "canonicalPath": "osx/gsha512sum.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gsha512sum",
+      "title": "gsha512sum",
+      "summary": "Эта команда — псевдоним для GNU `sha512sum`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr sha512sum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gsha512sum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gsha512sum.md"
+    },
+    {
+      "id": "tldr--c30074ba6b6a",
+      "canonicalPath": "common/xz.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "xz",
+      "title": "xz",
+      "summary": "Сжимать или распаковывать файлы XZ и LZMA.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "xz--b3975212"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Сжать файл с помощью xz:",
+          "command": "xz {{путь/к/файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xz.md#L8"
+        },
+        {
+          "description": "Распаковать файл XZ:",
+          "command": "xz {{[-d|--decompress]}} {{путь/к/файлу.xz}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xz.md#L12"
+        },
+        {
+          "description": "Сжать файл с помощью lzma:",
+          "command": "xz {{[-F|--format]}} lzma {{путь/к/файлу}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xz.md#L16"
+        },
+        {
+          "description": "Распаковать файл LZMA:",
+          "command": "xz {{[-d|--decompress]}} {{[-F|--format]}} lzma {{путь/к/файлу.lzma}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xz.md#L20"
+        },
+        {
+          "description": "Распаковать файл и записать в `stdout` (означает `--keep`):",
+          "command": "xz {{[-d|--decompress]}} {{[-c|--stdout]}} {{путь/к/файлу.xz}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xz.md#L24"
+        },
+        {
+          "description": "Сжать файл, сохранив исходный файл:",
+          "command": "xz {{[-k|--keep]}} {{путь/к/файлу}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xz.md#L28"
+        },
+        {
+          "description": "Сжать файл с самым быстрым сжатием:",
+          "command": "xz -0 {{путь/к/файлу}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xz.md#L32"
+        },
+        {
+          "description": "Сжать файл с лучшим сжатием:",
+          "command": "xz -9 {{путь/к/файлу}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xz.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/xz.md"
+    },
+    {
+      "id": "tldr--c915fdd0afd8",
+      "canonicalPath": "linux/alternatives.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "alternatives",
+      "title": "alternatives",
+      "summary": "Эта команда — псевдоним для `update-alternatives`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr update-alternatives",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/alternatives.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/alternatives.md"
+    },
+    {
+      "id": "tldr--d72ca9dd8b5e",
+      "canonicalPath": "common/google-chrome.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "google-chrome",
+      "title": "google-chrome",
+      "summary": "Эта команда — псевдоним для `chromium`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "google-chrome--90e5e298"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr chromium",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/google-chrome.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/google-chrome.md"
+    },
+    {
+      "id": "tldr--db306fe9bf47",
+      "canonicalPath": "linux/yum-config-manager.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "yum",
+      "title": "yum config-manager",
+      "summary": "Эта команда — псевдоним для `dnf config-manager`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr dnf config-manager",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/yum-config-manager.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/yum-config-manager.md"
+    },
+    {
+      "id": "tldr--e251197922a3",
+      "canonicalPath": "windows/nvm.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "nvm",
+      "title": "nvm",
+      "summary": "Устанавливать, удалять и переключаться между версиями Node.js. Поддерживает номера версий вроде \"12.8\" или \"v16.13.1\", метки вроде \"stable\", \"system\" и т.д.",
+      "platform": "windows",
+      "softwareIds": [
+        "nvm--e492da27"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Установить заданную версию Node.js:",
+          "command": "nvm install {{версия_node}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/nvm.md#L9"
+        },
+        {
+          "description": "Задать версию Node.js по умолчанию (требуется запускать от имени администратора):",
+          "command": "nvm use {{версия_node}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/nvm.md#L13"
+        },
+        {
+          "description": "Вывести список всех установленных версий Node.js и подсветить версию по умолчанию:",
+          "command": "nvm list",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/nvm.md#L17"
+        },
+        {
+          "description": "Вывести список всех доступных для установки (удаленных) версий Node.js:",
+          "command": "nvm ls-remote",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/nvm.md#L21"
+        },
+        {
+          "description": "Удалить указанную версию Node.js:",
+          "command": "nvm uninstall {{версия_node}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/nvm.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/nvm.md"
+    },
+    {
+      "id": "tldr--e6042ee5feb5",
+      "canonicalPath": "common/rcat.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "rcat",
+      "title": "rcat",
+      "summary": "Эта команда — псевдоним для `rc`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr rc",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rcat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/common/rcat.md"
+    },
+    {
+      "id": "tldr--e978294a4b9e",
+      "canonicalPath": "linux/cdrecord.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "cdrecord",
+      "title": "cdrecord",
+      "summary": "Записывать данные на CD или DVD. Некоторые вызовы cdrecord могут привести к деструктивным действиям, таким как стирание всех данных на диске.",
+      "platform": "linux",
+      "softwareIds": [
+        "cdrtools--ad0b95ef"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Показать оптические приводы, доступные для `cdrecord`:",
+          "command": "cdrecord --devices",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cdrecord.md#L9"
+        },
+        {
+          "description": "Записать (\"burn\") диск только с аудио:",
+          "command": "cdrecord dev={{/dev/optical_drive}} -audio {{track*.cdaudio}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cdrecord.md#L13"
+        },
+        {
+          "description": "Записать файл на диск с извлечением диска по завершении (некоторые рекордеры требуют этого):",
+          "command": "cdrecord -eject dev={{/dev/optical_drive}} -data {{file.iso}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cdrecord.md#L17"
+        },
+        {
+          "description": "Записать файл на диск в оптическом приводе с возможностью записи на несколько дисков подряд:",
+          "command": "cdrecord -tao dev={{/dev/optical_drive}} -data {{file.iso}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cdrecord.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/linux/cdrecord.md"
+    },
+    {
+      "id": "tldr--f2f92bd429de",
+      "canonicalPath": "osx/gstdbuf.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gstdbuf",
+      "title": "gstdbuf",
+      "summary": "Эта команда — псевдоним для GNU `stdbuf`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr stdbuf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gstdbuf.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/osx/gstdbuf.md"
+    },
+    {
+      "id": "tldr--fd405606b80e",
+      "canonicalPath": "windows/gcb.md",
+      "locale": "ru",
+      "sourceLocale": "ru",
+      "name": "gcb",
+      "title": "gcb",
+      "summary": "Эта команда — псевдоним для `Get-Clipboard`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Смотри документацию для оригинальной команды:",
+          "command": "tldr get-clipboard",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/gcb.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ru/windows/gcb.md"
+    }
+  ]
+}

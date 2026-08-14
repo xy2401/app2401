@@ -16,7 +16,7 @@ export default tseslint.config(
     rules: reactHooks.configs.flat.recommended.rules,
   },
   {
-    files: ["public/catalog-worker.js"],
+    files: ["public/catalog-search-worker.js"],
     languageOptions: { globals: { ...globals.browser, ...globals.worker } },
   },
   {

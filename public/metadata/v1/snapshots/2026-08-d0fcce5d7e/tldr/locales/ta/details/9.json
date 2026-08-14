@@ -1,0 +1,1959 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "ta",
+  "sourceLocale": "ta",
+  "shard": "9",
+  "items": [
+    {
+      "id": "tldr--0230bc38f600",
+      "canonicalPath": "common/git-bisect.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git bisect",
+      "summary": "ஒரு பிழையை அறிமுகப்படுத்திய உறுதிப்பாட்டைக் கண்டுபிடிக்க பைனரி தேடலைப் பயன்படுத்தவும். தவறான உறுதிப்பாட்டை படிப்படியாகக் குறைக்க கிட் தானாகவே கமிட் வரைபடத்தில் முன்னும் பின்னுமாக குதிக்கிறது.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "அறியப்பட்ட தரமற்ற கமிட் மற்றும் அறியப்பட்ட சுத்தமான (பொதுவாக பழையது) வரம்புக்குட்பட்ட ஒரு கமிட் வரம்பில் ஒரு இரு அமர்வு தொடங்கவும்:",
+          "command": "git bisect start {{மோசமான_கமிட்}} {{நல்ல_கமிட்}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bisect.md#L9"
+        },
+        {
+          "description": "`git bisect` தேர்ந்தெடுக்கும் ஒவ்வொரு உறுதிப்பாட்டிற்கும், சிக்கலுக்காக அதைச் சோதித்தபின் அதை \"கெட்டது\" (bad) அல்லது  \"நல்லது\" (good) என்று குறிக்கவும்:",
+          "command": "git bisect {{good|bad}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bisect.md#L13"
+        },
+        {
+          "description": "`git bisect` தவறான செயலை சுட்டிக்காட்டிய பின், இருசக்கர அமர்வை முடித்துவிட்டு முந்தைய கிளைக்குத் திரும்புக:",
+          "command": "git bisect reset",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bisect.md#L17"
+        },
+        {
+          "description": "ஒரு பிரிவின் போது ஒரு உறுதிப்பாட்டைத் தவிர்க்கவும் (எ.கா. வேறுபட்ட பிரச்சினை காரணமாக சோதனைகளில் தோல்வியுற்றது):",
+          "command": "git bisect skip",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bisect.md#L21"
+        },
+        {
+          "description": "இதுவரை செய்தவற்றின் பதிவைக் காண்பி:",
+          "command": "git bisect log",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bisect.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bisect.md"
+    },
+    {
+      "id": "tldr--07d477da427c",
+      "canonicalPath": "common/git-cherry.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git cherry",
+      "summary": "அப்ஸ்ட்ரீமில் இன்னும் பயன்படுத்தப்படாத கமிட்டுகளைக் கண்டறியவும்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "அப்ஸ்ட்ரீமில் சமமான கமிட்டுகளுடன் கமிட்டுகளையும் (அவற்றின் செய்திகளையும்) காட்டு:",
+          "command": "git cherry {{[-v|--verbose]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cherry.md#L8"
+        },
+        {
+          "description": "வேறு அப்ஸ்ட்ரீம் மற்றும் தலைப்பு கிளையை குறிப்பிடவும்:",
+          "command": "git cherry {{தோற்றம்}} {{தலைப்பு}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cherry.md#L12"
+        },
+        {
+          "description": "கொடுக்கப்பட்ட வரம்புக்குள் கமிட்களை கட்டுப்படுத்து:",
+          "command": "git cherry {{தோற்றம்}} {{தலைப்பு}} {{அடித்தளம்}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cherry.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cherry.md"
+    },
+    {
+      "id": "tldr--0b9ed15b8c60",
+      "canonicalPath": "common/git-bundle.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git bundle",
+      "summary": "ஒரு காப்பக கோப்பில் பொருள்கள் மற்றும் குறிப்புகளை தொகுக்கவும்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "ஒரு குறிப்பிட்ட கிளையின் அனைத்து பொருள்கள் மற்றும் குறிப்புகளைக் கொண்ட ஒரு மூட்டை கோப்பை உருவாக்கவும்:",
+          "command": "git bundle create {{கோப்பு.bundle/பாதை}} {{கிளையின்_பெயர்}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bundle.md#L8"
+        },
+        {
+          "description": "அனைத்து கிளைகளின் மூட்டை கோப்பை உருவாக்கவும்:",
+          "command": "git bundle create {{கோப்பு.bundle/பாதை}} --all",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bundle.md#L12"
+        },
+        {
+          "description": "தற்போதைய கிளையின் கடைசி 5 கமிட்டுகளின் மூட்டை கோப்பை உருவாக்கவும்:",
+          "command": "git bundle create {{கோப்பு.bundle/பாதை}} -5 {{HEAD}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bundle.md#L16"
+        },
+        {
+          "description": "சமீபத்திய 7 நாட்களின் மூட்டை கோப்பை உருவாக்கவும்:",
+          "command": "git bundle create {{கோப்பு.bundle/பாதை}} --since=7.days {{HEAD}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bundle.md#L20"
+        },
+        {
+          "description": "ஒரு மூட்டை கோப்பு தற்போதைய களஞ்சியத்தில் செல்லுபடியாகும் மற்றும் பயன்படுத்தலாம் என்பதை சரிபார்க்கவும்:",
+          "command": "git bundle verify {{கோப்பு.bundle/பாதை}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bundle.md#L24"
+        },
+        {
+          "description": "ஒரு மூட்டையில் உள்ள குறிப்புகளின் பட்டியலை நிலையான வெளியீட்டில் அச்சிடுக:",
+          "command": "git bundle unbundle {{கோப்பு.bundle/பாதை}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bundle.md#L28"
+        },
+        {
+          "description": "ஒரு மூட்டை கோப்பிலிருந்து ஒரு குறிப்பிட்ட கிளையை தற்போதைய களஞ்சியத்தில் இணைக்கவும்:",
+          "command": "git pull {{கோப்பு.bundle/பாதை}} {{கிளையின்_பெயர்}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bundle.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-bundle.md"
+    },
+    {
+      "id": "tldr--0ca672185525",
+      "canonicalPath": "common/git-add.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git add",
+      "summary": "மாற்றப்பட்ட கோப்புகளை குறியீட்டில் சேர்க்கிறது.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "குறியீட்டில் ஒரு கோப்பைச் சேர்க்க:",
+          "command": "git add {{கோப்பு/பாதை}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-add.md#L8"
+        },
+        {
+          "description": "எல்லா கோப்புகளையும் சேர்க்கவும் (கண்காணிக்கப்பட்ட மற்றும் தடமறியப்படாத):",
+          "command": "git add {{[-A|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-add.md#L12"
+        },
+        {
+          "description": "ஏற்கனவே கண்காணிக்கப்பட்ட கோப்புகளை மட்டுமே சேர்க்கவும்:",
+          "command": "git add {{[-u|--update]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-add.md#L16"
+        },
+        {
+          "description": "புறக்கணிக்கப்பட்ட கோப்புகளையும் சேர்க்கவும்:",
+          "command": "git add {{[-f|--force]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-add.md#L20"
+        },
+        {
+          "description": "ஊடாடும் வகையில் சில கோப்புகளை சேர்க்கவும்:",
+          "command": "git add {{[-p|--patch]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-add.md#L24"
+        },
+        {
+          "description": "கொடுக்கப்பட்ட கோப்பின் ஊடாடும் கட்ட பாகங்கள் சேர்க்கவும்:",
+          "command": "git add {{[-p|--patch]}} {{கோப்பு/பாதை}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-add.md#L28"
+        },
+        {
+          "description": "ஒரு கோப்பை ஊடாடும் வகையில் சேர்க்கவும்:",
+          "command": "git add {{[-i|--interactive]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-add.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-add.md"
+    },
+    {
+      "id": "tldr--144c12cc5a25",
+      "canonicalPath": "osx/gshred.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "gshred",
+      "title": "gshred",
+      "summary": "இக்கட்டளை `shred` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr shred",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gshred.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gshred.md"
+    },
+    {
+      "id": "tldr--2e08d822adcf",
+      "canonicalPath": "common/git-continue.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git continue",
+      "summary": "இக்கட்டளை `git abort` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr git abort",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-continue.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-continue.md"
+    },
+    {
+      "id": "tldr--3ba59b16054c",
+      "canonicalPath": "osx/gsha224sum.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "gsha224sum",
+      "title": "gsha224sum",
+      "summary": "இக்கட்டளை `sha224sum` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr sha224sum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gsha224sum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gsha224sum.md"
+    },
+    {
+      "id": "tldr--411475af713b",
+      "canonicalPath": "common/lzegrep.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "lzegrep",
+      "title": "lzegrep",
+      "summary": "இக்கட்டளை `xzgrep --extended-regexp` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/lzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/lzegrep.md"
+    },
+    {
+      "id": "tldr--497fec0a60c9",
+      "canonicalPath": "common/impacket-getst.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "impacket-getST",
+      "title": "impacket-getST",
+      "summary": "இக்கட்டளை `getST.py` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr getST.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/impacket-getst.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/impacket-getst.md"
+    },
+    {
+      "id": "tldr--4d289aee08fc",
+      "canonicalPath": "common/unxz.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "unxz",
+      "title": "unxz",
+      "summary": "இக்கட்டளை `xz --decompress` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr xz",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/unxz.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/unxz.md"
+    },
+    {
+      "id": "tldr--5826d7b3fe1c",
+      "canonicalPath": "common/git-am.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git am",
+      "summary": "பேட்ச் கோப்புகளைப் பயன்படுத்துங்கள். மின்னஞ்சல் வழியாக கமிட் பெறும்போது பயனுள்ளதாக இருக்கும். பேட்ச் கோப்புகளை உருவாக்கக்கூடிய `git format-patch` கட்டளையை காண்க. மேலும் காண்க: `git format-patch`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "பேட்ச் கோப்பைப் பயன்படுத்துங்கள்:",
+          "command": "git am {{கோப்பு.patch/பாதை}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-am.md#L10"
+        },
+        {
+          "description": "ரிமோட் பேட்ச் கோப்பைப் பின்பற்றி, மாற்றங்களைச் செய்யுங்கள்:",
+          "command": "curl {{[-L|--location]}} {{https://example.com/file.patch}} | git am",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-am.md#L14"
+        },
+        {
+          "description": "பேட்ச் கோப்பைப் பயன்படுத்துவதற்கான செயல்முறையை நிறுத்தவும்:",
+          "command": "git am --abort",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-am.md#L18"
+        },
+        {
+          "description": "கோப்புகளை நிராகரிக்க தோல்வியுற்ற ஹன்களை சேமித்து, முடிந்தவரை ஒரு பேட்ச் கோப்பைப் பயன்படுத்துங்கள்:",
+          "command": "git am --reject {{கோப்பு.patch/பாதை}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-am.md#L22"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-am.md"
+    },
+    {
+      "id": "tldr--597cd77312c9",
+      "canonicalPath": "common/git-commit.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git commit",
+      "summary": "கோப்புகளை களஞ்சியத்திற்கு கமிட்செய்ய.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "ஒரு செய்தியுடன் களஞ்சியத்திற்கு அரங்குக் கோப்புகளை கமிட் செய்யுங்கள்:",
+          "command": "git commit {{[-m|--message]}} \"{{செய்தி}}\"",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-commit.md#L8"
+        },
+        {
+          "description": "ஒரு கோப்பிலிருந்து படிக்கப்பட்ட செய்தியுடன் கட்டப்பட்ட கோப்புகளை கமிட்செய்யவும்:",
+          "command": "git commit {{[-F|--file]}} {{கமிட்_செய்தி_கோப்பு/பாதை}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-commit.md#L12"
+        },
+        {
+          "description": "அனைத்து மாற்றியமைக்கப்பட்ட கோப்புகளையும் தானாக நிலைநிறுத்து, செய்தியுடன் கமிட் செய்யுங்கள்:",
+          "command": "git commit {{[-a|--all]}} {{[-m|--message]}} \"{{செய்தி}}\"",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-commit.md#L16"
+        },
+        {
+          "description": "ஸ்டேஜ் செய்யப்பட்ட கோப்புகளை உறுதிசெய்து, குறிப்பிட்ட GPG விசையுடன் கையொப்பமிடுங்கள் (அல்லது எந்த வாதமும் குறிப்பிடப்படவில்லை எனில் கட்டமைப்பு கோப்பில் வரையறுக்கப்பட்ட ஒன்று):",
+          "command": "git commit {{[-S|--gpg-sign]}} {{key_id}} {{[-m|--message]}} \"{{செய்தி}}\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-commit.md#L20"
+        },
+        {
+          "description": "தற்போது செய்யப்பட்ட மாற்றங்களைச் சேர்ப்பதன் மூலம் கடைசி கமிட்டைப் புதுப்பிக்கவும், கமிட் இன் ஹாஷை மாற்றவும்:",
+          "command": "git commit --amend",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-commit.md#L24"
+        },
+        {
+          "description": "குறிப்பிட்ட (ஏற்கனவே அரங்கேற்றப்பட்ட) கோப்புகளை மட்டுமே கமிட் செய்யுங்கள்:",
+          "command": "git commit {{கோப்பு1/பாதை கோப்பு2/பாதை ...}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-commit.md#L28"
+        },
+        {
+          "description": "கட்டப்பட்ட கோப்புகள் இல்லாவிட்டாலும், கமிட்டை உருவாக்கவும்:",
+          "command": "git commit {{[-m|--message]}} \"{{செய்தி}}\" --allow-empty",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-commit.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-commit.md"
+    },
+    {
+      "id": "tldr--5f587af12926",
+      "canonicalPath": "linux/pw-record.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "pw-record",
+      "title": "pw-record",
+      "summary": "இக்கட்டளை `pw-cat --record` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/pw-record.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/pw-record.md"
+    },
+    {
+      "id": "tldr--6bd50561f3ec",
+      "canonicalPath": "common/git-archive.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git archive",
+      "summary": "பெயரிடப்பட்ட மரத்திலிருந்து கோப்புகளின் காப்பகத்தை உருவாக்கவும்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "தற்போதைய HEAD இன் உள்ளடக்கங்களிலிருந்து ஒரு தார் காப்பகத்தை உருவாக்கி அதை நிலையான வெளியீட்டில் அச்சிடுக:",
+          "command": "git archive {{[-v|--verbose]}} HEAD",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-archive.md#L8"
+        },
+        {
+          "description": "தற்போதைய HEAD இலிருந்து ஒரு ஜிப் காப்பகத்தை உருவாக்கி அதை நிலையான வெளியீட்டில் அச்சிடுக:",
+          "command": "git archive {{[-v|--verbose]}} --format zip HEAD",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-archive.md#L12"
+        },
+        {
+          "description": "மேலே உள்ளதைப் போலவே, ஆனால் கோப்புக்கு ஜிப் காப்பகத்தை எழுதவும்:",
+          "command": "git archive {{[-v|--verbose]}} {{[-o|--output]}} {{கோப்பு.zip/பாதை}} HEAD",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-archive.md#L16"
+        },
+        {
+          "description": "ஒரு குறிப்பிட்ட கிளையில் சமீபத்திய உறுதிப்பாட்டின் உள்ளடக்கங்களிலிருந்து தார் காப்பகத்தை உருவாக்கவும்:",
+          "command": "git archive {{[-o|--output]}} {{கோப்பு.tar/பாதை}} {{கிளை_பெயர்}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-archive.md#L20"
+        },
+        {
+          "description": "ஒரு குறிப்பிட்ட கோப்பகத்தின் உள்ளடக்கங்களிலிருந்து தார் காப்பகத்தை உருவாக்கவும்:",
+          "command": "git archive {{[-o|--output]}} {{கோப்பு.tar/பாதை}} HEAD:{{அடைவிற்குப்/பாதை}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-archive.md#L24"
+        },
+        {
+          "description": "ஒவ்வொரு கோப்பிற்கும் ஒரு குறிப்பிட்ட கோப்பகத்திற்குள் காப்பகப்படுத்த ஒரு பாதையைத் தயாரிக்கவும்:",
+          "command": "git archive {{[-o|--output]}} {{கோப்பு.tar/பாதை}} --prefix {{தயார்படுத்தும்/பாதை}}/ HEAD",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-archive.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-archive.md"
+    },
+    {
+      "id": "tldr--6d4afd4c6408",
+      "canonicalPath": "common/((.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "((",
+      "title": "((",
+      "summary": "இக்கட்டளை `let` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr let",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/((.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/((.md"
+    },
+    {
+      "id": "tldr--6db9c11deda7",
+      "canonicalPath": "common/git-clean.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git clean",
+      "summary": "கண்காணிக்கப்படாத கோப்புகளை பணியிடத்திலிருந்து அகற்றவும்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "கிட் மூலம் கண்காணிக்கப்படாத கோப்புகளை நீக்கு:",
+          "command": "git clean",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clean.md#L8"
+        },
+        {
+          "description": "கிட் மூலம் கண்காணிக்கப்படாத கோப்புகளை ஊடாடும் வகையில் நீக்கு:",
+          "command": "git clean {{[-i|--interactive]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clean.md#L12"
+        },
+        {
+          "description": "எந்த கோப்புகள் உண்மையில் நீக்கப்படாமல் நீக்கப்படும் என்பதைக் காட்டு:",
+          "command": "git clean {{[-n|--dry-run]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clean.md#L16"
+        },
+        {
+          "description": "கிட் மூலம் கண்காணிக்கப்படாத கோப்புகளை கட்டாயமாக நீக்கு:",
+          "command": "git clean {{[-f|--force]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clean.md#L20"
+        },
+        {
+          "description": "கிட் மூலம் கண்காணிக்கப்படாத கோப்பகங்களை கட்டாயமாக நீக்கு:",
+          "command": "git clean {{[-f|--force]}} -d",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clean.md#L24"
+        },
+        {
+          "description": "`.gitignore` மற்றும் `.git/info/exclude` ஆகியவற்றில் புறக்கணிக்கப்பட்ட கோப்புகள் உட்பட, தடமறியப்படாத கோப்புகளை நீக்கு:",
+          "command": "git clean -x",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clean.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clean.md"
+    },
+    {
+      "id": "tldr--742735839d69",
+      "canonicalPath": "linux/ufw.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "ufw",
+      "title": "ufw",
+      "summary": "சிக்கலற்ற ஃபயர்வால். ஃபயர்வாலின் உள்ளமைவை எளிதாக்குவதை நோக்கமாகக் கொண்ட `iptables` முன்பக்கம்.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "`ufw` ஐ இயக்கு:",
+          "command": "sudo ufw enable",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/ufw.md#L9"
+        },
+        {
+          "description": "`ufw` ஐ முடக்கு:",
+          "command": "sudo ufw disable",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/ufw.md#L13"
+        },
+        {
+          "description": "`ufw` விதிகளை அவற்றின் எண்களுடன் காட்டு:",
+          "command": "sudo ufw status numbered",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/ufw.md#L17"
+        },
+        {
+          "description": "சேவையை அடையாளம் காட்டும் கருத்துடன் இந்த ஹோஸ்டில் உள்ள போர்ட் 5432 இல் உள்வரும் போக்குவரத்தை அனுமதிக்கவும்:",
+          "command": "sudo ufw allow 5432 comment \"{{சேவை}}\"",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/ufw.md#L21"
+        },
+        {
+          "description": "போர்ட் 22 இல், இந்த ஹோஸ்டில் உள்ள எந்த முகவரிக்கும் 192.168.0.4 இலிருந்து டிசிபி போக்குவரத்தை மட்டும் அனுமதிக்கவும்:",
+          "command": "sudo ufw allow proto டிசிபி from 192.168.0.4 to ஏதேனும் port 22",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/ufw.md#L25"
+        },
+        {
+          "description": "இந்த ஹோஸ்டில் போர்ட் 80 இல் போக்குவரத்தை நிராகரிக்கவும்:",
+          "command": "sudo ufw deny 80",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/ufw.md#L29"
+        },
+        {
+          "description": "8412:8500 வரம்பில் உள்ள துறைமுகங்களுக்கு அனைத்து யுடிபி போக்குவரத்தையும் நிராகரிக்கவும்:",
+          "command": "sudo ufw deny proto யுடிபி from ஏதேனும் to ஏதாவது port 8412:8500",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/ufw.md#L33"
+        },
+        {
+          "description": "ஒரு குறிப்பிட்ட விதியை நீக்கவும். விதி எண்ணை `ufw status numbered` கட்டளையிலிருந்து மீட்டெடுக்கலாம்:",
+          "command": "sudo ufw delete {{விதி_எண்}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/ufw.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/ufw.md"
+    },
+    {
+      "id": "tldr--76e9fbcc35ca",
+      "canonicalPath": "common/shasum.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "shasum",
+      "title": "shasum",
+      "summary": "SHA மறையீட்டு சரிகாண்தொகைகளைக் கணி அல்லது சரிபார்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "psutils--0a0e1251",
+        "shasum--b4aec46f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "ஒன்று அல்லது அதற்கு மேற்பட்ட கோப்புகளுக்கான SHA1 சரிகாண்தொகையைக் கணி:",
+          "command": "shasum {{கோப்பு1/பாதை கோப்பு2/பாதை ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/shasum.md#L8"
+        },
+        {
+          "description": "ஒன்று அல்லது அதற்கு மேற்பட்ட கோப்புகளுக்கான SHA256 சரிகாண்தொகையைக் கணி:",
+          "command": "shasum --algorithm 256 {{கோப்பு1/பாதை கோப்பு2/பாதை ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/shasum.md#L12"
+        },
+        {
+          "description": "ஒன்று அல்லது அதற்கு மேற்பட்ட கோப்புகளுக்கான SHA512 சரிகாண்தொகைகளைக் கணி:",
+          "command": "shasum --algorithm 512 {{கோப்பு1/பாதை கோப்பு2/பாதை ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/shasum.md#L16"
+        },
+        {
+          "description": "`stdin` (இயல் உள்ளீடு) இலிருந்து SHA1 சரிகாண்தொகையை கணி:",
+          "command": "{{கட்டளை}} | shasum",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/shasum.md#L20"
+        },
+        {
+          "description": "SHA256 சரிகாண்தொகை பட்டியலைக் கணக்கிட்டு ஒரு கோப்பில் சேமிக்கவும்:",
+          "command": "shasum --algorithm 256 {{கோப்பு1/பாதை கோப்பு2/பாதை ...}} > {{கோப்பு.sha256/பாதை}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/shasum.md#L24"
+        },
+        {
+          "description": "SHA1 தொகைகள் மற்றும் கோப்புப்பெயர்களின் கோப்பைப் படித்து, எல்லாக் கோப்புகளிலும் சரிகாண்தொகைகள் பொருந்துகின்றன என்பதைச் சரிபார்க்கவும்:",
+          "command": "shasum --check {{கோப்பு/பாதை}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/shasum.md#L28"
+        },
+        {
+          "description": "விடுபட்ட கோப்புகள் அல்லது சரிபார்ப்பு தோல்வியுற்றால் மட்டுமே செய்தியைக் காட்டவும்:",
+          "command": "shasum --check --quiet {{கோப்பு/பாதை}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/shasum.md#L32"
+        },
+        {
+          "description": "சரிபார்ப்பு தோல்வியுற்றால், விடுபட்ட கோப்புகளைப் புறக்கணித்து, செய்தியை மட்டும் காட்டவும்:",
+          "command": "shasum --ignore-missing --check --quiet {{கோப்பு/பாதை}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/shasum.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/shasum.md"
+    },
+    {
+      "id": "tldr--777255b8c1d4",
+      "canonicalPath": "osx/gfind.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "gfind",
+      "title": "gfind",
+      "summary": "இக்கட்டளை `find` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "macos",
+      "softwareIds": [
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr find",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gfind.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gfind.md"
+    },
+    {
+      "id": "tldr--78ee41948894",
+      "canonicalPath": "common/git-blame.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git blame",
+      "summary": "ஒரு கோப்பின் ஒவ்வொரு வரியிலும் கமிட் ஹாஷ் மற்றும் கடைசி எழுத்தாளரைக் காட்டு.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "ஆசிரியர் பெயருடன் கோப்பை அச்சிட்டு ஒவ்வொரு வரியிலும் ஹாஷ் செய்யுங்கள்:",
+          "command": "git blame {{கோப்பு/பாதை}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-blame.md#L8"
+        },
+        {
+          "description": "ஆசிரியர் மின்னஞ்சலுடன் கோப்பை அச்சிட்டு ஒவ்வொரு வரியிலும் ஹாஷ் செய்யுங்கள்:",
+          "command": "git blame {{[-e|--show-email]}} {{கோப்பு/பாதை}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-blame.md#L12"
+        },
+        {
+          "description": "ஆசிரியர் பெயருடன் கோப்பை அச்சிடவும் மற்றும் ஒவ்வொரு வரியிலும் ஒரு குறிப்பிட்ட கமிட்டில் ஹாஷ் கமிட் செய்யவும்:",
+          "command": "git blame {{கமிட்}} {{கோப்பு/பாதை}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-blame.md#L16"
+        },
+        {
+          "description": "ஆசிரியர் பெயருடன் கோப்பை அச்சிட்டு, ஒரு குறிப்பிட்ட உறுதிப்பாட்டிற்கு முன் ஒவ்வொரு வரியிலும் ஹாஷ் செய்யுங்கள்:",
+          "command": "git blame {{கமிட்}}~ {{கோப்பு/பாதை}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-blame.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-blame.md"
+    },
+    {
+      "id": "tldr--7a9b400f8c91",
+      "canonicalPath": "osx/gdate.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "gdate",
+      "title": "gdate",
+      "summary": "இக்கட்டளை `date` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr {{[-p|--platform]}} common date",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gdate.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gdate.md"
+    },
+    {
+      "id": "tldr--7d866db9bb58",
+      "canonicalPath": "common/git-apply.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git apply",
+      "summary": "கோப்புகள் மற்றும் / அல்லது குறியீட்டுக்கு ஒரு இணைப்பு பயன்படுத்தவும். மேலும் காண்க: `git am`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "இணைக்கப்பட்ட கோப்புகளைப் பற்றிய செய்திகளை அச்சிடுங்கள்:",
+          "command": "git apply {{[-v|--verbose]}} {{கோப்பு/பாதை}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-apply.md#L9"
+        },
+        {
+          "description": "இணைக்கப்பட்ட கோப்புகளை குறியீட்டில் பயன்படுத்தவும் மற்றும் சேர்க்கவும்:",
+          "command": "git apply --index {{கோப்பு/பாதை}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-apply.md#L13"
+        },
+        {
+          "description": "ரிமோட் பேட்ச் கோப்பைப் பயன்படுத்துங்கள்:",
+          "command": "curl {{[-L|--location]}} {{https://example.com/கோப்பு.patch}} | git apply",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-apply.md#L17"
+        },
+        {
+          "description": "உள்ளீட்டிற்கான வெளியீட்டு வேறுபாடு நிலை மற்றும் இணைப்பு பொருந்தும்:",
+          "command": "git apply --stat --apply {{கோப்பு/பாதை}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-apply.md#L21"
+        },
+        {
+          "description": "பேட்சை தலைகீழாகப் பயன்படுத்துங்கள்:",
+          "command": "git apply {{[-R|--reverse]}} {{கோப்பு/பாதை}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-apply.md#L25"
+        },
+        {
+          "description": "பேட்ச் முடிவை குறியீட்டில் வேலை செய்யும் மரத்தை மாற்றாமல் சேமிக்கவும்:",
+          "command": "git apply --cache {{கோப்பு/பாதை}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-apply.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-apply.md"
+    },
+    {
+      "id": "tldr--807c1b03ce59",
+      "canonicalPath": "common/rehash.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "rehash",
+      "title": "rehash",
+      "summary": "இக்கட்டளை `hash -r` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr hash",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/rehash.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/rehash.md"
+    },
+    {
+      "id": "tldr--82fddd6a3af8",
+      "canonicalPath": "osx/gtrue.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "gtrue",
+      "title": "gtrue",
+      "summary": "இக்கட்டளை `true` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr true",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gtrue.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gtrue.md"
+    },
+    {
+      "id": "tldr--8a0a9eb68d60",
+      "canonicalPath": "windows/chrome.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "chrome",
+      "title": "chrome",
+      "summary": "இக்கட்டளை `chromium` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "windows",
+      "softwareIds": [
+        "googlechrome--90e5e298"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அசல் கட்டளைக்கான ஆவணங்களைக் காண்க:",
+          "command": "tldr chromium",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/windows/chrome.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/windows/chrome.md"
+    },
+    {
+      "id": "tldr--8b4aeee8f531",
+      "canonicalPath": "common/git-checkout.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git checkout",
+      "summary": "வேலை செய்யும் மரத்திற்கு ஒரு கிளை அல்லது பாதைகளை செக்கவுட் செய்ய.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "புதிய கிளையை உருவாக்கி மாறவும்:",
+          "command": "git checkout -b {{கிளையின்_பெயர்}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-checkout.md#L8"
+        },
+        {
+          "description": "ஒரு குறிப்பிட்ட குறிப்பை அடிப்படையாகக் கொண்டு புதிய கிளையை உருவாக்கி மாறவும் (கிளை, தொலை / கிளை, குறிச்சொல் சரியான குறிப்புகளின் எடுத்துக்காட்டுகள்):",
+          "command": "git checkout -b {{கிளையின்_பெயர்}} {{குறிப்பு}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-checkout.md#L12"
+        },
+        {
+          "description": "ஏற்கனவே உள்ள உள்ளூர் கிளைக்கு மாறவும்:",
+          "command": "git checkout {{கிளையின்_பெயர்}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-checkout.md#L16"
+        },
+        {
+          "description": "முன்பு செக்கவுட்ச்செய்யப்பட்ட கிளைக்கு மாறவும்:",
+          "command": "git checkout -",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-checkout.md#L20"
+        },
+        {
+          "description": "ஏற்கனவே உள்ள தொலை கிளைக்கு மாறவும்:",
+          "command": "git checkout {{[-t|--track]}} {{தொலை_பெயர்}}/{{கிளையின்_பெயர்}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-checkout.md#L24"
+        },
+        {
+          "description": "தற்போதைய கோப்பகத்தில் நிலையற்ற அனைத்து மாற்றங்களையும் நிராகரிக்கவும் (செயல்தவிர் போன்ற கட்டளைகளுக்கு `git reset` ஐப் பார்க்கவும்):",
+          "command": "git checkout .",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-checkout.md#L28"
+        },
+        {
+          "description": "கொடுக்கப்பட்ட கோப்பில் நிலையற்ற மாற்றங்களை நிராகரிக்கவும்:",
+          "command": "git checkout {{கோப்பு_பெயர்}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-checkout.md#L32"
+        },
+        {
+          "description": "தற்போதைய கோப்பகத்தில் ஒரு கோப்பை ஒரு குறிப்பிட்ட கிளையில் செய்த பதிப்போடு மாற்றவும்:",
+          "command": "git checkout {{கிளையின்_பெயர்}} -- {{கோப்பு_பெயர்}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-checkout.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-checkout.md"
+    },
+    {
+      "id": "tldr--8bc97416a339",
+      "canonicalPath": "common/huggingface-cli.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "huggingface-cli",
+      "title": "huggingface-cli",
+      "summary": "இக்கட்டளை `hf` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr hf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/huggingface-cli.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/huggingface-cli.md"
+    },
+    {
+      "id": "tldr--91b0c6209d1c",
+      "canonicalPath": "common/impacket-rpcdump.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "impacket-rpcdump",
+      "title": "impacket-rpcdump",
+      "summary": "இக்கட்டளை `rpcdump.py` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr rpcdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/impacket-rpcdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/impacket-rpcdump.md"
+    },
+    {
+      "id": "tldr--95c2f3790166",
+      "canonicalPath": "common/git.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git",
+      "summary": "விநியோகிக்கப்பட்ட பதிப்பு கட்டுப்பாட்டு அமைப்பு. `commit`, `add`, `branch`, `checkout`, `push`போன்ற சில துணைக் கட்டளைகள் அவற்றின் சொந்த பயன்பாட்டு ஆவணங்களைக் கொண்டுள்ளன.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "ஒரு காலியான Git களஞ்சியத்தை உருவாக்கு:",
+          "command": "git init",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git.md#L9"
+        },
+        {
+          "description": "இணையத்திலிருந்து தொலைநிலை Git களஞ்சியத்தை நகலெடு:",
+          "command": "git clone {{https://example.com/repo.git}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git.md#L13"
+        },
+        {
+          "description": "உள்ளூர் களஞ்சியத்தின் நிலையைப் பாருங்கள்:",
+          "command": "git status",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git.md#L17"
+        },
+        {
+          "description": "ஒரு பதிவுக்கு அனைத்து மாற்றங்களையும் அரங்கேற்றுங்கள்:",
+          "command": "git add {{[-A|--all]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git.md#L21"
+        },
+        {
+          "description": "மாற்றங்களை பதிப்பு வரலாற்றில் பதிவு செய்யுங்கள்:",
+          "command": "git commit {{[-m|--message]}} {{செய்தி_உரை}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git.md#L25"
+        },
+        {
+          "description": "உள்ளூர் பதிவுகளை தொலைநிலை களஞ்சியத்திற்கு அனுப்புங்கள்:",
+          "command": "git push",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git.md#L29"
+        },
+        {
+          "description": "தொலைநிலையில் செய்யப்பட்ட மாற்றங்களைப் பெறுங்கள்:",
+          "command": "git pull",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git.md#L33"
+        },
+        {
+          "description": "எல்லாவற்றையும் சமீபத்திய பதிப்பில் இருந்தவாறு மீட்டமைகவும்:",
+          "command": "git reset --hard; git clean {{[-f|--force]}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git.md"
+    },
+    {
+      "id": "tldr--9e4bf094fa26",
+      "canonicalPath": "common/hping.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "hping",
+      "title": "hping",
+      "summary": "இக்கட்டளை `hping3` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr hping3",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/hping.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/hping.md"
+    },
+    {
+      "id": "tldr--a20e0ad1d699",
+      "canonicalPath": "common/git-clone.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git clone",
+      "summary": "ஏற்கனவே உள்ள ஒரு களஞ்சியத்தை குளோன் செய்யுங்கள்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "ஏற்கனவே உள்ள களஞ்சியத்தை ஒரு குறிப்பிட்ட கோப்பகத்தில் குளோன் செய்யுங்கள்:",
+          "command": "git clone {{தொலை_களஞ்சிய_இடம்}} {{அடைவிற்குப்/பாதை}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clone.md#L8"
+        },
+        {
+          "description": "இருக்கும் களஞ்சியத்தையும் அதன் துணை தொகுதிகளையும் குளோன் செய்யுங்கள்:",
+          "command": "git clone --recursive {{தொலை_களஞ்சிய_இடம்}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clone.md#L12"
+        },
+        {
+          "description": "ஏற்கனவே உள்ள களஞ்சியத்தின் `.git` கோப்பகத்தை மட்டும் குளோன் செய்யவும்:",
+          "command": "git clone {{[-n|--no-checkout]}} {{தொலை_களஞ்சிய_இடம்}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clone.md#L16"
+        },
+        {
+          "description": "கணினியில் உள்ள ஒரு களஞ்சியத்தை குளோன் செய்யுங்கள்:",
+          "command": "git clone {{[-l|--local]}} {{கணினியில்/உள்ள/களஞ்சியத்தின்/பாதை}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clone.md#L20"
+        },
+        {
+          "description": "அமைதியாக குளோன்:",
+          "command": "git clone {{[-q|--quiet]}} {{தொலை_களஞ்சிய_இடம்}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clone.md#L24"
+        },
+        {
+          "description": "இயல்புநிலை கிளையில் மிகச் சமீபத்திய 10 கமிட்டுகளை மட்டுமே பெறும் களஞ்சியத்தை குளோன் செய்யுங்கள் (நேரத்தைச் சேமிக்க பயனுள்ளதாக இருக்கும்):",
+          "command": "git clone --depth 10 {{தொலை_களஞ்சிய_இடம்}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clone.md#L28"
+        },
+        {
+          "description": "ஏற்கனவே உள்ள களஞ்சியத்தை குளோன் செய்து ஒரு குறிப்பிட்ட கிளையை மட்டும் பெறுங்கள்:",
+          "command": "git clone {{[-b|--branch]}} {{பெயர்}} --single-branch {{தொலை_களஞ்சிய_இடம்}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clone.md#L32"
+        },
+        {
+          "description": "ஒரு குறிப்பிட்ட SSH கட்டளையைப் பயன்படுத்தி ஏற்கனவே உள்ள களஞ்சியத்தை குளோன் செய்யவும்:",
+          "command": "git clone {{[-c|--config]}} core.sshCommand=\"{{ssh -i தனியார்_ssh_key/பாதை}}\" {{தொலை_களஞ்சிய_இடம்}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clone.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-clone.md"
+    },
+    {
+      "id": "tldr--a2e697f1fd03",
+      "canonicalPath": "common/impacket-psexec.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "impacket-psexec",
+      "title": "impacket-psexec",
+      "summary": "இக்கட்டளை `psexec.py` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr psexec.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/impacket-psexec.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/impacket-psexec.md"
+    },
+    {
+      "id": "tldr--a57a6d44fd2a",
+      "canonicalPath": "linux/nmtui-connect.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "nmtui-connect",
+      "title": "nmtui-connect",
+      "summary": "இக்கட்டளை `nmtui connect` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/nmtui-connect.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/linux/nmtui-connect.md"
+    },
+    {
+      "id": "tldr--a618d302e8ef",
+      "canonicalPath": "common/llvm-gcc.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "llvm-gcc",
+      "title": "llvm-gcc",
+      "summary": "இக்கட்டளை `clang` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr clang",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/llvm-gcc.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/llvm-gcc.md"
+    },
+    {
+      "id": "tldr--add80c6cf4c0",
+      "canonicalPath": "common/git-cherry-pick.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git cherry-pick",
+      "summary": "தற்போதுள்ள கமிட்டுகளால் அறிமுகப்படுத்தப்பட்ட மாற்றங்களை தற்போதைய கிளையில் பயன்படுத்துங்கள். மற்றொரு கிளையில் மாற்றங்களைப் பயன்படுத்த, முதலில் விரும்பிய கிளைக்கு மாற `git checkout` ஐப் பயன்படுத்தவும்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "தற்போதைய கிளைக்கு ஒரு கமிட்டை பயன்படுத்துங்கள்:",
+          "command": "git cherry-pick {{கமிட்}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cherry-pick.md#L9"
+        },
+        {
+          "description": "தற்போதைய கிளையில் பலவிதமான கமிட்டுகளைப் பயன்படுத்துங்கள் (மேலும் `git rebase --onto` பார்க்கவும் ):",
+          "command": "git cherry-pick {{தொடக்க_கமிட்}}~..{{முடிவு_கமிட்}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cherry-pick.md#L13"
+        },
+        {
+          "description": "தற்போதைய கிளைக்கு பல (வரிசை அல்லாத) கமிட்டுகளைப் பயன்படுத்துங்கள்:",
+          "command": "git cherry-pick {{கமிட்_1 கமிட்_2 ...}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cherry-pick.md#L17"
+        },
+        {
+          "description": "ஒரு கமிட்டை உருவாக்காமல், பணிபுரியும் கோப்பகத்தில் ஒரு கமிட்டின் மாற்றங்களைச் சேர்க்கவும்:",
+          "command": "git cherry-pick {{[-n|--no-commit]}} {{கமிட்}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cherry-pick.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cherry-pick.md"
+    },
+    {
+      "id": "tldr--ae1691f301a5",
+      "canonicalPath": "osx/gexpr.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "gexpr",
+      "title": "gexpr",
+      "summary": "இக்கட்டளை `expr` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr expr",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gexpr.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gexpr.md"
+    },
+    {
+      "id": "tldr--b05b4bc2d4f1",
+      "canonicalPath": "android/pm.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "pm",
+      "title": "pm",
+      "summary": "ஆண்ட்ராய்டு சாதனத்தில் பயன்பாடுகள் பற்றிய தகவலைக் காண்பி.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "நிறுவப்பட்ட அனைத்து பயன்பாடுகளையும் பட்டியலிடுங்கள்:",
+          "command": "pm list packages",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/android/pm.md#L8"
+        },
+        {
+          "description": "நிறுவப்பட்ட அனைத்து கணினி பயன்பாடுகளையும் பட்டியலிடுங்கள்:",
+          "command": "pm list packages -s",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/android/pm.md#L12"
+        },
+        {
+          "description": "நிறுவப்பட்ட அனைத்து மூன்றாம் தரப்பு பயன்பாடுகளையும் பட்டியலிடுங்கள்:",
+          "command": "pm list packages -3",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/android/pm.md#L16"
+        },
+        {
+          "description": "குறிப்பிட்ட முக்கிய வார்த்தைகளுடன் பொருந்தக்கூடிய பயன்பாடுகளை பட்டியலிடுங்கள்:",
+          "command": "pm list packages {{முக்கிய_வார்த்தை1 முக்கிய_வார்த்தை2 ...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/android/pm.md#L20"
+        },
+        {
+          "description": "குறிப்பிட்ட பயன்பாட்டின் APK இன் பாதையைக் காண்பி:",
+          "command": "pm path {{செயலி}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/android/pm.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/android/pm.md"
+    },
+    {
+      "id": "tldr--b11090540d7c",
+      "canonicalPath": "common/gcc.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "gcc",
+      "title": "gcc",
+      "summary": "C மற்றும் C++ மூலக் கோப்புகளை முன் செயலாக்கம் செய்து தொகுத்து, பின்னர் அவற்றைச் சேகரித்து இணைக்கவும். GCC (GNU கம்பைலர் சேகரிப்பு) இன் ஒரு பகுதி.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gcc--a60107cc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "பல மூல கோப்புகளை இயங்கக்கூடியதாகத் தொகுக்கவும்:",
+          "command": "gcc {{மூலம்1.c/பாதை மூலம்2.c/பாதை ...}} {{[-o|--output]}} {{வெளியீடு_இயங்கக்கூடியது/பாதை}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/gcc.md#L9"
+        },
+        {
+          "description": "அனைத்து பிழைகள் மற்றும் எச்சரிக்கைகளின் வெளியீட்டைச் செயல்படுத்தவும்:",
+          "command": "gcc {{மூலம்.c/பாதை}} -Wall {{[-o|--output]}} {{வெளியீடு_இயங்கக்கூடியது/பாதை}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/gcc.md#L13"
+        },
+        {
+          "description": "பொதுவான எச்சரிக்கைகளைக் காட்டு, வெளியீட்டில் சின்னங்களைப் பிழைத்திருத்தம் செய், பின்னர் பிழைத்திருத்தத்தைப் பாதிக்காமல் மேம்படுத்து:",
+          "command": "gcc {{மூலம்.c/பாதை}} -Wall {{[-g|--debug]}} -Og {{[-o|--output]}} {{வெளியீடு_இயங்கக்கூடியது/பாதை}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/gcc.md#L17"
+        },
+        {
+          "description": "வேறு பாதையிலிருந்து நூலகங்களைச் சேர்க்கவும்:",
+          "command": "gcc {{மூலம்.c/பாதை}} {{[-o|--output]}} {{வெளியீடு_இயங்கக்கூடியது/பாதை}} -I{{தலைப்பிற்கு/பாதை}} -L{{நூலகத்திற்கு/பாதை}} -l{{நூலகம்_பெயர்}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/gcc.md#L21"
+        },
+        {
+          "description": "மூலக் குறியீட்டை அசெம்பிளர் வழிமுறைகளில் தொகுக்கவும்:",
+          "command": "gcc {{[-S|--assemble]}} {{மூலம்.c/பாதை}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/gcc.md#L25"
+        },
+        {
+          "description": "இணைக்காமல் மூலக் குறியீட்டை தொகுக்கவும்:",
+          "command": "gcc {{[-c|--compile]}} {{மூலம்.c/பாதை}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/gcc.md#L29"
+        },
+        {
+          "description": "செயல்திறனுக்காக தொகுக்கப்பட்ட நிரலை மேம்படுத்தவும்:",
+          "command": "gcc {{மூலம்.c/பாதை}} -O{{1|2|3|fast}} {{[-o|--output]}} {{வெளியீடு_இயங்கக்கூடியது/பாதை}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/gcc.md#L33"
+        },
+        {
+          "description": "பதிப்பைக் காட்டு:",
+          "command": "gcc --version",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/gcc.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/gcc.md"
+    },
+    {
+      "id": "tldr--b214bfcb926e",
+      "canonicalPath": "common/git-check-ignore.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git check-ignore",
+      "summary": "(`.gitignore`) கோப்புகளை புறக்கணிக்கவும் / விலக்கவும் பகுப்பாய்வு செய்து பிழைத்திருத்தம் செய்யுங்கள்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "ஒரு கோப்பு அல்லது கோப்புறை புறக்கணிக்கப்பட்டுள்ளதா என சரிபார்க்கவும்:",
+          "command": "git check-ignore {{கோப்பு_அல்லது_அடைவு/பாதை}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-check-ignore.md#L8"
+        },
+        {
+          "description": "பல கோப்புகள் அல்லது கோப்பகங்கள் புறக்கணிக்கப்படுகின்றனவா என்பதைச் சரிபார்க்கவும்:",
+          "command": "git check-ignore {{கோப்பு_அல்லது_அடைவு1/பாதை கோப்பு_அல்லது_அடைவு2/பாதை ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-check-ignore.md#L12"
+        },
+        {
+          "description": "`stdin` இலிருந்து ஒரு வரியில் ஒன்றுக்கு பாதை பெயர்களைப் பயன்படுத்தவும்:",
+          "command": "git < {{கோப்பு_பட்டியல்/பாதை}} check-ignore --stdin",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-check-ignore.md#L16"
+        },
+        {
+          "description": "குறியீட்டை சரிபார்க்க வேண்டாம் (பாதைகள் ஏன் கண்காணிக்கப்பட்டன மற்றும் புறக்கணிக்கப்படவில்லை என்பதை பிழைத்திருத்த பயன்படுகிறது):",
+          "command": "git check-ignore --no-index {{கோப்பு_அல்லது_அடைவு1/பாதை கோப்பு_அல்லது_அடைவு2/பாதை ...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-check-ignore.md#L20"
+        },
+        {
+          "description": "ஒவ்வொரு பாதைக்கும் பொருந்தும் முறை பற்றிய விவரங்களைச் சேர்க்கவும்:",
+          "command": "git check-ignore {{[-v|--verbose]}} {{கோப்பு_அல்லது_அடைவு1/பாதை கோப்பு_அல்லது_அடைவு2/பாதை ...}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-check-ignore.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-check-ignore.md"
+    },
+    {
+      "id": "tldr--b8dfc1402a2b",
+      "canonicalPath": "common/git-branch.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git branch",
+      "summary": "கிளைகளுடன் வேலை செய்வதற்கான பிரதான கிட் கட்டளை.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "அனைத்து கிளைகளையும் பட்டியலிடுங்கள் (உள்ளூர் மற்றும் தொலைதூர; தற்போதைய கிளை `*` மூலம் சிறப்பிக்கப்படுகிறது):",
+          "command": "git branch {{[-a|--all]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-branch.md#L8"
+        },
+        {
+          "description": "எந்தெந்த கிளைகள் தங்கள் வரலாற்றில் குறிப்பிட்ட Git கமிட்டை உள்ளடக்கியிருக்கின்றன என்பதை பட்டியலிடுங்கள்:",
+          "command": "git branch {{[-a|--all]}} --contains {{கமிட்_ஹாஷ்}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-branch.md#L12"
+        },
+        {
+          "description": "தற்போதைய கிளையின் பெயரைக் காட்டு:",
+          "command": "git branch --show-current",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-branch.md#L16"
+        },
+        {
+          "description": "தற்போதைய கமிட்டின் அடிப்படையில் புதிய கிளையை உருவாக்கவும்:",
+          "command": "git branch {{கிளையின்_பெயர்}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-branch.md#L20"
+        },
+        {
+          "description": "ஒரு குறிப்பிட்ட கமிட்டின் அடிப்படையில் புதிய கிளையை உருவாக்கவும்:",
+          "command": "git branch {{கிளையின்_பெயர்}} {{கமிட்_ஹாஷ்}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-branch.md#L24"
+        },
+        {
+          "description": "ஒரு கிளையின் மறுபெயரிடு (இதை செய்ய அந்த கிளையை செக்கவுட் செய்த்திருக்க கூடாது):",
+          "command": "git branch {{[-m|--move]}} {{பழைய_கிளையின்_பெயர்}} {{புதிய_கிளையின்_பெயர்}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-branch.md#L28"
+        },
+        {
+          "description": "கணினியில் ஒரு கிளையை நீக்கு (இதை செய்ய அந்த கிளையை செக்கவுட் செய்த்திருக்க கூடாது):",
+          "command": "git branch {{[-d|--delete]}} {{கிளையின்_பெயர்}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-branch.md#L32"
+        },
+        {
+          "description": "தொலை களஞ்சியத்தில் ஒரு கிளையை நீக்கு:",
+          "command": "git push {{தொலை_களஞ்சிய_பெயர்}} {{[-d|--delete]}} {{தொலை_கிளையின்_பெயர்}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-branch.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-branch.md"
+    },
+    {
+      "id": "tldr--bb5818054e2e",
+      "canonicalPath": "sunos/prctl.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "prctl",
+      "title": "prctl",
+      "summary": "இயங்கும் செயல்முறைகளின், பணிகள் மற்றும் திட்டங்களின் ஆதாரக் கட்டுப்பாடு பெறவும் அல்லது அமைக்கவும்.",
+      "platform": "sunos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "செயல்முறை வரம்புகள் மற்றும் அனுமதிகளை ஆய்வு செய்:",
+          "command": "prctl {{pid}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/sunos/prctl.md#L8"
+        },
+        {
+          "description": "இயந்திர பாகுபடுத்தக்கூடிய வடிவத்தில் செயல்முறை வரம்புகள் மற்றும் அனுமதிகளை ஆய்வு செய்:",
+          "command": "prctl -P {{pid}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/sunos/prctl.md#L12"
+        },
+        {
+          "description": "இயங்கும் செயல்முறைக்கான குறிப்பிட்ட வரம்பைப் பெறுங்கள்:",
+          "command": "prctl -n process.max-file-descriptor {{pid}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/sunos/prctl.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/sunos/prctl.md"
+    },
+    {
+      "id": "tldr--bca92a75fabb",
+      "canonicalPath": "common/git-stage.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git stage",
+      "summary": "இக்கட்டளை `git add` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr git add",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-stage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-stage.md"
+    },
+    {
+      "id": "tldr--caff5147878b",
+      "canonicalPath": "osx/aa.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "aa",
+      "title": "aa",
+      "summary": "இக்கட்டளை `yaa` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr yaa",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/aa.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/aa.md"
+    },
+    {
+      "id": "tldr--cce6a8d633b4",
+      "canonicalPath": "common/git-annex.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git annex",
+      "summary": "கோப்புகளை அவற்றின் உள்ளடக்கங்களை சரிபார்க்காமல், ஜிட் மூலம் நிர்வகிக்கவும். ஒரு கோப்பு இணைக்கப்படும்போது, அதன் உள்ளடக்கம் ஒரு முக்கிய மதிப்புக் கடைக்கு நகர்த்தப்படும், மேலும் உள்ளடக்கத்தை சுட்டிக்காட்டும் ஒரு சிம்லிங்க் செய்யப்படுகிறது.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "`git annex` உடன் ஒரு களஞ்சியத்தை தொடங்கவும்:",
+          "command": "git annex init",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-annex.md#L9"
+        },
+        {
+          "description": "ஒரு கோப்பைச் சேர்க்கவும்:",
+          "command": "git annex add {{கோப்பு_அல்லது_அடைவு/பாதை}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-annex.md#L13"
+        },
+        {
+          "description": "ஒரு கோப்பு அல்லது கோப்பகத்தின் தற்போதைய நிலையைக் காட்டு:",
+          "command": "git annex status {{கோப்பு_அல்லது_அடைவு/பாதை}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-annex.md#L17"
+        },
+        {
+          "description": "தொலைநிலையுடன் உள்ளூர் களஞ்சியத்தை ஒத்திசைக்கவும்:",
+          "command": "git annex {{தொலைநிலை}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-annex.md#L21"
+        },
+        {
+          "description": "ஒரு கோப்பு அல்லது கோப்பகத்தைப் பெறுங்கள்:",
+          "command": "git annex get {{கோப்பு_அல்லது_அடைவு/பாதை}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-annex.md#L25"
+        },
+        {
+          "description": "உதவியைக் காட்டு:",
+          "command": "git annex help",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-annex.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-annex.md"
+    },
+    {
+      "id": "tldr--cd854619eebd",
+      "canonicalPath": "common/mkdir.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "mkdir",
+      "title": "mkdir",
+      "summary": "அடைவை உருவாக்கு.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "குறிப்பிட்ட கோப்பகங்களை உருவாக்கவும்:",
+          "command": "mkdir {{அடைவு1/பாதை அடைவு2/பாதை ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/mkdir.md#L8"
+        },
+        {
+          "description": "தேவைப்பட்டால், குறிப்பிட்ட அடைவுகளையும் அவற்றின் பெற்றோரையும் உருவாக்கவும்:",
+          "command": "mkdir {{[-p|--parents]}} {{அடைவு1/பாதை அடைவு2/பாதை ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/mkdir.md#L12"
+        },
+        {
+          "description": "குறிப்பிட்ட அனுமதிகளுடன் கோப்பகங்களை உருவாக்கவும்:",
+          "command": "mkdir {{[-m|--mode]}} {{rwxrw-r--}} {{அடைவு1/பாதை அடைவு2/பாதை ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/mkdir.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/mkdir.md"
+    },
+    {
+      "id": "tldr--d00c9ceb5c14",
+      "canonicalPath": "osx/gtar.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "gtar",
+      "title": "gtar",
+      "summary": "இக்கட்டளை `tar` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr tar",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gtar.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gtar.md"
+    },
+    {
+      "id": "tldr--ddca73d046bf",
+      "canonicalPath": "common/getln.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "getln",
+      "title": "getln",
+      "summary": "இக்கட்டளை `read -zr` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr read",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/getln.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/getln.md"
+    },
+    {
+      "id": "tldr--ebce857fe663",
+      "canonicalPath": "common/impacket-secretsdump.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "impacket-secretsdump",
+      "title": "impacket-secretsdump",
+      "summary": "இக்கட்டளை `secretsdump.py` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr secretsdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/impacket-secretsdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/impacket-secretsdump.md"
+    },
+    {
+      "id": "tldr--f91e0b338118",
+      "canonicalPath": "osx/gbasename.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "gbasename",
+      "title": "gbasename",
+      "summary": "இக்கட்டளை `basename` கட்டளையின் மற்றொருப் பெயர்.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "அக்கட்டளையின் விளக்கத்தைக் காண:",
+          "command": "tldr basename",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gbasename.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/osx/gbasename.md"
+    },
+    {
+      "id": "tldr--fcc2a17c22aa",
+      "canonicalPath": "common/git-cat-file.md",
+      "locale": "ta",
+      "sourceLocale": "ta",
+      "name": "git",
+      "title": "git cat-file",
+      "summary": "கிட் களஞ்சிய பொருள்களுக்கான உள்ளடக்கம் அல்லது வகை மற்றும் அளவு தகவல்களை வழங்கவும்.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "HEAD கமிட்டின் அளவை பைட்டுகளில் பெறுங்கள்:",
+          "command": "git cat-file -s HEAD",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cat-file.md#L8"
+        },
+        {
+          "description": "கொடுக்கப்பட்ட கிட் பொருளின் வகையை (குமிழ், மரம், கமிட், டேக்) பெறுங்கள்:",
+          "command": "git cat-file -t {{8c442dc3}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cat-file.md#L12"
+        },
+        {
+          "description": "கொடுக்கப்பட்ட கிட் பொருளின் உள்ளடக்கத்தை அதன் வகையின் அடிப்படையில் அழகாக அச்சிடுக:",
+          "command": "git cat-file -p {{HEAD~2}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cat-file.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.ta/common/git-cat-file.md"
+    }
+  ]
+}

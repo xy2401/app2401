@@ -1,0 +1,3939 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "zh",
+  "sourceLocale": "zh",
+  "shard": "f",
+  "items": [
+    {
+      "id": "tldr--036070e9c6b2",
+      "canonicalPath": "common/md5sum.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "md5sum",
+      "title": "md5sum",
+      "summary": "计算 MD5 加密校验和。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "计算一个或多个文件的 MD5 校验和：",
+          "command": "md5sum {{路径/到/文件1 路径/到/文件2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/md5sum.md#L8"
+        },
+        {
+          "description": "计算并将 MD5 校验和列表保存到一个文件中：",
+          "command": "md5sum {{路径/到/文件1 路径/到/文件2 ...}} > {{路径/到/文件.md5}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/md5sum.md#L12"
+        },
+        {
+          "description": "从 `stdin` 计算 MD5 校验和：",
+          "command": "{{命令}} | md5sum",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/md5sum.md#L16"
+        },
+        {
+          "description": "读取包含 MD5 校验和和文件名的文件，并验证所有文件的校验和是否匹配：",
+          "command": "md5sum {{[-c|--check]}} {{路径/到/文件.md5}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/md5sum.md#L20"
+        },
+        {
+          "description": "仅在文件丢失或验证失败时显示消息：",
+          "command": "md5sum {{[-c|--check]}} --quiet {{路径/到/文件.md5}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/md5sum.md#L24"
+        },
+        {
+          "description": "仅在验证失败时显示消息，忽略丢失的文件：",
+          "command": "md5sum --ignore-missing {{[-c|--check]}} --quiet {{路径/到/文件.md5}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/md5sum.md#L28"
+        },
+        {
+          "description": "检查已知文件的 MD5 校验和：",
+          "command": "echo {{已知的文件的_md5_校验和}} {{路径/到/文件}} | md5sum {{[-c|--check]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/md5sum.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/md5sum.md"
+    },
+    {
+      "id": "tldr--098208c3c746",
+      "canonicalPath": "osx/grealpath.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "grealpath",
+      "title": "grealpath",
+      "summary": "这是 `realpath` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr realpath",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/grealpath.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/grealpath.md"
+    },
+    {
+      "id": "tldr--0a01733b9a0f",
+      "canonicalPath": "common/printenv.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "printenv",
+      "title": "printenv",
+      "summary": "打印所有或环境变量的值。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "显示所有环境变量的键值对：",
+          "command": "printenv",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/printenv.md#L8"
+        },
+        {
+          "description": "显示特定变量的值：",
+          "command": "printenv {{HOME}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/printenv.md#L12"
+        },
+        {
+          "description": "显示变量的值并以 NUL 而不是换行符结尾：",
+          "command": "printenv {{[-0|--null]}} {{HOME}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/printenv.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/printenv.md"
+    },
+    {
+      "id": "tldr--0d4c34c89aa1",
+      "canonicalPath": "common/arthas-watch.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "arthas-watch",
+      "title": "arthas-watch",
+      "summary": "函数执行数据观测。 另请参阅：`arthas`, `arthas-trace`。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "在方法调用后观察，显示第一个参数和返回值，展开嵌套对象的 4 层：",
+          "command": "watch {{class-pattern}} {{method-pattern}} {{'{ params[0],returnObj }'}} -x 4",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/arthas-watch.md#L9"
+        },
+        {
+          "description": "在方法调用后观测，当第一个参数的值是 5 时，显示第二个参数和返回值，展开嵌套对象的 4 层：",
+          "command": "watch {{class-pattern}} {{method-pattern}} {{'{ params[1],returnObj }'}} {{'\"5\".equals(params[0])'}} -x 4",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/arthas-watch.md#L13"
+        },
+        {
+          "description": "在方法返回和异常后观测，显示第二个参数的 count 属性：",
+          "command": "watch {{class-pattern}} {{method-pattern}} {{'{ params[1].count }'}} -e -s",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/arthas-watch.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/arthas-watch.md"
+    },
+    {
+      "id": "tldr--10b11367828b",
+      "canonicalPath": "common/jwt.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "jwt",
+      "title": "jwt",
+      "summary": "使用 JSON Web Tokens (JWTs) 进行操作。 可用的加密算法包括 HS256、HS384、HS512、RS256、RS384、RS512、ES256、ES384。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "jwt-cli--63705af4"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "解码一个 JWT：",
+          "command": "jwt decode {{jwt字符串}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/jwt.md#L9"
+        },
+        {
+          "description": "将 JWT 解码为 JSON 字符串：",
+          "command": "jwt decode {{[-j|--json]}} {{jwt字符串}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/jwt.md#L13"
+        },
+        {
+          "description": "将 JSON 字符串编码为 JWT：",
+          "command": "jwt encode {{[-A|--alg]}} {{HS256}} {{[-S|--secret]}} {{1234567890}} '{{json字符串}}'",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/jwt.md#L17"
+        },
+        {
+          "description": "将键值对载荷编码为 JWT：",
+          "command": "jwt encode {{[-A|--alg]}} {{HS256}} {{[-S|--secret]}} {{1234567890}} {{[-P|--payload]}} {{键=值}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/jwt.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/jwt.md"
+    },
+    {
+      "id": "tldr--1127cf05dc66",
+      "canonicalPath": "common/amass.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "amass",
+      "title": "amass",
+      "summary": "深度攻击面探测与资产发现工具。 此命令也有关于其子命令的文件，例如：`intel`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "amass--4eb3a7cb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "执行 Amass 子命令：",
+          "command": "amass {{intel|enum}} {{options}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/amass.md#L9"
+        },
+        {
+          "description": "展示帮助信息：",
+          "command": "amass -help",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/amass.md#L13"
+        },
+        {
+          "description": "展示子命令帮助信息：",
+          "command": "amass {{intel|enum}} -help",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/amass.md#L17"
+        },
+        {
+          "description": "查看 Amass 版本：",
+          "command": "amass -version",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/amass.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/amass.md"
+    },
+    {
+      "id": "tldr--17befef0f7ee",
+      "canonicalPath": "common/qpdf.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "qpdf",
+      "title": "qpdf",
+      "summary": "多功能 PDF 转换软件。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "qpdf--574a528e"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "从一个 PDF 文件中提取第 1-3 页、第 5 页和第 6-10 页，然后另存为一个新文件：",
+          "command": "qpdf --empty --pages {{路径/到/输入.pdf}} {{1-3,5,6-10}} -- {{路径/到/输出.pdf}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qpdf.md#L8"
+        },
+        {
+          "description": "合并（连接）多个 PDF 文件的所有页面，并将结果保存为一个新 PDF：",
+          "command": "qpdf --empty --pages {{路径/到/文件1.pdf 文件2.pdf ...}} -- {{路径/到/输出.pdf}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qpdf.md#L12"
+        },
+        {
+          "description": "合并（连接）多个 PDF 文件中指定的页面，并将结果保存为一个新 PDF：",
+          "command": "qpdf --empty --pages {{路径/到/文件1.pdf}} {{1,6-8}} {{路径/到/文件2.pdf}} {{3,4,5}} -- {{路径/到/输出.pdf}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qpdf.md#L16"
+        },
+        {
+          "description": "将每组 `n` 页写入一个单独的输出文件，使用给定的文件名模式：",
+          "command": "qpdf --split-pages={{n}} {{路径/到/输入.pdf}} {{路径/到/输出_%d.pdf}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qpdf.md#L20"
+        },
+        {
+          "description": "旋转某些页面的 PDF 以给定角度：",
+          "command": "qpdf --rotate={{90:2,4,6}} --rotate={{180:7-8}} {{路径/到/输入.pdf}} {{路径/到/输出.pdf}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qpdf.md#L24"
+        },
+        {
+          "description": "移除密码保护文件中的密码：",
+          "command": "qpdf --password={{密码}} --decrypt {{路径/到/输入.pdf}} {{路径/到/输出.pdf}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qpdf.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qpdf.md"
+    },
+    {
+      "id": "tldr--18b74e4a4be2",
+      "canonicalPath": "linux/cal.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "cal",
+      "title": "cal",
+      "summary": "打印日历信息，高亮显示当前日期。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "显示当前月份的日历：",
+          "command": "cal",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/cal.md#L8"
+        },
+        {
+          "description": "显示上个月、当前月和下个月：",
+          "command": "cal {{[-3|--three]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/cal.md#L12"
+        },
+        {
+          "description": "使用星期一作为一周的第一天：",
+          "command": "cal {{[-m|--monday]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/cal.md#L16"
+        },
+        {
+          "description": "显示特定年份的日历（4位数字）：",
+          "command": "cal {{年份}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/cal.md#L20"
+        },
+        {
+          "description": "显示特定月份和年份的日历：",
+          "command": "cal {{月份}} {{年份}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/cal.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/cal.md"
+    },
+    {
+      "id": "tldr--194e6738adfb",
+      "canonicalPath": "linux/btrfs-scrub.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "btrfs",
+      "title": "btrfs scrub",
+      "summary": "清理 btrfs 文件系统以验证数据完整性。 建议每月运行一次 scrub。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "开始 scrub：",
+          "command": "sudo btrfs {{[sc|scrub]}} start {{指向挂载点的路径}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-scrub.md#L9"
+        },
+        {
+          "description": "显示正在进行或上次完成的 scrub 的状态：",
+          "command": "sudo btrfs {{[sc|scrub]}} status {{指向挂载点的路径}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-scrub.md#L13"
+        },
+        {
+          "description": "取消正在进行的 scrub：",
+          "command": "sudo btrfs {{[sc|scrub]}} {{[c|cancel]}} {{指向挂载点的路径}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-scrub.md#L17"
+        },
+        {
+          "description": "恢复先前取消的 scrub：",
+          "command": "sudo btrfs {{[sc|scrub]}} {{[r|resume]}} {{指向挂载点的路径}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-scrub.md#L21"
+        },
+        {
+          "description": "开始擦洗，但要等到 scrub 完成后才能退出：",
+          "command": "sudo btrfs {{[sc|scrub]}} start -B {{指向挂载点的路径}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-scrub.md#L25"
+        },
+        {
+          "description": "在安静模式下启动 scrub（不打印错误或统计信息）：",
+          "command": "sudo btrfs {{[sc|scrub]}} start {{[-q|--quiet]}} {{指向挂载点的路径}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-scrub.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-scrub.md"
+    },
+    {
+      "id": "tldr--1aaecd2da3d1",
+      "canonicalPath": "linux/yay.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "yay",
+      "title": "yay",
+      "summary": "Yet Another Yogurt: 一个用于 Arch Linux 的工具，用于从 Arch User Repository 中构建和安装软件包。 另请参阅：`pacman`。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "从仓库和 AUR 中交互式搜索和安装软件包：",
+          "command": "yay {{软件包|搜索词}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/yay.md#L9"
+        },
+        {
+          "description": "同步并更新所有来自仓库和 AUR 的软件包：",
+          "command": "yay",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/yay.md#L13"
+        },
+        {
+          "description": "只同步和更新 AUR 软件包：",
+          "command": "yay -Sua",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/yay.md#L17"
+        },
+        {
+          "description": "从仓库和 AUR 中安装一个新的软件包：",
+          "command": "yay -S {{软件包}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/yay.md#L21"
+        },
+        {
+          "description": "从仓库和 AUR 中搜索软件包数据库中的关键词：",
+          "command": "yay -Ss {{关键词}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/yay.md#L25"
+        },
+        {
+          "description": "显示已安装软件包和系统健康状况的统计数据：",
+          "command": "yay -Ps",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/yay.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/yay.md"
+    },
+    {
+      "id": "tldr--1baed6428a81",
+      "canonicalPath": "common/gh-pr-create.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh pr create",
+      "summary": "管理 GitHub 拉取请求。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "以交互式方式创建一个拉取请求：",
+          "command": "gh pr {{[new|create]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-create.md#L8"
+        },
+        {
+          "description": "创建一个拉取请求，并根据当前分支的提交记录自动填充标题和描述：",
+          "command": "gh pr {{[new|create]}} {{[-f|--fill]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-create.md#L12"
+        },
+        {
+          "description": "创建一个草稿拉取请求：",
+          "command": "gh pr {{[new|create]}} {{[-d|--draft]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-create.md#L16"
+        },
+        {
+          "description": "创建一个拉取请求并指定目标分支、标题和描述：",
+          "command": "gh pr {{[new|create]}} {{[-B|--base]}} {{目标分支}} {{[-t|--title]}} \"{{标题}}\" {{[-b|--body]}} \"{{描述}}\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-create.md#L20"
+        },
+        {
+          "description": "在默认网页浏览器中打开以创建拉取请求：",
+          "command": "gh pr {{[new|create]}} {{[-w|--web]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-create.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-create.md"
+    },
+    {
+      "id": "tldr--1c91b343c627",
+      "canonicalPath": "common/unp.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "unp",
+      "title": "unp",
+      "summary": "解压任意归档文件。 需要安装相关的解压程序，例如 RAR 文件需要安装 `unrar`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "unp--c2743be9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "解压一个归档文件：",
+          "command": "unp {{路径/到/归档文件.zip}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/unp.md#L9"
+        },
+        {
+          "description": "解压多个归档文件：",
+          "command": "unp {{路径/到/归档文件1.tar.gz}} {{路径/到/归档文件2.rar}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/unp.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/unp.md"
+    },
+    {
+      "id": "tldr--1fae91a3115e",
+      "canonicalPath": "windows/whoami.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "whoami",
+      "title": "whoami",
+      "summary": "显示当前用户的详细信息。",
+      "platform": "windows",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "显示当前用户的用户名：",
+          "command": "whoami",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/whoami.md#L8"
+        },
+        {
+          "description": "显示当前用户所属的组：",
+          "command": "whoami /groups",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/whoami.md#L12"
+        },
+        {
+          "description": "显示当前用户的权限：",
+          "command": "whoami /priv",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/whoami.md#L16"
+        },
+        {
+          "description": "显示当前用户的用户主体名称（UPN）：",
+          "command": "whoami /upn",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/whoami.md#L20"
+        },
+        {
+          "description": "显示当前用户的登录 ID：",
+          "command": "whoami /logonid",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/whoami.md#L24"
+        },
+        {
+          "description": "显示当前用户的所有信息：",
+          "command": "whoami /all",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/whoami.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/whoami.md"
+    },
+    {
+      "id": "tldr--22c4884e0458",
+      "canonicalPath": "linux/aptitude.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "aptitude",
+      "title": "aptitude",
+      "summary": "Debian 和 Ubuntu 上的软件包管理工具。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "同步可用软件包及其版本列表，在运行后续 aptitude 命令前，应该首先运行该命令：",
+          "command": "sudo aptitude update",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/aptitude.md#L8"
+        },
+        {
+          "description": "安装一个新的软件包及其依赖：",
+          "command": "sudo aptitude install {{软件包}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/aptitude.md#L12"
+        },
+        {
+          "description": "查找一个软件包：",
+          "command": "aptitude search {{软件包}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/aptitude.md#L16"
+        },
+        {
+          "description": "查找一个已安装的软件包（`?installed` 是一个 aptitude 搜索项）：",
+          "command": "aptitude search '?installed({{软件包}})'",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/aptitude.md#L20"
+        },
+        {
+          "description": "移除一个软件包并移除所有依赖它的软件包：",
+          "command": "sudo aptitude remove {{软件包}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/aptitude.md#L24"
+        },
+        {
+          "description": "更新已安装软件包到最新版本：",
+          "command": "sudo aptitude upgrade",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/aptitude.md#L28"
+        },
+        {
+          "description": "更新已安装的软件包（类似于 `aptitude upgrade` 命令），移除过时的软件包并安装额外的软件包以满足新的软件包依赖项：",
+          "command": "sudo aptitude full-upgrade",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/aptitude.md#L32"
+        },
+        {
+          "description": "锁定一个已安装的软件包以便阻止它自动升级：",
+          "command": "sudo aptitude hold '?installed({{软件包}})'",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/aptitude.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/aptitude.md"
+    },
+    {
+      "id": "tldr--290d7a9149e6",
+      "canonicalPath": "linux/systemctl-condrestart.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "systemctl",
+      "title": "systemctl condrestart",
+      "summary": "此命令为 `systemctl try-restart` 的别名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr systemctl try-restart",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-condrestart.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-condrestart.md"
+    },
+    {
+      "id": "tldr--2aa62997012f",
+      "canonicalPath": "common/pip.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "pip",
+      "title": "pip",
+      "summary": "Python 主流的包安装管理工具。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "安装包（通过 `pip install` 查看更多安装示例）：",
+          "command": "pip install {{包名}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip.md#L8"
+        },
+        {
+          "description": "安装包到用户目录而不是系统范围的默认位置：",
+          "command": "pip install --user {{包名}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip.md#L12"
+        },
+        {
+          "description": "升级包：",
+          "command": "pip install {{[-U|--upgrade]}} {{包名}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip.md#L16"
+        },
+        {
+          "description": "卸载包：",
+          "command": "pip uninstall {{包名}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip.md#L20"
+        },
+        {
+          "description": "将已安装的包以 Requirements 的格式保存文件中：",
+          "command": "pip freeze > {{requirements.txt}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip.md#L24"
+        },
+        {
+          "description": "查看包的详细信息：",
+          "command": "pip show {{包名}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip.md#L28"
+        },
+        {
+          "description": "通过依赖文件（如 requirements.txt）来进行安装：",
+          "command": "pip install {{[-r|--requirement]}} {{requirements.txt}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip.md"
+    },
+    {
+      "id": "tldr--2d4bee0ac69d",
+      "canonicalPath": "linux/btrfs.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "btrfs",
+      "title": "btrfs",
+      "summary": "一种基于写时复制（COW）原理的 Linux 文件系统。 此命令也有关于其子命令的文件，例如：`device`。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "创建子卷：",
+          "command": "sudo btrfs {{[su|subvolume]}} {{[c|create]}} {{指向子卷的路径}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs.md#L9"
+        },
+        {
+          "description": "列出子卷：",
+          "command": "sudo btrfs {{[su|subvolume]}} {{[l|list]}} {{指向挂载点的路径}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs.md#L13"
+        },
+        {
+          "description": "显示空间使用情况信息：",
+          "command": "sudo btrfs {{[f|filesystem]}} df {{指向挂载点的路径}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs.md#L17"
+        },
+        {
+          "description": "启用配额（quota）：",
+          "command": "sudo btrfs {{[qu|quota]}} {{[e|enable]}} {{指向子卷的路径}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs.md#L21"
+        },
+        {
+          "description": "显示配额（quota）：",
+          "command": "sudo btrfs {{[qg|qgroup]}} {{[s|show]}} {{指向子卷的路径}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs.md"
+    },
+    {
+      "id": "tldr--2f4e240eb576",
+      "canonicalPath": "windows/clear-history.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "Clear-History",
+      "title": "Clear-History",
+      "summary": "删除 PowerShell 会话命令历史记录中的条目。 注意：`clhy` 可以作为 `Clear-History` 的别名使用。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "清除当前会话中的所有命令历史记录：",
+          "command": "Clear-History",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/clear-history.md#L9"
+        },
+        {
+          "description": "按指定名称清除命令：",
+          "command": "Clear-History -CommandLine \"{{命令}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/clear-history.md#L13"
+        },
+        {
+          "description": "按名称清除多个命令：",
+          "command": "Clear-History -CommandLine {{\"命令1\", \"命令2\", ...}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/clear-history.md#L17"
+        },
+        {
+          "description": "按 ID 清除指定历史记录条目：",
+          "command": "Clear-History -Id {{ID_编号}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/clear-history.md#L21"
+        },
+        {
+          "description": "清除多个 ID：",
+          "command": "Clear-History -Id {{id1, id2, ...}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/clear-history.md#L25"
+        },
+        {
+          "description": "清除 ID 范围内的命令：",
+          "command": "Clear-History -Id ({{起始_ID}}..{{结束_ID}})",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/clear-history.md#L29"
+        },
+        {
+          "description": "显示将被删除的内容：",
+          "command": "Clear-History -WhatIf",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/clear-history.md#L33"
+        },
+        {
+          "description": "清除前请求确认：",
+          "command": "Clear-History -Confirm",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/clear-history.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/clear-history.md"
+    },
+    {
+      "id": "tldr--3815728cd33d",
+      "canonicalPath": "common/gh-workflow.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh workflow",
+      "summary": "列出、查看和运行 GitHub Actions 工作流。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "以交互式方式选择一个工作流以查看其最近的任务：",
+          "command": "gh workflow view",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-workflow.md#L8"
+        },
+        {
+          "description": "在默认浏览器中查看指定的工作流：",
+          "command": "gh workflow view {{id|工作流名称|文件名.yml}} {{[-w|--web]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-workflow.md#L12"
+        },
+        {
+          "description": "显示指定工作流的 YAML 定义：",
+          "command": "gh workflow view {{id|工作流名称|文件名.yml}} {{[-y|--yaml]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-workflow.md#L16"
+        },
+        {
+          "description": "显示指定 Git 分支或标签下的 YAML 定义：",
+          "command": "gh workflow view {{id|工作流名称|文件名.yml}} {{[-r|--ref]}} {{分支|标签名}} {{[-y|--yaml]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-workflow.md#L20"
+        },
+        {
+          "description": "列出工作流文件（使用 `--all` 参数包含已被禁用的工作流）：",
+          "command": "gh workflow {{[ls|list]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-workflow.md#L24"
+        },
+        {
+          "description": "运行一个带参数的手动触发工作流：",
+          "command": "gh workflow run {{id|工作流名称|文件名.yml}} {{--raw-field 参数1=值1 --raw-field 参数2=值2 ...}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-workflow.md#L28"
+        },
+        {
+          "description": "从 `stdin` 读取 JSON 参数，并在指定的分支或标签下运行手动工作流：",
+          "command": "echo '{{{\"参数1\": \"值1\", \"参数2\": \"值2\", ...}}}' | gh workflow run {{id|工作流名称|文件名.yml}} {{[-r|--ref]}} {{分支|标签名}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-workflow.md#L32"
+        },
+        {
+          "description": "启用或禁用指定的工作流：",
+          "command": "gh workflow {{enable|disable}} {{id|工作流名称|文件名.yml}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-workflow.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-workflow.md"
+    },
+    {
+      "id": "tldr--39027c838037",
+      "canonicalPath": "osx/cal.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "cal",
+      "title": "cal",
+      "summary": "打印日历信息。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "显示本月日历：",
+          "command": "cal",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/cal.md#L8"
+        },
+        {
+          "description": "显示上月、本月和下月的日历：",
+          "command": "cal -3",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/cal.md#L12"
+        },
+        {
+          "description": "显示指定月份的日历（月份为 1-12 月）：",
+          "command": "cal -m {{月}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/cal.md#L16"
+        },
+        {
+          "description": "显示本年日历：",
+          "command": "cal -y",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/cal.md#L20"
+        },
+        {
+          "description": "显示指定年份的日历（年份为 4 个数字）：",
+          "command": "cal {{年}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/cal.md#L24"
+        },
+        {
+          "description": "显示指定年月的日历：",
+          "command": "cal {{月}} {{年}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/cal.md#L28"
+        },
+        {
+          "description": "显示指定年份的复活节日期：",
+          "command": "ncal -e {{年}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/cal.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/cal.md"
+    },
+    {
+      "id": "tldr--3b2a302935c5",
+      "canonicalPath": "linux/pacinstall.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "pacinstall",
+      "title": "pacinstall",
+      "summary": "此命令为 `pactrans --install` 的别名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr pactrans",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/pacinstall.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/pacinstall.md"
+    },
+    {
+      "id": "tldr--40608868cc3e",
+      "canonicalPath": "common/nano.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "nano",
+      "title": "nano",
+      "summary": "命令行文本编辑器。一个功能更强的 `Pico` 克隆版。 另请参阅：`pico`, `rnano`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "nano--18231ec6",
+        "nano--83ac0927"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "启动编辑器：",
+          "command": "nano",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nano.md#L9"
+        },
+        {
+          "description": "启动编辑器且不使用配置文件：",
+          "command": "nano {{[-I|--ignorercfiles]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nano.md#L13"
+        },
+        {
+          "description": "打开指定文件，在关闭前一个文件后移动到下一个文件：",
+          "command": "nano {{路径/到/文件1 路径/到/文件2 ...}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nano.md#L17"
+        },
+        {
+          "description": "打开文件并将光标定位到指定行和列：",
+          "command": "nano +{{行号}},{{列号}} {{路径/到/文件}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nano.md#L21"
+        },
+        {
+          "description": "打开文件并启用软换行：",
+          "command": "nano {{[-S|--softwrap]}} {{路径/到/文件}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nano.md#L25"
+        },
+        {
+          "description": "打开文件并使新行缩进对齐到上一行：",
+          "command": "nano {{[-i|--autoindent]}} {{路径/到/文件}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nano.md#L29"
+        },
+        {
+          "description": "打开文件并在保存时创建备份文件（如 `路径/到/文件~`）：",
+          "command": "nano {{[-B|--backup]}} {{路径/到/文件}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nano.md#L33"
+        },
+        {
+          "description": "退出 nano：",
+          "command": "<Ctrl x>",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nano.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nano.md"
+    },
+    {
+      "id": "tldr--409bf12df8c7",
+      "canonicalPath": "linux/btrfs-device.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "btrfs",
+      "title": "btrfs device",
+      "summary": "管理 btrfs 文件系统中的设备。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "将一个或多个设备添加到 btrfs 文件系统中：",
+          "command": "sudo btrfs {{[d|device]}} {{[a|add]}} {{指向设备1的路径 指向设备2的路径 ...}} {{指向 btrfs 文件系统的路径}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-device.md#L8"
+        },
+        {
+          "description": "从 btrfs 文件系统中删除设备：",
+          "command": "sudo btrfs {{[d|device]}} {{[rem|remove]}} {{指向设备1的路径|设备 ID1 指向设备2的路径|设备 ID2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-device.md#L12"
+        },
+        {
+          "description": "显示错误统计：",
+          "command": "sudo btrfs {{[d|device]}} {{[st|stats]}} {{指向 btrfs 文件系统的路径}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-device.md#L16"
+        },
+        {
+          "description": "扫描所有磁盘并将所有检测到的 btrfs 文件系统通知内核：",
+          "command": "sudo btrfs {{[d|device]}} {{[sc|scan]}} {{[-d|--all-devices]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-device.md#L20"
+        },
+        {
+          "description": "显示详细的每个磁盘的空间分配统计信息：",
+          "command": "sudo btrfs {{[d|device]}} {{[u|usage]}} {{指向 btrfs 文件系统的路径}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-device.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-device.md"
+    },
+    {
+      "id": "tldr--42489738ab06",
+      "canonicalPath": "common/grep.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "grep",
+      "title": "grep",
+      "summary": "使用 `regex` 式查找文件中的模式。 另请参阅：`rg`, `regex`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "grep--aeeff087",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "在文件中查找模式：",
+          "command": "grep \"{{模式字符串}}\" {{路径/到/文件1 路径/到/文件2}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/grep.md#L9"
+        },
+        {
+          "description": "查找精确的字符串（禁用 `regex` 式）：",
+          "command": "grep {{[-F|--fixed-strings]}} \"{{字符串}}\" {{路径/到/文件}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/grep.md#L13"
+        },
+        {
+          "description": "在目录中递归查找所有文件中的模式，忽略二进制文件：",
+          "command": "grep {{[-rI|--recursive --binary-files=without-match]}} \"{{模式字符串}}\" {{路径/到/目录}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/grep.md#L17"
+        },
+        {
+          "description": "打印每个匹配项周围、之前或之后的 3 行上下文：",
+          "command": "grep {{--context|--before-context|--after-context}} 3 \"{{模式字符串}}\" {{路径/到/文件}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/grep.md#L21"
+        },
+        {
+          "description": "打印每个匹配项的文件名和行号，并带彩色输出：",
+          "command": "grep {{[-Hn|--with-filename --line-number]}} --color=always \"{{模式字符串}}\" {{路径/到/文件}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/grep.md#L25"
+        },
+        {
+          "description": "仅打印匹配的文本：",
+          "command": "grep {{[-o|--only-matching]}} \"{{模式字符串}}\" {{路径/到/文件}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/grep.md#L29"
+        },
+        {
+          "description": "从 `stdin` （标准输入）中读取数据，不打印匹配模式的行：",
+          "command": "cat {{路径/到/文件}} | grep {{[-v|--invert-match]}} \"{{模式字符串}}\"",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/grep.md#L33"
+        },
+        {
+          "description": "使用扩展 `regex` 式（支持 `?`、`+`、`{}`、`()` 和 `|`），不区分大小写模式：",
+          "command": "grep {{[-Ei|--extended-regexp --ignore-case]}} \"{{模式字符串}}\" {{路径/到/文件}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/grep.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/grep.md"
+    },
+    {
+      "id": "tldr--436c46ac1b3b",
+      "canonicalPath": "osx/gtimeout.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gtimeout",
+      "title": "gtimeout",
+      "summary": "这是 `timeout` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr timeout",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gtimeout.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gtimeout.md"
+    },
+    {
+      "id": "tldr--49590a25a6c6",
+      "canonicalPath": "osx/greadlink.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "greadlink",
+      "title": "greadlink",
+      "summary": "这是 `readlink` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr readlink",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/greadlink.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/greadlink.md"
+    },
+    {
+      "id": "tldr--4bb00b3c2b5d",
+      "canonicalPath": "common/pip-install.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "pip",
+      "title": "pip install",
+      "summary": "用于安装 Python 包。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "安装包：",
+          "command": "pip install {{包名}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip-install.md#L8"
+        },
+        {
+          "description": "安装指定版本的包：",
+          "command": "pip install {{包名}}=={{版本号}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip-install.md#L12"
+        },
+        {
+          "description": "通过指定的依赖文件安装（通常文件名是 requirements.txt）：",
+          "command": "pip install {{[-r|--requirement]}} {{requirements.txt}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip-install.md#L16"
+        },
+        {
+          "description": "通过 URL 或源码存档文件安装（如 `.tar.gz` 或 `.whl`）：",
+          "command": "pip install {{[-f|--find-links]}} {{url|存档文件}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip-install.md#L20"
+        },
+        {
+          "description": "在本地的项目路径下以开发模式（editable）安装（通常是读取 pyproject.toml 或 setup.py 文件）：",
+          "command": "pip install {{[-e|--editable]}} .",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip-install.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pip-install.md"
+    },
+    {
+      "id": "tldr--4bdbf29ee22f",
+      "canonicalPath": "openbsd/chfn.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "chfn",
+      "title": "chfn",
+      "summary": "此命令为 `chpass` 的别名。",
+      "platform": "openbsd",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr chpass",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/openbsd/chfn.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/openbsd/chfn.md"
+    },
+    {
+      "id": "tldr--4fb8dc37bc0a",
+      "canonicalPath": "common/pulumi-update.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "pulumi",
+      "title": "pulumi update",
+      "summary": "此命令为 `pulumi up` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "pulumi--f766b6ec"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr pulumi up",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pulumi-update.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pulumi-update.md"
+    },
+    {
+      "id": "tldr--527ff16a9519",
+      "canonicalPath": "osx/as.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "as",
+      "title": "as",
+      "summary": "便携式 GNU 汇编程序。 主要用于汇编 `gcc` 的输出以供 `ld` 使用。",
+      "platform": "macos",
+      "softwareIds": [
+        "binutils--2cb752bf"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "汇编文件，将输出写入 `a.out`：",
+          "command": "as {{路径/到/文件.s}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/as.md#L9"
+        },
+        {
+          "description": "将输出汇编到给定文件：",
+          "command": "as {{路径/到/文件.s}} -o {{路径/到/输出.o}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/as.md#L13"
+        },
+        {
+          "description": "通过跳过空白和注释预处理来更快地生成输出.（应该只用于受信任的编译器）：",
+          "command": "as -f {{路径/到/文件.s}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/as.md#L17"
+        },
+        {
+          "description": "在目录列表中包含一个给定路径，以搜索 `.include` 指令中指定的文件：",
+          "command": "as -I {{目标文件夹}} {{路径/到/文件.s}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/as.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/as.md"
+    },
+    {
+      "id": "tldr--52883cb15936",
+      "canonicalPath": "common/ab.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "ab",
+      "title": "ab",
+      "summary": "Apache 基准测试工具。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "ab--b16c5240",
+        "apache--b16c5240"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "向目标 URL 执行 100 次 HTTP GET 请求：",
+          "command": "ab -n 100 {{url}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ab.md#L8"
+        },
+        {
+          "description": "使用 10 个并发请求，同时向目标 URL 执行 100 次 HTTP GET 请求：",
+          "command": "ab -n 100 -c 10 {{url}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ab.md#L12"
+        },
+        {
+          "description": "使用来自文件的 JSON 负载对 URL 执行 100 个 HTTP POST 请求：",
+          "command": "ab -n 100 -T {{application/json}} -p {{path/to/file.json}} {{url}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ab.md#L16"
+        },
+        {
+          "description": "使用 HTTP [K]eep Alive，即在一个 HTTP 会话中执行多个请求：",
+          "command": "ab -k {{url}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ab.md#L20"
+        },
+        {
+          "description": "为基准测试设置最大的测试时间（单位：秒）：",
+          "command": "ab -t {{60}} {{url}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ab.md#L24"
+        },
+        {
+          "description": "将结果写入到一个 CSV 文件中：",
+          "command": "ab -e {{路径/到/文件.csv}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ab.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ab.md"
+    },
+    {
+      "id": "tldr--52d2331f707f",
+      "canonicalPath": "linux/grub-mkconfig.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "grub-mkconfig",
+      "title": "grub-mkconfig",
+      "summary": "生成GRUB配置文件。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "模拟运行并打印配置到标准输出：",
+          "command": "sudo grub-mkconfig",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/grub-mkconfig.md#L8"
+        },
+        {
+          "description": "生成配置文件：",
+          "command": "sudo grub-mkconfig {{[-o|--output]}} {{/boot/grub/grub.cfg}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/grub-mkconfig.md#L12"
+        },
+        {
+          "description": "打印帮助页面：",
+          "command": "grub-mkconfig {{[-h|--help]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/grub-mkconfig.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/grub-mkconfig.md"
+    },
+    {
+      "id": "tldr--545d8210c82c",
+      "canonicalPath": "linux/systemctl-condreload.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "systemctl",
+      "title": "systemctl condreload",
+      "summary": "此命令为 `systemctl try-reload-or-restart` 的别名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr systemctl try-reload-or-restart",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-condreload.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-condreload.md"
+    },
+    {
+      "id": "tldr--58b41f27ff59",
+      "canonicalPath": "common/gh-auth.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh auth",
+      "summary": "进行 GitHub 主机的身份验证。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "通过交互式提示进行登录：",
+          "command": "gh auth login",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-auth.md#L8"
+        },
+        {
+          "description": "使用来自 `stdin` 的令牌进行登录（在 <https://github.com/settings/tokens> 创建）：",
+          "command": "echo {{你的令牌}} | gh auth login --with-token",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-auth.md#L12"
+        },
+        {
+          "description": "检查当前登录状态：",
+          "command": "gh auth status",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-auth.md#L16"
+        },
+        {
+          "description": "登出当前账户：",
+          "command": "gh auth logout",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-auth.md#L20"
+        },
+        {
+          "description": "登录指定的 GitHub 企业版服务器：",
+          "command": "gh auth login {{[-h|--hostname]}} {{github.example.com}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-auth.md#L24"
+        },
+        {
+          "description": "刷新身份验证凭据，并恢复为默认的最小权限范围（移除之前额外申请的权限）：",
+          "command": "gh auth refresh",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-auth.md#L28"
+        },
+        {
+          "description": "扩展当前权限范围：",
+          "command": "gh auth refresh {{[-s|--scopes]}} {{repo,admin:repo_hook,admin:org,admin:public_key,admin:org_hook,...}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-auth.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-auth.md"
+    },
+    {
+      "id": "tldr--5906a9a6aa3c",
+      "canonicalPath": "common/gh-run.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh run",
+      "summary": "查看、运行和监控最近的 GitHub Actions 工作流运行记录。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "以交互式方式选择运行记录以查看其任务信息：",
+          "command": "gh run view",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-run.md#L8"
+        },
+        {
+          "description": "显示指定运行记录的信息：",
+          "command": "gh run view {{工作流运行编号}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-run.md#L12"
+        },
+        {
+          "description": "显示指定任务的各个步骤的信息：",
+          "command": "gh run view {{[-j|--job]}} {{任务编号}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-run.md#L16"
+        },
+        {
+          "description": "显示指定任务的日志：",
+          "command": "gh run view {{[-j|--job]}} {{任务编号}} --log",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-run.md#L20"
+        },
+        {
+          "description": "检查指定的工作流运行，如果运行失败则退出并返回非零状态码：",
+          "command": "gh run view {{工作流运行编号}} --exit-status && {{echo \"运行中或已通过\"}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-run.md#L24"
+        },
+        {
+          "description": "以交互式方式选择一个正在进行的运行记录，并等待其运行完毕：",
+          "command": "gh run watch",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-run.md#L28"
+        },
+        {
+          "description": "显示某个运行记录的任务并等待其运行完毕：",
+          "command": "gh run watch {{工作流运行编号}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-run.md#L32"
+        },
+        {
+          "description": "重新运行指定的工作流：",
+          "command": "gh run rerun {{工作流运行编号}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-run.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-run.md"
+    },
+    {
+      "id": "tldr--5927c6423611",
+      "canonicalPath": "common/chown.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "chown",
+      "title": "chown",
+      "summary": "修改用户和用户组对文件或目录的所有权。 另请参阅：`chgrp`。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "修改文件或目录的所有者：",
+          "command": "chown {{用户}} {{路径/到/文件或目录}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/chown.md#L9"
+        },
+        {
+          "description": "修改文件或目录的所有者及所属组：",
+          "command": "chown {{用户}}:{{用户组}} {{路径/到/文件或目录}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/chown.md#L13"
+        },
+        {
+          "description": "将所有者用户和用户组都更改为 `user`：",
+          "command": "chown {{user}}: {{路径/到/文件_或_目录}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/chown.md#L17"
+        },
+        {
+          "description": "递归修改目录及其子目录和文件的所有者：",
+          "command": "chown {{[-R|--recursive]}} {{用户}} {{路径/到/目录}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/chown.md#L21"
+        },
+        {
+          "description": "修改符号链接的所有者：",
+          "command": "chown {{[-h|--no-dereference]}} {{用户}} {{路径/到/符号链接}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/chown.md#L25"
+        },
+        {
+          "description": "修改文件或目录的所有者与参考文件相同：",
+          "command": "chown --reference {{路径/到/参考文件}} {{路径/到/文件或目录}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/chown.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/chown.md"
+    },
+    {
+      "id": "tldr--5f3976026b05",
+      "canonicalPath": "common/pulumi-down.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "pulumi",
+      "title": "pulumi down",
+      "summary": "此命令为 `pulumi destroy` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "pulumi--f766b6ec"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr pulumi destroy",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pulumi-down.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pulumi-down.md"
+    },
+    {
+      "id": "tldr--63791229e307",
+      "canonicalPath": "common/pulumi-stack-hist.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "pulumi",
+      "title": "pulumi stack hist",
+      "summary": "此命令为 `pulumi stack history` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "pulumi--f766b6ec"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr pulumi stack history",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pulumi-stack-hist.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/pulumi-stack-hist.md"
+    },
+    {
+      "id": "tldr--64b3078e7e77",
+      "canonicalPath": "linux/ac.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "ac",
+      "title": "ac",
+      "summary": "打印用户连接时长数据。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "以小时为单位打印当前用户连接时间：",
+          "command": "ac",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/ac.md#L8"
+        },
+        {
+          "description": "以小时为单位打印所有用户连接时间：",
+          "command": "ac {{[-p|--individual-totals]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/ac.md#L12"
+        },
+        {
+          "description": "以小时为单位打印特定用户连接时间：",
+          "command": "ac {{[-p|--individual-totals]}} {{用户名}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/ac.md#L16"
+        },
+        {
+          "description": "以小时为单位打印特定用户每天连接时间：",
+          "command": "ac {{[-d|--daily-totals]}} {{[-p|--individual-totals]}} {{用户名}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/ac.md#L20"
+        },
+        {
+          "description": "显示附加明细：",
+          "command": "ac --compatibility",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/ac.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/ac.md"
+    },
+    {
+      "id": "tldr--679e04251ee4",
+      "canonicalPath": "common/apropos.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "apropos",
+      "title": "apropos",
+      "summary": "在 manpages 中搜索，例如查找一个新命令。 另请参阅：`man`。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "使用`regex`式搜索关键字：",
+          "command": "apropos {{正则表达式}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/apropos.md#L9"
+        },
+        {
+          "description": "搜索时不限制输出到终端宽度：",
+          "command": "apropos {{[-l|--long]}} {{正则表达式}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/apropos.md#L13"
+        },
+        {
+          "description": "搜索与给定的所有表达式都匹配的页面：",
+          "command": "apropos {{正则表达式_1}} {{[-a|--and]}} {{正则表达式_2}} {{[-a|--and]}} {{正则表达式_3}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/apropos.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/apropos.md"
+    },
+    {
+      "id": "tldr--698326bc78a9",
+      "canonicalPath": "common/gh-issue.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh issue",
+      "summary": "管理 GitHub issue。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "显示指定的 issue：",
+          "command": "gh issue view {{issue_号}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue.md#L8"
+        },
+        {
+          "description": "在默认网页浏览器中查看指定的 issue：",
+          "command": "gh issue view {{issue_号}} {{[-w|--web]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue.md#L12"
+        },
+        {
+          "description": "在默认网页浏览器中创建一个新 issue：",
+          "command": "gh issue {{[new|create]}} {{[-w|--web]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue.md#L16"
+        },
+        {
+          "description": "列出最近 10 个带有 \"bug\" 标签的 issue：",
+          "command": "gh issue {{[ls|list]}} {{[-L|--limit]}} 10 {{[-l|--label]}} \"bug\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue.md#L20"
+        },
+        {
+          "description": "列出由指定用户创建的已关闭的 issue：",
+          "command": "gh issue {{[ls|list]}} {{[-s|--state]}} closed {{[-A|--author]}} {{用户名}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue.md#L24"
+        },
+        {
+          "description": "在指定仓库中，显示与当前用户相关的 issue 的状态：",
+          "command": "gh issue status {{[-R|--repo]}} {{拥有者}}/{{仓库}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue.md#L28"
+        },
+        {
+          "description": "重新打开指定的 issue：",
+          "command": "gh issue reopen {{issue_号}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue.md"
+    },
+    {
+      "id": "tldr--6bf4b49f27ea",
+      "canonicalPath": "common/asdf.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "asdf",
+      "title": "asdf",
+      "summary": "可扩展的包版本管理器，支持 Nodejs、Ruby、Elixir 和 Erlang 等。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "asdf--b29fc139"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "可用插件清单：",
+          "command": "asdf plugin list all",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/asdf.md#L8"
+        },
+        {
+          "description": "安装插件：",
+          "command": "asdf plugin add {{插件名}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/asdf.md#L12"
+        },
+        {
+          "description": "软件包的可用版本清单：",
+          "command": "asdf list all {{软件包名}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/asdf.md#L16"
+        },
+        {
+          "description": "安装指定版本的软件包：",
+          "command": "asdf install {{软件包名}} {{版本}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/asdf.md#L20"
+        },
+        {
+          "description": "设置软件包的全局安装版本：",
+          "command": "asdf set -u {{软件包名}} {{版本}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/asdf.md#L24"
+        },
+        {
+          "description": "设置软件包的本地版本：",
+          "command": "asdf set {{软件包名}} {{版本}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/asdf.md#L28"
+        },
+        {
+          "description": "查看软件包当前使用的版本：",
+          "command": "asdf current {{软件包名}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/asdf.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/asdf.md"
+    },
+    {
+      "id": "tldr--6c364a412d1e",
+      "canonicalPath": "common/impacket-smbclient.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "impacket-smbclient",
+      "title": "impacket-smbclient",
+      "summary": "此命令为 `smbclient.py` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr smbclient.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/impacket-smbclient.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/impacket-smbclient.md"
+    },
+    {
+      "id": "tldr--70bf14ff8206",
+      "canonicalPath": "freebsd/chfn.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "chfn",
+      "title": "chfn",
+      "summary": "此命令为 `chpass` 的别名。",
+      "platform": "freebsd",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr chpass",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/freebsd/chfn.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/freebsd/chfn.md"
+    },
+    {
+      "id": "tldr--72951a9368bd",
+      "canonicalPath": "linux/paru.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "paru",
+      "title": "paru",
+      "summary": "一个 AUR 助手和 pacman 包装。 另请参阅：`pacman`, `yay`。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "交互式搜索并安装软件包：",
+          "command": "paru {{包名或关键字}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/paru.md#L9"
+        },
+        {
+          "description": "同步和更新所有包：",
+          "command": "paru",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/paru.md#L13"
+        },
+        {
+          "description": "更新 AUR 包：",
+          "command": "paru -Sua",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/paru.md#L17"
+        },
+        {
+          "description": "获取包的信息：",
+          "command": "paru -Si {{包}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/paru.md#L21"
+        },
+        {
+          "description": "从 AUR 或 ABS 下载 `PKGBUILD` 和其他的包的源文件：",
+          "command": "paru --getpkgbuild {{包}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/paru.md#L25"
+        },
+        {
+          "description": "显示包的 `PKGBUILD` 文件：",
+          "command": "paru --getpkgbuild --print {{包}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/paru.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/paru.md"
+    },
+    {
+      "id": "tldr--72a11a83a6cd",
+      "canonicalPath": "common/act.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "act",
+      "title": "act",
+      "summary": "使用 Docker 本地运行 GitHub Actions。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "act--e296e890"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "列出可用的 actions 清单：",
+          "command": "act -l",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/act.md#L8"
+        },
+        {
+          "description": "运行默认 event：",
+          "command": "act",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/act.md#L12"
+        },
+        {
+          "description": "运行指定 event：",
+          "command": "act {{event_type}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/act.md#L16"
+        },
+        {
+          "description": "运行指定 action：",
+          "command": "act -a {{action_id}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/act.md#L20"
+        },
+        {
+          "description": "非实际运行 actions（也就是 dry-run 模式）：",
+          "command": "act -n",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/act.md#L24"
+        },
+        {
+          "description": "展示详细记录：",
+          "command": "act -v",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/act.md#L28"
+        },
+        {
+          "description": "运行指定 workflow：",
+          "command": "act push -W {{workflow 的路径}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/act.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/act.md"
+    },
+    {
+      "id": "tldr--78aefed66cd1",
+      "canonicalPath": "linux/blkid.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "blkid",
+      "title": "blkid",
+      "summary": "列出所有已识别的分区及其通用唯一标识符 (UUID)。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "列出所有分区：",
+          "command": "sudo blkid",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/blkid.md#L8"
+        },
+        {
+          "description": "列出表中的所有分区，包括当前挂载点：",
+          "command": "sudo blkid -o list",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/blkid.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/blkid.md"
+    },
+    {
+      "id": "tldr--7934644079b4",
+      "canonicalPath": "common/zfgrep.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "zfgrep",
+      "title": "zfgrep",
+      "summary": "此命令为 `zgrep --fixed-strings` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr zgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/zfgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/zfgrep.md"
+    },
+    {
+      "id": "tldr--7ae3346246c3",
+      "canonicalPath": "common/gh-cs.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh cs",
+      "summary": "此命令为 `gh codespace` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr gh codespace",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-cs.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-cs.md"
+    },
+    {
+      "id": "tldr--7cb709a328ae",
+      "canonicalPath": "common/lzcmp.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "lzcmp",
+      "title": "lzcmp",
+      "summary": "此命令为 `xzcmp` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr xzcmp",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/lzcmp.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/lzcmp.md"
+    },
+    {
+      "id": "tldr--7dcc4ccf69a0",
+      "canonicalPath": "osx/g[.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "g[",
+      "title": "g[",
+      "summary": "这是 `[` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr [",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/g%5B.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/g%5B.md"
+    },
+    {
+      "id": "tldr--80a98fa6266f",
+      "canonicalPath": "osx/guname.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "guname",
+      "title": "guname",
+      "summary": "这是 `uname` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr {{[-p|--platform]}} common uname",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/guname.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/guname.md"
+    },
+    {
+      "id": "tldr--85f946568e8b",
+      "canonicalPath": "linux/as.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "as",
+      "title": "as",
+      "summary": "一个可移植的 GUN 汇编器。 主要用于汇编`gcc`的输出，以供链接器`ld`使用。",
+      "platform": "linux",
+      "softwareIds": [
+        "binutils--2cb752bf"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "汇编一个文件，输出为 a.out：",
+          "command": "as {{路径/到/文件.s}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/as.md#L9"
+        },
+        {
+          "description": "汇编文件，并指定输出文件：",
+          "command": "as {{路径/到/文件.s}} -o {{路径/到/输出.o}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/as.md#L13"
+        },
+        {
+          "description": "通过跳过空格和注释的预处理过程来更快的产生输出文件（只应该用于可信任的编译器的输出）：",
+          "command": "as -f {{路径/到/文件.s}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/as.md#L17"
+        },
+        {
+          "description": "将给定路径添加到目录列表，来搜索.include 指令指定的文件：",
+          "command": "as -I {{目标文件夹}} {{路径/到/文件.s}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/as.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/as.md"
+    },
+    {
+      "id": "tldr--8672c5241461",
+      "canonicalPath": "linux/systemctl.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "systemctl",
+      "title": "systemctl",
+      "summary": "控制 systemd 系统和服务管理器。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "显示所有正在运行的服务：",
+          "command": "systemctl status",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl.md#L8"
+        },
+        {
+          "description": "列出失败的单元：",
+          "command": "systemctl --failed",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl.md#L12"
+        },
+        {
+          "description": "启动/停止/重启/重新加载/显示服务的状态：",
+          "command": "systemctl {{start|stop|restart|reload|status}} {{单元}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl.md#L16"
+        },
+        {
+          "description": "启用/禁用开机时启动的单元：",
+          "command": "systemctl {{enable/disable}} {{单元}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl.md#L20"
+        },
+        {
+          "description": "重新加载 systemd，扫描新的或更改的单元：",
+          "command": "systemctl daemon-reload",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl.md#L24"
+        },
+        {
+          "description": "检查单元是否激活/启用/失败：",
+          "command": "systemctl {{is-active|is-enabled|is-failed}} {{单元}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl.md#L28"
+        },
+        {
+          "description": "按运行/失败状态过滤列出所有服务/套接字/自动挂载单元：",
+          "command": "systemctl list-units {{[-t|--type]}} {{service|socket|automount}} --state {{failed|running}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl.md#L32"
+        },
+        {
+          "description": "显示单元文件的内容和绝对路径：",
+          "command": "systemctl cat {{单元}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl.md"
+    },
+    {
+      "id": "tldr--86a220ee1d3d",
+      "canonicalPath": "common/gh-repo.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh repo",
+      "summary": "在命令行上操作 GitHub 仓库。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "创建一个新的仓库（如果没有设置仓库名称，默认将为当前目录的名称）：",
+          "command": "gh repo create {{名称}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-repo.md#L8"
+        },
+        {
+          "description": "克隆一个仓库：",
+          "command": "gh repo clone {{拥有者}}/{{仓库}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-repo.md#L12"
+        },
+        {
+          "description": "复刻并克隆一个仓库：",
+          "command": "gh repo fork {{拥有者}}/{{仓库}} --clone",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-repo.md#L16"
+        },
+        {
+          "description": "在默认的网络浏览器中查看一个仓库：",
+          "command": "gh repo view {{仓库}} --web",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-repo.md#L20"
+        },
+        {
+          "description": "列出特定用户或组织拥有的仓库（如果未设置拥有者，默认拥有者将是当前登录用户）：",
+          "command": "gh repo list {{拥有者}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-repo.md#L24"
+        },
+        {
+          "description": "仅列出非派生的仓库，并限制列出的仓库数量（默认：30）：",
+          "command": "gh repo list {{拥有者}} --source -L {{限制数量}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-repo.md#L28"
+        },
+        {
+          "description": "列出具有特定主要编程语言的仓库：",
+          "command": "gh repo list {{拥有者}} --language {{语言名称}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-repo.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-repo.md"
+    },
+    {
+      "id": "tldr--87c78f00be21",
+      "canonicalPath": "common/qtcreator.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "qtcreator",
+      "title": "qtcreator",
+      "summary": "跨平台的 Qt 应用程序集成开发环境。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "qt-creator--ee2cf71f",
+        "qt-creator-beta--ee2cf71f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "启动 Qt Creator：",
+          "command": "qtcreator",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qtcreator.md#L8"
+        },
+        {
+          "description": "启动 Qt Creator 并恢复上次会话：",
+          "command": "qtcreator -lastsession",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qtcreator.md#L12"
+        },
+        {
+          "description": "启动 Qt Creator 并且不加载指定的插件：",
+          "command": "qtcreator -noload {{指定插件}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qtcreator.md#L16"
+        },
+        {
+          "description": "启动 Qt Creator 并且不加载任何插件：",
+          "command": "qtcreator -noload {{all}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qtcreator.md#L20"
+        },
+        {
+          "description": "在演示模式下启动 Qt Creator，并显示键盘快捷键的弹出提示：",
+          "command": "qtcreator -presentationMode",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qtcreator.md#L24"
+        },
+        {
+          "description": "启动 Qt Creator 并显示来自特定提交的差异：",
+          "command": "qtcreator -git-show {{提交}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qtcreator.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/qtcreator.md"
+    },
+    {
+      "id": "tldr--89b7db014b0b",
+      "canonicalPath": "osx/mo.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "mo",
+      "title": "mo",
+      "summary": "此命令为 `mole` 的别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr mole",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/mo.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/mo.md"
+    },
+    {
+      "id": "tldr--89da2a569097",
+      "canonicalPath": "osx/gexpand.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gexpand",
+      "title": "gexpand",
+      "summary": "这是 `expand` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr expand",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gexpand.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gexpand.md"
+    },
+    {
+      "id": "tldr--8d7c94ea0e4c",
+      "canonicalPath": "osx/gwhoami.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gwhoami",
+      "title": "gwhoami",
+      "summary": "这是 `whoami` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr whoami",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gwhoami.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gwhoami.md"
+    },
+    {
+      "id": "tldr--8fe8ca22fcbd",
+      "canonicalPath": "common/comma.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "comma",
+      "title": "comma",
+      "summary": "此命令为 `,` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr ,",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/comma.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/comma.md"
+    },
+    {
+      "id": "tldr--940422aa9751",
+      "canonicalPath": "linux/btrfs-subvolume.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "btrfs",
+      "title": "btrfs subvolume",
+      "summary": "管理 btrfs 子卷和快照。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "创建一个新的空子卷：",
+          "command": "sudo btrfs {{[su|subvolume]}} {{[c|create]}} {{指向新子卷的路径}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-subvolume.md#L8"
+        },
+        {
+          "description": "列出指定文件系统中的所有子卷和快照：",
+          "command": "sudo btrfs {{[su|subvolume]}} {{[l|list]}} {{指向 btrfs 文件系统的路径}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-subvolume.md#L12"
+        },
+        {
+          "description": "删除一个子卷：",
+          "command": "sudo btrfs {{[su|subvolume]}} {{[d|delete]}} {{指向子卷的路径}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-subvolume.md#L16"
+        },
+        {
+          "description": "创建现有子卷的只读快照：",
+          "command": "sudo btrfs {{[su|subvolume]}} {{[sn|snapshot]}} -r {{指向源子卷的路径}} {{指向目标的路径}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-subvolume.md#L20"
+        },
+        {
+          "description": "创建现有子卷的读写快照：",
+          "command": "sudo btrfs {{[su|subvolume]}} {{[sn|snapshot]}} {{指向源子卷的路径}} {{指向目标的路径}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-subvolume.md#L24"
+        },
+        {
+          "description": "显示有关子卷的详细信息：",
+          "command": "sudo btrfs {{[su|subvolume]}} {{[sh|show]}} {{指向子卷的路径}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-subvolume.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-subvolume.md"
+    },
+    {
+      "id": "tldr--9646017030e9",
+      "canonicalPath": "common/touch.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "touch",
+      "title": "touch",
+      "summary": "创建文件并设置访问/修改时间。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "psutils--0a0e1251",
+        "touch--b4aec46f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "创建指定的文件：",
+          "command": "touch {{路径/到/文件1 路径/到/文件2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/touch.md#L8"
+        },
+        {
+          "description": "将文件的访问(a)或修改时间(m)设置为当前时间，如果文件不存在则不创建(-c)：",
+          "command": "touch {{[-c|--no-create]}} -{{a|m}} {{路径/到/文件1 路径/到/文件2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/touch.md#L12"
+        },
+        {
+          "description": "将文件时间(-t)设置为指定值，如果文件不存在则不创建(-c)：",
+          "command": "touch {{[-c|--no-create]}} -t {{YYYYMMDDHHMM.SS}} {{路径/到/文件1 路径/到/文件2 ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/touch.md#L16"
+        },
+        {
+          "description": "将文件时间设置为另一文件(-r,即文件3)的时间，如果文件不存在则不创建(-c)：",
+          "command": "touch {{[-c|--no-create]}} {{[-r|--reference]}} {{路径/到/文件3}} {{路径/到/文件1 路径/到/文件2 ...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/touch.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/touch.md"
+    },
+    {
+      "id": "tldr--98f890eecd09",
+      "canonicalPath": "common/whoami.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "whoami",
+      "title": "whoami",
+      "summary": "此命令为 `id --user --name` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr id",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/whoami.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/whoami.md"
+    },
+    {
+      "id": "tldr--99ba8587206d",
+      "canonicalPath": "osx/port.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "port",
+      "title": "port",
+      "summary": "macOS 包管理器软件（类似 brew）。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "搜索包：",
+          "command": "port search {{搜索的包名}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/port.md#L8"
+        },
+        {
+          "description": "安装软件包：",
+          "command": "sudo port install {{报名}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/port.md#L12"
+        },
+        {
+          "description": "列出已安装的软件包：",
+          "command": "port installed",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/port.md#L16"
+        },
+        {
+          "description": "更新 port 自身，并获取可用包的最新列表：",
+          "command": "sudo port selfupdate",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/port.md#L20"
+        },
+        {
+          "description": "升级过时的软件包：",
+          "command": "sudo port upgrade outdated",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/port.md#L24"
+        },
+        {
+          "description": "删除已安装的软件包的旧版本：",
+          "command": "sudo port uninstall inactive",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/port.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/port.md"
+    },
+    {
+      "id": "tldr--9e5698813df8",
+      "canonicalPath": "common/gh-a11y.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh a11y",
+      "summary": "此命令为 `gh accessibility` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr gh accessibility",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-a11y.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-a11y.md"
+    },
+    {
+      "id": "tldr--aba0e3e7197b",
+      "canonicalPath": "osx/fsck.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "fsck",
+      "title": "fsck",
+      "summary": "检查或修复文件系统的完整性，运行命令时应卸载文件系统。 它是一个包装器，包含 `fsck_hfs`, `fsck_apfs`, `fsck_msdos`, `fsck_exfat`, `fsck_udf` 作为可选。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "检查文件系统 /dev/sda，报告损坏的块：",
+          "command": "fsck {{/dev/sda}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/fsck.md#L9"
+        },
+        {
+          "description": "仅当文件系统 /dev/sda 是干净的时才检查它，报告任何损坏的块并以交互方式让用户选择修复每个块：",
+          "command": "fsck -f {{/dev/sda}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/fsck.md#L13"
+        },
+        {
+          "description": "仅当文件系统 /dev/sda 干净时才检查它，报告任何损坏的块并自动修复它们：",
+          "command": "fsck -fy {{/dev/sda}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/fsck.md#L17"
+        },
+        {
+          "description": "检查文件系统 /dev/sda, 报告是否已完全卸载：",
+          "command": "fsck -q {{/dev/sda}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/fsck.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/fsck.md"
+    },
+    {
+      "id": "tldr--ae83c19cb780",
+      "canonicalPath": "common/gh-pr.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh pr",
+      "summary": "管理 GitHub 拉取请求。 一些子命令（例如 `create`）有自己的使用文档。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "创建一个拉取请求：",
+          "command": "gh pr {{[new|create]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr.md#L9"
+        },
+        {
+          "description": "在本地检出指定的拉取请求：",
+          "command": "gh {{[co|pr checkout]}} {{pr_号|url|分支}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr.md#L13"
+        },
+        {
+          "description": "查看当前分支上拉取请求所做的更改：",
+          "command": "gh pr diff",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr.md#L17"
+        },
+        {
+          "description": "批准当前分支关联的拉取请求：",
+          "command": "gh pr review {{[-a|--approve]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr.md#L21"
+        },
+        {
+          "description": "以交互式方式合并当前分支关联的拉取请求：",
+          "command": "gh pr merge",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr.md#L25"
+        },
+        {
+          "description": "以交互式方式编辑拉取请求：",
+          "command": "gh pr edit",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr.md#L29"
+        },
+        {
+          "description": "修改拉取请求的目标分支：",
+          "command": "gh pr edit {{[-B|--base]}} {{分支名}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr.md#L33"
+        },
+        {
+          "description": "查看当前仓库中拉取请求的状态：",
+          "command": "gh pr status",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr.md"
+    },
+    {
+      "id": "tldr--b035ac9774da",
+      "canonicalPath": "common/nm-classic.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "nm-classic",
+      "title": "nm-classic",
+      "summary": "此命令为 `nm` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr nm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nm-classic.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nm-classic.md"
+    },
+    {
+      "id": "tldr--b2509435579f",
+      "canonicalPath": "osx/asr.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "asr",
+      "title": "asr",
+      "summary": "将磁盘映像还原（复制）到卷上。 命令名称是 Apple Software Restore 的缩写。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "将磁盘映像复制到目标卷：",
+          "command": "sudo asr restore --source {{映像名.dmg}} --target {{卷路径}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/asr.md#L9"
+        },
+        {
+          "description": "在复制之前擦除目标卷：",
+          "command": "sudo asr restore --source {{映像名.dmg}} --target {{卷路径}} --erase",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/asr.md#L13"
+        },
+        {
+          "description": "恢复后跳过验证步骤：",
+          "command": "sudo asr restore --source {{映像名.dmg}} --target {{卷路径}} --noverify",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/asr.md#L17"
+        },
+        {
+          "description": "不使用中间磁盘映像直接复制卷中的数据：",
+          "command": "sudo asr restore --source {{卷路径}} --target {{复制卷路径}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/asr.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/asr.md"
+    },
+    {
+      "id": "tldr--b71508038040",
+      "canonicalPath": "osx/diskutil.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "diskutil",
+      "title": "diskutil",
+      "summary": "用于管理本地磁盘和卷的实用程序。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "列出所有当前可用的磁盘、分区和已装入的卷：",
+          "command": "diskutil list",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/diskutil.md#L8"
+        },
+        {
+          "description": "修复卷的文件系统数据结构：",
+          "command": "diskutil repairVolume {{目标卷文件}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/diskutil.md#L12"
+        },
+        {
+          "description": "卸载卷：",
+          "command": "diskutil unmountDisk {{目标卷文件}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/diskutil.md#L16"
+        },
+        {
+          "description": "弹出 CD/DVD（先卸载）：",
+          "command": "diskutil eject {{/dev/ 光驱文件名}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/diskutil.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/diskutil.md"
+    },
+    {
+      "id": "tldr--b87460673487",
+      "canonicalPath": "common/gh-pr-checks.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh pr checks",
+      "summary": "查看 GitHub 拉取请求的 CI 状态检查结果。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "显示当前分支关联的拉取请求的状态检查结果：",
+          "command": "gh pr checks",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-checks.md#L8"
+        },
+        {
+          "description": "显示指定拉取请求的状态检查结果：",
+          "command": "gh pr checks {{pr_号}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-checks.md#L12"
+        },
+        {
+          "description": "实时监控状态检查，直到全部完成：",
+          "command": "gh pr checks {{pr_号}} --watch",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-checks.md#L16"
+        },
+        {
+          "description": "仅显示强制要求的检查结果：",
+          "command": "gh pr checks {{pr_号}} --required",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-checks.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-checks.md"
+    },
+    {
+      "id": "tldr--b91e09530715",
+      "canonicalPath": "linux/btrfs-filesystem.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "btrfs",
+      "title": "btrfs filesystem",
+      "summary": "管理 btrfs 文件系统。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "显示文件系统使用情况（可以选择以 root 身份运行以显示详细信息）：",
+          "command": "btrfs filesystem usage {{指向挂载点的路径}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-filesystem.md#L8"
+        },
+        {
+          "description": "显示各个设备的使用情况：",
+          "command": "sudo btrfs filesystem show {{指向挂载点的路径}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-filesystem.md#L12"
+        },
+        {
+          "description": "对 btrfs 文件系统上的单个文件进行碎片整理（避免在运行数据去重的同时运行）：",
+          "command": "sudo btrfs filesystem defragment -v {{指向文件的路径}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-filesystem.md#L16"
+        },
+        {
+          "description": "递归对目录进行碎片整理（不跨越子卷边界）：",
+          "command": "sudo btrfs filesystem defragment -v -r {{指向目录的路径}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-filesystem.md#L20"
+        },
+        {
+          "description": "强制将未写入的数据块同步到磁盘：",
+          "command": "sudo btrfs filesystem sync {{指向挂载点的路径}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-filesystem.md#L24"
+        },
+        {
+          "description": "递归总结目录中文件的磁盘使用情况：",
+          "command": "sudo btrfs filesystem du --summarize {{指向目录的路径}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-filesystem.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/btrfs-filesystem.md"
+    },
+    {
+      "id": "tldr--bc01c1b263b7",
+      "canonicalPath": "common/gh-rs.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh rs",
+      "summary": "此命令为 `gh ruleset` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr gh ruleset",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-rs.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-rs.md"
+    },
+    {
+      "id": "tldr--bc9ef2a6dbe1",
+      "canonicalPath": "osx/ginstall.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "ginstall",
+      "title": "ginstall",
+      "summary": "这是 `install` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr install",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/ginstall.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/ginstall.md"
+    },
+    {
+      "id": "tldr--bcff51db5c9a",
+      "canonicalPath": "linux/systemctl-condstop.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "systemctl",
+      "title": "systemctl condstop",
+      "summary": "此命令为 `systemctl stop` 的别名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr systemctl stop",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-condstop.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-condstop.md"
+    },
+    {
+      "id": "tldr--beb78bcd3106",
+      "canonicalPath": "common/llvm-ar.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "llvm-ar",
+      "title": "llvm-ar",
+      "summary": "此命令为 `ar` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr ar",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/llvm-ar.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/llvm-ar.md"
+    },
+    {
+      "id": "tldr--c16f8fd1c6da",
+      "canonicalPath": "windows/sal.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "sal",
+      "title": "sal",
+      "summary": "此命令为 `Set-Alias` 的别名。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr set-alias",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/sal.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/sal.md"
+    },
+    {
+      "id": "tldr--c18fbc22284d",
+      "canonicalPath": "common/gh-pr-view.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh pr view",
+      "summary": "查看 GitHub 拉取请求的详细信息。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "查看当前分支关联的拉取请求：",
+          "command": "gh pr view",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-view.md#L8"
+        },
+        {
+          "description": "查看指定的拉取请求：",
+          "command": "gh pr view {{123}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-view.md#L12"
+        },
+        {
+          "description": "在默认网页浏览器中打开拉取请求：",
+          "command": "gh pr view {{[-w|--web]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-view.md#L16"
+        },
+        {
+          "description": "在终端显示评论信息：",
+          "command": "gh pr view {{123}} {{[-c|--comments]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-view.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-view.md"
+    },
+    {
+      "id": "tldr--c73b247f7fe0",
+      "canonicalPath": "windows/comp.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "comp",
+      "title": "comp",
+      "summary": "比较两个文件或文件集的内容。 使用通配符（*）来比较文件集。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "交互式比较文件：",
+          "command": "comp",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/comp.md#L9"
+        },
+        {
+          "description": "比较两个指定的文件：",
+          "command": "comp {{文件 1 的路径}} {{文件 2 的路径}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/comp.md#L13"
+        },
+        {
+          "description": "比较两个文件集：",
+          "command": "comp {{路径\\到\\目录1}}\\* {{路径\\到\\目录2}}\\*",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/comp.md#L17"
+        },
+        {
+          "description": "以十进制格式显示差异：",
+          "command": "comp /d {{文件 1 的路径}} {{文件 2 的路径}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/comp.md#L21"
+        },
+        {
+          "description": "以 ASCII 字符显示差异：",
+          "command": "comp /a {{文件 1 的路径}} {{文件 2 的路径}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/comp.md#L25"
+        },
+        {
+          "description": "显示不同的行数：",
+          "command": "comp /l {{文件 1 的路径}} {{文件 2 的路径}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/comp.md#L29"
+        },
+        {
+          "description": "比较文件时不区分大小写：",
+          "command": "comp /c {{文件 1 的路径}} {{文件 2 的路径}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/comp.md#L33"
+        },
+        {
+          "description": "只比较每个文件前 5 行的内容：",
+          "command": "comp /n=5 {{文件 1 的路径}} {{文件 2 的路径}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/comp.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/comp.md"
+    },
+    {
+      "id": "tldr--cee62071ea3d",
+      "canonicalPath": "common/azure-cli.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "azure-cli",
+      "title": "azure-cli",
+      "summary": "此命令为 `az` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "azure-cli--f5ca91d3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr az",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/azure-cli.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/azure-cli.md"
+    },
+    {
+      "id": "tldr--d64c6dda9b3b",
+      "canonicalPath": "common/gh-at.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh at",
+      "summary": "此命令为 `gh attestation` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr gh attestation",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-at.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-at.md"
+    },
+    {
+      "id": "tldr--d73dd11bace0",
+      "canonicalPath": "linux/systemctl-reload-or-try-restart.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "systemctl",
+      "title": "systemctl reload-or-try-restart",
+      "summary": "此命令为 `systemctl try-reload-or-restart` 的别名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr systemctl try-reload-or-restart",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-reload-or-try-restart.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-reload-or-try-restart.md"
+    },
+    {
+      "id": "tldr--dcdd9c537ae0",
+      "canonicalPath": "common/aria2.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "aria2",
+      "title": "aria2",
+      "summary": "这是 `aria2c` 命令的一个别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "aria2--38b2c545"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr aria2c",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/aria2.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/aria2.md"
+    },
+    {
+      "id": "tldr--e207c3539ab0",
+      "canonicalPath": "linux/lvs.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "lvs",
+      "title": "lvs",
+      "summary": "显示逻辑卷信息。 另请参阅：`lvm`。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "显示逻辑卷信息：",
+          "command": "sudo lvs",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/lvs.md#L9"
+        },
+        {
+          "description": "显示所有逻辑卷：",
+          "command": "sudo lvs {{[-a|--all]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/lvs.md#L13"
+        },
+        {
+          "description": "改变默认显示以显示更多细节：",
+          "command": "sudo lvs {{[-v|--verbose]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/lvs.md#L17"
+        },
+        {
+          "description": "只显示特定字段：",
+          "command": "sudo lvs {{[-o|--options]}} {{域名 1,域名 2,...}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/lvs.md#L21"
+        },
+        {
+          "description": "将字段附加到显示：",
+          "command": "sudo lvs {{[-o|--options]}} +{{域名}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/lvs.md#L25"
+        },
+        {
+          "description": "抑制标题行：",
+          "command": "sudo lvs --noheadings",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/lvs.md#L29"
+        },
+        {
+          "description": "使用特殊分隔符分隔特定字段：",
+          "command": "sudo lvs --separator {{=}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/lvs.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/lvs.md"
+    },
+    {
+      "id": "tldr--e38d460804ff",
+      "canonicalPath": "common/gh-pr-merge.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh pr merge",
+      "summary": "合并 GitHub 拉取请求。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "以交互式方式合并当前分支关联的拉取请求：",
+          "command": "gh pr merge",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-merge.md#L8"
+        },
+        {
+          "description": "合并当前分支到指定的拉取请求：",
+          "command": "gh pr merge {{pr_号}} {{[-m|--merge]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-merge.md#L12"
+        },
+        {
+          "description": "压缩合并拉取请求，并删除该分支：",
+          "command": "gh pr merge {{pr_号}} {{[-sd|--squash --delete-branch]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-merge.md#L16"
+        },
+        {
+          "description": "变基合并拉取请求：",
+          "command": "gh pr merge {{pr_号}} {{[-r|--rebase]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-merge.md#L20"
+        },
+        {
+          "description": "开启自动合并（压缩合并）：",
+          "command": "gh pr merge {{pr_号}} --auto {{[-s|--squash]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-merge.md#L24"
+        },
+        {
+          "description": "使用管理员权限合并（如果允许）：",
+          "command": "gh pr merge {{pr_号}} --admin",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-merge.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-pr-merge.md"
+    },
+    {
+      "id": "tldr--e467d3bfab0b",
+      "canonicalPath": "netbsd/chfn.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "chfn",
+      "title": "chfn",
+      "summary": "此命令为 `chpass` 的别名。",
+      "platform": "netbsd",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr chpass",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/netbsd/chfn.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/netbsd/chfn.md"
+    },
+    {
+      "id": "tldr--e6bf8e0f16a9",
+      "canonicalPath": "common/gh.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh",
+      "summary": "在命令行无缝使用 GitHub。 一些子命令（例如 `config`）有自己的使用文档。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "克隆一个 GitHub 仓库到本地：",
+          "command": "gh repo clone {{拥有者}}/{{仓库}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh.md#L9"
+        },
+        {
+          "description": "创建一个新 issue：",
+          "command": "gh issue {{[new|create]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh.md#L13"
+        },
+        {
+          "description": "查看并筛选当前仓库中未解决的 issue：",
+          "command": "gh issue {{[ls|list]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh.md#L17"
+        },
+        {
+          "description": "在默认浏览器中查看指定 issue：",
+          "command": "gh issue view {{[-w|--web]}} {{issue_号|url}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh.md#L21"
+        },
+        {
+          "description": "创建一个拉取请求：",
+          "command": "gh pr {{[new|create]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh.md#L25"
+        },
+        {
+          "description": "在默认浏览器中查看拉取请求：",
+          "command": "gh pr view {{[-w|--web]}} {{pr_号|url|分支}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh.md#L29"
+        },
+        {
+          "description": "在本地检出指定的拉取请求：",
+          "command": "gh {{[co|pr checkout]}} {{pr_号|url|分支}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh.md#L33"
+        },
+        {
+          "description": "查看当前仓库中拉取请求的状态：",
+          "command": "gh pr status",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh.md"
+    },
+    {
+      "id": "tldr--e9ddddb1e82b",
+      "canonicalPath": "common/aspell.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "aspell",
+      "title": "aspell",
+      "summary": "交互式拼写检查工具。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "aspell--eed8b768"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "为一个文件做拼写检查：",
+          "command": "aspell check {{文件路径}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/aspell.md#L8"
+        },
+        {
+          "description": "列出来自标准输入的拼写错误单词：",
+          "command": "cat {{文件}} | aspell list",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/aspell.md#L12"
+        },
+        {
+          "description": "列出可用的字典语言：",
+          "command": "aspell dicts",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/aspell.md#L16"
+        },
+        {
+          "description": "指定不同的语言（取 ISO 639 语言代码的 2 个字母）来运行 `aspell`：",
+          "command": "aspell --lang {{cs}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/aspell.md#L20"
+        },
+        {
+          "description": "列出来自标准输入的拼写错误单词，并且忽略个人单词列表中的单词：",
+          "command": "cat {{文件}} | aspell --personal {{个人单词列表.pws}} list",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/aspell.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/aspell.md"
+    },
+    {
+      "id": "tldr--ea7748173ad2",
+      "canonicalPath": "common/ac.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "ac",
+      "title": "ac",
+      "summary": "打印用户连接时间的统计数据。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "打印当前用户连接的时间，以小时为单位：",
+          "command": "ac",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ac.md#L8"
+        },
+        {
+          "description": "打印用户连接的时间，以小时为单位：",
+          "command": "ac -p",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ac.md#L12"
+        },
+        {
+          "description": "打印一个特定用户的连接时间，以小时为单位：",
+          "command": "ac -p {{用户名}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ac.md#L16"
+        },
+        {
+          "description": "打印一个特定用户每天连接的时间，以小时为单位（包括总数）：",
+          "command": "ac -dp {{用户名}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ac.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/ac.md"
+    },
+    {
+      "id": "tldr--ec706d82895b",
+      "canonicalPath": "osx/gstty.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gstty",
+      "title": "gstty",
+      "summary": "这是 `stty` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr stty",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gstty.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gstty.md"
+    },
+    {
+      "id": "tldr--ed0501030477",
+      "canonicalPath": "windows/cpush.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "cpush",
+      "title": "cpush",
+      "summary": "此命令为 `choco push` 的别名。",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr choco push",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/cpush.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/windows/cpush.md"
+    },
+    {
+      "id": "tldr--edbab6b5b363",
+      "canonicalPath": "linux/trash-put.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "trash-put",
+      "title": "trash-put",
+      "summary": "此命令为 `trash` 的别名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr trash",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/trash-put.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/trash-put.md"
+    },
+    {
+      "id": "tldr--eed2e70907df",
+      "canonicalPath": "common/gh-issue-create.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh issue create",
+      "summary": "创建 GitHub 仓库中的 issue。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "以交互式方式在当前仓库中创建一个新 issue：",
+          "command": "gh issue {{[new|create]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue-create.md#L8"
+        },
+        {
+          "description": "以交互式方式创建一个带有 \"bug\" 标签的新 issue：",
+          "command": "gh issue {{[new|create]}} {{[-l|--label]}} \"bug\"",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue-create.md#L12"
+        },
+        {
+          "description": "以交互式方式创建一个新 issue 并分配给指定的用户：",
+          "command": "gh issue {{[new|create]}} {{[-a|--assignee]}} {{用户1,用户2,...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue-create.md#L16"
+        },
+        {
+          "description": "创建一个具有标题和描述的新 issue，并分配给当前用户：",
+          "command": "gh issue {{[new|create]}} {{[-t|--title]}} \"{{标题}}\" {{[-b|--body]}} \"{{描述}}\" {{[-a|--assignee]}} \"@me\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue-create.md#L20"
+        },
+        {
+          "description": "以交互式方式创建一个新 issue，并从文件中读取其描述正文：",
+          "command": "gh issue {{[new|create]}} {{[-F|--body-file]}} {{路径/到/文件}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue-create.md#L24"
+        },
+        {
+          "description": "在默认网页浏览器中创建一个新 issue：",
+          "command": "gh issue {{[new|create]}} {{[-w|--web]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue-create.md#L28"
+        },
+        {
+          "description": "显示帮助：",
+          "command": "gh issue {{[new|create]}} {{[-h|--help]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue-create.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-issue-create.md"
+    },
+    {
+      "id": "tldr--ef1348318ed3",
+      "canonicalPath": "common/nload.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "nload",
+      "title": "nload",
+      "summary": "在终端中可视化查看网络流量。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nload--02faa1d2"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "查看所有网络接口的流量（使用`<ArrowKeys>`切换不同网口）：",
+          "command": "nload",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nload.md#L8"
+        },
+        {
+          "description": "查看指定网络接口的流量（使用`<ArrowKeys>`切换网口）：",
+          "command": "nload devices {{网口1 网口2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nload.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/nload.md"
+    },
+    {
+      "id": "tldr--f144bb7f8975",
+      "canonicalPath": "osx/gpwd.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gpwd",
+      "title": "gpwd",
+      "summary": "这是 `pwd` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr pwd",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gpwd.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/gpwd.md"
+    },
+    {
+      "id": "tldr--f60135ef0378",
+      "canonicalPath": "osx/glink.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "glink",
+      "title": "glink",
+      "summary": "这是 `link` 命令的一个别名。",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "原命令的文档在：",
+          "command": "tldr link",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/glink.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/osx/glink.md"
+    },
+    {
+      "id": "tldr--f6b961d7cd76",
+      "canonicalPath": "common/gh-agent.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh agent",
+      "summary": "此命令为 `gh agent-task` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr gh agent-task",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-agent.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-agent.md"
+    },
+    {
+      "id": "tldr--f7843138bdfe",
+      "canonicalPath": "linux/systemctl-force-reload.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "systemctl",
+      "title": "systemctl force-reload",
+      "summary": "此命令为 `systemctl try-reload-or-restart` 的别名。",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr systemctl try-reload-or-restart",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-force-reload.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/linux/systemctl-force-reload.md"
+    },
+    {
+      "id": "tldr--f7e33f8f5820",
+      "canonicalPath": "common/impacket-getuserspns.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "impacket-GetUserSPNs",
+      "title": "impacket-GetUserSPNs",
+      "summary": "此命令为 `GetUserSPNs.py` 的别名。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "查看原命令的文档：",
+          "command": "tldr GetUserSPNs.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/impacket-getuserspns.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/impacket-getuserspns.md"
+    },
+    {
+      "id": "tldr--fbb60ba9f2f9",
+      "canonicalPath": "common/jetifier.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "jetifier",
+      "title": "jetifier",
+      "summary": "一个以 npm 格式提供的 Jetifier AndroidX 迁移工具，适用于 react-native。",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "将项目依赖迁移到 AndroidX 格式：",
+          "command": "jetifier",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/jetifier.md#L8"
+        },
+        {
+          "description": "将项目依赖从 AndroidX 格式迁移回来：",
+          "command": "jetifier reverse",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/jetifier.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/jetifier.md"
+    },
+    {
+      "id": "tldr--fea285ee761a",
+      "canonicalPath": "common/gh-gist.md",
+      "locale": "zh",
+      "sourceLocale": "zh",
+      "name": "gh",
+      "title": "gh gist",
+      "summary": "在命令行上使用 GitHub Gists。",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gh--a5954995"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "从一个以空格分隔的文件列表中创建一个新的 Gist：",
+          "command": "gh gist create {{路径/文件}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-gist.md#L8"
+        },
+        {
+          "description": "创建一个带有描述的新 Gist：",
+          "command": "gh gist create {{文件名}} --desc \"{{描述}}\"",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-gist.md#L12"
+        },
+        {
+          "description": "编辑一个 Gist：",
+          "command": "gh gist edit {{id_或_url}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-gist.md#L16"
+        },
+        {
+          "description": "列出当前登录用户所拥有的 Gist：",
+          "command": "gh gist list --limit {{int}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-gist.md#L20"
+        },
+        {
+          "description": "在默认浏览器中查看 Gist，且不渲染 Markdown：",
+          "command": "gh gist view {{id_或_url}} --web --raw",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-gist.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.zh/common/gh-gist.md"
+    }
+  ]
+}

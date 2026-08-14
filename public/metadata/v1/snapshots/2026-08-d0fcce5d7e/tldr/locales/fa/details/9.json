@@ -1,0 +1,731 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "fa",
+  "sourceLocale": "fa",
+  "shard": "9",
+  "items": [
+    {
+      "id": "tldr--22624441e5ba",
+      "canonicalPath": "linux/dd.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "dd",
+      "title": "dd",
+      "summary": "تبدیل و کپی یک فایل. همچنین : `caligula`.",
+      "platform": "linux",
+      "softwareIds": [
+        "dd--ce6372bb",
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "ساخت یک درایو USB قابل بوت از یک فایل iso (مثل `archlinux-xxx.iso`) و نمایش پیشرفت:",
+          "command": "sudo dd status=progress if={{path/to/file.iso}} of={{/dev/usb_drive}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/dd.md#L9"
+        },
+        {
+          "description": "کلون کردن یک درایو به یک درایو دیگر با اندازهٔ بلوک ۴ مگابایت و اعمال چیزهای نوشته شده پیش از خاتمهٔ دستور:",
+          "command": "sudo dd bs=4M conv=fsync if={{/dev/source_drive}} of={{/dev/dest_drive}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/dd.md#L13"
+        },
+        {
+          "description": "ایجاد یک فایل با تعداد مشخصی بایت تصادفی با استفاده از درایور random کرنل:",
+          "command": "dd bs={{100}} count={{1}} if=/dev/urandom of={{path/to/random_file}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/dd.md#L17"
+        },
+        {
+          "description": "ارزیابی عملکرد نوشتن روی یک دیسک:",
+          "command": "dd bs={{1M}} count={{1024}} if=/dev/zero of={{path/to/file_1GB}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/dd.md#L21"
+        },
+        {
+          "description": "ساخت یک پشتیبان از سامانه و ذخیرهٔ آن در یک فایل IMG (می‌توان بعداً با تغییر `if` به `of` آن را بازسازی کرد):",
+          "command": "sudo dd status=progress if={{/dev/drive_device}} of={{path/to/file.img}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/dd.md#L25"
+        },
+        {
+          "description": "بررسی پیشرفت یک عملکرد در حال اجرای `dd` (این دستور را از یک پوستهٔ دیگر اجرا کنید):",
+          "command": "progress",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/dd.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/dd.md"
+    },
+    {
+      "id": "tldr--2e08d822adcf",
+      "canonicalPath": "common/git-continue.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "git",
+      "title": "git continue",
+      "summary": "این دستور یک نام مستعار از `git abort` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr git abort",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/git-continue.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/git-continue.md"
+    },
+    {
+      "id": "tldr--411475af713b",
+      "canonicalPath": "common/lzegrep.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "lzegrep",
+      "title": "lzegrep",
+      "summary": "این دستور یک نام مستعار از `xzgrep --extended-regexp` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/lzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/lzegrep.md"
+    },
+    {
+      "id": "tldr--497fec0a60c9",
+      "canonicalPath": "common/impacket-getst.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "impacket-getST",
+      "title": "impacket-getST",
+      "summary": "این دستور یک نام مستعار از `getST.py` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr getST.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/impacket-getst.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/impacket-getst.md"
+    },
+    {
+      "id": "tldr--4d289aee08fc",
+      "canonicalPath": "common/unxz.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "unxz",
+      "title": "unxz",
+      "summary": "این دستور یک نام مستعار از `xz --decompress` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr xz",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/unxz.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/unxz.md"
+    },
+    {
+      "id": "tldr--5f587af12926",
+      "canonicalPath": "linux/pw-record.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "pw-record",
+      "title": "pw-record",
+      "summary": "این دستور یک نام مستعار از `pw-cat --record` است.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/pw-record.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/pw-record.md"
+    },
+    {
+      "id": "tldr--65b9449a6a9f",
+      "canonicalPath": "common/clear.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "clear",
+      "title": "clear",
+      "summary": "پاک کردن صفحه ترمینال.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "پاک کردن صفحه (معادل فشردن کلیدهای کنترل+ال در پوسته بش) :",
+          "command": "clear",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/clear.md#L8"
+        },
+        {
+          "description": "پاک کردن صفحه ترمینال با نگاه داشتن حافظه :",
+          "command": "clear -x",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/clear.md#L12"
+        },
+        {
+          "description": "مشخص نمودن نوع ترمینال برای پاکسازی (مقدار پیشفرض در متغییر عمومی `$TERM`):",
+          "command": "clear -T {{type_of_terminal}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/clear.md#L16"
+        },
+        {
+          "description": "نمایش نسخه `ncurses` استفاده شده در `clear` :",
+          "command": "clear -V",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/clear.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/clear.md"
+    },
+    {
+      "id": "tldr--6d4afd4c6408",
+      "canonicalPath": "common/((.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "((",
+      "title": "((",
+      "summary": "این دستور یک نام مستعار از `let` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr let",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/((.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/((.md"
+    },
+    {
+      "id": "tldr--7a9d39ced36d",
+      "canonicalPath": "common/dd.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "dd",
+      "title": "dd",
+      "summary": "تبدیل و کپی یک فایل.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "dd--ce6372bb",
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "یک حافظه قابل حمل با قابلیت بوت شدن میسازد، برای مثال `archlinux-xxx.iso` :",
+          "command": "dd if={{path/to/file.iso}} of={{/dev/usb_drive}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dd.md#L8"
+        },
+        {
+          "description": "محتویات یک درایو را در مکانی دیگر با بلوک های 4 مگابایتی کپی و همچنین از خطاها صرف نظر میکند:",
+          "command": "dd bs=4194304 conv=noerror if={{/dev/source_drive}} of={{/dev/dest_drive}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dd.md#L12"
+        },
+        {
+          "description": "یک فایل ۱۰۰ بایتی تصادفی با استفاده از درایور تصادفی هسته بسازید:",
+          "command": "dd if=/dev/urandom of={{path/to/random_file}} bs=100 count={{1}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dd.md#L16"
+        },
+        {
+          "description": "عملکرد نوشتن دیسک را بسنجید:",
+          "command": "dd if=/dev/zero of={{path/to/file_1GB}} bs={{1024}} count={{1000000}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dd.md#L20"
+        },
+        {
+          "description": "یک پشتیبان از سیستم را در یک فایل IMG میسازد :",
+          "command": "dd if={{/dev/drive_device}} of={{path/to/file.img}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dd.md#L24"
+        },
+        {
+          "description": "یک درایو را از یک فایل IMG بازیابی کنید:",
+          "command": "dd if={{path/to/file.img}} of={{/dev/drive_device}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dd.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dd.md"
+    },
+    {
+      "id": "tldr--807c1b03ce59",
+      "canonicalPath": "common/rehash.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "rehash",
+      "title": "rehash",
+      "summary": "این دستور یک نام مستعار از `hash -r` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr hash",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/rehash.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/rehash.md"
+    },
+    {
+      "id": "tldr--8bc97416a339",
+      "canonicalPath": "common/huggingface-cli.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "huggingface-cli",
+      "title": "huggingface-cli",
+      "summary": "این دستور یک نام مستعار از `hf` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr hf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/huggingface-cli.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/huggingface-cli.md"
+    },
+    {
+      "id": "tldr--91b0c6209d1c",
+      "canonicalPath": "common/impacket-rpcdump.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "impacket-rpcdump",
+      "title": "impacket-rpcdump",
+      "summary": "این دستور یک نام مستعار از `rpcdump.py` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr rpcdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/impacket-rpcdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/impacket-rpcdump.md"
+    },
+    {
+      "id": "tldr--9e4bf094fa26",
+      "canonicalPath": "common/hping.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "hping",
+      "title": "hping",
+      "summary": "این دستور یک نام مستعار از `hping3` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr hping3",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/hping.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/hping.md"
+    },
+    {
+      "id": "tldr--a2e697f1fd03",
+      "canonicalPath": "common/impacket-psexec.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "impacket-psexec",
+      "title": "impacket-psexec",
+      "summary": "این دستور یک نام مستعار از `psexec.py` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr psexec.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/impacket-psexec.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/impacket-psexec.md"
+    },
+    {
+      "id": "tldr--a529e026045f",
+      "canonicalPath": "common/head.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "head",
+      "title": "head",
+      "summary": "نمایش محتوای ابتدایی یک فایل.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "نمایش چند خط اول یک فایل:",
+          "command": "head -n {{count}} {{path/to/file}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/head.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/head.md"
+    },
+    {
+      "id": "tldr--a57a6d44fd2a",
+      "canonicalPath": "linux/nmtui-connect.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "nmtui-connect",
+      "title": "nmtui-connect",
+      "summary": "این دستور یک نام مستعار از `nmtui connect` است.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/nmtui-connect.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/nmtui-connect.md"
+    },
+    {
+      "id": "tldr--a618d302e8ef",
+      "canonicalPath": "common/llvm-gcc.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "llvm-gcc",
+      "title": "llvm-gcc",
+      "summary": "این دستور یک نام مستعار از `clang` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr clang",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/llvm-gcc.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/llvm-gcc.md"
+    },
+    {
+      "id": "tldr--b05b4bc2d4f1",
+      "canonicalPath": "android/pm.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "pm",
+      "title": "pm",
+      "summary": "نمایش اطلاعات مربوط به برنامه های یک دستگاه اندروید.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "فهرست تمامی برنامه های نصب شده :",
+          "command": "pm list packages",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/pm.md#L8"
+        },
+        {
+          "description": "فهرست تمامی برنامه های سیستمی نصب شده :",
+          "command": "pm list packages -s",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/pm.md#L12"
+        },
+        {
+          "description": "فهرست تمامی برنامه های نصب شده شخض ثالث :",
+          "command": "pm list packages -3",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/pm.md#L16"
+        },
+        {
+          "description": "فهرست برنامه های منطبق با کلید واژه(ها) :",
+          "command": "pm list packages {{keyword1 keyword2 ...}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/pm.md#L20"
+        },
+        {
+          "description": "نمایش مسیر فایل APK یک برنامه مشخص :",
+          "command": "pm path {{app}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/pm.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/pm.md"
+    },
+    {
+      "id": "tldr--bca92a75fabb",
+      "canonicalPath": "common/git-stage.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "git",
+      "title": "git stage",
+      "summary": "این دستور یک نام مستعار از `git add` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr git add",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/git-stage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/git-stage.md"
+    },
+    {
+      "id": "tldr--caff5147878b",
+      "canonicalPath": "osx/aa.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "aa",
+      "title": "aa",
+      "summary": "این دستور یک نام مستعار از `yaa` است.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr yaa",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/osx/aa.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/osx/aa.md"
+    },
+    {
+      "id": "tldr--cd854619eebd",
+      "canonicalPath": "common/mkdir.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "mkdir",
+      "title": "mkdir",
+      "summary": "ساخت پوشه ها و تنظیم مجوز آنها.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "ساخت پوشه مشخص:",
+          "command": "mkdir {{path/to/directory1 path/to/directory2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/mkdir.md#L8"
+        },
+        {
+          "description": "ساخت پوشه های مشخص به همراه پوشه های والد در صورت نیاز:",
+          "command": "mkdir {{[-p|--parents]}} {{path/to/directory1 path/to/directory2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/mkdir.md#L12"
+        },
+        {
+          "description": "ساخت پوشه با مجوز های خاص:",
+          "command": "mkdir {{[-m|--mode]}} {{rwxrw-r--}} {{path/to/directory1 path/to/directory2 ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/mkdir.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/mkdir.md"
+    },
+    {
+      "id": "tldr--ddca73d046bf",
+      "canonicalPath": "common/getln.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "getln",
+      "title": "getln",
+      "summary": "این دستور یک نام مستعار از `read -zr` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr read",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/getln.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/getln.md"
+    },
+    {
+      "id": "tldr--ebce857fe663",
+      "canonicalPath": "common/impacket-secretsdump.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "impacket-secretsdump",
+      "title": "impacket-secretsdump",
+      "summary": "این دستور یک نام مستعار از `secretsdump.py` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr secretsdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/impacket-secretsdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/impacket-secretsdump.md"
+    },
+    {
+      "id": "tldr--f8667b14a43a",
+      "canonicalPath": "common/tar.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "tar",
+      "title": "tar",
+      "summary": "ابزار آرشیو کردن. اغلب با یک روش فشرده‌سازی مانند `gzip` یا `bzip2` ترکیب می‌شود.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "tar--1bc6b0b1",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "[c]ایجاد یک آرشیو و نوشتن آن در یک [f]فایل:",
+          "command": "tar cf {{path/to/target.tar}} {{path/to/file1 path/to/file2 ...}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tar.md#L9"
+        },
+        {
+          "description": "[c]ایجاد یک آرشیو g[z]ip شده و نوشتن آن در یک [f]فایل:",
+          "command": "tar czf {{path/to/target.tar.gz}} {{path/to/file1 path/to/file2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tar.md#L13"
+        },
+        {
+          "description": "[c]ایجاد یک آرشیو g[z]ip شده (فشرده) از یک پوشه با استفاده از مسیرهای نسبی:",
+          "command": "tar czf {{path/to/target.tar.gz}} {{[-C|--directory]}} {{path/to/directory}} .",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tar.md#L17"
+        },
+        {
+          "description": "استخراج [x] یک آرشیو (فشرده) [f]فایل در پوشه فعلی به صورت [v]کامل:",
+          "command": "tar xvf {{path/to/source.tar[.gz|.bz2|.xz]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tar.md#L21"
+        },
+        {
+          "description": "استخراج [x] یک آرشیو (فشرده) [f]فایل در پوشه مقصد:",
+          "command": "tar xf {{path/to/source.tar[.gz|.bz2|.xz]}} {{[-C|--directory]}} {{path/to/directory}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tar.md#L25"
+        },
+        {
+          "description": "[c]ایجاد یک آرشیو فشرده و نوشتن آن در یک [f]فایل، با استفاده از پسوند فایل برای تعیین [a]خودکار برنامه فشرده‌سازی:",
+          "command": "tar caf {{path/to/target.tar.xz}} {{path/to/file1 path/to/file2 ...}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tar.md#L29"
+        },
+        {
+          "description": "نمایش [t] محتویات یک فایل [f]tar به صورت [v]کامل:",
+          "command": "tar tvf {{path/to/source.tar}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tar.md#L33"
+        },
+        {
+          "description": "استخراج [x] فایل‌های منطبق با یک الگو از یک آرشیو [f]فایل:",
+          "command": "tar xf {{path/to/source.tar}} --wildcards \"{{*.html}}\"",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tar.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tar.md"
+    }
+  ]
+}

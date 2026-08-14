@@ -1,0 +1,1813 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "pt-BR",
+  "sourceLocale": "pt_BR",
+  "shard": "8",
+  "items": [
+    {
+      "id": "tldr--002a6f1cb1d5",
+      "canonicalPath": "linux/yum.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "yum",
+      "title": "yum",
+      "summary": "Gerenciador de pacotes utilitário para RHEL, Fedora e CentOS (para outras versões).",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Instala um novo pacote:",
+          "command": "yum install {{package}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/yum.md#L8"
+        },
+        {
+          "description": "Instala um novo pacote assumindo sim para todas as perguntas (também funciona com atualizações, ótimo para atualizações automáticas):",
+          "command": "yum -y install {{package}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/yum.md#L12"
+        },
+        {
+          "description": "Localiza o pacote que providência um comando particular:",
+          "command": "yum provides {{command}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/yum.md#L16"
+        },
+        {
+          "description": "Remove um pacote:",
+          "command": "yum remove {{package}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/yum.md#L20"
+        },
+        {
+          "description": "Exibe atualizações disponíveis para pacotes instalados:",
+          "command": "yum check-update",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/yum.md#L24"
+        },
+        {
+          "description": "Atualiza pacotes instalados para as novas versões disponíveis:",
+          "command": "yum upgrade",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/yum.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/yum.md"
+    },
+    {
+      "id": "tldr--00812f869fbb",
+      "canonicalPath": "common/mapfile.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "mapfile",
+      "title": "mapfile",
+      "summary": "Este comando é um apelido de `readarray`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr readarray",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/mapfile.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/mapfile.md"
+    },
+    {
+      "id": "tldr--00bde973fa89",
+      "canonicalPath": "common/ssh-agent.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "ssh-agent",
+      "title": "ssh-agent",
+      "summary": "Iniciar um processo do Agente SSH. Um Agente SSH mantém as chaves SSH descriptografadas na memória até serem removidas ou o processo ser encerrado. Veja também: `ssh-add`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git-with-openssh--49faf317",
+        "mls-software-openssh--6b012d8a",
+        "openssh--7291a89e"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Inicia um Agente SSH para o shell atual:",
+          "command": "eval $(ssh-agent)",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/ssh-agent.md#L10"
+        },
+        {
+          "description": "Encerra o Agente em execução atualmente:",
+          "command": "ssh-agent -k",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/ssh-agent.md#L14"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/ssh-agent.md"
+    },
+    {
+      "id": "tldr--01b05401cd9d",
+      "canonicalPath": "common/rsync.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "rsync",
+      "title": "rsync",
+      "summary": "Transfira arquivos para ou de um host remote (mas não entre dois hosts remotos), usando SSH por padrão. Para especificar um caminho remoto, use `host:caminho/para/arquivo_ou_diretório`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rsync--6bcbc5c9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Transfere um arquivo:",
+          "command": "rsync {{caminho/para/origem}} {{caminho/para/destino}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rsync.md#L9"
+        },
+        {
+          "description": "Usa o modo de arquivo (copia recursivamente diretórios, copia links simbólicos sem resolver e preserva permissões, propriedade e tempos de modificação):",
+          "command": "rsync {{[-a|--archive]}} {{caminho/para/origem}} {{caminho/para/destino}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rsync.md#L13"
+        },
+        {
+          "description": "Comprime os dados à medida que são enviados ao destino, exibe progresso detalhado e legível, e mantém arquivos parcialmente transferidos se forem interrompidos:",
+          "command": "rsync {{[-zvhP|--compress --verbose --human-readable --partial --progress]}} {{caminho/para/origem}} {{caminho/para/destino}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rsync.md#L17"
+        },
+        {
+          "description": "Copia recursivamente diretórios:",
+          "command": "rsync {{[-r|--recursive]}} {{caminho/para/origem}} {{caminho/para/destino}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rsync.md#L21"
+        },
+        {
+          "description": "Transfere os conteúdos do diretório, mas não o diretório em si:",
+          "command": "rsync {{[-r|--recursive]}} {{caminho/para/origem/}} {{caminho/para/destino}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rsync.md#L25"
+        },
+        {
+          "description": "Copia diretórios, usa o modo de arquivamento, resolve links simbólicos e ignora arquivos que são mais recentes no destino:",
+          "command": "rsync {{[-auL|--archive --update --copy-links]}} {{caminho/para/origem}} {{caminho/para/destino}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rsync.md#L29"
+        },
+        {
+          "description": "Transfere um diretório para um host remoto executando o `rsyncd` and exclui arquivos no destino que não existem na origem:",
+          "command": "rsync {{[-r|--recursive]}} --delete rsync://{{host}}:{{caminho/para/origem}} {{caminho/para/destino}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rsync.md#L33"
+        },
+        {
+          "description": "Transfere um arquivo por SSH usando uma porta diferente da padrão (22) e mostra o progresso global:",
+          "command": "rsync {{[-e|--rsh]}} 'ssh -p {{porta}}' --info=progress2 {{host}}:{{caminho/para/origem}} {{caminho/para/destino}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rsync.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rsync.md"
+    },
+    {
+      "id": "tldr--0281a74271c4",
+      "canonicalPath": "common/kite.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "kite",
+      "title": "kite",
+      "summary": "Este comando é um apelido de `kiterunner`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr kiterunner",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/kite.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/kite.md"
+    },
+    {
+      "id": "tldr--02ef304f3e76",
+      "canonicalPath": "linux/br.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "br",
+      "title": "br",
+      "summary": "Este comando é um apelido de `broot`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr broot",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/br.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/br.md"
+    },
+    {
+      "id": "tldr--127c3f907262",
+      "canonicalPath": "common/wpa_supplicant.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "wpa_supplicant",
+      "title": "wpa_supplicant",
+      "summary": "Gerenciador de redes wireless protegidas.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Entra em uma rede wireless protegida:",
+          "command": "wpa_supplicant -i {{interface}} -c {{caminho/para/wpa_supplicant_conf.conf}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/wpa_supplicant.md#L8"
+        },
+        {
+          "description": "Entra em uma rede wireless protegida e executa o wpa_cli em um daemon:",
+          "command": "wpa_supplicant -B -i {{interface}} -c {{caminho/para/wpa_supplicant_conf.conf}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/wpa_supplicant.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/wpa_supplicant.md"
+    },
+    {
+      "id": "tldr--1b067a29cc28",
+      "canonicalPath": "common/typeset.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "typeset",
+      "title": "typeset",
+      "summary": "Este comando é um apelido de `declare`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr declare",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/typeset.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/typeset.md"
+    },
+    {
+      "id": "tldr--1fa26d9c4900",
+      "canonicalPath": "common/unrar.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "unrar",
+      "title": "unrar",
+      "summary": "Descompactar arquivos comprimidos no formato RAR.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "unrar--950e3db3",
+        "unxutils--5bef4004",
+        "winrar--950e3db3",
+        "winrar-np--950e3db3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Descompacta o arquivo mantendo a estrutura de diretórios original:",
+          "command": "unrar x {{arquivo.rar}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/unrar.md#L8"
+        },
+        {
+          "description": "Descompacta o arquivo para um caminho especificado mantendo a estrutura de diretórios original:",
+          "command": "unrar x {{arquivo.rar}} {{caminho/para/extrair}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/unrar.md#L12"
+        },
+        {
+          "description": "Descompacta o arquivo sem manter a estrutura de diretórios original:",
+          "command": "unrar e {{arquivo.rar}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/unrar.md#L16"
+        },
+        {
+          "description": "Verifica a integridade do conteúdo de um arquivo:",
+          "command": "unrar t {{arquivo.rar}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/unrar.md#L20"
+        },
+        {
+          "description": "Exibe o conteúdo de um arquivo sem descompactá-lo:",
+          "command": "unrar l {{arquivo.rar}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/unrar.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/unrar.md"
+    },
+    {
+      "id": "tldr--3559dcb7bf58",
+      "canonicalPath": "osx/gtail.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "gtail",
+      "title": "gtail",
+      "summary": "Este comando é um apelido de `tail`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr {{[-p|--platform]}} common tail",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gtail.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gtail.md"
+    },
+    {
+      "id": "tldr--393ccc0ccc1b",
+      "canonicalPath": "common/wordgrinder.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "wordgrinder",
+      "title": "wordgrinder",
+      "summary": "Processador de texto em linha de comando.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "wordgrinder--67019c63"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Inicia o wordgrinder (carrega um documento vazio por padrão):",
+          "command": "wordgrinder",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/wordgrinder.md#L8"
+        },
+        {
+          "description": "Abre um arquivo específico:",
+          "command": "wordgrinder {{nome_do_arquivo}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/wordgrinder.md#L12"
+        },
+        {
+          "description": "Mostra o menu:",
+          "command": "<Alt m>",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/wordgrinder.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/wordgrinder.md"
+    },
+    {
+      "id": "tldr--4d26b77db447",
+      "canonicalPath": "common/banner.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "banner",
+      "title": "banner",
+      "summary": "Exibe o argumento inserido como um grande banner em arte ASCII.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Exibe uma mensagem em texto como banner (aspas são opcionais):",
+          "command": "banner \"{{Olá Mundo}}\"",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/banner.md#L8"
+        },
+        {
+          "description": "Exibe um banner com a largura de 50 caracteres:",
+          "command": "banner {{[-w|--width]}} 50 \"{{Olá Mundo}}\"",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/banner.md#L12"
+        },
+        {
+          "description": "Lê texto da `stdin`, isto é, da entrada padrão:",
+          "command": "banner",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/banner.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/banner.md"
+    },
+    {
+      "id": "tldr--4e64095e6bf8",
+      "canonicalPath": "osx/applecamerad.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "applecamerad",
+      "title": "applecamerad",
+      "summary": "Gerenciador de câmera. Não deve ser invocado manualmente.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Inicia o daemon:",
+          "command": "applecamerad",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/applecamerad.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/applecamerad.md"
+    },
+    {
+      "id": "tldr--5371a9d32482",
+      "canonicalPath": "linux/megadl.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "megadl",
+      "title": "megadl",
+      "summary": "Este comando é um apelido de `megatools-dl`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr megatools-dl",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/megadl.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/megadl.md"
+    },
+    {
+      "id": "tldr--58c03fd6f29d",
+      "canonicalPath": "common/impacket-getadusers.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "impacket-GetADUsers",
+      "title": "impacket-GetADUsers",
+      "summary": "Este comando é um apelido de `GetADUsers.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr GetADUsers.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/impacket-getadusers.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/impacket-getadusers.md"
+    },
+    {
+      "id": "tldr--5d4d530d5c17",
+      "canonicalPath": "osx/archey.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "archey",
+      "title": "archey",
+      "summary": "Ferramenta simples para exibir as informações do sistema com estilo.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Mostra informações do sistema:",
+          "command": "archey",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/archey.md#L8"
+        },
+        {
+          "description": "Mostra informações do sistema sem saída colorida:",
+          "command": "archey --nocolor",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/archey.md#L12"
+        },
+        {
+          "description": "Mostra informações do sistema, usando MacPorts em vez de Homebrew:",
+          "command": "archey --macports",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/archey.md#L16"
+        },
+        {
+          "description": "Mostra informações do sistema sem verificação de endereço IP:",
+          "command": "archey --offline",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/archey.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/archey.md"
+    },
+    {
+      "id": "tldr--65e6a3d335a0",
+      "canonicalPath": "common/base32.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "base32",
+      "title": "base32",
+      "summary": "Codifica ou decodifica um arquivo ou a entrada padrão (`stdin`) de/para Base32, para a saída padrão (`stdout`).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Codifica um arquivo:",
+          "command": "base32 {{caminho/para/arquivo}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/base32.md#L8"
+        },
+        {
+          "description": "Envolve a saída codificada em uma largura específica (`0` desabilita o encapsulamento):",
+          "command": "base32 {{[-w|--wrap]}} {{0|76|...}} {{caminho/para/arquivo}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/base32.md#L12"
+        },
+        {
+          "description": "Decodifica um arquivo:",
+          "command": "base32 {{[-d|--decode]}} {{caminho/para/arquivo}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/base32.md#L16"
+        },
+        {
+          "description": "Codifica a partir de `stdin`:",
+          "command": "{{algum_comando}} | base32",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/base32.md#L20"
+        },
+        {
+          "description": "Decodifica a partir de `stdin`:",
+          "command": "{{algum_comando}} | base32 {{[-d|--decode]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/base32.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/base32.md"
+    },
+    {
+      "id": "tldr--66219ef97f0c",
+      "canonicalPath": "common/yt-dlp.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "yt-dlp",
+      "title": "yt-dlp",
+      "summary": "Um fork do youtube-dl com novas funções e correções. Baixe videos do YouTube e outros sites. Veja também: `ytfzf`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "yt-dlp--08eee2f0",
+        "yt-dlp-master--b62b97df",
+        "yt-dlp-nightly--44f25745"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Baixa um video ou playlist (com as opções padrão do comando abaixo):",
+          "command": "yt-dlp \"{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}\"",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yt-dlp.md#L10"
+        },
+        {
+          "description": "Lista os formatos disponíveis para download de um vídeo:",
+          "command": "yt-dlp {{[-F|--list-formats]}} \"{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}\"",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yt-dlp.md#L14"
+        },
+        {
+          "description": "Baixa um vídeo ou playlist usando o melhor vídeo MP4 disponível (o padrão é \"bv\\*+ba/b\"):",
+          "command": "yt-dlp {{[-f|--format]}} \"{{bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]}}\" \"{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}\"",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yt-dlp.md#L18"
+        },
+        {
+          "description": "Extrai o áudio de um vídeo (requer ffmpeg ou ffprobe):",
+          "command": "yt-dlp {{[-x|--extract-audio]}} \"{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}\"",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yt-dlp.md#L22"
+        },
+        {
+          "description": "Especifica o formato e a qualidade do áudio extraido (entre 0 (maior qualidade) e 10 (menor qualidade), padrão = 5):",
+          "command": "yt-dlp {{[-x|--extract-audio]}} --audio-format {{mp3}} --audio-quality {{0}} \"{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}\"",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yt-dlp.md#L26"
+        },
+        {
+          "description": "Baixa apenas o segundo, quarto, quinto, sexto e último item de uma playlist (o primeiro item é 1, e não 0):",
+          "command": "yt-dlp {{[-I|--playlist-items]}} 2,4:6,-1 \"{{https://youtube.com/playlist?list=PLbzoR-pLrL6pTJfLQ3UwtB-3V4fimdqnA}}\"",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yt-dlp.md#L30"
+        },
+        {
+          "description": "Baixa todas as playlists de um canal/usuário do YouTube mantendo cada playlist em um diretório separado:",
+          "command": "yt-dlp {{[-o|--output]}} \"{{%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s}}\" \"{{https://www.youtube.com/user/TheLinuxFoundation/playlists}}\"",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yt-dlp.md#L34"
+        },
+        {
+          "description": "Baixa um curso da Udemy mantendo cada capítulo em um diretório separado:",
+          "command": "yt-dlp {{[-u|--username]}} {{usuário}} {{[-p|--password]}} {{senha}} {{[-P|--paths]}} \"{{caminho/para/diretório}}\" {{[-o|--output]}} \"{{%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s}}\" \"{{https://www.udemy.com/java-tutorial}}\"",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yt-dlp.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yt-dlp.md"
+    },
+    {
+      "id": "tldr--66e2dd2529a2",
+      "canonicalPath": "linux/pacman4console.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "pacman4console",
+      "title": "pacman4console",
+      "summary": "Um jogo de console baseado em texto inspirado no Pacman original.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Inicia um jogo no nível 1:",
+          "command": "pacman4console",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pacman4console.md#L8"
+        },
+        {
+          "description": "Inicia um jogo em determinado nível (há nove níveis oficiais):",
+          "command": "pacman4console --level={{numero_nivel}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pacman4console.md#L12"
+        },
+        {
+          "description": "Inicia o editor de níveis do pacman4console, salvando em um arquivo texto especificado:",
+          "command": "pacman4consoleedit {{caminho/para/arquivo_nivel}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pacman4console.md#L16"
+        },
+        {
+          "description": "Joga um nível personalizado:",
+          "command": "pacman4console --level={{caminho/para/arquivo_nivel}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pacman4console.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pacman4console.md"
+    },
+    {
+      "id": "tldr--75d7d53380c8",
+      "canonicalPath": "windows/ghy.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "ghy",
+      "title": "ghy",
+      "summary": "Este comando é um apelido de `Get-History`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr Get-History",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/windows/ghy.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/windows/ghy.md"
+    },
+    {
+      "id": "tldr--76bc6c17e26c",
+      "canonicalPath": "common/arch.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "arch",
+      "title": "arch",
+      "summary": "Este comando é um apelido de `uname --machine`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "archwsl--c36105af",
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr uname",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/arch.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/arch.md"
+    },
+    {
+      "id": "tldr--787f0a8bad22",
+      "canonicalPath": "common/yes.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "yes",
+      "title": "yes",
+      "summary": "Exibe algo repetidamente.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Exibir a palavra \"mensagem\" repetidamente:",
+          "command": "yes {{mensagem}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yes.md#L8"
+        },
+        {
+          "description": "Exibir a letra \"y\" repetidamente:",
+          "command": "yes",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yes.md#L12"
+        },
+        {
+          "description": "Aceitar tudo solicitado pelo comando `apt-get`:",
+          "command": "yes | sudo apt-get install {{programa}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yes.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/yes.md"
+    },
+    {
+      "id": "tldr--79d6fab5585d",
+      "canonicalPath": "common/pamnoraw.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "pamnoraw",
+      "title": "pamnoraw",
+      "summary": "Este comando é um apelido de `pamtopnm -plain`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr pamtopnm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/pamnoraw.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/pamnoraw.md"
+    },
+    {
+      "id": "tldr--7e4b37895a64",
+      "canonicalPath": "windows/cls.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "cls",
+      "title": "cls",
+      "summary": "Limpar a tela de saída. No PowerShell, este comando é um apelido de `Clear-Host`. Esta documentação é baseada na versão Prompt de Comando (`cmd`) do `cls`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Exibe a documentação do comando equivalente do PowerShell:",
+          "command": "tldr clear-host",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/windows/cls.md#L9"
+        },
+        {
+          "description": "Limpa a tela:",
+          "command": "cls",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/windows/cls.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/windows/cls.md"
+    },
+    {
+      "id": "tldr--819501d706bb",
+      "canonicalPath": "osx/getfileinfo.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "GetFileInfo",
+      "title": "GetFileInfo",
+      "summary": "Obtém informações sobre um arquivo em um diretório HFS+.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Exibe informações sobre um determinado arquivo:",
+          "command": "GetFileInfo {{caminho/para/nome_do_arquivo}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/getfileinfo.md#L8"
+        },
+        {
+          "description": "Exibe a data e hora em que um determinado arquivo foi criado:",
+          "command": "GetFileInfo -d {{caminho/para/nome_do_arquivo}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/getfileinfo.md#L12"
+        },
+        {
+          "description": "Exibe a data e hora em que um determinado arquivo foi modificado pela última vez:",
+          "command": "GetFileInfo -m {{caminho/para/nome_do_arquivo}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/getfileinfo.md#L16"
+        },
+        {
+          "description": "Exibe o criador de um determinado arquivo:",
+          "command": "GetFileInfo -c {{caminho/para/nome_do_arquivo}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/getfileinfo.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/getfileinfo.md"
+    },
+    {
+      "id": "tldr--829439e5e0f9",
+      "canonicalPath": "osx/gpinky.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "gpinky",
+      "title": "gpinky",
+      "summary": "Este comando é um apelido de `pinky`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr pinky",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gpinky.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gpinky.md"
+    },
+    {
+      "id": "tldr--84dde4d8b932",
+      "canonicalPath": "osx/gchgrp.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "gchgrp",
+      "title": "gchgrp",
+      "summary": "Este comando é um apelido de `chgrp`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr chgrp",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gchgrp.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gchgrp.md"
+    },
+    {
+      "id": "tldr--92089c17e4ba",
+      "canonicalPath": "linux/brctl.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "brctl",
+      "title": "brctl",
+      "summary": "Administração de pontes de rede.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Exibe uma lista com informações das pontes de rede existentes:",
+          "command": "sudo brctl show",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/brctl.md#L8"
+        },
+        {
+          "description": "Cria uma ponte de rede:",
+          "command": "sudo brctl add {{nome_da_ponte}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/brctl.md#L12"
+        },
+        {
+          "description": "Remove uma ponte de rede:",
+          "command": "sudo brctl del {{nome_da_ponte}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/brctl.md#L16"
+        },
+        {
+          "description": "Adiciona uma interface de rede em uma ponte de rede existente:",
+          "command": "sudo brctl addif {{nome_da_ponte}} {{nome_da_interface_de_rede}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/brctl.md#L20"
+        },
+        {
+          "description": "Remove uma interface de rede de uma ponte de rede existente:",
+          "command": "sudo brctl delif {{nome_da_ponte}} {{nome_da_interface_de_rede}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/brctl.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/brctl.md"
+    },
+    {
+      "id": "tldr--921065ddc04d",
+      "canonicalPath": "linux/archey.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "archey",
+      "title": "archey",
+      "summary": "Ferramenta que exibe informações do sistema de forma estilizada.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Exibe as informações do sistema:",
+          "command": "archey",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/archey.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/archey.md"
+    },
+    {
+      "id": "tldr--929b3c9edd97",
+      "canonicalPath": "common/bzegrep.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "bzegrep",
+      "title": "bzegrep",
+      "summary": "Este comando é um apelido de `bzgrep --extended-regexp`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr bzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/bzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/bzegrep.md"
+    },
+    {
+      "id": "tldr--9d9ad2e29a15",
+      "canonicalPath": "common/fnm.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "fnm",
+      "title": "fnm",
+      "summary": "Gerenciador de versão Node.js rápido. Instale, Desinstale ou alterne entre as versões do Node.js.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "fnm--110b0817"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Instala uma versão específica do Node.js:",
+          "command": "fnm install {{versão_do_node}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fnm.md#L9"
+        },
+        {
+          "description": "Lista todas as versões disponíveis do Node.js e destaca a padrão:",
+          "command": "fnm list",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fnm.md#L13"
+        },
+        {
+          "description": "Usa uma versão específica do Node.js no shell atual:",
+          "command": "fnm use {{versão_do_node}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fnm.md#L17"
+        },
+        {
+          "description": "Define a versão padrão do Node.js:",
+          "command": "fnm default {{versão_do_node}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fnm.md#L21"
+        },
+        {
+          "description": "Desinstala uma determinada versão do Node.js:",
+          "command": "fnm uninstall {{versão_do_node}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fnm.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fnm.md"
+    },
+    {
+      "id": "tldr--9eff7bc15253",
+      "canonicalPath": "common/impacket-gettgt.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "impacket-getTGT",
+      "title": "impacket-getTGT",
+      "summary": "Este comando é um apelido de `getTGT.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr getTGT.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/impacket-gettgt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/impacket-gettgt.md"
+    },
+    {
+      "id": "tldr--9f9b101cf604",
+      "canonicalPath": "osx/arch.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "arch",
+      "title": "arch",
+      "summary": "Exibe o nome da arquitetura do sistema ou executa um comando em uma arquitetura diferente. Veja também: `uname`.",
+      "platform": "macos",
+      "softwareIds": [
+        "archwsl--c36105af",
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Exibe o nome da arquitetura do sistema:",
+          "command": "arch",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/arch.md#L9"
+        },
+        {
+          "description": "Executa um comando usando a arquitetura x86_64:",
+          "command": "arch -x86_64 \"{{comando}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/arch.md#L13"
+        },
+        {
+          "description": "Executa um comando usando arm:",
+          "command": "arch -arm64 \"{{comando}}\"",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/arch.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/arch.md"
+    },
+    {
+      "id": "tldr--a20f2e292bf8",
+      "canonicalPath": "common/btm.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "btm",
+      "title": "btm",
+      "summary": "Uma alternativa ao `top`. Tem como objetivo ser leve, multiplataforma e mais gráfico que o `top`. Veja também: `btop`, `glances`, `atop`, `htop`, `top`, `sensors`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bottom--7eb30dcb",
+        "bottom-nightly--4262281f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Exibe o layout padrão (CPU, memória, temperaturas, disco, rede e processos):",
+          "command": "btm",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/btm.md#L10"
+        },
+        {
+          "description": "Ativa o modo básico, removendo gráficos e condensando dados (semelhante a `top`):",
+          "command": "btm {{[-b|--basic]}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/btm.md#L14"
+        },
+        {
+          "description": "Usa pontos grandes em vez de pequenos em gráficos:",
+          "command": "btm {{[-m|--dot_marker]}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/btm.md#L18"
+        },
+        {
+          "description": "Exibe também a carga da bateria e o estado de saúde:",
+          "command": "btm --battery",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/btm.md#L22"
+        },
+        {
+          "description": "Atualiza a cada 250 milissegundos e exibe os últimos 30 segundos nos gráficos:",
+          "command": "btm {{[-r|--rate]}} 250 {{[-t|--default_time_value]}} 30000",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/btm.md#L26"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/btm.md"
+    },
+    {
+      "id": "tldr--a853f0397c68",
+      "canonicalPath": "linux/archinstall.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "archinstall",
+      "title": "archinstall",
+      "summary": "Instalador do Arch Linux guiado com uma torção.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Inicia o instalador interativo:",
+          "command": "archinstall",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/archinstall.md#L8"
+        },
+        {
+          "description": "Inicia um instalador predefinido:",
+          "command": "archinstall {{minimal|unattended}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/archinstall.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/archinstall.md"
+    },
+    {
+      "id": "tldr--a97d7ab26730",
+      "canonicalPath": "osx/gsha512sum.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "gsha512sum",
+      "title": "gsha512sum",
+      "summary": "Este comando é um apelido de `sha512sum`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr sha512sum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gsha512sum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gsha512sum.md"
+    },
+    {
+      "id": "tldr--ab73275ab290",
+      "canonicalPath": "common/sshd.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "sshd",
+      "title": "sshd",
+      "summary": "Daemon do Secure Shell - permite que máquinas remotas façam login de forma segura na máquina atual. Máquinas remotas podem executar comandos como se estivessem sendo executados nesta máquina.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "mina-sshd--7d588911",
+        "openssh--7291a89e"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Inicia o daemon em segundo plano:",
+          "command": "sshd",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sshd.md#L9"
+        },
+        {
+          "description": "Executa o sshd em primeiro plano:",
+          "command": "sshd -D",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sshd.md#L13"
+        },
+        {
+          "description": "Executa com saída detalhada (para depuração):",
+          "command": "sshd -D -d",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sshd.md#L17"
+        },
+        {
+          "description": "Executa em uma porta específica:",
+          "command": "sshd -p {{porta}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sshd.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sshd.md"
+    },
+    {
+      "id": "tldr--afd5abe54cf9",
+      "canonicalPath": "osx/avbdeviced.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "avbdeviced",
+      "title": "avbdeviced",
+      "summary": "Serviço para gerenciar dispositivos Audio Video Bridging (AVB). Não deve ser invocado manualmente.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Inicia o daemon:",
+          "command": "avbdeviced",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/avbdeviced.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/avbdeviced.md"
+    },
+    {
+      "id": "tldr--b22fc4aeb107",
+      "canonicalPath": "linux/pi.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "pi",
+      "title": "pi",
+      "summary": "Calcula a constante decimal de Arquimedes Pi na linha de comando.",
+      "platform": "linux",
+      "softwareIds": [
+        "pi-coding-agent--145c8729"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Exibe 100 dígitos decimais da constante de Archimedes Pi:",
+          "command": "pi",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pi.md#L8"
+        },
+        {
+          "description": "Exibe um número específico de dígitos decimais da constante de Archimedes Pi:",
+          "command": "pi {{number}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pi.md#L12"
+        },
+        {
+          "description": "Exibe leituras recomendadas:",
+          "command": "pi --bibliography",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pi.md#L16"
+        },
+        {
+          "description": "Exibe ajuda:",
+          "command": "pi --help",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pi.md#L20"
+        },
+        {
+          "description": "Exibe a versão:",
+          "command": "pi --version",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pi.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/pi.md"
+    },
+    {
+      "id": "tldr--ba3e496f38ee",
+      "canonicalPath": "common/clang-format.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "clang-format",
+      "title": "clang-format",
+      "summary": "Formata automaticamente código C/C++/Java/JavaScript/Objective-C/Protobuf/C#.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "clang-format--0ff6d2d9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Formata um arquivo e exibe o resultado para a `stdout` (saída padrão):",
+          "command": "clang-format {{caminho/para/arquivo}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/clang-format.md#L8"
+        },
+        {
+          "description": "Formata um arquivo \"in-place\", ou seja, salvando nele mesmo:",
+          "command": "clang-format -i {{caminho/para/arquivo}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/clang-format.md#L12"
+        },
+        {
+          "description": "Formata um arquivo usando um estilo de código predefinido:",
+          "command": "clang-format --style {{LLVM|GNU|Google|Chromium|Microsoft|Mozilla|WebKit}} {{caminho/para/arquivo}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/clang-format.md#L16"
+        },
+        {
+          "description": "Formata um arquivo usando o arquivo `.clang-format` em um dos diretórios pais do arquivo fonte:",
+          "command": "clang-format --style file {{caminho/para/arquivo}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/clang-format.md#L20"
+        },
+        {
+          "description": "Gera um arquivo `.clang-format` personalizado:",
+          "command": "clang-format --style {{LLVM|GNU|Google|Chromium|Microsoft|Mozilla|WebKit}} --dump-config > {{.clang-format}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/clang-format.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/clang-format.md"
+    },
+    {
+      "id": "tldr--bba6dcf1e656",
+      "canonicalPath": "common/fd.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "fd",
+      "title": "fd",
+      "summary": "Uma alternativa para `find`. Visa ser mais rápido e fácil de usar do que `find`. Veja também: `find`, `regex`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "fd--eee24c97"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Encontra recursivamente arquivos que correspondam ao padrão fornecido no diretório atual:",
+          "command": "fd \"{{padrão|regex}}\"",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fd.md#L10"
+        },
+        {
+          "description": "Encontra arquivos que começam com `foo`:",
+          "command": "fd \"^foo\"",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fd.md#L14"
+        },
+        {
+          "description": "Encontra arquivos com uma extensão específica:",
+          "command": "fd --extension txt",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fd.md#L18"
+        },
+        {
+          "description": "Encontra arquivos em um diretório específico:",
+          "command": "fd \"{{padrão|regex}}\" {{caminho/para/diretório}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fd.md#L22"
+        },
+        {
+          "description": "Inclui arquivos ignorados e ocultos na pesquisa:",
+          "command": "fd --hidden --no-ignore \"{{padrão|regex}}\"",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fd.md#L26"
+        },
+        {
+          "description": "Executa um comando em cada resultado de pesquisa retornado:",
+          "command": "fd \"{{padrão|regex}}\" --exec {{comando}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fd.md#L30"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fd.md"
+    },
+    {
+      "id": "tldr--c30074ba6b6a",
+      "canonicalPath": "common/xz.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "xz",
+      "title": "xz",
+      "summary": "Compactar ou descompactar arquivos XZ ou LZMA.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "xz--b3975212"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Compacta um arquivo no formato xz:",
+          "command": "xz {{caminho/para/arquivo}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/xz.md#L8"
+        },
+        {
+          "description": "Descompacta um arquivo no formato xz:",
+          "command": "xz {{[-d|--decompress]}} {{caminho/para/arquivo.xz}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/xz.md#L12"
+        },
+        {
+          "description": "Compacta um arquivo no formato LZMA:",
+          "command": "xz {{[-F|--format]}} lzma {{caminho/para/arquivo}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/xz.md#L16"
+        },
+        {
+          "description": "Descompacta um arquivo no formato LZMA:",
+          "command": "xz {{[-d|--decompress]}} {{[-F|--format]}} lzma {{caminho/para/arquivo.lzma}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/xz.md#L20"
+        },
+        {
+          "description": "Descompacta um arquivo e escrever a saída no terminal (implica `--keep`):",
+          "command": "xz {{[-d|--decompress]}} {{[-c|--stdout]}} {{caminho/para/arquivo.xz}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/xz.md#L24"
+        },
+        {
+          "description": "Compacta um arquivo sem apagar o arquivo original:",
+          "command": "xz {{[-k|--keep]}} {{caminho/para/arquivo}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/xz.md#L28"
+        },
+        {
+          "description": "Compacta um arquivo utilizando a compactação mais rápida:",
+          "command": "xz -0 {{caminho/para/arquivo}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/xz.md#L32"
+        },
+        {
+          "description": "Compacta um arquivo utilizando a compactação mais eficiente:",
+          "command": "xz -9 {{caminho/para/arquivo}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/xz.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/xz.md"
+    },
+    {
+      "id": "tldr--c915fdd0afd8",
+      "canonicalPath": "linux/alternatives.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "alternatives",
+      "title": "alternatives",
+      "summary": "Este comando é um apelido de `update-alternatives`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr update-alternatives",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/alternatives.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/alternatives.md"
+    },
+    {
+      "id": "tldr--d72ca9dd8b5e",
+      "canonicalPath": "common/google-chrome.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "google-chrome",
+      "title": "google-chrome",
+      "summary": "Este comando é um apelido de `chromium`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "google-chrome--90e5e298"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Exibe documentação sobre o comando original:",
+          "command": "tldr chromium",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/google-chrome.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/google-chrome.md"
+    },
+    {
+      "id": "tldr--d8a6b1f41167",
+      "canonicalPath": "osx/fdesetup.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "fdesetup",
+      "title": "fdesetup",
+      "summary": "Define e recupera informações relacionadas ao FileVault.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Lista os usuários atuais habilitados para o FileVault:",
+          "command": "sudo fdesetup list",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/fdesetup.md#L8"
+        },
+        {
+          "description": "Obtém o status atual do FileVault:",
+          "command": "fdesetup status",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/fdesetup.md#L12"
+        },
+        {
+          "description": "Adiciona usuário habilitado para o FileVault:",
+          "command": "sudo fdesetup add -usertoadd {{usuário1}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/fdesetup.md#L16"
+        },
+        {
+          "description": "Ativa o FileVault:",
+          "command": "sudo fdesetup enable",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/fdesetup.md#L20"
+        },
+        {
+          "description": "Desativa o FileVault:",
+          "command": "sudo fdesetup disable",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/fdesetup.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/fdesetup.md"
+    },
+    {
+      "id": "tldr--db306fe9bf47",
+      "canonicalPath": "linux/yum-config-manager.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "yum",
+      "title": "yum config-manager",
+      "summary": "Este comando é um apelido de `dnf config-manager`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr dnf config-manager",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/yum-config-manager.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/linux/yum-config-manager.md"
+    },
+    {
+      "id": "tldr--dd9b9362fef7",
+      "canonicalPath": "common/sh.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "sh",
+      "title": "sh",
+      "summary": "Bourne shell, o interpretador padrão da linha de comando. Veja também: `!`, `^`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git-with-openssh--49faf317",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Inicie uma sessão shell interativa:",
+          "command": "sh",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sh.md#L9"
+        },
+        {
+          "description": "Execute um comando e então saia da shell:",
+          "command": "sh -c \"{{comando}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sh.md#L13"
+        },
+        {
+          "description": "Execute um script:",
+          "command": "sh {{caminho/para/script.sh}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sh.md#L17"
+        },
+        {
+          "description": "Leia e execute comandos da entrada `stdin` (entrada padrão):",
+          "command": "sh -s",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sh.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/sh.md"
+    },
+    {
+      "id": "tldr--e407296beeb5",
+      "canonicalPath": "common/fc.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "fc",
+      "title": "fc",
+      "summary": "Abre o último comando executado em um editor de texto. Veja também: `history`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Abre o último comando executado no editor de texto padrão do sistema:",
+          "command": "fc",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fc.md#L9"
+        },
+        {
+          "description": "Especifica o editor de texto que será utilizado ao executar o comando:",
+          "command": "fc -e '{{emacs}}'",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fc.md#L13"
+        },
+        {
+          "description": "Exibe um histórico dos últimos comandos executados:",
+          "command": "fc -l",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fc.md#L17"
+        },
+        {
+          "description": "Lista os comandos recentes em ordem reversa:",
+          "command": "fc -l -r",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fc.md#L21"
+        },
+        {
+          "description": "Edita e executa um comando do histórico:",
+          "command": "fc {{número}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fc.md#L25"
+        },
+        {
+          "description": "Edita comandos em um dado intervalo e executa-os:",
+          "command": "fc '{{416}}' '{{420}}'",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fc.md#L29"
+        },
+        {
+          "description": "Mosta ajuda:",
+          "command": "fc --help",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fc.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/fc.md"
+    },
+    {
+      "id": "tldr--e6042ee5feb5",
+      "canonicalPath": "common/rcat.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "rcat",
+      "title": "rcat",
+      "summary": "Este comando é um apelido de `rc`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr rc",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rcat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/common/rcat.md"
+    },
+    {
+      "id": "tldr--ebcdd2961960",
+      "canonicalPath": "osx/duti.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "duti",
+      "title": "duti",
+      "summary": "Define os aplicativos padrão para tipos de documentos e esquemas de URL no macOS. Veja também: `osascript`.",
+      "platform": "macos",
+      "softwareIds": [
+        "duti--45469b9e"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Define o Safari como o manipulador padrão de documentos HTML:",
+          "command": "duti -s {{com.apple.Safari}} {{public.html}} all",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/duti.md#L9"
+        },
+        {
+          "description": "Define o VLC como visualizador padrão para arquivos com extensões `.m4v`:",
+          "command": "duti -s {{org.videolan.vlc}} {{m4v}} viewer",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/duti.md#L13"
+        },
+        {
+          "description": "Define o Finder como o manipulador padrão para esquema de URL ftp://:",
+          "command": "duti -s {{com.apple.Finder}} \"{{ftp}}\"",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/duti.md#L17"
+        },
+        {
+          "description": "Exibe informações sobre o aplicativo padrão para uma determinada extensão:",
+          "command": "duti -x {{ext}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/duti.md#L21"
+        },
+        {
+          "description": "Exibe o manipulador padrão para um determinado UTI:",
+          "command": "duti -d {{uti}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/duti.md#L25"
+        },
+        {
+          "description": "Exibe todos os manipuladores de um determinado UTI:",
+          "command": "duti -l {{uti}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/duti.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/duti.md"
+    },
+    {
+      "id": "tldr--f2f92bd429de",
+      "canonicalPath": "osx/gstdbuf.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "gstdbuf",
+      "title": "gstdbuf",
+      "summary": "Este comando é um apelido de `stdbuf`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr stdbuf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gstdbuf.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/osx/gstdbuf.md"
+    },
+    {
+      "id": "tldr--fd405606b80e",
+      "canonicalPath": "windows/gcb.md",
+      "locale": "pt-BR",
+      "sourceLocale": "pt_BR",
+      "name": "gcb",
+      "title": "gcb",
+      "summary": "Este comando é um apelido de `Get-Clipboard`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Veja documentação sobre o comando original:",
+          "command": "tldr get-clipboard",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/windows/gcb.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.pt_BR/windows/gcb.md"
+    }
+  ]
+}

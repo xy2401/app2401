@@ -1,0 +1,3366 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "de",
+  "sourceLocale": "de",
+  "shard": "9",
+  "items": [
+    {
+      "id": "tldr--0230bc38f600",
+      "canonicalPath": "common/git-bisect.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git bisect",
+      "summary": "Benutzt binäre Suche um den commit ausfindig zu machen, welcher einen Fehler beinhaltet. Git springt im Commit-Graph automatisch vor und zurück, um den fehlerhaften Commit schrittweise eingrenzen zu können.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Starte eine Bisect-Session in einem Commit-Bereich, der durch einen bekannten fehlerhaften Commit und einen sauberen Commit begrenzt wird:",
+          "command": "git bisect start {{fehlerhafter_commit}} {{sauberer_commit}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-bisect.md#L9"
+        },
+        {
+          "description": "Prüfe jeden Commit, den `git bisect` auswählt, und kennzeichne ihn mit \"gut\" oder \"schlecht\":",
+          "command": "git bisect {{good|bad}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-bisect.md#L13"
+        },
+        {
+          "description": "Wechsle zum vorherigen Branch zurück, nachdem der fehlerhafte Commit lokalisiert wurde:",
+          "command": "git bisect reset",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-bisect.md#L17"
+        },
+        {
+          "description": "Überspringe einen Commit während der Bisect-Session (z.B. einen, der die Tests aufgrund eines anderen Problems nicht bestanden hat):",
+          "command": "git bisect skip",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-bisect.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-bisect.md"
+    },
+    {
+      "id": "tldr--07e275ea22c0",
+      "canonicalPath": "common/az-logout.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "az",
+      "title": "az logout",
+      "summary": "Von Azure-Abonnements abmelden. Teil von `azure-cli` (auch bekannt als `az`).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "azure-cli--f5ca91d3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Melde das aktuelle aktive Konto ab:",
+          "command": "az logout",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-logout.md#L9"
+        },
+        {
+          "description": "Melde einen spezifischen Benutzernamen ab:",
+          "command": "az logout --username {{alias@somedomain.com}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-logout.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-logout.md"
+    },
+    {
+      "id": "tldr--0ca672185525",
+      "canonicalPath": "common/git-add.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git add",
+      "summary": "Füge Dateien zum Index/Stage hinzu.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Füge eine bestimmte Datei zum Index hinzu:",
+          "command": "git add {{pfad/zu/datei}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-add.md#L8"
+        },
+        {
+          "description": "Füge alle Dateien zum Index hinzu (nachverfolgte und nicht nachverfolgte):",
+          "command": "git add {{[-A|--all]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-add.md#L12"
+        },
+        {
+          "description": "Füge nur nachverfolgte Dateien zum Index hinzu (Updaten des Index):",
+          "command": "git add {{[-u|--update]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-add.md#L16"
+        },
+        {
+          "description": "Füge auch Dateien, welche ignoriert werden (`.gitignore`) hinzu:",
+          "command": "git add {{[-f|--force]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-add.md#L20"
+        },
+        {
+          "description": "Füge Teile von Dateien zum Index interaktiv hinzu:",
+          "command": "git add {{[-p|--patch]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-add.md#L24"
+        },
+        {
+          "description": "Füge Teile einer bestimmten Datei interaktiv hinzu:",
+          "command": "git add {{[-p|--patch]}} {{pfad/zu/datei}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-add.md#L28"
+        },
+        {
+          "description": "Füge Dateien zum Index interaktiv hinzu:",
+          "command": "git add {{[-i|--interactive]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-add.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-add.md"
+    },
+    {
+      "id": "tldr--144c12cc5a25",
+      "canonicalPath": "osx/gshred.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gshred",
+      "title": "gshred",
+      "summary": "Dieser Befehl ist ein Alias von `shred`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr shred",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gshred.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gshred.md"
+    },
+    {
+      "id": "tldr--23b1aa76ee00",
+      "canonicalPath": "common/clang++.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "clang++",
+      "title": "clang++",
+      "summary": "Kompiliert C++ Quelldateien. Teil von LLVM.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Kompiliere eine Quelldatei in eine ausführbare Binärdatei:",
+          "command": "clang++ {{pfad/zu/quelldatei.cpp}} {{[-o|--output]}} {{pfad/zu/binärdatei}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clang%2B%2B.md#L9"
+        },
+        {
+          "description": "Zeige geläufige Fehler und Warnungen an:",
+          "command": "clang++ {{pfad/zu/quelldatei.cpp}} -Wall {{[-o|--output]}} {{pfad/zu/binärdatei}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clang%2B%2B.md#L13"
+        },
+        {
+          "description": "Wähle einen Sprachstandard für die Kompilation aus:",
+          "command": "clang++ {{pfad/zu/quelldatei.cpp}} -std={{c++20}} {{[-o|--output]}} {{pfad/zu/binärdatei}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clang%2B%2B.md#L17"
+        },
+        {
+          "description": "Binde Bibliotheken, die sich an einem anderen Pfad als die Quelldatei befinden, ein:",
+          "command": "clang++ {{pfad/zu/qelldatei.cpp}} {{[-o|--output]}} {{pfad/zu/binärdatei}} -I{{pfad/zu/headerdatei}} -L{{pfad/zu/bibliothek}} -l{{bibliotheksname}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clang%2B%2B.md#L21"
+        },
+        {
+          "description": "Kompiliere eine Quelldatei zu LLVM Intermediate Representation (IR):",
+          "command": "clang++ {{[-S|--assemble]}} -emit-llvm {{pfad/zu/quelldatei.cpp}} {{[-o|--output]}} {{pfad/zu/ir_datei.ll}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clang%2B%2B.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clang%2B%2B.md"
+    },
+    {
+      "id": "tldr--289be9ef1a94",
+      "canonicalPath": "common/git-help.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git help",
+      "summary": "Zeige Hilfe für Git an.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Zeige Hilfe für einen bestimmten Git-Unterbefehl an:",
+          "command": "git help {{unterbefehl}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-help.md#L8"
+        },
+        {
+          "description": "Zeige Hilfe für einen bestimmten Git-Unterbefehl im Web-Browser an:",
+          "command": "git help {{[-w|--web]}} {{unterbefehl}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-help.md#L12"
+        },
+        {
+          "description": "Zeige eine Liste von allen verfügbaren Git-Unterbefehlen an:",
+          "command": "git help {{[-a|--all]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-help.md#L16"
+        },
+        {
+          "description": "Liste die verfügbaren Handbücher auf:",
+          "command": "git help {{[-g|--guides]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-help.md#L20"
+        },
+        {
+          "description": "Liste alle Konfigurationsvariablen auf:",
+          "command": "git help {{[-c|--config]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-help.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-help.md"
+    },
+    {
+      "id": "tldr--2e08d822adcf",
+      "canonicalPath": "common/git-continue.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git continue",
+      "summary": "Dieser Befehl ist ein Alias von `git abort`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr git abort",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-continue.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-continue.md"
+    },
+    {
+      "id": "tldr--2f4ed2b73e53",
+      "canonicalPath": "common/emacs.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "emacs",
+      "title": "emacs",
+      "summary": "Der erweiterbare, veränderbare und selbst-dokumentierende Echtzeit Text Editor. Siehe auch: `emacsclient`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "emacs--edf47967",
+        "emacs27-2--a97ff7cf",
+        "emax64-pdumper--8a5999bd"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Öffne eine Datei in Emacs:",
+          "command": "emacs {{pfad/zu/datei}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/emacs.md#L9"
+        },
+        {
+          "description": "Öffne eine Datei in einer bestimmten Zeile:",
+          "command": "emacs +{{zeilennummer}} {{pfad/zu/datei}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/emacs.md#L13"
+        },
+        {
+          "description": "Starte Emacs in der Konsole (ohne X-Fenster):",
+          "command": "emacs {{[-nw|--no-window-system]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/emacs.md#L17"
+        },
+        {
+          "description": "Starte einen Emacs-Server im Hintergrund (aufrufbar mit `emacsclient`):",
+          "command": "emacs --daemon",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/emacs.md#L21"
+        },
+        {
+          "description": "Beende einen laufenden Emacs-Server und alle Instanzen und frage nach Bestätigung für ungespeicherte Dateien:",
+          "command": "emacsclient --eval '(save-buffers-kill-emacs)'",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/emacs.md#L25"
+        },
+        {
+          "description": "Tastenkombination zum Speichern einer Datei:",
+          "command": "<Ctrl x><Ctrl s>",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/emacs.md#L29"
+        },
+        {
+          "description": "Tastenkombination zum Beenden von Emacs:",
+          "command": "<Ctrl x><Ctrl c>",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/emacs.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/emacs.md"
+    },
+    {
+      "id": "tldr--352431eb2ea4",
+      "canonicalPath": "common/git-setup.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git setup",
+      "summary": "Erstelle ein Git Repository in einem bestimmten Verzeichnis und committe alle Dateien. Teil der `git-extras`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Erstelle ein Git Repository im aktuellen Verzeichnis und committe alle Dateien:",
+          "command": "git setup",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-setup.md#L9"
+        },
+        {
+          "description": "Erstelle ein Git Repository in einem bestimmten Verzeichnis und committe alle Dateien:",
+          "command": "git setup {{pfad/zu/verzeichnis}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-setup.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-setup.md"
+    },
+    {
+      "id": "tldr--3ba59b16054c",
+      "canonicalPath": "osx/gsha224sum.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gsha224sum",
+      "title": "gsha224sum",
+      "summary": "Dieser Befehl ist ein Alias von `sha224sum`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr sha224sum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gsha224sum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gsha224sum.md"
+    },
+    {
+      "id": "tldr--3be1785f93f2",
+      "canonicalPath": "common/awslogs.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "awslogs",
+      "title": "awslogs",
+      "summary": "CLI um Log-Gruppen, Streams und Events von Amazon CloudWatch Logs abzurufen.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "awslogs--349f79fd"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Liste alle Log-Gruppen auf:",
+          "command": "awslogs groups",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/awslogs.md#L8"
+        },
+        {
+          "description": "Liste alle bestehenden Streams einer angegebenen Loggruppe auf:",
+          "command": "awslogs streams {{/var/log/syslog}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/awslogs.md#L12"
+        },
+        {
+          "description": "Rufe alle Logs für jegliche Streams in der angegebenen Log-Gruppe für die letzten 1 bis 2 Stunden ab:",
+          "command": "awslogs get {{/var/log/syslog}} {{[-s|--start]}} '{{2h ago}}' {{[-e|--end]}} '{{1h ago}}'",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/awslogs.md#L16"
+        },
+        {
+          "description": "Rufe alle Logs für einen bestimmten CloudWatch-Logs Filter-Ausdruck ab:",
+          "command": "awslogs get {{/aws/lambda/meine_lambda_gruppe}} --filter-pattern '{{ERROR}}'",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/awslogs.md#L20"
+        },
+        {
+          "description": "Beobachte Logs für jegliche Streams in der angegebenen Log-Gruppe:",
+          "command": "awslogs get {{/var/log/syslog}} ALL --watch",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/awslogs.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/awslogs.md"
+    },
+    {
+      "id": "tldr--411475af713b",
+      "canonicalPath": "common/lzegrep.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "lzegrep",
+      "title": "lzegrep",
+      "summary": "Dieser Befehl ist ein Alias von `xzgrep --extended-regexp`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/lzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/lzegrep.md"
+    },
+    {
+      "id": "tldr--465ab34cc299",
+      "canonicalPath": "common/git-ignore-io.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git ignore-io",
+      "summary": "Erstelle `.gitignore` Dateien aus vorgefertigten Vorlagen. Teil der `git-extras`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Liste alle verfügbaren Vorlagen auf:",
+          "command": "git ignore-io list",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-ignore-io.md#L9"
+        },
+        {
+          "description": "Erstelle eine `.gitignore` Vorlage:",
+          "command": "git ignore-io {{eintrag_a,eintrag_b,eintrag_n}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-ignore-io.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-ignore-io.md"
+    },
+    {
+      "id": "tldr--4874b25b3583",
+      "canonicalPath": "common/git-fetch.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git fetch",
+      "summary": "Lade Objekte und Referenzen (refs) von einem entfernten Repository.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Hole die neuesten Änderungen von dem standardmäßigen Repository im Upstream (wenn gesetzt):",
+          "command": "git fetch",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-fetch.md#L8"
+        },
+        {
+          "description": "Hole neue Branches von einem bestimmten Repository im Upstream:",
+          "command": "git fetch {{name_des_upstream_repository}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-fetch.md#L12"
+        },
+        {
+          "description": "Hole die neuesten Änderungen von allen Repositories im Upstream:",
+          "command": "git fetch --all",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-fetch.md#L16"
+        },
+        {
+          "description": "Lade auch die Tags des Repository im Upstream:",
+          "command": "git fetch {{[-t|--tags]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-fetch.md#L20"
+        },
+        {
+          "description": "Lösche lokale Referenzen auf entfernte Branches, die im Upstream-Repository nicht mehr existieren:",
+          "command": "git fetch {{[-p|--prune]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-fetch.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-fetch.md"
+    },
+    {
+      "id": "tldr--497fec0a60c9",
+      "canonicalPath": "common/impacket-getst.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "impacket-getST",
+      "title": "impacket-getST",
+      "summary": "Dieser Befehl ist ein Alias von `getST.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr getST.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/impacket-getst.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/impacket-getst.md"
+    },
+    {
+      "id": "tldr--49cb98f0a480",
+      "canonicalPath": "common/pdftex.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "pdftex",
+      "title": "pdftex",
+      "summary": "Kompiliere eine TeX Quelldatei in ein PDF Dokument.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Kompiliere ein PDF Dokument:",
+          "command": "pdftex {{quelldatei.tex}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/pdftex.md#L8"
+        },
+        {
+          "description": "Kompiliere ein PDF Dokument und gib ein bestimmtes Output-Verzeichnis an:",
+          "command": "pdftex -output-directory={{pfad/zu/verzeichnis}} {{quelldatei.tex}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/pdftex.md#L12"
+        },
+        {
+          "description": "Kompiliere ein PDF Dokument und stoppe bei jedem Fehler:",
+          "command": "pdftex -halt-on-error {{quelldatei.tex}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/pdftex.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/pdftex.md"
+    },
+    {
+      "id": "tldr--4d289aee08fc",
+      "canonicalPath": "common/unxz.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "unxz",
+      "title": "unxz",
+      "summary": "Dieser Befehl ist ein Alias von `xz --decompress`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr xz",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/unxz.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/unxz.md"
+    },
+    {
+      "id": "tldr--4da6f092553d",
+      "canonicalPath": "common/terraform.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "terraform",
+      "title": "terraform",
+      "summary": "Erstellen und Bereitstellen von Infrastruktur als Code für Cloud-Anbieter.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "tenv--c2ac0cc3",
+        "terraform--79a186ee",
+        "terraform011--79a186ee"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Initialisieren einer neuen oder bestehenden Terraform-Konfiguration:",
+          "command": "terraform init",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform.md#L8"
+        },
+        {
+          "description": "Überprüfen Sie, ob die Konfigurationsdateien syntaktisch gültig sind:",
+          "command": "terraform validate",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform.md#L12"
+        },
+        {
+          "description": "Formatierung der Konfiguration gemäß den Konventionen der Terraform-Sprache:",
+          "command": "terraform fmt",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform.md#L16"
+        },
+        {
+          "description": "Erzeugen und Anzeigen eines Ausführungsplans:",
+          "command": "terraform plan",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform.md#L20"
+        },
+        {
+          "description": "Infrastruktur aufbauen oder ändern:",
+          "command": "terraform apply",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform.md#L24"
+        },
+        {
+          "description": "Terraform-verwaltete Infrastruktur zerstören:",
+          "command": "terraform destroy",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform.md"
+    },
+    {
+      "id": "tldr--533f7651081f",
+      "canonicalPath": "common/git-send-email.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git send-email",
+      "summary": "Sende eine Menge von Patches als E-Mail. Patches können als Dateien, Ordner oder Liste von Revisionen spezifiziert werden.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Sende den letzten Commit des aktuellen Branches:",
+          "command": "git send-email -1",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-send-email.md#L8"
+        },
+        {
+          "description": "Sende einen spezifischen Commit:",
+          "command": "git send-email -1 {{commit}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-send-email.md#L12"
+        },
+        {
+          "description": "Sende die letzten (z.B. 10) Commits des aktuellen Branches:",
+          "command": "git send-email {{-10}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-send-email.md#L16"
+        },
+        {
+          "description": "Editiere eine E-Mail mit einer Reihe von Patches im Standardmailclienten:",
+          "command": "git send-email -{{anzahl_an_commits}} --compose",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-send-email.md#L20"
+        },
+        {
+          "description": "Bearbeite den E-Mail Text jedes der zu versendenden Patches:",
+          "command": "git send-email -{{anzahl_an_commits}} --annotate",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-send-email.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-send-email.md"
+    },
+    {
+      "id": "tldr--53fae56e414b",
+      "canonicalPath": "common/git-remote.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git remote",
+      "summary": "Verwalte eine gewisse Anzahl an Repositories (remotes).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Liste alle existierenden Remotes, ihre Namen und ihre URLs auf:",
+          "command": "git remote {{[-v|--verbose]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-remote.md#L8"
+        },
+        {
+          "description": "Zeige Informationen über ein Remote an:",
+          "command": "git remote show {{remote_name}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-remote.md#L12"
+        },
+        {
+          "description": "Füge ein neues Remote hinzu:",
+          "command": "git remote add {{remote_name}} {{remote_url}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-remote.md#L16"
+        },
+        {
+          "description": "Ändere die URL eines Remotes (benutze `--add` um die existierende URL zu behalten):",
+          "command": "git remote set-url {{remote_name}} {{remote_url}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-remote.md#L20"
+        },
+        {
+          "description": "Entferne ein Remote:",
+          "command": "git remote remove {{remote_name}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-remote.md#L24"
+        },
+        {
+          "description": "Benenne ein Remote um:",
+          "command": "git remote rename {{alter_name}} {{neuer_name}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-remote.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-remote.md"
+    },
+    {
+      "id": "tldr--564cbf31012d",
+      "canonicalPath": "linux/apport-bug.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "apport-bug",
+      "title": "apport-bug",
+      "summary": "Reiche einen Fehlerbericht über Ubuntu ein.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Reiche einen Fehlerbericht über das gesamte System ein:",
+          "command": "apport-bug",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/apport-bug.md#L8"
+        },
+        {
+          "description": "Reiche einen Fehlerbericht über ein bestimmtes Paket ein:",
+          "command": "apport-bug {{paket}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/apport-bug.md#L12"
+        },
+        {
+          "description": "Reiche einen Fehlerbericht über eine bestimmte ausführbare Datei ein:",
+          "command": "apport-bug {{pfad/zu/binärdatei}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/apport-bug.md#L16"
+        },
+        {
+          "description": "Reiche einen Fehlerbericht über einen bestimmten Prozess ein:",
+          "command": "apport-bug {{pid}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/apport-bug.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/apport-bug.md"
+    },
+    {
+      "id": "tldr--5826d7b3fe1c",
+      "canonicalPath": "common/git-am.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git am",
+      "summary": "Patch-Dateien integrieren. Nützlich beim Empfang von Commits per E-Mail. Siehe auch: `git format-patch`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Integriere eine Patch-Datei:",
+          "command": "git am {{pfad/zu/datei.patch}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-am.md#L9"
+        },
+        {
+          "description": "Herunterladen und Integrieren einer Patch-Datei:",
+          "command": "curl {{[-L|--location]}} {{https://example.com/file.patch}} | git am",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-am.md#L13"
+        },
+        {
+          "description": "Brich das Integrieren einer Patch-Datei ab:",
+          "command": "git am --abort",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-am.md#L17"
+        },
+        {
+          "description": "Integriere so viele Patch-Dateien wie möglich und speichere fehlgeschlagene Teile:",
+          "command": "git am --reject {{pfad/zu/datei.patch}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-am.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-am.md"
+    },
+    {
+      "id": "tldr--597cd77312c9",
+      "canonicalPath": "common/git-commit.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git commit",
+      "summary": "Committe Dateien in ein Repository.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Committe die gestagten Dateien mit einer Nachricht in das Repository:",
+          "command": "git commit {{[-m|--message]}} \"{{nachricht}}\"",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-commit.md#L8"
+        },
+        {
+          "description": "Committe alle gestagten Dateien zum Repository mit einer Nachricht aus einer Datei:",
+          "command": "git commit {{[-F|--file]}} {{pfad/zu/commit_nachricht_datei}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-commit.md#L12"
+        },
+        {
+          "description": "Stage alle modifizierten Dateien und committe sie mit einer Nachricht:",
+          "command": "git commit {{[-a|--all]}} {{[-m|--message]}} \"{{nachricht}}\"",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-commit.md#L16"
+        },
+        {
+          "description": "Committe gestagten Dateien und signiere sie mit dem definierten GPG Schlüssel (oder mit dem in der Konfigurationsdatei definierten, wenn kein Argument angegeben ist):",
+          "command": "git commit {{[-S|--gpg-sign]}} {{key_id}} {{[-m|--message]}} \"{{nachricht}}\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-commit.md#L20"
+        },
+        {
+          "description": "Ersetze den letzten Commit mit den gerade auf dem Stage liegenden Änderungen:",
+          "command": "git commit --amend",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-commit.md#L24"
+        },
+        {
+          "description": "Comitte nur spezifische Dateien (die Dateien müssen schon auf dem Stage liegen):",
+          "command": "git commit {{pfad/zu/datei1 pfad/zu/datei2 ...}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-commit.md#L28"
+        },
+        {
+          "description": "Erzeuge einen Commit, auch wenn keine Dateien auf dem Stage liegen:",
+          "command": "git commit {{[-m|--message]}} \"{{nachricht}}\" --allow-empty",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-commit.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-commit.md"
+    },
+    {
+      "id": "tldr--598f2e5308de",
+      "canonicalPath": "common/az-login.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "az",
+      "title": "az login",
+      "summary": "Melden Sie sich bei Azure an. Teil von `azure-cli` (auch bekannt als `az`).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "azure-cli--f5ca91d3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Melden Sie sich interaktiv an:",
+          "command": "az login",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-login.md#L9"
+        },
+        {
+          "description": "Melden Sie sich mit einem Dienstprinzipal mit dem geheimen Clientschlüssel an:",
+          "command": "az login --service-principal {{[-u|--username]}} {{http://azure-cli-service-principal}} {{[-p|--password]}} {{secret}} {{[-t|--tenant]}} {{someone.onmicrosoft.com}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-login.md#L13"
+        },
+        {
+          "description": "Melden Sie sich mit einem Dienstprinzipal mithilfe des Clientzertifikats an:",
+          "command": "az login --service-principal {{[-u|--username]}} {{http://azure-cli-service-principal}} {{[-p|--password]}} {{path/to/cert.pem}} {{[-t|--tenant]}} {{someone.onmicrosoft.com}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-login.md#L17"
+        },
+        {
+          "description": "Melden Sie sich mit der vom System zugewiesenen verwalteten Identität eines virtuellen Computers an:",
+          "command": "az login {{[-i|--identity]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-login.md#L21"
+        },
+        {
+          "description": "Melden Sie sich mit der vom Benutzer zugewiesenen verwalteten Identität eines virtuellen Computers an:",
+          "command": "az login {{[-i|--identity]}} {{[-u|--username]}} /subscriptions/{{subscription_id}}/resourcegroups/{{my_rg}}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{{my_id}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-login.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-login.md"
+    },
+    {
+      "id": "tldr--5a1110acdc9b",
+      "canonicalPath": "common/git-switch.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git switch",
+      "summary": "Wechsle zwischen Branches. Verfügbar ab Git Version 2.23+. Siehe auch: `git checkout`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Wechsle zu einem existierenden Branch:",
+          "command": "git switch {{branche_name}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-switch.md#L9"
+        },
+        {
+          "description": "Erstelle einen neuen Branch und wechsele zu diesem:",
+          "command": "git switch {{[-c|--create]}} {{branch_name}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-switch.md#L13"
+        },
+        {
+          "description": "Erstelle einen neuen Branch basierend auf einem existierenden Commit und wechsele zu diesem:",
+          "command": "git switch {{[-c|--create]}} {{branch_name}} {{commit}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-switch.md#L17"
+        },
+        {
+          "description": "Wechsele zum vorherigen Branch:",
+          "command": "git switch -",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-switch.md#L21"
+        },
+        {
+          "description": "Wechsele zu einem Branch und aktualisiere alle Submodule entsprechend:",
+          "command": "git switch --recurse-submodules {{branch_name}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-switch.md#L25"
+        },
+        {
+          "description": "Wechsele zu einem Branch und merge automatisch den aktuellen Branch und alle Änderungen, die nicht committed wurden:",
+          "command": "git switch {{[-m|--merge]}} {{branch_name}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-switch.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-switch.md"
+    },
+    {
+      "id": "tldr--5f587af12926",
+      "canonicalPath": "linux/pw-record.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "pw-record",
+      "title": "pw-record",
+      "summary": "Dieser Befehl ist ein Alias von `pw-cat --record`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/pw-record.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/pw-record.md"
+    },
+    {
+      "id": "tldr--65b9449a6a9f",
+      "canonicalPath": "common/clear.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "clear",
+      "title": "clear",
+      "summary": "Leert den Bildschirm eines Terminals.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Leere den Bildschirm (äquivalent zu `<Ctrl l>` in einer Bash Shell):",
+          "command": "clear",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clear.md#L8"
+        },
+        {
+          "description": "Leere den Bildschirm, aber erhalte den Rückscroll-Puffer des Terminals:",
+          "command": "clear -x",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clear.md#L12"
+        },
+        {
+          "description": "Lege den Typ des zu leerenden Terminals fest (Standardwert ist die Umgebungsvariable `$TERM`):",
+          "command": "clear -T {{typ_des_terminals}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clear.md#L16"
+        },
+        {
+          "description": "Zeige die Version von `ncurses` an, die von `clear` benutzt wird:",
+          "command": "clear -V",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clear.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/clear.md"
+    },
+    {
+      "id": "tldr--68857add0306",
+      "canonicalPath": "common/git-rm.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git rm",
+      "summary": "Entferne Dateien aus dem Index des Repositories und vom lokalen Dateisystem.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Entferne eine Datei aus dem Index und vom lokalen Dateisystem:",
+          "command": "git rm {{pfad/zu/datei}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rm.md#L8"
+        },
+        {
+          "description": "Entferne ein Verzeichnis:",
+          "command": "git rm -r {{pfad/zu/verzeichnis}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rm.md#L12"
+        },
+        {
+          "description": "Entferne eine Datei aus dem Index des Repositories, aber behalte sie lokal:",
+          "command": "git rm --cached {{pfad/zu/datei}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rm.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rm.md"
+    },
+    {
+      "id": "tldr--6bd50561f3ec",
+      "canonicalPath": "common/git-archive.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git archive",
+      "summary": "Erstelle ein Archiv von Dateien.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Erstelle ein `.tar`-Archiv aus dem Inhalt des aktuellen HEAD und gib dieses aus:",
+          "command": "git archive {{[-v|--verbose]}} HEAD",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-archive.md#L8"
+        },
+        {
+          "description": "Erstelle ein zip-Archiv aus dem Inhalt des aktuellen HEAD und gib dieses aus:",
+          "command": "git archive {{[-v|--verbose]}} --format zip HEAD",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-archive.md#L12"
+        },
+        {
+          "description": "Erstelle ein zip-Archiv aus dem Inhalt des aktuellen HEAD und speichere dieses in eine Datei:",
+          "command": "git archive {{[-v|--verbose]}} {{[-o|--output]}} {{pfad/zu/datei.zip}} HEAD",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-archive.md#L16"
+        },
+        {
+          "description": "Erstelle ein `.tar`-Archiv aus dem Inhalt des letzten Commits eines bestimmten Branches:",
+          "command": "git archive {{[-o|--output]}} {{pfad/zu/datei.tar}} {{branch_name}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-archive.md#L20"
+        },
+        {
+          "description": "Erstelle ein tar-Archiv aus dem Inhalt eines bestimmten Verzeichnisses:",
+          "command": "git archive {{[-o|--output]}} {{pfad/zu/datei.tar}} HEAD:{{pfad/zu/verzeichnis}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-archive.md#L24"
+        },
+        {
+          "description": "Stelle jeder Datei einen Pfad voran, um sie in einem bestimmten Verzeichnis zu archivieren:",
+          "command": "git archive {{[-o|--output]}} {{pfad/zu/datei.tar}} --prefix {{pfad/zu/verzeichnis}}/ HEAD",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-archive.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-archive.md"
+    },
+    {
+      "id": "tldr--6d4afd4c6408",
+      "canonicalPath": "common/((.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "((",
+      "title": "((",
+      "summary": "Dieser Befehl ist ein Alias von `let`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr let",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/((.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/((.md"
+    },
+    {
+      "id": "tldr--749d25048f4b",
+      "canonicalPath": "common/git-init.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git init",
+      "summary": "Erstelle eine neues lokales Git-Repository.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Erstelle eine neues lokales Repository:",
+          "command": "git init",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-init.md#L8"
+        },
+        {
+          "description": "Erstelle eine neues Repository mit einem bestimmten Namen für den ersten Branch:",
+          "command": "git init {{[-b|--initial-branch]}} {{branch_name}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-init.md#L12"
+        },
+        {
+          "description": "Erstelle ein neues Repository, welches SHA256 für Objekt-Hashes verwendet (benötigt Git 2.29+):",
+          "command": "git init --object-format sha256",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-init.md#L16"
+        },
+        {
+          "description": "Erstelle eine neues minimales Repository, welches sich für die Verwendung als Remote-Repository über SSH eignet:",
+          "command": "git init --bare",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-init.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-init.md"
+    },
+    {
+      "id": "tldr--777255b8c1d4",
+      "canonicalPath": "osx/gfind.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gfind",
+      "title": "gfind",
+      "summary": "Dieser Befehl ist ein Alias von `find`.",
+      "platform": "macos",
+      "softwareIds": [
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr find",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gfind.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gfind.md"
+    },
+    {
+      "id": "tldr--78da2d1f5eaa",
+      "canonicalPath": "common/az-config.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "az",
+      "title": "az config",
+      "summary": "Verwalten der Azure CLI-Konfiguration. Teil von `azure-cli` (auch bekannt als `az`).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "azure-cli--f5ca91d3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Rufe alle Konfigurationen ab:",
+          "command": "az config get",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-config.md#L9"
+        },
+        {
+          "description": "Rufe alle Konfigurationen in einer Sektion ab:",
+          "command": "az config get {{sektionsname}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-config.md#L13"
+        },
+        {
+          "description": "Setze eine Konfiguration:",
+          "command": "az config set {{konfigurationsname}}={{wert}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-config.md#L17"
+        },
+        {
+          "description": "Hebe eine Konfiguration auf:",
+          "command": "az config unset {{konfigurationsname}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-config.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/az-config.md"
+    },
+    {
+      "id": "tldr--78ee41948894",
+      "canonicalPath": "common/git-blame.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git blame",
+      "summary": "Zeige den Commit-Hash und den letzten Autor jeder Zeile einer Datei.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Gib die Commit-Hashes und dem Autor jeder Zeile einer Datei aus:",
+          "command": "git blame {{pfad/zu/datei}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-blame.md#L8"
+        },
+        {
+          "description": "Gib die Commit-Hashes und dem Autor (inklusive E-Mail) jeder Zeile einer Datei aus:",
+          "command": "git blame {{[-e|--show-email]}} {{pfad/zu/datei}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-blame.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-blame.md"
+    },
+    {
+      "id": "tldr--792b96b6a449",
+      "canonicalPath": "common/fdroidcl.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "fdroidcl",
+      "title": "fdroidcl",
+      "summary": "F-Droid CLI (Command-line Interface) Client.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "fdroidcl--55e23db8"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Aktualisiere den Index:",
+          "command": "fdroidcl update",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/fdroidcl.md#L8"
+        },
+        {
+          "description": "Zeige Informationen über eine App:",
+          "command": "fdroidcl show {{app_id}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/fdroidcl.md#L12"
+        },
+        {
+          "description": "Lade eine apk-Datei herunter:",
+          "command": "fdroidcl download {{app_id}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/fdroidcl.md#L16"
+        },
+        {
+          "description": "Suche nach einer App im Index:",
+          "command": "fdroidcl search {{suchmuster}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/fdroidcl.md#L20"
+        },
+        {
+          "description": "Installiere eine App auf einem verbundenen Gerät:",
+          "command": "fdroidcl install {{app_id}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/fdroidcl.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/fdroidcl.md"
+    },
+    {
+      "id": "tldr--7a9b400f8c91",
+      "canonicalPath": "osx/gdate.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gdate",
+      "title": "gdate",
+      "summary": "Dieser Befehl ist ein Alias von `date`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr {{[-p|--platform]}} common date",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gdate.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gdate.md"
+    },
+    {
+      "id": "tldr--7a9d39ced36d",
+      "canonicalPath": "common/dd.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "dd",
+      "title": "dd",
+      "summary": "Konvertiere und kopiere eine Datei.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "dd--ce6372bb",
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Erstelle ein bootbares USB-Laufwerk von einer isohybriden Datei (wie `archlinux-xxxx.iso`) und zeige den Fortschritt an:",
+          "command": "dd if={{pfad/zu/datei.iso}} of={{/dev/laufwerk}} status=progress",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dd.md#L8"
+        },
+        {
+          "description": "Klone ein USB-Laufwerk in ein anderes in 4MiB Blöcken, ignoriere Fehler und zeige den Fortschritt an:",
+          "command": "dd if={{/dev/quell_laufwerk}} of={{/dev/ziel_laufwerk}} bs=4M conv=noerror status=progress",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dd.md#L12"
+        },
+        {
+          "description": "Erstelle eine Datei mit spezifizierte zufälligen Bytes mithilfe des Zufall-Treibers des Kernels:",
+          "command": "dd bs={{100}} count={{1}} if=/dev/urandom of={{pfad/zu/datei}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dd.md#L16"
+        },
+        {
+          "description": "Teste die Schreibgeschwindigkeit eines Laufwerks:",
+          "command": "dd bs={{1024}} count={{1000000}} if=/dev/zero of={{pfad/zu/1GB_datei}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dd.md#L20"
+        },
+        {
+          "description": "Erstelle ein System-Backup als IMG Datei und zeige den Fortschritt an:",
+          "command": "dd if={{/dev/laufwerk}} of={{pfad/zu/datei.img}} status=progress",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dd.md#L24"
+        },
+        {
+          "description": "Stelle ein Laufwerk aus einer IMG Datei wieder her und zeige den Fortschritt an:",
+          "command": "dd if={{pfad/zu/datei.img}} of={{/dev/laufwerk}} status=progress",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dd.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dd.md"
+    },
+    {
+      "id": "tldr--7d3d91c8ed22",
+      "canonicalPath": "common/git-config.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git config",
+      "summary": "Verwalten von benutzerdefinierten Optionen für Git Repositories. Diese Optionen können lokal (für das aktiven Repository) or global (für den aktiven Benutzer) sein.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Liste nur lokale Konfigurationseinträge (gespeichert unter `.git/config` im aktiven Repository) auf:",
+          "command": "git config {{[-l|--list]}} --local",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-config.md#L9"
+        },
+        {
+          "description": "Liste nur globale Konfigurationseinträge (gespeichert unter `~/.gitconfig`) auf:",
+          "command": "git config {{[-l|--list]}} --global",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-config.md#L13"
+        },
+        {
+          "description": "Liste nur System-Konfigurationseinträge (gespeichert unter `/etc/gitconfig`) und deren Speicherort auf:",
+          "command": "git config {{[-l|--list]}} --system --show-origin",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-config.md#L17"
+        },
+        {
+          "description": "Gib den Wert eines bestimmten Konfigurationseintrags aus:",
+          "command": "git config alias.unstage",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-config.md#L21"
+        },
+        {
+          "description": "Setze den globalen Wert eines bestimmten Konfigurationseintrags:",
+          "command": "git config --global alias.unstage \"reset HEAD --\"",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-config.md#L25"
+        },
+        {
+          "description": "Setze den globalen Wert eines bestimmten Konfigurationseintrags auf seinen Standardwert zurück:",
+          "command": "git config --global --unset alias.unstage",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-config.md#L29"
+        },
+        {
+          "description": "Bearbeite die Git-Konfiguration für das aktuelle Repository mit dem Standard-Editor:",
+          "command": "git config {{[-e|--edit]}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-config.md#L33"
+        },
+        {
+          "description": "Bearbeite die globale Git-Konfiguration mit dem Standard-Editor:",
+          "command": "git config --global {{[-e|--edit]}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-config.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-config.md"
+    },
+    {
+      "id": "tldr--7d866db9bb58",
+      "canonicalPath": "common/git-apply.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git apply",
+      "summary": "Integriere eine Patch-Datei und/oder füge sie zum Index hinzu. Siehe auch: `git am`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Gib Informationen über gepatchte Dateien aus:",
+          "command": "git apply {{[-v|--verbose]}} {{pfad/zu/datei}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-apply.md#L9"
+        },
+        {
+          "description": "Integriere die Patch-Datei und füge sie zum Index hinzu:",
+          "command": "git apply --index {{pfad/zu/datei}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-apply.md#L13"
+        },
+        {
+          "description": "Integriere eine externe Patch-Datei:",
+          "command": "curl {{[-L|--location]}} {{https://example.com/datei.patch}} | git apply",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-apply.md#L17"
+        },
+        {
+          "description": "Gib diffstat des Inputs aus und integriere die Patch-Datei:",
+          "command": "git apply --stat --apply {{pfad/zu/datei}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-apply.md#L21"
+        },
+        {
+          "description": "Integriere eine Patch-Datei in umgekehrter Reihenfolge:",
+          "command": "git apply {{[-R|--reverse]}} {{pfad/zu/datei}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-apply.md#L25"
+        },
+        {
+          "description": "Speichere das Ergebnis einer Patch-Datei im Index, ohne den Arbeitsbaum zu verändern:",
+          "command": "git apply --cache {{pfad/zu/datei}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-apply.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-apply.md"
+    },
+    {
+      "id": "tldr--807c1b03ce59",
+      "canonicalPath": "common/rehash.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "rehash",
+      "title": "rehash",
+      "summary": "Dieser Befehl ist ein Alias von `hash -r`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr hash",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/rehash.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/rehash.md"
+    },
+    {
+      "id": "tldr--811f861685cb",
+      "canonicalPath": "common/git-show-unmerged-branches.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git show-unmerged-branches",
+      "summary": "Gibt alle Branches aus, welche noch nicht in die aktuelle HEAD-Datei gemerged wurden. Teil der `git-extras`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Gib alle Branches aus, die noch nicht in die aktuelle HEAD-Datei gemerged wurden:",
+          "command": "git show-unmerged-branches",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-show-unmerged-branches.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-show-unmerged-branches.md"
+    },
+    {
+      "id": "tldr--82fddd6a3af8",
+      "canonicalPath": "osx/gtrue.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gtrue",
+      "title": "gtrue",
+      "summary": "Dieser Befehl ist ein Alias von `true`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr true",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gtrue.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gtrue.md"
+    },
+    {
+      "id": "tldr--8a0a9eb68d60",
+      "canonicalPath": "windows/chrome.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "chrome",
+      "title": "chrome",
+      "summary": "Dieser Befehl ist ein Alias von `chromium`.",
+      "platform": "windows",
+      "softwareIds": [
+        "googlechrome--90e5e298"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr chromium",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/windows/chrome.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/windows/chrome.md"
+    },
+    {
+      "id": "tldr--8bc97416a339",
+      "canonicalPath": "common/huggingface-cli.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "huggingface-cli",
+      "title": "huggingface-cli",
+      "summary": "Dieser Befehl ist ein Alias von `hf`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr hf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/huggingface-cli.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/huggingface-cli.md"
+    },
+    {
+      "id": "tldr--8d3438491455",
+      "canonicalPath": "linux/nixos-container.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "nixos-container",
+      "title": "nixos-container",
+      "summary": "Startet NixOS Container basierend auf Linux Containern.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Gibt eine Liste der gestarteten Container aus:",
+          "command": "sudo nixos-container list",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/nixos-container.md#L8"
+        },
+        {
+          "description": "Erstelle einen NixOS Container mit einer spezifischen Konfigurations-Datei:",
+          "command": "sudo nixos-container create {{container_name}} --config-file {{path/to/nix_config_file}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/nixos-container.md#L12"
+        },
+        {
+          "description": "Starte, stoppe, terminiere oder zerstöre den angegebenen Container:",
+          "command": "sudo nixos-container {{start|stop|terminate|destroy|status}} {{container_name}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/nixos-container.md#L16"
+        },
+        {
+          "description": "Führe ein Kommando in einem laufenden Container aus:",
+          "command": "sudo nixos-container run {{container_name}} -- {{command}} {{command_arguments}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/nixos-container.md#L20"
+        },
+        {
+          "description": "Aktualisiere eine Containerkonfiguration:",
+          "command": "sudo $EDITOR /var/lib/container/{{container_name}}/etc/nixos/configuration.nix && sudo nixos-container update {{container_name}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/nixos-container.md#L24"
+        },
+        {
+          "description": "Starte eine interaktive Shell innerhalb eines laufenden Containers:",
+          "command": "sudo nixos-container root-login {{container_name}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/nixos-container.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/nixos-container.md"
+    },
+    {
+      "id": "tldr--91b0c6209d1c",
+      "canonicalPath": "common/impacket-rpcdump.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "impacket-rpcdump",
+      "title": "impacket-rpcdump",
+      "summary": "Dieser Befehl ist ein Alias von `rpcdump.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr rpcdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/impacket-rpcdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/impacket-rpcdump.md"
+    },
+    {
+      "id": "tldr--95c2f3790166",
+      "canonicalPath": "common/git.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git",
+      "summary": "Verteiltes Versionskontrollsystem. Manche Unterbefehle wie `commit` sind separat dokumentiert.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Führe einen Git-Unterbefehl aus:",
+          "command": "git {{unterbefehl}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git.md#L9"
+        },
+        {
+          "description": "Führe einen Git-Unterbefehl auf einem benutzerdefinierten Repository aus:",
+          "command": "git -C {{pfad/zu/repository}} {{unterbefehl}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git.md#L13"
+        },
+        {
+          "description": "Führe einen Git-Unterbefehl mit der angegebenen Konfiguration aus:",
+          "command": "git -c '{{config.key}}={{wert}}' {{unterbefehl}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git.md#L17"
+        },
+        {
+          "description": "Zeige die generelle Hilfeseite an:",
+          "command": "git --help",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git.md#L21"
+        },
+        {
+          "description": "Zeige die Hilfeseite eines Unterbefehls an:",
+          "command": "git help {{unterbefehl}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git.md#L25"
+        },
+        {
+          "description": "Gib die installierte Git Version aus:",
+          "command": "git --version",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git.md"
+    },
+    {
+      "id": "tldr--9e2bef92bb26",
+      "canonicalPath": "common/git-log.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git log",
+      "summary": "Zeigt die Commit-Historie an.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Zeige die Sequenz der Commits des Git-Repository im aktuellen Verzeichnis, beginnend mit dem aktuellen, an:",
+          "command": "git log",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-log.md#L8"
+        },
+        {
+          "description": "Zeige die Historie einer bestimmten Datei oder eines Verzeichnisses, inklusive Unterschiede, an:",
+          "command": "git log {{[-p|--patch]}} {{pfad/zu/datei_oder_verzeichnis}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-log.md#L12"
+        },
+        {
+          "description": "Zeige einen Überblick der Commits an und welche Dateien jeweils verändert wurden:",
+          "command": "git log --stat",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-log.md#L16"
+        },
+        {
+          "description": "Zeige einen Graphen von Commits im aktuellen Branch, wobei jeweils nur die erste Zeile der Commit-Nachricht angezeigt wird:",
+          "command": "git log --oneline --graph",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-log.md#L20"
+        },
+        {
+          "description": "Zeige einen Graphen von allen Commits, Tags und Branches im gesamten Repository:",
+          "command": "git log --oneline --decorate --all --graph",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-log.md#L24"
+        },
+        {
+          "description": "Zeige nur Commits, deren Commit-Nachricht einen bestimmten Text enthalten (Ohne Beachtung von Groß- und Kleinschreibung):",
+          "command": "git log {{[-i|--regexp-ignore-case]}} --grep {{text}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-log.md#L28"
+        },
+        {
+          "description": "Zeige die letzten N Commits eines bestimmten Autors:",
+          "command": "git log {{[-n|--max-count]}} {{anzahl}} --author \"{{autor}}\"",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-log.md#L32"
+        },
+        {
+          "description": "Zeige alle Commits zwischen zwei Zeitpunkten an (yyyy-mm-dd):",
+          "command": "git log --before \"{{2017-01-29}}\" --after \"{{2017-01-17}}\"",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-log.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-log.md"
+    },
+    {
+      "id": "tldr--9e4bf094fa26",
+      "canonicalPath": "common/hping.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "hping",
+      "title": "hping",
+      "summary": "Dieser Befehl ist ein Alias von `hping3`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr hping3",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/hping.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/hping.md"
+    },
+    {
+      "id": "tldr--a06d425756dd",
+      "canonicalPath": "common/git-tag.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git tag",
+      "summary": "Erstelle, lösche, überprüfe und liste Tags auf.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Liste alle Tags auf:",
+          "command": "git tag",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-tag.md#L8"
+        },
+        {
+          "description": "Erstelle einen Tag mit Namen, welcher auf den aktuellen Commit zeigt:",
+          "command": "git tag {{tag_name}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-tag.md#L12"
+        },
+        {
+          "description": "Erstelle einen Tag mit Namen, welcher auf einen bestimmten Commit zeigt:",
+          "command": "git tag {{tag_name}} {{commit}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-tag.md#L16"
+        },
+        {
+          "description": "Erstelle einen Tag mit Anmerkung:",
+          "command": "git tag {{tag_name}} {{[-m|--message]}} {{anmkerung}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-tag.md#L20"
+        },
+        {
+          "description": "Lösche einen Tag mit bestimmten Namen:",
+          "command": "git tag {{[-d|--delete]}} {{tag_name}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-tag.md#L24"
+        },
+        {
+          "description": "Lade die aktualisierten Tags aus dem Upstream:",
+          "command": "git fetch {{[-t|--tags]}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-tag.md#L28"
+        },
+        {
+          "description": "Liste alle Tags auf, bei denen sich in den vorangegangenen Commits ein bestimmter Commit findet:",
+          "command": "git tag --contains {{commit}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-tag.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-tag.md"
+    },
+    {
+      "id": "tldr--a20e0ad1d699",
+      "canonicalPath": "common/git-clone.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git clone",
+      "summary": "Klone ein existierendes Repository.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Klone ein existierendes Repository in ein bestimmtes Verzeichnis:",
+          "command": "git clone {{url_zu_repository}} {{pfad/zu/verzeichnis}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-clone.md#L8"
+        },
+        {
+          "description": "Klone ein existierendes Repository und seine Submodule:",
+          "command": "git clone --recursive {{url_zu_repository}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-clone.md#L12"
+        },
+        {
+          "description": "Klone nur das `.git` Verzeichnis für ein existierendes repository:",
+          "command": "git clone {{[-n|--no-checkout]}} {{url_zu_repository}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-clone.md#L16"
+        },
+        {
+          "description": "Klone ein lokales Repository:",
+          "command": "git clone {{[-l|--local]}} {{pfad/zu/lokalem_repository}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-clone.md#L20"
+        },
+        {
+          "description": "Klone ohne Meldungen:",
+          "command": "git clone {{[-q|--quiet]}} {{url_zu_repository}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-clone.md#L24"
+        },
+        {
+          "description": "Klone ein existierendes Repository und rufe nur die neuesten 10 Commits im Standard-Branch ab (spart Zeit):",
+          "command": "git clone --depth 10 {{url_zu_repository}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-clone.md#L28"
+        },
+        {
+          "description": "Klone ein existierendes Repository, aber lade nur einen bestimmten Branch herunter:",
+          "command": "git clone {{[-b|--branch]}} {{name}} --single-branch {{url_zu_repository}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-clone.md#L32"
+        },
+        {
+          "description": "Klone ein existierendes Repository mit einem bestimmten SSH Befehl:",
+          "command": "git clone {{[-c|--config]}} core.sshCommand=\"{{ssh -i pfad/zu/privat_ssh_schlüssel}}\" {{url_zu_repository}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-clone.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-clone.md"
+    },
+    {
+      "id": "tldr--a21738a5f948",
+      "canonicalPath": "common/terraform-fmt.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "terraform",
+      "title": "terraform fmt",
+      "summary": "Formatierung der Konfiguration gemäß den Konventionen der Terraform-Sprache.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "tenv--c2ac0cc3",
+        "terraform--79a186ee",
+        "terraform011--79a186ee"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Formatieren der Konfiguration im aktuellen Verzeichnis:",
+          "command": "terraform fmt",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-fmt.md#L8"
+        },
+        {
+          "description": "Formatieren der Konfiguration im aktuellen Verzeichnis und den Unterverzeichnissen:",
+          "command": "terraform fmt -recursive",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-fmt.md#L12"
+        },
+        {
+          "description": "Anzeige der Unterschiede bei Formatierungsänderungen:",
+          "command": "terraform fmt -diff",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-fmt.md#L16"
+        },
+        {
+          "description": "Die Dateien mit Formatierungsinkonsistenzen werden nicht auf `stdout` ausgegeben:",
+          "command": "terraform fmt -list=false",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-fmt.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-fmt.md"
+    },
+    {
+      "id": "tldr--a2232f2aca5a",
+      "canonicalPath": "common/git-rebase.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git rebase",
+      "summary": "Wende Commits von einem Branch auf einen anderen Branch an. Die Änderungen eines Branches werden auf einen bestehenden Branch \"übertragen\" und am Ende der Historie als neue Commits eingefügt.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Verwende einen anderen, angegebenen Branch als Basis für den aktuellen Branch:",
+          "command": "git rebase {{neuer_basisbranch}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rebase.md#L9"
+        },
+        {
+          "description": "Starte einen interaktiven Rebase, bei dem Commits umsortiert, weggelassen, kombiniert oder verändert werden können:",
+          "command": "git rebase {{[-i|--interactive]}} {{ziel_basisbranch_oder_commithash}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rebase.md#L13"
+        },
+        {
+          "description": "Setze einen Rebase fort, der durch einen Mergefehler unterbrochen wurde, nachdem die Konflikte aufgelöst wurden:",
+          "command": "git rebase --continue",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rebase.md#L17"
+        },
+        {
+          "description": "Setze einen Rebase fort, der durch einen Mergefehler unterbrochen wurde, durch Auslassen des in Konflikt stehenden Commits:",
+          "command": "git rebase --skip",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rebase.md#L21"
+        },
+        {
+          "description": "Brich einen laufenden Rebase ab (z.B. wenn er durch Mergekonflikte unterbrochen wurde):",
+          "command": "git rebase --abort",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rebase.md#L25"
+        },
+        {
+          "description": "Verschiebe einen Teil des aktuellen Branches auf eine neue Basis und gib die alte Basis an, ab der die Änderungen verwendet werden sollen:",
+          "command": "git rebase --onto {{neue_basis}} {{alte_basis}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rebase.md#L29"
+        },
+        {
+          "description": "Bearbeite die 5 letzten Commits der aktuellen Basis um diese neu zu ordnen, auszulassen, kombinieren oder zu bearbeiten:",
+          "command": "git rebase {{[-i|--interactive]}} {{HEAD~5}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rebase.md#L33"
+        },
+        {
+          "description": "Löse Konflikte automatisch auf, indem der aktuelle Branch bevorzugt wird (das Schlüsselwort `theirs` hat in diesem Fall eine umgekehrte Bedeutung):",
+          "command": "git rebase {{[-X|--strategy-option]}} theirs {{branch_name}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rebase.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-rebase.md"
+    },
+    {
+      "id": "tldr--a2e697f1fd03",
+      "canonicalPath": "common/impacket-psexec.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "impacket-psexec",
+      "title": "impacket-psexec",
+      "summary": "Dieser Befehl ist ein Alias von `psexec.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr psexec.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/impacket-psexec.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/impacket-psexec.md"
+    },
+    {
+      "id": "tldr--a3085c86ee9e",
+      "canonicalPath": "common/git-show-merged-branches.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git show-merged-branches",
+      "summary": "Gibt alle Branches aus, welche bereits in die aktuelle HEAD-Datei gemerget wurden. Teil der `git-extras`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Gib alle Branches aus, die bereits in die aktuelle HEAD-Datei gemerget wurden:",
+          "command": "git show-merged-branches",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-show-merged-branches.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-show-merged-branches.md"
+    },
+    {
+      "id": "tldr--a529e026045f",
+      "canonicalPath": "common/head.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "head",
+      "title": "head",
+      "summary": "Gibt den ersten Teil einer Datei aus.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Gib die ersten paar Zeilen einer Datei aus:",
+          "command": "head -n {{anzahl_an_zeilen}} {{datei}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/head.md#L8"
+        },
+        {
+          "description": "Gib die ersten Bytes einer Datei aus:",
+          "command": "head -c {{anzahl_an_bytes}} {{datei}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/head.md#L12"
+        },
+        {
+          "description": "Gib alle bis auf die letzten Zeilen einer Datei aus:",
+          "command": "head -n -{{anzahl_an_zeilen}} {{datei}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/head.md#L16"
+        },
+        {
+          "description": "Gib alle bis auf die letzten Bytes einer Datei aus:",
+          "command": "head -c -{{anzahl_an_bytes}} {{datei}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/head.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/head.md"
+    },
+    {
+      "id": "tldr--a57a6d44fd2a",
+      "canonicalPath": "linux/nmtui-connect.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "nmtui-connect",
+      "title": "nmtui-connect",
+      "summary": "Dieser Befehl ist ein Alias von `nmtui connect`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr nmtui",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/nmtui-connect.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/nmtui-connect.md"
+    },
+    {
+      "id": "tldr--a618d302e8ef",
+      "canonicalPath": "common/llvm-gcc.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "llvm-gcc",
+      "title": "llvm-gcc",
+      "summary": "Dieser Befehl ist ein Alias von `clang`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr clang",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/llvm-gcc.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/llvm-gcc.md"
+    },
+    {
+      "id": "tldr--a73adc275e0c",
+      "canonicalPath": "common/plantuml.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "plantuml",
+      "title": "plantuml",
+      "summary": "Erstelle UML-Diagramme aus einer reinen Textsprache und rendere sie in verschiedenen Formaten.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "plantuml--52fbbba0",
+        "plantuml--c21c5524"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Rendere Diagramme im Standardformat (PNG):",
+          "command": "plantuml {{pfad/zu/diagramm1.puml}} {{pfad/zu/diagramm2.puml}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/plantuml.md#L8"
+        },
+        {
+          "description": "Rendere ein Diagramm im vorgegebenen Format (z.B. `png`, `pdf`, `svg`, `txt`):",
+          "command": "plantuml -t {{format}} {{pfad/zu/diagramm.puml}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/plantuml.md#L12"
+        },
+        {
+          "description": "Rendere alle Diagramme eines Verzeichnisses:",
+          "command": "plantuml {{pfad/zu/verzeichnis}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/plantuml.md#L16"
+        },
+        {
+          "description": "Rendere ein Diagramm in ein bestimmtes Ausgabeverzeichnis:",
+          "command": "plantuml -o {{pfad/zu/verzeichnis}} {{pfad/zu/diagramm.puml}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/plantuml.md#L20"
+        },
+        {
+          "description": "Rendere ein Diagramm mit einer bestimmten Konfigurationsdatei:",
+          "command": "plantuml -config {{pfad/zu/konfig.cfg}} {{pfad/zu/diagramm.puml}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/plantuml.md#L24"
+        },
+        {
+          "description": "Zeige Hilfe an:",
+          "command": "plantuml -help",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/plantuml.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/plantuml.md"
+    },
+    {
+      "id": "tldr--ac2ef6a78186",
+      "canonicalPath": "osx/glibtoolize.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "glibtoolize",
+      "title": "glibtoolize",
+      "summary": "Dieser Befehl ist ein Alias von GNU `libtoolize`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr {{[-p|--platform]}} linux libtoolize",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/glibtoolize.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/glibtoolize.md"
+    },
+    {
+      "id": "tldr--ad0e7ae8a2e2",
+      "canonicalPath": "linux/archlinux-java.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "archlinux-java",
+      "title": "archlinux-java",
+      "summary": "Ein Helferskript, das Funktionen für Java-Umgebungen bereitstellt.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Liste installierte Java-Umgebungen:",
+          "command": "archlinux-java status",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/archlinux-java.md#L8"
+        },
+        {
+          "description": "Setze die default Java-Umgebung:",
+          "command": "archlinux-java set {{java_environment}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/archlinux-java.md#L12"
+        },
+        {
+          "description": "Entferne die default Java-Umgebung:",
+          "command": "archlinux-java unset",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/archlinux-java.md#L16"
+        },
+        {
+          "description": "Setze die default Java-Umgebung automatisch:",
+          "command": "archlinux-java fix",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/archlinux-java.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/linux/archlinux-java.md"
+    },
+    {
+      "id": "tldr--ae1691f301a5",
+      "canonicalPath": "osx/gexpr.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gexpr",
+      "title": "gexpr",
+      "summary": "Dieser Befehl ist ein Alias von `expr`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr expr",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gexpr.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gexpr.md"
+    },
+    {
+      "id": "tldr--b05b4bc2d4f1",
+      "canonicalPath": "android/pm.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "pm",
+      "title": "pm",
+      "summary": "Zeige Informationen über Apps auf einem Android Gerät.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Gib eine Liste aller installierten Apps aus:",
+          "command": "pm list packages",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/android/pm.md#L8"
+        },
+        {
+          "description": "Gib eine Liste aller installierten System-Apps aus:",
+          "command": "pm list packages -s",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/android/pm.md#L12"
+        },
+        {
+          "description": "Gib eine Liste aller installierten Apps von Drittanbietern aus:",
+          "command": "pm list packages -3",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/android/pm.md#L16"
+        },
+        {
+          "description": "Gib eine Liste aller Apps, auf die ein bestimmtes Schlüsselwort zutrifft, aus:",
+          "command": "pm list packages {{Schlüsselwort}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/android/pm.md#L20"
+        },
+        {
+          "description": "Gib den Pfad der APK einer bestimmten App aus:",
+          "command": "pm path {{app}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/android/pm.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/android/pm.md"
+    },
+    {
+      "id": "tldr--b11090540d7c",
+      "canonicalPath": "common/gcc.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gcc",
+      "title": "gcc",
+      "summary": "Präprozessiert und kompiliert C und C++ Quellcodedateien und linkt diese anschließend zusammen.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gcc--a60107cc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Kompiliere mehrere Quellcodedateien zu einer ausführbaren Datei:",
+          "command": "gcc {{pfad/zu/datei1.c}} {{pfad/zu/datei2.c}} {{[-o|--output]}} {{pfad/zu/binärdatei}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/gcc.md#L8"
+        },
+        {
+          "description": "Erlaube Warnungen und debug-Symbole in der Ausgabedatei:",
+          "command": "gcc {{pfad/zu/datei.c}} -Wall -Og {{[-o|--output]}} {{pfad/zu/binärdatei}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/gcc.md#L12"
+        },
+        {
+          "description": "Inkludiere Bibliotheken aus anderen Verzeichnissen:",
+          "command": "gcc {{pfad/zu/datei.c}} {{[-o|--output]}} {{pfad/zu/binärdatei}} -I{{pfad/zu/headerdatei}} -L{{pfad/zu/bibliothek1}} -l{{pfad/zu/bibliothek2}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/gcc.md#L16"
+        },
+        {
+          "description": "Kompiliere Quellcodedateien zu Assemblerinstruktionen:",
+          "command": "gcc {{[-S|--assemble]}} {{pfad/zu/datei.c}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/gcc.md#L20"
+        },
+        {
+          "description": "Kompiliere eine oder mehrere Quellcodedateien ohne diese zu linken:",
+          "command": "gcc {{[-c|--compile]}} {{pfad/zu/datei.c}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/gcc.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/gcc.md"
+    },
+    {
+      "id": "tldr--b1769f839a59",
+      "canonicalPath": "common/git-status.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git status",
+      "summary": "Zeige die Änderungen an Dateien in einem Git-Repository an.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Zeige veränderte Dateien an, die noch nicht für den Commit hinzugefügt wurden:",
+          "command": "git status",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-status.md#L8"
+        },
+        {
+          "description": "Zeige eine kurze Version an:",
+          "command": "git status {{[-s|--short]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-status.md#L12"
+        },
+        {
+          "description": "Zeige nur verfolgte (getrackte) Dateien an:",
+          "command": "git status {{[-uno|--untracked-files=no]}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-status.md#L16"
+        },
+        {
+          "description": "Zeige eine kurze Version mit zusätzlichen Informationen über den Branch an:",
+          "command": "git status {{[-sb|--short --branch]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-status.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-status.md"
+    },
+    {
+      "id": "tldr--b3efc150132d",
+      "canonicalPath": "common/git-format-patch.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git format-patch",
+      "summary": "Erstelle `.patch` Dateien. Ermöglicht das Senden von Commits per E-Mail. Siehe auch: `git am`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Erzeuge eine `.patch` Datei aus allen nicht gepushten Commits:",
+          "command": "git format-patch {{origin}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-format-patch.md#L9"
+        },
+        {
+          "description": "Erstelle eine `.patch` Datei aus allen Commits zwischen den angegebenen Revisionen und schreibe diese nach `stdout`:",
+          "command": "git format-patch {{revision_1}}..{{revision_2}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-format-patch.md#L13"
+        },
+        {
+          "description": "Erstelle eine `.patch` Datei aus den letzten 3 Commits:",
+          "command": "git format-patch -{{3}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-format-patch.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-format-patch.md"
+    },
+    {
+      "id": "tldr--b6f433004e01",
+      "canonicalPath": "osx/gfold.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gfold",
+      "title": "gfold",
+      "summary": "Dieser Befehl ist ein Alias von GNU `fold`.",
+      "platform": "macos",
+      "softwareIds": [
+        "gfold--4dcafdf6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr {{[-p|--platform]}} linux fold",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gfold.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gfold.md"
+    },
+    {
+      "id": "tldr--b8dfc1402a2b",
+      "canonicalPath": "common/git-branch.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git branch",
+      "summary": "Verwalte und Arbeite mit Git Branches.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Liste alle Branches auf (Lokal und Remote). Der momentan aktive (ausgecheckte) Branch wird mit `*` markiert:",
+          "command": "git branch {{[-a|--all]}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-branch.md#L8"
+        },
+        {
+          "description": "Liste alle Branches auf, welche einen spezifischen Git-Commit in ihrer Historie enthalten:",
+          "command": "git branch {{[-a|--all]}} --contains {{commit_hash}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-branch.md#L12"
+        },
+        {
+          "description": "Zeige den Namen des aktuellen Branches:",
+          "command": "git branch --show-current",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-branch.md#L16"
+        },
+        {
+          "description": "Erstelle einen neuen Branch auf Basis des letzten Commits:",
+          "command": "git branch {{branch_name}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-branch.md#L20"
+        },
+        {
+          "description": "Erstelle einen neuen Branch auf Basis eines bestimmten Commits:",
+          "command": "git branch {{branch_name}} {{commit_hash}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-branch.md#L24"
+        },
+        {
+          "description": "Benenne einen Branches um (der Branch muss nicht ausgecheckt sein):",
+          "command": "git branch {{[-m|--move]}} {{alter_branch_name}} {{neuer_branch_name}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-branch.md#L28"
+        },
+        {
+          "description": "Lösche einen lokalen Branch (der Branch muss nicht ausgecheckt sein):",
+          "command": "git branch {{[-d|--delete]}} {{branch_name}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-branch.md#L32"
+        },
+        {
+          "description": "Lösche einen remote-Branch:",
+          "command": "git push {{remote_name}} {{[-d|--delete]}} {{remote_branch_name}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-branch.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-branch.md"
+    },
+    {
+      "id": "tldr--bca92a75fabb",
+      "canonicalPath": "common/git-stage.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git stage",
+      "summary": "Dieser Befehl ist ein Alias von `git add`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr git add",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-stage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-stage.md"
+    },
+    {
+      "id": "tldr--caff5147878b",
+      "canonicalPath": "osx/aa.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "aa",
+      "title": "aa",
+      "summary": "Dieser Befehl ist ein Alias von `yaa`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr yaa",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/aa.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/aa.md"
+    },
+    {
+      "id": "tldr--cbaa0b34da95",
+      "canonicalPath": "common/ansible-galaxy.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "ansible-galaxy",
+      "title": "ansible-galaxy",
+      "summary": "Erstelle und verwalte Ansible Rollen.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Installiere eine Rolle:",
+          "command": "ansible-galaxy install {{benutzername}}.{{rollenname}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/ansible-galaxy.md#L8"
+        },
+        {
+          "description": "Entferne eine Rolle:",
+          "command": "ansible-galaxy remove {{benutzername}}.{{rollenname}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/ansible-galaxy.md#L12"
+        },
+        {
+          "description": "Liste installierte Rollen auf:",
+          "command": "ansible-galaxy list",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/ansible-galaxy.md#L16"
+        },
+        {
+          "description": "Suche nach einer bestimmten Rolle:",
+          "command": "ansible-galaxy search {{rollenname}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/ansible-galaxy.md#L20"
+        },
+        {
+          "description": "Erstelle eine neue Rolle:",
+          "command": "ansible-galaxy init {{rollenname}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/ansible-galaxy.md#L24"
+        },
+        {
+          "description": "Erhalte Informationen über eine Benutzerrolle:",
+          "command": "ansible-galaxy role info {{benutzername}}.{{rollenname}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/ansible-galaxy.md#L28"
+        },
+        {
+          "description": "Erhalte Informationen über eine Kollektion:",
+          "command": "ansible-galaxy collection info {{benutzername}}.{{kollektionsname}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/ansible-galaxy.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/ansible-galaxy.md"
+    },
+    {
+      "id": "tldr--d00c9ceb5c14",
+      "canonicalPath": "osx/gtar.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gtar",
+      "title": "gtar",
+      "summary": "Dieser Befehl ist ein Alias von `tar`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr tar",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gtar.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gtar.md"
+    },
+    {
+      "id": "tldr--d3aa995ef83c",
+      "canonicalPath": "common/terraform-plan.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "terraform",
+      "title": "terraform plan",
+      "summary": "Erzeugen und Anzeigen von Terraform-Ausführungsplänen.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "tenv--c2ac0cc3",
+        "terraform--79a186ee",
+        "terraform011--79a186ee"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Erzeugen und Anzeigen des Ausführungsplans im aktuellen Verzeichnis:",
+          "command": "terraform plan",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-plan.md#L8"
+        },
+        {
+          "description": "Einen Plan zur Zerstörung aller derzeit existierenden entfernten Objekte anzeigen:",
+          "command": "terraform plan -destroy",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-plan.md#L12"
+        },
+        {
+          "description": "Anzeigen eines Plans zur Aktualisierung des Terraform-Status und der Ausgabewerte:",
+          "command": "terraform plan -refresh-only",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-plan.md#L16"
+        },
+        {
+          "description": "Werte für Eingabevariablen festlegen:",
+          "command": "terraform plan -var '{{name1}}={{wert1}}' -var '{{name2}}={{wert2}}'",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-plan.md#L20"
+        },
+        {
+          "description": "Anzeigen eines Plans auf eine Teilmenge von Ressourcen:",
+          "command": "terraform plan -target {{resource_type.resource_name[index]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-plan.md#L24"
+        },
+        {
+          "description": "Ausgabe eines Plans als JSON:",
+          "command": "terraform plan -json",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-plan.md#L28"
+        },
+        {
+          "description": "Ausgabe eines Plans in eine separate Datei:",
+          "command": "terraform plan -no-color > {{pfad/zu/datei}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-plan.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/terraform-plan.md"
+    },
+    {
+      "id": "tldr--d747b2b46d7c",
+      "canonicalPath": "common/git-pull.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git pull",
+      "summary": "Hole Branches von einem entfernten Repository und binde sie in das lokale Repository ein.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Lade Änderungen vom Standard-Repository herunter und führe diese zusammen:",
+          "command": "git pull",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-pull.md#L8"
+        },
+        {
+          "description": "Lade Änderungen vom Standard-Repository herunter und wende einen Rebase an:",
+          "command": "git pull {{[-r|--rebase]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-pull.md#L12"
+        },
+        {
+          "description": "Lade Änderungen vom Standard-Repository herunter und führe diese in den HEAD zusammen:",
+          "command": "git pull {{remote_name}} {{branch}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-pull.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-pull.md"
+    },
+    {
+      "id": "tldr--ddca73d046bf",
+      "canonicalPath": "common/getln.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "getln",
+      "title": "getln",
+      "summary": "Dieser Befehl ist ein Alias von `read -zr`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr read",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/getln.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/getln.md"
+    },
+    {
+      "id": "tldr--df89ba85cb2a",
+      "canonicalPath": "common/dotnet.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "dotnet",
+      "title": "dotnet",
+      "summary": "Plattformübergreifende Kommandozeilenanwendungen für .NET Core. Manche Unterbefehle wie `build` sind separat dokumentiert.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "dotnet--dc94c6e5",
+        "dotnet-nightly--962cc2ef"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Initialisiere ein neues .NET Projekt:",
+          "command": "dotnet new {{vorlagen_name}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dotnet.md#L9"
+        },
+        {
+          "description": "Stelle nuget-Pakete wieder her:",
+          "command": "dotnet restore",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dotnet.md#L13"
+        },
+        {
+          "description": "Baue des .NET Projekt im aktuellen Ordner und führe es aus:",
+          "command": "dotnet run",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dotnet.md#L17"
+        },
+        {
+          "description": "Führe eine gebaute dotnet-Applikation aus (Benötigt nur die Laufzeitumgebung. Die anderen Befehle benötigen auch den Entwicklungsteil):",
+          "command": "dotnet {{pfad/zu/anwendung.dll}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dotnet.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/dotnet.md"
+    },
+    {
+      "id": "tldr--e8c25864c6fc",
+      "canonicalPath": "common/sc_warts2csv.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "sc_warts2csv",
+      "title": "sc_warts2csv",
+      "summary": "Umwandlung von tracroutes aus `.warts`-Dateien in das CSV-Format.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Wandle traceroute-Daten in einer `.warts`-Datei in CSV um und gebe dieses aus:",
+          "command": "sc_warts2csv {{path/to/file1.warts path/to/file2.warts ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/sc_warts2csv.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/sc_warts2csv.md"
+    },
+    {
+      "id": "tldr--ebce857fe663",
+      "canonicalPath": "common/impacket-secretsdump.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "impacket-secretsdump",
+      "title": "impacket-secretsdump",
+      "summary": "Dieser Befehl ist ein Alias von `secretsdump.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr secretsdump.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/impacket-secretsdump.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/impacket-secretsdump.md"
+    },
+    {
+      "id": "tldr--f48121df875b",
+      "canonicalPath": "common/sshpass.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "sshpass",
+      "title": "sshpass",
+      "summary": "Stelle SSH Passwörtern bereit.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "sshpass--048b2934",
+        "sshpass--8d93876f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Stelle eine Verbindung zu einem externen Server über ein Passwort aus einem Datei-Objekt her (in diesem Fall `stdin`):",
+          "command": "sshpass -d {{0}} ssh {{benutzer}}@{{server}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/sshpass.md#L8"
+        },
+        {
+          "description": "Stelle eine Verbindung zu einem externen Server mit Hilfe eines Passworts bei automatischer Akzeptierung von unbekannten SSH Schlüsseln her:",
+          "command": "sshpass -p {{passwort}} ssh -o StrictHostKeyChecking=no {{benutzer}}@{{server}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/sshpass.md#L12"
+        },
+        {
+          "description": "Stelle eine Verbindung zu einem externen Server mit Hilfe eines Passworts aus der ersten Zeile einer Datei bei automatischer Akzeptierung von unbekannten SSH Schlüsseln mit anschließender Ausführung eines Befehls her:",
+          "command": "sshpass -f {{pfad/zu/datei}} ssh -o StrictHostKeyChecking=no {{benutzer}}@{{server}} \"{{befehl}}\"",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/sshpass.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/sshpass.md"
+    },
+    {
+      "id": "tldr--f52bd62df508",
+      "canonicalPath": "common/git-push.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "git",
+      "title": "git push",
+      "summary": "Lade Commits in ein Remote-Repository hoch.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git--a52d6c92",
+        "git-with-openssh--49faf317",
+        "git-without-openssh--49faf317",
+        "git19--a73464fb",
+        "mingit-busybox--a73464fb"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Sende lokale Änderungen des aktuellen Branches zu seinem entfernten Repository (Remote Branch):",
+          "command": "git push",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-push.md#L8"
+        },
+        {
+          "description": "Sende lokale Änderungen des angegebenen Branches zu seinem entfernten Repository:",
+          "command": "git push {{remote_name}} {{lokaler_branch}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-push.md#L12"
+        },
+        {
+          "description": "Lade den aktuellen Branch in ein entferntes Repository mit Angabe des Namens des entfernten Branches hoch:",
+          "command": "git push {{[-u|--set-upstream]}} {{remote_name}} {{remote_branch}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-push.md#L16"
+        },
+        {
+          "description": "Lade Änderungen eines bestimmten lokalen Branches zu einem bestimmten entfernten Branch hoch:",
+          "command": "git push {{remote_name}} {{lokaler_branch}}:{{entfernter_branch}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-push.md#L20"
+        },
+        {
+          "description": "Lade Änderungen aller lokalen Branches zu ihrem entfernten Repository hoch:",
+          "command": "git push --all {{remote_name}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-push.md#L24"
+        },
+        {
+          "description": "Lösche einen Branch in einem entfernten Repository:",
+          "command": "git push {{remote_name}} {{[-d|--delete]}} {{remote_branch}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-push.md#L28"
+        },
+        {
+          "description": "Entferne alle remote Branches, welche kein lokales Gegenstück besitzen:",
+          "command": "git push --prune {{remote_name}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-push.md#L32"
+        },
+        {
+          "description": "Veröffentliche Tags, welche noch nicht im entfernten Repository vorhanden sind:",
+          "command": "git push --tags",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-push.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/git-push.md"
+    },
+    {
+      "id": "tldr--f8667b14a43a",
+      "canonicalPath": "common/tar.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "tar",
+      "title": "tar",
+      "summary": "Archivierungstool. Häufig kombiniert mit anderen Methoden zur Komprimierung, wie gzip oder bzip2.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "tar--1bc6b0b1",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Erstelle ein Archiv von Dateien:",
+          "command": "tar cf {{pfad/zu/ziel.tar}} {{pfad/zu/datei1 pfad/zu/datei2 ...}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/tar.md#L9"
+        },
+        {
+          "description": "Erstelle ein mit gzip komprimiertes Archiv:",
+          "command": "tar czf {{ziel.tar.gz}} {{pfad/zu/datei1 pfad/zu/datei2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/tar.md#L13"
+        },
+        {
+          "description": "Erstelle ein mit gzip komprimiertes Archiv mit relativen Pfaden:",
+          "command": "tar czf {{pfad/zu/ziel.tar.gz}} {{[-C|--directory]}} {{pfad/zu/verzeichnis}} .",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/tar.md#L17"
+        },
+        {
+          "description": "Extrahiere ein (komprimiertes) Archiv in das derzeitige Verzeichnis im ausführlichen Modus:",
+          "command": "tar xvf {{pfad/zu/quelle.tar[.gz|.bz2|.xz]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/tar.md#L21"
+        },
+        {
+          "description": "Extrahiere ein Archiv in ein Verzeichnis:",
+          "command": "tar xf {{pfad/zu/quelle.tar}} {{[-C|--directory]}} {{pfad/zu/verzeichnis}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/tar.md#L25"
+        },
+        {
+          "description": "Erstelle ein komprimiertes Archiv und benutze den die Dateiendung des Archivs um die Kompressionsmethode zu wählen:",
+          "command": "tar caf {{pfad/zu/ziel.tar.xz}} {{pfad/zu/datei1 pfad/zu/datei2 ...}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/tar.md#L29"
+        },
+        {
+          "description": "Führe die Inhalte eines tar Archivs auf:",
+          "command": "tar tvf {{pfad/zu/quelle.tar}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/tar.md#L33"
+        },
+        {
+          "description": "Extrahiere Dateien die mit einem Muster übereinstimmen:",
+          "command": "tar xf {{pfad/zu/quelle.tar}} --wildcards \"{{*.html}}\"",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/tar.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/common/tar.md"
+    },
+    {
+      "id": "tldr--f91e0b338118",
+      "canonicalPath": "osx/gbasename.md",
+      "locale": "de",
+      "sourceLocale": "de",
+      "name": "gbasename",
+      "title": "gbasename",
+      "summary": "Dieser Befehl ist ein Alias von `basename`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Zeige die Dokumentation für den originalen Befehl an:",
+          "command": "tldr basename",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gbasename.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.de/osx/gbasename.md"
+    }
+  ]
+}

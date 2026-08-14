@@ -1,0 +1,2757 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "id",
+  "sourceLocale": "id",
+  "shard": "0",
+  "items": [
+    {
+      "id": "tldr--020aa193458c",
+      "canonicalPath": "common/argon2.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "argon2",
+      "title": "argon2",
+      "summary": "Hitung kode hash menggunakan algoritma kriptografi Argon2.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "argon2--6f2177ba"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Hitung kode hash dari suatu kata kunci (password) dengan suatu kata garam (salt) menggunakan parameter kriptografi bawaan:",
+          "command": "echo \"{{kata_sandi}}\" | argon2 \"{{kata_garam}}\"",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/argon2.md#L8"
+        },
+        {
+          "description": "Hitung kode hash dengan algoritma tertentu:",
+          "command": "echo \"{{kata_sandi}}\" | argon2 \"{{kata_garam}}\" -{{d|i|id}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/argon2.md#L12"
+        },
+        {
+          "description": "Jangan tampilkan informasi tambahan selain hasil kode hash:",
+          "command": "echo \"{{kata_sandi}}\" | argon2 \"{{kata_garam}}\" -e",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/argon2.md#L16"
+        },
+        {
+          "description": "Hitung kode hash dengan konfigurasi wak[t]u, pemanfaatan [m]emori (RAM), dan [p]aralelisme pada pemrosesan kriptografi secara tertentu:",
+          "command": "echo \"{{kata_sandi}}\" | argon2 \"{{kata_garam}}\" -t {{5}} -m {{20}} -p {{7}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/argon2.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/argon2.md"
+    },
+    {
+      "id": "tldr--03da635f46e2",
+      "canonicalPath": "common/echo.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "echo",
+      "title": "echo",
+      "summary": "Cetak ulang argumen-argumen yang dimasukkan ke dalam layar perangkat. Lihat juga: `printf`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Cetak sebuah pesan teks. Catatan: penggunaan tanda petik bersifat opsional:",
+          "command": "echo \"{{Halo Dunia}}\"",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/echo.md#L9"
+        },
+        {
+          "description": "Cetak sebuah pesan bersama suatu variabel lingkungan (environment variable):",
+          "command": "echo \"{{Variabel path saya adalah $PATH}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/echo.md#L13"
+        },
+        {
+          "description": "Cetak sebuah pesan tanpa mencetak baris teks baru (tanpa [n]ewline):",
+          "command": "echo -n \"{{Halo Dunia}}\"",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/echo.md#L17"
+        },
+        {
+          "description": "Tambahkan isi pesan ke dalam suatu berkas teks:",
+          "command": "echo \"{{Halo Dunia}}\" >> {{berkas.txt}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/echo.md#L21"
+        },
+        {
+          "description": "Aktifkan fitur interpretasi penggunaan tanda garis miring terbalik sebagai penanda karakter khusus:",
+          "command": "echo -e \"{{Kolom 1\\tKolom 2}}\"",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/echo.md#L25"
+        },
+        {
+          "description": "Cetak status keluar dari perintah terakhir yang dieksekusi (Catatan: Dalam Windows Command Prompt dan PowerShell, perintah yang setara adalah `echo %errorlevel%` dan `$lastexitcode`):",
+          "command": "echo $?",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/echo.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/echo.md"
+    },
+    {
+      "id": "tldr--040fb5c1a9b2",
+      "canonicalPath": "osx/date.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "date",
+      "title": "date",
+      "summary": "Atur atau tampilkan tanggal sistem.",
+      "platform": "macos",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Tampilkan tanggal saat ini menggunakan format _locale_:",
+          "command": "date +%c",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/date.md#L8"
+        },
+        {
+          "description": "Tampilkan tanggal saat ini dalam format UTC and ISO 8601:",
+          "command": "date -u +%Y-%m-%dT%H:%M:%SZ",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/date.md#L12"
+        },
+        {
+          "description": "Tampilkan tanggal saat ini sebagai _Unix timestamp_ (detik sejak jaman Unix):",
+          "command": "date +%s",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/date.md#L16"
+        },
+        {
+          "description": "Tampilkan tanggal tertentu (diwakili sebagai _Unix timestamp_) menggunakan format bawaan:",
+          "command": "date -r {{1473305798}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/date.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/date.md"
+    },
+    {
+      "id": "tldr--047b6a94951f",
+      "canonicalPath": "common/bun.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bun",
+      "title": "bun",
+      "summary": "Runtime dan alat program JavaScript. Memiliki pengemas (bundler), penguji, dan manajer paket bagi program.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Buat sebuah proyek Bun baru dalam direktori saat ini:",
+          "command": "bun init",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun.md#L9"
+        },
+        {
+          "description": "Jalankan suatu berkas JavaScript atau skrip yang terdaftar pada `package.json`:",
+          "command": "bun run {{jalan/menuju/berkas|nama_skrip}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun.md#L13"
+        },
+        {
+          "description": "Jalankan pengujian unit (unit test):",
+          "command": "bun test",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun.md#L17"
+        },
+        {
+          "description": "Unduh dan pasang seluruh paket yang terdaftar sebagai ketergantungan proyek dalam `package.json`:",
+          "command": "bun {{[i|install]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun.md#L21"
+        },
+        {
+          "description": "Tambahkan suatu dependensi ke dalam `package.json`:",
+          "command": "bun {{[a|add]}} {{nama_modul}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun.md#L25"
+        },
+        {
+          "description": "Hapus suatu ketergantungan dari `package.json`:",
+          "command": "bun {{[rm|remove]}} {{nama_modul}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun.md#L29"
+        },
+        {
+          "description": "Jalankan sebuah REPL (shell interaktif):",
+          "command": "bun repl",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun.md#L33"
+        },
+        {
+          "description": "Perbarui Bun menuju versi terkini:",
+          "command": "bun upgrade",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun.md"
+    },
+    {
+      "id": "tldr--082c4f68ca29",
+      "canonicalPath": "windows/date.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "date",
+      "title": "date",
+      "summary": "Menampilkan atau mengatur tanggal sistem.",
+      "platform": "windows",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Tampilkan tanggal sistem saat ini dan meminta untuk memasukkan tanggal baru (biarkan kosong agar tidak berubah):",
+          "command": "date",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/date.md#L8"
+        },
+        {
+          "description": "Tampilkan tanggal sistem saat ini tanpa meminta untuk memasukkan tanggal baru:",
+          "command": "date /t",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/date.md#L12"
+        },
+        {
+          "description": "Ubah tanggal sistem saat ini ke tanggal tertentu:",
+          "command": "date {{bulan}}-{{hari}}-{{tahun}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/date.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/date.md"
+    },
+    {
+      "id": "tldr--0997de4527cd",
+      "canonicalPath": "common/bun-c.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bun",
+      "title": "bun c",
+      "summary": "Perintah ini merupakan alias dari `bun create`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr bun create",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-c.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-c.md"
+    },
+    {
+      "id": "tldr--19bcb26b33bc",
+      "canonicalPath": "common/$.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "$",
+      "title": "$",
+      "summary": "Perluas nilai suatu variabel Bash.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Cetak nilai suatu variabel (misalnya `VARIABLE`):",
+          "command": "echo ${{VARIABLE}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%24.md#L8"
+        },
+        {
+          "description": "Jalankan isi variabel sebagai suatu perintah:",
+          "command": "${{VARIABLE}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%24.md#L12"
+        },
+        {
+          "description": "Cetak nilai kode luaran (exit code) atas hasil eksekusi program atau perintah sebelumnya:",
+          "command": "echo $?",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%24.md#L16"
+        },
+        {
+          "description": "Cetak suatu nilai angka acak antara 0 dan 32767:",
+          "command": "echo $RANDOM",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%24.md#L20"
+        },
+        {
+          "description": "Cetak salah satu di antara kumpulan teks/string yang digunakan sebagai indikator input perintah (command prompt):",
+          "command": "echo ${{PS0|PS1|PS2|PS3|PS4}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%24.md#L24"
+        },
+        {
+          "description": "Gunakan output dari suatu perintah (`command`) untuk dijalankan oleh perintah lain. Sama seperti melampirkan isi perintah di dalam tanda petik terbalik (backticks):",
+          "command": "$({{command}})",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%24.md#L28"
+        },
+        {
+          "description": "Tampilkan berapa banyak jumlah argumen pada konteks perintah saat ini:",
+          "command": "echo $#",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%24.md#L32"
+        },
+        {
+          "description": "Tampilkan isi suatu array Bash:",
+          "command": "echo ${{{nama_array[@]}}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%24.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%24.md"
+    },
+    {
+      "id": "tldr--1f1f0f9deaf0",
+      "canonicalPath": "windows/scb.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "scb",
+      "title": "scb",
+      "summary": "Perintah ini merupakan alias dari `Set-Clipboard`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr Set-Clipboard",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/scb.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/scb.md"
+    },
+    {
+      "id": "tldr--2c1b12ab6d57",
+      "canonicalPath": "common/bun-audit.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bun",
+      "title": "bun audit",
+      "summary": "Periksa potensi celah keamanan dalam kumpulan paket yang terpasang.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Lakukan audit atas seluruh proyek dengan berkas ketergantungan paket `bun.lock`:",
+          "command": "bun audit",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-audit.md#L8"
+        },
+        {
+          "description": "Hanya tampilkan celah keamanan dengan tingkat keparahan setara atau lebih:",
+          "command": "bun audit --audit-level {{low|moderate|high|critical}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-audit.md#L12"
+        },
+        {
+          "description": "Hanya audit kumpulan paket yang diperlukan untuk dijalankan dalam lingkungan laik produksi:",
+          "command": "bun audit --prod",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-audit.md#L16"
+        },
+        {
+          "description": "Abaikan celah keamanan dengan kode CVE tertentu:",
+          "command": "bun audit --ignore {{CVE-XXXX-YYYY}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-audit.md#L20"
+        },
+        {
+          "description": "Luarkan laporan audit dalam format JSON:",
+          "command": "bun audit --json",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-audit.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-audit.md"
+    },
+    {
+      "id": "tldr--2d84e2e814f6",
+      "canonicalPath": "common/lzmore.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "lzmore",
+      "title": "lzmore",
+      "summary": "Perintah ini merupakan alias dari `xzmore`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr xzmore",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/lzmore.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/lzmore.md"
+    },
+    {
+      "id": "tldr--30da163fe4d3",
+      "canonicalPath": "osx/osascript.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "osascript",
+      "title": "osascript",
+      "summary": "Jalankan AppleScript atau JavaScript for Automation (JXA) dari command-line.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Jalankan sebuah perintah AppleScript:",
+          "command": "osascript -e '{{say \"Halo dunia\"}}'",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/osascript.md#L8"
+        },
+        {
+          "description": "Jalankan beberapa perintah AppleScript:",
+          "command": "osascript -e '{{say \"Halo\"}}' -e '{{say \"dunia\"}}'",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/osascript.md#L12"
+        },
+        {
+          "description": "Mengeksekusi perintah dari file AppleScript yang telah terkompilasi (`*.scpt`), terbundel (`*.scptd`), atau secara plaintext (`*.applescript`):",
+          "command": "osascript {{jalan/menuju/apple.scpt}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/osascript.md#L16"
+        },
+        {
+          "description": "Mendapatkan ID pengenal (bundle identifier) dari sebuah aplikasi (dapat digunakan untuk perintah `open -b`):",
+          "command": "osascript -e 'id of app \"{{Aplikasi}}\"'",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/osascript.md#L20"
+        },
+        {
+          "description": "Jalankan sebuah perintah JavaScript:",
+          "command": "osascript -l JavaScript -e \"{{console.log('Halo dunia');}}\"",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/osascript.md#L24"
+        },
+        {
+          "description": "Mengeksekusi perintah dari file JavaScript:",
+          "command": "osascript -l JavaScript {{jalan/menuju/javascript.js}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/osascript.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/osascript.md"
+    },
+    {
+      "id": "tldr--34534074e26b",
+      "canonicalPath": "common/identify.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "identify",
+      "title": "identify",
+      "summary": "Perintah ini merupakan alias dari `magick identify`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "imagemagick-ffmpeg--1a1f6843"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr magick identify",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/identify.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/identify.md"
+    },
+    {
+      "id": "tldr--3cec38757fdd",
+      "canonicalPath": "common/tlmgr-option.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "tlmgr",
+      "title": "tlmgr option",
+      "summary": "Modul pengaturan TeX Live.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Tampilkan seluruh pengaturan TeX Live:",
+          "command": "tlmgr option showall",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-option.md#L8"
+        },
+        {
+          "description": "Tampilkan seluruh pengaturan yang telah diatur:",
+          "command": "tlmgr option show",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-option.md#L12"
+        },
+        {
+          "description": "Tampilkan seluruh pengaturan TeX Live dalam format JSON:",
+          "command": "tlmgr option showall --json",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-option.md#L16"
+        },
+        {
+          "description": "Tampilkan nilai terhadap suatu butir pengaturan TeX Live:",
+          "command": "tlmgr option {{pengaturan}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-option.md#L20"
+        },
+        {
+          "description": "Ubah nilai atas suatu butir pengaturan TeX Live:",
+          "command": "tlmgr option {{pengaturan}} {{nilai}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-option.md#L24"
+        },
+        {
+          "description": "Atur TeX Live untuk mendapatkan pembaruan daring dalam masa depan, setelah dipasang melalui media DVD:",
+          "command": "tlmgr option {{repository}} {{https://mirror.ctan.org/systems/texlive/tlnet}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-option.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-option.md"
+    },
+    {
+      "id": "tldr--4351db2b4538",
+      "canonicalPath": "common/codium.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "codium",
+      "title": "codium",
+      "summary": "Perintah ini merupakan alias dari `code`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr code",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/codium.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/codium.md"
+    },
+    {
+      "id": "tldr--458700035839",
+      "canonicalPath": "common/xzfgrep.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "xzfgrep",
+      "title": "xzfgrep",
+      "summary": "Perintah ini merupakan alias dari `xzgrep --fixed-strings`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/xzfgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/xzfgrep.md"
+    },
+    {
+      "id": "tldr--4c9647486246",
+      "canonicalPath": "common/sha256sum.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "sha256sum",
+      "title": "sha256sum",
+      "summary": "Hitung hasil persandian hash (checksum) untuk kumpulan berkas menggunakan algoritma SHA256.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Hitung hash atas satu atau beberapa berkas menggunakan algoritma SHA256:",
+          "command": "sha256sum {{jalan/menuju/berkas1 jalan/menuju/berkas2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/sha256sum.md#L8"
+        },
+        {
+          "description": "Hitung dan simpan daftar hasil hash beserta alamat berkas asal ke dalam suatu berkas manifes:",
+          "command": "sha256sum {{jalan/menuju/berkas1 jalan/menuju/berkas2 ...}} > {{jalan/menuju/berkas_manifes.sha256}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/sha256sum.md#L12"
+        },
+        {
+          "description": "Hitung hash atas isi dari `stdin`:",
+          "command": "{{perintah}} | sha256sum",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/sha256sum.md#L16"
+        },
+        {
+          "description": "Baca suatu berkas manifest serta lakukan verifikasi atas nilai hash dari isi berkas-berkas tersebut:",
+          "command": "sha256sum {{[-c|--check]}} {{jalan/menuju/berkas_manifes.sha256}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/sha256sum.md#L20"
+        },
+        {
+          "description": "Hanya luarkan pesan-pesan galat ketika terjadi kegagalan atas proses verifikasi:",
+          "command": "sha256sum {{[-c|--check]}} --quiet {{jalan/menuju/berkas_manifes.sha256}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/sha256sum.md#L24"
+        },
+        {
+          "description": "Hanya luarkan pesan-pesan galat dan abaikan berkas-berkas yang tak ditemukan:",
+          "command": "sha256sum --ignore-missing {{[-c|--check]}} --quiet {{jalan/menuju/berkas_manifes.sha256}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/sha256sum.md#L28"
+        },
+        {
+          "description": "Periksa keabsahan isi suatu berkas dengan nilai hash SHA256 yang diketahui:",
+          "command": "echo {{nilai_hash_sha256_yang_diketahui}} {{jalan/menuju/berkas}} | sha256sum {{[-c|--check]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/sha256sum.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/sha256sum.md"
+    },
+    {
+      "id": "tldr--4db8dd1d4d84",
+      "canonicalPath": "common/ansible-doc.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "ansible-doc",
+      "title": "ansible-doc",
+      "summary": "Tampilkan informasi mengenai modul-modul (action plugins) yang terpasang dalam pustaka pemasangan Ansible. Tampilkan informasi singkat mengenai daftar plugin beserta deskripsi singkatnya.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Tampilkan daftar modul/plugin yang tersedia:",
+          "command": "ansible-doc {{[-l|--list]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible-doc.md#L9"
+        },
+        {
+          "description": "Tampilkan daftar modul/plugin berdasarkan jenisnya:",
+          "command": "ansible-doc {{[-t|--type]}} {{become|cache|callback|cliconf|connection|...}} {{[-l|--list]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible-doc.md#L13"
+        },
+        {
+          "description": "Tampilkan informasi mengenai suatu modul/plugin:",
+          "command": "ansible-doc {{nama_plugin}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible-doc.md#L17"
+        },
+        {
+          "description": "Tampilkan informasi mengenai suatu modul/plugin berdasarkan jenis spesifiknya:",
+          "command": "ansible-doc {{[-t|--type]}} {{become|cache|callback|cliconf|connection|...}} {{nama_plugin}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible-doc.md#L21"
+        },
+        {
+          "description": "Lihat contoh cara penggunaan (dalam playbook) bagi suatu modul/plugin:",
+          "command": "ansible-doc {{[-s|--snippet]}} {{nama_plugin}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible-doc.md#L25"
+        },
+        {
+          "description": "Tampilkan informasi mengenai suatu plugin/modul dalam format JSON:",
+          "command": "ansible-doc {{[-j|--json]}} {{nama_plugin}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible-doc.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible-doc.md"
+    },
+    {
+      "id": "tldr--4e497edf529d",
+      "canonicalPath": "osx/pbpaste.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "pbpaste",
+      "title": "pbpaste",
+      "summary": "Kirim isi papan klip (clipboard) ke output standar.",
+      "platform": "macos",
+      "softwareIds": [
+        "pasteboard--7f6eff6f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Tulis konten papan klip ke dalam sebuah file:",
+          "command": "pbpaste > {{file}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/pbpaste.md#L8"
+        },
+        {
+          "description": "Gunakan konten papan klip sebagai input bagi sebuah perintah:",
+          "command": "pbpaste | grep foo",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/pbpaste.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/pbpaste.md"
+    },
+    {
+      "id": "tldr--4ef7db6ca7a9",
+      "canonicalPath": "common/bun-list.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bun",
+      "title": "bun list",
+      "summary": "Perintah ini merupakan alias dari `bun pm ls`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr bun pm ls",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-list.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-list.md"
+    },
+    {
+      "id": "tldr--54ce1a0214e1",
+      "canonicalPath": "osx/gtac.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "gtac",
+      "title": "gtac",
+      "summary": "Perintah ini merupakan alias dari `tac`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr tac",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/gtac.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/gtac.md"
+    },
+    {
+      "id": "tldr--56df06f30d1c",
+      "canonicalPath": "osx/gnohup.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "gnohup",
+      "title": "gnohup",
+      "summary": "Perintah ini merupakan alias dari `nohup`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr nohup",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/gnohup.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/gnohup.md"
+    },
+    {
+      "id": "tldr--58c40b3c519e",
+      "canonicalPath": "linux/genisoimage.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "genisoimage",
+      "title": "genisoimage",
+      "summary": "Perintah ini merupakan alias dari `mkisofs`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr mkisofs",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/genisoimage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/genisoimage.md"
+    },
+    {
+      "id": "tldr--5ab3f15e1343",
+      "canonicalPath": "common/b2sum.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "b2sum",
+      "title": "b2sum",
+      "summary": "Hitung hasil persandian hash (checksum) untuk kumpulan berkas menggunakan algoritma BLAKE2.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "b2sum--de0fadfc",
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Hitung hash atas satu atau beberapa berkas menggunakan algoritma BLAKE2:",
+          "command": "b2sum {{jalan/menuju/berkas1 jalan/menuju/berkas2 ...}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/b2sum.md#L8"
+        },
+        {
+          "description": "Hitung dan simpan daftar hasil hash beserta alamat berkas asal ke dalam suatu berkas manifes:",
+          "command": "b2sum {{jalan/menuju/berkas1 jalan/menuju/berkas2 ...}} > {{jalan/menuju/berkas_manifes.b2}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/b2sum.md#L12"
+        },
+        {
+          "description": "Hitung hash atas isi dari `stdin`:",
+          "command": "{{perintah}} | b2sum",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/b2sum.md#L16"
+        },
+        {
+          "description": "Baca suatu berkas manifest serta lakukan verifikasi atas nilai hash dari isi berkas-berkas tersebut:",
+          "command": "b2sum {{[-c|--check]}} {{jalan/menuju/berkas_manifes.b2}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/b2sum.md#L20"
+        },
+        {
+          "description": "Hanya luarkan pesan-pesan galat ketika terjadi kegagalan atas proses verifikasi:",
+          "command": "b2sum {{[-c|--check]}} --quiet {{jalan/menuju/berkas_manifes.b2}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/b2sum.md#L24"
+        },
+        {
+          "description": "Hanya luarkan pesan-pesan galat dan abaikan berkas-berkas yang tak ditemukan:",
+          "command": "b2sum --ignore-missing {{[-c|--check]}} --quiet {{jalan/menuju/berkas_manifes.b2}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/b2sum.md#L28"
+        },
+        {
+          "description": "Periksa keabsahan isi suatu berkas dengan nilai hash BLAKE2 yang diketahui:",
+          "command": "echo {{nilai_hash_blake2_yang_diketahui}} {{jalan/menuju/berkas}} | b2sum {{[-c|--check]}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/b2sum.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/b2sum.md"
+    },
+    {
+      "id": "tldr--5adbcf1ff708",
+      "canonicalPath": "common/buku.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "buku",
+      "title": "buku",
+      "summary": "Manajer markah buku (bookmark) lintas peramban (web browser).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "buku--b79a36ed"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Tampilkan seluruh markah yang mengandung \"kata kunci\" dan tag \"privasi\":",
+          "command": "buku {{kata kunci}} {{[-t|--stag]}} {{privasi}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/buku.md#L8"
+        },
+        {
+          "description": "Tambahkan markah baru dengan tag \"mesin pencari\" dan \"privasi\":",
+          "command": "buku {{[-a|--add]}} {{https://example.com}} {{mesin pencari}}, {{privasi}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/buku.md#L12"
+        },
+        {
+          "description": "Hapus suatu markah:",
+          "command": "buku {{[-d|--delete]}} {{id_markah}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/buku.md#L16"
+        },
+        {
+          "description": "Buka program penyunting untuk menyunting suatu markah:",
+          "command": "buku {{[-w|--write]}} {{id_markah}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/buku.md#L20"
+        },
+        {
+          "description": "Hapus tag \"mesin pencari\" dari suatu markah:",
+          "command": "buku {{[-u|--update]}} {{id_markah}} --tag - {{mesin pencari}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/buku.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/buku.md"
+    },
+    {
+      "id": "tldr--5c1c7cbadbb2",
+      "canonicalPath": "osx/fileicon.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "fileicon",
+      "title": "fileicon",
+      "summary": "Atur ikon kustom untuk berkas atau direktori.",
+      "platform": "macos",
+      "softwareIds": [
+        "fileicon--ff6856e2"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Tentukan suatu ikon kustom khusus untuk suatu berkas atau direktori:",
+          "command": "fileicon set {{jalan/menuju/berkas_atau_direktori}} {{jalan/menuju/berkas_ikon.png}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/fileicon.md#L8"
+        },
+        {
+          "description": "Hapus ikon kustom untuk suatu berkas atau direktori:",
+          "command": "fileicon rm {{jalan/menuju/berkas_atau_direktori}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/fileicon.md#L12"
+        },
+        {
+          "description": "Simpan ikon kustom berkas atau direktori sebagai berkas baru `.icns` dalam direktori saat ini:",
+          "command": "fileicon get {{jalan/menuju/berkas_atau_direktori}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/fileicon.md#L16"
+        },
+        {
+          "description": "Cek apakah suatu berkas atau direktori sedang memiliki ikon kustom:",
+          "command": "fileicon test {{jalan/menuju/berkas_atau_direktori}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/fileicon.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/fileicon.md"
+    },
+    {
+      "id": "tldr--6169b1302d4c",
+      "canonicalPath": "osx/gtalk.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "gtalk",
+      "title": "gtalk",
+      "summary": "Perintah ini merupakan alias dari GNU `talk`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr {{[-p|--platform]}} linux talk",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/gtalk.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/gtalk.md"
+    },
+    {
+      "id": "tldr--648dd3b63882",
+      "canonicalPath": "windows/cmd.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "cmd",
+      "title": "cmd",
+      "summary": "Penerjemah baris perintah Windows.",
+      "platform": "windows",
+      "softwareIds": [
+        "cmd--449cd18f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Jalankan suatu sesi syel interaktif:",
+          "command": "cmd",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/cmd.md#L8"
+        },
+        {
+          "description": "Jalankan kumpulan perintah secara spesifik:",
+          "command": "cmd /c {{echo 'perintah cmd telah dijalankan'}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/cmd.md#L12"
+        },
+        {
+          "description": "Jalankan suatu naskah/skrip perintah:",
+          "command": "cmd {{jalan\\menuju\\skrip.bat}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/cmd.md#L16"
+        },
+        {
+          "description": "Jalankan kumpulan perintah spesifik dan kemudian jalankan suatu sesi syel interaktif:",
+          "command": "cmd /k {{echo 'perintah cmd telah dijalankan'}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/cmd.md#L20"
+        },
+        {
+          "description": "Jalankan suatu sesi syel interaktif di mana fungsi `echo` dimatikan dalam luaran perintah:",
+          "command": "cmd /q",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/cmd.md#L24"
+        },
+        {
+          "description": "Jalankan suatu sesi shell interaktif dengan mengaktifkan atau menonaktifkan fitur ekspansi [v]ariabel tertunda:",
+          "command": "cmd /v:{{on|off}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/cmd.md#L28"
+        },
+        {
+          "description": "Jalankan suatu sesi shell interaktif dengan mengaktifkan atau menonaktifkan fitur [e]kstensi perintah:",
+          "command": "cmd /e:{{on|off}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/cmd.md#L32"
+        },
+        {
+          "description": "Jalankan suatu sesi shell interaktif dengan menggunakan [u]nicode sebagai format penulisan luaran teks:",
+          "command": "cmd /u",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/cmd.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/windows/cmd.md"
+    },
+    {
+      "id": "tldr--6df5f4ae99ea",
+      "canonicalPath": "common/nvim.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "nvim",
+      "title": "nvim",
+      "summary": "Neovim, teks editor programmer berbasis Vim, menyediakan beberapa mode untuk manipulasi teks berbeda jenis. Tekan `<i>` masuk mode edit. `<Esc>` kembali ke mode normal, yang tidak mengizinkan penyisipan teks biasa. Lihat juga: `vim`, `vimtutor`, `vimdiff`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "neovim--d6cd4006",
+        "neovim-nightly--cd74ca87"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Membuka berkas:",
+          "command": "nvim {{berkas}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/nvim.md#L10"
+        },
+        {
+          "description": "Masuk ke mode pengeditan teks (insert mode):",
+          "command": "<Esc><i>",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/nvim.md#L14"
+        },
+        {
+          "description": "Menyalin (\"yank\") atau memotong (\"delete\") baris saat ini (tempel itu dengan `<p>`):",
+          "command": "<Esc>{{<y><y>|<d><d>}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/nvim.md#L18"
+        },
+        {
+          "description": "Batalkan operasi terakhir:",
+          "command": "<Esc><u>",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/nvim.md#L22"
+        },
+        {
+          "description": "Mencari sebuah pattern pada berkas (tekan `<n>`/`<N>` untuk pergi ke kecocokan berikutnya/sebelumnya):",
+          "command": "<Esc></>{{pattern_pencarian}}<Enter>",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/nvim.md#L26"
+        },
+        {
+          "description": "Melakukan penggantian ekspresi reguler pada seluruh berkas:",
+          "command": "<Esc><:>%s/{{ekspresi_reguler}}/{{pengganti}}/g<Enter>",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/nvim.md#L30"
+        },
+        {
+          "description": "Menyimpan (write) berkas, dan keluar:",
+          "command": "{{<Esc><Z><Z>|<Esc><:>x<Enter>|<Esc><:>wq<Enter>}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/nvim.md#L34"
+        },
+        {
+          "description": "Keluar tanpa menyimpan:",
+          "command": "<Esc><:>q!<Enter>",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/nvim.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/nvim.md"
+    },
+    {
+      "id": "tldr--6e3aee9d4a9b",
+      "canonicalPath": "osx/ghostname.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "ghostname",
+      "title": "ghostname",
+      "summary": "Perintah ini merupakan alias dari GNU `hostname`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr hostname",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/ghostname.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/ghostname.md"
+    },
+    {
+      "id": "tldr--70fb8eae8be2",
+      "canonicalPath": "android/getprop.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "getprop",
+      "title": "getprop",
+      "summary": "Tampilkan informasi terhadap properti sistem operasi Android.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Tampilkan informasi daftar properti sistem operasi Android:",
+          "command": "getprop",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/getprop.md#L8"
+        },
+        {
+          "description": "Tampilkan informasi terhadap properti sistem tertentu:",
+          "command": "getprop {{properti}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/getprop.md#L12"
+        },
+        {
+          "description": "Tampilkan tingkat API SDK Android:",
+          "command": "getprop {{ro.build.version.sdk}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/getprop.md#L16"
+        },
+        {
+          "description": "Tampilkan versi sistem operasi Android:",
+          "command": "getprop {{ro.build.version.release}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/getprop.md#L20"
+        },
+        {
+          "description": "Tampilkan kode model perangkat Android:",
+          "command": "getprop {{ro.vendor.product.model}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/getprop.md#L24"
+        },
+        {
+          "description": "Tampilkan status pembukaan kunci pembuat perangkat (OEM):",
+          "command": "getprop {{ro.oem_unlock_supported}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/getprop.md#L28"
+        },
+        {
+          "description": "Tampilkan alamat MAC terhadap komponen Wi-Fi milik perangkat:",
+          "command": "getprop {{ro.boot.wifimacaddr}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/getprop.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/getprop.md"
+    },
+    {
+      "id": "tldr--728d1c604e19",
+      "canonicalPath": "common/bun-x.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bun",
+      "title": "bun x",
+      "summary": "Perintah ini merupakan alias dari `bunx`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr bunx",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-x.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-x.md"
+    },
+    {
+      "id": "tldr--7938acc2cecc",
+      "canonicalPath": "common/tlmgr-backup.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "tlmgr",
+      "title": "tlmgr backup",
+      "summary": "Atur pengaturan pencadangan kumpulan paket TeX Live. Direktori pencadangan default ditentukan sebagaimana diatur dalam opsi `backupdir`, dan dapat didapatkan menggunakan `tlmgr option`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Buat suatu pencadangan atas satu atau lebih banyak paket:",
+          "command": "tlmgr backup {{paket1 paket2 ...}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-backup.md#L9"
+        },
+        {
+          "description": "Buat suatu pencadangan terhadap seluruh paket:",
+          "command": "tlmgr backup --all",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-backup.md#L13"
+        },
+        {
+          "description": "Buat suatu pencadangan menuju suatu direktori kustom:",
+          "command": "tlmgr backup {{paket}} --backupdir {{jalan/menuju/direktori_pencadangan}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-backup.md#L17"
+        },
+        {
+          "description": "Hapus hasil-hasil pencadangan terhadap satu atau lebih banyak paket:",
+          "command": "tlmgr backup clean {{paket1 paket2 ...}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-backup.md#L21"
+        },
+        {
+          "description": "Hapus seluruh hasil pencadangan terhadap seluruh paket:",
+          "command": "tlmgr backup clean --all",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-backup.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-backup.md"
+    },
+    {
+      "id": "tldr--7d78fb26cc95",
+      "canonicalPath": "linux/agetty.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "agetty",
+      "title": "agetty",
+      "summary": "Alternatif `getty`: Buka sebuah port `tty`, minta nama login, dan jalankan perintah `/bin/login`. Biasanya dijalankan oleh `init`. Catatan: Baud rate adalah kecepatan transfer data antara terminal dan perangkat melalui koneksi serial.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Hubungkan `stdin` ke sebuah port (relatif terhadap `/dev`) dan secara opsional tentukan baud rate (secara bawaan 9600):",
+          "command": "agetty {{tty}} {{115200}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/agetty.md#L10"
+        },
+        {
+          "description": "Asumsikan `stdin` sudah terhubung ke sebuah `tty` dan atur timeout untuk login:",
+          "command": "agetty {{[-t|--timeout]}} {{timeout_in_seconds}} -",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/agetty.md#L14"
+        },
+        {
+          "description": "Asumsikan `tty` adalah 8-bit, menimpa variabel environment `$TERM` yang diatur oleh `init`:",
+          "command": "agetty {{[-8|--8bits]}} - {{term_var}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/agetty.md#L18"
+        },
+        {
+          "description": "Lewati proses login (tanpa login) dan jalankan program login lain sebagai root, alih-alih `/bin/login`:",
+          "command": "agetty {{[-n|--skip-login]}} {{[-l|--login-program]}} {{login_program}} {{tty}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/agetty.md#L22"
+        },
+        {
+          "description": "Jangan tampilkan file pra-login (issue) (`/etc/issue` secara bawaan) sebelum menuliskan prompt login:",
+          "command": "agetty {{[-i|--noissue]}} -",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/agetty.md#L26"
+        },
+        {
+          "description": "Ubah direktori root dan tulis host palsu tertentu ke dalam file `utmp`:",
+          "command": "agetty {{[-r|--chroot]}} /{{path/ke/root_directory}} {{[-H|--host]}} {{fake_host}} -",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/agetty.md#L30"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/agetty.md"
+    },
+    {
+      "id": "tldr--7f0618cb0abc",
+      "canonicalPath": "osx/caffeinate.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "caffeinate",
+      "title": "caffeinate",
+      "summary": "Menghindari macOS dari sleep (mode tidur).",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Menghindari mode sleep selama 1 jam (3600 detik):",
+          "command": "caffeinate -u -t {{3600}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/caffeinate.md#L8"
+        },
+        {
+          "description": "Menghindari mode sleep sampai sebuah command selesai:",
+          "command": "caffeinate -s {{command}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/caffeinate.md#L12"
+        },
+        {
+          "description": "Menghindari mode sleep sampai anda mengetik `<Ctrl c>`:",
+          "command": "caffeinate -i",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/caffeinate.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/caffeinate.md"
+    },
+    {
+      "id": "tldr--8504951bd965",
+      "canonicalPath": "linux/apachectl.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "apachectl",
+      "title": "apachectl",
+      "summary": "Kontrol server HTTP Apache.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Jalankan peladen:",
+          "command": "sudo apachectl start",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/apachectl.md#L8"
+        },
+        {
+          "description": "Jalankan ulang peladen:",
+          "command": "sudo apachectl restart",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/apachectl.md#L12"
+        },
+        {
+          "description": "Hentikan peladen:",
+          "command": "sudo apachectl stop",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/apachectl.md#L16"
+        },
+        {
+          "description": "Lakukan uji validitas file konfigurasi:",
+          "command": "apachectl configtest",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/apachectl.md#L20"
+        },
+        {
+          "description": "Periksa status peladen (membutuhkan peramban lynx):",
+          "command": "apachectl status",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/apachectl.md#L24"
+        },
+        {
+          "description": "Lakukan muat ulang konfigurasi tanpa memutus koneksi:",
+          "command": "sudo apachectl graceful",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/apachectl.md#L28"
+        },
+        {
+          "description": "Tampilkan konfigurasi lengkap Apache (tidak selalu didukung):",
+          "command": "apachectl -S",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/apachectl.md#L32"
+        },
+        {
+          "description": "Tampilkan bantuan:",
+          "command": "apachectl -h",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/apachectl.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/apachectl.md"
+    },
+    {
+      "id": "tldr--86670fdfe727",
+      "canonicalPath": "linux/lrzuntar.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "lrzuntar",
+      "title": "lrzuntar",
+      "summary": "Perintah ini merupakan alias dari `lrztar --decompress`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr lrztar",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/lrzuntar.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/lrzuntar.md"
+    },
+    {
+      "id": "tldr--884a2181c984",
+      "canonicalPath": "linux/shutdown.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "shutdown",
+      "title": "shutdown",
+      "summary": "Matikan dan nyalakan ulang sistem komputer. Lihat juga: `poweroff`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Matikan ([h]alt) sistem secara segera:",
+          "command": "shutdown -h now",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/shutdown.md#L9"
+        },
+        {
+          "description": "Nyalakan ulang ([r]eboot) segera:",
+          "command": "shutdown {{[-r|--reboot]}} now",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/shutdown.md#L13"
+        },
+        {
+          "description": "Nyalakan ulang dalam 5 menit:",
+          "command": "shutdown {{[-r|--reboot]}} +5 &",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/shutdown.md#L17"
+        },
+        {
+          "description": "Matikan sistem pada pukul 1 siang (menggunakan format 24 jam):",
+          "command": "shutdown -h 13:00",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/shutdown.md#L21"
+        },
+        {
+          "description": "Batalkan proses mati atau penyalaan ulang yang telah dijadwalkan:",
+          "command": "shutdown -c",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/shutdown.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/shutdown.md"
+    },
+    {
+      "id": "tldr--89b249c1c128",
+      "canonicalPath": "linux/pacremove.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "pacremove",
+      "title": "pacremove",
+      "summary": "Perintah ini merupakan alias dari `pactrans --remove`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr pactrans",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/pacremove.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/pacremove.md"
+    },
+    {
+      "id": "tldr--96914756ca09",
+      "canonicalPath": "common/bun-build.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bun",
+      "title": "bun build",
+      "summary": "Lakukan proses pengemasan berkas program JavaScript dan TypeScript dengan pengemas Bun yang cepat.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Kemas suatu berkas titik masuk program menuju berkas luaran/output:",
+          "command": "bun build {{jalan/menuju/titik_masuk.ts}} --outfile {{jalan/menuju/luaran.js}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-build.md#L8"
+        },
+        {
+          "description": "Kemas beberapa berkas menuju suatu direktori luaran:",
+          "command": "bun build {{jalan/menuju/berkas1.ts jalan/menuju/berkas2.ts ...}} --outdir {{jalan/menuju/dist}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-build.md#L12"
+        },
+        {
+          "description": "Kemas pula peta kode sumber untuk memudahkan proses awakutu/debugging:",
+          "command": "bun build {{jalan/menuju/titik_masuk.ts}} --outfile {{jalan/menuju/luaran.js}} --sourcemap",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-build.md#L16"
+        },
+        {
+          "description": "Kemas dan perkecil berkas luaran untuk produksi:",
+          "command": "bun build {{jalan/menuju/titik_masuk.ts}} --outfile {{jalan/menuju/luaran.js}} --minify",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-build.md#L20"
+        },
+        {
+          "description": "Kemas dengan menujukan lingkungan eksekusi/runtime program:",
+          "command": "bun build {{jalan/menuju/titik_masuk.ts}} --outfile {{jalan/menuju/luaran.js}} --target {{browser|bun|node}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-build.md#L24"
+        },
+        {
+          "description": "Kemas ke dalam suatu berkas program executable:",
+          "command": "bun build {{jalan/menuju/titik_masuk.ts}} --compile --outfile {{jalan/menuju/executable}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-build.md#L28"
+        },
+        {
+          "description": "Terus awasi kode sumber dan kemas ulang bila terdapat perubahan:",
+          "command": "bun build {{jalan/menuju/titik_masuk.ts}} --outfile {{jalan/menuju/luaran.js}} --watch",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-build.md#L32"
+        },
+        {
+          "description": "Masukkan juga kode modul-modul eksternal yang dipakai dalam program:",
+          "command": "bun build {{jalan/menuju/titik_masuk.ts}} --outfile {{jalan/menuju/luaran.js}} {{[-e|--external]}} {{react react-dom}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-build.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-build.md"
+    },
+    {
+      "id": "tldr--97b06375bc27",
+      "canonicalPath": "common/frp.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "frp",
+      "title": "frp",
+      "summary": "Fast Reverse Proxy: atur kanal terowongan jaringan komputer untuk dapat mengekspos sebagian layanan komputer peladen menuju Internet atau jaringan komputer lainnya.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "frp--8993593f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Lihat dokumentasi untuk `frpc`, program klien untuk jaringan `frp`:",
+          "command": "tldr frpc",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/frp.md#L8"
+        },
+        {
+          "description": "Lihat dokumentasi untuk `frps`, program peladen/server jaringan `frp`:",
+          "command": "tldr frps",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/frp.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/frp.md"
+    },
+    {
+      "id": "tldr--97e360c4fa72",
+      "canonicalPath": "android/cmd.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "cmd",
+      "title": "cmd",
+      "summary": "Manajer layanan (daemon) untuk Android.",
+      "platform": "android",
+      "softwareIds": [
+        "cmd--449cd18f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Lihat daftar layanan yang sedang berjalan:",
+          "command": "cmd -l",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/cmd.md#L8"
+        },
+        {
+          "description": "Panggil suatu layanan tertentu:",
+          "command": "cmd {{alarm}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/cmd.md#L12"
+        },
+        {
+          "description": "Panggil layanan dengan argumen tertentu:",
+          "command": "cmd {{vibrator}} {{vibrate 300}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/cmd.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/cmd.md"
+    },
+    {
+      "id": "tldr--a1af782392fa",
+      "canonicalPath": "android/dalvikvm.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "dalvikvm",
+      "title": "dalvikvm",
+      "summary": "Mesin virtual Java untuk Android.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Jalankan suatu program Java:",
+          "command": "dalvikvm -classpath {{jalan/menuju/berkas.jar}} {{nama_kelas}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/dalvikvm.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/android/dalvikvm.md"
+    },
+    {
+      "id": "tldr--a3039ada8cad",
+      "canonicalPath": "common/astroterm.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "astroterm",
+      "title": "astroterm",
+      "summary": "Sebuah peta bintang untuk terminal.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "astroterm--6e67fef4"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Tampilkan posisi kumpulan bintang dan planet secara langsung berdasarkan lokasi Anda saat ini:",
+          "command": "astroterm",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/astroterm.md#L8"
+        },
+        {
+          "description": "Tampilkan kumpulan konstelasi secara berwarna-warni dan dengan kecepatan bingkai animasi tertentu:",
+          "command": "astroterm {{[-C|--constellations]}} {{[-c|--color]}} {{[-f|--fps]}} {{60}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/astroterm.md#L12"
+        },
+        {
+          "description": "Gunakan karakter unicode daripada ASCII dasar dan hanya tampilkan kumpulan bintang yang lebih terang dari nilai yang diberikan:",
+          "command": "astroterm {{[-u|--unicode]}} {{[-t|--threshold]}} {{2.0}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/astroterm.md#L16"
+        },
+        {
+          "description": "Gunakan lintang, bujur, dan tanggal/waktu yang diberikan:",
+          "command": "astroterm {{[-a|--latitude]}} {{90.0}} {{[-o|--longitude]}} {{-180.0}} {{[-d|--datetime]}} {{2025-08-04T12:00:00}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/astroterm.md#L20"
+        },
+        {
+          "description": "Gunakan garis bujur dan garis lintang kota yang diberikan dan atur kecepatan simulasi ke faktor tertentu:",
+          "command": "astroterm {{[-i|--city]}} {{Singapore}} {{[-s|--speed]}} {{1000.0}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/astroterm.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/astroterm.md"
+    },
+    {
+      "id": "tldr--b710a6586e12",
+      "canonicalPath": "common/musescore.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "musescore",
+      "title": "musescore",
+      "summary": "Program pengolah lembaran musik MuseScore. Lihat juga: `lilypond`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "musescore--76959afa",
+        "musescore-nightly--ca3b0527",
+        "musescore3-nightly--ca3b0527"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Tentukan besaran arus bitrate dalam kbit/s:",
+          "command": "musescore {{[-b|--bitrate]}} {{bitrate}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/musescore.md#L9"
+        },
+        {
+          "description": "Jalankan MuseScore dalam mode awakutu (debug):",
+          "command": "musescore {{[-d|--debug]}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/musescore.md#L13"
+        },
+        {
+          "description": "Nyalakan fitur percobaan, seperti manipulasi layer audio:",
+          "command": "musescore {{[-e|--experimental]}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/musescore.md#L17"
+        },
+        {
+          "description": "Ekspor suatu berkas ke dalam berkas output yang ditentukan. Jenis format berkas ditentukan berdasarkan nama ekstensi:",
+          "command": "musescore {{[-o|--export-to]}} {{berkas_luaran}} {{berkas_masukan}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/musescore.md#L21"
+        },
+        {
+          "description": "Tampilkan perbedaan isi antara kedua berkas skor musik:",
+          "command": "musescore --diff {{jalan/menuju/berkas1}} {{jalan/menuju/berkas2}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/musescore.md#L25"
+        },
+        {
+          "description": "Gunakan suatu berkas konfigurasi impor untuk MIDI:",
+          "command": "musescore {{[-M|--midi-operations]}} {{jalan/menuju/berkas}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/musescore.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/musescore.md"
+    },
+    {
+      "id": "tldr--b825e79dcda7",
+      "canonicalPath": "common/hugo-serve.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "hugo",
+      "title": "hugo serve",
+      "summary": "Perintah ini merupakan alias dari `hugo server`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "hugo--626f54e9",
+        "hugo-extended--626f54e9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr hugo server",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo-serve.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo-serve.md"
+    },
+    {
+      "id": "tldr--be9b7a90d820",
+      "canonicalPath": "common/minetest.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "minetest",
+      "title": "minetest",
+      "summary": "Perintah ini merupakan alias dari `luanti`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr luanti",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/minetest.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/minetest.md"
+    },
+    {
+      "id": "tldr--c0052abfbefd",
+      "canonicalPath": "linux/pw-play.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "pw-play",
+      "title": "pw-play",
+      "summary": "Perintah ini merupakan alias dari `pw-cat --playback`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/pw-play.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/pw-play.md"
+    },
+    {
+      "id": "tldr--c2e9aebb7584",
+      "canonicalPath": "common/tlmgr-arch.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "tlmgr",
+      "title": "tlmgr arch",
+      "summary": "Perintah ini merupakan alias dari `tlmgr platform`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr tlmgr platform",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-arch.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-arch.md"
+    },
+    {
+      "id": "tldr--c3396d84dc80",
+      "canonicalPath": "common/{.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "{",
+      "title": "{",
+      "summary": "Alat manipulasi input syel serbaguna.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Isolasi nama variabel (agar dapat disambung dengan bagian teks lain tanpa dipisah menggunakan karakter spasi):",
+          "command": "echo ${HOME}work",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%7B.md#L8"
+        },
+        {
+          "description": "Perluas urutan angka atau karakter:",
+          "command": "echo {1..3} {a..c}{dir1,dir2,dir3}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%7B.md#L12"
+        },
+        {
+          "description": "Periksa apakah suatu `variable` telah diatur sebelum mengembalikan sebuah pesan teks:",
+          "command": "echo ${variable:+variable is set and contains $variable}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%7B.md#L16"
+        },
+        {
+          "description": "Setel sebuah nilai bawaan/default apabila suatu `variable` belum pernah diatur:",
+          "command": "echo ${variable:-default}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%7B.md#L20"
+        },
+        {
+          "description": "Dapatkan panjang nilai suatu `variable` dalam format karakter/string:",
+          "command": "echo ${#variable}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%7B.md#L24"
+        },
+        {
+          "description": "Dapatkan bagian/substring pada string:",
+          "command": "echo ${variable:3:7}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%7B.md#L28"
+        },
+        {
+          "description": "Perluas nilai `variable` secara rekursif:",
+          "command": "echo ${!variable}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%7B.md#L32"
+        },
+        {
+          "description": "Ubah semua karakter menjadi huruf kapital:",
+          "command": "echo ${variable^^}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%7B.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%7B.md"
+    },
+    {
+      "id": "tldr--c57bb695b1c9",
+      "canonicalPath": "common/tlmgr-platform.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "tlmgr",
+      "title": "tlmgr platform",
+      "summary": "Atur konfigurasi platform (arsitektur bahasa prosesor) yang digunakan pada TeX Live.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Tampilkan daftar seluruh platform yang tersedia untuk diunduh dari repositori paket:",
+          "command": "tlmgr {{[arch|platform]}} list",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-platform.md#L8"
+        },
+        {
+          "description": "Tambahkan berkas-berkas executable yang tersedia untuk suatu platform:",
+          "command": "sudo tlmgr {{[arch|platform]}} add {{platform}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-platform.md#L12"
+        },
+        {
+          "description": "Hapus berkas-berkas executable yang tersedia untuk suatu platform:",
+          "command": "sudo tlmgr {{[arch|platform]}} remove {{platform}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-platform.md#L16"
+        },
+        {
+          "description": "Lakukan pengecekan otomatis dan alih konfigurasi pemasangan paket menuju platform saat ini:",
+          "command": "sudo tlmgr {{[arch|platform]}} set auto",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-platform.md#L20"
+        },
+        {
+          "description": "Alih konfigurasi pemasangan paket menuju suatu platform:",
+          "command": "sudo tlmgr {{[arch|platform]}} set {{platform}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-platform.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-platform.md"
+    },
+    {
+      "id": "tldr--df592785e74e",
+      "canonicalPath": "common/unzstd.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "unzstd",
+      "title": "unzstd",
+      "summary": "Perintah ini merupakan alias dari `zstd --decompress`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr zstd",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/unzstd.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/unzstd.md"
+    },
+    {
+      "id": "tldr--e07f3789d3cf",
+      "canonicalPath": "common/bun-rm.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bun",
+      "title": "bun rm",
+      "summary": "Perintah ini merupakan alias dari `bun remove`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr bun remove",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-rm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-rm.md"
+    },
+    {
+      "id": "tldr--e383485c9688",
+      "canonicalPath": "common/hugo.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "hugo",
+      "title": "hugo",
+      "summary": "Penghasil situs web statis berbasis template. Menggunakan modul, komponen dan tema.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "hugo--626f54e9",
+        "hugo-extended--626f54e9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Buat sebuah proyek situs web Hugo baru:",
+          "command": "hugo new site {{jalan/menuju/website}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo.md#L8"
+        },
+        {
+          "description": "Buat sebuah proyek tema Hugo baru (tema juga dapat diunduh dari <https://themes.gohugo.io/>):",
+          "command": "hugo new theme {{nama_tema}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo.md#L12"
+        },
+        {
+          "description": "Buat sebuah halaman situs web baru:",
+          "command": "hugo new {{nama_bagian}}/{{nama_halaman}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo.md#L16"
+        },
+        {
+          "description": "Bangun situs web dari direktori sumber menuju direktori `./public`:",
+          "command": "hugo",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo.md#L20"
+        },
+        {
+          "description": "Bangun situs web termasuk halaman yang ditandai sebagai \"draft\":",
+          "command": "hugo {{[-D|--buildDrafts]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo.md#L24"
+        },
+        {
+          "description": "Bangun situs web dengan untuk dijalankan pada alamat IP lokal:",
+          "command": "hugo server --bind {{ip_lokal}} {{[-b|--baseURL]}} {{http://ip_lokal}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo.md#L28"
+        },
+        {
+          "description": "Bangun situs web menuju direktori yang ditentukan:",
+          "command": "hugo {{[-d|--destination]}} {{alamat/tujuan}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo.md#L32"
+        },
+        {
+          "description": "Bangun situs web dan jalankan peladen (server) untuk menyajikannya, dengan memuat ulang saat terdapat halaman yang berubah:",
+          "command": "hugo server",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/hugo.md"
+    },
+    {
+      "id": "tldr--e3ba276df4fd",
+      "canonicalPath": "common/bun-i.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bun",
+      "title": "bun i",
+      "summary": "Perintah ini merupakan alias dari `bun install`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr bun install",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-i.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-i.md"
+    },
+    {
+      "id": "tldr--e55a4ed181f0",
+      "canonicalPath": "common/ansible.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "ansible",
+      "title": "ansible",
+      "summary": "Atur grup perangkat komputer yang secara jarak jauh melalui SSH. (Gunakan berkas `/etc/ansible/hosts` untuk menambahkan grup atau host baru). Beberapa subperintah seperti `ansible galaxy` mempunyai dokumentasi terpisah.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "ansible--d395ed9b"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Tampilkan daftar host yang tergabung dalam suatu grup:",
+          "command": "ansible {{grup}} --list-hosts",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible.md#L9"
+        },
+        {
+          "description": "Uji koneksi (ping) kepada grup perangkat tertentu dengan menggunakan [m]odul ping:",
+          "command": "ansible {{grup}} {{[-m|--module-name]}} ping",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible.md#L13"
+        },
+        {
+          "description": "Tampilkan informasi faktual tentang suatu grup perangkat dengan menggunakan [m]odul setup:",
+          "command": "ansible {{grup}} {{[-m|--module-name]}} setup",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible.md#L17"
+        },
+        {
+          "description": "Jalankan perintah pada suatu kelompok perangkat melalui [m]odul command dengan kumpulan [a]rgumen:",
+          "command": "ansible {{grup}} {{[-m|--module-name]}} command {{[-a|--args]}} '{{perintah_saya}}'",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible.md#L21"
+        },
+        {
+          "description": "Jalankan perintah dengan hak akses administratif:",
+          "command": "ansible {{grup}} {{[-b|--become]}} --ask-become-pass {{[-m|--module-name]}} command {{[-a|--args]}} '{{perintah_saya}}'",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible.md#L25"
+        },
+        {
+          "description": "Jalankan perintah menggunakan berkas [i]nventaris tertentu:",
+          "command": "ansible {{grup}} {{[-i|--inventory]}} {{file_inventaris}} {{[-m|--module-name]}} command {{[-a|--args]}} '{{perintah_saya}}'",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible.md#L29"
+        },
+        {
+          "description": "Tampilkan daftar grup dalam sebuah inventaris:",
+          "command": "ansible localhost {{[-m|--module-name]}} debug {{[-a|--args]}} '{{var=groups.keys()}}'",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/ansible.md"
+    },
+    {
+      "id": "tldr--e7469cb5158a",
+      "canonicalPath": "common/tlmgr-key.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "tlmgr",
+      "title": "tlmgr key",
+      "summary": "Atur daftar kunci GPG untuk memverifikasi pangkalan data paket TeX Live.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Tampilkan seluruh kunci untuk TeX Live:",
+          "command": "tlmgr key list",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-key.md#L8"
+        },
+        {
+          "description": "Tambahkan suatu kunci dari berkas:",
+          "command": "sudo tlmgr key add {{jalan/menuju/kunci.gpg}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-key.md#L12"
+        },
+        {
+          "description": "Tambahkan suatu kunci dari `stdin`:",
+          "command": "cat {{jalan/menuju/kunci.gpg}} | sudo tlmgr key add -",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-key.md#L16"
+        },
+        {
+          "description": "Hapus suatu kunci menurut nomor induknya (ID):",
+          "command": "sudo tlmgr key remove {{id_kunci}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-key.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr-key.md"
+    },
+    {
+      "id": "tldr--e787578d3e7a",
+      "canonicalPath": "common/age.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "age",
+      "title": "age",
+      "summary": "Alat pengenkripsi berkas yang sederhana, modern, dan aman. Lihat juga: `age-keygen`, `age-inspect`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "age--33aba6a6",
+        "age--527f8a04"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Buat sebuah berkas terenkripsi yang hanya dapat didekripsi menggunakan kata sandi:",
+          "command": "age {{[-p|--passphrase]}} {{[-o|--output]}} {{jalan/menuju/berkas_terenkripsi}} {{jalan/menuju/berkas_tidak_terenkripsi}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/age.md#L9"
+        },
+        {
+          "description": "Buat berkas terenkripsi dengan kunci publik (public key) secara literal (ulangi argumen `--recipient` untuk memberikan kunci publik tambahan):",
+          "command": "age {{[-r|--recipient]}} {{kunci_publik}} {{[-o|--output]}} {{jalan/menuju/berkas_terenkripsi}} {{jalan/menuju/berkas_tidak_terenkripsi}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/age.md#L13"
+        },
+        {
+          "description": "Buat berkas terenkripsi bagi para penerima menurut kunci-kunci publik mereka yang disimpan di dalam suatu berkas (satu kunci per baris):",
+          "command": "age {{[-R|--recipients-file]}} {{path/to/berkas_daftar_penerima}} {{[-o|--output]}} {{jalan/menuju/berkas_terenkripsi}} {{jalan/menuju/berkas_tidak_terenkripsi}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/age.md#L17"
+        },
+        {
+          "description": "Buka berkas terenkripsi dengan kata sandi:",
+          "command": "age {{[-d|--decrypt]}} {{[-o|--output]}} {{path/to/berkas_bebas_enkripsi}} {{jalan/menuju/berkas_terenkripsi}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/age.md#L21"
+        },
+        {
+          "description": "Buka berkas terenkripsi dengan kunci privat:",
+          "command": "age {{[-d|--decrypt]}} {{[-i|--identity]}} {{path/to/berkas_kunci_privat}} {{[-o|--output]}} {{path/to/berkas_bebas_enkripsi}} {{jalan/menuju/berkas_terenkripsi}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/age.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/age.md"
+    },
+    {
+      "id": "tldr--eae9f040d831",
+      "canonicalPath": "common/bunzip2.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bunzip2",
+      "title": "bunzip2",
+      "summary": "Perintah ini merupakan alias dari `bzip2 --decompress`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bzip2--ea87c95f",
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr bzip2",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bunzip2.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bunzip2.md"
+    },
+    {
+      "id": "tldr--ebe5c50f865f",
+      "canonicalPath": "osx/gping6.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "gping6",
+      "title": "gping6",
+      "summary": "Perintah ini merupakan alias dari `ping6`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr ping6",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/gping6.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/osx/gping6.md"
+    },
+    {
+      "id": "tldr--edd2ff37eb39",
+      "canonicalPath": "common/cadaver.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "cadaver",
+      "title": "cadaver",
+      "summary": "Klien WebDAV untuk Unix.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "cadaver--c6c3d0a1"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Hubungkan ke peladen <dav.example.com>, kemudian buka direktori koleksi tingkat pangkal:",
+          "command": "cadaver {{http://dav.example.com/}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cadaver.md#L8"
+        },
+        {
+          "description": "Hubungkan menuju suatu peladen dengan port tertentu, kemudian buka isi suatu koleksi:",
+          "command": "cadaver {{http://dav.example.com:8022/jalan/menuju/koleksi/}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cadaver.md#L12"
+        },
+        {
+          "description": "Hubungkan menuju suatu peladen menggunakan SSL:",
+          "command": "cadaver {{https://davs.example.com/}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cadaver.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cadaver.md"
+    },
+    {
+      "id": "tldr--eece3034e514",
+      "canonicalPath": "common/tlmgr.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "tlmgr",
+      "title": "tlmgr",
+      "summary": "Atur pemasangan paket dan konfigurasi terhadap suatu instalasi TeX Live. Beberapa subperintah seperti `paper` mempunyai dokumentasi terpisah.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Pasang suatu paket beserta kumpulan paket kebergantungannya:",
+          "command": "tlmgr install {{paket}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr.md#L9"
+        },
+        {
+          "description": "Hapus paket dan semua paket kebergantungannya:",
+          "command": "tlmgr remove {{paket}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr.md#L13"
+        },
+        {
+          "description": "Tampilkan informasi tentang suatu paket:",
+          "command": "tlmgr info {{paket}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr.md#L17"
+        },
+        {
+          "description": "Mutakhirkan seluruh paket:",
+          "command": "tlmgr update --all",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr.md#L21"
+        },
+        {
+          "description": "Tampilkan daftar paket yang dapat diperbarui tanpa melakukan proses pemutakhiran:",
+          "command": "tlmgr update --list",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr.md#L25"
+        },
+        {
+          "description": "Jalankan versi GUI dari program tlmgr:",
+          "command": "tlmgr gui",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr.md#L29"
+        },
+        {
+          "description": "Tampilkan seluruh konfigurasi TeX Live:",
+          "command": "tlmgr conf",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/tlmgr.md"
+    },
+    {
+      "id": "tldr--ef232bce6755",
+      "canonicalPath": "common/[[.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "[[",
+      "title": "[[",
+      "summary": "Cek jenis berkas dan bandingkan nilai dalam syel. Perintah akan mengembalikan nilai 0 jika syarat tersebut terpenuhi (bernilai benar) atau 1 jika tidak.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Coba apakah suatu variabel memiliki nilai yang sama dengan sebuah string:",
+          "command": "[[ ${{variabel}} == \"{{string}}\" ]]",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%5B%5B.md#L9"
+        },
+        {
+          "description": "Coba apakah suatu variabel string memenuhi kriteria pola pencarian glob/`regex`:",
+          "command": "[[ ${{variabel}} =~ {{pola_glob_atau_regex}} ]]",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%5B%5B.md#L13"
+        },
+        {
+          "description": "Coba apakah suatu variabel memiliki nilai yang sama/tidak sama/lebih besar/lebih kecil/lebih besar atau sama dengan/lebih kecil atau sama dengan suatu angka:",
+          "command": "[[ ${{variabel}} -{{eq|ne|gt|lt|ge|le}} {{bilangan_bulat}} ]]",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%5B%5B.md#L17"
+        },
+        {
+          "description": "Coba apakah suatu variabel memiliki nilai yang tidak sama dengan hampa/null:",
+          "command": "[[ -n ${{variabel}} ]]",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%5B%5B.md#L21"
+        },
+        {
+          "description": "Coba apakah suatu variabel memiliki nilai hampa/null (atau memiliki panjang karakter berupa nol):",
+          "command": "[[ -z ${{variabel}} ]]",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%5B%5B.md#L25"
+        },
+        {
+          "description": "Coba apakah suatu berkas ([f]ile) dapat ditemukan:",
+          "command": "[[ -f {{jalan/menuju/berkas}} ]]",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%5B%5B.md#L29"
+        },
+        {
+          "description": "Coba apakah suatu [d]irektori dapat ditemukan:",
+          "command": "[[ -d {{jalan/menuju/direktori}} ]]",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%5B%5B.md#L33"
+        },
+        {
+          "description": "Coba apakah suatu berkas atau direktori dapat ditemukan:",
+          "command": "[[ -e {{jalan/menuju/berkas_atau_direktori}} ]]",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%5B%5B.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/%5B%5B.md"
+    },
+    {
+      "id": "tldr--f63256f15f65",
+      "canonicalPath": "linux/a2query.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "a2query",
+      "title": "a2query",
+      "summary": "Dapatkan konfigurasi yang dipakai saat ini (secara runtime) dari piranti peladen Apache dalam sistem operasi berbasis Debian.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Tampilkan daftar modul Apache yang sedang aktif:",
+          "command": "sudo a2query -m",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/a2query.md#L8"
+        },
+        {
+          "description": "Cek apakah suatu modul Apache sedang aktif:",
+          "command": "sudo a2query -m {{nama_modul}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/a2query.md#L12"
+        },
+        {
+          "description": "Tampilkan daftar host maya (virtual hosts) yang sedang aktif:",
+          "command": "sudo a2query -s",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/a2query.md#L16"
+        },
+        {
+          "description": "Tampilkan jenis modul Multi Processing Module yang sedang aktif:",
+          "command": "sudo a2query -M",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/a2query.md#L20"
+        },
+        {
+          "description": "Tampilkan versi piranti peladen Apache:",
+          "command": "sudo a2query -v",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/a2query.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/a2query.md"
+    },
+    {
+      "id": "tldr--f9d0bee68a95",
+      "canonicalPath": "common/bun-add.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "bun",
+      "title": "bun add",
+      "summary": "Tambahkan dan pasang ketergantungan untuk proyek saat ini.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Pasang sebuah paket:",
+          "command": "bun {{[a|add]}} {{paket}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-add.md#L8"
+        },
+        {
+          "description": "Pasang beberapa paket:",
+          "command": "bun {{[a|add]}} {{paket1 paket2 ...}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-add.md#L12"
+        },
+        {
+          "description": "Pasang suatu paket dari repositori Git:",
+          "command": "bun {{[a|add]}} {{url_git}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-add.md#L16"
+        },
+        {
+          "description": "Pasang paket dengan versi tertentu:",
+          "command": "bun {{[a|add]}} {{paket}}@{{versi}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-add.md#L20"
+        },
+        {
+          "description": "Pasang paket dari suatu berkas atau direktori lokal:",
+          "command": "bun {{[a|add]}} file:{{jalan/menuju/berkas_atau_direktori}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-add.md#L24"
+        },
+        {
+          "description": "Tambahkan paket sebagai ketergantungan proses pengembangan (dev dependency):",
+          "command": "bun {{[a|add]}} {{[-d|--dev]}} {{paket}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-add.md#L28"
+        },
+        {
+          "description": "Tambahkan paket secara global:",
+          "command": "bun {{[a|add]}} {{[-g|--global]}} {{paket}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-add.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/bun-add.md"
+    },
+    {
+      "id": "tldr--fc4951df4785",
+      "canonicalPath": "common/cowsay.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "cowsay",
+      "title": "cowsay",
+      "summary": "Buat dan tampilkan seni teks ASCII (ASCII art) yang menampilkan objek (secara bawaan berupa seekor sapi) yang sedang berkata atau berpikir tentang sesuatu.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "cowsay--5f773361",
+        "cowsay--e0af17eb",
+        "neo-cowsay--9f700e30"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Tampilkan suatu seni ASCII yang menunjukkan seekor sapi berkata \"halo, dunia\":",
+          "command": "cowsay \"{{halo, dunia}}\"",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cowsay.md#L8"
+        },
+        {
+          "description": "Tampilkan seni ASCII sapi dengan pesan dari `stdin`:",
+          "command": "echo \"{{halo, dunia}}\" | cowsay",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cowsay.md#L12"
+        },
+        {
+          "description": "Tampilkan seluruh variasi seni ASCII yang tersedia:",
+          "command": "cowsay -l",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cowsay.md#L16"
+        },
+        {
+          "description": "Tampilkan pesan \"halo, dunia\" dengan variasi seni tertentu:",
+          "command": "cowsay -f {{variasi}} \"{{halo, dunia}}\"",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cowsay.md#L20"
+        },
+        {
+          "description": "Tampilkan seni ASCII seekor sapi yang tewas dan berpikir:",
+          "command": "cowthink -d \"{{Saya hanya seekor sapi, bukan pemikir hebat...}}\"",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cowsay.md#L24"
+        },
+        {
+          "description": "Tampilkan pesan \"halo, dunia\" sebagai seni ASCII sapi dengan karakter yang ditentukan sebagai mata sang sapi:",
+          "command": "cowsay -e {{karakter_mata}} \"{{halo, dunia}}\"",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cowsay.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/cowsay.md"
+    },
+    {
+      "id": "tldr--fc73dc4d077c",
+      "canonicalPath": "linux/pct-move_volume.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "pct",
+      "title": "pct move_volume",
+      "summary": "Perintah ini merupakan alias dari `pct move-volume`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Tampilkan dokumentasi untuk perintah asli:",
+          "command": "tldr pct move-volume",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/pct-move_volume.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/linux/pct-move_volume.md"
+    },
+    {
+      "id": "tldr--ff680fe31e3a",
+      "canonicalPath": "common/vim.md",
+      "locale": "id",
+      "sourceLocale": "id",
+      "name": "vim",
+      "title": "vim",
+      "summary": "Vim (Vi IMproved), suatu aplikasi pengolah teks berbasis baris perintah, yang menyediakan beberapa mode untuk berbagai jenis proses manipulasi teks. Menekan `<i>` dalam mode normal akan memasuki mode penyisipan (insert). Menekan `<Esc>` akan kembali ke mode normal, yang memungkinkan penggunaan perintah Vim. Lihat juga: `vimdiff`, `vimtutor`, `nvim`, `gvim`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "vim--9266ef09",
+        "vim-nightly--339fc25c",
+        "vim-tux--8f39cf5c"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Buka suatu berkas:",
+          "command": "vim {{jalan/menuju/berkas}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/vim.md#L10"
+        },
+        {
+          "description": "Buka suatu berkas pada nomor baris teks tertentu:",
+          "command": "vim +{{nomor_baris}} {{jalan/menuju/berkas}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/vim.md#L14"
+        },
+        {
+          "description": "Lihat manual bantuan untuk Vim:",
+          "command": "<:>help<Enter>",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/vim.md#L18"
+        },
+        {
+          "description": "Simpan dan keluar dari sesi pengolahan teks saat ini:",
+          "command": "{{<Esc><Z><Z>|<Esc><:>x<Enter>|<Esc><:>wq<Enter>}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/vim.md#L22"
+        },
+        {
+          "description": "Masuk ke mode normal dan batalkan operasi terakhir:",
+          "command": "<Esc><u>",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/vim.md#L26"
+        },
+        {
+          "description": "Cari pola dalam berkas (tekan `<n>`/`<N>` untuk menuju ke kecocokan berikutnya/sebelumnya):",
+          "command": "</>{{pola_pencarian}}<Enter>",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/vim.md#L30"
+        },
+        {
+          "description": "Lakukan substitusi ekspresi reguler di seluruh berkas:",
+          "command": "<:>%s/{{ekspresi_reguler}}/{{teks_pengganti}}/g<Enter>",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/vim.md#L34"
+        },
+        {
+          "description": "Tampilkan nomor baris:",
+          "command": "<:>set nu<Enter>",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/vim.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.id/common/vim.md"
+    }
+  ]
+}

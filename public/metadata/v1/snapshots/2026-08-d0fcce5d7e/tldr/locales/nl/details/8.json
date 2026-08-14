@@ -1,0 +1,2425 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "nl",
+  "sourceLocale": "nl",
+  "shard": "8",
+  "items": [
+    {
+      "id": "tldr--002a6f1cb1d5",
+      "canonicalPath": "linux/yum.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "yum",
+      "title": "yum",
+      "summary": "Dit commando is een alias van `dnf` op moderne distro's. Voor oudere distro's (bijv. CentOS 7), is `yum` een losstaand programma van `dnf`. Sommige subcommando's en opties kunnen verschillend zijn.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr dnf",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/yum.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/yum.md"
+    },
+    {
+      "id": "tldr--00812f869fbb",
+      "canonicalPath": "common/mapfile.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "mapfile",
+      "title": "mapfile",
+      "summary": "Dit commando is een alias van `readarray`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr readarray",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/mapfile.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/mapfile.md"
+    },
+    {
+      "id": "tldr--01b05401cd9d",
+      "canonicalPath": "common/rsync.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "rsync",
+      "title": "rsync",
+      "summary": "Draag bestanden over naar of van een externe host (maar niet tussen twee externe hosts), met als standaard via SSH. Om een pad te specificeren, gebruik `gebruiker@host:pad/naar/bestand_of_map`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "rsync--6bcbc5c9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Draag een bestand over (gebruik `--dry-run` om de overdracht te simuleren):",
+          "command": "rsync {{pad/naar/bron}} {{pad/naar/bestemming}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rsync.md#L9"
+        },
+        {
+          "description": "Gebruik archiefmodus (kopieer recursief mappen, kopieer symlinks zonder ze op te lossen en behoud machtigingen, eigendom en wijzigingstijden):",
+          "command": "rsync {{[-a|--archive]}} {{pad/naar/bron}} {{pad/naar/bestemming}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rsync.md#L13"
+        },
+        {
+          "description": "Comprimeer de data wanneer deze worden verzonden naar de bestemming, toon verbose en voor mensen leesbare voortgang, en behoud gedeeltelijk overgedragen bestanden als er een onderbreking is:",
+          "command": "rsync {{[-zvhP|--compress --verbose --human-readable --partial --progress]}} {{pad/naar/bron}} {{pad/naar/bestemming}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rsync.md#L17"
+        },
+        {
+          "description": "Kopieer recursief mappen en zorg ervoor dat elk bestand volledig naar de schijf wordt weggeschreven in plaats van in het RAM-geheugen blijft staan:",
+          "command": "rsync {{[-r|--recursive]}} --fsync {{pad/naar/bron}} {{pad/naar/bestemming}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rsync.md#L21"
+        },
+        {
+          "description": "Draag de inhoud van een map over, maar niet de map zelf:",
+          "command": "rsync {{[-r|--recursive]}} {{pad/naar/bron}}/ {{pad/naar/bestemming}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rsync.md#L25"
+        },
+        {
+          "description": "Gebruik archiefmodus, los symlinks op en sla bestanden over die nieuwer zijn op de bestemming:",
+          "command": "rsync {{[-auL|--archive --update --copy-links]}} {{pad/naar/bron}} {{pad/naar/bestemming}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rsync.md#L29"
+        },
+        {
+          "description": "Draag een map over van een externe host waarop `rsyncd` draait en verwijder bestanden op de bestemming die niet op de bron bestaan:",
+          "command": "rsync {{[-r|--recursive]}} --delete rsync://{{host}}:{{pad/naar/bron}} {{pad/naar/bestemming}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rsync.md#L33"
+        },
+        {
+          "description": "Draag een bestand over via SSH met een andere poort dan de standaardpoort (22) en toon globale voortgang:",
+          "command": "rsync {{[-e|--rsh]}} 'ssh -p {{poort}}' --info=progress2 {{host}}:{{pad/naar/bron}} {{pad/naar/bestemming}}",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rsync.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rsync.md"
+    },
+    {
+      "id": "tldr--0281a74271c4",
+      "canonicalPath": "common/kite.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "kite",
+      "title": "kite",
+      "summary": "Dit commando is een alias van `kiterunner`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr kiterunner",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/kite.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/kite.md"
+    },
+    {
+      "id": "tldr--02ef304f3e76",
+      "canonicalPath": "linux/br.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "br",
+      "title": "br",
+      "summary": "Dit commando is een alias van `broot`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr broot",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/br.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/br.md"
+    },
+    {
+      "id": "tldr--07f87570cf9b",
+      "canonicalPath": "windows/powershell.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "powershell",
+      "title": "powershell",
+      "summary": "Command-line shell en scripttaal, ontworpen voor systeembeheer. Deze opdracht verwijst naar PowerShell versie 5.1 en lager (ook bekend als legacy Windows PowerShell). Voor de nieuwere, platformonafhankelijke versie van PowerShell (ook bekend als PowerShell Core), gebruik `pwsh` in plaats van `powershell`.",
+      "platform": "windows",
+      "softwareIds": [
+        "powershell--d1026578"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Start een interactieve shellsessie:",
+          "command": "powershell",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/powershell.md#L10"
+        },
+        {
+          "description": "Start een interactieve shellsessie zonder opstartconfiguraties te laden:",
+          "command": "powershell -NoProfile",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/powershell.md#L14"
+        },
+        {
+          "description": "Voer specifieke commando's uit:",
+          "command": "powershell -Command \"{{echo 'powershell wordt uitgevoerd'}}\"",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/powershell.md#L18"
+        },
+        {
+          "description": "Voer een specifiek script uit:",
+          "command": "powershell -File {{pad/naar/script.ps1}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/powershell.md#L22"
+        },
+        {
+          "description": "Start een sessie met een specifieke versie van PowerShell:",
+          "command": "powershell -Version {{versie}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/powershell.md#L26"
+        },
+        {
+          "description": "Voorkom dat een shell afsluit na het uitvoeren van opstartcommando's:",
+          "command": "powershell -NoExit",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/powershell.md#L30"
+        },
+        {
+          "description": "Beschrijf het formaat van gegevens die naar PowerShell worden verzonden:",
+          "command": "powershell -InputFormat {{Text|XML}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/powershell.md#L34"
+        },
+        {
+          "description": "Bepaal hoe een output van PowerShell wordt opgemaakt:",
+          "command": "powershell -OutputFormat {{Text|XML}}",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/powershell.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/powershell.md"
+    },
+    {
+      "id": "tldr--0993eae96829",
+      "canonicalPath": "linux/setarch.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "setarch",
+      "title": "setarch",
+      "summary": "Verander de gerapporteerde architectuur voor de uitvoering van een programma, voornamelijk gebruikt om aan te passen hoe programma's zich gedragen op basis van de systeemarchitectuur. Nuttig voor het testen van compatibiliteit of het draaien van oudere toepassingen.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Voer een commando uit alsof de machine-architectuur `i686` is (handig voor het draaien van 32-bit applicaties op een 64-bit kernel):",
+          "command": "setarch i686 {{opdracht}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/setarch.md#L9"
+        },
+        {
+          "description": "Een shell uitvoeren met de `x86_64` architectuur:",
+          "command": "setarch x86_64 {{bash}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/setarch.md#L13"
+        },
+        {
+          "description": "Schakel de willekeurigheid van de virtuele adresruimte uit:",
+          "command": "setarch {{linux32}} {{[-R|--addr-no-randomize]}} {{commando}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/setarch.md#L17"
+        },
+        {
+          "description": "Toon ondersteunde architecturen:",
+          "command": "setarch --list",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/setarch.md#L21"
+        },
+        {
+          "description": "Toon de help:",
+          "command": "setarch {{[-h|--help]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/setarch.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/setarch.md"
+    },
+    {
+      "id": "tldr--0ba0271aa6c6",
+      "canonicalPath": "common/atrm.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "atrm",
+      "title": "atrm",
+      "summary": "Verwijder taken die zijn gepland met de commando's `at` of `batch`. Opmerking: Gebruik `atq` voor het vinden van taaknummers.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Verwijder taak nummer 10:",
+          "command": "atrm 10",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/atrm.md#L9"
+        },
+        {
+          "description": "Verwijder meerdere taken, gescheiden door spaties:",
+          "command": "atrm {{15}} {{17}} {{22}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/atrm.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/atrm.md"
+    },
+    {
+      "id": "tldr--0fd58bf273ba",
+      "canonicalPath": "windows/fc.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "fc",
+      "title": "fc",
+      "summary": "Vergelijk de verschillen tussen twee bestanden of sets van bestanden. Gebruik wildcards (*) om sets van bestanden te vergelijken.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Vergelijk 2 opgegeven bestanden:",
+          "command": "fc {{pad\\naar\\bestand1}} {{pad\\naar\\bestand2}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/fc.md#L9"
+        },
+        {
+          "description": "Voer een hoofdletterongevoelige vergelijking uit:",
+          "command": "fc /c {{pad\\naar\\bestand1}} {{pad\\naar\\bestand2}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/fc.md#L13"
+        },
+        {
+          "description": "Vergelijk bestanden als Unicode-tekst:",
+          "command": "fc /u {{pad\\naar\\bestand1}} {{pad\\naar\\bestand2}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/fc.md#L17"
+        },
+        {
+          "description": "Vergelijk bestanden als ASCII-tekst:",
+          "command": "fc /l {{pad\\naar\\bestand1}} {{pad\\naar\\bestand2}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/fc.md#L21"
+        },
+        {
+          "description": "Vergelijk bestanden als binair:",
+          "command": "fc /b {{pad\\naar\\bestand1}} {{pad\\naar\\bestand2}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/fc.md#L25"
+        },
+        {
+          "description": "Schakel tab-naar-spatie uitbreiding uit:",
+          "command": "fc /t {{pad\\naar\\bestand1}} {{pad\\naar\\bestand2}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/fc.md#L29"
+        },
+        {
+          "description": "Comprimeer witruimte (tabs en spaties) voor vergelijkingen:",
+          "command": "fc /w {{pad\\naar\\bestand1}} {{pad\\naar\\bestand2}}",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/fc.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/fc.md"
+    },
+    {
+      "id": "tldr--12cf179e08e5",
+      "canonicalPath": "common/pamtofits.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pamtofits",
+      "title": "pamtofits",
+      "summary": "Converteer een Netpbm afbeelding naar het Flexible afbeelding Transport System (FITS) formaat. Zie ook: `fitstopnm`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Converteer een Netpbm afbeelding naar het FITS formaat:",
+          "command": "pamtofits {{pad/naar/afbeelding.pam}} > {{pad/naar/uitvoer.fits}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamtofits.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamtofits.md"
+    },
+    {
+      "id": "tldr--16e31a4415f5",
+      "canonicalPath": "common/getuserspns.py.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "GetUserSPNs.py",
+      "title": "GetUserSPNs.py",
+      "summary": "Haal Service Principal Names (SPN's) op die gekoppeld zijn aan Active Directory gebruikersaccounts. Onderdeel van de Impacket-suite.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Som gebruikersaccounts met een SPN op en vraag hun Kerberos TGS tickets op:",
+          "command": "GetUserSPNs.py {{domein}}/{{gebruikersnaam}}:{{wachtwoord}} -dc-ip {{domain_controller_ip}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getuserspns.py.md#L9"
+        },
+        {
+          "description": "Gebruik pass-the-hash authenticatie:",
+          "command": "GetUserSPNs.py {{domein}}/{{gebruikersnaam}} -hashes {{LM_Hash}}:{{NT_Hash}} -dc-ip {{domain_controller_ip}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getuserspns.py.md#L13"
+        },
+        {
+          "description": "Sla de uitvoer op in een bestand:",
+          "command": "GetUserSPNs.py {{domein}}/{{gebruikersnaam}}:{{wachtwoord}} -dc-ip {{domain_controller_ip}} -outputfile {{pad/naar/uitvoerbestand}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getuserspns.py.md#L17"
+        },
+        {
+          "description": "Vraag alleen TGS tickets op:",
+          "command": "GetUserSPNs.py {{domein}}/{{gebruikersnaam}}:{{wachtwoord}} -dc-ip {{domain_controller_ip}} -request",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getuserspns.py.md#L21"
+        },
+        {
+          "description": "Vraag alleen TGS tickets aan met pass-the-hash authenticatie:",
+          "command": "GetUserSPNs.py {{domein}}/{{gebruikersnaam}} -dc-ip {{domain_controller_ip}} -hashes {{LM_Hash}}:{{NT_Hash}} -request",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getuserspns.py.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/getuserspns.py.md"
+    },
+    {
+      "id": "tldr--19cebd8399b9",
+      "canonicalPath": "common/adscript.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "adscript",
+      "title": "adscript",
+      "summary": "Compiler voor Adscript-bestanden.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Compileer een bestand naar een objectbestand:",
+          "command": "adscript --output {{pad/naar/bestand.o}} {{pad/naar/invoer_bestand.adscript}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/adscript.md#L8"
+        },
+        {
+          "description": "Compileer en koppel een bestand aan een zelfstandig uitvoerbaar bestand:",
+          "command": "adscript --executable --output {{pad/naar/bestand}} {{pad/naar/invoer_bestand.adscript}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/adscript.md#L12"
+        },
+        {
+          "description": "Compileer een bestand naar LLVM IR in plaats van native machinecode:",
+          "command": "adscript --llvm-ir --output {{pad/naar/bestand.ll}} {{pad/naar/invoer_bestand.adscript}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/adscript.md#L16"
+        },
+        {
+          "description": "Cross-compileer een bestand naar een objectbestand voor een buitenlandse CPU-architectuur of besturingssysteem:",
+          "command": "adscript --target-triple {{i386-linux-elf}} --output {{pad/naar/bestand.o}} {{pad/naar/invoer_bestand.adscript}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/adscript.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/adscript.md"
+    },
+    {
+      "id": "tldr--1b067a29cc28",
+      "canonicalPath": "common/typeset.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "typeset",
+      "title": "typeset",
+      "summary": "Dit commando is een alias van `declare`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr declare",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/typeset.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/typeset.md"
+    },
+    {
+      "id": "tldr--23aa5a878408",
+      "canonicalPath": "common/unalias.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "unalias",
+      "title": "unalias",
+      "summary": "Verwijder aliassen. Zie ook: `alias`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Verwijder een alias:",
+          "command": "unalias {{alias_naam}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unalias.md#L9"
+        },
+        {
+          "description": "Verwijder alle aliassen:",
+          "command": "unalias -a",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unalias.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/unalias.md"
+    },
+    {
+      "id": "tldr--28c05f8ebbd2",
+      "canonicalPath": "common/visudo.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "visudo",
+      "title": "visudo",
+      "summary": "Bewerk veilig het sudoers-bestand.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Bewerk sudoers-bestand:",
+          "command": "sudo visudo",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/visudo.md#L8"
+        },
+        {
+          "description": "Controleer sudoers-bestand op fouten:",
+          "command": "sudo visudo {{[-c|--check]}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/visudo.md#L12"
+        },
+        {
+          "description": "Bewerk het sudoers-bestand met een specifieke editor:",
+          "command": "sudo EDITOR={{editor}} visudo",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/visudo.md#L16"
+        },
+        {
+          "description": "Toon de versie:",
+          "command": "visudo {{[-V|--version]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/visudo.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/visudo.md"
+    },
+    {
+      "id": "tldr--2cc9e204e550",
+      "canonicalPath": "linux/mesg.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "mesg",
+      "title": "mesg",
+      "summary": "Controleer of stel in of een terminal berichten van andere gebruikers kan ontvangen, meestal van het `write`-commando. Zie ook: `write`, `talk`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Controleer of de terminal openstaat voor berichten:",
+          "command": "mesg",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mesg.md#L9"
+        },
+        {
+          "description": "Sta geen berichten toe van andere gebruikers:",
+          "command": "mesg n",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mesg.md#L13"
+        },
+        {
+          "description": "Sta berichten toe van andere gebruikers:",
+          "command": "mesg y",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mesg.md#L17"
+        },
+        {
+          "description": "Schakel [v]erbose modus in, en toon een waarschuwing als het commando niet wordt uitgevoerd vanaf een terminal:",
+          "command": "mesg {{[-v|--verbose]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mesg.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/mesg.md"
+    },
+    {
+      "id": "tldr--2d5d885e548f",
+      "canonicalPath": "linux/iwctl.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "iwctl",
+      "title": "iwctl",
+      "summary": "Beheer de `iwd` netwerk supplicant. Zie ook: `nmcli`, `iw`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Voer `iwctl` uit in interactieve modus:",
+          "command": "iwctl",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iwctl.md#L9"
+        },
+        {
+          "description": "Toon Wi-Fi-stations:",
+          "command": "iwctl station list",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iwctl.md#L13"
+        },
+        {
+          "description": "Zoek naar netwerken met een station:",
+          "command": "iwctl station {{station}} scan",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iwctl.md#L17"
+        },
+        {
+          "description": "Toon de netwerken die zijn gevonden door het station:",
+          "command": "iwctl station {{station}} get-networks",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iwctl.md#L21"
+        },
+        {
+          "description": "Verbind met een netwerk met een station, als er inloggegevens nodig zijn, worden deze opgevraagd:",
+          "command": "iwctl station {{station}} connect {{netwerk_naam}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iwctl.md#L25"
+        },
+        {
+          "description": "Toon de help:",
+          "command": "iwctl {{[-h|--help]}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iwctl.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/iwctl.md"
+    },
+    {
+      "id": "tldr--32146b5e6c79",
+      "canonicalPath": "linux/flock.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "flock",
+      "title": "flock",
+      "summary": "Beheer bestandslocks van shell scripts. Het kan gebruikt worden om ervoor te zorgen dat slechts één instantie van een commando draait.",
+      "platform": "linux",
+      "softwareIds": [
+        "flock--4c8d1017"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Voer een commando met een bestandslock uit zodra de lock beschikbaar is:",
+          "command": "flock {{pad/naar/lock.lock}} {{commando}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/flock.md#L9"
+        },
+        {
+          "description": "Voer een opdracht uit met een bestandslock, of sluit het programma af als de lock momenteel actief is (met foutcode 1):",
+          "command": "flock {{[-n|--nonblock]}} {{pad/naar/lock.lock}} {{commando}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/flock.md#L13"
+        },
+        {
+          "description": "Voer een opdracht uit met een bestandslock, of sluit af met een specifieke foutcode als de lock momenteel actief is:",
+          "command": "flock {{[-n|--nonblock]}} {{[-E|--conflict-exit-code]}} {{123}} {{pad/naar/lock.lock}} {{commando}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/flock.md#L17"
+        },
+        {
+          "description": "Voer een commando uit met een bestandslock en wacht maximaal 10 seconden tot de lock beschikbaar is voordat wordt opgegeven:",
+          "command": "flock {{[-w|--timeout]}} 10 {{pad/naar/lock.lock}} {{commando}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/flock.md#L21"
+        },
+        {
+          "description": "Maak een back-up van een aantal bestanden, wacht tot het vorige `tar`-commando klaar is als deze nog wordt uitgevoerd en houd dezelfde bestandlock vast (kan gebruikt worden in een `cron` job die periodiek wordt uitgevoerd):",
+          "command": "flock {{pad/naar/backup.lock}} {{tar -cvf pad/naar/backup.tar pad/naar/data/}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/flock.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/flock.md"
+    },
+    {
+      "id": "tldr--3559dcb7bf58",
+      "canonicalPath": "osx/gtail.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gtail",
+      "title": "gtail",
+      "summary": "Dit commando is een alias van GNU `tail`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr {{[-p|--platform]}} common tail",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gtail.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gtail.md"
+    },
+    {
+      "id": "tldr--36ca642f64c4",
+      "canonicalPath": "common/pnmcut.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pnmcut",
+      "title": "pnmcut",
+      "summary": "Dit commando is vervangen door `pamcut`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het huidige commando:",
+          "command": "tldr pamcut",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pnmcut.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pnmcut.md"
+    },
+    {
+      "id": "tldr--41e78efa37dc",
+      "canonicalPath": "common/pamrgbatopng.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pamrgbatopng",
+      "title": "pamrgbatopng",
+      "summary": "Dit commando is vervangen door `pamtopng`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het huidige commando:",
+          "command": "tldr pamtopng",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamrgbatopng.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamrgbatopng.md"
+    },
+    {
+      "id": "tldr--43fc1b7d80d0",
+      "canonicalPath": "common/lldb.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "lldb",
+      "title": "lldb",
+      "summary": "De LLVM Low-Level Debugger.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Debug een uitvoerbaar bestand:",
+          "command": "lldb \"{{uitvoerbaar_bestand}}\"",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lldb.md#L8"
+        },
+        {
+          "description": "Koppel `lldb` aan een draaiend proces met een gegeven PID:",
+          "command": "lldb -p {{pid}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lldb.md#L12"
+        },
+        {
+          "description": "Wacht op de start van een nieuw proces met een gegeven naam en koppel eraan:",
+          "command": "lldb -w -n \"{{proces_naam}}\"",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lldb.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/lldb.md"
+    },
+    {
+      "id": "tldr--44d1d26fa037",
+      "canonicalPath": "osx/route.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "route",
+      "title": "route",
+      "summary": "Manipuleer handmatig de routetabellen.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Voeg een route toe naar een bestemming via een gateway:",
+          "command": "sudo route add \"{{bestemming_ip_adres}}\" \"{{gateway_adres}}\"",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/route.md#L8"
+        },
+        {
+          "description": "Voeg een route toe naar een /24 subnet via een gateway:",
+          "command": "sudo route add \"{{subnet_ip_adres}}/24\" \"{{gateway_adres}}\"",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/route.md#L12"
+        },
+        {
+          "description": "Voer uit in testmodus (doet niets, alleen afdrukken):",
+          "command": "sudo route -t add \"{{bestemming_ip_adres}}/24\" \"{{gateway_adres}}\"",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/route.md#L16"
+        },
+        {
+          "description": "Verwijder alle routes:",
+          "command": "sudo route flush",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/route.md#L20"
+        },
+        {
+          "description": "Verwijder een specifieke route:",
+          "command": "sudo route delete \"{{bestemming_ip_adres}}/24\"",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/route.md#L24"
+        },
+        {
+          "description": "Zoek en toon de route voor een bestemming (hostname of IP-adres):",
+          "command": "sudo route get \"{{bestemming}}\"",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/route.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/route.md"
+    },
+    {
+      "id": "tldr--50d14870be54",
+      "canonicalPath": "common/mesg.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "mesg",
+      "title": "mesg",
+      "summary": "Controleer of stel in of een terminal berichten van andere gebruikers kan ontvangen, meestal van het `write`-commando. Zie ook: `write`, `talk`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Controleer of de terminal openstaat voor berichten:",
+          "command": "mesg",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/mesg.md#L9"
+        },
+        {
+          "description": "Sta geen berichten toe van het write-commando:",
+          "command": "mesg n",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/mesg.md#L13"
+        },
+        {
+          "description": "Sta berichten toe van het write-commando:",
+          "command": "mesg y",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/mesg.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/mesg.md"
+    },
+    {
+      "id": "tldr--51da361e9827",
+      "canonicalPath": "osx/shuf.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "shuf",
+      "title": "shuf",
+      "summary": "Genereer willekeurige permutaties.",
+      "platform": "macos",
+      "softwareIds": [
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Wijzig willekeurig de volgorde van regels in een bestand en toon het resultaat:",
+          "command": "shuf {{pad/naar/bestand}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/shuf.md#L8"
+        },
+        {
+          "description": "Toon alleen de eerste 5 regels van het resultaat:",
+          "command": "shuf --head-count=5 {{pad/naar/bestand}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/shuf.md#L12"
+        },
+        {
+          "description": "Schrijf de uitvoer naar een ander bestand:",
+          "command": "shuf {{pad/naar/invoer_bestand}} --output {{pad/naar/uitvoer_bestand}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/shuf.md#L16"
+        },
+        {
+          "description": "Genereer willekeurige getallen in het bereik van 1 tot 10:",
+          "command": "shuf --input-range=1-10",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/shuf.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/shuf.md"
+    },
+    {
+      "id": "tldr--5371a9d32482",
+      "canonicalPath": "linux/megadl.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "megadl",
+      "title": "megadl",
+      "summary": "Dit commando is een alias van `megatools-dl`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr megatools-dl",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/megadl.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/megadl.md"
+    },
+    {
+      "id": "tldr--58c03fd6f29d",
+      "canonicalPath": "common/impacket-getadusers.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "impacket-GetADUsers",
+      "title": "impacket-GetADUsers",
+      "summary": "Dit commando is een alias van `GetADUsers.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr GetADUsers.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/impacket-getadusers.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/impacket-getadusers.md"
+    },
+    {
+      "id": "tldr--5c443f2f8c61",
+      "canonicalPath": "common/pamtowinicon.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pamtowinicon",
+      "title": "pamtowinicon",
+      "summary": "Converteer een PAM afbeelding naar een Windows ICO bestand.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Converteer een PAM afbeelding naar een ICO bestand:",
+          "command": "pamtowinicon {{pad/naar/invoer_bestand.pam}} > {{pad/naar/uitvoer.ico}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamtowinicon.md#L8"
+        },
+        {
+          "description": "Encodeer afbeeldingen met resoluties kleiner dan t in het BMP formaat en alle andere afbeeldingen in het PNG formaat:",
+          "command": "pamtowinicon {{[-pn|-pngthreshold]}} {{t}} {{pad/naar/invoer_bestand.pam}} > {{pad/naar/uitvoer.ico}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamtowinicon.md#L12"
+        },
+        {
+          "description": "Maak alle pixels buiten het doorzichtige vlak zwart:",
+          "command": "pamtowinicon {{[-t|-truetransparent]}} {{pad/naar/invoer_bestand.pam}} > {{pad/naar/uitvoer.ico}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamtowinicon.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamtowinicon.md"
+    },
+    {
+      "id": "tldr--5d4d530d5c17",
+      "canonicalPath": "osx/archey.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "archey",
+      "title": "archey",
+      "summary": "Stijlvol weergeven van systeeminformatie.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Toon systeeminformatie:",
+          "command": "archey",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/archey.md#L8"
+        },
+        {
+          "description": "Toon systeeminformatie zonder gekleurde output:",
+          "command": "archey --nocolor",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/archey.md#L12"
+        },
+        {
+          "description": "Toon systeeminformatie met gebruik van MacPorts in plaats van Homebrew:",
+          "command": "archey --macports",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/archey.md#L16"
+        },
+        {
+          "description": "Toon systeeminformatie zonder IP-adrescontrole:",
+          "command": "archey --offline",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/archey.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/archey.md"
+    },
+    {
+      "id": "tldr--6206e325fa3c",
+      "canonicalPath": "common/chroot.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "chroot",
+      "title": "chroot",
+      "summary": "Voer een commando of interactieve shell uit met een speciale hoofdmap.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Voer `$SHELL` uit in de nieuwe hoofdmap:",
+          "command": "sudo chroot {{pad/naar/nieuwe_hoofdmap}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/chroot.md#L8"
+        },
+        {
+          "description": "Voer het commando uit als nieuwe hoofdmap:",
+          "command": "sudo chroot {{pad/naar/nieuwe_hoofdmap}} {{commando}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/chroot.md#L12"
+        },
+        {
+          "description": "Gebruik een specifieke gebruiker en groep:",
+          "command": "sudo chroot --userspec {{gebruikersnaam_of_id}}:{{groep_naam_of_id}} {{pad/naar/nieuwe_hoofdmap}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/chroot.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/chroot.md"
+    },
+    {
+      "id": "tldr--62b2b3a0a42c",
+      "canonicalPath": "common/stow.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "stow",
+      "title": "stow",
+      "summary": "Symlink-beheerder. Vaak gebruikt om dotfiles te beheren. Zie ook: `chezmoi`, `tuckr`, `vcsh`, `homeshick`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "stow--3a9dab81"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Symlink alle bestanden recursief naar de opgegeven map:",
+          "command": "stow {{[-t|--target]}} {{pad/naar/doel_map}} {{bestand1 map1 bestand2 map2}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/stow.md#L10"
+        },
+        {
+          "description": "Verwijder alle symlinks recursief in de opgegeven map:",
+          "command": "stow {{[-D|--delete]}} {{[-t|--target]}} {{pad/naar/doel_map}} {{bestand1 map1 bestand2 map2}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/stow.md#L14"
+        },
+        {
+          "description": "Simuleer om te zien hoe het resultaat eruit ziet:",
+          "command": "stow {{[-n|--simulate]}} {{[-t|--target]}} {{pad/naar/doel_map}} {{bestand1 map1 bestand2 map2}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/stow.md#L18"
+        },
+        {
+          "description": "Verwijder en maak opnieuw de symlinks aan:",
+          "command": "stow {{[-R|--restow]}} {{[-t|--target]}} {{pad/naar/doel_map}} {{bestand1 map1 bestand2 map2}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/stow.md#L22"
+        },
+        {
+          "description": "Sluit bestanden uit die overeenkomen met een reguliere expressie:",
+          "command": "stow --ignore={{reguliere_expressie}} {{[-t|--target]}} {{pad/naar/doel_map}} {{bestand1 map1 bestand2 map2}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/stow.md#L26"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/stow.md"
+    },
+    {
+      "id": "tldr--63bfed0fc667",
+      "canonicalPath": "freebsd/ipmitool.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "ipmitool",
+      "title": "ipmitool",
+      "summary": "Interface met de Intelligent Platform Management Interface (IPMI).",
+      "platform": "freebsd",
+      "softwareIds": [
+        "ipmitool--826e01b7"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Laad de IPMI kernelmodule voor lokale verbindingen:",
+          "command": "kldload ipmi.ko",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/freebsd/ipmitool.md#L8"
+        },
+        {
+          "description": "Open de IPMI shell op de lokale hardware:",
+          "command": "ipmitool shell",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/freebsd/ipmitool.md#L12"
+        },
+        {
+          "description": "Open IPMI shell op een remote host:",
+          "command": "ipmitool -H {{ip_adres}} -U {{gebruikersnaam}} shell",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/freebsd/ipmitool.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/freebsd/ipmitool.md"
+    },
+    {
+      "id": "tldr--65e6a3d335a0",
+      "canonicalPath": "common/base32.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "base32",
+      "title": "base32",
+      "summary": "Encodeer of decodeer een bestand of `stdin` van/naar Base32 naar `stdout`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Encodeer een bestand:",
+          "command": "base32 {{pad/naar/bestand}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/base32.md#L8"
+        },
+        {
+          "description": "Zet gecodeerde uitvoer naar een specifieke breedte (`0` schakelt het uit):",
+          "command": "base32 {{[-w|--wrap]}} {{0|76|...}} {{pad/naar/bestand}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/base32.md#L12"
+        },
+        {
+          "description": "Decodeer een bestand:",
+          "command": "base32 {{[-d|--decode]}} {{pad/naar/bestand}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/base32.md#L16"
+        },
+        {
+          "description": "Encodeer `stdin`:",
+          "command": "{{commando}} | base32",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/base32.md#L20"
+        },
+        {
+          "description": "Decodeer `stdin`:",
+          "command": "{{commando}} | base32 {{[-d|--decode]}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/base32.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/base32.md"
+    },
+    {
+      "id": "tldr--6c7495ca5475",
+      "canonicalPath": "osx/gkill.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gkill",
+      "title": "gkill",
+      "summary": "Dit commando is een alias van GNU `kill`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr {{[-p|--platform]}} linux kill",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gkill.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gkill.md"
+    },
+    {
+      "id": "tldr--6d121a1aa172",
+      "canonicalPath": "linux/runcon.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "runcon",
+      "title": "runcon",
+      "summary": "Voer een programma uit in een andere SELinux-beveiligingscontext. Zie ook: `secon`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Toon de beveiligingscontext van de huidige uitvoeringscontext:",
+          "command": "runcon",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/runcon.md#L9"
+        },
+        {
+          "description": "Specificeer het domein om een commando in uit te voeren:",
+          "command": "runcon {{[-t|--type]}} {{domein}}_t {{commando}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/runcon.md#L13"
+        },
+        {
+          "description": "Specificeer de context rol om een commando mee uit te voeren:",
+          "command": "runcon {{[-r|--role]}} {{rol}}_r {{commando}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/runcon.md#L17"
+        },
+        {
+          "description": "Specificeer de volledige context om een commando mee uit te voeren:",
+          "command": "runcon {{gebruiker}}_u:{{rol}}_r:{{domein}}_t {{commando}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/runcon.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/runcon.md"
+    },
+    {
+      "id": "tldr--75d7d53380c8",
+      "canonicalPath": "windows/ghy.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "ghy",
+      "title": "ghy",
+      "summary": "Dit commando is een alias van `Get-History`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr Get-History",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/ghy.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/ghy.md"
+    },
+    {
+      "id": "tldr--76bc6c17e26c",
+      "canonicalPath": "common/arch.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "arch",
+      "title": "arch",
+      "summary": "Dit commando is een alias van `uname --machine`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "archwsl--c36105af",
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr uname",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/arch.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/arch.md"
+    },
+    {
+      "id": "tldr--77f8a46e8dec",
+      "canonicalPath": "common/set-nodeinstalllocation.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "Set-NodeInstallLocation",
+      "title": "Set-NodeInstallLocation",
+      "summary": "Stel de standaard Node.js installatie map in voor `ps-nvm`. Onderdeel van `ps-nvm` en kan alleen uitgevoerd worden in PowerShell.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Verander de Node.js installatie locatie naar een gespecificeerde map (`ps-nvm` zal een nieuwe `.nvm` submap maken om deze te kunnen installeren):",
+          "command": "Set-NodeInstallLocation {{pad/naar/map}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/set-nodeinstalllocation.md#L9"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/set-nodeinstalllocation.md"
+    },
+    {
+      "id": "tldr--787f0a8bad22",
+      "canonicalPath": "common/yes.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "yes",
+      "title": "yes",
+      "summary": "Iets herhaaldelijk uitvoeren. Deze opdracht wordt vaak gebruikt om ja te beantwoorden op elke prompt door installatieopdrachten (zoals `apt-get`).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Toon herhaaldelijk `y`:",
+          "command": "yes",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/yes.md#L9"
+        },
+        {
+          "description": "Toon herhaaldelijk de opgegeven waarde:",
+          "command": "yes {{waarde}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/yes.md#L13"
+        },
+        {
+          "description": "Accepteer alles wat wordt gevraagd door het commando `apt-get`:",
+          "command": "yes | sudo apt-get install {{programma}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/yes.md#L17"
+        },
+        {
+          "description": "Toon herhaaldelijk een nieuwe regel om altijd de standaard optie van een vraag te accepteren:",
+          "command": "yes ''",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/yes.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/yes.md"
+    },
+    {
+      "id": "tldr--79d6fab5585d",
+      "canonicalPath": "common/pamnoraw.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pamnoraw",
+      "title": "pamnoraw",
+      "summary": "Dit commando is een alias van `pamtopnm -plain`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr pamtopnm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamnoraw.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamnoraw.md"
+    },
+    {
+      "id": "tldr--7e4b37895a64",
+      "canonicalPath": "windows/cls.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "cls",
+      "title": "cls",
+      "summary": "Wist het scherm. In PowerShell is dit commando een alias van `Clear-Host`. Deze documentatie is gebaseerd op de Command Prompt (`cmd`) versie van `cls`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het equivalente PowerShell commando:",
+          "command": "tldr clear-host",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cls.md#L9"
+        },
+        {
+          "description": "Wis het scherm:",
+          "command": "cls",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cls.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/cls.md"
+    },
+    {
+      "id": "tldr--81aa4c17641c",
+      "canonicalPath": "linux/nmtui.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "nmtui",
+      "title": "nmtui",
+      "summary": "Tekstgebruikersinterface voor controle over NetworkManager. Gebruik `<ArrowKeys>` om te navigeren en gebruik `<Enter>` om een optie te selecteren. Zie ook: `nmcli`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Open de gebruikersinterface:",
+          "command": "nmtui",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/nmtui.md#L10"
+        },
+        {
+          "description": "Toon een lijst met alle beschikbare verbindingen, met de optie om deze te activeren danwel te deactiveren:",
+          "command": "nmtui connect",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/nmtui.md#L14"
+        },
+        {
+          "description": "Verbind met een gegeven netwerk:",
+          "command": "nmtui connect {{naam|uuid|apparaat|ssid}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/nmtui.md#L18"
+        },
+        {
+          "description": "Pas aan/Voeg toe/Verwijder een gegeven netwerk:",
+          "command": "nmtui edit {{naam|id}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/nmtui.md#L22"
+        },
+        {
+          "description": "Stel de systeemhostnaam in:",
+          "command": "nmtui hostname",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/nmtui.md#L26"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/nmtui.md"
+    },
+    {
+      "id": "tldr--829439e5e0f9",
+      "canonicalPath": "osx/gpinky.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gpinky",
+      "title": "gpinky",
+      "summary": "Dit commando is een alias van GNU `pinky`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr pinky",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gpinky.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gpinky.md"
+    },
+    {
+      "id": "tldr--84dde4d8b932",
+      "canonicalPath": "osx/gchgrp.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gchgrp",
+      "title": "gchgrp",
+      "summary": "Dit commando is een alias van GNU `chgrp`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr chgrp",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gchgrp.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gchgrp.md"
+    },
+    {
+      "id": "tldr--867efa8ba170",
+      "canonicalPath": "common/luanti.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "luanti",
+      "title": "luanti",
+      "summary": "Sandbox-game met oneindige wereld.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "luanti--45b137d0"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Start Luanti in client-modus:",
+          "command": "luanti",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/luanti.md#L8"
+        },
+        {
+          "description": "Toon gedownloade game-modes:",
+          "command": "luanti --gameid list",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/luanti.md#L12"
+        },
+        {
+          "description": "Start Luanti in servermodus door een specifieke gamemodus te hosten:",
+          "command": "luanti --server --gameid {{game_id}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/luanti.md#L16"
+        },
+        {
+          "description": "Start een server met de standaard wereld zodra deze is aangemaakt:",
+          "command": "luanti --server",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/luanti.md#L20"
+        },
+        {
+          "description": "Start een server met een specifieke wereld:",
+          "command": "luanti --server --world {{wereld_naam}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/luanti.md#L24"
+        },
+        {
+          "description": "Start een server op een specifieke poort:",
+          "command": "luanti --server --port {{poort}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/luanti.md#L28"
+        },
+        {
+          "description": "Schrijf logs naar een specifiek bestand:",
+          "command": "luanti --logfile {{pad/naar/bestand}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/luanti.md#L32"
+        },
+        {
+          "description": "Schrijf alleen fouten naar de console:",
+          "command": "luanti --quiet",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/luanti.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/luanti.md"
+    },
+    {
+      "id": "tldr--8b60f640641a",
+      "canonicalPath": "common/shuf.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "shuf",
+      "title": "shuf",
+      "summary": "Genereer willekeurige permutaties.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Wijzig willekeurig de volgorde van regels in een bestand en toon het resultaat:",
+          "command": "shuf {{pad/naar/bestand}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/shuf.md#L8"
+        },
+        {
+          "description": "Toon alleen de eerste 5 regels van het resultaat:",
+          "command": "shuf {{[-n|--head-count]}} 5 {{pad/naar/bestand}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/shuf.md#L12"
+        },
+        {
+          "description": "Schrijf de uitvoer naar een ander bestand:",
+          "command": "shuf {{pad/naar/invoer_bestand}} {{[-o|--output]}} {{pad/naar/uitvoer_bestand}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/shuf.md#L16"
+        },
+        {
+          "description": "Genereer 3 willekeurige getallen in het bereik van 1 tot 10 (inclusief):",
+          "command": "shuf {{[-n|--head-count]}} 3 {{[-i|--input-range]}} 1-10 {{[-r|--repeat]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/shuf.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/shuf.md"
+    },
+    {
+      "id": "tldr--8dd10571e340",
+      "canonicalPath": "common/wcurl.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "wcurl",
+      "title": "wcurl",
+      "summary": "Een eenvoudige wrapper rond `curl` om eenvoudig bestanden te downloaden. Zie ook: `wget`, `curl`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "wcurl--5c34edc8"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Download de inhoud van een URL naar een bestand dat wordt aangegeven door de URL (`index.html` in dit geval):",
+          "command": "wcurl {{https://example.com/index.html}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/wcurl.md#L9"
+        },
+        {
+          "description": "Download de inhoud van een URL naar een bestand met een opgegeven naam:",
+          "command": "wcurl {{[-o|--output]}} {{pad/naar/bestand}} {{https://example.com/index.html}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/wcurl.md#L13"
+        },
+        {
+          "description": "Download de inhoud van een URL, schakel de voortgangsbalk in en gebruik standaard HTTP/2:",
+          "command": "wcurl --curl-options \"--progress-bar --http2\" {{https://example.com/index.html}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/wcurl.md#L17"
+        },
+        {
+          "description": "Hervat een onderbroken download:",
+          "command": "wcurl --curl-options \"--clobber --continue-at -\" {{https://example.com/index.html}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/wcurl.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/wcurl.md"
+    },
+    {
+      "id": "tldr--921065ddc04d",
+      "canonicalPath": "linux/archey.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "archey",
+      "title": "archey",
+      "summary": "Eenvoudige tool voor het stijlvol weergeven van systeeminformatie.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Toon systeeminformatie:",
+          "command": "archey",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/archey.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/archey.md"
+    },
+    {
+      "id": "tldr--929b3c9edd97",
+      "canonicalPath": "common/bzegrep.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "bzegrep",
+      "title": "bzegrep",
+      "summary": "Dit commando is een alias van `bzgrep --extended-regexp`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr bzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzegrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/bzegrep.md"
+    },
+    {
+      "id": "tldr--9eff7bc15253",
+      "canonicalPath": "common/impacket-gettgt.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "impacket-getTGT",
+      "title": "impacket-getTGT",
+      "summary": "Dit commando is een alias van `getTGT.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr getTGT.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/impacket-gettgt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/impacket-gettgt.md"
+    },
+    {
+      "id": "tldr--9f9b101cf604",
+      "canonicalPath": "osx/arch.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "arch",
+      "title": "arch",
+      "summary": "Toon de naam van de systeemarchitectuur, of voer een commando uit onder een andere architectuur. Zie ook: `uname`.",
+      "platform": "macos",
+      "softwareIds": [
+        "archwsl--c36105af",
+        "microsoft-coreutils--3ec6ee3f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Toon de systeemarchitectuur:",
+          "command": "arch",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/arch.md#L9"
+        },
+        {
+          "description": "Voer een commando uit met behulp van x86_64:",
+          "command": "arch -x86_64 {{commando}} {{argument1 argument2 ...}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/arch.md#L13"
+        },
+        {
+          "description": "Voer een commando uit met behulp van ARM:",
+          "command": "arch -arm64 {{commando}} {{argument1 argument2 ...}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/arch.md#L17"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/arch.md"
+    },
+    {
+      "id": "tldr--a0d4481617a7",
+      "canonicalPath": "common/route.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "route",
+      "title": "route",
+      "summary": "Gebruik het route-commando om de routetabel in te stellen.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "Toon de informatie van de routetabel:",
+          "command": "route -n",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/route.md#L8"
+        },
+        {
+          "description": "Voeg een routeregel toe:",
+          "command": "sudo route add -net {{ip_adres}} netmask {{netmask_adres}} gw {{gw_adres}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/route.md#L12"
+        },
+        {
+          "description": "Verwijder een routeregel:",
+          "command": "sudo route del -net {{ip_adres}} netmask {{netmask_adres}} dev {{gw_adres}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/route.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/route.md"
+    },
+    {
+      "id": "tldr--a853f0397c68",
+      "canonicalPath": "linux/archinstall.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "archinstall",
+      "title": "archinstall",
+      "summary": "Begeleidende Arch Linux installatie.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Start de interactieve installatie:",
+          "command": "archinstall",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/archinstall.md#L8"
+        },
+        {
+          "description": "Start de interactieve installer en genereer een configuratiebestand in plaats van te installeren:",
+          "command": "archinstall --dry-run",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/archinstall.md#L12"
+        },
+        {
+          "description": "Schakel geavanceerde instellingen in:",
+          "command": "archinstall --advanced",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/archinstall.md#L16"
+        },
+        {
+          "description": "Installeer met de opgegeven configuratiebestanden:",
+          "command": "archinstall --config {{pad/naar/config.json}} --creds {{pad/naar/credentials.json}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/archinstall.md#L20"
+        },
+        {
+          "description": "Installeer met een configuratiebestand van een externe server:",
+          "command": "archinstall --config-url {{https://example.com/config.json}} --creds-url {{https://example.com/credentials.json}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/archinstall.md#L24"
+        },
+        {
+          "description": "Installeer met behulp van het opgegeven script:",
+          "command": "archinstall --script {{minimal|only_hd}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/archinstall.md#L28"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/archinstall.md"
+    },
+    {
+      "id": "tldr--a97d7ab26730",
+      "canonicalPath": "osx/gsha512sum.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gsha512sum",
+      "title": "gsha512sum",
+      "summary": "Dit commando is een alias van GNU `sha512sum`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr sha512sum",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gsha512sum.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gsha512sum.md"
+    },
+    {
+      "id": "tldr--aeee442ce15a",
+      "canonicalPath": "common/pnmtofits.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pnmtofits",
+      "title": "pnmtofits",
+      "summary": "Dit commando is vervangen door `pamtofits`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het huidige commando:",
+          "command": "tldr pamtofits",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pnmtofits.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pnmtofits.md"
+    },
+    {
+      "id": "tldr--c30074ba6b6a",
+      "canonicalPath": "common/xz.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "xz",
+      "title": "xz",
+      "summary": "Comprimeren of decomprimeren van XZ en LZMA bestanden.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "xz--b3975212"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Comprimeer een bestand gebruik makend van xz file:",
+          "command": "xz {{pad/naar/bestand}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xz.md#L8"
+        },
+        {
+          "description": "Decomprimer een xz bestand:",
+          "command": "xz {{[-d|--decompress]}} {{pad/naar/bestand.xz}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xz.md#L12"
+        },
+        {
+          "description": "Comprimeer een bestand gebruik makend van lzma:",
+          "command": "xz {{[-F|--format]}} lzma {{pad/naar/bestand}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xz.md#L16"
+        },
+        {
+          "description": "Decomprimer een LZMA bestand:",
+          "command": "xz {{[-d|--decompress]}} {{[-F|--format]}} lzma {{pad/naar/bestand.lzma}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xz.md#L20"
+        },
+        {
+          "description": "Decomprimer een bestand en schrijf het naar `stdout` (impliceert `--keep`):",
+          "command": "xz {{[-d|--decompress]}} {{[-c|--stdout]}} {{pad/naar/bestand.xz}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xz.md#L24"
+        },
+        {
+          "description": "Comprimeer een bestand, maar verwijder het origineel niet:",
+          "command": "xz {{[-k|--keep]}} {{pad/naar/bestand}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xz.md#L28"
+        },
+        {
+          "description": "Comprimeer een bestand, gebruik makend van de snelste compressie:",
+          "command": "xz -0 {{pad/naar/bestand}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xz.md#L32"
+        },
+        {
+          "description": "Comprimeer een bestand, gebruik makend van de beste compressie:",
+          "command": "xz -9 {{pad/naar/bestand}}",
+          "line": 36,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xz.md#L36"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/xz.md"
+    },
+    {
+      "id": "tldr--c915fdd0afd8",
+      "canonicalPath": "linux/alternatives.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "alternatives",
+      "title": "alternatives",
+      "summary": "Dit commando is een alias van `update-alternatives`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr update-alternatives",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/alternatives.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/alternatives.md"
+    },
+    {
+      "id": "tldr--cd88efa2bf51",
+      "canonicalPath": "common/sniff.py.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "sniff.py",
+      "title": "sniff.py",
+      "summary": "Leg netwerkpakketten vast en geef weer met de `pcapy` bibliotheek. Onderdeel van de Impacket-suite.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Maak een lijst van beschikbare netwerkinterfaces en selecteer er een om te beginnen met het vastleggen van pakketten (vereist `sudo`):",
+          "command": "sudo sniff.py",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sniff.py.md#L9"
+        },
+        {
+          "description": "Leg pakketten vast en sla uitvoer op in een bestand terwijl het op de terminal wordt weergegeven:",
+          "command": "sudo sniff.py | sudo tee {{pad/naar/uitvoerbestand}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sniff.py.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sniff.py.md"
+    },
+    {
+      "id": "tldr--ce9d64549964",
+      "canonicalPath": "common/powershell.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "powershell",
+      "title": "powershell",
+      "summary": "Dit commando kan verward worden met de cross-platform versie van PowerShell (vroeger bekend als PowerShell Core), welke gebruik maakt van `pwsh` in plaats van `powershell`. Het originele `powershell` commando in Windows is nog steeds beschikbaar om gebruik te maken van de legacy Windows versie van PowerShell (versie 5.1 en lager).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "powershell--d1026578"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "Bekijk de documenatie voor het commando dat refereert naar de laatste, cross-platform versie van PowerShell (versie 6 en hoger):",
+          "command": "tldr pwsh",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/powershell.md#L9"
+        },
+        {
+          "description": "Bekijk de documenatie voor het commando dat refereert naar de legacy Windows PowerShell (versie 5.1 en lager):",
+          "command": "tldr powershell {{[-p|--platform]}} windows",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/powershell.md#L13"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/powershell.md"
+    },
+    {
+      "id": "tldr--d210a1fda165",
+      "canonicalPath": "common/pamslice.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "pamslice",
+      "title": "pamslice",
+      "summary": "Haal een regel van waarden uit een PAM afbeelding.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Toon de waarden van de pixels in de opgegeven rij in een tabel:",
+          "command": "pamslice {{[-r|-row]}} {{n}} {{pad/naar/afbeelding.pam}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamslice.md#L8"
+        },
+        {
+          "description": "Toon de waarden van de pixels in de opgegeven kolom in een tabel:",
+          "command": "pamslice {{[-c|-column]}} {{n}} {{pad/naar/afbeelding.pam}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamslice.md#L12"
+        },
+        {
+          "description": "Beschouw alleen het opgegeven vlak (m) van de invoer-afbeelding:",
+          "command": "pamslice {{[-r|-row]}} {{n}} -plane {{m}} {{pad/naar/afbeelding.pam}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamslice.md#L16"
+        },
+        {
+          "description": "Produceer uitvoer in een formaat dat geschikt is voor invoer naar een `xmgr` voor visualisatie:",
+          "command": "pamslice {{[-r|-row]}} {{n}} {{[-x|-xmgr]}} {{pad/naar/afbeelding.pam}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamslice.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/pamslice.md"
+    },
+    {
+      "id": "tldr--d72ca9dd8b5e",
+      "canonicalPath": "common/google-chrome.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "google-chrome",
+      "title": "google-chrome",
+      "summary": "Dit commando is een alias van `chromium`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "google-chrome--90e5e298"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr chromium",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/google-chrome.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/google-chrome.md"
+    },
+    {
+      "id": "tldr--db306fe9bf47",
+      "canonicalPath": "linux/yum-config-manager.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "yum",
+      "title": "yum config-manager",
+      "summary": "Dit commando is een alias van `dnf config-manager`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr dnf config-manager",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/yum-config-manager.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/linux/yum-config-manager.md"
+    },
+    {
+      "id": "tldr--dd9b9362fef7",
+      "canonicalPath": "common/sh.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "sh",
+      "title": "sh",
+      "summary": "Bourne shell, de standaard opdrachttaalinterpreter. Zie ook: `!`, `^`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "git--49faf317",
+        "git-with-openssh--49faf317",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Start een interactieve shell sessie:",
+          "command": "sh",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sh.md#L9"
+        },
+        {
+          "description": "Voer een commando uit en sluit af:",
+          "command": "sh -c \"{{commando}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sh.md#L13"
+        },
+        {
+          "description": "Voer een script uit:",
+          "command": "sh {{pad/naar/script.sh}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sh.md#L17"
+        },
+        {
+          "description": "Lees en voer commando's uit van `stdin`:",
+          "command": "sh -s",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sh.md#L21"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/sh.md"
+    },
+    {
+      "id": "tldr--e251197922a3",
+      "canonicalPath": "windows/nvm.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "nvm",
+      "title": "nvm",
+      "summary": "Installeer, deïnstalleer of wissel tussen verschillende Node.js-versies. Ondersteunt versienummers zoals \"12.8\" of \"v16.13.1\", en labels zoals \"stable\", \"system\", enz.",
+      "platform": "windows",
+      "softwareIds": [
+        "nvm--e492da27"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Installeer een specifieke versie van Node.js:",
+          "command": "nvm install {{node_versie}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/nvm.md#L9"
+        },
+        {
+          "description": "Stel de standaardversie van Node.js in (moet worden uitgevoerd als Administrator):",
+          "command": "nvm use {{node_versie}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/nvm.md#L13"
+        },
+        {
+          "description": "Toon alle beschikbare Node.js-versies en markeer de standaardversie:",
+          "command": "nvm list",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/nvm.md#L17"
+        },
+        {
+          "description": "Toon alle remote Node.js-versies:",
+          "command": "nvm ls-remote",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/nvm.md#L21"
+        },
+        {
+          "description": "Deïnstalleer een bepaalde versie van Node.js:",
+          "command": "nvm uninstall {{node_versie}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/nvm.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/nvm.md"
+    },
+    {
+      "id": "tldr--e407296beeb5",
+      "canonicalPath": "common/fc.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "fc",
+      "title": "fc",
+      "summary": "Open het meest recente commando voor bewerking en voer het uit. Zie ook: `history`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Open het laatste commando in de standaard systeemeditor en voer het uit na het aanpassen:",
+          "command": "fc",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/fc.md#L9"
+        },
+        {
+          "description": "Specificeer een editor om mee te openen:",
+          "command": "fc -e '{{emacs}}'",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/fc.md#L13"
+        },
+        {
+          "description": "Toon recente commando's uit de geschiedenis:",
+          "command": "fc -l",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/fc.md#L17"
+        },
+        {
+          "description": "Toon recente commando's in omgekeerde volgorde:",
+          "command": "fc -l -r",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/fc.md#L21"
+        },
+        {
+          "description": "Pas een commando uit de geschiedenis aan en voer het uit:",
+          "command": "fc {{nummer}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/fc.md#L25"
+        },
+        {
+          "description": "Pas commando's in een gegeven interval aan en voer ze uit:",
+          "command": "fc '{{416}}' '{{420}}'",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/fc.md#L29"
+        },
+        {
+          "description": "Toon de help:",
+          "command": "fc --help",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/fc.md#L33"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/fc.md"
+    },
+    {
+      "id": "tldr--e6042ee5feb5",
+      "canonicalPath": "common/rcat.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "rcat",
+      "title": "rcat",
+      "summary": "Dit commando is een alias van `rc`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr rc",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rcat.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/rcat.md"
+    },
+    {
+      "id": "tldr--f2f92bd429de",
+      "canonicalPath": "osx/gstdbuf.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gstdbuf",
+      "title": "gstdbuf",
+      "summary": "Dit commando is een alias van GNU `stdbuf`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr stdbuf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gstdbuf.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/osx/gstdbuf.md"
+    },
+    {
+      "id": "tldr--fd405606b80e",
+      "canonicalPath": "windows/gcb.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "gcb",
+      "title": "gcb",
+      "summary": "Dit commando is een alias van `Get-Clipboard`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Bekijk de documentatie van het originele commando:",
+          "command": "tldr get-clipboard",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/gcb.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/windows/gcb.md"
+    },
+    {
+      "id": "tldr--fd4b059940ae",
+      "canonicalPath": "common/nvm.md",
+      "locale": "nl",
+      "sourceLocale": "nl",
+      "name": "nvm",
+      "title": "nvm",
+      "summary": "Installeer, deïnstalleer of wissel tussen verschillende Node.js-versies. Ondersteunt versienummers zoals \"12.8\" of \"v16.13.1\", en labels zoals \"node\", \"system\", enz. Zie ook: `asdf`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "nvm--e492da27"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Installeer/verwijder een specifieke versie van Node.js:",
+          "command": "nvm {{install|uninstall}} {{node_versie}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvm.md#L10"
+        },
+        {
+          "description": "Gebruik een specifieke versie van Node.js in de huidige shell:",
+          "command": "nvm use {{node_versie}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvm.md#L14"
+        },
+        {
+          "description": "Stel de standaardversie van Node.js in:",
+          "command": "nvm alias default {{node_versie}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvm.md#L18"
+        },
+        {
+          "description": "Toon externe versies beschikbaar voor installeren, waarbij alleen LTS (long-term support) versies worden getoond:",
+          "command": "nvm ls-remote --lts",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvm.md#L22"
+        },
+        {
+          "description": "Toon geïnstalleerde versies:",
+          "command": "nvm {{[ls|list]}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvm.md#L26"
+        },
+        {
+          "description": "Start de REPL van een specifieke versie van Node.js:",
+          "command": "nvm run {{node_versie}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvm.md#L30"
+        },
+        {
+          "description": "Voer een script uit in een specifieke versie van Node.js:",
+          "command": "nvm exec {{node_versie}} node {{pad/naar/script.js}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvm.md#L34"
+        },
+        {
+          "description": "Upgrade naar de nieuwste werkende npm-versie op de huidige Node.js-versie:",
+          "command": "nvm install-latest-npm",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvm.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.nl/common/nvm.md"
+    }
+  ]
+}

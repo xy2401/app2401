@@ -1,0 +1,770 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "uk",
+  "sourceLocale": "uk",
+  "shard": "c",
+  "items": [
+    {
+      "id": "tldr--025210dd0dc3",
+      "canonicalPath": "linux/apt-cache.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "apt-cache",
+      "title": "apt-cache",
+      "summary": "Інструмент запиту пакетів Debian і Ubuntu.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Шукати пакет у ваших поточних джерелах:",
+          "command": "apt-cache search {{запит}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/apt-cache.md#L8"
+        },
+        {
+          "description": "Показати інформацію про пакет:",
+          "command": "apt-cache show {{пакет}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/apt-cache.md#L12"
+        },
+        {
+          "description": "Показати, чи встановлено та оновлено пакет:",
+          "command": "apt-cache policy {{пакет}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/apt-cache.md#L16"
+        },
+        {
+          "description": "Показати залежності для пакета:",
+          "command": "apt-cache depends {{пакет}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/apt-cache.md#L20"
+        },
+        {
+          "description": "Показати пакети, які залежать від конкретного пакета:",
+          "command": "apt-cache rdepends {{пакет}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/apt-cache.md#L24"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/apt-cache.md"
+    },
+    {
+      "id": "tldr--128497a4fbb9",
+      "canonicalPath": "common/bat.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "bat",
+      "title": "bat",
+      "summary": "Відобразити та об'єднати файли. Клон `cat` з підсвічуванням синтаксису та інтеграцією Git. Дивіться також: `cat`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bat--5892de4d"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "Відобразити з читабельним форматуванням вміст одного або кількох файлів у `stdout`:",
+          "command": "bat {{шлях/до/файлу1 шлях/до/файлу2 ...}}",
+          "line": 10,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/bat.md#L10"
+        },
+        {
+          "description": "Об’єднати кілька файлів у цільовий файл:",
+          "command": "bat {{шлях/до/файлу1 шлях/до/файлу2 ...}} > {{шлях/до/цільового_файлу}}",
+          "line": 14,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/bat.md#L14"
+        },
+        {
+          "description": "Видалити декорації та вимкнути розбиття на сторінки:",
+          "command": "bat {{[-pp|--style plain --pager never]}} {{шлях/до/файлу}}",
+          "line": 18,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/bat.md#L18"
+        },
+        {
+          "description": "Виділити певний рядок або діапазон рядків іншим кольором фону:",
+          "command": "bat {{[-H|--highlight-line]}} {{10|5:10|:10|10:|10:+5}} {{шлях/до/файлу}}",
+          "line": 22,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/bat.md#L22"
+        },
+        {
+          "description": "Показати недруковані символи, такі як пробіл, табуляція або новий рядок:",
+          "command": "bat {{[-A|--show-all]}} {{шлях/до/файлу}}",
+          "line": 26,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/bat.md#L26"
+        },
+        {
+          "description": "Видалити усі декорації, окрім номерів рядків у виведених даних:",
+          "command": "bat {{[-n|--number]}} {{шлях/до/файлу}}",
+          "line": 30,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/bat.md#L30"
+        },
+        {
+          "description": "Виділити синтаксис у JSON-файлі шляхом явного встановлення мови:",
+          "command": "bat {{[-l|--language]}} json {{шлях/до/файлу.json}}",
+          "line": 34,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/bat.md#L34"
+        },
+        {
+          "description": "Показати всі підтримувані мови:",
+          "command": "bat {{[-L|--list-languages]}}",
+          "line": 38,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/bat.md#L38"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/bat.md"
+    },
+    {
+      "id": "tldr--1ae2084b0c77",
+      "canonicalPath": "windows/clist.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "clist",
+      "title": "clist",
+      "summary": "Ця команда є псевдонімом для `choco list`.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr choco list",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/windows/clist.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/windows/clist.md"
+    },
+    {
+      "id": "tldr--22137d130384",
+      "canonicalPath": "common/mogrify.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "mogrify",
+      "title": "mogrify",
+      "summary": "Ця команда є псевдонімом для `magick mogrify`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "imagemagick-ffmpeg--1a1f6843"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr magick mogrify",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/mogrify.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/mogrify.md"
+    },
+    {
+      "id": "tldr--275973886109",
+      "canonicalPath": "linux/pw-encplay.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "pw-encplay",
+      "title": "pw-encplay",
+      "summary": "Ця команда є псевдонімом для `pw-cat --playback --encoded`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pw-encplay.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/pw-encplay.md"
+    },
+    {
+      "id": "tldr--277d739d1375",
+      "canonicalPath": "linux/abrt.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "abrt",
+      "title": "abrt",
+      "summary": "Ця команда є псевдонімом для `abrt-cli`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr abrt-cli",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/abrt.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/linux/abrt.md"
+    },
+    {
+      "id": "tldr--4867e61119d8",
+      "canonicalPath": "common/python3.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "python3",
+      "title": "python3",
+      "summary": "Ця команда є псевдонімом для `python`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "anaconda3--0cae96a6",
+        "anaconda3-2022-05--0cae96a6",
+        "miniconda3--29389c27",
+        "miniconda3-4-12-0--be07816c",
+        "miniconda3-py310--be07816c",
+        "miniconda3-py311--be07816c",
+        "miniconda3-py37--be07816c",
+        "miniconda3-py38--be07816c",
+        "miniconda3-py39--be07816c",
+        "miniforge3--191245de",
+        "python--ee5066aa",
+        "python-alpha--ee5066aa",
+        "python-beta--ee5066aa",
+        "python-pre--ee5066aa",
+        "python-rc--ee5066aa",
+        "python310--ee5066aa",
+        "python311--ee5066aa",
+        "python312--ee5066aa",
+        "python313--ee5066aa",
+        "python314--ee5066aa",
+        "python35--ee5066aa",
+        "python36--ee5066aa",
+        "python37--ee5066aa",
+        "python38--ee5066aa",
+        "python39--ee5066aa",
+        "winpython--27854e2a",
+        "winpython37--27854e2a",
+        "winpython3741--27854e2a",
+        "winpython37cod--27854e2a",
+        "winpython37ps2--27854e2a",
+        "winpython38--27854e2a",
+        "winpython38cod--27854e2a",
+        "winpython38ps2--27854e2a"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr python",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/python3.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/python3.md"
+    },
+    {
+      "id": "tldr--55e751af84a4",
+      "canonicalPath": "common/sr.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "sr",
+      "title": "sr",
+      "summary": "Ця команда є псевдонімом для `surfraw`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr surfraw",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/sr.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/sr.md"
+    },
+    {
+      "id": "tldr--58e83c91a326",
+      "canonicalPath": "android/input.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "input",
+      "title": "input",
+      "summary": "Відправляє коди подій чи жести на сенсорному екрані на Android девайс. Ця команда може бути виконана тільки за допомогою `adb shell`.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Відправити код події для одного знаку на Android девайс:",
+          "command": "input keyevent {{код_події}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/input.md#L9"
+        },
+        {
+          "description": "Відправити текст на Android девайс (`%s` визначає пробіли):",
+          "command": "input text \"{{текст}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/input.md#L13"
+        },
+        {
+          "description": "Відправити один дотик на Android девайс:",
+          "command": "input tap {{позиція_x}} {{позиція_y}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/input.md#L17"
+        },
+        {
+          "description": "Відправити жест проведення(свайп) на Android девайс:",
+          "command": "input swipe {{x_старт}} {{y_старт}} {{х_кінець}} {{y_кінець}} {{тривалість_в_мс}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/input.md#L21"
+        },
+        {
+          "description": "Відправити довге натискання на Android девайс, використовуючи жест проведення(свайп):",
+          "command": "input swipe {{позиція_x}} {{позиція_y}} {{позиція_x}} {{позиція_y}} {{тривалість_в_мс}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/input.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/input.md"
+    },
+    {
+      "id": "tldr--806eaed6eb77",
+      "canonicalPath": "common/jo.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "jo",
+      "title": "jo",
+      "summary": "Ця команда є псевдонімом для `autojump`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "jo--7077aefa"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr autojump",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/jo.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/jo.md"
+    },
+    {
+      "id": "tldr--93fa601e7044",
+      "canonicalPath": "common/pnmtopnm.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "pnmtopnm",
+      "title": "pnmtopnm",
+      "summary": "Ця команда є псевдонімом для `pamtopnm`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr pamtopnm",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/pnmtopnm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/pnmtopnm.md"
+    },
+    {
+      "id": "tldr--a25a9e743b57",
+      "canonicalPath": "common/montage.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "montage",
+      "title": "montage",
+      "summary": "Ця команда є псевдонімом для `magick montage`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "imagemagick-ffmpeg--1a1f6843",
+        "montage--e55d2f04"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr magick montage",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/montage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/montage.md"
+    },
+    {
+      "id": "tldr--b41b8a1126e6",
+      "canonicalPath": "common/tldr.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "tldr",
+      "title": "tldr",
+      "summary": "Відображає прості сторінки допомоги для інструментів командного рядка з проекту tldr-pages.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "tealdeer--251e563d",
+        "tldr--1f34cbae",
+        "tldr--20c1a45b",
+        "tlrc--36ec9796"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Показує типове використання команди (підказка: це те, як ви потрапили сюди!):",
+          "command": "tldr {{команда}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tldr.md#L8"
+        },
+        {
+          "description": "Показує tldr сторінку для команди `cd` на вказаній платформі:",
+          "command": "tldr {{[-p|--platform]}} {{android|linux|osx|sunos|windows}} {{cd}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tldr.md#L12"
+        },
+        {
+          "description": "Показує tldr сторінку для підкоманди Git `git checkout`:",
+          "command": "tldr {{git-checkout}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tldr.md#L16"
+        },
+        {
+          "description": "Оновлює локальні tldr сторінки (якщо клієнт підтримує кешування):",
+          "command": "tldr {{[-u|--update]}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tldr.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/tldr.md"
+    },
+    {
+      "id": "tldr--c0720004d446",
+      "canonicalPath": "android/settings.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "settings",
+      "title": "settings",
+      "summary": "Отримайте інформацію про операційну систему Android.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 4,
+      "examples": [
+        {
+          "description": "Вивести список налаштувань в глобальному (`global`) просторі імен:",
+          "command": "settings list global",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/settings.md#L8"
+        },
+        {
+          "description": "Отримайте значення конкретного налаштування:",
+          "command": "settings get {{global}} {{airplane_mode_on}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/settings.md#L12"
+        },
+        {
+          "description": "Встановіть значення для налаштування:",
+          "command": "settings put {{system}} {{screen_brightness}} {{42}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/settings.md#L16"
+        },
+        {
+          "description": "Видаліть визначене налаштування:",
+          "command": "settings delete {{secure}} {{screensaver_enabled}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/settings.md#L20"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/android/settings.md"
+    },
+    {
+      "id": "tldr--c118b08e0331",
+      "canonicalPath": "common/dog.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "dog",
+      "title": "dog",
+      "summary": "Утиліта пошуку DNS. Вона має кольоровий вихід, підтримує протоколи DNS-over-TLS і DNS-over-HTTPS та може видавати JSON.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "dog--159086e0"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "Шукає IP-адреси пов'язані з іменем хоста (A records):",
+          "command": "dog {{example.com}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dog.md#L9"
+        },
+        {
+          "description": "Запитує тип записів MX, пов’язаних із заданим доменним ім’ям:",
+          "command": "dog {{example.com}} MX",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dog.md#L13"
+        },
+        {
+          "description": "Вкажіть конкретний DNS-сервер для запиту (наприклад, Cloudflare):",
+          "command": "dog {{example.com}} MX @{{1.1.1.1}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dog.md#L17"
+        },
+        {
+          "description": "Запит через TCP, а не UDP:",
+          "command": "dog {{example.com}} MX @{{1.1.1.1}} {{[-T|--tcp]}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dog.md#L21"
+        },
+        {
+          "description": "Запитує тип записів MX, пов’язаних із заданим доменним ім’ям через TCP, використовуючи явні аргументи:",
+          "command": "dog {{[-q|--query]}} {{example.com}} {{[-t|--type]}} MX {{[-n|--nameserver]}} {{1.1.1.1}} {{[-T|--tcp]}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dog.md#L25"
+        },
+        {
+          "description": "Шукає IP-адреси, пов’язані з іменем хоста (записи A), за допомогою DNS через HTTPS (DoH):",
+          "command": "dog {{example.com}} {{[-H|--https]}} @{{https://cloudflare-dns.com/dns-query}}",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dog.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dog.md"
+    },
+    {
+      "id": "tldr--c25a4cec12c4",
+      "canonicalPath": "common/gzip.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "gzip",
+      "title": "gzip",
+      "summary": "Утиліта архівування/розпакування файлів за допомогою стиснення `gzip` (LZ77).",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "gow--4cb149e7",
+        "gzip--1bc6b0b1",
+        "gzip--dc3edbf3",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "Архівувати файл, замінивши його архівом `gzip`:",
+          "command": "gzip {{шлях/до/файлу}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/gzip.md#L8"
+        },
+        {
+          "description": "Розпакувати файл, замінивши його оригінальною нестисненою версією:",
+          "command": "gzip {{[-d|--decompress]}} {{шлях/до/файлу.gz}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/gzip.md#L12"
+        },
+        {
+          "description": "Архівувати файл, зберігаючи оригінальний файл:",
+          "command": "gzip {{[-k|--keep]}} {{шлях/до/файлу}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/gzip.md#L16"
+        },
+        {
+          "description": "Архівувати файл із зазначенням імені вихідного файлу:",
+          "command": "gzip {{[-c|--stdout]}} {{шлях/до/файлу}} > {{шлях/до/архіву.gz}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/gzip.md#L20"
+        },
+        {
+          "description": "Розпакувати архів `gzip` із зазначенням назви вихідного файлу:",
+          "command": "gzip {{[-c|--stdout]}} {{[-d|--decompress]}} {{шлях/до/файлу.gz}} > {{шлях/до/розпакованого_файлу}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/gzip.md#L24"
+        },
+        {
+          "description": "Встановити рівень стиснення. 1 — найшвидший (низьке стиснення), 9 — найповільніше (високе стиснення), 6 — за умовчанням:",
+          "command": "gzip -{{1..9}} {{[-c|--stdout]}} {{шлях/до/файлу}} > {{шлях/до/архіву.gz}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/gzip.md#L28"
+        },
+        {
+          "description": "Вивести назву та відсоток зменшення для кожного стисненого або розпакованого файлу:",
+          "command": "gzip {{[-v|--verbose]}} {{[-d|--decompress]}} {{шлях/до/файлу.gz}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/gzip.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/gzip.md"
+    },
+    {
+      "id": "tldr--cb1d24aaa698",
+      "canonicalPath": "common/dokku.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "dokku",
+      "title": "dokku",
+      "summary": "Міні-Heroku на основі Docker (PaaS). Легко розгортає кілька програм на власному сервері різними мовами за допомогою однієї команди `git-push`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 5,
+      "examples": [
+        {
+          "description": "Показати запущені програми:",
+          "command": "dokku apps",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dokku.md#L9"
+        },
+        {
+          "description": "Створити програму:",
+          "command": "dokku apps:create {{ім'я_програми}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dokku.md#L13"
+        },
+        {
+          "description": "Видалити програму:",
+          "command": "dokku apps:destroy {{ім'я_програми}}",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dokku.md#L17"
+        },
+        {
+          "description": "Встановити плагін:",
+          "command": "dokku plugin:install {{повний_url_на_репозиторій}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dokku.md#L21"
+        },
+        {
+          "description": "Зв'язати базу даних із програмою:",
+          "command": "dokku {{db}}:link {{ім'я_бази_даних}} {{ім'я_програми}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dokku.md#L25"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/dokku.md"
+    },
+    {
+      "id": "tldr--d32a36fa5a3e",
+      "canonicalPath": "common/vi.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "vi",
+      "title": "vi",
+      "summary": "Ця команда є псевдонімом для `vim`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "vim--9266ef09",
+        "vim-nightly--339fc25c",
+        "vim-tux--8f39cf5c"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr vim",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/vi.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/vi.md"
+    },
+    {
+      "id": "tldr--d3457790824e",
+      "canonicalPath": "osx/hdid.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "hdid",
+      "title": "hdid",
+      "summary": "Ця команда є псевдонімом для `hdiutil attach`.",
+      "platform": "macos",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr hdiutil",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/osx/hdid.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/osx/hdid.md"
+    },
+    {
+      "id": "tldr--d91b8ffead1f",
+      "canonicalPath": "common/impacket-mqtt_check.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "impacket-mqtt_check",
+      "title": "impacket-mqtt_check",
+      "summary": "Ця команда є псевдонімом для `mqtt_check.py`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr mqtt_check.py",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-mqtt_check.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/impacket-mqtt_check.md"
+    },
+    {
+      "id": "tldr--e1e07e55762f",
+      "canonicalPath": "common/jfrog.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "jfrog",
+      "title": "jfrog",
+      "summary": "Ця команда є псевдонімом для `jf`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "jfrog--642c82c3"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr jf",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/jfrog.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/jfrog.md"
+    },
+    {
+      "id": "tldr--fc00ceb94be0",
+      "canonicalPath": "common/c++.md",
+      "locale": "uk",
+      "sourceLocale": "uk",
+      "name": "c++",
+      "title": "c++",
+      "summary": "Ця команда є псевдонімом для `g++`.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "Дивись документацію для оригінальної команди:",
+          "command": "tldr g++",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/c%2B%2B.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.uk/common/c%2B%2B.md"
+    }
+  ]
+}

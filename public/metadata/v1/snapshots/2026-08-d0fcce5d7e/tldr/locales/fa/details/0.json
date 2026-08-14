@@ -1,0 +1,916 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "2026-08-d0fcce5d7e",
+  "locale": "fa",
+  "sourceLocale": "fa",
+  "shard": "0",
+  "items": [
+    {
+      "id": "tldr--03da635f46e2",
+      "canonicalPath": "common/echo.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "echo",
+      "title": "echo",
+      "summary": "چاپ ورودی داده شده. همچنین : `printf`.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "microsoft-coreutils--3ec6ee3f",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 6,
+      "examples": [
+        {
+          "description": "چاپ پیام ورودی. نکته : استفاده از علامت نقل قول انتخابی است:",
+          "command": "echo \"{{سلام دنیا}}\"",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/echo.md#L9"
+        },
+        {
+          "description": "چاپ یک پیام حاوی متغییرهای سیستمی:",
+          "command": "echo \"{{مسیر سیستم من $PATH است.}}\"",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/echo.md#L13"
+        },
+        {
+          "description": "چاپ یک پیام بدون انتقال به خط جدید:",
+          "command": "echo -n \"{{سلام دنیا}}\"",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/echo.md#L17"
+        },
+        {
+          "description": "افزودن یک پیام به انتهای یک فایل:",
+          "command": "echo \"{{سلام دنیا}}\" >> {{file.txt}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/echo.md#L21"
+        },
+        {
+          "description": "فعال کردن تفسیر کاراکترهای خاص، برای مثال tab:",
+          "command": "echo -e \"{{Column 1\\tColumn 2}}\"",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/echo.md#L25"
+        },
+        {
+          "description": "چاپ وضعیت خروج آخرین دستور اجرا شده (نکته: معادل های این دستور در ویندور به ترتیب echo %errorlevel% و $lastexitcode هستند.) :",
+          "command": "echo $?",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/echo.md#L29"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/echo.md"
+    },
+    {
+      "id": "tldr--047b6a94951f",
+      "canonicalPath": "common/bun.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "bun",
+      "title": "bun",
+      "summary": "یک runtime و toolkit برای جاوا اسکریپت. شامل یک bundler، یک ابزار تست و یک package manager.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "اجرای یک فایل جاوااسکریپت یا یک اسکریپت در `package.json`:",
+          "command": "bun run {{path/to/file|script_name}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun.md#L9"
+        },
+        {
+          "description": "اجرای تست‌های واحد:",
+          "command": "bun test",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun.md#L13"
+        },
+        {
+          "description": "دانلود و نصب تمام بسته‌های ذکرشده در `package.json`:",
+          "command": "bun install",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun.md#L17"
+        },
+        {
+          "description": "افزودن یک وابستگی به `package.json`:",
+          "command": "bun add {{module_name}}",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun.md#L21"
+        },
+        {
+          "description": "حذف یک وابستگی از `package.json`:",
+          "command": "bun remove {{module_name}}",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun.md#L25"
+        },
+        {
+          "description": "ایجاد یک پروژه جدید Bun در دایرکتوری فعلی:",
+          "command": "bun init",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun.md#L29"
+        },
+        {
+          "description": "شروع یک REPL (پوسته تعاملی):",
+          "command": "bun repl",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun.md#L33"
+        },
+        {
+          "description": "ارتقا Bun به آخرین نسخه موجود:",
+          "command": "bun upgrade",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun.md"
+    },
+    {
+      "id": "tldr--0997de4527cd",
+      "canonicalPath": "common/bun-c.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "bun",
+      "title": "bun c",
+      "summary": "این دستور یک نام مستعار از `bun create` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr bun create",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-c.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-c.md"
+    },
+    {
+      "id": "tldr--1f1f0f9deaf0",
+      "canonicalPath": "windows/scb.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "scb",
+      "title": "scb",
+      "summary": "این دستور یک نام مستعار از `Set-Clipboard` است.",
+      "platform": "windows",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr Set-Clipboard",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/windows/scb.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/windows/scb.md"
+    },
+    {
+      "id": "tldr--2d84e2e814f6",
+      "canonicalPath": "common/lzmore.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "lzmore",
+      "title": "lzmore",
+      "summary": "این دستور یک نام مستعار از `xzmore` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr xzmore",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/lzmore.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/lzmore.md"
+    },
+    {
+      "id": "tldr--34534074e26b",
+      "canonicalPath": "common/identify.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "identify",
+      "title": "identify",
+      "summary": "این دستور یک نام مستعار از `magick identify` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "imagemagick-ffmpeg--1a1f6843"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr magick identify",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/identify.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/identify.md"
+    },
+    {
+      "id": "tldr--3939c8f415b0",
+      "canonicalPath": "common/dive.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "dive",
+      "title": "dive",
+      "summary": "ابزاری برای کاوش یک فایل داکر، لایه بندی محتواها و پیداکردن راه هایی که می توان آن را کاهش داد.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "dive--187a84fc"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 2,
+      "examples": [
+        {
+          "description": "بررسی یک ایمیج داکر:",
+          "command": "dive {{your_image_tag}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dive.md#L8"
+        },
+        {
+          "description": "ساخت یک ایمیج و شروع بررسی آن:",
+          "command": "dive build -t {{some_tag}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dive.md#L12"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/dive.md"
+    },
+    {
+      "id": "tldr--4351db2b4538",
+      "canonicalPath": "common/codium.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "codium",
+      "title": "codium",
+      "summary": "این دستور یک نام مستعار از `code` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr code",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/codium.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/codium.md"
+    },
+    {
+      "id": "tldr--458700035839",
+      "canonicalPath": "common/xzfgrep.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "xzfgrep",
+      "title": "xzfgrep",
+      "summary": "این دستور یک نام مستعار از `xzgrep --fixed-strings` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr xzgrep",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/xzfgrep.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/xzfgrep.md"
+    },
+    {
+      "id": "tldr--4ef7db6ca7a9",
+      "canonicalPath": "common/bun-list.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "bun",
+      "title": "bun list",
+      "summary": "این دستور یک نام مستعار از `bun pm ls` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr bun pm ls",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-list.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-list.md"
+    },
+    {
+      "id": "tldr--58c40b3c519e",
+      "canonicalPath": "linux/genisoimage.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "genisoimage",
+      "title": "genisoimage",
+      "summary": "این دستور یک نام مستعار از `mkisofs` است.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr mkisofs",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/genisoimage.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/genisoimage.md"
+    },
+    {
+      "id": "tldr--70fb8eae8be2",
+      "canonicalPath": "android/getprop.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "getprop",
+      "title": "getprop",
+      "summary": "نمایش اطلاعات مربوط به مشخصات سیستم اندروید.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 7,
+      "examples": [
+        {
+          "description": "نمایش اطلاعات مربوط به مشخصات سیستم اندروید :",
+          "command": "getprop",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/getprop.md#L8"
+        },
+        {
+          "description": "نمایش اطلاعات مربوط به یک مشخصه :",
+          "command": "getprop {{property}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/getprop.md#L12"
+        },
+        {
+          "description": "نمایش سطح SDK رابط برنامه نویسی :",
+          "command": "getprop {{ro.build.version.sdk}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/getprop.md#L16"
+        },
+        {
+          "description": "نمایش نسخه اندروید :",
+          "command": "getprop {{ro.build.version.release}}",
+          "line": 20,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/getprop.md#L20"
+        },
+        {
+          "description": "نمایش مدل دستگاه اندروید :",
+          "command": "getprop {{ro.vendor.product.model}}",
+          "line": 24,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/getprop.md#L24"
+        },
+        {
+          "description": "نمایش اطلاعات قفل OEM :",
+          "command": "getprop {{ro.oem_unlock_supported}}",
+          "line": 28,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/getprop.md#L28"
+        },
+        {
+          "description": "نمایش آدرس مک کارت وای فای اندروید :",
+          "command": "getprop {{ro.boot.wifimacaddr}}",
+          "line": 32,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/getprop.md#L32"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/getprop.md"
+    },
+    {
+      "id": "tldr--728d1c604e19",
+      "canonicalPath": "common/bun-x.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "bun",
+      "title": "bun x",
+      "summary": "این دستور یک نام مستعار از `bunx` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr bunx",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-x.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-x.md"
+    },
+    {
+      "id": "tldr--86670fdfe727",
+      "canonicalPath": "linux/lrzuntar.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "lrzuntar",
+      "title": "lrzuntar",
+      "summary": "این دستور یک نام مستعار از `lrztar --decompress` است.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr lrztar",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/lrzuntar.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/lrzuntar.md"
+    },
+    {
+      "id": "tldr--89b249c1c128",
+      "canonicalPath": "linux/pacremove.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "pacremove",
+      "title": "pacremove",
+      "summary": "این دستور یک نام مستعار از `pactrans --remove` است.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr pactrans",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/pacremove.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/pacremove.md"
+    },
+    {
+      "id": "tldr--97e360c4fa72",
+      "canonicalPath": "android/cmd.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "cmd",
+      "title": "cmd",
+      "summary": "مدیر سرویس اندروید.",
+      "platform": "android",
+      "softwareIds": [
+        "cmd--449cd18f"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "فهرست تمام سرویس های درحال اجرا :",
+          "command": "cmd -l",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/cmd.md#L8"
+        },
+        {
+          "description": "فراخوان یک سرویس :",
+          "command": "cmd {{service}}",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/cmd.md#L12"
+        },
+        {
+          "description": "فراخوان یک سرویس با مقادیر ورودی :",
+          "command": "cmd {{service}} {{argument1 argument2 ...}}",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/cmd.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/cmd.md"
+    },
+    {
+      "id": "tldr--a1af782392fa",
+      "canonicalPath": "android/dalvikvm.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "dalvikvm",
+      "title": "dalvikvm",
+      "summary": "ماشین مجازی اندروید.",
+      "platform": "android",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "اجرای یک برنامه جاوا :",
+          "command": "dalvikvm -classpath {{path/to/file.jar}} {{classname}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/dalvikvm.md#L8"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/android/dalvikvm.md"
+    },
+    {
+      "id": "tldr--ade7716b2cb8",
+      "canonicalPath": "linux/fdisk.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "fdisk",
+      "title": "fdisk",
+      "summary": "مدیریت جدول‌های پارتیشن و پارتیشن‌ها بر روی یک درایو ذخیره‌سازی. همچنین : `partprobe`, `parted`, `cfdisk`.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "لیست کردن پارتیشن‌ها:",
+          "command": "sudo fdisk {{[-l|--list]}}",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/fdisk.md#L9"
+        },
+        {
+          "description": "ورود به حالت مدیریت پارتیشن به صورت تعاملی:",
+          "command": "sudo fdisk {{/dev/sdX}}",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/fdisk.md#L13"
+        },
+        {
+          "description": "([m]enu) نمایش منوی راهنما:",
+          "command": "<m>",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/fdisk.md#L17"
+        },
+        {
+          "description": "([p]rint) چاپ جدول پارتیشن:",
+          "command": "<p>",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/fdisk.md#L21"
+        },
+        {
+          "description": "([n]ew) ایجاد یک پارتیشن جدید:",
+          "command": "<n>",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/fdisk.md#L25"
+        },
+        {
+          "description": "([d]elete) حذف یک پارتیشن:",
+          "command": "<d>",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/fdisk.md#L29"
+        },
+        {
+          "description": "([w]rite) ذخیره تغییرات در جدول:",
+          "command": "<w>",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/fdisk.md#L33"
+        },
+        {
+          "description": "([q]uit) خروج بدون ذخیره‌ی تغییرات:",
+          "command": "<q>",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/fdisk.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/fdisk.md"
+    },
+    {
+      "id": "tldr--b825e79dcda7",
+      "canonicalPath": "common/hugo-serve.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "hugo",
+      "title": "hugo serve",
+      "summary": "این دستور یک نام مستعار از `hugo server` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "hugo--626f54e9",
+        "hugo-extended--626f54e9"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr hugo server",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/hugo-serve.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/hugo-serve.md"
+    },
+    {
+      "id": "tldr--be9b7a90d820",
+      "canonicalPath": "common/minetest.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "minetest",
+      "title": "minetest",
+      "summary": "این دستور یک نام مستعار از `luanti` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr luanti",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/minetest.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/minetest.md"
+    },
+    {
+      "id": "tldr--c0052abfbefd",
+      "canonicalPath": "linux/pw-play.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "pw-play",
+      "title": "pw-play",
+      "summary": "این دستور یک نام مستعار از `pw-cat --playback` است.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr pw-cat",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/pw-play.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/pw-play.md"
+    },
+    {
+      "id": "tldr--c2e9aebb7584",
+      "canonicalPath": "common/tlmgr-arch.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "tlmgr",
+      "title": "tlmgr arch",
+      "summary": "این دستور یک نام مستعار از `tlmgr platform` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr tlmgr platform",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tlmgr-arch.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/tlmgr-arch.md"
+    },
+    {
+      "id": "tldr--df592785e74e",
+      "canonicalPath": "common/unzstd.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "unzstd",
+      "title": "unzstd",
+      "summary": "این دستور یک نام مستعار از `zstd --decompress` است.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr zstd",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/unzstd.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/unzstd.md"
+    },
+    {
+      "id": "tldr--e07f3789d3cf",
+      "canonicalPath": "common/bun-rm.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "bun",
+      "title": "bun rm",
+      "summary": "این دستور یک نام مستعار از `bun remove` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr bun remove",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-rm.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-rm.md"
+    },
+    {
+      "id": "tldr--e3ba276df4fd",
+      "canonicalPath": "common/bun-i.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "bun",
+      "title": "bun i",
+      "summary": "این دستور یک نام مستعار از `bun install` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bun--a7d2549e",
+        "bun-canary--2163d410",
+        "bun1-3--c4dd5cc6"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr bun install",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-i.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bun-i.md"
+    },
+    {
+      "id": "tldr--eae9f040d831",
+      "canonicalPath": "common/bunzip2.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "bunzip2",
+      "title": "bunzip2",
+      "summary": "این دستور یک نام مستعار از `bzip2 --decompress` است.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "bzip2--ea87c95f",
+        "gow--4cb149e7",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr bzip2",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bunzip2.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/bunzip2.md"
+    },
+    {
+      "id": "tldr--ef232bce6755",
+      "canonicalPath": "common/[[.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "[[",
+      "title": "[[",
+      "summary": "نوع فایل و مقادیر را بررسی میکند. عدد 0 برمیگرداند اگر حاصل عبارت شرط درست باشد و 1 اگر نادرست باشد.",
+      "platform": "cross-platform",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 8,
+      "examples": [
+        {
+          "description": "اینکه متغییری برابر/نابرابر با رشته ای معین است را بررسی میکند :",
+          "command": "[[ ${{variable}} {{==|!=}} \"{{string}}\" ]]",
+          "line": 9,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/%5B%5B.md#L9"
+        },
+        {
+          "description": "اینکه متغییری از الگوی معین شده پیروی میکند را بررسی میکند :",
+          "command": "[[ ${{variable}} {{==|=~}} {{pattern}} ]]",
+          "line": 13,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/%5B%5B.md#L13"
+        },
+        {
+          "description": "اینکه متغییری برابر/ نابرابر/ بزرگتر از/ کوچکتر از/ برابر یا بزرگتر/ کوچکتر یا برابر با عددی است را بررسی میکند :",
+          "command": "[[ ${{variable}} -{{eq|ne|gt|lt|ge|le}} {{integer}} ]]",
+          "line": 17,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/%5B%5B.md#L17"
+        },
+        {
+          "description": "اینکه متغییری مقدار غیرتهی دارد را بررسی میکند :",
+          "command": "[[ -n ${{variable}} ]]",
+          "line": 21,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/%5B%5B.md#L21"
+        },
+        {
+          "description": "اینکه متغییری مقدار تهی دارد را بررسی میکند :",
+          "command": "[[ -z ${{variable}} ]]",
+          "line": 25,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/%5B%5B.md#L25"
+        },
+        {
+          "description": "وجود فایلی را بررسی میکند :",
+          "command": "[[ -f {{path/to/file}} ]]",
+          "line": 29,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/%5B%5B.md#L29"
+        },
+        {
+          "description": "وجود پوشه ای را بررسی میکند :",
+          "command": "[[ -d {{path/to/directory}} ]]",
+          "line": 33,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/%5B%5B.md#L33"
+        },
+        {
+          "description": "وجود پوشه یا فایلی را بررسی میکند :",
+          "command": "[[ -e {{path/to/file_or_directory}} ]]",
+          "line": 37,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/%5B%5B.md#L37"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/%5B%5B.md"
+    },
+    {
+      "id": "tldr--f1166e44bc1b",
+      "canonicalPath": "common/sleep.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "sleep",
+      "title": "sleep",
+      "summary": "ایجاد تاخیر بر اساس زمان.",
+      "platform": "cross-platform",
+      "softwareIds": [
+        "coreutils--1bc6b0b1",
+        "gow--4cb149e7",
+        "microsoft-coreutils--3ec6ee3f",
+        "rktools2k3--c5a81681",
+        "unxutils--5bef4004"
+      ],
+      "candidateSoftwareIds": [],
+      "exampleCount": 3,
+      "examples": [
+        {
+          "description": "تاخیر به ثانیه:",
+          "command": "sleep {{seconds}}",
+          "line": 8,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/sleep.md#L8"
+        },
+        {
+          "description": "تاخیر به دقیقه:",
+          "command": "sleep {{minutes}}m",
+          "line": 12,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/sleep.md#L12"
+        },
+        {
+          "description": "تاخیر به ساعت:",
+          "command": "sleep {{hours}}h",
+          "line": 16,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/sleep.md#L16"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/common/sleep.md"
+    },
+    {
+      "id": "tldr--fc73dc4d077c",
+      "canonicalPath": "linux/pct-move_volume.md",
+      "locale": "fa",
+      "sourceLocale": "fa",
+      "name": "pct",
+      "title": "pct move_volume",
+      "summary": "این دستور یک نام مستعار از `pct move-volume` است.",
+      "platform": "linux",
+      "softwareIds": [],
+      "candidateSoftwareIds": [],
+      "exampleCount": 1,
+      "examples": [
+        {
+          "description": "مشاهده مستندات دستور اصلی:",
+          "command": "tldr pct move-volume",
+          "line": 7,
+          "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/pct-move_volume.md#L7"
+        }
+      ],
+      "sourceRef": "https://github.com/tldr-pages/tldr/blob/b64c941c148686ccc00173f7ebb7dc599eeba525/pages.fa/linux/pct-move_volume.md"
+    }
+  ]
+}

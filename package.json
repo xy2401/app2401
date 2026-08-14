@@ -13,7 +13,7 @@
     "metadata:verify": "node catalog/scripts/verify-catalog.mjs",
     "metadata:platform:verify": "node catalog/scripts/verify-platform-metadata.mjs",
     "metadata:distro:curate": "node catalog/scripts/distributions/refresh-distro-curation.mjs",
-    "build": "npm run metadata:build && vite build",
+    "build": "vite build",
     "start": "vite preview",
     "test": "npm run metadata:verify && npm run metadata:platform:verify && npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . && tsc --noEmit"
