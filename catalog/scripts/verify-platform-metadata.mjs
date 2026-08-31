@@ -72,6 +72,10 @@ if (await exists(distroIndexPath)) {
     if (!validateCurated(curated)) failSchema(distro.files.curated.path, validateCurated);
     if (!validateSearch(searchIndex)) failSchema(distro.files.search.path, validateSearch);
     if (collections.collections.length !== distro.collectionCount || curated.packages.length !== distro.curatedPackageCount) throw new Error(`Distribution curated counts differ: ${distro.id}`);
+    if (distro.catalogMode === "dnf-groups") {
+      if (distro.groupCount < 1 || distro.collectionCount < 1 || distro.packageCount < 1) throw new Error(`DNF group catalog is empty: ${distro.id}`);
+      if (collections.collections.some((collection) => collection.type === "metapackage")) throw new Error(`DNF group catalog contains inferred metapackages: ${distro.id}`);
+    }
     let searchCount = 0;
     for (const [shard, file] of Object.entries(searchIndex.shards)) {
       const path = join(distroRoot, ...file.path.split("/"));

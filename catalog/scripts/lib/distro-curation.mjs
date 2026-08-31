@@ -35,7 +35,7 @@ function isExplicitMetapackage(pkg) {
     || (/-(?:meta|desktop|server)$/.test(pkg.name) && pkg.dependencies?.requires?.length > 1);
 }
 
-export function buildCollections(document) {
+export function buildCollections(document, { includeMetapackages = true } = {}) {
   const output = [];
   for (const group of document.groups || []) {
     output.push({
@@ -82,7 +82,7 @@ export function buildCollections(document) {
       children: (collection.children || []).map((child) => ({ id: child.id.includes(":") ? child.id : `${child.type || "group"}:${child.id}`, role: child.role || "default" })),
     });
   }
-  for (const pkg of document.packages || []) {
+  for (const pkg of includeMetapackages ? document.packages || [] : []) {
     if (!isExplicitMetapackage(pkg)) continue;
     const members = (pkg.dependencies?.requires || []).map((name) => normalizeMember({ name, role: "default" })).filter(Boolean);
     if (!members.length) continue;
@@ -116,7 +116,7 @@ export function buildCollections(document) {
   })).sort((a, b) => (collectionTypeOrder.get(a.type) ?? 99) - (collectionTypeOrder.get(b.type) ?? 99) || compareText(a.id, b.id));
 }
 
-export function buildCuratedPackages(document, collections) {
+export function buildCuratedPackages(document, collections, { includeHidden = false } = {}) {
   const packagesByName = new Map();
   for (const pkg of document.packages || []) {
     const list = packagesByName.get(pkg.name) || [];
@@ -132,7 +132,7 @@ export function buildCuratedPackages(document, collections) {
     }
   }
   for (const collection of collections) {
-    if (!collection.visible) continue;
+    if (!includeHidden && !collection.visible) continue;
     if (collection.type === "metapackage") addReason(collection.installTarget, { type: "collection-target", collectionId: collection.id, role: "default" });
     for (const member of collection.members) addReason(member.name, { type: "collection-member", collectionId: collection.id, role: member.role });
   }

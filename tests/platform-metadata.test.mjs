@@ -110,6 +110,7 @@ test("normalizes all distribution adapters and preserves DNF comps semantics", a
   assert.deepEqual(fedora.groups[0].packages.map((item) => item.type), ["mandatory", "default", "optional", "conditional"]);
   assert.deepEqual(fedora.environments[0].groups, ["development-tools"]);
   assert.deepEqual(fedora.environments[0].optionalGroups, ["editors"]);
+  assert.deepEqual(fedora.packages.map((item) => item.name), ["atlas-demo"]);
   const ubuntu = JSON.parse(await readFile(join(normalized, "ubuntu-24.04.json"), "utf8"));
   assert.equal(ubuntu.collections[0].id, "developer-tools");
   const arch = JSON.parse(await readFile(join(normalized, "arch-latest.json"), "utf8"));
@@ -126,8 +127,12 @@ test("normalizes all distribution adapters and preserves DNF comps semantics", a
   assert.equal(Object.keys(searchIndex.shards).length, 16);
   assert.equal((await readdir(join(output, "fedora-latest", "search"))).length, 17);
   assert.ok(index.distributions.some((entry) => entry.collectionCount > 0));
-  assert.ok(index.distributions.find((entry) => entry.id === "fedora-latest").curatedPackageCount > 0);
+  const fedoraIndex = index.distributions.find((entry) => entry.id === "fedora-latest");
+  assert.equal(fedoraIndex.catalogMode, "dnf-groups");
+  assert.equal(fedoraIndex.packageCount, 1);
+  assert.ok(fedoraIndex.curatedPackageCount > 0);
   assert.equal(JSON.parse(await readFile(join(output, "fedora-latest", "collections.json"), "utf8")).collections[0].type, "environment");
+  assert.ok(JSON.parse(await readFile(join(output, "fedora-latest", "collections.json"), "utf8")).collections.every((item) => item.type !== "metapackage"));
   assert.equal((await readdir(join(output, "fedora-latest", "packages", "details"))).length, 256);
   const indexBody = await readFile(join(output, "index.json"), "utf8");
   assert.equal(indexBody, `${JSON.stringify(index, null, 2)}\n`);

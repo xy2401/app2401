@@ -33,7 +33,7 @@ function PlatformSources() {
       const distros = results[2].status === "fulfilled" ? results[2].value : null;
       if (windows) next.push({ label: "GitHub Runner · Windows", count: windows.runners.reduce((sum: number, runner: { softwareCount: number }) => sum + runner.softwareCount, 0), detail: `${windows.runners.length} 个稳定镜像环境` });
       if (linux) next.push({ label: "GitHub Runner · Linux", count: linux.runners.reduce((sum: number, runner: { softwareCount: number }) => sum + runner.softwareCount, 0), detail: `${linux.runners.length} 个稳定镜像环境` });
-      if (distros) next.push({ label: "Linux 发行版精选与仓库", count: distros.distributions.reduce((sum: number, distro: { curatedPackageCount: number }) => sum + distro.curatedPackageCount, 0), detail: `${distros.distributions.reduce((sum: number, distro: { collectionCount: number }) => sum + distro.collectionCount, 0).toLocaleString()} 个发行版维护集合 · 完整仓库按需加载` });
+      if (distros) next.push({ label: "Linux 发行版精选与仓库", count: distros.distributions.reduce((sum: number, distro: { curatedPackageCount: number }) => sum + distro.curatedPackageCount, 0), detail: `${distros.distributions.reduce((sum: number, distro: { collectionCount: number }) => sum + distro.collectionCount, 0).toLocaleString()} 个发行版维护集合 · Fedora 使用官方 DNF 分组` });
       setItems(next);
     });
     return () => { active = false; };

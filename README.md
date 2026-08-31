@@ -111,6 +111,9 @@ Cloudflare Pages 的构建命令使用 `npm run build`，输出目录使用 `dis
 验证的公开 JSON 并生成浏览器资源，不在 Pages 上重新采集数据；项目没有 Pages Functions、
 Cloudflare Worker 或 Wrangler 配置。`catalog-search-worker.js` 是浏览器本地搜索线程，不是服务端 Worker。
 
+Fedora 目录只发布官方 DNF Comps 定义的 Environment、Group 及其成员包，不发布完整 RPM
+仓库，也不递归展开成员包的依赖。其他发行版可继续按各自数据源提供精选集合和完整仓库入口。
+
 Git 数据源每月可通过以下命令更新：
 
 ```powershell

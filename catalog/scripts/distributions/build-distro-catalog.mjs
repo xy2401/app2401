@@ -63,8 +63,8 @@ for (const { document, source } of documents.sort((a, b) => compareText(a.source
   });
   const repositories = await writeData(`${id}/repositories.json`, { schemaVersion: "1.0.0", generatedAt, distributionId: document.distribution.id, repositories: document.repositories });
   const groups = await writeData(`${id}/groups.json`, { schemaVersion: "1.0.0", generatedAt, distributionId: document.distribution.id, groups: document.groups, environments: document.environments });
-  const collectionItems = buildCollections(document);
-  const curatedItems = buildCuratedPackages(document, collectionItems);
+  const collectionItems = buildCollections(document, { includeMetapackages: source.catalogMode !== "dnf-groups" });
+  const curatedItems = buildCuratedPackages(document, collectionItems, { includeHidden: source.catalogMode === "dnf-groups" });
   const collections = await writeData(`${id}/collections.json`, { schemaVersion: "1.0.0", generatedAt, distributionId: document.distribution.id, collections: collectionItems });
   const curated = await writeData(`${id}/curated.json`, { schemaVersion: "1.0.0", generatedAt, distributionId: document.distribution.id, packages: curatedItems });
   const detailFiles = {};
@@ -73,6 +73,7 @@ for (const { document, source } of documents.sort((a, b) => compareText(a.source
     id,
     canonicalId: document.distribution.id,
     label: source.label || document.distribution.name,
+    catalogMode: source.catalogMode || "full",
     distribution: document.distribution,
     image: document.image,
     packageCount: document.packages.length,

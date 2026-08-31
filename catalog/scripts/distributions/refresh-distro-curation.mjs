@@ -23,8 +23,8 @@ for (const entry of index.distributions) {
     packages.push(...document.items);
   }
   const document = { packages, groups: rawGroups.groups || [], environments: rawGroups.environments || [], collections: [] };
-  const collections = buildCollections(document);
-  const curated = buildCuratedPackages(document, collections);
+  const collections = buildCollections(document, { includeMetapackages: entry.catalogMode !== "dnf-groups" });
+  const curated = buildCuratedPackages(document, collections, { includeHidden: entry.catalogMode === "dnf-groups" });
   entry.collectionCount = collections.length;
   entry.curatedPackageCount = curated.length;
   entry.files.collections = await descriptor(`${entry.id}/collections.json`, { schemaVersion: "1.0.0", generatedAt: index.generatedAt, distributionId: entry.canonicalId, collections });

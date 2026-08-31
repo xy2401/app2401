@@ -63,7 +63,7 @@
 - [x] 把发行版搜索索引、仓库、DNF 软件组和 256 个详情分片直接发布为网站静态 JSON。
 - [x] 增加 Runner/发行版 Schema、隐私限制、格式检查、Fixture 和分片回归测试。
 - [x] 网站增加 Linux 仓库浏览、搜索、详情和 DNF 软件组入口。
-- [x] 网站默认展示发行版维护的环境、任务、软件组、Pattern 和元包；完整仓库移入高级入口。
+- [x] 网站默认展示发行版维护的环境、任务、软件组、Pattern 和元包；Fedora 仅发布官方 DNF 分组成员，其他完整仓库移入高级入口。
 - [x] 为精选集合生成独立 `collections.json`，为集合成员生成小型 `curated.json`，不默认加载完整搜索索引。
 - [x] 统一 Fedora/Rocky Comps、Debian/Ubuntu Tasksel、Arch Groups、openSUSE Patterns 和明确元包的集合协议。
 

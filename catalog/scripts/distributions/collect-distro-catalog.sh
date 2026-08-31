@@ -23,11 +23,12 @@ if [[ -z "$DISTRO" || -z "$OUTPUT" ]]; then
   exit 2
 fi
 
-readarray -t SOURCE < <(node -e 'const c=require(process.argv[1]);const d=c.distributions.find(x=>x.slug===process.argv[2]||x.id===process.argv[2]);if(!d)process.exit(2);console.log(d.id);console.log(d.image);console.log(d.family)' "$PROJECT_ROOT/catalog/config/distribution-sources.json" "$DISTRO")
-if ((${#SOURCE[@]} != 3)); then echo "Unsupported distribution: $DISTRO" >&2; exit 2; fi
+readarray -t SOURCE < <(node -e 'const c=require(process.argv[1]);const d=c.distributions.find(x=>x.slug===process.argv[2]||x.id===process.argv[2]);if(!d)process.exit(2);console.log(d.id);console.log(d.image);console.log(d.family);console.log(d.catalogMode||"full")' "$PROJECT_ROOT/catalog/config/distribution-sources.json" "$DISTRO")
+if ((${#SOURCE[@]} != 4)); then echo "Unsupported distribution: $DISTRO" >&2; exit 2; fi
 SOURCE_ID="${SOURCE[0]}"
 IMAGE="${SOURCE[1]}"
 FAMILY="${SOURCE[2]}"
+CATALOG_MODE="${SOURCE[3]}"
 
 if [[ -n "$FIXTURE" ]]; then
   node "$SCRIPT_DIR/normalize-distro.mjs" --distro "$SOURCE_ID" --raw-dir "$FIXTURE" --output "$OUTPUT" --generated-at "$GENERATED_AT"
@@ -67,18 +68,22 @@ case "$FAMILY:$SOURCE_ID" in
     ;;
   rpm:fedora|rpm:rocky-9)
     mkdir -p "$RAW_DIR/export"
-    docker run --rm --platform linux/amd64 -v "$RAW_DIR/export:/out" "$IMAGE" bash -lc '
+    docker run --rm --platform linux/amd64 -e CATALOG_MODE="$CATALOG_MODE" -v "$RAW_DIR/export:/out" "$IMAGE" bash -lc '
       set -euo pipefail
       if command -v dnf5 >/dev/null; then DNF=dnf5; elif command -v dnf >/dev/null; then DNF=dnf; else echo "Neither dnf5 nor dnf is installed" >&2; exit 127; fi
       echo "Using $DNF for repository metadata" >&2
       if [[ "$DNF" == dnf ]] && ! "$DNF" -q repoquery --help >/dev/null 2>&1; then "$DNF" -y install dnf-plugins-core >/dev/null; fi
-      "$DNF" -q makecache --refresh
-      "$DNF" -q group list --hidden >/dev/null || true
+      if [[ "$CATALOG_MODE" == dnf-groups ]]; then
+        "$DNF" -q --setopt=optional_metadata_types=comps makecache --refresh
+        "$DNF" -q group list --hidden >/dev/null
+      else
+        "$DNF" -q makecache --refresh
+      fi
       if ! command -v zstd >/dev/null && ! command -v unzstd >/dev/null; then "$DNF" -y install zstd >/dev/null 2>&1 || true; fi
+      if ! command -v unzck >/dev/null; then "$DNF" -y install zchunk >/dev/null 2>&1 || true; fi
       unit_separator=$'"'"'\x1f'"'"'
       record_separator=$'"'"'\x1e'"'"'
       query_format="%{name}${unit_separator}%{epoch}${unit_separator}%{version}${unit_separator}%{release}${unit_separator}%{arch}${unit_separator}%{summary}${unit_separator}%{description}${unit_separator}%{url}${unit_separator}%{license}${unit_separator}%{repoid}${unit_separator}%{downloadsize}${unit_separator}%{installsize}${unit_separator}%{sourcerpm}${unit_separator}%{requires}${unit_separator}%{recommends}${unit_separator}%{suggests}${unit_separator}%{provides}${unit_separator}%{conflicts}${unit_separator}%{obsoletes}${record_separator}"
-      "$DNF" -q repoquery --available --queryformat "$query_format" > /out/packages.records
       if [[ "$DNF" == dnf5 ]]; then
         "$DNF" repo info --json > /out/repositories.json
       else
@@ -89,7 +94,31 @@ case "$FAMILY:$SOURCE_ID" in
       while IFS= read -r file; do
         if [[ "$file" == *.gz ]]; then gzip -dc "$file" > "/out/comps-$i.xml"; elif [[ "$file" == *.xz ]]; then xz -dc "$file" > "/out/comps-$i.xml"; elif [[ "$file" == *.zst ]]; then if command -v zstd >/dev/null; then zstd -qdc "$file" > "/out/comps-$i.xml"; elif command -v unzstd >/dev/null; then unzstd -c "$file" > "/out/comps-$i.xml"; else continue; fi; elif [[ "$file" == *.zck ]]; then if command -v unzck >/dev/null; then unzck -c "$file" > "/out/comps-$i.xml"; else continue; fi; else cp "$file" "/out/comps-$i.xml"; fi
         i=$((i + 1))
-      done < <(find /var/cache -type f \( -iname "*comps*.xml" -o -iname "*comps*.xml.gz" -o -iname "*comps*.xml.xz" -o -iname "*comps*.xml.zst" -o -iname "*comps*.xml.zck" \) 2>/dev/null)
+      done < <(find /var/cache /root/.cache -type f \( -iname "*comps*.xml" -o -iname "*comps*.xml.gz" -o -iname "*comps*.xml.xz" -o -iname "*comps*.xml.zst" -o -iname "*comps*.xml.zck" \) 2>/dev/null | sort -u)
+      if [[ "$CATALOG_MODE" == dnf-groups ]]; then
+        compgen -G "/out/comps-*.xml" >/dev/null || { echo "Fedora Comps metadata was not downloaded" >&2; exit 1; }
+        python3 - <<"PY" > /out/group-packages.txt
+from glob import glob
+from xml.etree import ElementTree
+
+names = set()
+for path in glob("/out/comps-*.xml"):
+    root = ElementTree.parse(path).getroot()
+    for node in root.iter():
+        if node.tag.rsplit("}", 1)[-1] == "packagereq" and node.text and node.text.strip():
+            names.add(node.text.strip())
+for name in sorted(names):
+    print(name)
+PY
+        mapfile -t group_packages < /out/group-packages.txt
+        ((${#group_packages[@]})) || { echo "Fedora Comps contains no package members" >&2; exit 1; }
+        : > /out/packages.records
+        for ((offset=0; offset<${#group_packages[@]}; offset+=200)); do
+          "$DNF" -q repoquery --available --latest-limit=1 --queryformat "$query_format" "${group_packages[@]:offset:200}" >> /out/packages.records
+        done
+      else
+        "$DNF" -q repoquery --available --queryformat "$query_format" > /out/packages.records
+      fi
       chmod -R a+rwx /out
     '
     cp -R "$RAW_DIR/export/." "$RAW_DIR/"

@@ -179,19 +179,41 @@ async function walk(directory) {
 }
 
 async function parseComps() {
-  const groups = [];
-  const environments = [];
+  const groups = new Map();
+  const environments = new Map();
   const files = (await walk(rawDir)).filter((path) => /comps.*\.xml$/i.test(basename(path))).sort(compareText);
   for (const path of files) {
     const parsed = xmlParser.parse(await readFile(path, "utf8"));
     const comps = parsed.comps || parsed;
     for (const group of asArray(comps.group)) {
+      const id = nodeText(group.id);
+      if (!id) continue;
       const packages = asArray(group.packagelist?.packagereq).map((entry) => ({ name: nodeText(entry), type: entry["@_type"] || "optional", ...(entry["@_requires"] ? { requires: entry["@_requires"] } : {}) })).filter((entry) => entry.name);
-      groups.push({ id: nodeText(group.id), names: localized(group.name), descriptions: localized(group.description), visible: nodeText(group.uservisible) !== "false", default: nodeText(group.default) === "true", ...(group.langonly ? { langOnly: nodeText(group.langonly) } : {}), packages });
+      const existing = groups.get(id);
+      groups.set(id, {
+        id,
+        names: { ...(existing?.names || {}), ...localized(group.name) },
+        descriptions: { ...(existing?.descriptions || {}), ...localized(group.description) },
+        visible: existing?.visible !== false && nodeText(group.uservisible) !== "false",
+        default: existing?.default === true || nodeText(group.default) === "true",
+        ...(group.langonly || existing?.langOnly ? { langOnly: nodeText(group.langonly) || existing.langOnly } : {}),
+        packages: [...new Map([...(existing?.packages || []), ...packages].map((item) => [`${item.name}\u0000${item.type}\u0000${item.requires || ""}`, item])).values()],
+      });
     }
-    for (const environment of asArray(comps.environment)) environments.push({ id: nodeText(environment.id), names: localized(environment.name), descriptions: localized(environment.description), groups: unique(asArray(environment.grouplist?.groupid).map(nodeText)), optionalGroups: unique(asArray(environment.optionlist?.groupid || environment.optionlist?.optionid).map(nodeText)) });
+    for (const environment of asArray(comps.environment)) {
+      const id = nodeText(environment.id);
+      if (!id) continue;
+      const existing = environments.get(id);
+      environments.set(id, {
+        id,
+        names: { ...(existing?.names || {}), ...localized(environment.name) },
+        descriptions: { ...(existing?.descriptions || {}), ...localized(environment.description) },
+        groups: unique([...(existing?.groups || []), ...asArray(environment.grouplist?.groupid).map(nodeText)]),
+        optionalGroups: unique([...(existing?.optionalGroups || []), ...asArray(environment.optionlist?.groupid || environment.optionlist?.optionid).map(nodeText)]),
+      });
+    }
   }
-  return { groups, environments };
+  return { groups: [...groups.values()], environments: [...environments.values()] };
 }
 
 async function parseCollections() {
@@ -247,15 +269,28 @@ else if (source.family === "arch") packages = parseTsv(await optionalText(join(r
 else if (source.id === "opensuse-leap") packages = parseZypper(await optionalText(join(rawDir, "packages.xml")), versionId);
 else packages = parseRpmRecords(await optionalText(join(rawDir, "packages.records")), versionId);
 
+const comps = await parseComps();
+if (source.catalogMode === "dnf-groups") {
+  if (!comps.groups.length) throw new Error(`${source.id} requires Fedora Comps groups, but none were collected`);
+  const groupPackageNames = new Set(comps.groups.flatMap((group) => group.packages.map((item) => item.name)));
+  packages = packages.filter((item) => groupPackageNames.has(item.name));
+}
+
 const deduped = new Map();
-for (const item of packages) if (item.name) deduped.set([item.repository, item.name, item.architecture].join("\u0000"), item);
+for (const item of packages) {
+  if (!item.name) continue;
+  const key = source.catalogMode === "dnf-groups"
+    ? [item.name, item.architecture].join("\u0000")
+    : [item.repository, item.name, item.architecture].join("\u0000");
+  const existing = deduped.get(key);
+  if (!existing || (/updates/i.test(item.repository) && !/updates/i.test(existing.repository))) deduped.set(key, item);
+}
 packages = [...deduped.values()].sort((a, b) => compareText(a.id, b.id));
 const repositoryJson = await optionalText(join(rawDir, "repositories.json"));
 const repositories = (repositoryJson ? JSON.parse(repositoryJson).filter((entry) => entry.is_enabled !== false).map((entry) => ({ id: entry.id, name: entry.name || entry.id, ...(entry.base_url?.[0] || entry.mirrorlist || entry.metalink ? { url: entry.base_url?.[0] || entry.mirrorlist || entry.metalink } : {}), ...(entry.revision ? { revision: String(entry.revision) } : {}) })) : (await optionalText(join(rawDir, "repositories.tsv"))).split(/\r?\n/).filter(Boolean).map((line) => {
   const [id, name, url, revision] = line.split("\t");
   return { id, name: name || id, ...(url ? { url } : {}), ...(revision ? { revision } : {}) };
 })).sort((a, b) => compareText(a.id, b.id));
-const comps = await parseComps();
 const collections = await parseCollections();
 
 await writeJson(resolve(args.output), {
