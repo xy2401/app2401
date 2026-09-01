@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "9f",
   "items": [
@@ -8,7 +8,7 @@
       "id": "9f00acc219cf5c829590",
       "name": "linux-modules-nvidia-575-generic-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "28.28~24.04.1+3",
+      "release": "30.30~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575 for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575 for the generic flavour (dummy transitional package)",
@@ -1135,7 +1135,7 @@
       "id": "9f2660cecc8fb1a81eb1",
       "name": "linux-modules-extra-azure-6.8",
       "version": "6.8.0",
-      "release": "1064.72",
+      "release": "1065.73",
       "architecture": "amd64",
       "summary": "Linux kernel extra modules for Azure systems.",
       "description": "Linux kernel extra modules for Azure systems.",
@@ -1146,7 +1146,7 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-modules-extra-6.8.0-1064-azure"
+          "linux-modules-extra-6.8.0-1065-azure"
         ],
         "recommends": [],
         "suggests": [],
@@ -1425,7 +1425,7 @@
       "name": "vim",
       "epoch": "2",
       "version": "9.1.0016",
-      "release": "1ubuntu7.18",
+      "release": "1ubuntu7.20",
       "architecture": "amd64",
       "summary": "Vi IMproved - enhanced vi editor",
       "description": "Vi IMproved - enhanced vi editor",
@@ -1433,7 +1433,7 @@
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "category": "editors",
       "repository": "official",
-      "installedSize": 4232192,
+      "installedSize": 4236288,
       "dependencies": {
         "requires": [
           "libacl1 (>= 2.2.23)",
@@ -1443,8 +1443,8 @@
           "libselinux1 (>= 3.1~)",
           "libsodium23 (>= 1.0.14)",
           "libtinfo6 (>= 6)",
-          "vim-common (= 2:9.1.0016-1ubuntu7.18)",
-          "vim-runtime (= 2:9.1.0016-1ubuntu7.18)"
+          "vim-common (= 2:9.1.0016-1ubuntu7.20)",
+          "vim-runtime (= 2:9.1.0016-1ubuntu7.20)"
         ],
         "recommends": [],
         "suggests": [
@@ -1929,7 +1929,7 @@
       "id": "9f3b34818c557f239b14",
       "name": "linux-azure-6.8",
       "version": "6.8.0",
-      "release": "1064.72",
+      "release": "1065.73",
       "architecture": "amd64",
       "summary": "Complete Linux kernel for Azure systems (vmlinuz).",
       "description": "Complete Linux kernel for Azure systems (vmlinuz).",
@@ -1940,13 +1940,13 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-cloud-tools-azure-6.8 (= 6.8.0-1064.72)",
-          "linux-headers-azure-6.8 (= 6.8.0-1064.72)",
-          "linux-image-azure-6.8 (= 6.8.0-1064.72)",
-          "linux-tools-azure-6.8 (= 6.8.0-1064.72)"
+          "linux-cloud-tools-azure-6.8 (= 6.8.0-1065.73)",
+          "linux-headers-azure-6.8 (= 6.8.0-1065.73)",
+          "linux-image-azure-6.8 (= 6.8.0-1065.73)",
+          "linux-tools-azure-6.8 (= 6.8.0-1065.73)"
         ],
         "recommends": [
-          "linux-tools-6.8.0-1064-azure",
+          "linux-tools-6.8.0-1065-azure",
           "ubuntu-kernel-accessories"
         ],
         "suggests": [],
@@ -3454,7 +3454,7 @@
       "id": "9f67ecd1af99c155d57c",
       "name": "linux-image-nvidia-6.17",
       "version": "6.17.0",
-      "release": "1029.29",
+      "release": "1031.31",
       "architecture": "amd64",
       "summary": "NVIDIA Linux kernel image",
       "description": "NVIDIA Linux kernel image",
@@ -3468,8 +3468,8 @@
           "amd64-microcode",
           "intel-microcode",
           "linux-firmware",
-          "linux-image-6.17.0-1029-nvidia",
-          "linux-modules-nvidia-fs-6.17.0-1029-nvidia"
+          "linux-image-6.17.0-1031-nvidia",
+          "linux-modules-nvidia-fs-6.17.0-1031-nvidia"
         ],
         "recommends": [
           "thermald"
@@ -3479,10 +3479,36 @@
           "ivsc-modules (= 0~git202311021215.73a044d9)",
           "spl-modules (= 2.3.4-1ubuntu2)",
           "v4l2loopback-modules (= 0.15.0-0ubuntu2.1)",
-          "virtualbox-guest-modules (= 6.17.0-1029)",
+          "virtualbox-guest-modules (= 6.17.0-1031)",
           "wireguard-modules (= 1.0.0)",
           "zfs-modules (= 2.3.4-1ubuntu2)"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "9f6997f471ccfc5f4161",
+      "name": "linux-modules-nvidia-595-server-open-7.0.0-1011-aws",
+      "version": "7.0.0",
+      "release": "1011.11~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1011",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1011",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-aws-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 25541632,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-1011-aws | linux-image-unsigned-7.0.0-1011-aws",
+          "nvidia-kernel-common-595-server (<= 595.71.05-1)",
+          "nvidia-kernel-common-595-server (>= 595.71.05)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -5414,7 +5440,7 @@
       "id": "9fa558e5eec88b67de13",
       "name": "linux-modules-nvidia-570-server-aws-lts-24.04",
       "version": "6.8.0",
-      "release": "1062.65+1",
+      "release": "1063.66",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the aws flavour (dummy transitional package)",
@@ -7286,6 +7312,34 @@
       }
     },
     {
+      "id": "9fd34e6a481545d34aa5",
+      "name": "linux-modules-nvidia-610-7.0.0-30-generic",
+      "version": "7.0.0",
+      "release": "30.30~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-30",
+      "description": "Linux kernel nvidia modules for version 7.0.0-30",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-30-generic | linux-image-unsigned-7.0.0-30-generic",
+          "linux-objects-nvidia-610-7.0.0-30-generic (= 7.0.0-30.30~24.04.1)",
+          "linux-signatures-nvidia-7.0.0-30-generic (= 7.0.0-30.30~24.04.1)",
+          "nvidia-kernel-common-610 (>= 610.43.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "9fd4ee3753adf9f28cfe",
       "name": "libgraph-maker-perl",
       "version": "0.02",
@@ -8154,7 +8208,7 @@
       "id": "9fe876c6937c0de1dd2a",
       "name": "linux-modules-nvidia-570-azure-fde-6.8",
       "version": "6.8.0",
-      "release": "1063.70+1",
+      "release": "1064.71",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the azure-fde flavour (dummy transitional package)",

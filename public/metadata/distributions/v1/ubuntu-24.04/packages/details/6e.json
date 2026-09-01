@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "6e",
   "items": [
@@ -1210,7 +1210,7 @@
       "id": "6e22c27f21e51eb3476c",
       "name": "linux-modules-nvidia-590-server-open-nvidia",
       "version": "6.8.0",
-      "release": "1060.63+1",
+      "release": "1061.64",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server-open for the nvidia flavour (dummy transitional package)",
@@ -2377,7 +2377,7 @@
       "id": "6e3f9a3d841eeeea1fdb",
       "name": "linux-modules-nvidia-595-server-open-nvidia-hwe-24.04",
       "version": "6.17.0",
-      "release": "1029.29+1",
+      "release": "1031.31",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-server-open for the nvidia-hwe-24.04 flavour",
       "description": "Extra drivers for nvidia-595-server-open for the nvidia-hwe-24.04 flavour",
@@ -2388,7 +2388,7 @@
       "installedSize": 27648,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-server-open-6.17.0-1029-nvidia (= 6.17.0-1029.29+1)",
+          "linux-modules-nvidia-595-server-open-6.17.0-1031-nvidia (= 6.17.0-1031.31)",
           "nvidia-kernel-common-595-server (>= 595.71.05)"
         ],
         "recommends": [],
@@ -2951,7 +2951,7 @@
       "id": "6e51fd1576bf44014b81",
       "name": "linux-nvidia-tegra-tegra-oot-jetson-defaults",
       "version": "6.8.0",
-      "release": "1031.32",
+      "release": "1032.34",
       "architecture": "all",
       "summary": "Extra configuration required for jetson Thor OOT modules.",
       "description": "Extra configuration required for jetson Thor OOT modules.",
@@ -6554,7 +6554,7 @@
       "id": "6ea4968cdf867df78350",
       "name": "bind9-dyndb-ldap",
       "version": "11.10",
-      "release": "6ubuntu11.24.04.6",
+      "release": "6ubuntu11.24.04.8",
       "architecture": "amd64",
       "summary": "LDAP back-end plug-in for BIND",
       "description": "LDAP back-end plug-in for BIND",
@@ -6567,7 +6567,7 @@
       "dependencies": {
         "requires": [
           "bind9 (>= 9.11)",
-          "bind9-libs (= 1:9.18.39-0ubuntu0.24.04.5)",
+          "bind9-libs (= 1:9.18.39-0ubuntu0.24.04.7)",
           "libc6 (>= 2.38)",
           "libkrb5-3 (>= 1.6.dfsg.2)",
           "libldap2 (>= 2.6.2)",
@@ -7545,6 +7545,51 @@
         "suggests": [],
         "provides": [],
         "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "6ebb25d2a7884540b0b2",
+      "name": "linux-image-6.8.0-1048-gkeop",
+      "version": "6.8.0",
+      "release": "1048.52",
+      "architecture": "amd64",
+      "summary": "Signed kernel image gkeop",
+      "description": "Signed kernel image gkeop",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-gkeop",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15034368,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1048-gkeop"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-gkeop-doc-6.8.0 | linux-gkeop-source-6.8.0",
+          "linux-gkeop-tools",
+          "linux-headers-6.8.0-1048-gkeop"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1048-gkeop"
+        ],
         "replaces": []
       }
     },

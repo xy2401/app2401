@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "d1",
   "items": [
@@ -1575,6 +1575,30 @@
         "requires": [
           "libjs-sphinxdoc (>= 5.2)",
           "sphinx-rtd-theme-common (>= 1.2.2+dfsg)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "d12b631e7ce5713ae3d2",
+      "name": "linux-signatures-nvidia-6.8.0-1061-nvidia-lowlatency",
+      "version": "6.8.0",
+      "release": "1061.64.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel signatures for nvidia modules for version 6.8.0-1061-nvidia-lowlatency",
+      "description": "Linux kernel signatures for nvidia modules for version 6.8.0-1061-nvidia-lowlatency",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-nvidia-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 58368,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1061-nvidia-lowlatency | linux-image-unsigned-6.8.0-1061-nvidia-lowlatency"
         ],
         "recommends": [],
         "suggests": [],
@@ -3266,6 +3290,32 @@
         "requires": [
           "libc6 (>= 2.34)",
           "linux-cloud-tools-common"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "d152f3150bbdae10173a",
+      "name": "linux-modules-nvidia-595-server-open-7.0.0-30-generic",
+      "version": "7.0.0",
+      "release": "30.30~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-30",
+      "description": "Linux kernel nvidia modules for version 7.0.0-30",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 25546752,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-30-generic | linux-image-unsigned-7.0.0-30-generic",
+          "nvidia-kernel-common-595-server (<= 595.71.05-1)",
+          "nvidia-kernel-common-595-server (>= 595.71.05)"
         ],
         "recommends": [],
         "suggests": [],
@@ -6194,7 +6244,7 @@
       "id": "d199e541d3598a897234",
       "name": "gnocchi-common",
       "version": "4.6.0",
-      "release": "0ubuntu2",
+      "release": "0ubuntu2.1",
       "architecture": "all",
       "summary": "Metric as a Service - common files",
       "description": "Metric as a Service - common files",
@@ -6203,7 +6253,7 @@
       "sourcePackage": "gnocchi",
       "category": "universe/python",
       "repository": "official",
-      "installedSize": 171008,
+      "installedSize": 172032,
       "dependencies": {
         "requires": [
           "adduser",
@@ -8083,7 +8133,7 @@
       "id": "d1d7b76b30d4a2ff41bd",
       "name": "linux-modules-nvidia-575-open-lowlatency",
       "version": "6.8.0",
-      "release": "137.137.1+1",
+      "release": "138.138.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-open for the lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-open for the lowlatency flavour (dummy transitional package)",
@@ -9158,10 +9208,61 @@
       }
     },
     {
+      "id": "d1fa323c004f072dd5ae",
+      "name": "linux-image-unsigned-7.0.0-1016-nvidia",
+      "version": "7.0.0",
+      "release": "1016.16~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 7.0.0",
+      "description": "Linux kernel image for version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-nvidia-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 16969728,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-7.0.0-1016-nvidia"
+        ],
+        "recommends": [
+          "dracut | linux-initramfs-tool",
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo"
+        ],
+        "suggests": [
+          "bpftool",
+          "linux-headers-7.0.0-1016-nvidia",
+          "linux-nvidia-7.0-tools",
+          "linux-perf"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "mstflint-dkms",
+          "mstflint-modules",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-7.0.0-1016-nvidia"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "d1faa709408acdc99437",
       "name": "linux-modules-nvidia-595-server-open-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "137.137.1+1",
+      "release": "138.138.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-server-open for the lowlatency-6.8 flavour",
       "description": "Extra drivers for nvidia-595-server-open for the lowlatency-6.8 flavour",
@@ -9172,7 +9273,7 @@
       "installedSize": 26624,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-server-open-6.8.0-137-lowlatency (= 6.8.0-137.137.1+1)",
+          "linux-modules-nvidia-595-server-open-6.8.0-138-lowlatency (= 6.8.0-138.138.1)",
           "nvidia-kernel-common-595-server (>= 595.71.05)"
         ],
         "recommends": [],

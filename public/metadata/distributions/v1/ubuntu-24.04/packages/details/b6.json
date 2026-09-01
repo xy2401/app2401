@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "b6",
   "items": [
@@ -1005,7 +1005,7 @@
       "id": "b616f765f5c54d95bb89",
       "name": "libvirt-daemon-driver-xen",
       "version": "10.0.0",
-      "release": "2ubuntu8.15",
+      "release": "2ubuntu8.16",
       "architecture": "amd64",
       "summary": "Virtualization daemon Xen connection driver",
       "description": "Virtualization daemon Xen connection driver",
@@ -1020,8 +1020,8 @@
           "libc6 (>= 2.38)",
           "libgcc-s1 (>= 3.3.1)",
           "libglib2.0-0t64 (>= 2.30.0)",
-          "libvirt-daemon (= 10.0.0-2ubuntu8.15)",
-          "libvirt0 (= 10.0.0-2ubuntu8.15)",
+          "libvirt-daemon (= 10.0.0-2ubuntu8.16)",
+          "libvirt0 (= 10.0.0-2ubuntu8.16)",
           "libxenmisc4.17t64 (>= 4.17.3+10-g091466ba55)",
           "libxenstore4t64 (>= 4.16.0)",
           "libxentoollog1t64 (>= 4.17.3+10-g091466ba55)",
@@ -1446,7 +1446,7 @@
       "id": "b6208558bd6d73b80b1c",
       "name": "linux-doc",
       "version": "6.8.0",
-      "release": "137.137",
+      "release": "138.138",
       "architecture": "all",
       "summary": "Linux kernel specific documentation for version 6.8.0",
       "description": "Linux kernel specific documentation for version 6.8.0",
@@ -2158,7 +2158,7 @@
       "id": "b62ade81aed24dafc28e",
       "name": "gir1.2-udisks-2.0",
       "version": "2.10.1",
-      "release": "6ubuntu1.3",
+      "release": "6ubuntu1.5",
       "architecture": "amd64",
       "summary": "GObject based library to access udisks2 - introspection data",
       "description": "GObject based library to access udisks2 - introspection data",
@@ -2167,7 +2167,7 @@
       "sourcePackage": "udisks2",
       "category": "introspection",
       "repository": "official",
-      "installedSize": 198656,
+      "installedSize": 199680,
       "dependencies": {
         "requires": [
           "gir1.2-gio-2.0",
@@ -3944,6 +3944,56 @@
       }
     },
     {
+      "id": "b653e05064c39c3879d3",
+      "name": "linux-image-6.8.0-1060-oracle",
+      "version": "6.8.0",
+      "release": "1060.63",
+      "architecture": "amd64",
+      "summary": "Signed kernel image oracle",
+      "description": "Signed kernel image oracle",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-oracle",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 14903296,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1060-oracle"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-headers-6.8.0-1060-oracle",
+          "linux-oracle-doc-6.8.0 | linux-oracle-source-6.8.0",
+          "linux-oracle-tools"
+        ],
+        "provides": [
+          "aufs-dkms",
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1060-oracle"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "b6543ab4eb01983281d4",
       "name": "php-symfony-light-sms-notifier",
       "version": "6.4.5+dfsg",
@@ -5709,8 +5759,8 @@
     {
       "id": "b67ed97e13fa51119ab4",
       "name": "openjdk-25-source",
-      "version": "25.0.3+9",
-      "release": "2~24.04.2",
+      "version": "25.0.4+7",
+      "release": "1~24.04",
       "architecture": "all",
       "summary": "OpenJDK Development Kit (JDK) source files",
       "description": "OpenJDK Development Kit (JDK) source files",
@@ -5719,10 +5769,10 @@
       "sourcePackage": "openjdk-25",
       "category": "universe/java",
       "repository": "official",
-      "installedSize": 53027840,
+      "installedSize": 53045248,
       "dependencies": {
         "requires": [
-          "openjdk-25-jdk (>= 25.0.3+9-2~24.04.2)"
+          "openjdk-25-jdk (>= 25.0.4+7-1~24.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -9251,6 +9301,52 @@
       }
     },
     {
+      "id": "b6e180126d0e4edb45cf",
+      "name": "linux-image-unsigned-6.8.0-1063-ibm",
+      "version": "6.8.0",
+      "release": "1063.64",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-ibm",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15684608,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1063-ibm"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-headers-6.8.0-1063-ibm",
+          "linux-ibm-doc-6.8.0 | linux-ibm-source-6.8.0",
+          "linux-ibm-tools"
+        ],
+        "provides": [
+          "aufs-dkms",
+          "fuse-module",
+          "linux-ibm-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1063-ibm"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "b6e218032799f3585bf1",
       "name": "linux-image-unsigned-6.8.0-1037-gkeop",
       "version": "6.8.0",
@@ -9819,6 +9915,30 @@
         "replaces": [
           "inewsinn"
         ]
+      }
+    },
+    {
+      "id": "b6ecdfde337b50b58cc3",
+      "name": "linux-objects-nvidia-595-server-open-6.17.0-1031-nvidia",
+      "version": "6.17.0",
+      "release": "1031.31",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.17.0-1031 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.17.0-1031 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-6.17",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26396672,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {

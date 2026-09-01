@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "76",
   "items": [
@@ -786,7 +786,7 @@
       "id": "7612d4352f1358fb8eb8",
       "name": "linux-modules-nvidia-570-open-azure-6.8",
       "version": "6.8.0",
-      "release": "1064.72+1",
+      "release": "1065.73",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-open for the azure flavour (dummy transitional package)",
@@ -1619,7 +1619,7 @@
       "id": "763201c9a6329c233a3b",
       "name": "libipa-hbac-dev",
       "version": "2.9.4",
-      "release": "1.1ubuntu6.6",
+      "release": "1.1ubuntu6.7",
       "architecture": "amd64",
       "summary": "FreeIPA HBAC Evaluator library -- development files",
       "description": "FreeIPA HBAC Evaluator library -- development files",
@@ -1631,7 +1631,7 @@
       "installedSize": 39936,
       "dependencies": {
         "requires": [
-          "libipa-hbac0t64 (= 2.9.4-1.1ubuntu6.6)"
+          "libipa-hbac0t64 (= 2.9.4-1.1ubuntu6.7)"
         ],
         "recommends": [],
         "suggests": [],
@@ -2433,7 +2433,7 @@
       "id": "7649e6724e165930432c",
       "name": "linux-modules-usbio-generic-7.0",
       "version": "7.0.0",
-      "release": "28.28~24.04.1",
+      "release": "30.30~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for usbio for the generic flavour",
       "description": "Extra drivers for usbio for the generic flavour",
@@ -2444,7 +2444,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-modules-usbio-7.0.0-28-generic"
+          "linux-modules-usbio-7.0.0-30-generic"
         ],
         "recommends": [],
         "suggests": [],
@@ -2575,10 +2575,59 @@
       }
     },
     {
+      "id": "764ecd765bf572617988",
+      "name": "linux-image-unsigned-6.8.0-1065-azure",
+      "version": "6.8.0",
+      "release": "1065.73",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15887360,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1065-azure"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub"
+        ],
+        "suggests": [
+          "fdutils",
+          "initramfs-tools | linux-initramfs-tool",
+          "linux-azure-doc-6.8.0 | linux-azure-source-6.8.0",
+          "linux-azure-tools",
+          "linux-headers-6.8.0-1065-azure"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1065-azure"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "764fd1f0cd509c4318a9",
       "name": "linux-modules-nvidia-610-generic",
       "version": "6.8.0",
-      "release": "137.137+1",
+      "release": "138.138",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-610 for the generic flavour",
       "description": "Extra drivers for nvidia-610 for the generic flavour",
@@ -2589,7 +2638,7 @@
       "installedSize": 26624,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-6.8.0-137-generic (= 6.8.0-137.137+1)",
+          "linux-modules-nvidia-610-6.8.0-138-generic (= 6.8.0-138.138)",
           "nvidia-kernel-common-610 (>= 610.43.02)"
         ],
         "recommends": [],
@@ -3448,7 +3497,7 @@
       "id": "76697b025d6767bf0231",
       "name": "linux-modules-nvidia-570-open-generic-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "28.28~24.04.1+3",
+      "release": "30.30~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-open for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-open for the generic flavour (dummy transitional package)",
@@ -4780,6 +4829,30 @@
       }
     },
     {
+      "id": "76867f6b6cbb4a62a66b",
+      "name": "linux-objects-nvidia-580-6.8.0-1063-ibm",
+      "version": "6.8.0",
+      "release": "1063.64",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1063 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1063 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 197256192,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "7686b563ff6c74eacf73",
       "name": "libmoosex-multimethods-perl",
       "version": "0.10",
@@ -5597,7 +5670,7 @@
       "id": "769805f34461cc197b16",
       "name": "linux-modules-nvidia-570-generic-7.0",
       "version": "7.0.0",
-      "release": "28.28~24.04.1+3",
+      "release": "30.30~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the generic flavour (dummy transitional package)",
@@ -7539,6 +7612,31 @@
       }
     },
     {
+      "id": "76bf07521972e4f449ed",
+      "name": "linux-modules-extra-6.17.0-1020-oracle",
+      "version": "6.17.0",
+      "release": "1020.20",
+      "architecture": "amd64",
+      "summary": "Oracle Linux kernel extra modules for version 6.17.0 on DESC",
+      "description": "Oracle Linux kernel extra modules for version 6.17.0 on DESC",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-oracle-6.17",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 121974784,
+      "dependencies": {
+        "requires": [
+          "linux-modules-6.17.0-1020-oracle",
+          "wireless-regdb"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "76bf47eee3adecdde79a",
       "name": "skkdic",
       "version": "20230109",
@@ -7725,7 +7823,7 @@
       "id": "76c584dcce93e3c2dc04",
       "name": "linux-modules-nvidia-590-server-azure-fde-lts-24.04",
       "version": "6.8.0",
-      "release": "1063.70+1",
+      "release": "1064.71",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server for the azure-fde flavour (dummy transitional package)",
@@ -7974,7 +8072,7 @@
       "id": "76cf983429138f42906d",
       "name": "linux-modules-nvidia-575-open-nvidia-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "1015.15~24.04.1+1",
+      "release": "1016.16~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-open for the nvidia flavour (dummy transitional package)",
@@ -8952,7 +9050,7 @@
       "id": "76e20ecc8d51069bf4e9",
       "name": "linux-modules-nvidia-580-open-azure-fde-6.8",
       "version": "6.8.0",
-      "release": "1063.70+1",
+      "release": "1064.71",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-open for the azure-fde-6.8 flavour",
       "description": "Extra drivers for nvidia-580-open for the azure-fde-6.8 flavour",
@@ -8963,7 +9061,7 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-open-6.8.0-1063-azure-fde (= 6.8.0-1063.70+1)",
+          "linux-modules-nvidia-580-open-6.8.0-1064-azure-fde (= 6.8.0-1064.71)",
           "nvidia-kernel-common-580 (>= 580.173.02)"
         ],
         "recommends": [],
@@ -9240,7 +9338,7 @@
       "id": "76e83836c7b87a442e49",
       "name": "linux-modules-nvidia-610-open-nvidia-hwe-24.04",
       "version": "6.17.0",
-      "release": "1029.29+1",
+      "release": "1031.31",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-610-open for the nvidia-hwe-24.04 flavour",
       "description": "Extra drivers for nvidia-610-open for the nvidia-hwe-24.04 flavour",
@@ -9251,7 +9349,7 @@
       "installedSize": 27648,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-open-6.17.0-1029-nvidia (= 6.17.0-1029.29+1)",
+          "linux-modules-nvidia-610-open-6.17.0-1031-nvidia (= 6.17.0-1031.31)",
           "nvidia-kernel-common-610 (>= 610.43.02)"
         ],
         "recommends": [],

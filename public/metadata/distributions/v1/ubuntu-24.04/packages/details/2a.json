@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "2a",
   "items": [
@@ -516,7 +516,7 @@
       "id": "2a0e3306b66fd94c4253",
       "name": "linux-modules-nvidia-590-server-open-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "137.137.1+1",
+      "release": "138.138.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server-open for the lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server-open for the lowlatency flavour (dummy transitional package)",
@@ -1491,7 +1491,7 @@
       "id": "2a267fbe2a90574d13fb",
       "name": "linux-modules-nvidia-580-server-oracle-6.8",
       "version": "6.8.0",
-      "release": "1059.62",
+      "release": "1060.63",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server for the oracle-6.8 flavour",
       "description": "Extra drivers for nvidia-580-server for the oracle-6.8 flavour",
@@ -1502,7 +1502,7 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-6.8.0-1059-oracle (= 6.8.0-1059.62)",
+          "linux-modules-nvidia-580-server-6.8.0-1060-oracle (= 6.8.0-1060.63)",
           "nvidia-kernel-common-580-server (>= 580.173.02)"
         ],
         "recommends": [],
@@ -2823,6 +2823,30 @@
       }
     },
     {
+      "id": "2a46639f99cf8fee6ab7",
+      "name": "linux-objects-nvidia-595-server-6.8.0-1061-nvidia",
+      "version": "6.8.0",
+      "release": "1061.64",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1061 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1061 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 184623104,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "2a481571ca5fda85db12",
       "name": "backdoor-factory",
       "version": "3.4.2+dfsg",
@@ -3294,10 +3318,62 @@
       }
     },
     {
+      "id": "2a572b43f7f18b00d0c6",
+      "name": "linux-image-6.8.0-1061-nvidia",
+      "version": "6.8.0",
+      "release": "1061.64",
+      "architecture": "amd64",
+      "summary": "Signed kernel image nvidia",
+      "description": "Signed kernel image nvidia",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-nvidia",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 14980096,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1061-nvidia"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-doc | linux-nvidia-source-6.8.0",
+          "linux-headers-6.8.0-1061-nvidia",
+          "linux-modules-extra-6.8.0-1061-nvidia",
+          "linux-nvidia-tools"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "mstflint-dkms",
+          "mstflint-modules",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1061-nvidia"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "2a585e6e400a2f7ab96b",
       "name": "linux-modules-nvidia-550-open-nvidia-hwe-24.04",
       "version": "6.17.0",
-      "release": "1029.29+1",
+      "release": "1031.31",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550-open for the nvidia flavour (dummy transitional package)",
@@ -6097,6 +6173,30 @@
       }
     },
     {
+      "id": "2aa497dd96582bf3405b",
+      "name": "linux-azure-fde-headers-6.8.0-1064",
+      "version": "6.8.0",
+      "release": "1064.71",
+      "architecture": "all",
+      "summary": "Header files related to Linux kernel version 6.8.0",
+      "description": "Header files related to Linux kernel version 6.8.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure-fde",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 86155264,
+      "dependencies": {
+        "requires": [
+          "coreutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "2aa50871c9b9cfdb1138",
       "name": "linux-headers-7.0.0-1007-aws",
       "version": "7.0.0",
@@ -7122,7 +7222,7 @@
       "name": "diffutils",
       "epoch": "1",
       "version": "3.10",
-      "release": "1build1",
+      "release": "1ubuntu0.1",
       "architecture": "amd64",
       "summary": "File comparison utilities",
       "description": "File comparison utilities",
@@ -7867,7 +7967,7 @@
       "id": "2ac953a17993367027f9",
       "name": "linux-modules-involflt-azure-6.8",
       "version": "6.8.0",
-      "release": "1064.72",
+      "release": "1065.73",
       "architecture": "amd64",
       "summary": "Extra drivers for involflt for the azure flavour",
       "description": "Extra drivers for involflt for the azure flavour",
@@ -7878,7 +7978,7 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-modules-involflt-6.8.0-1064-azure"
+          "linux-modules-involflt-6.8.0-1065-azure"
         ],
         "recommends": [],
         "suggests": [],
@@ -8051,7 +8151,7 @@
       "id": "2ace3bcf6d531e67bd2b",
       "name": "linux-modules-nvidia-535-server-nvidia",
       "version": "6.8.0",
-      "release": "1060.63+1",
+      "release": "1061.64",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server for the nvidia flavour (dummy transitional package)",
@@ -9326,8 +9426,8 @@
     {
       "id": "2aee5802d955d2f41994",
       "name": "tor",
-      "version": "0.4.8.10",
-      "release": "1build2",
+      "version": "0.4.9.11",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "anonymizing overlay network for TCP",
       "description": "anonymizing overlay network for TCP",
@@ -9335,7 +9435,7 @@
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "category": "universe/net",
       "repository": "official",
-      "installedSize": 3726336,
+      "installedSize": 3762176,
       "dependencies": {
         "requires": [
           "adduser",
@@ -9565,7 +9665,7 @@
       "name": "xxd",
       "epoch": "2",
       "version": "9.1.0016",
-      "release": "1ubuntu7.18",
+      "release": "1ubuntu7.20",
       "architecture": "amd64",
       "summary": "tool to make (or reverse) a hex dump",
       "description": "tool to make (or reverse) a hex dump",

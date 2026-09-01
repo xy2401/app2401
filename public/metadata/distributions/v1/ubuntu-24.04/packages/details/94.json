@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "94",
   "items": [
@@ -1913,7 +1913,7 @@
       "name": "vim-gtk3",
       "epoch": "2",
       "version": "9.1.0016",
-      "release": "1ubuntu7.18",
+      "release": "1ubuntu7.20",
       "architecture": "amd64",
       "summary": "Vi IMproved - enhanced vi editor - with GTK3 GUI",
       "description": "Vi IMproved - enhanced vi editor - with GTK3 GUI",
@@ -1947,9 +1947,9 @@
           "libtinfo6 (>= 6)",
           "libx11-6",
           "libxt6t64",
-          "vim-common (= 2:9.1.0016-1ubuntu7.18)",
-          "vim-gui-common (= 2:9.1.0016-1ubuntu7.18)",
-          "vim-runtime (= 2:9.1.0016-1ubuntu7.18)"
+          "vim-common (= 2:9.1.0016-1ubuntu7.20)",
+          "vim-gui-common (= 2:9.1.0016-1ubuntu7.20)",
+          "vim-runtime (= 2:9.1.0016-1ubuntu7.20)"
         ],
         "recommends": [],
         "suggests": [
@@ -1960,13 +1960,13 @@
         ],
         "provides": [
           "editor",
-          "gvim (= 2:9.1.0016-1ubuntu7.18)",
-          "vim (= 2:9.1.0016-1ubuntu7.18)",
-          "vim-lua (= 2:9.1.0016-1ubuntu7.18)",
-          "vim-perl (= 2:9.1.0016-1ubuntu7.18)",
-          "vim-python3 (= 2:9.1.0016-1ubuntu7.18)",
-          "vim-ruby (= 2:9.1.0016-1ubuntu7.18)",
-          "vim-tcl (= 2:9.1.0016-1ubuntu7.18)"
+          "gvim (= 2:9.1.0016-1ubuntu7.20)",
+          "vim (= 2:9.1.0016-1ubuntu7.20)",
+          "vim-lua (= 2:9.1.0016-1ubuntu7.20)",
+          "vim-perl (= 2:9.1.0016-1ubuntu7.20)",
+          "vim-python3 (= 2:9.1.0016-1ubuntu7.20)",
+          "vim-ruby (= 2:9.1.0016-1ubuntu7.20)",
+          "vim-tcl (= 2:9.1.0016-1ubuntu7.20)"
         ],
         "conflicts": [],
         "replaces": []
@@ -4679,7 +4679,7 @@
       "id": "947118c6f33ff5cfde05",
       "name": "linux-modules-nvidia-575-server-gcp-6.8",
       "version": "6.8.0",
-      "release": "1065.73+1",
+      "release": "1066.74",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the gcp flavour (dummy transitional package)",
@@ -5024,7 +5024,7 @@
       "id": "9477c15d7b0399b8e614",
       "name": "linux-image-generic-7.0",
       "version": "7.0.0",
-      "release": "28.28~24.04.1",
+      "release": "30.30~24.04.1",
       "architecture": "amd64",
       "summary": "Generic Linux kernel image",
       "description": "Generic Linux kernel image",
@@ -5038,7 +5038,7 @@
           "amd64-microcode",
           "intel-microcode",
           "linux-firmware",
-          "linux-image-7.0.0-28-generic"
+          "linux-image-7.0.0-30-generic"
         ],
         "recommends": [
           "thermald"
@@ -5048,7 +5048,7 @@
           "ivsc-modules (= 0~git202311021215.73a044d9)",
           "spl-modules (= 2.4.1-1ubuntu5)",
           "v4l2loopback-modules (= 0.15.3-1ubuntu2)",
-          "virtualbox-guest-modules (= 7.0.0-28)",
+          "virtualbox-guest-modules (= 7.0.0-30)",
           "wireguard-modules (= 1.0.0)",
           "zfs-modules (= 2.4.1-1ubuntu5)"
         ],
@@ -5175,6 +5175,33 @@
         "provides": [
           "nvidia-dkms-570-server-open (= 570.211.01-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "947b277beadbd5f704af",
+      "name": "linux-modules-nvidia-fs-6.17.0-1031-nvidia",
+      "version": "6.17.0",
+      "release": "1031.31",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia-fs modules for version 6.17.0-1031",
+      "description": "Linux kernel nvidia-fs modules for version 6.17.0-1031",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-nvidia-6.17",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 541696,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.17.0-1031-nvidia | linux-image-unsigned-6.17.0-1031-nvidia"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-fs-dkms",
+          "nvidia-fs-modules"
         ],
         "conflicts": [],
         "replaces": []
@@ -5572,6 +5599,46 @@
         "requires": [
           "libc6 (>= 2.34)",
           "libsscm3 (>= 0.8.5)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "948128b1300f0b434bc1",
+      "name": "linux-nvidia-lowlatency-tools-6.8.0-1061",
+      "version": "6.8.0",
+      "release": "1061.64.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 6.8.0-1061",
+      "description": "Linux kernel version specific tools for version 6.8.0-1061",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-nvidia-lowlatency",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 18550784,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libcap2 (>= 1:2.10)",
+          "libdw1t64 (>= 0.161)",
+          "libelf1t64 (>= 0.144)",
+          "liblzma5 (>= 5.1.1alpha+20120614)",
+          "libnuma1 (>= 2.0.11)",
+          "libpci3 (>= 1:3.8.0)",
+          "libpython3.12t64 (>= 3.12.1)",
+          "libslang2 (>= 2.2.4)",
+          "libssl3t64 (>= 3.0.0)",
+          "libstdc++6 (>= 4.1.1)",
+          "libtraceevent1 (>= 1:1.3.0)",
+          "libudev1 (>= 183)",
+          "libunwind8",
+          "libzstd1 (>= 1.5.5)",
+          "linux-tools-common",
+          "zlib1g (>= 1:1.2.3.3)"
         ],
         "recommends": [],
         "suggests": [],
@@ -6111,7 +6178,7 @@
       "name": "vim-gui-common",
       "epoch": "2",
       "version": "9.1.0016",
-      "release": "1ubuntu7.18",
+      "release": "1ubuntu7.20",
       "architecture": "all",
       "summary": "Vi IMproved - Common GUI files",
       "description": "Vi IMproved - Common GUI files",
@@ -6696,7 +6763,7 @@
       "id": "94a38cc8e21b9c3eaf71",
       "name": "linux-modules-nvidia-570-server-open-azure-fde-6.8",
       "version": "6.8.0",
-      "release": "1063.70+1",
+      "release": "1064.71",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server-open for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server-open for the azure-fde flavour (dummy transitional package)",
@@ -6762,7 +6829,7 @@
       "name": "vim-tiny",
       "epoch": "2",
       "version": "9.1.0016",
-      "release": "1ubuntu7.18",
+      "release": "1ubuntu7.20",
       "architecture": "amd64",
       "summary": "Vi IMproved - enhanced vi editor - compact version",
       "description": "Vi IMproved - enhanced vi editor - compact version",
@@ -6778,7 +6845,7 @@
           "libc6 (>= 2.34)",
           "libselinux1 (>= 3.1~)",
           "libtinfo6 (>= 6)",
-          "vim-common (= 2:9.1.0016-1ubuntu7.18)"
+          "vim-common (= 2:9.1.0016-1ubuntu7.20)"
         ],
         "recommends": [],
         "suggests": [
@@ -8264,6 +8331,48 @@
       }
     },
     {
+      "id": "94cab66cfd9ae0382967",
+      "name": "linux-gke-tools-6.8.0-1061",
+      "version": "6.8.0",
+      "release": "1061.69",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 6.8.0-1061",
+      "description": "Linux kernel version specific tools for version 6.8.0-1061",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gke",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 16112640,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libcap2 (>= 1:2.10)",
+          "libdw1t64 (>= 0.161)",
+          "libelf1t64 (>= 0.144)",
+          "liblzma5 (>= 5.1.1alpha+20120614)",
+          "libnl-3-200 (>= 3.2.7)",
+          "libnl-genl-3-200 (>= 3.2.21)",
+          "libnuma1 (>= 2.0.11)",
+          "libpci3 (>= 1:3.8.0)",
+          "libpython3.12t64 (>= 3.12.1)",
+          "libslang2 (>= 2.2.4)",
+          "libssl3t64 (>= 3.0.0)",
+          "libstdc++6 (>= 4.1.1)",
+          "libtraceevent1 (>= 1:1.3.0)",
+          "libudev1 (>= 183)",
+          "libunwind8",
+          "libzstd1 (>= 1.5.5)",
+          "linux-tools-common",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "94caba77a69f907415f6",
       "name": "plopfolio.app",
       "version": "0.1.0",
@@ -8924,7 +9033,7 @@
       "id": "94df61eea9a314b340e5",
       "name": "linux-modules-nvidia-595-oracle-6.8",
       "version": "6.8.0",
-      "release": "1059.62",
+      "release": "1060.63",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595 for the oracle-6.8 flavour",
       "description": "Extra drivers for nvidia-595 for the oracle-6.8 flavour",
@@ -8935,7 +9044,7 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-6.8.0-1059-oracle (= 6.8.0-1059.62)",
+          "linux-modules-nvidia-595-6.8.0-1060-oracle (= 6.8.0-1060.63)",
           "nvidia-kernel-common-595 (>= 595.84)"
         ],
         "recommends": [],
@@ -9040,7 +9149,7 @@
       "id": "94e0c4d6bc3eceecf071",
       "name": "libzfs4linux",
       "version": "2.2.2",
-      "release": "0ubuntu9.4",
+      "release": "0ubuntu9.5",
       "architecture": "amd64",
       "summary": "OpenZFS filesystem library for Linux - general support",
       "description": "OpenZFS filesystem library for Linux - general support",
@@ -9198,7 +9307,7 @@
       "id": "94e202c4f0974c4a242d",
       "name": "linux-tools-oem-20.04",
       "version": "6.8.0",
-      "release": "137.137",
+      "release": "138.138",
       "architecture": "amd64",
       "summary": "OEM Linux kernel tools (dummy transitional package)",
       "description": "OEM Linux kernel tools (dummy transitional package)",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "f8",
   "items": [
@@ -1144,6 +1144,58 @@
         "suggests": [],
         "provides": [],
         "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "f81eb2d456bb68d2cf34",
+      "name": "linux-image-6.8.0-1061-nvidia-lowlatency",
+      "version": "6.8.0",
+      "release": "1061.64.1",
+      "architecture": "amd64",
+      "summary": "Signed kernel image nvidia-lowlatency",
+      "description": "Signed kernel image nvidia-lowlatency",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-nvidia-lowlatency",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 14988288,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1061-nvidia-lowlatency"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-doc | linux-nvidia-lowlatency-source-6.8.0",
+          "linux-headers-6.8.0-1061-nvidia-lowlatency",
+          "linux-modules-extra-6.8.0-1061-nvidia-lowlatency",
+          "linux-nvidia-lowlatency-tools"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "mstflint-dkms",
+          "mstflint-modules",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1061-nvidia-lowlatency"
+        ],
         "replaces": []
       }
     },
@@ -3758,7 +3810,7 @@
       "id": "f86e5784d8fc57effc81",
       "name": "linux-image-ibm",
       "version": "6.8.0",
-      "release": "1062.63",
+      "release": "1063.64",
       "architecture": "amd64",
       "summary": "IBM Cloud Platform (ibm) Linux kernel image",
       "description": "IBM Cloud Platform (ibm) Linux kernel image",
@@ -3769,14 +3821,14 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-image-6.8.0-1062-ibm",
-          "linux-modules-extra-6.8.0-1062-ibm"
+          "linux-image-6.8.0-1063-ibm",
+          "linux-modules-extra-6.8.0-1063-ibm"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
           "spl-modules (= 2.2.2-0ubuntu9.4)",
-          "virtualbox-guest-modules (= 6.8.0-1062)",
+          "virtualbox-guest-modules (= 6.8.0-1063)",
           "wireguard-modules (= 1.0.0)",
           "zfs-modules (= 2.2.2-0ubuntu9.4)"
         ],
@@ -4032,6 +4084,30 @@
       }
     },
     {
+      "id": "f875d33cfd302845974a",
+      "name": "linux-objects-nvidia-580-server-6.8.0-1064-azure-fde",
+      "version": "6.8.0",
+      "release": "1064.71",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 197263360,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "f8761ce19e7faf5f4085",
       "name": "python3-notify2",
       "version": "0.3",
@@ -4086,6 +4162,32 @@
         "conflicts": [
           "apertium-cat-arg"
         ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "f876857f7969c2cecabe",
+      "name": "linux-modules-nvidia-595-open-6.17.0-1031-nvidia",
+      "version": "6.17.0",
+      "release": "1031.31",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.17.0-1031",
+      "description": "Linux kernel nvidia modules for version 6.17.0-1031",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-nvidia-6.17",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26411008,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.17.0-1031-nvidia | linux-image-unsigned-6.17.0-1031-nvidia",
+          "nvidia-kernel-common-595 (<= 595.84-1)",
+          "nvidia-kernel-common-595 (>= 595.84)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
         "replaces": []
       }
     },
@@ -7444,7 +7546,7 @@
     {
       "id": "f8c5b1504f6d1066088e",
       "name": "ubuntu-snappy-cli",
-      "version": "2.76+ubuntu24.04.1",
+      "version": "2.76.3+ubuntu24.04",
       "architecture": "all",
       "summary": "transitional dummy package",
       "description": "transitional dummy package",

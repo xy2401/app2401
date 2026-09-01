@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "1f",
   "items": [
@@ -282,7 +282,7 @@
     {
       "id": "1f0439ec7091d0a3baef",
       "name": "libwebkitgtk-doc",
-      "version": "2.52.3",
+      "version": "2.52.6",
       "release": "0ubuntu0.24.04.1",
       "architecture": "all",
       "summary": "Web content engine library for GTK - documentation",
@@ -292,7 +292,7 @@
       "sourcePackage": "webkit2gtk",
       "category": "doc",
       "repository": "official",
-      "installedSize": 14440448,
+      "installedSize": 14441472,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -1881,6 +1881,56 @@
       }
     },
     {
+      "id": "1f2c1deb1e510adb2598",
+      "name": "linux-image-6.8.0-138-lowlatency",
+      "version": "6.8.0",
+      "release": "138.138.1",
+      "architecture": "amd64",
+      "summary": "Signed kernel image lowlatency",
+      "description": "Signed kernel image lowlatency",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-lowlatency",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15084544,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-138-lowlatency"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-doc | linux-lowlatency-source-6.8.0",
+          "linux-headers-6.8.0-138-lowlatency",
+          "linux-lowlatency-tools",
+          "linux-modules-extra-6.8.0-138-lowlatency"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-138-lowlatency"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "1f2ccd1800f58fdd6e58",
       "name": "libisoburn1t64",
       "epoch": "1",
@@ -2020,6 +2070,34 @@
           "libcw6-dev",
           "unixcw-dev"
         ]
+      }
+    },
+    {
+      "id": "1f2e06f078e568cbb395",
+      "name": "linux-modules-nvidia-580-server-6.17.0-1031-nvidia",
+      "version": "6.17.0",
+      "release": "1031.31",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.17.0-1031",
+      "description": "Linux kernel nvidia modules for version 6.17.0-1031",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-6.17",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 36864,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.17.0-1031-nvidia | linux-image-unsigned-6.17.0-1031-nvidia",
+          "linux-objects-nvidia-580-server-6.17.0-1031-nvidia (= 6.17.0-1031.31)",
+          "linux-signatures-nvidia-6.17.0-1031-nvidia (= 6.17.0-1031.31)",
+          "nvidia-kernel-common-580-server (>= 580.173.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -2493,7 +2571,7 @@
       "id": "1f3953435fec43531a25",
       "name": "unbound-anchor",
       "version": "1.19.2",
-      "release": "1ubuntu3.8",
+      "release": "1ubuntu3.9",
       "architecture": "amd64",
       "summary": "utility to securely fetch the root DNS trust anchor",
       "description": "utility to securely fetch the root DNS trust anchor",
@@ -7446,7 +7524,7 @@
       "id": "1f98956f383cdc1db941",
       "name": "linux-modules-nvidia-575-nvidia-hwe-24.04",
       "version": "6.17.0",
-      "release": "1029.29+1",
+      "release": "1031.31",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575 for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575 for the nvidia flavour (dummy transitional package)",
@@ -8529,7 +8607,7 @@
       "id": "1fadc5d574b2522d4919",
       "name": "linux-modules-nvidia-610-oracle-6.8",
       "version": "6.8.0",
-      "release": "1059.62",
+      "release": "1060.63",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-610 for the oracle-6.8 flavour",
       "description": "Extra drivers for nvidia-610 for the oracle-6.8 flavour",
@@ -8540,7 +8618,7 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-6.8.0-1059-oracle (= 6.8.0-1059.62)",
+          "linux-modules-nvidia-610-6.8.0-1060-oracle (= 6.8.0-1060.63)",
           "nvidia-kernel-common-610 (>= 610.43.02)"
         ],
         "recommends": [],
@@ -8758,7 +8836,7 @@
       "id": "1fb27a5e34774143d4be",
       "name": "mysql-server-8.0",
       "version": "8.0.46",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
       "summary": "MySQL database server binaries and system database setup",
       "description": "MySQL database server binaries and system database setup",
@@ -8767,14 +8845,14 @@
       "sourcePackage": "mysql-8.0",
       "category": "database",
       "repository": "official",
-      "installedSize": 1591296,
+      "installedSize": 1592320,
       "dependencies": {
         "requires": [
           "debconf (>= 0.5) | debconf-2.0",
           "lsb-base (>= 3.0-10)",
-          "mysql-client-8.0 (>= 8.0.46-0ubuntu0.24.04.3)",
+          "mysql-client-8.0 (>= 8.0.46-0ubuntu0.24.04.4)",
           "mysql-common (>= 5.8+1.0.4~)",
-          "mysql-server-core-8.0 (= 8.0.46-0ubuntu0.24.04.3)",
+          "mysql-server-core-8.0 (= 8.0.46-0ubuntu0.24.04.4)",
           "passwd",
           "perl:any (>= 5.6)",
           "psmisc"
@@ -8831,7 +8909,7 @@
       "id": "1fb39acfba85f9d141a2",
       "name": "linux-modules-nvidia-535-aws-6.8",
       "version": "6.8.0",
-      "release": "1062.65+1",
+      "release": "1063.66",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535 for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535 for the aws flavour (dummy transitional package)",
@@ -11619,7 +11697,7 @@
       "id": "1ff61530a622be0de99d",
       "name": "linux-modules-nvidia-535-open-nvidia-6.17",
       "version": "6.17.0",
-      "release": "1029.29+1",
+      "release": "1031.31",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the nvidia flavour (dummy transitional package)",

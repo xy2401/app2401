@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "b2",
   "items": [
@@ -174,6 +174,32 @@
           "nvidia-dkms-595-server (= 595.71.05-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "b203e37e86419834639f",
+      "name": "linux-modules-nvidia-610-open-6.8.0-1063-ibm",
+      "version": "6.8.0",
+      "release": "1063.64",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1063",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1063",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26829824,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1063-ibm | linux-image-unsigned-6.8.0-1063-ibm",
+          "nvidia-kernel-common-610 (<= 610.43.02-1)",
+          "nvidia-kernel-common-610 (>= 610.43.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -1013,7 +1039,7 @@
       "id": "b217fbbb58d00f5abdef",
       "name": "linux-tools-virtual-6.8",
       "version": "6.8.0",
-      "release": "137.137",
+      "release": "138.138",
       "architecture": "amd64",
       "summary": "Virtual Linux kernel tools",
       "description": "Virtual Linux kernel tools",
@@ -1024,7 +1050,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-tools-6.8.0-137-generic"
+          "linux-tools-6.8.0-138-generic"
         ],
         "recommends": [],
         "suggests": [],
@@ -3086,6 +3112,39 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "b2447250ef7a4d43655e",
+      "name": "linux-headers-7.0.0-30-generic",
+      "version": "7.0.0",
+      "release": "30.30~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel headers for version 7.0.0",
+      "description": "Linux kernel headers for version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-hwe-7.0",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 31977472,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libdw1t64 (>= 0.171)",
+          "libelf1t64 (>= 0.144)",
+          "libgcc-s1 (>= 4.2)",
+          "libssl3t64 (>= 3.0.0)",
+          "linux-hwe-7.0-headers-7.0.0-30",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "linux-headers",
+          "linux-headers-3.0"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -7048,7 +7107,7 @@
       "id": "b2b4cd5e407bf65f272f",
       "name": "mysql-testsuite",
       "version": "8.0.46",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "all",
       "summary": "MySQL regression tests",
       "description": "MySQL regression tests",
@@ -7388,6 +7447,51 @@
       }
     },
     {
+      "id": "b2b741ddc2fa5bb15735",
+      "name": "linux-image-unsigned-6.8.0-1063-aws",
+      "version": "6.8.0",
+      "release": "1063.66",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-aws",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15784960,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1063-aws"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-aws-doc-6.8.0 | linux-aws-source-6.8.0",
+          "linux-aws-tools",
+          "linux-headers-6.8.0-1063-aws"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1063-aws"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "b2b92b42c526a7f54ac8",
       "name": "smbios-utils",
       "version": "2.4.3",
@@ -7482,7 +7586,7 @@
       "id": "b2bbd077b07f6680168d",
       "name": "linux-modules-nvidia-575-server-aws",
       "version": "7.0.0",
-      "release": "1010.10~24.04.1",
+      "release": "1011.11~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the aws flavour (dummy transitional package)",

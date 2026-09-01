@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "95",
   "items": [
@@ -1798,7 +1798,7 @@
       "id": "95359d2df00c0f4584e9",
       "name": "linux-modules-nvidia-535-open-azure-lts-24.04",
       "version": "6.8.0",
-      "release": "1064.72+1",
+      "release": "1065.73",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the azure flavour (dummy transitional package)",
@@ -1822,7 +1822,7 @@
       "id": "95382940c783d703154f",
       "name": "linux-modules-nvidia-580-ibm-classic",
       "version": "6.8.0",
-      "release": "1062.63+1",
+      "release": "1063.64",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580 for the ibm-classic flavour",
       "description": "Extra drivers for nvidia-580 for the ibm-classic flavour",
@@ -1833,7 +1833,7 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-6.8.0-1062-ibm (= 6.8.0-1062.63+1)",
+          "linux-modules-nvidia-580-6.8.0-1063-ibm (= 6.8.0-1063.64)",
           "nvidia-kernel-common-580 (>= 580.173.02)"
         ],
         "recommends": [],
@@ -1966,7 +1966,7 @@
       "id": "953a8f4b06d1aab75ce8",
       "name": "linux-modules-nvidia-580-open-nvidia-hwe-24.04",
       "version": "6.17.0",
-      "release": "1029.29+1",
+      "release": "1031.31",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-open for the nvidia-hwe-24.04 flavour",
       "description": "Extra drivers for nvidia-580-open for the nvidia-hwe-24.04 flavour",
@@ -1977,7 +1977,7 @@
       "installedSize": 27648,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-open-6.17.0-1029-nvidia (= 6.17.0-1029.29+1)",
+          "linux-modules-nvidia-580-open-6.17.0-1031-nvidia (= 6.17.0-1031.31)",
           "nvidia-kernel-common-580 (>= 580.173.02)"
         ],
         "recommends": [],
@@ -3963,7 +3963,7 @@
       "id": "956c46008429160a6c73",
       "name": "linux-modules-extra-aws-lts-24.04",
       "version": "6.8.0",
-      "release": "1062.65",
+      "release": "1063.66",
       "architecture": "amd64",
       "summary": "Extra modules for Amazon Web Services (AWS) systems.",
       "description": "Extra modules for Amazon Web Services (AWS) systems.",
@@ -3974,7 +3974,7 @@
       "installedSize": 14336,
       "dependencies": {
         "requires": [
-          "linux-modules-extra-6.8.0-1062-aws"
+          "linux-modules-extra-6.8.0-1063-aws"
         ],
         "recommends": [],
         "suggests": [],
@@ -5178,7 +5178,7 @@
       "id": "958ce3a6a0fce741faf6",
       "name": "linux-modules-extra-gcp-lts-24.04",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1066.74",
       "architecture": "amd64",
       "summary": "Google Cloud Platform (GCP) Linux kernel extra modules",
       "description": "Google Cloud Platform (GCP) Linux kernel extra modules",
@@ -5189,7 +5189,7 @@
       "installedSize": 14336,
       "dependencies": {
         "requires": [
-          "linux-modules-extra-6.8.0-1065-gcp"
+          "linux-modules-extra-6.8.0-1066-gcp"
         ],
         "recommends": [],
         "suggests": [],
@@ -5505,7 +5505,7 @@
       "id": "959893f3e80eda2ec378",
       "name": "linux-modules-involflt-azure-fde-lts-24.04",
       "version": "6.8.0",
-      "release": "1063.70",
+      "release": "1064.71",
       "architecture": "amd64",
       "summary": "Extra drivers for involflt for the azure-fde flavour",
       "description": "Extra drivers for involflt for the azure-fde flavour",
@@ -5516,7 +5516,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-modules-involflt-6.8.0-1063-azure-fde"
+          "linux-modules-involflt-6.8.0-1064-azure-fde"
         ],
         "recommends": [],
         "suggests": [],
@@ -7029,6 +7029,53 @@
       }
     },
     {
+      "id": "95c2ade4667775765c50",
+      "name": "linux-image-unsigned-7.0.0-30-generic",
+      "version": "7.0.0",
+      "release": "30.30~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 7.0.0",
+      "description": "Linux kernel image for version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 17099776,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-7.0.0-30-generic"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "linux-headers-7.0.0-30-generic",
+          "linux-hwe-7.0-tools"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-7.0.0-30-generic"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "95c2ae4df2d0d21bb65b",
       "name": "golang-github-go-fed-httpsig-dev",
       "version": "1.1.0",
@@ -7863,7 +7910,7 @@
     {
       "id": "95d7421015fe05bee915",
       "name": "libecpg-dev",
-      "version": "16.14",
+      "version": "16.15",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "development files for ECPG (Embedded PostgreSQL for C)",
@@ -7877,9 +7924,9 @@
       "dependencies": {
         "requires": [
           "libc6 (>= 2.38)",
-          "libecpg-compat3 (= 16.14-0ubuntu0.24.04.1)",
-          "libecpg6 (= 16.14-0ubuntu0.24.04.1)",
-          "libpgtypes3 (= 16.14-0ubuntu0.24.04.1)",
+          "libecpg-compat3 (= 16.15-0ubuntu0.24.04.1)",
+          "libecpg6 (= 16.15-0ubuntu0.24.04.1)",
+          "libpgtypes3 (= 16.15-0ubuntu0.24.04.1)",
           "libpq-dev"
         ],
         "recommends": [],
@@ -7972,7 +8019,7 @@
     {
       "id": "95db9321cee728e7f90b",
       "name": "libjavascriptcoregtk-bin",
-      "version": "2.52.3",
+      "version": "2.52.6",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "JavaScript engine library from WebKitGTK - command-line interpreter",
@@ -7990,7 +8037,7 @@
           "libgcc-s1 (>= 3.0)",
           "libglib2.0-0t64 (>= 2.16.0)",
           "libicu74 (>= 74.1-1~)",
-          "libjavascriptcoregtk-4.1-0 (= 2.52.3-0ubuntu0.24.04.1)",
+          "libjavascriptcoregtk-4.1-0 (= 2.52.6-0ubuntu0.24.04.1)",
           "libstdc++6 (>= 12)",
           "libsystemd0",
           "zlib1g (>= 1:1.1.4)"

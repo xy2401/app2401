@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "b0",
   "items": [
@@ -1094,7 +1094,7 @@
       "id": "b0200210256c4f5905db",
       "name": "linux-modules-nvidia-595-open-lowlatency",
       "version": "6.8.0",
-      "release": "137.137.1+1",
+      "release": "138.138.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the lowlatency flavour",
       "description": "Extra drivers for nvidia-595-open for the lowlatency flavour",
@@ -1105,7 +1105,7 @@
       "installedSize": 26624,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-6.8.0-137-lowlatency (= 6.8.0-137.137.1+1)",
+          "linux-modules-nvidia-595-open-6.8.0-138-lowlatency (= 6.8.0-138.138.1)",
           "nvidia-kernel-common-595 (>= 595.84)"
         ],
         "recommends": [],
@@ -1320,7 +1320,7 @@
       "id": "b0246abfab6323cc924a",
       "name": "libblkid1",
       "version": "2.39.3",
-      "release": "9ubuntu6.5",
+      "release": "9ubuntu6.6",
       "architecture": "amd64",
       "summary": "block device ID library",
       "description": "block device ID library",
@@ -1329,7 +1329,7 @@
       "sourcePackage": "util-linux",
       "category": "libs",
       "repository": "official",
-      "installedSize": 295936,
+      "installedSize": 296960,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.38)"
@@ -4098,6 +4098,34 @@
           "python3-pkg-resources",
           "python3-setuptools",
           "python3:any"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "b075a29e4312e006ea7e",
+      "name": "linux-modules-nvidia-580-6.17.0-1031-nvidia",
+      "version": "6.17.0",
+      "release": "1031.31",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.17.0-1031",
+      "description": "Linux kernel nvidia modules for version 6.17.0-1031",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-6.17",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 36864,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.17.0-1031-nvidia | linux-image-unsigned-6.17.0-1031-nvidia",
+          "linux-objects-nvidia-580-6.17.0-1031-nvidia (= 6.17.0-1031.31)",
+          "linux-signatures-nvidia-6.17.0-1031-nvidia (= 6.17.0-1031.31)",
+          "nvidia-kernel-common-580 (>= 580.173.02)"
         ],
         "recommends": [],
         "suggests": [],
@@ -7960,6 +7988,58 @@
       }
     },
     {
+      "id": "b0cbb451dff31861cbd6",
+      "name": "linux-image-unsigned-6.8.0-1061-nvidia-lowlatency",
+      "version": "6.8.0",
+      "release": "1061.64.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-nvidia-lowlatency",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15826944,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1061-nvidia-lowlatency"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-doc | linux-nvidia-lowlatency-source-6.8.0",
+          "linux-headers-6.8.0-1061-nvidia-lowlatency",
+          "linux-modules-extra-6.8.0-1061-nvidia-lowlatency",
+          "linux-nvidia-lowlatency-tools"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "mstflint-dkms",
+          "mstflint-modules",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1061-nvidia-lowlatency"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "b0cc3444d7540303205f",
       "name": "libcpan-mini-perl",
       "version": "1.111017",
@@ -8095,7 +8175,7 @@
       "id": "b0d13f758b779bca9a81",
       "name": "linux-tools-virtual-hwe-24.04",
       "version": "7.0.0",
-      "release": "28.28~24.04.1",
+      "release": "30.30~24.04.1",
       "architecture": "amd64",
       "summary": "Virtual Linux kernel tools",
       "description": "Virtual Linux kernel tools",
@@ -8106,7 +8186,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-tools-7.0.0-28-generic"
+          "linux-tools-7.0.0-30-generic"
         ],
         "recommends": [],
         "suggests": [],
@@ -8647,7 +8727,7 @@
       "id": "b0e0b4bd7e71e4109572",
       "name": "linux-modules-nvidia-570-server-oracle-lts-24.04",
       "version": "6.8.0",
-      "release": "1059.62",
+      "release": "1060.63",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the oracle flavour (dummy transitional package)",
@@ -8774,7 +8854,7 @@
       "id": "b0e156511f81f46ec0d6",
       "name": "linux-headers-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "137.137.1",
+      "release": "138.138.1",
       "architecture": "amd64",
       "summary": "lowlatency Linux kernel headers",
       "description": "lowlatency Linux kernel headers",
@@ -8785,7 +8865,7 @@
       "installedSize": 16384,
       "dependencies": {
         "requires": [
-          "linux-headers-6.8.0-137-lowlatency"
+          "linux-headers-6.8.0-138-lowlatency"
         ],
         "recommends": [],
         "suggests": [],
@@ -9431,6 +9511,28 @@
       }
     },
     {
+      "id": "b0f5db3a24dbc6f9c6de",
+      "name": "linux-buildinfo-6.8.0-1060-oracle",
+      "version": "6.8.0",
+      "release": "1060.63",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-oracle",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 3444736,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "b0f61047225c8131af06",
       "name": "golang-golang-x-oauth2-google-dev",
       "version": "0.15.0",
@@ -9574,7 +9676,7 @@
       "id": "b0fd19aafe1f82139e86",
       "name": "linux-ibm-6.8",
       "version": "6.8.0",
-      "release": "1062.63",
+      "release": "1063.64",
       "architecture": "amd64",
       "summary": "Complete IBM Cloud Platform (ibm) Linux kernel and headers",
       "description": "Complete IBM Cloud Platform (ibm) Linux kernel and headers",
@@ -9585,11 +9687,11 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-headers-ibm-6.8 (= 6.8.0-1062.63)",
-          "linux-image-ibm-6.8 (= 6.8.0-1062.63)"
+          "linux-headers-ibm-6.8 (= 6.8.0-1063.64)",
+          "linux-image-ibm-6.8 (= 6.8.0-1063.64)"
         ],
         "recommends": [
-          "linux-tools-6.8.0-1062-ibm",
+          "linux-tools-6.8.0-1063-ibm",
           "ubuntu-kernel-accessories"
         ],
         "suggests": [],

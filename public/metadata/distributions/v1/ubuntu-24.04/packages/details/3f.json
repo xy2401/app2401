@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "3f",
   "items": [
@@ -234,7 +234,7 @@
       "id": "3f0b25c3e7643f572944",
       "name": "linux-modules-nvidia-570-open-nvidia-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "1015.15~24.04.1+1",
+      "release": "1016.16~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-open for the nvidia flavour (dummy transitional package)",
@@ -1617,7 +1617,7 @@
       "id": "3f2dae3b9cd03fd4af39",
       "name": "linux-modules-nvidia-550-nvidia",
       "version": "6.8.0",
-      "release": "1060.63+1",
+      "release": "1061.64",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550 for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550 for the nvidia flavour (dummy transitional package)",
@@ -1678,6 +1678,32 @@
         "requires": [
           "golang-github-mitchellh-go-ps-dev",
           "golang-golang-x-sys-dev"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3f2ff1b76cccc9e903fd",
+      "name": "linux-modules-nvidia-580-server-open-6.8.0-1063-ibm",
+      "version": "6.8.0",
+      "release": "1063.64",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1063",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1063",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26253312,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1063-ibm | linux-image-unsigned-6.8.0-1063-ibm",
+          "nvidia-kernel-common-580-server (<= 580.173.02-1)",
+          "nvidia-kernel-common-580-server (>= 580.173.02)"
         ],
         "recommends": [],
         "suggests": [],
@@ -1776,7 +1802,7 @@
       "id": "3f31dda72e9aae48ad37",
       "name": "perl-modules-5.38",
       "version": "5.38.2",
-      "release": "3.2ubuntu0.3",
+      "release": "3.2ubuntu0.4",
       "architecture": "all",
       "summary": "Core Perl modules",
       "description": "Core Perl modules",
@@ -1785,7 +1811,7 @@
       "sourcePackage": "perl",
       "category": "libs",
       "repository": "official",
-      "installedSize": 19620864,
+      "installedSize": 19623936,
       "dependencies": {
         "requires": [
           "perl-base (>= 5.38.2-1)"
@@ -1882,7 +1908,7 @@
       "id": "3f34c666271a18d7fdc4",
       "name": "linux-modules-nvidia-595-server-open-gcp-lts-24.04",
       "version": "6.8.0",
-      "release": "1065.73+1",
+      "release": "1066.74",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-server-open for the gcp-lts-24.04 flavour",
       "description": "Extra drivers for nvidia-595-server-open for the gcp-lts-24.04 flavour",
@@ -1893,7 +1919,7 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-server-open-6.8.0-1065-gcp (= 6.8.0-1065.73+1)",
+          "linux-modules-nvidia-595-server-open-6.8.0-1066-gcp (= 6.8.0-1066.74)",
           "nvidia-kernel-common-595-server (>= 595.71.05)"
         ],
         "recommends": [],
@@ -2441,6 +2467,34 @@
       }
     },
     {
+      "id": "3f40aefd43d0a4fe4dcc",
+      "name": "linux-modules-nvidia-580-6.8.0-1061-nvidia",
+      "version": "6.8.0",
+      "release": "1061.64",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1061",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1061",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 36864,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1061-nvidia | linux-image-unsigned-6.8.0-1061-nvidia",
+          "linux-objects-nvidia-580-6.8.0-1061-nvidia (= 6.8.0-1061.64)",
+          "linux-signatures-nvidia-6.8.0-1061-nvidia (= 6.8.0-1061.64)",
+          "nvidia-kernel-common-580 (>= 580.173.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3f40f4852525e211e031",
       "name": "libsub-handlesvia-perl",
       "version": "0.050000",
@@ -2660,7 +2714,7 @@
       "id": "3f463f64f7ed1488c654",
       "name": "linux-modules-nvidia-595-server-generic-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "28.28~24.04.1+3",
+      "release": "30.30~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-server for the generic-hwe-24.04-edge flavour",
       "description": "Extra drivers for nvidia-595-server for the generic-hwe-24.04-edge flavour",
@@ -2671,7 +2725,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-server-7.0.0-28-generic (= 7.0.0-28.28~24.04.1+3)",
+          "linux-modules-nvidia-595-server-7.0.0-30-generic (= 7.0.0-30.30~24.04.1)",
           "nvidia-kernel-common-595-server (>= 595.71.05)"
         ],
         "recommends": [],
@@ -3603,7 +3657,7 @@
       "id": "3f5d8372102961c10a82",
       "name": "linux-modules-nvidia-535-server-open-oracle-6.8",
       "version": "6.8.0",
-      "release": "1059.62",
+      "release": "1060.63",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the oracle flavour (dummy transitional package)",
@@ -5364,6 +5418,30 @@
           "r-cran-knitr",
           "r-cran-rmarkdown"
         ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3f9789e83ae87d2f25c2",
+      "name": "linux-objects-nvidia-595-server-6.17.0-1031-nvidia",
+      "version": "6.17.0",
+      "release": "1031.31",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.17.0-1031 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.17.0-1031 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-6.17",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 185052160,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
         "provides": [],
         "conflicts": [],
         "replaces": []
@@ -8342,6 +8420,30 @@
       }
     },
     {
+      "id": "3fe716c28d26984141fe",
+      "name": "linux-objects-nvidia-580-open-6.17.0-1031-nvidia",
+      "version": "6.17.0",
+      "release": "1031.31",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.17.0-1031 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.17.0-1031 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-6.17",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26315776,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3fe75a26b107fcc01e32",
       "name": "cairo-dock-plug-in-data",
       "version": "3.4.1+git20201022.a0d3415c",
@@ -8364,6 +8466,34 @@
         "replaces": [
           "cairo-dock-plugin-data (<< 2.4.0~2-1)"
         ]
+      }
+    },
+    {
+      "id": "3fe8e4da70cdca527d15",
+      "name": "linux-modules-nvidia-595-6.8.0-1065-azure",
+      "version": "6.8.0",
+      "release": "1065.73",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1065",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1065",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 30720,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1065-azure | linux-image-unsigned-6.8.0-1065-azure",
+          "linux-objects-nvidia-595-6.8.0-1065-azure (= 6.8.0-1065.73)",
+          "linux-signatures-nvidia-6.8.0-1065-azure (= 6.8.0-1065.73)",
+          "nvidia-kernel-common-595 (>= 595.84)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -8923,7 +9053,7 @@
       "id": "3ff38acd16d25dc0c07b",
       "name": "linux-modules-nvidia-590-generic-6.8",
       "version": "6.8.0",
-      "release": "137.137+1",
+      "release": "138.138",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the generic flavour (dummy transitional package)",
@@ -9528,6 +9658,30 @@
           "r-cran-rmarkdown",
           "r-cran-withr"
         ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3fff47fdf831e8c8b71b",
+      "name": "linux-objects-nvidia-595-server-open-6.8.0-1064-azure-fde",
+      "version": "6.8.0",
+      "release": "1064.71",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26326016,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
         "provides": [],
         "conflicts": [],
         "replaces": []

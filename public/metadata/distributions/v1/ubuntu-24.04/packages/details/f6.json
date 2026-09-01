@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-14T02:04:40.000Z",
+  "generatedAt": "2026-09-01T09:27:06.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "f6",
   "items": [
@@ -139,6 +139,51 @@
           "dibbler-server"
         ],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "f60459b6ef3eef565da8",
+      "name": "linux-image-6.8.0-1064-azure-fde",
+      "version": "6.8.0",
+      "release": "1064.71",
+      "architecture": "amd64",
+      "summary": "Signed kernel image azure-fde for CVM",
+      "description": "Signed kernel image azure-fde for CVM",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-azure-fde",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 58490880,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1064-azure-fde"
+        ],
+        "recommends": [],
+        "suggests": [
+          "fdutils",
+          "initramfs-tools | linux-initramfs-tool",
+          "linux-azure-fde-doc-6.8.0 | linux-azure-fde-source-6.8.0",
+          "linux-azure-fde-tools",
+          "linux-headers-6.8.0-1064-azure-fde"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -961,7 +1006,7 @@
       "id": "f61cedd71fcfb788c2dc",
       "name": "linux-nvidia-6.17",
       "version": "6.17.0",
-      "release": "1029.29",
+      "release": "1031.31",
       "architecture": "amd64",
       "summary": "Complete NVIDIA Linux kernel and headers",
       "description": "Complete NVIDIA Linux kernel and headers",
@@ -972,11 +1017,11 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-headers-nvidia-6.17 (= 6.17.0-1029.29)",
-          "linux-image-nvidia-6.17 (= 6.17.0-1029.29)"
+          "linux-headers-nvidia-6.17 (= 6.17.0-1031.31)",
+          "linux-image-nvidia-6.17 (= 6.17.0-1031.31)"
         ],
         "recommends": [
-          "linux-tools-6.17.0-1029-nvidia",
+          "linux-tools-6.17.0-1031-nvidia",
           "ubuntu-kernel-accessories"
         ],
         "suggests": [],
@@ -1720,6 +1765,34 @@
       }
     },
     {
+      "id": "f62f2ecdeca08e305206",
+      "name": "linux-modules-nvidia-610-6.8.0-1060-oracle",
+      "version": "6.8.0",
+      "release": "1060.63",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1060",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1060",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-oracle",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 33792,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1060-oracle | linux-image-unsigned-6.8.0-1060-oracle",
+          "linux-objects-nvidia-610-6.8.0-1060-oracle (= 6.8.0-1060.63)",
+          "linux-signatures-nvidia-6.8.0-1060-oracle (= 6.8.0-1060.63)",
+          "nvidia-kernel-common-610 (>= 610.43.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "f63091f48a18623d9459",
       "name": "nut-cgi",
       "version": "2.8.1",
@@ -2024,6 +2097,33 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "f635c5d63c3f5fb05855",
+      "name": "linux-modules-nvidia-fs-7.0.0-1016-nvidia",
+      "version": "7.0.0",
+      "release": "1016.16~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia-fs modules for version 7.0.0-1016",
+      "description": "Linux kernel nvidia-fs modules for version 7.0.0-1016",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-nvidia-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 193536,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-1016-nvidia | linux-image-unsigned-7.0.0-1016-nvidia"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-fs-dkms",
+          "nvidia-fs-modules"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -4430,7 +4530,7 @@
       "id": "f67f9a14e5b21cfeada4",
       "name": "linux-modules-nvidia-610-azure-6.8",
       "version": "6.8.0",
-      "release": "1064.72+1",
+      "release": "1065.73",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-610 for the azure-6.8 flavour",
       "description": "Extra drivers for nvidia-610 for the azure-6.8 flavour",
@@ -4441,7 +4541,7 @@
       "installedSize": 21504,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-6.8.0-1064-azure (= 6.8.0-1064.72+1)",
+          "linux-modules-nvidia-610-6.8.0-1065-azure (= 6.8.0-1065.73)",
           "nvidia-kernel-common-610 (>= 610.43.02)"
         ],
         "recommends": [],
@@ -4560,7 +4660,7 @@
       "id": "f68602cd189572007714",
       "name": "linux-modules-nvidia-535-server-open-oracle",
       "version": "6.17.0",
-      "release": "1019.19~24.04.3+2",
+      "release": "1020.20",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the oracle flavour (dummy transitional package)",
@@ -4986,7 +5086,7 @@
       "id": "f6917c6394c475d2be8f",
       "name": "linux-modules-nvidia-595-open-nvidia-hwe-24.04",
       "version": "6.17.0",
-      "release": "1029.29+1",
+      "release": "1031.31",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the nvidia-hwe-24.04 flavour",
       "description": "Extra drivers for nvidia-595-open for the nvidia-hwe-24.04 flavour",
@@ -4997,7 +5097,7 @@
       "installedSize": 27648,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-6.17.0-1029-nvidia (= 6.17.0-1029.29+1)",
+          "linux-modules-nvidia-595-open-6.17.0-1031-nvidia (= 6.17.0-1031.31)",
           "nvidia-kernel-common-595 (>= 595.84)"
         ],
         "recommends": [],
@@ -6408,6 +6508,34 @@
       }
     },
     {
+      "id": "f6ba9546f9a1a74d7e5d",
+      "name": "linux-modules-nvidia-610-6.8.0-1063-ibm",
+      "version": "6.8.0",
+      "release": "1063.64",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1063",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1063",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 28672,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1063-ibm | linux-image-unsigned-6.8.0-1063-ibm",
+          "linux-objects-nvidia-610-6.8.0-1063-ibm (= 6.8.0-1063.64)",
+          "linux-signatures-nvidia-6.8.0-1063-ibm (= 6.8.0-1063.64)",
+          "nvidia-kernel-common-610 (>= 610.43.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "f6bc6dba9df2423eea0f",
       "name": "r-cran-matrixcalc",
       "version": "1.0.6",
@@ -7555,7 +7683,7 @@
       "id": "f6da84f2523e6c6c3348",
       "name": "linux-modules-nvidia-fs-nvidia-6.8",
       "version": "6.8.0",
-      "release": "1060.63",
+      "release": "1061.64",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-fs for the nvidia flavour",
       "description": "Extra drivers for nvidia-fs for the nvidia flavour",
@@ -7566,7 +7694,7 @@
       "installedSize": 17408,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-fs-6.8.0-1060-nvidia"
+          "linux-modules-nvidia-fs-6.8.0-1061-nvidia"
         ],
         "recommends": [],
         "suggests": [],
