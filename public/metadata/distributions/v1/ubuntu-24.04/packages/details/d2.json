@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "d2",
   "items": [
@@ -23,6 +23,34 @@
           "libvisp-core-dev (= 3.6.0-2.1build3)",
           "libvisp-gui3.6t64 (= 3.6.0-2.1build3)",
           "libx11-dev"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "d2005442e020bd8503eb",
+      "name": "linux-modules-nvidia-595-server-6.17.0-1032-nvidia",
+      "version": "6.17.0",
+      "release": "1032.32+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.17.0-1032",
+      "description": "Linux kernel nvidia modules for version 6.17.0-1032",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-6.17",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 36864,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.17.0-1032-nvidia | linux-image-unsigned-6.17.0-1032-nvidia",
+          "linux-objects-nvidia-595-server-6.17.0-1032-nvidia (= 6.17.0-1032.32+1)",
+          "linux-signatures-nvidia-6.17.0-1032-nvidia (= 6.17.0-1032.32+1)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
@@ -1261,6 +1289,58 @@
       }
     },
     {
+      "id": "d21ead5a1ee0498b8add",
+      "name": "linux-image-6.8.0-1063-nvidia",
+      "version": "6.8.0",
+      "release": "1063.66",
+      "architecture": "amd64",
+      "summary": "Signed kernel image nvidia",
+      "description": "Signed kernel image nvidia",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-nvidia",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 14971904,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1063-nvidia"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-doc | linux-nvidia-source-6.8.0",
+          "linux-headers-6.8.0-1063-nvidia",
+          "linux-modules-extra-6.8.0-1063-nvidia",
+          "linux-nvidia-tools"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "mstflint-dkms",
+          "mstflint-modules",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1063-nvidia"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "d21ef355804361ad4685",
       "name": "thunderbird-locale-ta",
       "epoch": "2",
@@ -2428,7 +2508,7 @@
       "id": "d23a8eaabfaeec57efb4",
       "name": "libnetplan1",
       "version": "1.1.2",
-      "release": "8ubuntu1~24.04.2",
+      "release": "8ubuntu1~24.04.3",
       "architecture": "amd64",
       "summary": "Declarative network configuration runtime library",
       "description": "Declarative network configuration runtime library",
@@ -3001,7 +3081,7 @@
       "id": "d24d98ad8db8b233bad3",
       "name": "linux-modules-nvidia-580-server-7.0.0-1008-azure",
       "version": "7.0.0",
-      "release": "1008.8~24.04.2+1",
+      "release": "1008.8~24.04.2+2",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 7.0.0-1008",
       "description": "Linux kernel nvidia modules for version 7.0.0-1008",
@@ -3014,9 +3094,9 @@
         "requires": [
           "debconf (>= 0.5) | debconf-2.0",
           "linux-image-7.0.0-1008-azure | linux-image-unsigned-7.0.0-1008-azure",
-          "linux-objects-nvidia-580-server-7.0.0-1008-azure (= 7.0.0-1008.8~24.04.2+1)",
-          "linux-signatures-nvidia-7.0.0-1008-azure (= 7.0.0-1008.8~24.04.2+1)",
-          "nvidia-kernel-common-580-server (>= 580.173.02)"
+          "linux-objects-nvidia-580-server-7.0.0-1008-azure (= 7.0.0-1008.8~24.04.2+2)",
+          "linux-signatures-nvidia-7.0.0-1008-azure (= 7.0.0-1008.8~24.04.2+2)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -3452,6 +3532,34 @@
         "provides": [
           "pcsc-ifd-handler"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "d259cae82f6603833b9d",
+      "name": "linux-modules-nvidia-580-6.8.0-1065-aws",
+      "version": "6.8.0",
+      "release": "1065.68",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1065",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1065",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-aws",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 33792,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1065-aws | linux-image-unsigned-6.8.0-1065-aws",
+          "linux-objects-nvidia-580-6.8.0-1065-aws (= 6.8.0-1065.68)",
+          "linux-signatures-nvidia-6.8.0-1065-aws (= 6.8.0-1065.68)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -4442,7 +4550,7 @@
       "id": "d268da27016e1b3ab47c",
       "name": "linux-modules-nvidia-550-aws-lts-24.04",
       "version": "6.8.0",
-      "release": "1063.66",
+      "release": "1066.69",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550 for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550 for the aws flavour (dummy transitional package)",
@@ -5109,6 +5217,30 @@
       }
     },
     {
+      "id": "d275eefb75b42e889183",
+      "name": "linux-objects-nvidia-595-open-7.0.0-1012-oracle",
+      "version": "7.0.0",
+      "release": "1012.12~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1012 (objects)",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1012 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-oracle-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 25805824,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "d276acfcc3f8ef9e73b0",
       "name": "libgnuastro-dev",
       "version": "0.22",
@@ -5590,7 +5722,7 @@
       "id": "d285d253f4624eb704ce",
       "name": "linux-signatures-nvidia-6.8.0-1063-ibm",
       "version": "6.8.0",
-      "release": "1063.64",
+      "release": "1063.64+1",
       "architecture": "amd64",
       "summary": "Linux kernel signatures for nvidia modules for version 6.8.0-1063-ibm",
       "description": "Linux kernel signatures for nvidia modules for version 6.8.0-1063-ibm",
@@ -6581,7 +6713,7 @@
       "id": "d29d31e15aaef471c18c",
       "name": "linux-modules-nvidia-610-azure-fde-7.0",
       "version": "7.0.0",
-      "release": "1007.7~24.04.3+1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-610 for the azure-fde-7.0 flavour",
       "description": "Extra drivers for nvidia-610 for the azure-fde-7.0 flavour",
@@ -6592,13 +6724,13 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-7.0.0-1007-azure-fde (= 7.0.0-1007.7~24.04.3+1)",
-          "nvidia-kernel-common-610 (>= 610.43.02)"
+          "linux-modules-nvidia-610-7.0.0-1013-azure-fde (= 7.0.0-1013.13~24.04.1+1)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-610 (= 610.43.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -6880,7 +7012,7 @@
       "id": "d2a3b8d83b408d733ad1",
       "name": "libvirt-sanlock",
       "version": "10.0.0",
-      "release": "2ubuntu8.16",
+      "release": "2ubuntu8.19",
       "architecture": "amd64",
       "summary": "Sanlock plugin for virtlockd",
       "description": "Sanlock plugin for virtlockd",
@@ -6897,7 +7029,7 @@
           "libgcc-s1 (>= 3.3.1)",
           "libglib2.0-0t64 (>= 2.16.0)",
           "libsanlock-client1 (>= 3.6.0)",
-          "libvirt0 (= 10.0.0-2ubuntu8.16)"
+          "libvirt0 (= 10.0.0-2ubuntu8.19)"
         ],
         "recommends": [],
         "suggests": [],
@@ -8811,6 +8943,30 @@
       }
     },
     {
+      "id": "d2d4c0fd7e337b75da98",
+      "name": "linux-modules-nvidia-550-vmware-6.8",
+      "version": "6.8.0",
+      "release": "1005.5+1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-550 for the vmware flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-550 for the vmware flavour (dummy transitional package)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware",
+      "category": "restricted/oldlibs",
+      "repository": "official",
+      "installedSize": 26624,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-580-vmware-6.8"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "d2d4f73026195825529d",
       "name": "node-immutable",
       "version": "4.3.4",
@@ -8968,23 +9124,23 @@
     {
       "id": "d2d697f5de8427e97844",
       "name": "linux-oracle",
-      "version": "6.17.0",
-      "release": "1020.20",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Complete Linux kernel for Oracle systems.",
       "description": "Complete Linux kernel for Oracle systems.",
       "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-meta-oracle-6.17",
+      "sourcePackage": "linux-meta-oracle-7.0",
       "category": "kernel",
       "repository": "official",
-      "installedSize": 9216,
+      "installedSize": 14336,
       "dependencies": {
         "requires": [
-          "linux-headers-oracle (= 6.17.0-1020.20)",
-          "linux-image-oracle (= 6.17.0-1020.20)"
+          "linux-headers-oracle (= 7.0.0-1013.13~24.04.1)",
+          "linux-image-oracle (= 7.0.0-1013.13~24.04.1)"
         ],
         "recommends": [
-          "linux-tools-6.17.0-1020-oracle",
+          "linux-tools-7.0.0-1013-oracle",
           "ubuntu-kernel-accessories"
         ],
         "suggests": [],
@@ -9145,6 +9301,38 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "d2dba2981746ba77d0af",
+      "name": "linux-headers-6.8.0-1005-vmware",
+      "version": "6.8.0",
+      "release": "1005.5",
+      "architecture": "amd64",
+      "summary": "Linux kernel headers for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel headers for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-vmware",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 117646336,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libelf1t64 (>= 0.144)",
+          "libgcc-s1 (>= 4.2)",
+          "libssl3t64 (>= 3.0.0)",
+          "linux-vmware-headers-6.8.0-1005",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "linux-headers",
+          "linux-headers-3.0"
+        ],
         "conflicts": [],
         "replaces": []
       }

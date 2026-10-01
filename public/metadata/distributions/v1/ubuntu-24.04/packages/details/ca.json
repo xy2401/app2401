@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "ca",
   "items": [
@@ -57,6 +57,51 @@
         "replaces": [
           "fence-agents (<< 4.12.1-2~exp1)"
         ]
+      }
+    },
+    {
+      "id": "ca049ee45d68926c601e",
+      "name": "linux-image-unsigned-6.8.0-1049-gkeop",
+      "version": "6.8.0",
+      "release": "1049.53",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gkeop",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 16001024,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1049-gkeop"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-gkeop-doc-6.8.0 | linux-gkeop-source-6.8.0",
+          "linux-gkeop-tools",
+          "linux-headers-6.8.0-1049-gkeop"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1049-gkeop"
+        ],
+        "replaces": []
       }
     },
     {
@@ -143,6 +188,30 @@
           "libhts3t64 (>= 1.17)",
           "libstdc++6 (>= 13.1)",
           "zlib1g (>= 1:1.1.4)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "ca0a69cc32f0d1473a5c",
+      "name": "linux-modules-nvidia-535-server-open-vmware-6.8",
+      "version": "6.8.0",
+      "release": "1005.5+1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-535-server-open for the vmware flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-535-server-open for the vmware flavour (dummy transitional package)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26624,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-580-server-open-vmware-6.8"
         ],
         "recommends": [],
         "suggests": [],
@@ -1588,6 +1657,30 @@
       }
     },
     {
+      "id": "ca3326883027bea97d0c",
+      "name": "linux-objects-nvidia-610-open-6.8.0-1065-gke",
+      "version": "6.8.0",
+      "release": "1065.73",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1065 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1065 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-gke",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26842112,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "ca335fad2fe1fc7a0cd0",
       "name": "php-ml-json-ld",
       "version": "1.2.1",
@@ -1618,7 +1711,7 @@
       "id": "ca35b645e3b8e6525412",
       "name": "libvirt-daemon",
       "version": "10.0.0",
-      "release": "2ubuntu8.16",
+      "release": "2ubuntu8.19",
       "architecture": "amd64",
       "summary": "Virtualization daemon",
       "description": "Virtualization daemon",
@@ -1642,8 +1735,8 @@
           "libselinux1 (>= 3.1~)",
           "libtirpc3t64 (>= 1.0.2)",
           "libudev1 (>= 183)",
-          "libvirt-daemon-driver-qemu (= 10.0.0-2ubuntu8.16)",
-          "libvirt0 (= 10.0.0-2ubuntu8.16)",
+          "libvirt-daemon-driver-qemu (= 10.0.0-2ubuntu8.19)",
+          "libvirt0 (= 10.0.0-2ubuntu8.19)",
           "libxml2 (>= 2.7.4)"
         ],
         "recommends": [
@@ -1654,14 +1747,14 @@
           "qemu-kvm | qemu-system"
         ],
         "suggests": [
-          "libvirt-daemon-driver-lxc (= 10.0.0-2ubuntu8.16)",
-          "libvirt-daemon-driver-storage-gluster (= 10.0.0-2ubuntu8.16)",
-          "libvirt-daemon-driver-storage-iscsi-direct (= 10.0.0-2ubuntu8.16)",
-          "libvirt-daemon-driver-storage-rbd (= 10.0.0-2ubuntu8.16)",
-          "libvirt-daemon-driver-storage-zfs (= 10.0.0-2ubuntu8.16)",
-          "libvirt-daemon-driver-vbox (= 10.0.0-2ubuntu8.16)",
-          "libvirt-daemon-driver-xen (= 10.0.0-2ubuntu8.16)",
-          "libvirt-daemon-system (= 10.0.0-2ubuntu8.16)",
+          "libvirt-daemon-driver-lxc (= 10.0.0-2ubuntu8.19)",
+          "libvirt-daemon-driver-storage-gluster (= 10.0.0-2ubuntu8.19)",
+          "libvirt-daemon-driver-storage-iscsi-direct (= 10.0.0-2ubuntu8.19)",
+          "libvirt-daemon-driver-storage-rbd (= 10.0.0-2ubuntu8.19)",
+          "libvirt-daemon-driver-storage-zfs (= 10.0.0-2ubuntu8.19)",
+          "libvirt-daemon-driver-vbox (= 10.0.0-2ubuntu8.19)",
+          "libvirt-daemon-driver-xen (= 10.0.0-2ubuntu8.19)",
+          "libvirt-daemon-system (= 10.0.0-2ubuntu8.19)",
           "numad"
         ],
         "provides": [],
@@ -1900,6 +1993,34 @@
           "librust-nutmeg-0.1.4+default-dev (= 0.1.4-1)",
           "librust-nutmeg-0.1.4-dev (= 0.1.4-1)"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "ca3d6261afbb6a758bf9",
+      "name": "linux-modules-nvidia-595-7.0.0-1014-azure",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1014",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1014",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-1014-azure | linux-image-unsigned-7.0.0-1014-azure",
+          "linux-objects-nvidia-595-7.0.0-1014-azure (= 7.0.0-1014.14~24.04.1+1)",
+          "linux-signatures-nvidia-7.0.0-1014-azure (= 7.0.0-1014.14~24.04.1+1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -2845,7 +2966,7 @@
       "id": "ca5e9d615249a9127833",
       "name": "broadcom-sta-dkms",
       "version": "6.30.223.271",
-      "release": "23ubuntu1.2",
+      "release": "23ubuntu1.3",
       "architecture": "all",
       "summary": "dkms source for the Broadcom STA Wireless driver",
       "description": "dkms source for the Broadcom STA Wireless driver",
@@ -3337,6 +3458,30 @@
           "tryton-modules-sale (>= 6.0)",
           "tryton-server (>= 6.0)",
           "tryton-server-api-6.0"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "ca6bdd1f95c34e65dae7",
+      "name": "linux-signatures-nvidia-7.0.0-1018-nvidia",
+      "version": "7.0.0",
+      "release": "1018.18~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel signatures for nvidia modules for version 7.0.0-1018-nvidia",
+      "description": "Linux kernel signatures for nvidia modules for version 7.0.0-1018-nvidia",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-nvidia-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 58368,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-1018-nvidia | linux-image-unsigned-7.0.0-1018-nvidia"
         ],
         "recommends": [],
         "suggests": [],
@@ -4725,7 +4870,7 @@
       "id": "ca9b7878c101e0cc5fc0",
       "name": "linux-modules-nvidia-595-nvidia-lowlatency",
       "version": "6.8.0",
-      "release": "1061.64.1",
+      "release": "1064.67.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595 for the nvidia-lowlatency flavour",
       "description": "Extra drivers for nvidia-595 for the nvidia-lowlatency flavour",
@@ -4736,13 +4881,13 @@
       "installedSize": 27648,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-6.8.0-1061-nvidia-lowlatency (= 6.8.0-1061.64.1)",
-          "nvidia-kernel-common-595 (>= 595.84)"
+          "linux-modules-nvidia-595-6.8.0-1064-nvidia-lowlatency (= 6.8.0-1064.67.1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595 (= 595.84-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595 (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -5292,7 +5437,7 @@
       "id": "caae9b7e0eb38f4cec0d",
       "name": "linux-modules-nvidia-590-azure-6.8",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1070.78",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the azure flavour (dummy transitional package)",
@@ -5916,7 +6061,7 @@
       "id": "cabb6b5c0c79527b7fb6",
       "name": "linux-image-azure-edge",
       "version": "7.0.0",
-      "release": "1008.8~24.04.2+1",
+      "release": "1014.14~24.04.1",
       "architecture": "amd64",
       "summary": "Linux kernel image for Azure systems (vmlinuz).",
       "description": "Linux kernel image for Azure systems (vmlinuz).",
@@ -5927,12 +6072,12 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-image-7.0.0-1008-azure"
+          "linux-image-7.0.0-1014-azure"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "virtualbox-guest-modules (= 7.0.0-1008)",
+          "virtualbox-guest-modules (= 7.0.0-1014)",
           "wireguard-modules (= 1.0.0)"
         ],
         "conflicts": [],
@@ -6863,6 +7008,34 @@
       }
     },
     {
+      "id": "caca50e545dd381f42f6",
+      "name": "linux-modules-nvidia-595-6.8.0-142-generic",
+      "version": "6.8.0",
+      "release": "142.142+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-142",
+      "description": "Linux kernel nvidia modules for version 6.8.0-142",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 35840,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-142-generic | linux-image-unsigned-6.8.0-142-generic",
+          "linux-objects-nvidia-595-6.8.0-142-generic (= 6.8.0-142.142+1)",
+          "linux-signatures-nvidia-6.8.0-142-generic (= 6.8.0-142.142+1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "cacbbe57e191dbc7eeb2",
       "name": "golang-github-valyala-histogram-dev",
       "version": "1.2.0+ds",
@@ -7019,7 +7192,7 @@
     {
       "id": "cad076940241b96fe47d",
       "name": "python-apt-common",
-      "version": "2.7.7ubuntu5.2",
+      "version": "2.7.7ubuntu5.3",
       "architecture": "all",
       "summary": "Python interface to libapt-pkg (locales)",
       "description": "Python interface to libapt-pkg (locales)",
@@ -7027,7 +7200,7 @@
       "sourcePackage": "python-apt",
       "category": "python",
       "repository": "official",
-      "installedSize": 159744,
+      "installedSize": 155648,
       "dependencies": {
         "requires": [],
         "recommends": [],

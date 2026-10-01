@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "debian-stable",
   "shard": "f4",
   "items": [
@@ -805,7 +805,7 @@
       "name": "libreoffice-l10n-ko",
       "epoch": "4",
       "version": "25.2.3",
-      "release": "2+deb13u6",
+      "release": "2+deb13u7",
       "architecture": "all",
       "summary": "office productivity suite -- Korean language package",
       "description": "office productivity suite -- Korean language package",
@@ -1266,6 +1266,41 @@
         ],
         "conflicts": [],
         "replaces": []
+      }
+    },
+    {
+      "id": "f4286cca76ee3584dddb",
+      "name": "libmlir-22",
+      "epoch": "1",
+      "version": "22.1.8",
+      "release": "1~deb13u4",
+      "architecture": "amd64",
+      "summary": "Multi-Level Intermediate Representation library",
+      "description": "Multi-Level Intermediate Representation library",
+      "homepage": "https://www.llvm.org/",
+      "maintainer": "LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>",
+      "sourcePackage": "llvm-toolchain-22",
+      "category": "libs",
+      "repository": "official",
+      "installedSize": 109464576,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libgcc-s1 (>= 3.0)",
+          "libllvm22",
+          "libstdc++6 (>= 12)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libmlir-x.y"
+        ],
+        "conflicts": [
+          "libmlir-x.y"
+        ],
+        "replaces": [
+          "libmlir-x.y"
+        ]
       }
     },
     {
@@ -2593,7 +2628,7 @@
       "name": "gir1.2-lokdocview-0.1",
       "epoch": "4",
       "version": "25.2.3",
-      "release": "2+deb13u6",
+      "release": "2+deb13u7",
       "architecture": "amd64",
       "summary": "GTK+ 3 widget wrapping LibreOffice functionality - introspection",
       "description": "GTK+ 3 widget wrapping LibreOffice functionality - introspection",
@@ -2611,7 +2646,7 @@
           "gir1.2-glib-2.0",
           "gir1.2-gobject-2.0",
           "gir1.2-gtk-3.0",
-          "liblibreofficekitgtk (= 4:25.2.3-2+deb13u6)"
+          "liblibreofficekitgtk (= 4:25.2.3-2+deb13u7)"
         ],
         "recommends": [],
         "suggests": [],
@@ -5476,6 +5511,45 @@
       }
     },
     {
+      "id": "f496694a845f11b52c04",
+      "name": "libomp-22-dev",
+      "epoch": "1",
+      "version": "22.1.8",
+      "release": "1~deb13u4",
+      "architecture": "amd64",
+      "summary": "LLVM OpenMP runtime - dev package",
+      "description": "LLVM OpenMP runtime - dev package",
+      "homepage": "https://www.llvm.org/",
+      "maintainer": "LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>",
+      "sourcePackage": "llvm-toolchain-22",
+      "category": "libdevel",
+      "repository": "official",
+      "installedSize": 605184,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libgcc-s1 (>= 3.0)",
+          "libomp5-19",
+          "libpython3.13 (>= 3.13.0~rc3)",
+          "libstdc++6 (>= 13.1)"
+        ],
+        "recommends": [],
+        "suggests": [
+          "libomp-22-doc"
+        ],
+        "provides": [
+          "libomp-x.y-dev"
+        ],
+        "conflicts": [
+          "libomp-x.y-dev"
+        ],
+        "replaces": [
+          "libomp-x.y-dev",
+          "libomp5 (<< 1:22~++20251023025710+3f47a7be1ae6-1~exp4)"
+        ]
+      }
+    },
+    {
       "id": "f496c9753ffd57ed142d",
       "name": "science-mathematics",
       "version": "1.15",
@@ -7495,6 +7569,38 @@
       }
     },
     {
+      "id": "f4c99a8f604f41ed9fb0",
+      "name": "libc++abi-22-dev-wasm32",
+      "epoch": "1",
+      "version": "22.1.8",
+      "release": "1~deb13u4",
+      "architecture": "all",
+      "summary": "LLVM low level support for a standard C++ library (WASI)",
+      "description": "LLVM low level support for a standard C++ library (WASI)",
+      "homepage": "https://www.llvm.org/",
+      "maintainer": "LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>",
+      "sourcePackage": "llvm-toolchain-22",
+      "category": "libdevel",
+      "repository": "official",
+      "installedSize": 774144,
+      "dependencies": {
+        "requires": [
+          "wasi-libc"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libc++abi-x.y-dev-wasm32"
+        ],
+        "conflicts": [
+          "libc++abi-x.y-dev-wasm32"
+        ],
+        "replaces": [
+          "libc++abi-x.y-dev-wasm32"
+        ]
+      }
+    },
+    {
       "id": "f4cbca54ab28d57fc6b3",
       "name": "python3-standard-asynchat",
       "version": "3.13.0",
@@ -7687,7 +7793,7 @@
     {
       "id": "f4ce712a4745d75f7b49",
       "name": "firefox-esr-l10n-pt-br",
-      "version": "140.14.0esr",
+      "version": "153.4.0esr",
       "release": "1~deb13u1",
       "architecture": "all",
       "summary": "Portuguese (Brazil) language package for Firefox ESR",
@@ -7696,11 +7802,11 @@
       "sourcePackage": "firefox-esr",
       "category": "localization",
       "repository": "official",
-      "installedSize": 499712,
+      "installedSize": 552960,
       "dependencies": {
         "requires": [
-          "firefox-esr (<< 140.14.0esr-1~deb13u1.1~)",
-          "firefox-esr (>= 140.14.0esr-1~deb13u1)"
+          "firefox-esr (<< 153.4.0esr-1~deb13u1.1~)",
+          "firefox-esr (>= 153.4.0esr-1~deb13u1)"
         ],
         "recommends": [
           "hunspell-pt-br | myspell-pt-br"
@@ -7768,7 +7874,7 @@
       "id": "f4d0157a85060b9d582f",
       "name": "libgstreamer-gl1.0-0",
       "version": "1.26.2",
-      "release": "1+deb13u1",
+      "release": "1+deb13u2",
       "architecture": "amd64",
       "summary": "GStreamer GL libraries",
       "description": "GStreamer GL libraries",
@@ -9091,7 +9197,7 @@
       "name": "libreoffice-l10n-fa",
       "epoch": "4",
       "version": "25.2.3",
-      "release": "2+deb13u6",
+      "release": "2+deb13u7",
       "architecture": "all",
       "summary": "office productivity suite -- Farsi language package",
       "description": "office productivity suite -- Farsi language package",
@@ -9126,7 +9232,7 @@
     {
       "id": "f4f4a4ebb569365104c3",
       "name": "libcpupower-dev",
-      "version": "6.12.107",
+      "version": "6.12.111",
       "release": "1",
       "architecture": "amd64",
       "summary": "CPU frequency and voltage scaling tools for Linux (development files)",
@@ -9136,10 +9242,10 @@
       "sourcePackage": "linux",
       "category": "libdevel",
       "repository": "official",
-      "installedSize": 1389568,
+      "installedSize": 1458176,
       "dependencies": {
         "requires": [
-          "libcpupower1 (= 6.12.107-1)"
+          "libcpupower1 (= 6.12.111-1)"
         ],
         "recommends": [],
         "suggests": [],

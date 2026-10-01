@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "38",
   "items": [
@@ -34,7 +34,7 @@
     {
       "id": "3801a5b11c24d98e61cc",
       "name": "openjdk-17-jre-headless",
-      "version": "17.0.20+8",
+      "version": "17.0.20.1+1",
       "release": "1~24.04",
       "architecture": "amd64",
       "summary": "OpenJDK Java runtime, using Hotspot JIT (headless)",
@@ -44,7 +44,7 @@
       "sourcePackage": "openjdk-17",
       "category": "java",
       "repository": "official",
-      "installedSize": 193315840,
+      "installedSize": 193316864,
       "dependencies": {
         "requires": [
           "ca-certificates-java (>= 20190405~)",
@@ -132,7 +132,7 @@
     {
       "id": "380660a56ca2b02bf263",
       "name": "clamav-daemon",
-      "version": "1.5.3+dfsg",
+      "version": "1.5.4+dfsg",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "anti-virus utility for Unix - scanner daemon",
@@ -142,16 +142,16 @@
       "sourcePackage": "clamav",
       "category": "utils",
       "repository": "official",
-      "installedSize": 1041408,
+      "installedSize": 1046528,
       "dependencies": {
         "requires": [
           "adduser",
-          "clamav-base (= 1.5.3+dfsg-0ubuntu0.24.04.1)",
-          "clamav-freshclam (>= 1.5.3+dfsg) | clamav-data",
+          "clamav-base (= 1.5.4+dfsg-0ubuntu0.24.04.1)",
+          "clamav-freshclam (>= 1.5.4+dfsg) | clamav-data",
           "debconf (>= 0.5) | debconf-2.0",
           "dpkg (>= 1.16.1)",
           "libc6 (>= 2.38)",
-          "libclamav12 (>= 1.5.3)",
+          "libclamav12 (>= 1.5.4)",
           "libcurl4t64 (>= 7.18.2)",
           "libncurses6 (>= 6)",
           "libsystemd0",
@@ -3643,7 +3643,7 @@
       "id": "386e84df089f971bccfc",
       "name": "ncurses-term",
       "version": "6.4+20240113",
-      "release": "1ubuntu2.1",
+      "release": "1ubuntu2.2",
       "architecture": "all",
       "summary": "additional terminal type definitions",
       "description": "additional terminal type definitions",
@@ -3655,12 +3655,12 @@
       "installedSize": 4445184,
       "dependencies": {
         "requires": [
-          "ncurses-base (= 6.4+20240113-1ubuntu2.1)"
+          "ncurses-base (= 6.4+20240113-1ubuntu2.2)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "foot-terminfo (= 6.4+20240113-1ubuntu2.1)"
+          "foot-terminfo (= 6.4+20240113-1ubuntu2.2)"
         ],
         "conflicts": [],
         "replaces": [
@@ -4167,6 +4167,34 @@
           "libgcc-s1 (>= 3.3.1)",
           "libjs-d3",
           "libstdc++6 (>= 13.1)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "387da765fa981f1a3c7d",
+      "name": "linux-modules-nvidia-610-7.0.0-1012-oracle",
+      "version": "7.0.0",
+      "release": "1012.12~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1012",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1012",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-oracle-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 33792,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-1012-oracle | linux-image-unsigned-7.0.0-1012-oracle",
+          "linux-objects-nvidia-610-7.0.0-1012-oracle (= 7.0.0-1012.12~24.04.1)",
+          "linux-signatures-nvidia-7.0.0-1012-oracle (= 7.0.0-1012.12~24.04.1)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -5927,7 +5955,7 @@
       "id": "389f680c68822fabfa9b",
       "name": "linux-modules-nvidia-575-open-azure-fde-7.0",
       "version": "7.0.0",
-      "release": "1007.7~24.04.3+1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-open for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-open for the azure-fde flavour (dummy transitional package)",
@@ -8250,7 +8278,7 @@
       "id": "38d1a593fd400f9c1898",
       "name": "linux-modules-nvidia-580-server-ibm-lts-24.04",
       "version": "6.8.0",
-      "release": "1063.64",
+      "release": "1066.67",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server for the ibm-lts-24.04 flavour",
       "description": "Extra drivers for nvidia-580-server for the ibm-lts-24.04 flavour",
@@ -8261,13 +8289,13 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-6.8.0-1063-ibm (= 6.8.0-1063.64)",
-          "nvidia-kernel-common-580-server (>= 580.173.02)"
+          "linux-modules-nvidia-580-server-6.8.0-1066-ibm (= 6.8.0-1066.67)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-580-server (= 580.173.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-580-server (= 580.178.04-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -8754,7 +8782,7 @@
       "name": "erlang-jinterface",
       "epoch": "1",
       "version": "25.3.2.8+dfsg",
-      "release": "1ubuntu4.6",
+      "release": "1ubuntu4.7",
       "architecture": "all",
       "summary": "Java communication tool to Erlang",
       "description": "Java communication tool to Erlang",
@@ -8763,7 +8791,7 @@
       "sourcePackage": "erlang",
       "category": "universe/interpreters",
       "repository": "official",
-      "installedSize": 151552,
+      "installedSize": 153600,
       "dependencies": {
         "requires": [
           "default-jre-headless | java2-runtime-headless | java1-runtime-headless | java2-runtime | java1-runtime"
@@ -8917,7 +8945,7 @@
       "id": "38e7e98ac3a9f1ec7fff",
       "name": "linux-modules-nvidia-590-server-nvidia-7.0",
       "version": "7.0.0",
-      "release": "1016.16~24.04.1+1",
+      "release": "1019.19~24.04.2+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server for the nvidia flavour (dummy transitional package)",
@@ -8925,7 +8953,7 @@
       "sourcePackage": "linux-restricted-modules-nvidia-7.0",
       "category": "restricted/oldlibs",
       "repository": "official",
-      "installedSize": 18432,
+      "installedSize": 19456,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-595-server-nvidia-7.0"
@@ -9045,7 +9073,7 @@
       "id": "38eeeeededacde97b2e9",
       "name": "linux-image-uc-gcp-7.0",
       "version": "7.0.0",
-      "release": "1006.6~24.04.2",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "GCP Linux kernel image for Ubuntu Core",
       "description": "GCP Linux kernel image for Ubuntu Core",
@@ -9056,8 +9084,8 @@
       "installedSize": 14336,
       "dependencies": {
         "requires": [
-          "linux-image-uc-7.0.0-1006-gcp",
-          "linux-modules-7.0.0-1006-gcp"
+          "linux-image-uc-7.0.0-1013-gcp",
+          "linux-modules-7.0.0-1013-gcp"
         ],
         "recommends": [],
         "suggests": [],

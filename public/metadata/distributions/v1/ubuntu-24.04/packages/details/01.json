@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "01",
   "items": [
@@ -194,7 +194,7 @@
     {
       "id": "0103b31706c41a6fa789",
       "name": "openjdk-17-jre-zero",
-      "version": "17.0.20+8",
+      "version": "17.0.20.1+1",
       "release": "1~24.04",
       "architecture": "amd64",
       "summary": "Alternative JVM for OpenJDK, using Zero",
@@ -210,7 +210,7 @@
           "libc6 (>= 2.38)",
           "libgcc-s1 (>= 3.0)",
           "libstdc++6 (>= 4.1.1)",
-          "openjdk-17-jre-headless (= 17.0.20+8-1~24.04)"
+          "openjdk-17-jre-headless (= 17.0.20.1+1-1~24.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -531,16 +531,16 @@
     {
       "id": "010ffe1f27538fdb1552",
       "name": "linux-modules-nvidia-570-server-open-gcp",
-      "version": "6.17.0",
-      "release": "1022.25",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server-open for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server-open for the gcp flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-gcp-6.17",
+      "sourcePackage": "linux-restricted-modules-gcp-7.0",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 18432,
+      "installedSize": 24576,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-server-open-gcp"
@@ -2154,7 +2154,7 @@
       "name": "liblxc-common",
       "epoch": "1",
       "version": "5.0.3",
-      "release": "2ubuntu7.2",
+      "release": "2ubuntu7.3",
       "architecture": "amd64",
       "summary": "Linux Containers userspace tools (library)",
       "description": "Linux Containers userspace tools (library)",
@@ -2170,7 +2170,7 @@
           "libc6 (>= 2.38)",
           "libcap2 (>= 1:2.10)",
           "libgcc-s1 (>= 3.3.1)",
-          "liblxc1t64 (= 1:5.0.3-2ubuntu7.2)",
+          "liblxc1t64 (= 1:5.0.3-2ubuntu7.3)",
           "libseccomp2 (>= 2.5.0)",
           "libselinux1 (>= 3.1~)"
         ],
@@ -2383,6 +2383,31 @@
           "linux-image-6.8.0-1046-azure-fde | linux-image-unsigned-6.8.0-1046-azure-fde",
           "nvidia-kernel-common-535 (<= 535.288.01-1)",
           "nvidia-kernel-common-535 (>= 535.288.01)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0142f7ab2ca05ac5db35",
+      "name": "linux-modules-extra-6.8.0-139-generic",
+      "version": "6.8.0",
+      "release": "139.139",
+      "architecture": "amd64",
+      "summary": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 112479232,
+      "dependencies": {
+        "requires": [
+          "linux-modules-6.8.0-139-generic",
+          "wireless-regdb"
         ],
         "recommends": [],
         "suggests": [],
@@ -3936,7 +3961,7 @@
       "id": "016e86985beb9241d2da",
       "name": "linux-modules-nvidia-590-oracle-edge",
       "version": "7.0.0",
-      "release": "1006.6~24.04.3",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the oracle flavour (dummy transitional package)",
@@ -4199,6 +4224,30 @@
         "suggests": [
           "gcc-10-locales (>= 10)"
         ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0172aa58785e27e6b267",
+      "name": "linux-objects-nvidia-595-open-6.8.0-1067-azure",
+      "version": "6.8.0",
+      "release": "1067.75+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1067 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1067 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26356736,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
         "provides": [],
         "conflicts": [],
         "replaces": []
@@ -4809,8 +4858,8 @@
     {
       "id": "017f503224cf34451738",
       "name": "openjdk-21-dbg",
-      "version": "21.0.12+8",
-      "release": "1~24.04",
+      "version": "21.0.12.1+1",
+      "release": "1~24.04.4",
       "architecture": "amd64",
       "summary": "Java runtime based on OpenJDK (debugging symbols)",
       "description": "Java runtime based on OpenJDK (debugging symbols)",
@@ -4819,16 +4868,16 @@
       "sourcePackage": "openjdk-21",
       "category": "debug",
       "repository": "official",
-      "installedSize": 333166592,
+      "installedSize": 333171712,
       "dependencies": {
         "requires": [
-          "openjdk-21-jre-headless (= 21.0.12+8-1~24.04)"
+          "openjdk-21-jre-headless (= 21.0.12.1+1-1~24.04.4)"
         ],
         "recommends": [
-          "openjdk-21-jre (= 21.0.12+8-1~24.04)"
+          "openjdk-21-jre (= 21.0.12.1+1-1~24.04.4)"
         ],
         "suggests": [
-          "openjdk-21-jdk (= 21.0.12+8-1~24.04)"
+          "openjdk-21-jdk (= 21.0.12.1+1-1~24.04.4)"
         ],
         "provides": [],
         "conflicts": [],
@@ -5220,7 +5269,7 @@
       "id": "0187c760ceb05a0fc2e4",
       "name": "xdg-desktop-portal-dev",
       "version": "1.18.4",
-      "release": "1ubuntu2.24.04.2",
+      "release": "1ubuntu2.24.04.3",
       "architecture": "all",
       "summary": "desktop integration portal - development files",
       "description": "desktop integration portal - development files",
@@ -5837,6 +5886,30 @@
       }
     },
     {
+      "id": "0197beba4afea525b757",
+      "name": "linux-cloud-tools-6.17.0-1004-vmware",
+      "version": "6.17.0",
+      "release": "1004.4",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific cloud tools for version 6.17.0-1004",
+      "description": "Linux kernel version specific cloud tools for version 6.17.0-1004",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-vmware-6.17",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 126976,
+      "dependencies": {
+        "requires": [
+          "linux-vmware-6.17-cloud-tools-6.17.0-1004"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "0198e64e16f8025a1299",
       "name": "libkf5dav-dev",
       "epoch": "1",
@@ -5975,7 +6048,7 @@
       "id": "019c16d019b576494f10",
       "name": "linux-modules-vision-generic-7.0",
       "version": "7.0.0",
-      "release": "30.30~24.04.1",
+      "release": "34.34~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for vision for the generic flavour",
       "description": "Extra drivers for vision for the generic flavour",
@@ -5986,7 +6059,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-modules-vision-7.0.0-30-generic"
+          "linux-modules-vision-7.0.0-34-generic"
         ],
         "recommends": [],
         "suggests": [],
@@ -6969,6 +7042,30 @@
       }
     },
     {
+      "id": "01b7b44f4480a544dbcb",
+      "name": "linux-objects-nvidia-580-open-6.17.0-1004-vmware",
+      "version": "6.17.0",
+      "release": "1004.4+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.17.0-1004 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.17.0-1004 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware-6.17",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26317824,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "01b88090ca4412299732",
       "name": "ufoai",
       "version": "2.5",
@@ -7471,7 +7568,7 @@
       "id": "01c757f643fc331058a3",
       "name": "linux-modules-nvidia-575-open-nvidia-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "1061.64.1",
+      "release": "1064.67.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-open for the nvidia-lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-open for the nvidia-lowlatency flavour (dummy transitional package)",
@@ -7679,7 +7776,7 @@
       "id": "01cbc0e604e5ffcb9dc6",
       "name": "linux-azure-fde-edge",
       "version": "7.0.0",
-      "release": "1007.7~24.04.3+1",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Complete Linux kernel for Azure systems (kernel.efi).",
       "description": "Complete Linux kernel for Azure systems (kernel.efi).",
@@ -7690,13 +7787,13 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-cloud-tools-azure-fde-edge (= 7.0.0-1007.7~24.04.3+1)",
-          "linux-headers-azure-fde-edge (= 7.0.0-1007.7~24.04.3+1)",
-          "linux-image-azure-fde-edge (= 7.0.0-1007.7~24.04.3+1)",
-          "linux-tools-azure-fde-edge (= 7.0.0-1007.7~24.04.3+1)"
+          "linux-cloud-tools-azure-fde-edge (= 7.0.0-1013.13~24.04.1)",
+          "linux-headers-azure-fde-edge (= 7.0.0-1013.13~24.04.1)",
+          "linux-image-azure-fde-edge (= 7.0.0-1013.13~24.04.1)",
+          "linux-tools-azure-fde-edge (= 7.0.0-1013.13~24.04.1)"
         ],
         "recommends": [
-          "linux-tools-7.0.0-1007-azure",
+          "linux-tools-7.0.0-1013-azure",
           "ubuntu-kernel-accessories"
         ],
         "suggests": [],
@@ -8482,7 +8579,7 @@
       "id": "01dc76b255320a06cc98",
       "name": "linux-modules-nvidia-595-server-aws-edge",
       "version": "7.0.0",
-      "release": "1011.11~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-server for the aws-edge flavour",
       "description": "Extra drivers for nvidia-595-server for the aws-edge flavour",
@@ -8493,13 +8590,13 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-server-7.0.0-1011-aws (= 7.0.0-1011.11~24.04.1)",
-          "nvidia-kernel-common-595-server (>= 595.71.05)"
+          "linux-modules-nvidia-595-server-7.0.0-1013-aws (= 7.0.0-1013.13~24.04.1+1)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-server (= 595.71.05-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-server (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -8763,7 +8860,7 @@
       "name": "erlang-mnesia",
       "epoch": "1",
       "version": "25.3.2.8+dfsg",
-      "release": "1ubuntu4.6",
+      "release": "1ubuntu4.7",
       "architecture": "amd64",
       "summary": "Erlang/OTP distributed relational/object hybrid database",
       "description": "Erlang/OTP distributed relational/object hybrid database",
@@ -8772,10 +8869,10 @@
       "sourcePackage": "erlang",
       "category": "interpreters",
       "repository": "official",
-      "installedSize": 1191936,
+      "installedSize": 1193984,
       "dependencies": {
         "requires": [
-          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.6)"
+          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.7)"
         ],
         "recommends": [],
         "suggests": [
@@ -8786,18 +8883,18 @@
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
-          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
+          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
           "erlang-base-hipe",
-          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
+          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
           "erlang-doc (<< 1:25.3.2.8+dfsg)",
           "erlang-doc (>> 1:25.3.2.8+dfsg-999)",
-          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
+          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
           "erlang-manpages (<= 1:11.b.1-2)",
           "erlang-mode (<< 1:12.b.1-dfsg-2)",
-          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
-          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
-          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.6)"
+          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.7)"
         ]
       }
     },
@@ -8828,13 +8925,13 @@
     {
       "id": "01e3548cf0a124774a1c",
       "name": "linux-modules-nvidia-535-azure",
-      "version": "6.17.0",
-      "release": "1022.22",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535 for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535 for the azure flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-azure-6.17",
+      "sourcePackage": "linux-restricted-modules-azure-7.0",
       "category": "restricted/kernel",
       "repository": "official",
       "installedSize": 18432,
@@ -9807,7 +9904,7 @@
       "id": "01fe635202e9f8560c02",
       "name": "php8.3-sqlite3",
       "version": "8.3.6",
-      "release": "0ubuntu0.24.04.10",
+      "release": "0ubuntu0.24.04.11",
       "architecture": "amd64",
       "summary": "SQLite3 module for PHP",
       "description": "SQLite3 module for PHP",
@@ -9822,7 +9919,7 @@
           "libc6 (>= 2.14)",
           "libsqlite3-0 (>= 3.14.0)",
           "php-common (>= 1:81~)",
-          "php8.3-common (= 8.3.6-0ubuntu0.24.04.10)",
+          "php8.3-common (= 8.3.6-0ubuntu0.24.04.11)",
           "ucf"
         ],
         "recommends": [],

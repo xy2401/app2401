@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "22",
   "items": [
@@ -662,7 +662,7 @@
       "id": "220f81e9f1199393e89b",
       "name": "nginx-extras",
       "version": "1.24.0",
-      "release": "2ubuntu7.17",
+      "release": "2ubuntu7.18",
       "architecture": "amd64",
       "summary": "nginx web/proxy server (extended version)",
       "description": "nginx web/proxy server (extended version)",
@@ -679,21 +679,21 @@
           "libnginx-mod-http-dav-ext (>= 1:3.0.0-4~)",
           "libnginx-mod-http-echo (>= 1:0.63-5~)",
           "libnginx-mod-http-fancyindex (>= 1:0.5.2-4~)",
-          "libnginx-mod-http-geoip (= 1.24.0-2ubuntu7.17)",
+          "libnginx-mod-http-geoip (= 1.24.0-2ubuntu7.18)",
           "libnginx-mod-http-geoip2 (>= 1:3.4-4~)",
           "libnginx-mod-http-headers-more-filter (>= 1:0.34-4~)",
-          "libnginx-mod-http-image-filter (= 1.24.0-2ubuntu7.17)",
-          "libnginx-mod-http-perl (= 1.24.0-2ubuntu7.17)",
+          "libnginx-mod-http-image-filter (= 1.24.0-2ubuntu7.18)",
+          "libnginx-mod-http-perl (= 1.24.0-2ubuntu7.18)",
           "libnginx-mod-http-subs-filter (>= 1:0.6.4-5~)",
           "libnginx-mod-http-uploadprogress (>= 1:0.9.2-4~)",
           "libnginx-mod-http-upstream-fair (>= 1:0.0~git20120408.a18b409-4~)",
-          "libnginx-mod-http-xslt-filter (= 1.24.0-2ubuntu7.17)",
-          "libnginx-mod-mail (= 1.24.0-2ubuntu7.17)",
+          "libnginx-mod-http-xslt-filter (= 1.24.0-2ubuntu7.18)",
+          "libnginx-mod-mail (= 1.24.0-2ubuntu7.18)",
           "libnginx-mod-nchan (>= 1:1.3.6+dfsg-3~)",
-          "libnginx-mod-stream (= 1.24.0-2ubuntu7.17)",
-          "libnginx-mod-stream-geoip (= 1.24.0-2ubuntu7.17)",
+          "libnginx-mod-stream (= 1.24.0-2ubuntu7.18)",
+          "libnginx-mod-stream-geoip (= 1.24.0-2ubuntu7.18)",
           "libnginx-mod-stream-geoip2 (>= 1:3.4-4~)",
-          "nginx (= 1.24.0-2ubuntu7.17)"
+          "nginx (= 1.24.0-2ubuntu7.18)"
         ],
         "recommends": [],
         "suggests": [],
@@ -1283,13 +1283,13 @@
     {
       "id": "221c2090a6a1b38ff91e",
       "name": "linux-modules-nvidia-575-open-azure",
-      "version": "6.17.0",
-      "release": "1022.22",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-open for the azure flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-azure-6.17",
+      "sourcePackage": "linux-restricted-modules-azure-7.0",
       "category": "restricted/kernel",
       "repository": "official",
       "installedSize": 18432,
@@ -1767,6 +1767,34 @@
       }
     },
     {
+      "id": "2228bf100d439116a11f",
+      "name": "linux-modules-nvidia-580-6.8.0-1064-gke",
+      "version": "6.8.0",
+      "release": "1064.72",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-gke",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 35840,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1064-gke | linux-image-unsigned-6.8.0-1064-gke",
+          "linux-objects-nvidia-580-6.8.0-1064-gke (= 6.8.0-1064.72)",
+          "linux-signatures-nvidia-6.8.0-1064-gke (= 6.8.0-1064.72)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "222a2f4064e2bf3ff1aa",
       "name": "libespeak1",
       "version": "1.48.15+dfsg",
@@ -1956,6 +1984,55 @@
       }
     },
     {
+      "id": "2232b3d8be489a5a28b1",
+      "name": "linux-image-unsigned-6.8.0-1067-azure",
+      "version": "6.8.0",
+      "release": "1067.75",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15900672,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1067-azure"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub"
+        ],
+        "suggests": [
+          "fdutils",
+          "initramfs-tools | linux-initramfs-tool",
+          "linux-azure-doc-6.8.0 | linux-azure-source-6.8.0",
+          "linux-azure-tools",
+          "linux-headers-6.8.0-1067-azure"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1067-azure"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "223399be82527841fe9e",
       "name": "libobjc-9-dev-mips-cross",
       "version": "9.5.0",
@@ -2012,6 +2089,30 @@
         "conflicts": [
           "golang-go (<< 2:1.3.3-1ubuntu2)"
         ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "2235068027327e4bc009",
+      "name": "linux-objects-nvidia-610-open-7.0.0-1013-gcp",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1013 (objects)",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1013 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-gcp-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26942464,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
         "replaces": []
       }
     },
@@ -3066,6 +3167,30 @@
       }
     },
     {
+      "id": "22527554eb947af167aa",
+      "name": "linux-objects-nvidia-610-6.8.0-1065-azure-fde",
+      "version": "6.8.0",
+      "release": "1065.72+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1065 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1065 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 200008704,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "2252c8502eafac2008a3",
       "name": "bandwidthd-pgsql",
       "version": "2.0.1+cvs20090917",
@@ -3846,6 +3971,28 @@
           "python3-jsonschema",
           "python3:any"
         ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "2269bb0cee18742d2b0f",
+      "name": "linux-buildinfo-6.8.0-1049-gkeop",
+      "version": "6.8.0",
+      "release": "1049.53",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gkeop",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 3718144,
+      "dependencies": {
+        "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
@@ -4940,7 +5087,7 @@
       "id": "228356c9bffa641f0930",
       "name": "linux-modules-nvidia-535-server-open-aws-edge",
       "version": "7.0.0",
-      "release": "1011.11~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the aws flavour (dummy transitional package)",
@@ -5852,6 +5999,31 @@
       }
     },
     {
+      "id": "229f68e2a8ac196a7414",
+      "name": "linux-modules-extra-6.8.0-1051-gkeop",
+      "version": "6.8.0",
+      "release": "1051.55",
+      "architecture": "amd64",
+      "summary": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gkeop",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 114085888,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1051-gkeop | linux-image-unsigned-6.8.0-1051-gkeop",
+          "wireless-regdb"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "22a06f779f9b94ac2f7a",
       "name": "psi-plus-plugins",
       "version": "1.4.554",
@@ -5925,6 +6097,28 @@
           "librust-z-base-32-0.1.2+pyo3-dev (= 0.1.2-1)",
           "librust-z-base-32-0.1.2+python-dev (= 0.1.2-1)"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "22a2c98c2dd201d84618",
+      "name": "linux-buildinfo-7.0.0-1019-nvidia",
+      "version": "7.0.0",
+      "release": "1019.19~24.04.2",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 7.0.0",
+      "description": "Linux kernel buildinfo for version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-nvidia-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 2962432,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -6089,7 +6283,7 @@
       "id": "22a5e71c070ecc95baf1",
       "name": "libvirt-dev",
       "version": "10.0.0",
-      "release": "2ubuntu8.16",
+      "release": "2ubuntu8.19",
       "architecture": "amd64",
       "summary": "development files for the libvirt library",
       "description": "development files for the libvirt library",
@@ -6101,7 +6295,7 @@
       "installedSize": 1641472,
       "dependencies": {
         "requires": [
-          "libvirt0 (= 10.0.0-2ubuntu8.16)"
+          "libvirt0 (= 10.0.0-2ubuntu8.19)"
         ],
         "recommends": [
           "pkg-config"
@@ -7175,7 +7369,7 @@
       "id": "22baaeef97a60ba73b83",
       "name": "linux-modules-nvidia-610-generic-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "30.30~24.04.1",
+      "release": "34.34~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-610 for the generic-hwe-24.04-edge flavour",
       "description": "Extra drivers for nvidia-610 for the generic-hwe-24.04-edge flavour",
@@ -7186,13 +7380,13 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-7.0.0-30-generic (= 7.0.0-30.30~24.04.1)",
-          "nvidia-kernel-common-610 (>= 610.43.02)"
+          "linux-modules-nvidia-610-7.0.0-34-generic (= 7.0.0-34.34~24.04.1+1)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-610 (= 610.43.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -7304,7 +7498,7 @@
       "id": "22bc0c401e7e84fe35c7",
       "name": "linux-cloud-tools-generic-hwe-24.04",
       "version": "7.0.0",
-      "release": "30.30~24.04.1",
+      "release": "34.34~24.04.1",
       "architecture": "amd64",
       "summary": "Generic Linux kernel cloud tools",
       "description": "Generic Linux kernel cloud tools",
@@ -7315,7 +7509,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-cloud-tools-7.0.0-30-generic"
+          "linux-cloud-tools-7.0.0-34-generic"
         ],
         "recommends": [],
         "suggests": [],
@@ -7513,7 +7707,7 @@
       "id": "22c1922cda1d23c1f5f7",
       "name": "linux-modules-nvidia-535-nvidia-lowlatency",
       "version": "6.8.0",
-      "release": "1061.64.1",
+      "release": "1064.67.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535 for the nvidia-lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535 for the nvidia-lowlatency flavour (dummy transitional package)",
@@ -7831,6 +8025,30 @@
           "gobjc-9-mipsisa64r6-linux-gnuabi64 (= 9.5.0-6ubuntu2cross1)",
           "lib32objc-9-dev-mips64r6-cross (>= 9.5.0-6ubuntu2cross1)",
           "libn32objc-9-dev-mips64r6-cross (>= 9.5.0-6ubuntu2cross1)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "22c8e1388affd15c0107",
+      "name": "linux-objects-nvidia-580-server-open-6.8.0-1066-azure-fde",
+      "version": "6.8.0",
+      "release": "1066.73",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1066 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1066 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26255360,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -8895,7 +9113,7 @@
       "id": "22e15dda74a3c232785d",
       "name": "linux-modules-nvidia-575-server-open-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "138.138.1",
+      "release": "142.142.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server-open for the lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server-open for the lowlatency flavour (dummy transitional package)",
@@ -8994,6 +9212,34 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "22e43d5e2654ded9b1d2",
+      "name": "linux-modules-nvidia-580-open-vmware",
+      "version": "6.8.0",
+      "release": "1005.5+1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-580-open for the vmware flavour",
+      "description": "Extra drivers for nvidia-580-open for the vmware flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26624,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-580-open-6.8.0-1005-vmware (= 6.8.0-1005.5+1)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-580-open (= 580.178.04-0ubuntu0.24.04.1)",
+          "nvidia-prebuilt-kernel"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -9767,7 +10013,7 @@
       "id": "22feae2b4d393fae1ff6",
       "name": "linux-modules-nvidia-595-open-6.8.0-1060-oracle",
       "version": "6.8.0",
-      "release": "1060.63",
+      "release": "1060.63+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-1060",
       "description": "Linux kernel nvidia modules for version 6.8.0-1060",
@@ -9775,12 +10021,12 @@
       "sourcePackage": "linux-restricted-signatures-oracle",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 26343424,
+      "installedSize": 26358784,
       "dependencies": {
         "requires": [
           "linux-image-6.8.0-1060-oracle | linux-image-unsigned-6.8.0-1060-oracle",
-          "nvidia-kernel-common-595 (<= 595.84-1)",
-          "nvidia-kernel-common-595 (>= 595.84)"
+          "nvidia-kernel-common-595 (<= 595.91.07-1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
@@ -9792,7 +10038,7 @@
     {
       "id": "22ff0ad8f2e689789927",
       "name": "aspnetcore-runtime-8.0",
-      "version": "8.0.30",
+      "version": "8.0.31",
       "release": "0ubuntu1~24.04.1",
       "architecture": "amd64",
       "summary": "ASP.NET Core runtime",
@@ -9802,7 +10048,7 @@
       "sourcePackage": "dotnet8",
       "category": "devel",
       "repository": "official",
-      "installedSize": 24350720,
+      "installedSize": 24352768,
       "dependencies": {
         "requires": [
           "dotnet-runtime-8.0"
@@ -9846,6 +10092,30 @@
         "recommends": [
           "ocrad"
         ],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "22ff5c9cd8178a21e8b1",
+      "name": "linux-gkeop-headers-6.8.0-1051",
+      "version": "6.8.0",
+      "release": "1051.55",
+      "architecture": "all",
+      "summary": "Header files related to Linux kernel version 6.8.0",
+      "description": "Header files related to Linux kernel version 6.8.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gkeop",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 88357888,
+      "dependencies": {
+        "requires": [
+          "coreutils"
+        ],
+        "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [],

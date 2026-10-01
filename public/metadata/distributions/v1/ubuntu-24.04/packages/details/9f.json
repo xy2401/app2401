@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "9f",
   "items": [
@@ -8,7 +8,7 @@
       "id": "9f00acc219cf5c829590",
       "name": "linux-modules-nvidia-575-generic-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "30.30~24.04.1",
+      "release": "34.34~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575 for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575 for the generic flavour (dummy transitional package)",
@@ -44,6 +44,30 @@
       "dependencies": {
         "requires": [
           "linux-image-6.8.0-1056-azure | linux-image-unsigned-6.8.0-1056-azure"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "9f01007da10e15e63d05",
+      "name": "linux-objects-nvidia-580-server-6.8.0-1068-azure",
+      "version": "6.8.0",
+      "release": "1068.76",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1068 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1068 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 197295104,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -1135,7 +1159,7 @@
       "id": "9f2660cecc8fb1a81eb1",
       "name": "linux-modules-extra-azure-6.8",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1070.78",
       "architecture": "amd64",
       "summary": "Linux kernel extra modules for Azure systems.",
       "description": "Linux kernel extra modules for Azure systems.",
@@ -1146,7 +1170,7 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-modules-extra-6.8.0-1065-azure"
+          "linux-modules-extra-6.8.0-1070-azure"
         ],
         "recommends": [],
         "suggests": [],
@@ -1460,6 +1484,30 @@
       }
     },
     {
+      "id": "9f2fe3d75ffc30963a91",
+      "name": "linux-objects-nvidia-595-server-open-6.8.0-1069-gcp",
+      "version": "6.8.0",
+      "release": "1069.77",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1069 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1069 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-gcp",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26359808,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "9f30723124fa8b587580",
       "name": "libglobus-gsi-proxy-core-doc",
       "version": "9.8",
@@ -1643,6 +1691,52 @@
         "suggests": [],
         "provides": [],
         "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "9f33ac4ab8de6a38468b",
+      "name": "linux-image-7.0.0-1012-aws",
+      "version": "7.0.0",
+      "release": "1012.12~24.04.1",
+      "architecture": "amd64",
+      "summary": "Signed kernel image aws",
+      "description": "Signed kernel image aws",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-aws-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 16962560,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-7.0.0-1012-aws"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "bpftool",
+          "linux-aws-7.0-doc-7.0.0 | linux-aws-7.0-source-7.0.0",
+          "linux-aws-7.0-tools",
+          "linux-headers-7.0.0-1012-aws",
+          "linux-perf"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-7.0.0-1012-aws"
+        ],
         "replaces": []
       }
     },
@@ -1929,7 +2023,7 @@
       "id": "9f3b34818c557f239b14",
       "name": "linux-azure-6.8",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1070.78",
       "architecture": "amd64",
       "summary": "Complete Linux kernel for Azure systems (vmlinuz).",
       "description": "Complete Linux kernel for Azure systems (vmlinuz).",
@@ -1940,13 +2034,13 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-cloud-tools-azure-6.8 (= 6.8.0-1065.73)",
-          "linux-headers-azure-6.8 (= 6.8.0-1065.73)",
-          "linux-image-azure-6.8 (= 6.8.0-1065.73)",
-          "linux-tools-azure-6.8 (= 6.8.0-1065.73)"
+          "linux-cloud-tools-azure-6.8 (= 6.8.0-1070.78)",
+          "linux-headers-azure-6.8 (= 6.8.0-1070.78)",
+          "linux-image-azure-6.8 (= 6.8.0-1070.78)",
+          "linux-tools-azure-6.8 (= 6.8.0-1070.78)"
         ],
         "recommends": [
-          "linux-tools-6.8.0-1065-azure",
+          "linux-tools-6.8.0-1070-azure",
           "ubuntu-kernel-accessories"
         ],
         "suggests": [],
@@ -2122,7 +2216,7 @@
       "id": "9f3f7dfff72771c03a07",
       "name": "gvfs-daemons",
       "version": "1.54.4",
-      "release": "0ubuntu1~24.04.2",
+      "release": "0ubuntu1~24.04.4",
       "architecture": "amd64",
       "summary": "userspace virtual filesystem - servers",
       "description": "userspace virtual filesystem - servers",
@@ -2131,11 +2225,11 @@
       "sourcePackage": "gvfs",
       "category": "libs",
       "repository": "official",
-      "installedSize": 532480,
+      "installedSize": 533504,
       "dependencies": {
         "requires": [
-          "gvfs-common (= 1.54.4-0ubuntu1~24.04.2)",
-          "gvfs-libs (= 1.54.4-0ubuntu1~24.04.2)",
+          "gvfs-common (= 1.54.4-0ubuntu1~24.04.4)",
+          "gvfs-libs (= 1.54.4-0ubuntu1~24.04.4)",
           "libc6 (>= 2.38)",
           "libglib2.0-0t64 (>= 2.79.0)",
           "libgudev-1.0-0 (>= 147)",
@@ -3276,6 +3370,30 @@
       }
     },
     {
+      "id": "9f63e860f96e334fcd63",
+      "name": "linux-objects-nvidia-535-vgpu-guest-open-6.8.0-1005-vmware",
+      "version": "6.8.0",
+      "release": "1005.5",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1005 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1005 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-vgpu-modules-vmware",
+      "category": "universe/kernel",
+      "repository": "official",
+      "installedSize": 17628160,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "9f640ee54d2d18b7cbc0",
       "name": "libstdc++-10-doc",
       "version": "10.5.0",
@@ -3454,7 +3572,7 @@
       "id": "9f67ecd1af99c155d57c",
       "name": "linux-image-nvidia-6.17",
       "version": "6.17.0",
-      "release": "1031.31",
+      "release": "1032.32",
       "architecture": "amd64",
       "summary": "NVIDIA Linux kernel image",
       "description": "NVIDIA Linux kernel image",
@@ -3468,8 +3586,8 @@
           "amd64-microcode",
           "intel-microcode",
           "linux-firmware",
-          "linux-image-6.17.0-1031-nvidia",
-          "linux-modules-nvidia-fs-6.17.0-1031-nvidia"
+          "linux-image-6.17.0-1032-nvidia",
+          "linux-modules-nvidia-fs-6.17.0-1032-nvidia"
         ],
         "recommends": [
           "thermald"
@@ -3479,7 +3597,7 @@
           "ivsc-modules (= 0~git202311021215.73a044d9)",
           "spl-modules (= 2.3.4-1ubuntu2)",
           "v4l2loopback-modules (= 0.15.0-0ubuntu2.1)",
-          "virtualbox-guest-modules (= 6.17.0-1031)",
+          "virtualbox-guest-modules (= 6.17.0-1032)",
           "wireguard-modules (= 1.0.0)",
           "zfs-modules (= 2.3.4-1ubuntu2)"
         ],
@@ -4073,6 +4191,30 @@
       }
     },
     {
+      "id": "9f7a08186cc394695be1",
+      "name": "linux-tools-6.8.0-1065-azure-fde",
+      "version": "6.8.0",
+      "release": "1065.72",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 6.8.0-1065",
+      "description": "Linux kernel version specific tools for version 6.8.0-1065",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure-fde",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 530432,
+      "dependencies": {
+        "requires": [
+          "linux-azure-fde-tools-6.8.0-1065"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "9f7a7f739027ebdbb20f",
       "name": "linux-modules-nvidia-580-server-6.8.0-1049-nvidia",
       "version": "6.8.0",
@@ -4656,32 +4798,32 @@
       "id": "9f8d010c0fe779fc5b32",
       "name": "language-pack-gnome-ne-base",
       "epoch": "1",
-      "version": "24.04+20260127",
+      "version": "24.04+20260905",
       "architecture": "all",
       "summary": "GNOME translations for language Nepali",
       "description": "GNOME translations for language Nepali",
       "maintainer": "Language pack maintainers <language-packs@ubuntu.com>",
       "category": "translations",
       "repository": "official",
-      "installedSize": 4845568,
+      "installedSize": 4869120,
       "dependencies": {
         "requires": [
-          "language-pack-gnome-ne (>= 1:24.04+20260127)",
+          "language-pack-gnome-ne (>= 1:24.04+20260905)",
           "locales (>= 2.3.6)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "language-pack-gnome-ne (<< 1:24.04+20260127)"
+          "language-pack-gnome-ne (<< 1:24.04+20260905)"
         ],
         "replaces": [
-          "language-pack-gnome-ne (<< 1:24.04+20260127)",
-          "language-pack-gnome-ne-base (<< 1:24.04+20260127)",
-          "language-pack-kde-ne (<< 1:24.04+20260127)",
-          "language-pack-kde-ne-base (<< 1:24.04+20260127)",
-          "language-pack-ne (<< 1:24.04+20260127)",
-          "language-pack-ne-base (<< 1:24.04+20260127)"
+          "language-pack-gnome-ne (<< 1:24.04+20260905)",
+          "language-pack-gnome-ne-base (<< 1:24.04+20260905)",
+          "language-pack-kde-ne (<< 1:24.04+20260905)",
+          "language-pack-kde-ne-base (<< 1:24.04+20260905)",
+          "language-pack-ne (<< 1:24.04+20260905)",
+          "language-pack-ne-base (<< 1:24.04+20260905)"
         ]
       }
     },
@@ -5322,7 +5464,7 @@
     {
       "id": "9f9c7d08b54f1bb83942",
       "name": "nvidia-kernel-source-595-open",
-      "version": "595.84",
+      "version": "595.91.07",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "NVIDIA kernel source package",
@@ -5332,7 +5474,7 @@
       "sourcePackage": "nvidia-graphics-drivers-595",
       "category": "multiverse/libs",
       "repository": "official",
-      "installedSize": 29648896,
+      "installedSize": 29665280,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -5440,7 +5582,7 @@
       "id": "9fa558e5eec88b67de13",
       "name": "linux-modules-nvidia-570-server-aws-lts-24.04",
       "version": "6.8.0",
-      "release": "1063.66",
+      "release": "1066.69",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the aws flavour (dummy transitional package)",
@@ -8208,7 +8350,7 @@
       "id": "9fe876c6937c0de1dd2a",
       "name": "linux-modules-nvidia-570-azure-fde-6.8",
       "version": "6.8.0",
-      "release": "1064.71",
+      "release": "1066.73",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the azure-fde flavour (dummy transitional package)",

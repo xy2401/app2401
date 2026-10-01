@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "3e",
   "items": [
@@ -230,6 +230,51 @@
           "libounit-ocaml-dev-87do3"
         ],
         "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3e0b7602a9debfd5214f",
+      "name": "linux-image-6.8.0-1065-gke",
+      "version": "6.8.0",
+      "release": "1065.73",
+      "architecture": "amd64",
+      "summary": "Signed kernel image gke",
+      "description": "Signed kernel image gke",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-gke",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15153152,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1065-gke"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo"
+        ],
+        "suggests": [
+          "fdutils",
+          "initramfs-tools | linux-initramfs-tool",
+          "linux-gke-doc-6.8.0 | linux-gke-source-6.8.0",
+          "linux-gke-tools",
+          "linux-headers-6.8.0-1065-gke"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1065-gke"
+        ],
         "replaces": []
       }
     },
@@ -510,6 +555,52 @@
       }
     },
     {
+      "id": "3e1227adead49487eae9",
+      "name": "linux-image-unsigned-7.0.0-1012-aws",
+      "version": "7.0.0",
+      "release": "1012.12~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 7.0.0",
+      "description": "Linux kernel image for version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-aws-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 17480704,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-7.0.0-1012-aws"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "bpftool",
+          "linux-aws-7.0-doc-7.0.0 | linux-aws-7.0-source-7.0.0",
+          "linux-aws-7.0-tools",
+          "linux-headers-7.0.0-1012-aws",
+          "linux-perf"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-7.0.0-1012-aws"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "3e128ae7c7485ebcdc6c",
       "name": "r-cran-desc",
       "version": "1.4.3",
@@ -547,7 +638,7 @@
       "id": "3e13d64a5c403cc7ef0a",
       "name": "linux-modules-nvidia-570-server-open-generic-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "30.30~24.04.1",
+      "release": "34.34~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server-open for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server-open for the generic flavour (dummy transitional package)",
@@ -705,6 +796,30 @@
           "gir1.2-libxml2-2.0",
           "gir1.2-webkit2-4.1",
           "libgepub-0.7-0 (>= 0.7.0)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3e153e6cfd648d782920",
+      "name": "linux-objects-nvidia-595-server-7.0.0-1019-nvidia",
+      "version": "7.0.0",
+      "release": "1019.19~24.04.2+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1019 (objects)",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1019 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 187142144,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -2275,6 +2390,28 @@
       }
     },
     {
+      "id": "3e403d048fc8305af002",
+      "name": "linux-modules-7.0.0-1012-oracle",
+      "version": "7.0.0",
+      "release": "1012.12~24.04.1",
+      "architecture": "amd64",
+      "summary": "Oracle Linux kernel extra modules for version 7.0.0 on DESC",
+      "description": "Oracle Linux kernel extra modules for version 7.0.0 on DESC",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-oracle-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 166165504,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3e40bc9bc243ff58d8e4",
       "name": "tldr",
       "version": "0.9.2",
@@ -2519,16 +2656,16 @@
     {
       "id": "3e4b9489bbb7595e3a2d",
       "name": "linux-modules-nvidia-575-server-gcp",
-      "version": "6.17.0",
-      "release": "1022.25",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the gcp flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-gcp-6.17",
+      "sourcePackage": "linux-restricted-modules-gcp-7.0",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 18432,
+      "installedSize": 24576,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-server-gcp"
@@ -4161,6 +4298,28 @@
       }
     },
     {
+      "id": "3e6f3d6329fdbbee50fb",
+      "name": "linux-buildinfo-6.8.0-146-generic",
+      "version": "6.8.0",
+      "release": "146.146",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 3394560,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3e6f63f61f9dcc35d9e9",
       "name": "cpp-13-sh4-linux-gnu",
       "version": "13.3.0",
@@ -4463,7 +4622,7 @@
       "id": "3e75d869a07a60df9ce6",
       "name": "lib32tinfo6",
       "version": "6.4+20240113",
-      "release": "1ubuntu2.1",
+      "release": "1ubuntu2.2",
       "architecture": "amd64",
       "summary": "shared low-level terminfo library for terminal handling (32-bit)",
       "description": "shared low-level terminfo library for terminal handling (32-bit)",
@@ -5202,7 +5361,7 @@
       "id": "3e8482ba6db73b83816d",
       "name": "python-sqlparse-doc",
       "version": "0.4.4",
-      "release": "1ubuntu0.1",
+      "release": "1ubuntu0.2",
       "architecture": "all",
       "summary": "documentation for non-validating SQL parser in Python",
       "description": "documentation for non-validating SQL parser in Python",
@@ -5348,6 +5507,58 @@
       }
     },
     {
+      "id": "3e88b4f4d9756b44fd55",
+      "name": "linux-image-6.8.0-1062-nvidia-lowlatency",
+      "version": "6.8.0",
+      "release": "1062.65.1",
+      "architecture": "amd64",
+      "summary": "Signed kernel image nvidia-lowlatency",
+      "description": "Signed kernel image nvidia-lowlatency",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-nvidia-lowlatency",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 14976000,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1062-nvidia-lowlatency"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-doc | linux-nvidia-lowlatency-source-6.8.0",
+          "linux-headers-6.8.0-1062-nvidia-lowlatency",
+          "linux-modules-extra-6.8.0-1062-nvidia-lowlatency",
+          "linux-nvidia-lowlatency-tools"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "mstflint-dkms",
+          "mstflint-modules",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1062-nvidia-lowlatency"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "3e8962cdbe4efc86ca9e",
       "name": "kdeplasma-applets-xrdesktop",
       "version": "0.15.0",
@@ -5455,7 +5666,7 @@
       "id": "3e8ce467213153e94b3c",
       "name": "linux-modules-nvidia-590-lowlatency",
       "version": "6.8.0",
-      "release": "138.138.1",
+      "release": "142.142.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the lowlatency flavour (dummy transitional package)",
@@ -6813,6 +7024,53 @@
         ],
         "provides": [],
         "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3ea823fd748cddef271b",
+      "name": "linux-image-unsigned-7.0.0-31-generic",
+      "version": "7.0.0",
+      "release": "31.31~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 7.0.0",
+      "description": "Linux kernel image for version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 17118208,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-7.0.0-31-generic"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "linux-headers-7.0.0-31-generic",
+          "linux-hwe-7.0-tools"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-7.0.0-31-generic"
+        ],
         "replaces": []
       }
     },
@@ -8919,7 +9177,7 @@
       "id": "3edc56f3e97345fe6a78",
       "name": "libegl-mesa0",
       "version": "25.2.8",
-      "release": "0ubuntu0.24.04.2",
+      "release": "0ubuntu0.24.04.3",
       "architecture": "amd64",
       "summary": "free implementation of the EGL API -- Mesa vendor library",
       "description": "free implementation of the EGL API -- Mesa vendor library",
@@ -8928,15 +9186,16 @@
       "sourcePackage": "mesa",
       "category": "libs",
       "repository": "official",
-      "installedSize": 400384,
+      "installedSize": 412672,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.38)",
           "libdrm2 (>= 2.4.125-1)",
           "libexpat1 (>= 2.0.1)",
-          "libgbm1 (= 25.2.8-0ubuntu0.24.04.2)",
+          "libgbm1 (= 25.2.8-0ubuntu0.24.04.3)",
           "libgcc-s1 (>= 3.4)",
           "libwayland-client0 (>= 1.20.0)",
+          "libwayland-server0 (>= 1.15.0)",
           "libx11-xcb1 (>= 2:1.8.7)",
           "libxcb-dri3-0 (>= 1.13)",
           "libxcb-present0",
@@ -8944,7 +9203,7 @@
           "libxcb-shm0",
           "libxcb-xfixes0",
           "libxcb1 (>= 1.6)",
-          "mesa-libgallium (= 25.2.8-0ubuntu0.24.04.2)"
+          "mesa-libgallium (= 25.2.8-0ubuntu0.24.04.3)"
         ],
         "recommends": [],
         "suggests": [],
@@ -9615,6 +9874,38 @@
       }
     },
     {
+      "id": "3eedde4af0aab9ba0fa1",
+      "name": "linux-headers-6.8.0-142-lowlatency",
+      "version": "6.8.0",
+      "release": "142.142.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel headers for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel headers for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-lowlatency",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 29713408,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libelf1t64 (>= 0.144)",
+          "libgcc-s1 (>= 4.2)",
+          "libssl3t64 (>= 3.0.0)",
+          "linux-lowlatency-headers-6.8.0-142",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "linux-headers",
+          "linux-headers-3.0"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3ef05233597435845b38",
       "name": "linux-objects-nvidia-535-6.8.0-1059-nvidia-lowlatency",
       "version": "6.8.0",
@@ -10109,7 +10400,7 @@
       "id": "3ef9cc9c257898d09967",
       "name": "libpfm4-dev",
       "version": "4.13.0+git32-g0d4ed0e",
-      "release": "1",
+      "release": "1ubuntu0.1",
       "architecture": "amd64",
       "summary": "Development files for the libpfm4 library",
       "description": "Development files for the libpfm4 library",
@@ -10121,7 +10412,7 @@
       "installedSize": 4531200,
       "dependencies": {
         "requires": [
-          "libpfm4 (= 4.13.0+git32-g0d4ed0e-1)"
+          "libpfm4 (= 4.13.0+git32-g0d4ed0e-1ubuntu0.1)"
         ],
         "recommends": [],
         "suggests": [],

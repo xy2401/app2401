@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "8d",
   "items": [
@@ -307,7 +307,7 @@
       "id": "8d05bcbf0c983fc6a29f",
       "name": "linux-modules-nvidia-590-open-gcp-6.8",
       "version": "6.8.0",
-      "release": "1066.74",
+      "release": "1070.78",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-open for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-open for the gcp flavour (dummy transitional package)",
@@ -315,7 +315,7 @@
       "sourcePackage": "linux-restricted-modules-gcp",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 24576,
+      "installedSize": 25600,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-595-open-gcp-6.8"
@@ -1591,7 +1591,7 @@
       "id": "8d24bcdae031331f2d4e",
       "name": "php8.3-soap",
       "version": "8.3.6",
-      "release": "0ubuntu0.24.04.10",
+      "release": "0ubuntu0.24.04.11",
       "architecture": "amd64",
       "summary": "SOAP module for PHP",
       "description": "SOAP module for PHP",
@@ -1606,7 +1606,7 @@
           "libc6 (>= 2.38)",
           "libxml2 (>= 2.7.4)",
           "php-common (>= 1:81~)",
-          "php8.3-common (= 8.3.6-0ubuntu0.24.04.10)",
+          "php8.3-common (= 8.3.6-0ubuntu0.24.04.11)",
           "ucf"
         ],
         "recommends": [],
@@ -3015,7 +3015,7 @@
       "id": "8d4c0f7c1ed952e45d63",
       "name": "linux-modules-nvidia-590-server-open-generic-hwe-24.04",
       "version": "7.0.0",
-      "release": "30.30~24.04.1",
+      "release": "34.34~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server-open for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server-open for the generic flavour (dummy transitional package)",
@@ -3557,7 +3557,7 @@
       "id": "8d5d3e82199897aca774",
       "name": "linux-modules-nvidia-550-open-nvidia-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "1061.64.1",
+      "release": "1064.67.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550-open for the nvidia-lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550-open for the nvidia-lowlatency flavour (dummy transitional package)",
@@ -4540,7 +4540,7 @@
       "id": "8d7715c56137360f0de6",
       "name": "linux-modules-nvidia-580-oem-6.17",
       "version": "6.17.0",
-      "release": "1032.32",
+      "release": "1032.32+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580 for the oem-6.17 flavour",
       "description": "Extra drivers for nvidia-580 for the oem-6.17 flavour",
@@ -4551,13 +4551,13 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-6.17.0-1032-oem (= 6.17.0-1032.32)",
-          "nvidia-kernel-common-580 (>= 580.173.02)"
+          "linux-modules-nvidia-580-6.17.0-1032-oem (= 6.17.0-1032.32+1)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-580 (= 580.173.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-580 (= 580.178.04-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -5195,6 +5195,30 @@
           "libwww-search-jobserve-perl",
           "libwww-search-pubmed-perl"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "8d846eda0556c941a753",
+      "name": "linux-modules-nvidia-575-server-vmware",
+      "version": "6.8.0",
+      "release": "1005.5+1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-575-server for the vmware flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-575-server for the vmware flavour (dummy transitional package)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware",
+      "category": "restricted/oldlibs",
+      "repository": "official",
+      "installedSize": 26624,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-580-server-vmware"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -6044,6 +6068,55 @@
         "replaces": [
           "libgig10"
         ]
+      }
+    },
+    {
+      "id": "8d98a590b8d16e063dff",
+      "name": "linux-image-unsigned-6.8.0-1005-vmware",
+      "version": "6.8.0",
+      "release": "1005.5",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-vmware",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15953920,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1005-vmware"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-headers-6.8.0-1005-vmware",
+          "linux-modules-extra-6.8.0-1005-vmware",
+          "linux-vmware-tools"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1005-vmware"
+        ],
+        "replaces": []
       }
     },
     {
@@ -7380,6 +7453,31 @@
       }
     },
     {
+      "id": "8dbdf94365ed716afa65",
+      "name": "linux-modules-extra-6.8.0-1049-gkeop",
+      "version": "6.8.0",
+      "release": "1049.53",
+      "architecture": "amd64",
+      "summary": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gkeop",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 114067456,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1049-gkeop | linux-image-unsigned-6.8.0-1049-gkeop",
+          "wireless-regdb"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "8dbe473c94f92c12b7e0",
       "name": "libkf5dbusaddons5",
       "version": "5.115.0",
@@ -7542,7 +7640,7 @@
       "id": "8dc0a38e82527249d3d0",
       "name": "linux-modules-nvidia-595-open-aws-6.8",
       "version": "6.8.0",
-      "release": "1063.66",
+      "release": "1066.69",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the aws-6.8 flavour",
       "description": "Extra drivers for nvidia-595-open for the aws-6.8 flavour",
@@ -7553,13 +7651,13 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-6.8.0-1063-aws (= 6.8.0-1063.66)",
-          "nvidia-kernel-common-595 (>= 595.84)"
+          "linux-modules-nvidia-595-open-6.8.0-1066-aws (= 6.8.0-1066.69)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-open (= 595.84-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-open (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -7570,7 +7668,7 @@
       "id": "8dc0a4025861bc78cd3a",
       "name": "linux-modules-nvidia-550-open-oracle-6.8",
       "version": "6.8.0",
-      "release": "1060.63",
+      "release": "1063.66",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550-open for the oracle flavour (dummy transitional package)",
@@ -7624,7 +7722,7 @@
       "id": "8dc1ed60f38a760a20f4",
       "name": "linux-oem-20.04",
       "version": "6.8.0",
-      "release": "138.138",
+      "release": "146.146",
       "architecture": "amd64",
       "summary": "Complete OEM Linux kernel and headers (dummy transitional package)",
       "description": "Complete OEM Linux kernel and headers (dummy transitional package)",
@@ -8201,32 +8299,32 @@
       "id": "8dd0b6059c8c1b354b6e",
       "name": "language-pack-kn-base",
       "epoch": "1",
-      "version": "24.04+20260127",
+      "version": "24.04+20260905",
       "architecture": "all",
       "summary": "translations for language Kannada",
       "description": "translations for language Kannada",
       "maintainer": "Language pack maintainers <language-packs@ubuntu.com>",
       "category": "translations",
       "repository": "official",
-      "installedSize": 360448,
+      "installedSize": 363520,
       "dependencies": {
         "requires": [
-          "language-pack-kn (>= 1:24.04+20260127)",
+          "language-pack-kn (>= 1:24.04+20260905)",
           "locales (>= 2.3.6)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "language-pack-kn (<< 1:24.04+20260127)"
+          "language-pack-kn (<< 1:24.04+20260905)"
         ],
         "replaces": [
-          "language-pack-gnome-kn (<< 1:24.04+20260127)",
-          "language-pack-gnome-kn-base (<< 1:24.04+20260127)",
-          "language-pack-kde-kn (<< 1:24.04+20260127)",
-          "language-pack-kde-kn-base (<< 1:24.04+20260127)",
-          "language-pack-kn (<< 1:24.04+20260127)",
-          "language-pack-kn-base (<< 1:24.04+20260127)"
+          "language-pack-gnome-kn (<< 1:24.04+20260905)",
+          "language-pack-gnome-kn-base (<< 1:24.04+20260905)",
+          "language-pack-kde-kn (<< 1:24.04+20260905)",
+          "language-pack-kde-kn-base (<< 1:24.04+20260905)",
+          "language-pack-kn (<< 1:24.04+20260905)",
+          "language-pack-kn-base (<< 1:24.04+20260905)"
         ]
       }
     },
@@ -9687,6 +9785,34 @@
           "r-cran-rhandsontable (>= 0.3.8)",
           "r-cran-shiny (>= 1.7.0)",
           "r-cran-shinydashboard (>= 0.7.2)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "8df5fa0c9db2f6355521",
+      "name": "linux-modules-nvidia-580-server-7.0.0-1012-aws",
+      "version": "7.0.0",
+      "release": "1012.12~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1012",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1012",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-aws-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-1012-aws | linux-image-unsigned-7.0.0-1012-aws",
+          "linux-objects-nvidia-580-server-7.0.0-1012-aws (= 7.0.0-1012.12~24.04.1+1)",
+          "linux-signatures-nvidia-7.0.0-1012-aws (= 7.0.0-1012.12~24.04.1+1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],

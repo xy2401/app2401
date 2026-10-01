@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "fedora",
   "shard": "d7",
   "items": [
@@ -175,21 +175,21 @@
       "id": "d7597ba85ead80c5631b",
       "name": "linux-firmware",
       "epoch": "0",
-      "version": "20260810",
+      "version": "20260916",
       "release": "1.fc44",
       "architecture": "noarch",
       "summary": "Firmware files used by the Linux kernel",
       "description": "This package includes firmware files required for some devices to\noperate.",
       "homepage": "http://www.kernel.org/",
-      "license": "GPL-1.0-or-later AND GPL-2.0-or-later AND MIT AND LicenseRef-Callaway-Redistributable-no-modification-permitted",
-      "sourcePackage": "linux-firmware-20260810-1.fc44.src.rpm",
+      "license": "GPL-1.0-or-later AND GPL-2.0-or-later AND MIT AND LicenseRef-Fedora-Firmware",
+      "sourcePackage": "linux-firmware-20260916-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 52436802,
-      "downloadSize": 52382454,
+      "installedSize": 34629026,
+      "downloadSize": 34526593,
       "dependencies": {
         "requires": [
-          "(linux-firmware = 20260810-1.fc44 if linux-firmware)",
-          "linux-firmware-whence = 20260810-1.fc44"
+          "(linux-firmware = 20260916-1.fc44 if linux-firmware)",
+          "linux-firmware-whence = 20260916-1.fc44"
         ],
         "recommends": [
           "amd-gpu-firmware",
@@ -208,31 +208,83 @@
         ],
         "suggests": [],
         "provides": [
-          "linux-firmware = 20260810-1.fc44"
+          "linux-firmware = 20260916-1.fc44"
         ],
         "conflicts": [],
         "replaces": []
       }
     },
     {
+      "id": "d7662859674710057701",
+      "name": "environment-modules",
+      "epoch": "0",
+      "version": "5.6.2",
+      "release": "1.fc44",
+      "architecture": "amd64",
+      "summary": "Provides dynamic modification of a user's environment",
+      "description": "The Environment Modules package provides for the dynamic modification of\na user's environment via modulefiles.\n\nEach modulefile contains the information needed to configure the shell\nfor an application. Once the Modules package is initialized, the\nenvironment can be modified on a per-module basis using the module\ncommand which interprets modulefiles. Typically modulefiles instruct\nthe module command to alter or set shell environment variables such as\nPATH, MANPATH, etc. modulefiles may be shared by many users on a system\nand users may have their own collection to supplement or replace the\nshared modulefiles.\n\nModules can be loaded and unloaded dynamically and atomically, in an\nclean fashion. All popular shells are supported, including bash, ksh,\nzsh, sh, csh, tcsh, as well as some scripting languages such as perl.\n\nModules are useful in managing different versions of applications.\nModules can also be bundled into meta-modules that will load an entire\nsuite of different applications.\n\nNOTE: You will need to get a new shell after installing this package to\nhave access to the module alias.",
+      "homepage": "https://envmodules.io",
+      "license": "GPL-2.0-or-later",
+      "sourcePackage": "environment-modules-5.6.2-1.fc44.src.rpm",
+      "repository": "updates",
+      "installedSize": 1973990,
+      "downloadSize": 822187,
+      "dependencies": {
+        "requires": [
+          "/bin/sh",
+          "/usr/bin/bash",
+          "/usr/bin/sh",
+          "/usr/bin/tclsh",
+          "/usr/bin/update-alternatives",
+          "coreutils",
+          "emacs-filesystem >= 30.2",
+          "less",
+          "libc.so.6(GLIBC_2.4)(64bit)",
+          "man-db",
+          "procps-ng",
+          "rtld(GNU_HASH)",
+          "sed",
+          "tcl",
+          "util-linux-core",
+          "vim-filesystem"
+        ],
+        "recommends": [
+          "nagelfar"
+        ],
+        "suggests": [],
+        "provides": [
+          "config(environment-modules) = 5.6.2-1.fc44",
+          "environment(modules)",
+          "environment-modules = 5.6.2-1.fc44",
+          "environment-modules(x86-64) = 5.6.2-1.fc44",
+          "libtclenvmodules.so()(64bit)",
+          "rpm_macro(_modulesdir)"
+        ],
+        "conflicts": [],
+        "replaces": [
+          "environment-modules-compat <= 4.8.99"
+        ]
+      }
+    },
+    {
       "id": "d7894f06ce108734fe64",
       "name": "kf6-kwidgetsaddons-devel",
       "epoch": "0",
-      "version": "6.29.0",
+      "version": "6.30.0",
       "release": "1.fc44",
       "architecture": "amd64",
       "summary": "Development files for kf6-kwidgetsaddons",
       "description": "The kf6-kwidgetsaddons-devel package contains libraries and header files for\ndeveloping applications that use kf6-kwidgetsaddons.",
       "homepage": "https://invent.kde.org/frameworks/kwidgetsaddons",
       "license": "BSD-3-Clause AND CC0-1.0 AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-2.1-or-later AND LGPL-3.0-only AND LGPL-3.0-or-later",
-      "sourcePackage": "kf6-kwidgetsaddons-6.29.0-1.fc44.src.rpm",
+      "sourcePackage": "kf6-kwidgetsaddons-6.30.0-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 1725576,
-      "downloadSize": 239615,
+      "installedSize": 1725649,
+      "downloadSize": 239629,
       "dependencies": {
         "requires": [
           "cmake-filesystem(x86-64)",
-          "kf6-kwidgetsaddons = 6.29.0-1.fc44",
+          "kf6-kwidgetsaddons = 6.30.0-1.fc44",
           "libKF6WidgetsAddons.so.6()(64bit)",
           "libQt6Core.so.6()(64bit)",
           "libQt6Core.so.6(Qt_6)(64bit)",
@@ -250,10 +302,10 @@
         "recommends": [],
         "suggests": [],
         "provides": [
-          "cmake(KF6WidgetsAddons) = 6.29.0",
-          "cmake(kf6widgetsaddons) = 6.29.0",
-          "kf6-kwidgetsaddons-devel = 6.29.0-1.fc44",
-          "kf6-kwidgetsaddons-devel(x86-64) = 6.29.0-1.fc44"
+          "cmake(KF6WidgetsAddons) = 6.30.0",
+          "cmake(kf6widgetsaddons) = 6.30.0",
+          "kf6-kwidgetsaddons-devel = 6.30.0-1.fc44",
+          "kf6-kwidgetsaddons-devel(x86-64) = 6.30.0-1.fc44"
         ],
         "conflicts": [],
         "replaces": []

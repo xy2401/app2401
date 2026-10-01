@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "14",
   "items": [
@@ -1956,7 +1956,7 @@
       "id": "143065aaa62e923d8f90",
       "name": "libgles2-mesa-dev",
       "version": "25.2.8",
-      "release": "0ubuntu0.24.04.2",
+      "release": "0ubuntu0.24.04.3",
       "architecture": "amd64",
       "summary": "transitional dummy package",
       "description": "transitional dummy package",
@@ -2404,7 +2404,7 @@
       "id": "1439b20a28831816d7c7",
       "name": "linux-modules-iwlwifi-azure-6.8",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1068.76",
       "architecture": "amd64",
       "summary": "Extra drivers for iwlwifi for the azure flavour",
       "description": "Extra drivers for iwlwifi for the azure flavour",
@@ -2415,7 +2415,7 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-modules-iwlwifi-6.8.0-1065-azure"
+          "linux-modules-iwlwifi-6.8.0-1068-azure"
         ],
         "recommends": [],
         "suggests": [],
@@ -2619,7 +2619,7 @@
       "id": "143e29cfd7fd604c0979",
       "name": "linux-modules-nvidia-590-generic-7.0",
       "version": "7.0.0",
-      "release": "30.30~24.04.1",
+      "release": "34.34~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the generic flavour (dummy transitional package)",
@@ -2903,10 +2903,38 @@
       }
     },
     {
+      "id": "1445062f710fe5ab9edd",
+      "name": "linux-modules-nvidia-580-server-6.8.0-1064-ibm",
+      "version": "6.8.0",
+      "release": "1064.65+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 28672,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1064-ibm | linux-image-unsigned-6.8.0-1064-ibm",
+          "linux-objects-nvidia-580-server-6.8.0-1064-ibm (= 6.8.0-1064.65+1)",
+          "linux-signatures-nvidia-6.8.0-1064-ibm (= 6.8.0-1064.65+1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "1446d91ee56d847062fc",
       "name": "language-pack-gu-base",
       "epoch": "1",
-      "version": "24.04+20260127",
+      "version": "24.04+20260905",
       "architecture": "all",
       "summary": "translations for language Gujarati",
       "description": "translations for language Gujarati",
@@ -2916,22 +2944,22 @@
       "installedSize": 335872,
       "dependencies": {
         "requires": [
-          "language-pack-gu (>= 1:24.04+20260127)",
+          "language-pack-gu (>= 1:24.04+20260905)",
           "locales (>= 2.3.6)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "language-pack-gu (<< 1:24.04+20260127)"
+          "language-pack-gu (<< 1:24.04+20260905)"
         ],
         "replaces": [
-          "language-pack-gnome-gu (<< 1:24.04+20260127)",
-          "language-pack-gnome-gu-base (<< 1:24.04+20260127)",
-          "language-pack-gu (<< 1:24.04+20260127)",
-          "language-pack-gu-base (<< 1:24.04+20260127)",
-          "language-pack-kde-gu (<< 1:24.04+20260127)",
-          "language-pack-kde-gu-base (<< 1:24.04+20260127)"
+          "language-pack-gnome-gu (<< 1:24.04+20260905)",
+          "language-pack-gnome-gu-base (<< 1:24.04+20260905)",
+          "language-pack-gu (<< 1:24.04+20260905)",
+          "language-pack-gu-base (<< 1:24.04+20260905)",
+          "language-pack-kde-gu (<< 1:24.04+20260905)",
+          "language-pack-kde-gu-base (<< 1:24.04+20260905)"
         ]
       }
     },
@@ -4113,6 +4141,34 @@
         ],
         "provides": [
           "python3-acme-abi-2 (= 2.9)"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "146772c52967e433544c",
+      "name": "linux-modules-nvidia-535-vgpu-guest-vmware-6.17",
+      "version": "6.17.0",
+      "release": "1004.4",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-535-vgpu-guest for the vmware-6.17 flavour",
+      "description": "Extra drivers for nvidia-535-vgpu-guest for the vmware-6.17 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-vgpu-modules-vmware-6.17",
+      "category": "universe/kernel",
+      "repository": "official",
+      "installedSize": 18432,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-535-vgpu-guest-6.17.0-1004-vmware (= 6.17.0-1004.4)",
+          "nvidia-kernel-common-535-vgpu-guest (>= 535.288.01)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-535-vgpu-guest (= 535.288.01-0ubuntu0.24.04.1)",
+          "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
         "replaces": []
@@ -5419,6 +5475,30 @@
       }
     },
     {
+      "id": "14863a61d3cbb9a0b6da",
+      "name": "linux-nvidia-lowlatency-headers-6.8.0-1063",
+      "version": "6.8.0",
+      "release": "1063.66.1",
+      "architecture": "all",
+      "summary": "Header files related to Linux kernel version 6.8.0",
+      "description": "Header files related to Linux kernel version 6.8.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-nvidia-lowlatency",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 86510592,
+      "dependencies": {
+        "requires": [
+          "coreutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "14873af86be69a9e4263",
       "name": "liblopsub-dev",
       "version": "1.0.4",
@@ -5630,7 +5710,7 @@
       "name": "libaudit-common",
       "epoch": "1",
       "version": "3.1.2",
-      "release": "2.1build1.1",
+      "release": "2.1ubuntu0.1",
       "architecture": "all",
       "summary": "Dynamic library for security auditing - common files",
       "description": "Dynamic library for security auditing - common files",
@@ -5639,7 +5719,7 @@
       "sourcePackage": "audit",
       "category": "libs",
       "repository": "official",
-      "installedSize": 17408,
+      "installedSize": 18432,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -5889,6 +5969,32 @@
           "gcc-10-base (= 10.5.0-4ubuntu2.1)",
           "libc6 (>= 2.34)",
           "libgomp1 (>= 6)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "149080270588cd5bbad7",
+      "name": "linux-modules-nvidia-595-open-6.8.0-1063-oracle",
+      "version": "6.8.0",
+      "release": "1063.66",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1063",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1063",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-oracle",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26358784,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1063-oracle | linux-image-unsigned-6.8.0-1063-oracle",
+          "nvidia-kernel-common-595 (<= 595.91.07-1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
@@ -6321,7 +6427,7 @@
       "id": "149fea224d62697241d0",
       "name": "linux-modules-nvidia-580-server-open-oracle-lts-24.04",
       "version": "6.8.0",
-      "release": "1060.63",
+      "release": "1063.66",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server-open for the oracle-lts-24.04 flavour",
       "description": "Extra drivers for nvidia-580-server-open for the oracle-lts-24.04 flavour",
@@ -6332,13 +6438,13 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-open-6.8.0-1060-oracle (= 6.8.0-1060.63)",
-          "nvidia-kernel-common-580-server (>= 580.173.02)"
+          "linux-modules-nvidia-580-server-open-6.8.0-1063-oracle (= 6.8.0-1063.66)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-580-server-open (= 580.173.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-580-server-open (= 580.178.04-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -8344,7 +8450,7 @@
       "id": "14d82dccab64a814ea17",
       "name": "msr-tools",
       "version": "1.3",
-      "release": "5build1",
+      "release": "5ubuntu0.1",
       "architecture": "amd64",
       "summary": "Utilities for modifying MSRs from userspace",
       "description": "Utilities for modifying MSRs from userspace",
@@ -9253,7 +9359,7 @@
       "id": "14f12f6dc02546140e88",
       "name": "language-pack-fi",
       "epoch": "1",
-      "version": "24.04+20260127",
+      "version": "24.04+20260905",
       "architecture": "all",
       "summary": "translation updates for language Finnish",
       "description": "translation updates for language Finnish",
@@ -9263,19 +9369,19 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "language-pack-fi-base (>= 1:24.04+20260127)"
+          "language-pack-fi-base (>= 1:24.04+20260905)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "language-pack-fi (<< 1:24.04+20260127)",
+          "language-pack-fi (<< 1:24.04+20260905)",
           "language-pack-fi-base",
-          "language-pack-gnome-fi (<< 1:24.04+20260127)",
-          "language-pack-gnome-fi-base (<< 1:24.04+20260127)",
-          "language-pack-kde-fi (<< 1:24.04+20260127)",
-          "language-pack-kde-fi-base (<< 1:24.04+20260127)"
+          "language-pack-gnome-fi (<< 1:24.04+20260905)",
+          "language-pack-gnome-fi-base (<< 1:24.04+20260905)",
+          "language-pack-kde-fi (<< 1:24.04+20260905)",
+          "language-pack-kde-fi-base (<< 1:24.04+20260905)"
         ]
       }
     },

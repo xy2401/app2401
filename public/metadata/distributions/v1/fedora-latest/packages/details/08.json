@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "fedora",
   "shard": "08",
   "items": [
@@ -87,17 +87,17 @@
       "id": "08310de850e4eba8a059",
       "name": "kmouth",
       "epoch": "0",
-      "version": "26.08.0",
+      "version": "26.08.1",
       "release": "1.fc44",
       "architecture": "amd64",
       "summary": "A program that speaks for you",
       "description": "Program that allows people who have lost their voice to let their\ncomputer speak for them.",
       "homepage": "https://apps.kde.org/kmouth/",
       "license": "GPL-2.0-or-later",
-      "sourcePackage": "kmouth-26.08.0-1.fc44.src.rpm",
+      "sourcePackage": "kmouth-26.08.1-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 4126999,
-      "downloadSize": 1934832,
+      "installedSize": 4122889,
+      "downloadSize": 1934312,
       "dependencies": {
         "requires": [
           "libKF6Completion.so.6()(64bit)",
@@ -135,8 +135,8 @@
         "provides": [
           "application()",
           "application(org.kde.kmouth.desktop)",
-          "kmouth = 26.08.0-1.fc44",
-          "kmouth(x86-64) = 26.08.0-1.fc44",
+          "kmouth = 26.08.1-1.fc44",
+          "kmouth(x86-64) = 26.08.1-1.fc44",
           "metainfo()",
           "metainfo(org.kde.kmouth.appdata.xml)"
         ],
@@ -309,17 +309,17 @@
       "id": "08720d0d1c5e0fa23ba3",
       "name": "postgresql-server",
       "epoch": "0",
-      "version": "18.4",
+      "version": "18.6",
       "release": "1.fc44",
       "architecture": "i686",
       "summary": "The programs needed to create and run a PostgreSQL server",
       "description": "PostgreSQL is an advanced Object-Relational database management system (DBMS).\nThe postgresql-server package contains the programs needed to create\nand run a PostgreSQL server, which will in turn allow you to create\nand maintain PostgreSQL databases.",
       "homepage": "http://www.postgresql.org/",
       "license": "PostgreSQL",
-      "sourcePackage": "postgresql18-18.4-1.fc44.src.rpm",
+      "sourcePackage": "postgresql18-18.6-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 34541920,
-      "downloadSize": 8314416,
+      "installedSize": 34605897,
+      "downloadSize": 8364800,
       "dependencies": {
         "requires": [
           "/bin/sh",
@@ -358,7 +358,7 @@
           "libz.so.1",
           "libz.so.1(ZLIB_1.2.3.3)",
           "libzstd.so.1",
-          "postgresql(x86-32) = 18.4-1.fc44",
+          "postgresql(x86-32) = 18.6-1.fc44",
           "rtld(GNU_HASH)",
           "systemd",
           "user(postgres)",
@@ -368,14 +368,14 @@
         "suggests": [],
         "provides": [
           "bundled(postgresql-setup) = 8.12",
-          "config(postgresql-server) = 18.4-1.fc44",
+          "config(postgresql-server) = 18.6-1.fc44",
           "group(postgres)",
-          "postgresql-server = 18.4-1.fc44",
+          "postgresql-server = 18.6-1.fc44",
           "postgresql-server(:MODULE_COMPAT_18)",
-          "postgresql-server(x86-32) = 18.4-1.fc44",
+          "postgresql-server(x86-32) = 18.6-1.fc44",
           "postgresql-server-any",
-          "postgresql18-server = 18.4-1.fc44",
-          "postgresql18-server(x86-32) = 18.4-1.fc44",
+          "postgresql18-server = 18.6-1.fc44",
+          "postgresql18-server(x86-32) = 18.6-1.fc44",
           "user(postgres) = dSBwb3N0Z3JlcyAyNiAnUG9zdGdyZVNRTCBTZXJ2ZXInIC92YXIvbGliL3Bnc3FsIC9iaW4vYmFzaAAA"
         ],
         "conflicts": [
@@ -384,6 +384,64 @@
         "replaces": [
           "postgresql18-server"
         ]
+      }
+    },
+    {
+      "id": "087479e2167198a825d3",
+      "name": "nagios",
+      "epoch": "0",
+      "version": "4.5.14",
+      "release": "1.fc44",
+      "architecture": "amd64",
+      "summary": "Host/service/network monitoring program",
+      "description": "Nagios is a program that will monitor hosts and services on your\nnetwork.  It has the ability to send email or page alerts when a\nproblem arises and when a problem is resolved.  Nagios is written\nin C and is designed to run under Linux (and some other *NIX\nvariants) as a background process, intermittently running checks\non various services that you specify.\n\nThe actual service checks are performed by separate \"plugin\" programs\nwhich return the status of the checks to Nagios. The plugins are\navailable at https://github.com/nagios-plugins/nagios-plugins\n\nThis package provides the core program, web interface, and documentation\nfiles for Nagios. Development files are built as a separate package.",
+      "homepage": "https://www.nagios.org/projects/nagios-core/",
+      "license": "GPL-2.0-only",
+      "sourcePackage": "nagios-4.5.14-1.fc44.src.rpm",
+      "repository": "updates",
+      "installedSize": 7672507,
+      "downloadSize": 2253915,
+      "dependencies": {
+        "requires": [
+          "(nagios-selinux if selinux-policy-targeted)",
+          "/bin/sh",
+          "/usr/bin/mail",
+          "filesystem(unmerged-sbin-symlinks)",
+          "group(apache)",
+          "group(nagios)",
+          "libc.so.6(GLIBC_2.38)(64bit)",
+          "libcrypto.so.3()(64bit)",
+          "libcrypto.so.3(OPENSSL_3.0.0)(64bit)",
+          "libgd.so.3()(64bit)",
+          "libm.so.6()(64bit)",
+          "libm.so.6(GLIBC_2.2.5)(64bit)",
+          "libm.so.6(GLIBC_2.38)(64bit)",
+          "libssl.so.3()(64bit)",
+          "libssl.so.3(OPENSSL_3.0.0)(64bit)",
+          "nagios-common",
+          "nagios-plugins-disk",
+          "nagios-plugins-http",
+          "nagios-plugins-load",
+          "nagios-plugins-ping",
+          "nagios-plugins-procs",
+          "nagios-plugins-ssh",
+          "nagios-plugins-swap",
+          "nagios-plugins-users",
+          "php",
+          "rtld(GNU_HASH)",
+          "user(nagios)"
+        ],
+        "recommends": [
+          "nagios-httpd"
+        ],
+        "suggests": [],
+        "provides": [
+          "config(nagios) = 4.5.14-1.fc44",
+          "nagios = 4.5.14-1.fc44",
+          "nagios(x86-64) = 4.5.14-1.fc44"
+        ],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {

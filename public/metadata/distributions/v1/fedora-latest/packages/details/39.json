@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "fedora",
   "shard": "39",
   "items": [
@@ -72,6 +72,42 @@
           "bundled(openssl) = 3.5.4",
           "sslscan = 2.2.1-3.fc44",
           "sslscan(x86-64) = 2.2.1-3.fc44"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "395552d77dfc8603660c",
+      "name": "openldap-clients",
+      "epoch": "0",
+      "version": "2.6.14",
+      "release": "1.fc44",
+      "architecture": "amd64",
+      "summary": "LDAP client utilities",
+      "description": "OpenLDAP is an open-source suite of LDAP (Lightweight Directory Access\nProtocol) applications and development tools. LDAP is a set of\nprotocols for accessing directory services (usually phone book style\ninformation, but other information is possible) over the Internet,\nsimilar to the way DNS (Domain Name System) information is propagated\nover the Internet. The openldap-clients package contains the client\nprograms needed for accessing and modifying OpenLDAP directories.",
+      "homepage": "http://www.openldap.org/",
+      "license": "OLDAP-2.8",
+      "sourcePackage": "openldap-2.6.14-1.fc44.src.rpm",
+      "repository": "updates",
+      "installedSize": 682373,
+      "downloadSize": 182094,
+      "dependencies": {
+        "requires": [
+          "libc.so.6(GLIBC_2.38)(64bit)",
+          "liblber.so.2()(64bit)",
+          "liblber.so.2(OPENLDAP_2.200)(64bit)",
+          "libldap.so.2()(64bit)",
+          "libldap.so.2(OPENLDAP_2.200)(64bit)",
+          "libsasl2.so.3()(64bit)",
+          "openldap(x86-64) = 2.6.14-1.fc44",
+          "rtld(GNU_HASH)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "openldap-clients = 2.6.14-1.fc44",
+          "openldap-clients(x86-64) = 2.6.14-1.fc44"
         ],
         "conflicts": [],
         "replaces": []
@@ -424,17 +460,17 @@
       "id": "39d0720ba8923b56fb62",
       "name": "dovecot",
       "epoch": "1",
-      "version": "2.4.4",
+      "version": "2.4.5",
       "release": "1.fc44",
       "architecture": "amd64",
       "summary": "Secure imap and pop3 server",
       "description": "Dovecot is an IMAP server for Linux/UNIX-like systems, written with security\nprimarily in mind.  It also contains a small POP3 server.  It supports mail\nin either of maildir or mbox formats.\n\nThe SQL drivers and authentication plug-ins are in their subpackages.",
       "homepage": "https://www.dovecot.org/",
       "license": "MIT AND LGPL-2.1-only",
-      "sourcePackage": "dovecot-2.4.4-1.fc44.src.rpm",
+      "sourcePackage": "dovecot-2.4.5-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 14156255,
-      "downloadSize": 4216203,
+      "installedSize": 14492197,
+      "downloadSize": 4272945,
       "dependencies": {
         "requires": [
           "/bin/sh",
@@ -503,9 +539,9 @@
         "recommends": [],
         "suggests": [],
         "provides": [
-          "config(dovecot) = 1:2.4.4-1.fc44",
-          "dovecot = 1:2.4.4-1.fc44",
-          "dovecot(x86-64) = 1:2.4.4-1.fc44",
+          "config(dovecot) = 1:2.4.5-1.fc44",
+          "dovecot = 1:2.4.5-1.fc44",
+          "dovecot(x86-64) = 1:2.4.5-1.fc44",
           "group(dovecot)",
           "group(dovecot) = ZyBkb3ZlY290IDk3",
           "group(dovenull)",
@@ -809,17 +845,17 @@
       "id": "39f9eea54f00cf5f8aa2",
       "name": "mesa-dri-drivers",
       "epoch": "0",
-      "version": "26.1.8",
+      "version": "26.2.3",
       "release": "1.fc44",
       "architecture": "i686",
       "summary": "Mesa-based DRI drivers",
       "description": "Mesa-based DRI drivers.",
       "homepage": "https://mesa3d.org",
       "license": "MIT AND BSD-3-Clause AND SGI-B-2.0",
-      "sourcePackage": "mesa-26.1.8-1.fc44.src.rpm",
+      "sourcePackage": "mesa-26.2.3-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 58396441,
-      "downloadSize": 14800436,
+      "installedSize": 59403885,
+      "downloadSize": 15127528,
       "dependencies": {
         "requires": [
           "ld-linux.so.2",
@@ -877,20 +913,20 @@
           "libz.so.1",
           "libz.so.1(ZLIB_1.2.3.3)",
           "libzstd.so.1",
-          "mesa-filesystem(x86-32) = 26.1.8-1.fc44",
-          "mesa-libgbm(x86-32) = 26.1.8-1.fc44",
+          "mesa-filesystem(x86-32) = 26.2.3-1.fc44",
+          "mesa-libgbm(x86-32) = 26.2.3-1.fc44",
           "rtld(GNU_HASH)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
           "libdril_dri.so",
-          "libgallium-26.1.8.so",
-          "libgallium-26.1.8.so(libgallium-26.1.8.so)",
-          "mesa-dri-drivers = 26.1.8-1.fc44",
-          "mesa-dri-drivers(x86-32) = 26.1.8-1.fc44",
-          "mesa-va-drivers = 26.1.8-1.fc44",
-          "mesa-va-drivers(x86-32) = 26.1.8-1.fc44"
+          "libgallium-26.2.3.so",
+          "libgallium-26.2.3.so(libgallium-26.2.3.so)",
+          "mesa-dri-drivers = 26.2.3-1.fc44",
+          "mesa-dri-drivers(x86-32) = 26.2.3-1.fc44",
+          "mesa-va-drivers = 26.2.3-1.fc44",
+          "mesa-va-drivers(x86-32) = 26.2.3-1.fc44"
         ],
         "conflicts": [],
         "replaces": [

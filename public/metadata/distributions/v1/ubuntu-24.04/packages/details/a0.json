@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "a0",
   "items": [
@@ -383,10 +383,10 @@
       "id": "a00cce5b988aad826444",
       "name": "linux-modules-nvidia-535-server-oracle-edge",
       "version": "7.0.0",
-      "release": "1006.6~24.04.3",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-535-server for the oracle-edge flavour",
-      "description": "Extra drivers for nvidia-535-server for the oracle-edge flavour",
+      "summary": "Extra drivers for nvidia-535-server for the oracle flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-535-server for the oracle flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-oracle-7.0",
       "category": "restricted/kernel",
@@ -394,15 +394,11 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-535-server-7.0.0-1006-oracle (= 7.0.0-1006.6~24.04.3)",
-          "nvidia-kernel-common-535-server (>= 535.309.01)"
+          "linux-modules-nvidia-580-server-oracle-edge"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-535-server (= 535.309.01-0ubuntu0.24.04.1)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -728,7 +724,7 @@
       "id": "a0199614345346e73df4",
       "name": "linux-modules-nvidia-590-server-open-nvidia-6.8",
       "version": "6.8.0",
-      "release": "1061.64",
+      "release": "1064.67",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server-open for the nvidia flavour (dummy transitional package)",
@@ -846,7 +842,7 @@
       "id": "a01d16ba96e4890879d1",
       "name": "linux-modules-nvidia-590-server-aws-6.8",
       "version": "6.8.0",
-      "release": "1063.66",
+      "release": "1066.69",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server for the aws flavour (dummy transitional package)",
@@ -1039,16 +1035,16 @@
     {
       "id": "a0201d83f0b9b27e4ae6",
       "name": "linux-modules-nvidia-590-open-gcp",
-      "version": "6.17.0",
-      "release": "1022.25",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-open for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-open for the gcp flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-gcp-6.17",
+      "sourcePackage": "linux-restricted-modules-gcp-7.0",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 18432,
+      "installedSize": 24576,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-595-open-gcp"
@@ -1064,7 +1060,7 @@
       "id": "a020266579fd18ddbb0b",
       "name": "gnome-shell",
       "version": "46.0",
-      "release": "0ubuntu6~24.04.14",
+      "release": "0ubuntu6~24.04.15",
       "architecture": "amd64",
       "summary": "graphical shell for the GNOME desktop",
       "description": "graphical shell for the GNOME desktop",
@@ -1105,7 +1101,7 @@
           "gir1.2-upowerglib-1.0",
           "gir1.2-webkit-6.0",
           "gnome-settings-daemon (>= 40~)",
-          "gnome-shell-common (= 46.0-0ubuntu6~24.04.14)",
+          "gnome-shell-common (= 46.0-0ubuntu6~24.04.15)",
           "gsettings-desktop-schemas (>= 46~beta)",
           "gstreamer1.0-pipewire (>= 0.3.10)",
           "libatk-bridge2.0-0t64 (>= 2.5.3)",
@@ -2071,6 +2067,52 @@
       }
     },
     {
+      "id": "a0368124f547bc427759",
+      "name": "linux-image-7.0.0-1013-aws",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1",
+      "architecture": "amd64",
+      "summary": "Signed kernel image aws",
+      "description": "Signed kernel image aws",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-aws-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 16978944,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-7.0.0-1013-aws"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "bpftool",
+          "linux-aws-7.0-doc-7.0.0 | linux-aws-7.0-source-7.0.0",
+          "linux-aws-7.0-tools",
+          "linux-headers-7.0.0-1013-aws",
+          "linux-perf"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-7.0.0-1013-aws"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "a037272b162bb2cafc9e",
       "name": "python3-osmapi",
       "version": "4.0.0+ds",
@@ -2808,7 +2850,7 @@
       "id": "a046211816393a2b6df9",
       "name": "linux-modules-nvidia-590-gcp-6.8",
       "version": "6.8.0",
-      "release": "1066.74",
+      "release": "1070.78",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the gcp flavour (dummy transitional package)",
@@ -2816,7 +2858,7 @@
       "sourcePackage": "linux-restricted-modules-gcp",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 24576,
+      "installedSize": 25600,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-595-gcp-6.8"
@@ -3220,10 +3262,38 @@
       }
     },
     {
+      "id": "a04f4d2c411f4c552e75",
+      "name": "linux-modules-nvidia-580-server-6.8.0-1067-gcp",
+      "version": "6.8.0",
+      "release": "1067.75+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1067",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1067",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-gcp",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 33792,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1067-gcp | linux-image-unsigned-6.8.0-1067-gcp",
+          "linux-objects-nvidia-580-server-6.8.0-1067-gcp (= 6.8.0-1067.75+1)",
+          "linux-signatures-nvidia-6.8.0-1067-gcp (= 6.8.0-1067.75+1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "a04fd643c60f6176b076",
       "name": "linux-objects-nvidia-580-server-open-7.0.0-1006-oracle",
       "version": "7.0.0",
-      "release": "1006.6~24.04.3",
+      "release": "1006.6~24.04.3+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 7.0.0-1006 (objects)",
       "description": "Linux kernel nvidia modules for version 7.0.0-1006 (objects)",
@@ -3231,7 +3301,7 @@
       "sourcePackage": "linux-restricted-modules-oracle-7.0",
       "category": "universe/kernel",
       "repository": "official",
-      "installedSize": 25696256,
+      "installedSize": 25710592,
       "dependencies": {
         "requires": [
           "binutils"
@@ -3412,7 +3482,7 @@
       "id": "a053914eae628847e746",
       "name": "linux-modules-nvidia-610-azure-edge",
       "version": "7.0.0",
-      "release": "1008.8~24.04.2+1",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-610 for the azure-edge flavour",
       "description": "Extra drivers for nvidia-610 for the azure-edge flavour",
@@ -3423,13 +3493,13 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-7.0.0-1008-azure (= 7.0.0-1008.8~24.04.2+1)",
-          "nvidia-kernel-common-610 (>= 610.43.02)"
+          "linux-modules-nvidia-610-7.0.0-1014-azure (= 7.0.0-1014.14~24.04.1+1)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-610 (= 610.43.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -4611,7 +4681,7 @@
       "id": "a06ffc2c2fcc92de782e",
       "name": "linux-tools-gkeop",
       "version": "6.8.0",
-      "release": "1048.52",
+      "release": "1051.55",
       "architecture": "amd64",
       "summary": "GKEOP Linux kernel tools",
       "description": "GKEOP Linux kernel tools",
@@ -4622,7 +4692,7 @@
       "installedSize": 10240,
       "dependencies": {
         "requires": [
-          "linux-tools-6.8.0-1048-gkeop"
+          "linux-tools-6.8.0-1051-gkeop"
         ],
         "recommends": [],
         "suggests": [],
@@ -5311,25 +5381,25 @@
     {
       "id": "a07fd542e6f9bad85abf",
       "name": "linux-modules-nvidia-595-open-azure-fde",
-      "version": "6.17.0",
-      "release": "1018.18~24.04.1+1",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the azure-fde flavour",
       "description": "Extra drivers for nvidia-595-open for the azure-fde flavour",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-azure-fde-6.17",
+      "sourcePackage": "linux-restricted-modules-azure-fde-7.0",
       "category": "restricted/kernel",
       "repository": "official",
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-6.17.0-1018-azure-fde (= 6.17.0-1018.18~24.04.1+1)",
-          "nvidia-kernel-common-595 (>= 595.84)"
+          "linux-modules-nvidia-595-open-7.0.0-1013-azure-fde (= 7.0.0-1013.13~24.04.1+1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-open (= 595.84-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-open (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -5602,7 +5672,7 @@
       "id": "a084dcbf0da09d5ceb34",
       "name": "linux-modules-iwlwifi-ibm",
       "version": "6.8.0",
-      "release": "1063.64",
+      "release": "1066.67",
       "architecture": "amd64",
       "summary": "Extra drivers for iwlwifi for the ibm flavour",
       "description": "Extra drivers for iwlwifi for the ibm flavour",
@@ -5613,7 +5683,7 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-modules-iwlwifi-6.8.0-1063-ibm"
+          "linux-modules-iwlwifi-6.8.0-1066-ibm"
         ],
         "recommends": [],
         "suggests": [],
@@ -5918,6 +5988,34 @@
       "installedSize": 1650688,
       "dependencies": {
         "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "a08e9a996729287f5f17",
+      "name": "linux-modules-nvidia-580-server-6.8.0-1066-aws",
+      "version": "6.8.0",
+      "release": "1066.69",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1066",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1066",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-aws",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 33792,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1066-aws | linux-image-unsigned-6.8.0-1066-aws",
+          "linux-objects-nvidia-580-server-6.8.0-1066-aws (= 6.8.0-1066.69)",
+          "linux-signatures-nvidia-6.8.0-1066-aws (= 6.8.0-1066.69)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
+        ],
         "recommends": [],
         "suggests": [],
         "provides": [],
@@ -6287,32 +6385,32 @@
       "id": "a0972c2d45c033b1a3f0",
       "name": "language-pack-gnome-th-base",
       "epoch": "1",
-      "version": "24.04+20260127",
+      "version": "24.04+20260905",
       "architecture": "all",
       "summary": "GNOME translations for language Thai",
       "description": "GNOME translations for language Thai",
       "maintainer": "Language pack maintainers <language-packs@ubuntu.com>",
       "category": "translations",
       "repository": "official",
-      "installedSize": 6237184,
+      "installedSize": 6649856,
       "dependencies": {
         "requires": [
-          "language-pack-gnome-th (>= 1:24.04+20260127)",
+          "language-pack-gnome-th (>= 1:24.04+20260905)",
           "locales (>= 2.3.6)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "language-pack-gnome-th (<< 1:24.04+20260127)"
+          "language-pack-gnome-th (<< 1:24.04+20260905)"
         ],
         "replaces": [
-          "language-pack-gnome-th (<< 1:24.04+20260127)",
-          "language-pack-gnome-th-base (<< 1:24.04+20260127)",
-          "language-pack-kde-th (<< 1:24.04+20260127)",
-          "language-pack-kde-th-base (<< 1:24.04+20260127)",
-          "language-pack-th (<< 1:24.04+20260127)",
-          "language-pack-th-base (<< 1:24.04+20260127)"
+          "language-pack-gnome-th (<< 1:24.04+20260905)",
+          "language-pack-gnome-th-base (<< 1:24.04+20260905)",
+          "language-pack-kde-th (<< 1:24.04+20260905)",
+          "language-pack-kde-th-base (<< 1:24.04+20260905)",
+          "language-pack-th (<< 1:24.04+20260905)",
+          "language-pack-th-base (<< 1:24.04+20260905)"
         ]
       }
     },
@@ -6712,7 +6810,7 @@
       "id": "a0a31ed9980c1b0d566d",
       "name": "lib32ncurses6",
       "version": "6.4+20240113",
-      "release": "1ubuntu2.1",
+      "release": "1ubuntu2.2",
       "architecture": "amd64",
       "summary": "shared libraries for terminal handling (32-bit)",
       "description": "shared libraries for terminal handling (32-bit)",
@@ -6724,7 +6822,7 @@
       "installedSize": 326656,
       "dependencies": {
         "requires": [
-          "lib32tinfo6 (= 6.4+20240113-1ubuntu2.1)",
+          "lib32tinfo6 (= 6.4+20240113-1ubuntu2.2)",
           "libc6-i386 (>= 2.7)"
         ],
         "recommends": [],
@@ -7773,6 +7871,34 @@
       }
     },
     {
+      "id": "a0c69720c369a4b08782",
+      "name": "linux-modules-nvidia-580-server-open-vmware-6.8",
+      "version": "6.8.0",
+      "release": "1005.5+1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-580-server-open for the vmware-6.8 flavour",
+      "description": "Extra drivers for nvidia-580-server-open for the vmware-6.8 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26624,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-580-server-open-6.8.0-1005-vmware (= 6.8.0-1005.5+1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-580-server-open (= 580.178.04-0ubuntu0.24.04.1)",
+          "nvidia-prebuilt-kernel"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "a0c72c6ba9281600c76a",
       "name": "linux-image-6.8.0-71-generic",
       "version": "6.8.0",
@@ -7954,6 +8080,30 @@
         "provides": [
           "libghc-glob-prof-0.10.2-86891"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "a0ca367de2a04f1d1e91",
+      "name": "linux-signatures-nvidia-6.8.0-1066-azure-fde",
+      "version": "6.8.0",
+      "release": "1066.73",
+      "architecture": "amd64",
+      "summary": "Linux kernel signatures for nvidia modules for version 6.8.0-1066-azure-fde",
+      "description": "Linux kernel signatures for nvidia modules for version 6.8.0-1066-azure-fde",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 58368,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1066-azure-fde | linux-image-unsigned-6.8.0-1066-azure-fde"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -9665,7 +9815,7 @@
       "id": "a0ff41cfe2fae2970d48",
       "name": "linux-modules-nvidia-610-ibm-6.8",
       "version": "6.8.0",
-      "release": "1063.64",
+      "release": "1066.67",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-610 for the ibm-6.8 flavour",
       "description": "Extra drivers for nvidia-610 for the ibm-6.8 flavour",
@@ -9676,13 +9826,13 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-6.8.0-1063-ibm (= 6.8.0-1063.64)",
-          "nvidia-kernel-common-610 (>= 610.43.02)"
+          "linux-modules-nvidia-610-6.8.0-1066-ibm (= 6.8.0-1066.67)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-610 (= 610.43.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],

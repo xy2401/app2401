@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "f3",
   "items": [
@@ -195,6 +195,32 @@
       }
     },
     {
+      "id": "f3048d11100f90742c6f",
+      "name": "linux-modules-nvidia-610-open-6.8.0-1064-ibm",
+      "version": "6.8.0",
+      "release": "1064.65+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26843136,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1064-ibm | linux-image-unsigned-6.8.0-1064-ibm",
+          "nvidia-kernel-common-610 (<= 610.57.04-1)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "f304a119c15155240df4",
       "name": "golang-github-bradleyjkemp-cupaloy-dev",
       "version": "2.7.0",
@@ -324,7 +350,7 @@
       "id": "f3086eb024b96d7366a9",
       "name": "linux-modules-nvidia-535-open-aws",
       "version": "7.0.0",
-      "release": "1011.11~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the aws flavour (dummy transitional package)",
@@ -3467,7 +3493,7 @@
       "id": "f3478762d237d39ef74f",
       "name": "language-pack-gnome-zh-hans",
       "epoch": "1",
-      "version": "24.04+20260127",
+      "version": "24.04+20260905",
       "architecture": "all",
       "summary": "GNOME translation updates for language Simplified Chinese",
       "description": "GNOME translation updates for language Simplified Chinese",
@@ -3477,7 +3503,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "language-pack-gnome-zh-hans-base (>= 1:24.04+20260127)",
+          "language-pack-gnome-zh-hans-base (>= 1:24.04+20260905)",
           "language-pack-zh-hans"
         ],
         "recommends": [],
@@ -3488,12 +3514,12 @@
         ],
         "replaces": [
           "language-pack-gnome-zh (<< 1:9.10)",
-          "language-pack-gnome-zh-hans (<< 1:24.04+20260127)",
+          "language-pack-gnome-zh-hans (<< 1:24.04+20260905)",
           "language-pack-gnome-zh-hans-base",
-          "language-pack-kde-zh-hans (<< 1:24.04+20260127)",
-          "language-pack-kde-zh-hans-base (<< 1:24.04+20260127)",
-          "language-pack-zh-hans (<< 1:24.04+20260127)",
-          "language-pack-zh-hans-base (<< 1:24.04+20260127)"
+          "language-pack-kde-zh-hans (<< 1:24.04+20260905)",
+          "language-pack-kde-zh-hans-base (<< 1:24.04+20260905)",
+          "language-pack-zh-hans (<< 1:24.04+20260905)",
+          "language-pack-zh-hans-base (<< 1:24.04+20260905)"
         ]
       }
     },
@@ -4037,6 +4063,51 @@
         "replaces": [
           "libliggghts3"
         ]
+      }
+    },
+    {
+      "id": "f3567c3250b7bfb224c5",
+      "name": "linux-image-6.8.0-1065-aws",
+      "version": "6.8.0",
+      "release": "1065.68",
+      "architecture": "amd64",
+      "summary": "Signed kernel image aws",
+      "description": "Signed kernel image aws",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-aws",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 14999552,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1065-aws"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-aws-doc-6.8.0 | linux-aws-source-6.8.0",
+          "linux-aws-tools",
+          "linux-headers-6.8.0-1065-aws"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1065-aws"
+        ],
+        "replaces": []
       }
     },
     {
@@ -5359,7 +5430,7 @@
     {
       "id": "f3735861c3acaac7c907",
       "name": "nvidia-utils-595-server",
-      "version": "595.71.05",
+      "version": "595.91.07",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "NVIDIA Server Driver support binaries",
@@ -5373,8 +5444,8 @@
       "dependencies": {
         "requires": [
           "libc6 (>= 2.34)",
-          "libnvidia-compute-595-server (>= 595.71.05)",
-          "nvidia-kernel-common-595-server-595.71.05"
+          "libnvidia-compute-595-server (>= 595.91.07)",
+          "nvidia-kernel-common-595-server-595.91.07"
         ],
         "recommends": [],
         "suggests": [
@@ -5952,6 +6023,30 @@
       "installedSize": 18194432,
       "dependencies": {
         "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "f389ffe27ed1154f257f",
+      "name": "linux-modules-nvidia-570-server-open-vmware-6.17",
+      "version": "6.17.0",
+      "release": "1004.4+2",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-570-server-open for the vmware flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-570-server-open for the vmware flavour (dummy transitional package)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware-6.17",
+      "category": "restricted/oldlibs",
+      "repository": "official",
+      "installedSize": 18432,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-580-server-open-vmware-6.17"
+        ],
         "recommends": [],
         "suggests": [],
         "provides": [],
@@ -7530,7 +7625,7 @@
       "id": "f3b48ad30bb4db846cb9",
       "name": "heif-thumbnailer",
       "version": "1.17.6",
-      "release": "1ubuntu4.8",
+      "release": "1ubuntu4.9",
       "architecture": "amd64",
       "summary": "ISO/IEC 23008-12:2017 HEIF file format decoder - thumbnailer",
       "description": "ISO/IEC 23008-12:2017 HEIF file format decoder - thumbnailer",
@@ -7539,12 +7634,12 @@
       "sourcePackage": "libheif",
       "category": "graphics",
       "repository": "official",
-      "installedSize": 53248,
+      "installedSize": 54272,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.38)",
           "libgcc-s1 (>= 3.3.1)",
-          "libheif1 (= 1.17.6-1ubuntu4.8)",
+          "libheif1 (= 1.17.6-1ubuntu4.9)",
           "libpng16-16t64 (>= 1.6.2)",
           "libstdc++6 (>= 13.1)"
         ],
@@ -9060,6 +9155,30 @@
       }
     },
     {
+      "id": "f3cfbf67e7cf3e2fdc43",
+      "name": "linux-objects-nvidia-595-server-open-7.0.0-1013-azure-fde",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1013 (objects)",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1013 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 25799680,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "f3d24f5c4d49f8ee770c",
       "name": "pd-extendedview",
       "version": "0.5~repack",
@@ -9388,6 +9507,30 @@
         "requires": [
           "linux-modules-6.11.0-17-generic",
           "wireless-regdb"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "f3db443a1f29f70c0710",
+      "name": "linux-image-uc-6.8.0-1064-nvidia",
+      "version": "6.8.0",
+      "release": "1064.67",
+      "architecture": "amd64",
+      "summary": "Signed kernel image nvidia for Ubuntu Core",
+      "description": "Signed kernel image nvidia for Ubuntu Core",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-nvidia",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 66652160,
+      "dependencies": {
+        "requires": [
+          "linux-modules-6.8.0-1064-nvidia"
         ],
         "recommends": [],
         "suggests": [],
@@ -10253,6 +10396,56 @@
       }
     },
     {
+      "id": "f3f11c2f638fa5739a01",
+      "name": "linux-modules-6.8.0-1061-oracle",
+      "version": "6.8.0",
+      "release": "1061.64",
+      "architecture": "amd64",
+      "summary": "Oracle Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Oracle Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-oracle",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 38546432,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "f3f26c5ea9b738d98ab8",
+      "name": "linux-modules-nvidia-580-server-vmware-6.8",
+      "version": "6.8.0",
+      "release": "1005.5+1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-580-server for the vmware-6.8 flavour",
+      "description": "Extra drivers for nvidia-580-server for the vmware-6.8 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26624,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-580-server-6.8.0-1005-vmware (= 6.8.0-1005.5+1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-580-server (= 580.178.04-0ubuntu0.24.04.1)",
+          "nvidia-prebuilt-kernel"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "f3f2aa55616e6bfa9b5a",
       "name": "linux-modules-nvidia-590-open-aws-6.14",
       "version": "6.14.0",
@@ -10518,13 +10711,13 @@
     {
       "id": "f3fa078a6b2a81aef626",
       "name": "linux-modules-nvidia-535-server-open-azure",
-      "version": "6.17.0",
-      "release": "1022.22",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the azure flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-azure-6.17",
+      "sourcePackage": "linux-restricted-modules-azure-7.0",
       "category": "restricted/kernel",
       "repository": "official",
       "installedSize": 18432,

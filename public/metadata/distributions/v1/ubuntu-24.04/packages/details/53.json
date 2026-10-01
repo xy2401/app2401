@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "53",
   "items": [
@@ -29,6 +29,51 @@
         "suggests": [],
         "provides": [],
         "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "530274a7a29f07e6a611",
+      "name": "linux-image-unsigned-6.8.0-1064-gke",
+      "version": "6.8.0",
+      "release": "1064.72",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gke",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 16010240,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1064-gke"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo"
+        ],
+        "suggests": [
+          "fdutils",
+          "initramfs-tools | linux-initramfs-tool",
+          "linux-gke-doc-6.8.0 | linux-gke-source-6.8.0",
+          "linux-gke-tools",
+          "linux-headers-6.8.0-1064-gke"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1064-gke"
+        ],
         "replaces": []
       }
     },
@@ -1117,7 +1162,7 @@
       "id": "531f39fb912efdd371e1",
       "name": "linux-modules-nvidia-570-nvidia-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "1061.64.1",
+      "release": "1064.67.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the nvidia-lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the nvidia-lowlatency flavour (dummy transitional package)",
@@ -1370,7 +1415,7 @@
       "id": "532a4aba6ae6f43d2b59",
       "name": "linux-headers-oem-22.04",
       "version": "6.8.0",
-      "release": "138.138",
+      "release": "146.146",
       "architecture": "amd64",
       "summary": "OEM Linux kernel headers (dummy transitional package)",
       "description": "OEM Linux kernel headers (dummy transitional package)",
@@ -2276,7 +2321,7 @@
       "id": "533f330d467a7f1f5008",
       "name": "linux-modules-nvidia-595-server-open-6.8.0-1060-oracle",
       "version": "6.8.0",
-      "release": "1060.63",
+      "release": "1060.63+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-1060",
       "description": "Linux kernel nvidia modules for version 6.8.0-1060",
@@ -2284,12 +2329,12 @@
       "sourcePackage": "linux-restricted-signatures-oracle",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 26330112,
+      "installedSize": 26358784,
       "dependencies": {
         "requires": [
           "linux-image-6.8.0-1060-oracle | linux-image-unsigned-6.8.0-1060-oracle",
-          "nvidia-kernel-common-595-server (<= 595.71.05-1)",
-          "nvidia-kernel-common-595-server (>= 595.71.05)"
+          "nvidia-kernel-common-595-server (<= 595.91.07-1)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
@@ -3964,7 +4009,7 @@
       "id": "53691bde43aa25fcc882",
       "name": "linux-modules-nvidia-575-open-nvidia-6.8",
       "version": "6.8.0",
-      "release": "1061.64",
+      "release": "1064.67",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-open for the nvidia flavour (dummy transitional package)",
@@ -4103,7 +4148,7 @@
       "id": "536d0f9fa6152257a2da",
       "name": "linux-modules-nvidia-535-server-generic",
       "version": "6.8.0",
-      "release": "138.138",
+      "release": "146.146+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server for the generic flavour (dummy transitional package)",
@@ -5697,7 +5742,7 @@
       "id": "5392c8029f4ac1cae0d5",
       "name": "linux-modules-nvidia-595-open-nvidia-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "1061.64.1",
+      "release": "1064.67.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the nvidia-lowlatency-6.8 flavour",
       "description": "Extra drivers for nvidia-595-open for the nvidia-lowlatency-6.8 flavour",
@@ -5708,13 +5753,13 @@
       "installedSize": 27648,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-6.8.0-1061-nvidia-lowlatency (= 6.8.0-1061.64.1)",
-          "nvidia-kernel-common-595 (>= 595.84)"
+          "linux-modules-nvidia-595-open-6.8.0-1064-nvidia-lowlatency (= 6.8.0-1064.67.1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-open (= 595.84-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-open (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -6401,6 +6446,30 @@
         "suggests": [
           "xserver"
         ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "53a595fefa40a503d5a5",
+      "name": "linux-objects-nvidia-570-vgpu-guest-open-6.17.0-1004-vmware",
+      "version": "6.17.0",
+      "release": "1004.4",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.17.0-1004 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.17.0-1004 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-vgpu-modules-vmware-6.17",
+      "category": "universe/kernel",
+      "repository": "official",
+      "installedSize": 23359488,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
         "provides": [],
         "conflicts": [],
         "replaces": []
@@ -7530,7 +7599,7 @@
       "id": "53b8d5563dfdc7d659e3",
       "name": "linux-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "138.138.1",
+      "release": "142.142.1",
       "architecture": "amd64",
       "summary": "Complete lowlatency Linux kernel",
       "description": "Complete lowlatency Linux kernel",
@@ -7541,11 +7610,11 @@
       "installedSize": 16384,
       "dependencies": {
         "requires": [
-          "linux-headers-lowlatency-6.8 (= 6.8.0-138.138.1)",
-          "linux-image-lowlatency-6.8 (= 6.8.0-138.138.1)"
+          "linux-headers-lowlatency-6.8 (= 6.8.0-142.142.1)",
+          "linux-image-lowlatency-6.8 (= 6.8.0-142.142.1)"
         ],
         "recommends": [
-          "linux-tools-6.8.0-138-lowlatency",
+          "linux-tools-6.8.0-142-lowlatency",
           "ubuntu-kernel-accessories"
         ],
         "suggests": [],
@@ -7611,6 +7680,28 @@
       }
     },
     {
+      "id": "53bba567e3aa05c4de92",
+      "name": "linux-buildinfo-6.8.0-1066-aws",
+      "version": "6.8.0",
+      "release": "1066.69",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-aws",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 3153920,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "53bcd4beeac850c9eece",
       "name": "libjs-paper-css",
       "version": "0.4.1+ds",
@@ -7637,7 +7728,7 @@
       "id": "53bda9f082512ef15afb",
       "name": "linux-modules-nvidia-550-azure-fde-7.0",
       "version": "7.0.0",
-      "release": "1007.7~24.04.3+1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550 for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550 for the azure-fde flavour (dummy transitional package)",
@@ -8584,7 +8675,7 @@
       "name": "erlang-parsetools",
       "epoch": "1",
       "version": "25.3.2.8+dfsg",
-      "release": "1ubuntu4.6",
+      "release": "1ubuntu4.7",
       "architecture": "amd64",
       "summary": "Erlang/OTP parsing tools",
       "description": "Erlang/OTP parsing tools",
@@ -8593,10 +8684,10 @@
       "sourcePackage": "erlang",
       "category": "interpreters",
       "repository": "official",
-      "installedSize": 281600,
+      "installedSize": 283648,
       "dependencies": {
         "requires": [
-          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.6)"
+          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.7)"
         ],
         "recommends": [],
         "suggests": [
@@ -8607,19 +8698,47 @@
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
-          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
+          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
           "erlang-base-hipe",
-          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
+          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
           "erlang-doc (<< 1:25.3.2.8+dfsg)",
           "erlang-doc (>> 1:25.3.2.8+dfsg-999)",
-          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
+          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
           "erlang-manpages (<= 1:11.b.1-2)",
           "erlang-mode (<< 1:12.b.1-dfsg-2)",
-          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
-          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
-          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.6)"
+          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.7)"
         ]
+      }
+    },
+    {
+      "id": "53d5b998064cc632058b",
+      "name": "linux-modules-nvidia-595-server-6.8.0-1065-gke",
+      "version": "6.8.0",
+      "release": "1065.73",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1065",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1065",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-gke",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 35840,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1065-gke | linux-image-unsigned-6.8.0-1065-gke",
+          "linux-objects-nvidia-595-server-6.8.0-1065-gke (= 6.8.0-1065.73)",
+          "linux-signatures-nvidia-6.8.0-1065-gke (= 6.8.0-1065.73)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -9188,6 +9307,32 @@
       }
     },
     {
+      "id": "53e3a966bc12b5aea8a3",
+      "name": "linux-modules-nvidia-580-open-6.8.0-1064-gke",
+      "version": "6.8.0",
+      "release": "1064.72",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-gke",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26263552,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1064-gke | linux-image-unsigned-6.8.0-1064-gke",
+          "nvidia-kernel-common-580 (<= 580.178.04-1)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "53e4ed96d3abed51b52f",
       "name": "linux-objects-nvidia-590-server-6.8.0-101-lowlatency",
       "version": "6.8.0",
@@ -9729,7 +9874,7 @@
     {
       "id": "53f14e7a91b57ffdb3e4",
       "name": "dotnet-sdk-8.0",
-      "version": "8.0.130",
+      "version": "8.0.131",
       "release": "0ubuntu1~24.04.1",
       "architecture": "amd64",
       "summary": ".NET 8.0 Software Development Kit",
@@ -9739,7 +9884,7 @@
       "sourcePackage": "dotnet8",
       "category": "devel",
       "repository": "official",
-      "installedSize": 310301696,
+      "installedSize": 310303744,
       "dependencies": {
         "requires": [
           "aspnetcore-runtime-8.0",
@@ -10118,7 +10263,7 @@
       "id": "53f5fd1447ad5fd0fb2b",
       "name": "linux-modules-nvidia-535-azure-edge",
       "version": "7.0.0",
-      "release": "1008.8~24.04.2+1",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535 for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535 for the azure flavour (dummy transitional package)",
@@ -10154,6 +10299,32 @@
       "dependencies": {
         "requires": [
           "libc6 (>= 2.34)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "53f7982a9636c34bbdc5",
+      "name": "linux-modules-nvidia-610-open-6.8.0-1062-nvidia",
+      "version": "6.8.0",
+      "release": "1062.65+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1062",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1062",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-nvidia",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26874880,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1062-nvidia | linux-image-unsigned-6.8.0-1062-nvidia",
+          "nvidia-kernel-common-610 (<= 610.57.04-1)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
         ],
         "recommends": [],
         "suggests": [],

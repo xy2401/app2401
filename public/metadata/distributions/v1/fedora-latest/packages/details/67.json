@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "fedora",
   "shard": "67",
   "items": [
@@ -8,17 +8,17 @@
       "id": "6719a1f15b684a87c259",
       "name": "freeipa-server-dns",
       "epoch": "0",
-      "version": "4.13.3",
-      "release": "1.1.fc44",
+      "version": "4.13.4",
+      "release": "2.fc44",
       "architecture": "noarch",
       "summary": "IPA integrated DNS server with support for automatic DNSSEC signing",
       "description": "IPA integrated DNS server with support for automatic DNSSEC signing.\nIntegrated DNS server is BIND 9. OpenDNSSEC provides key management.",
       "homepage": "http://www.freeipa.org/",
       "license": "GPL-3.0-or-later",
-      "sourcePackage": "freeipa-4.13.3-1.1.fc44.src.rpm",
+      "sourcePackage": "freeipa-4.13.4-2.fc44.src.rpm",
       "repository": "updates",
       "installedSize": 97631,
-      "downloadSize": 47534,
+      "downloadSize": 47893,
       "dependencies": {
         "requires": [
           "/bin/sh",
@@ -28,7 +28,7 @@
           "bind-dyndb-ldap >= 11.11-3",
           "bind-utils >= 32:9.18.35-2",
           "filesystem(unmerged-sbin-symlinks)",
-          "freeipa-server = 4.13.3-1.1.fc44",
+          "freeipa-server = 4.13.4-2.fc44",
           "opendnssec >= 2.1.6-5",
           "pkcs11-provider >= 1.0-1",
           "softhsm >= 2.6.1",
@@ -39,16 +39,16 @@
         ],
         "suggests": [],
         "provides": [
-          "config(freeipa-server-dns) = 4.13.3-1.1.fc44",
-          "freeipa-server-dns = 4.13.3-1.1.fc44",
-          "ipa-server-dns = 4.13.3"
+          "config(freeipa-server-dns) = 4.13.4-2.fc44",
+          "freeipa-server-dns = 4.13.4-2.fc44",
+          "ipa-server-dns = 4.13.4"
         ],
         "conflicts": [
           "ipa-server-dns"
         ],
         "replaces": [
           "freeipa-server <= 4.2.0",
-          "ipa-server-dns < 4.13.3"
+          "ipa-server-dns < 4.13.4"
         ]
       }
     },
@@ -287,63 +287,6 @@
       }
     },
     {
-      "id": "678e7344de44c2a921ec",
-      "name": "nagios",
-      "epoch": "0",
-      "version": "4.5.11",
-      "release": "1.fc44",
-      "architecture": "amd64",
-      "summary": "Host/service/network monitoring program",
-      "description": "Nagios is a program that will monitor hosts and services on your\nnetwork.  It has the ability to send email or page alerts when a\nproblem arises and when a problem is resolved.  Nagios is written\nin C and is designed to run under Linux (and some other *NIX\nvariants) as a background process, intermittently running checks\non various services that you specify.\n\nThe actual service checks are performed by separate \"plugin\" programs\nwhich return the status of the checks to Nagios. The plugins are\navailable at https://github.com/nagios-plugins/nagios-plugins\n\nThis package provides the core program, web interface, and documentation\nfiles for Nagios. Development files are built as a separate package.",
-      "homepage": "https://www.nagios.org/projects/nagios-core/",
-      "license": "GPL-2.0-only",
-      "sourcePackage": "nagios-4.5.11-1.fc44.src.rpm",
-      "repository": "fedora",
-      "installedSize": 7672497,
-      "downloadSize": 2258560,
-      "dependencies": {
-        "requires": [
-          "(nagios-selinux if selinux-policy-targeted)",
-          "/bin/sh",
-          "/usr/bin/mail",
-          "filesystem(unmerged-sbin-symlinks)",
-          "group(apache)",
-          "group(nagios)",
-          "httpd",
-          "libc.so.6(GLIBC_2.38)(64bit)",
-          "libcrypto.so.3()(64bit)",
-          "libcrypto.so.3(OPENSSL_3.0.0)(64bit)",
-          "libgd.so.3()(64bit)",
-          "libm.so.6()(64bit)",
-          "libm.so.6(GLIBC_2.2.5)(64bit)",
-          "libm.so.6(GLIBC_2.38)(64bit)",
-          "libssl.so.3()(64bit)",
-          "libssl.so.3(OPENSSL_3.0.0)(64bit)",
-          "nagios-common",
-          "nagios-plugins-disk",
-          "nagios-plugins-http",
-          "nagios-plugins-load",
-          "nagios-plugins-ping",
-          "nagios-plugins-procs",
-          "nagios-plugins-ssh",
-          "nagios-plugins-swap",
-          "nagios-plugins-users",
-          "php",
-          "rtld(GNU_HASH)",
-          "user(nagios)"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "config(nagios) = 4.5.11-1.fc44",
-          "nagios = 4.5.11-1.fc44",
-          "nagios(x86-64) = 4.5.11-1.fc44"
-        ],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
       "id": "678f1b0465ddec1178eb",
       "name": "unoconv",
       "epoch": "0",
@@ -482,25 +425,25 @@
       "id": "67bf172ee365b8337fa3",
       "name": "liquidio-firmware",
       "epoch": "0",
-      "version": "20260810",
+      "version": "20260916",
       "release": "1.fc44",
       "architecture": "noarch",
       "summary": "Firmware for Cavium LiquidIO Intelligent Server Adapter",
       "description": "Firmware for Cavium LiquidIO Intelligent Server Adapter",
       "homepage": "http://www.kernel.org/",
-      "license": "LicenseRef-Callaway-Redistributable-no-modification-permitted",
-      "sourcePackage": "linux-firmware-20260810-1.fc44.src.rpm",
+      "license": "LicenseRef-Fedora-Firmware",
+      "sourcePackage": "linux-firmware-20260916-1.fc44.src.rpm",
       "repository": "updates",
       "installedSize": 1435012,
-      "downloadSize": 1480897,
+      "downloadSize": 1463538,
       "dependencies": {
         "requires": [
-          "linux-firmware-whence = 20260810-1.fc44"
+          "linux-firmware-whence = 20260916-1.fc44"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "liquidio-firmware = 20260810-1.fc44"
+          "liquidio-firmware = 20260916-1.fc44"
         ],
         "conflicts": [],
         "replaces": []
@@ -510,25 +453,25 @@
       "id": "67c686627eea5cbf9fca",
       "name": "atheros-firmware",
       "epoch": "0",
-      "version": "20260810",
+      "version": "20260916",
       "release": "1.fc44",
       "architecture": "noarch",
       "summary": "Firmware for Qualcomm Atheros WiFi/Bluetooth adapters",
       "description": "Firmware for Qualcomm Atheros ath6k/ath9k/ath10k/ath11k WiFi adapters.",
       "homepage": "http://www.kernel.org/",
-      "license": "LicenseRef-Callaway-Redistributable-no-modification-permitted",
-      "sourcePackage": "linux-firmware-20260810-1.fc44.src.rpm",
+      "license": "LicenseRef-Fedora-Firmware",
+      "sourcePackage": "linux-firmware-20260916-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 47566542,
-      "downloadSize": 47681735,
+      "installedSize": 49377472,
+      "downloadSize": 49477499,
       "dependencies": {
         "requires": [
-          "linux-firmware-whence = 20260810-1.fc44"
+          "linux-firmware-whence = 20260916-1.fc44"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "atheros-firmware = 20260810-1.fc44"
+          "atheros-firmware = 20260916-1.fc44"
         ],
         "conflicts": [],
         "replaces": []
@@ -538,23 +481,23 @@
       "id": "67d0bb13d83c452ec84f",
       "name": "kf6-kdbusaddons-doc",
       "epoch": "0",
-      "version": "6.29.0",
+      "version": "6.30.0",
       "release": "1.fc44",
       "architecture": "noarch",
       "summary": "Developer Documentation files for kf6-kdbusaddons",
       "description": "Developer Documentation files for kf6-kdbusaddons for use with KDevelop or QtCreator.",
       "homepage": "https://invent.kde.org/frameworks/kdbusaddons",
       "license": "CC0-1.0 AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-3.0-only",
-      "sourcePackage": "kf6-kdbusaddons-6.29.0-1.fc44.src.rpm",
+      "sourcePackage": "kf6-kdbusaddons-6.30.0-1.fc44.src.rpm",
       "repository": "updates",
       "installedSize": 98304,
-      "downloadSize": 41766,
+      "downloadSize": 41771,
       "dependencies": {
         "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "kf6-kdbusaddons-doc = 6.29.0-1.fc44"
+          "kf6-kdbusaddons-doc = 6.30.0-1.fc44"
         ],
         "conflicts": [],
         "replaces": []
@@ -564,17 +507,17 @@
       "id": "67d3f88e0d66bc07c035",
       "name": "pungi",
       "epoch": "0",
-      "version": "4.13.0",
-      "release": "1.fc44",
+      "version": "4.14.0",
+      "release": "2.fc44",
       "architecture": "noarch",
       "summary": "Distribution compose tool",
       "description": "A tool to create anaconda based installation trees/isos of a set of rpms.",
-      "homepage": "https://pagure.io/pungi",
+      "homepage": "https://forge.fedoraproject.org/pungi/pungi",
       "license": "GPL-2.0-only",
-      "sourcePackage": "pungi-4.13.0-1.fc44.src.rpm",
+      "sourcePackage": "pungi-4.14.0-2.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 328217,
-      "downloadSize": 208125,
+      "installedSize": 333769,
+      "downloadSize": 208916,
       "dependencies": {
         "requires": [
           "/usr/bin/python3",
@@ -595,7 +538,7 @@
           "python3-libcomps",
           "python3-libmodulemd >= 2.8.0",
           "python3-multilib",
-          "python3-pungi = 4.13.0-1.fc44",
+          "python3-pungi = 4.14.0-2.fc44",
           "python3-ruamel-yaml",
           "xorriso"
         ],
@@ -604,7 +547,7 @@
         ],
         "suggests": [],
         "provides": [
-          "pungi = 4.13.0-1.fc44"
+          "pungi = 4.14.0-2.fc44"
         ],
         "conflicts": [],
         "replaces": []

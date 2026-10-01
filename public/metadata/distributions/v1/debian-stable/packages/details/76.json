@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "debian-stable",
   "shard": "76",
   "items": [
@@ -145,8 +145,8 @@
     {
       "id": "7605fd9c5ca7127de0f5",
       "name": "libheif-plugin-rav1e",
-      "version": "1.19.8",
-      "release": "1+deb13u1",
+      "version": "1.23.4",
+      "release": "1~deb13u1",
       "architecture": "amd64",
       "summary": "HEIF and AVIF file format decoder and encoder - rav1e plugin",
       "description": "HEIF and AVIF file format decoder and encoder - rav1e plugin",
@@ -155,12 +155,12 @@
       "sourcePackage": "libheif",
       "category": "libs",
       "repository": "official",
-      "installedSize": 61440,
+      "installedSize": 75776,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.32)",
           "libgcc-s1 (>= 3.0)",
-          "libheif1 (= 1.19.8-1+deb13u1)",
+          "libheif1 (= 1.23.4-1~deb13u1)",
           "librav1e0.7 (>= 0.5.1)",
           "libstdc++6 (>= 13.1)"
         ],
@@ -3461,7 +3461,7 @@
       "id": "765ba47a8b87302672f5",
       "name": "kamailio-cpl-modules",
       "version": "6.0.1",
-      "release": "1+deb13u1",
+      "release": "1+deb13u2",
       "architecture": "amd64",
       "summary": "CPL module (CPL interpreter engine) for the Kamailio SIP server",
       "description": "CPL module (CPL interpreter engine) for the Kamailio SIP server",
@@ -3473,7 +3473,7 @@
       "installedSize": 656384,
       "dependencies": {
         "requires": [
-          "kamailio (= 6.0.1-1+deb13u1)",
+          "kamailio (= 6.0.1-1+deb13u2)",
           "libc6 (>= 2.33)",
           "libxml2 (>= 2.7.4)"
         ],
@@ -3637,7 +3637,7 @@
       "id": "766037bfc002c9c0e260",
       "name": "libpython3.13-stdlib",
       "version": "3.13.5",
-      "release": "2+deb13u4",
+      "release": "2+deb13u5",
       "architecture": "amd64",
       "summary": "Interactive high-level object-oriented language (standard library, version 3.13)",
       "description": "Interactive high-level object-oriented language (standard library, version 3.13)",
@@ -3645,7 +3645,7 @@
       "sourcePackage": "python3.13",
       "category": "python",
       "repository": "official",
-      "installedSize": 9114624,
+      "installedSize": 9111552,
       "dependencies": {
         "requires": [
           "libbz2-1.0",
@@ -3654,7 +3654,7 @@
           "libffi8 (>= 3.4)",
           "liblzma5 (>= 5.1.1alpha+20120614)",
           "libncursesw6 (>= 6.1)",
-          "libpython3.13-minimal (= 3.13.5-2+deb13u4)",
+          "libpython3.13-minimal (= 3.13.5-2+deb13u5)",
           "libreadline8t64 (>= 7.0~beta)",
           "libsqlite3-0 (>= 3.36.0)",
           "libtinfo6 (>= 6)",
@@ -3793,6 +3793,42 @@
       }
     },
     {
+      "id": "7665b5223935c1b0e1b7",
+      "name": "llvm-22-dev",
+      "epoch": "1",
+      "version": "22.1.8",
+      "release": "1~deb13u4",
+      "architecture": "amd64",
+      "summary": "Modular compiler and toolchain technologies, libraries and headers",
+      "description": "Modular compiler and toolchain technologies, libraries and headers",
+      "homepage": "https://www.llvm.org/",
+      "maintainer": "LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>",
+      "sourcePackage": "llvm-toolchain-22",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 404645888,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.2.5)",
+          "libclang-cpp22 (= 1:22.1.8-1~deb13u4)",
+          "libffi-dev",
+          "libgcc-s1 (>= 3.0)",
+          "libllvm22 (= 1:22.1.8-1~deb13u4)",
+          "libncurses-dev",
+          "libstdc++6 (>= 4.1.1)",
+          "libxml2-dev",
+          "libz3-dev",
+          "llvm-22 (= 1:22.1.8-1~deb13u4)",
+          "llvm-22-tools (= 1:22.1.8-1~deb13u4)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "76666e02cc04d5754260",
       "name": "libgphobos5-armel-cross",
       "version": "14.2.0",
@@ -3910,43 +3946,6 @@
         "provides": [],
         "conflicts": [],
         "replaces": []
-      }
-    },
-    {
-      "id": "766b04c37fff180000eb",
-      "name": "linux-image-6.12.101+deb13-amd64-unsigned",
-      "version": "6.12.101",
-      "release": "1",
-      "architecture": "amd64",
-      "summary": "Linux 6.12 for 64-bit PCs",
-      "description": "Linux 6.12 for 64-bit PCs",
-      "homepage": "https://www.kernel.org/",
-      "maintainer": "Debian Kernel Team <debian-kernel@lists.debian.org>",
-      "sourcePackage": "linux",
-      "category": "kernel",
-      "repository": "official",
-      "installedSize": 110926848,
-      "dependencies": {
-        "requires": [
-          "initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool",
-          "kmod"
-        ],
-        "recommends": [
-          "apparmor"
-        ],
-        "suggests": [
-          "debian-kernel-handbook",
-          "firmware-linux-free",
-          "grub-pc | grub-efi-amd64 | extlinux",
-          "linux-doc-6.12"
-        ],
-        "provides": [],
-        "conflicts": [
-          "linux-image-6.12.101+deb13-amd64"
-        ],
-        "replaces": [
-          "linux-image-6.12.101+deb13-amd64"
-        ]
       }
     },
     {
@@ -6034,7 +6033,7 @@
       "id": "76a679e27d75ff67e040",
       "name": "xdg-dbus-proxy",
       "version": "0.1.6",
-      "release": "1+deb13u2",
+      "release": "1+deb13u3",
       "architecture": "amd64",
       "summary": "filtering D-Bus proxy",
       "description": "filtering D-Bus proxy",
@@ -7067,35 +7066,6 @@
           "libjcsp-java",
           "libjsr166y-java",
           "libmultiverse-core-java"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "76c6ba20280968ac1a4e",
-      "name": "linux-kbuild-6.12.101+deb13",
-      "version": "6.12.101",
-      "release": "1",
-      "architecture": "amd64",
-      "summary": "Kbuild infrastructure for Linux 6.12.101+deb13",
-      "description": "Kbuild infrastructure for Linux 6.12.101+deb13",
-      "homepage": "https://www.kernel.org/",
-      "maintainer": "Debian Kernel Team <debian-kernel@lists.debian.org>",
-      "sourcePackage": "linux",
-      "category": "kernel",
-      "repository": "official",
-      "installedSize": 3148800,
-      "dependencies": {
-        "requires": [
-          "libc6 (>= 2.38)",
-          "libelf1t64 (>= 0.144)",
-          "libssl3t64 (>= 3.0.0)",
-          "pahole",
-          "zlib1g (>= 1:1.2.3.4)"
         ],
         "recommends": [],
         "suggests": [],
@@ -8450,7 +8420,7 @@
       "id": "76e4e5f5470d99f7d6e5",
       "name": "rsyslog-mongodb",
       "version": "8.2504.0",
-      "release": "1",
+      "release": "1+deb13u2",
       "architecture": "amd64",
       "summary": "MongoDB output plugin for rsyslog",
       "description": "MongoDB output plugin for rsyslog",
@@ -8462,10 +8432,10 @@
       "installedSize": 348160,
       "dependencies": {
         "requires": [
-          "libbson-1.0-0t64 (>= 1.30.3)",
+          "libbson-1.0-0t64 (>= 1.30.4)",
           "libc6 (>= 2.38)",
-          "libmongoc-1.0-0t64 (>= 1.30.3)",
-          "rsyslog (= 8.2504.0-1)"
+          "libmongoc-1.0-0t64 (>= 1.30.4)",
+          "rsyslog (= 8.2504.0-1+deb13u2)"
         ],
         "recommends": [
           "mongodb-server"
@@ -9041,7 +9011,7 @@
       "id": "76f451d7d8f0f6bf3145",
       "name": "slurm-wlm-ipmi-plugins",
       "version": "24.11.5",
-      "release": "4",
+      "release": "4+deb13u1",
       "architecture": "amd64",
       "summary": "Slurm IPMI plugins",
       "description": "Slurm IPMI plugins",
@@ -9056,7 +9026,7 @@
           "libc6 (>= 2.34)",
           "libfreeipmi17 (>= 1.4.4)",
           "libipmimonitoring6 (>= 1.1.5)",
-          "slurm-wlm-basic-plugins (= 24.11.5-4)"
+          "slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)"
         ],
         "recommends": [],
         "suggests": [],

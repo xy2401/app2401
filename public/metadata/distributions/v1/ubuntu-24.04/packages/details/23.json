@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "23",
   "items": [
@@ -201,7 +201,7 @@
       "id": "2304fa50efa73aae680c",
       "name": "linux-modules-nvidia-570-azure-7.0",
       "version": "7.0.0",
-      "release": "1008.8~24.04.2+1",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the azure flavour (dummy transitional package)",
@@ -297,7 +297,7 @@
       "id": "2307d98e8a90b70df470",
       "name": "linux-modules-nvidia-570-gcp-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.74",
+      "release": "1070.78",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the gcp flavour (dummy transitional package)",
@@ -305,7 +305,7 @@
       "sourcePackage": "linux-restricted-modules-gcp",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 24576,
+      "installedSize": 25600,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-gcp-lts-24.04"
@@ -475,7 +475,7 @@
       "id": "230e239aecfe90b35ce2",
       "name": "linux-modules-nvidia-610-6.17.0-1032-oem",
       "version": "6.17.0",
-      "release": "1032.32",
+      "release": "1032.32+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.17.0-1032",
       "description": "Linux kernel nvidia modules for version 6.17.0-1032",
@@ -488,9 +488,9 @@
         "requires": [
           "debconf (>= 0.5) | debconf-2.0",
           "linux-image-6.17.0-1032-oem | linux-image-unsigned-6.17.0-1032-oem",
-          "linux-objects-nvidia-610-6.17.0-1032-oem (= 6.17.0-1032.32)",
-          "linux-signatures-nvidia-6.17.0-1032-oem (= 6.17.0-1032.32)",
-          "nvidia-kernel-common-610 (>= 610.43.02)"
+          "linux-objects-nvidia-610-6.17.0-1032-oem (= 6.17.0-1032.32+1)",
+          "linux-signatures-nvidia-6.17.0-1032-oem (= 6.17.0-1032.32+1)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -1084,7 +1084,7 @@
       "id": "231c1787912a832b8383",
       "name": "linux-modules-nvidia-575-ibm-classic",
       "version": "6.8.0",
-      "release": "1063.64",
+      "release": "1066.67",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575 for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575 for the ibm flavour (dummy transitional package)",
@@ -1575,6 +1575,51 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "2325a679e617988e0ac7",
+      "name": "linux-image-6.8.0-1066-azure-fde",
+      "version": "6.8.0",
+      "release": "1066.73",
+      "architecture": "amd64",
+      "summary": "Signed kernel image azure-fde for CVM",
+      "description": "Signed kernel image azure-fde for CVM",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-azure-fde",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 58500096,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1066-azure-fde"
+        ],
+        "recommends": [],
+        "suggests": [
+          "fdutils",
+          "initramfs-tools | linux-initramfs-tool",
+          "linux-azure-fde-doc-6.8.0 | linux-azure-fde-source-6.8.0",
+          "linux-azure-fde-tools",
+          "linux-headers-6.8.0-1066-azure-fde"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -2486,6 +2531,31 @@
       }
     },
     {
+      "id": "233b64580a735a389559",
+      "name": "nvidia-firmware-580-server-580.178.04",
+      "version": "580.178.04",
+      "release": "0ubuntu0.24.04.1",
+      "architecture": "amd64",
+      "summary": "Firmware files used by the kernel module",
+      "description": "Firmware files used by the kernel module",
+      "homepage": "http://www.nvidia.com",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "sourcePackage": "nvidia-graphics-drivers-580-server",
+      "category": "restricted/libs",
+      "repository": "official",
+      "installedSize": 105558016,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": [
+          "nvidia-firmware-580-580.178.04"
+        ]
+      }
+    },
+    {
       "id": "233bcf291e8b4e7f5366",
       "name": "libqqwing-dev",
       "version": "1.3.4",
@@ -3018,19 +3088,19 @@
     {
       "id": "2347c80cef91e956a65c",
       "name": "linux-cloud-tools-azure",
-      "version": "6.17.0",
-      "release": "1022.22",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1",
       "architecture": "amd64",
       "summary": "Linux kernel versioned cloud tools for Azure systems.",
       "description": "Linux kernel versioned cloud tools for Azure systems.",
       "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-meta-azure-6.17",
+      "sourcePackage": "linux-meta-azure-7.0",
       "category": "metapackages",
       "repository": "official",
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-cloud-tools-6.17.0-1022-azure"
+          "linux-cloud-tools-7.0.0-1014-azure"
         ],
         "recommends": [],
         "suggests": [],
@@ -3405,7 +3475,7 @@
     {
       "id": "234fd1157e90cba58919",
       "name": "nvidia-dkms-580",
-      "version": "580.173.02",
+      "version": "580.178.04",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "NVIDIA DKMS package",
@@ -3419,11 +3489,11 @@
       "dependencies": {
         "requires": [
           "dkms",
-          "nvidia-firmware-580-580.173.02",
-          "nvidia-kernel-common-580 (<= 580.173.02-1)",
-          "nvidia-kernel-common-580 (>= 580.173.02)",
-          "nvidia-kernel-source-580 (<= 580.173.02-1)",
-          "nvidia-kernel-source-580 (>= 580.173.02)"
+          "nvidia-firmware-580-580.178.04",
+          "nvidia-kernel-common-580 (<= 580.178.04-1)",
+          "nvidia-kernel-common-580 (>= 580.178.04)",
+          "nvidia-kernel-source-580 (<= 580.178.04-1)",
+          "nvidia-kernel-source-580 (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -5583,6 +5653,32 @@
       }
     },
     {
+      "id": "23894648ced5dd371647",
+      "name": "linux-modules-nvidia-595-server-open-6.8.0-1064-nvidia-lowlatency",
+      "version": "6.8.0",
+      "release": "1064.67.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-nvidia-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26393600,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1064-nvidia-lowlatency | linux-image-unsigned-6.8.0-1064-nvidia-lowlatency",
+          "nvidia-kernel-common-595-server (<= 595.91.07-1)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "238a4a041cd014903024",
       "name": "libghc-memotrie-dev",
       "version": "0.6.11",
@@ -5641,7 +5737,7 @@
       "id": "238b5490628ffa36f7c7",
       "name": "linux-modules-nvidia-570-open-lowlatency",
       "version": "6.8.0",
-      "release": "138.138.1",
+      "release": "142.142.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-open for the lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-open for the lowlatency flavour (dummy transitional package)",
@@ -6347,7 +6443,7 @@
       "id": "2399aa12a0331d09179b",
       "name": "linux-modules-nvidia-580-server-open-azure-fde-lts-24.04",
       "version": "6.8.0",
-      "release": "1064.71",
+      "release": "1066.73",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server-open for the azure-fde-lts-24.04 flavour",
       "description": "Extra drivers for nvidia-580-server-open for the azure-fde-lts-24.04 flavour",
@@ -6358,13 +6454,13 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-open-6.8.0-1064-azure-fde (= 6.8.0-1064.71)",
-          "nvidia-kernel-common-580-server (>= 580.173.02)"
+          "linux-modules-nvidia-580-server-open-6.8.0-1066-azure-fde (= 6.8.0-1066.73)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-580-server-open (= 580.173.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-580-server-open (= 580.178.04-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -9260,7 +9356,7 @@
       "id": "23db973ace9069e1648c",
       "name": "linux-modules-nvidia-575-open-ibm-lts-24.04",
       "version": "6.8.0",
-      "release": "1063.64",
+      "release": "1066.67",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-open for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-open for the ibm flavour (dummy transitional package)",
@@ -9689,7 +9785,7 @@
     {
       "id": "23e63753360c4cba2ca8",
       "name": "libnvidia-gl-580",
-      "version": "580.173.02",
+      "version": "580.178.04",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD",
@@ -9707,7 +9803,7 @@
           "libgbm1 (>= 17.1.0~rc2)",
           "libgcc-s1 (>= 4.2)",
           "libnvidia-common-580",
-          "libnvidia-compute-580 (>= 580.173.02)",
+          "libnvidia-compute-580 (>= 580.178.04)",
           "libnvidia-egl-wayland1",
           "libx11-6",
           "libx11-xcb1 (>= 2:1.8.7)",
@@ -9715,7 +9811,7 @@
           "libxcb-present0",
           "libxcb1 (>= 1.12)",
           "libxext6",
-          "nvidia-kernel-common-580-580.173.02"
+          "nvidia-kernel-common-580-580.178.04"
         ],
         "recommends": [],
         "suggests": [],

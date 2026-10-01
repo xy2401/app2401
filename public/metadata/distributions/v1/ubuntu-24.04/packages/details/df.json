@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "df",
   "items": [
@@ -999,7 +999,7 @@
       "id": "df1393ce5c6299c4fbf0",
       "name": "linux-modules-nvidia-580-generic-7.0",
       "version": "7.0.0",
-      "release": "30.30~24.04.1",
+      "release": "34.34~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580 for the generic-7.0 flavour",
       "description": "Extra drivers for nvidia-580 for the generic-7.0 flavour",
@@ -1010,13 +1010,13 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-7.0.0-30-generic (= 7.0.0-30.30~24.04.1)",
-          "nvidia-kernel-common-580 (>= 580.173.02)"
+          "linux-modules-nvidia-580-7.0.0-34-generic (= 7.0.0-34.34~24.04.1+1)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-580 (= 580.173.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-580 (= 580.178.04-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -1181,7 +1181,7 @@
       "id": "df180a63d36f26b8324a",
       "name": "linux-modules-nvidia-570-azure-6.8",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1070.78",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the azure flavour (dummy transitional package)",
@@ -1429,6 +1429,52 @@
         "suggests": [],
         "provides": [],
         "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "df1d873c7424e855e687",
+      "name": "linux-image-6.8.0-1066-ibm",
+      "version": "6.8.0",
+      "release": "1066.67",
+      "architecture": "amd64",
+      "summary": "Signed kernel image ibm",
+      "description": "Signed kernel image ibm",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-ibm",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 14917632,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1066-ibm"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-headers-6.8.0-1066-ibm",
+          "linux-ibm-doc-6.8.0 | linux-ibm-source-6.8.0",
+          "linux-ibm-tools"
+        ],
+        "provides": [
+          "aufs-dkms",
+          "fuse-module",
+          "linux-ibm-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1066-ibm"
+        ],
         "replaces": []
       }
     },
@@ -3707,6 +3753,34 @@
       }
     },
     {
+      "id": "df49379fa00a13f7ea1c",
+      "name": "linux-modules-nvidia-595-7.0.0-1013-aws",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1013",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1013",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-aws-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-1013-aws | linux-image-unsigned-7.0.0-1013-aws",
+          "linux-objects-nvidia-595-7.0.0-1013-aws (= 7.0.0-1013.13~24.04.1+1)",
+          "linux-signatures-nvidia-7.0.0-1013-aws (= 7.0.0-1013.13~24.04.1+1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "df4ac0c0df65ad4b1b3e",
       "name": "libnvidia-cfg1-465",
       "version": "470.256.02",
@@ -5584,6 +5658,30 @@
       }
     },
     {
+      "id": "df7cedf0403a771f794a",
+      "name": "linux-modules-iwlwifi-7.0.0-1013-azure-fde",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel iwlwifi modules for version 7.0.0-1013",
+      "description": "Linux kernel iwlwifi modules for version 7.0.0-1013",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure-fde-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 2143232,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-1013-azure-fde | linux-image-unsigned-7.0.0-1013-azure-fde"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "df7d6fcdf6576a14deb1",
       "name": "librust-lv2-core-derive-dev",
       "version": "2.1.1",
@@ -6852,7 +6950,7 @@
       "id": "df925315de931d20767d",
       "name": "php8.3-opcache",
       "version": "8.3.6",
-      "release": "0ubuntu0.24.04.10",
+      "release": "0ubuntu0.24.04.11",
       "architecture": "amd64",
       "summary": "Zend OpCache module for PHP",
       "description": "Zend OpCache module for PHP",
@@ -6867,7 +6965,7 @@
           "libc6 (>= 2.38)",
           "libgcc-s1 (>= 3.3)",
           "php-common (>= 1:81~)",
-          "php8.3-common (= 8.3.6-0ubuntu0.24.04.10)",
+          "php8.3-common (= 8.3.6-0ubuntu0.24.04.11)",
           "ucf"
         ],
         "recommends": [],
@@ -8245,7 +8343,7 @@
       "id": "dfb2c60873d55ce9c508",
       "name": "linux-modules-nvidia-595-open-azure-fde-7.0",
       "version": "7.0.0",
-      "release": "1007.7~24.04.3+1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the azure-fde-7.0 flavour",
       "description": "Extra drivers for nvidia-595-open for the azure-fde-7.0 flavour",
@@ -8256,13 +8354,13 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-7.0.0-1007-azure-fde (= 7.0.0-1007.7~24.04.3+1)",
-          "nvidia-kernel-common-595 (>= 595.84)"
+          "linux-modules-nvidia-595-open-7.0.0-1013-azure-fde (= 7.0.0-1013.13~24.04.1+1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-open (= 595.84-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-open (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -9935,7 +10033,7 @@
       "id": "dfe4ec3e005c5addc9eb",
       "name": "linux-modules-nvidia-575-open-oracle-lts-24.04",
       "version": "6.8.0",
-      "release": "1060.63",
+      "release": "1063.66",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-open for the oracle flavour (dummy transitional package)",
@@ -9958,7 +10056,7 @@
     {
       "id": "dfe52d053f15d5eefcfa",
       "name": "nvidia-kernel-common-580",
-      "version": "580.173.02",
+      "version": "580.178.04",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Shared files used with the kernel module",
@@ -9973,13 +10071,13 @@
         "requires": [
           "libc6 (>= 2.38)",
           "libpciaccess0 (>= 0.10.7)",
-          "nvidia-firmware-580-580.173.02"
+          "nvidia-firmware-580-580.178.04"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
           "nvidia-kernel-common",
-          "nvidia-kernel-common-580-580.173.02"
+          "nvidia-kernel-common-580-580.178.04"
         ],
         "conflicts": [
           "nvidia-kernel-common"
@@ -10042,7 +10140,7 @@
       "id": "dfe6b7762f3270e34d08",
       "name": "idle-python3.12",
       "version": "3.12.3",
-      "release": "1ubuntu0.16",
+      "release": "1ubuntu0.17",
       "architecture": "all",
       "summary": "IDE for Python (v3.12) using Tkinter",
       "description": "IDE for Python (v3.12) using Tkinter",
@@ -10226,7 +10324,7 @@
       "id": "dfebb807ace54b208730",
       "name": "linux-modules-nvidia-580-nvidia-6.17",
       "version": "6.17.0",
-      "release": "1031.31",
+      "release": "1032.32+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580 for the nvidia-6.17 flavour",
       "description": "Extra drivers for nvidia-580 for the nvidia-6.17 flavour",
@@ -10237,15 +10335,41 @@
       "installedSize": 27648,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-6.17.0-1031-nvidia (= 6.17.0-1031.31)",
-          "nvidia-kernel-common-580 (>= 580.173.02)"
+          "linux-modules-nvidia-580-6.17.0-1032-nvidia (= 6.17.0-1032.32+1)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-580 (= 580.173.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-580 (= 580.178.04-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "dfed71eddb416062213b",
+      "name": "linux-modules-nvidia-595-open-7.0.0-34-generic",
+      "version": "7.0.0",
+      "release": "34.34~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-34",
+      "description": "Linux kernel nvidia modules for version 7.0.0-34",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 28167168,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-34-generic | linux-image-unsigned-7.0.0-34-generic",
+          "nvidia-kernel-common-595 (<= 595.91.07-1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "debian-stable",
   "shard": "a4",
   "items": [
@@ -1566,7 +1566,7 @@
       "id": "a4327118fc5066a8160b",
       "name": "libatk-bridge2.0-dev",
       "version": "2.56.2",
-      "release": "1+deb13u1",
+      "release": "1+deb13u2",
       "architecture": "amd64",
       "summary": "Development files for the AT-SPI 2 toolkit bridge",
       "description": "Development files for the AT-SPI 2 toolkit bridge",
@@ -1578,9 +1578,9 @@
       "installedSize": 34816,
       "dependencies": {
         "requires": [
-          "libatk-bridge2.0-0t64 (= 2.56.2-1+deb13u1)",
+          "libatk-bridge2.0-0t64 (= 2.56.2-1+deb13u2)",
           "libatk1.0-dev",
-          "libatspi2.0-dev (= 2.56.2-1+deb13u1)",
+          "libatspi2.0-dev (= 2.56.2-1+deb13u2)",
           "libglib2.0-dev"
         ],
         "recommends": [],
@@ -2541,7 +2541,7 @@
     {
       "id": "a44a8ae3c1427d2fbe7a",
       "name": "php8.4-readline",
-      "version": "8.4.24",
+      "version": "8.4.26",
       "release": "1~deb13u1",
       "architecture": "amd64",
       "summary": "readline module for PHP",
@@ -2557,7 +2557,7 @@
           "libc6 (>= 2.34)",
           "libedit2 (>= 3.1-20230828-1)",
           "php-common (>= 2:95~)",
-          "php8.4-common (= 8.4.24-1~deb13u1)",
+          "php8.4-common (= 8.4.26-1~deb13u1)",
           "ucf"
         ],
         "recommends": [],
@@ -2602,7 +2602,7 @@
       "id": "a44ae02913109c00faf8",
       "name": "libdcmtk19",
       "version": "3.6.9",
-      "release": "5+deb13u2",
+      "release": "5+deb13u3",
       "architecture": "amd64",
       "summary": "OFFIS DICOM toolkit runtime libraries",
       "description": "OFFIS DICOM toolkit runtime libraries",
@@ -2611,10 +2611,10 @@
       "sourcePackage": "dcmtk",
       "category": "libs",
       "repository": "official",
-      "installedSize": 30764032,
+      "installedSize": 30772224,
       "dependencies": {
         "requires": [
-          "dcmtk-data (>= 3.6.9-5+deb13u2)",
+          "dcmtk-data (>= 3.6.9-5+deb13u3)",
           "libc6 (>= 2.38)",
           "libgcc-s1 (>= 3.3.1)",
           "libpng16-16t64 (>= 1.6.46)",
@@ -5369,6 +5369,43 @@
       }
     },
     {
+      "id": "a4a00f3801e4cd620401",
+      "name": "linux-image-6.12.111+deb13-amd64",
+      "version": "6.12.111",
+      "release": "1",
+      "architecture": "amd64",
+      "summary": "Linux 6.12 for 64-bit PCs (signed)",
+      "description": "Linux 6.12 for 64-bit PCs (signed)",
+      "homepage": "https://www.kernel.org/",
+      "maintainer": "Debian Kernel Team <debian-kernel@lists.debian.org>",
+      "sourcePackage": "linux-signed-amd64",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 111099904,
+      "dependencies": {
+        "requires": [
+          "initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool",
+          "kmod"
+        ],
+        "recommends": [
+          "apparmor"
+        ],
+        "suggests": [
+          "debian-kernel-handbook",
+          "firmware-linux-free",
+          "grub-pc | grub-efi-amd64 | extlinux",
+          "linux-doc-6.12"
+        ],
+        "provides": [],
+        "conflicts": [
+          "linux-image-6.12.111+deb13-amd64-unsigned"
+        ],
+        "replaces": [
+          "linux-image-6.12.111+deb13-amd64-unsigned"
+        ]
+      }
+    },
+    {
       "id": "a4a08df1474657ed44c8",
       "name": "lzop",
       "version": "1.04",
@@ -7229,6 +7266,30 @@
         "requires": [
           "libc6 (>= 2.34)"
         ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "a4cee9e9fd71cfa9ec5d",
+      "name": "libllvmlibc-22-dev",
+      "epoch": "1",
+      "version": "22.1.8",
+      "release": "1~deb13u4",
+      "architecture": "amd64",
+      "summary": "LLVM C Library - dev package",
+      "description": "LLVM C Library - dev package",
+      "homepage": "https://www.llvm.org/",
+      "maintainer": "LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>",
+      "sourcePackage": "llvm-toolchain-22",
+      "category": "libdevel",
+      "repository": "official",
+      "installedSize": 6218752,
+      "dependencies": {
+        "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],

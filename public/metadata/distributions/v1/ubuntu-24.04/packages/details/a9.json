@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "a9",
   "items": [
@@ -367,6 +367,31 @@
       }
     },
     {
+      "id": "a90617c7354d7062245a",
+      "name": "linux-modules-extra-6.8.0-1065-azure-fde",
+      "version": "6.8.0",
+      "release": "1065.72",
+      "architecture": "amd64",
+      "summary": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure-fde",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 96918528,
+      "dependencies": {
+        "requires": [
+          "linux-modules-6.8.0-1065-azure-fde",
+          "wireless-regdb"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "a90618053744a8aafc5b",
       "name": "libperl-critic-community-perl",
       "version": "1.0.3",
@@ -669,7 +694,7 @@
       "id": "a910c40d40046a71a6fe",
       "name": "linux-tools-aws",
       "version": "7.0.0",
-      "release": "1011.11~24.04.1",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Linux kernel versioned tools for Amazon Web Services (AWS) systems.",
       "description": "Linux kernel versioned tools for Amazon Web Services (AWS) systems.",
@@ -680,7 +705,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-tools-7.0.0-1011-aws"
+          "linux-tools-7.0.0-1013-aws"
         ],
         "recommends": [],
         "suggests": [],
@@ -840,6 +865,58 @@
       }
     },
     {
+      "id": "a915c902c7ea966e20fa",
+      "name": "linux-image-6.8.0-1064-nvidia",
+      "version": "6.8.0",
+      "release": "1064.67",
+      "architecture": "amd64",
+      "summary": "Signed kernel image nvidia",
+      "description": "Signed kernel image nvidia",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-nvidia",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 14984192,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1064-nvidia"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-doc | linux-nvidia-source-6.8.0",
+          "linux-headers-6.8.0-1064-nvidia",
+          "linux-modules-extra-6.8.0-1064-nvidia",
+          "linux-nvidia-tools"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "mstflint-dkms",
+          "mstflint-modules",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-unsigned-6.8.0-1064-nvidia"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "a91783bc63d53cc80388",
       "name": "soapyremote-server",
       "version": "0.5.2",
@@ -985,7 +1062,7 @@
       "id": "a91a63ba25db00ad3802",
       "name": "linux-modules-nvidia-610-azure-fde-lts-24.04",
       "version": "6.8.0",
-      "release": "1064.71",
+      "release": "1066.73",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-610 for the azure-fde-lts-24.04 flavour",
       "description": "Extra drivers for nvidia-610 for the azure-fde-lts-24.04 flavour",
@@ -996,13 +1073,13 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-6.8.0-1064-azure-fde (= 6.8.0-1064.71)",
-          "nvidia-kernel-common-610 (>= 610.43.02)"
+          "linux-modules-nvidia-610-6.8.0-1066-azure-fde (= 6.8.0-1066.73)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-610 (= 610.43.02-0ubuntu0.24.04.1)",
+          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -1013,10 +1090,10 @@
       "id": "a91a83d968ea84cad1f7",
       "name": "linux-modules-nvidia-535-server-gcp-edge",
       "version": "7.0.0",
-      "release": "1006.6~24.04.2",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-535-server for the gcp-edge flavour",
-      "description": "Extra drivers for nvidia-535-server for the gcp-edge flavour",
+      "summary": "Extra drivers for nvidia-535-server for the gcp flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-535-server for the gcp flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-gcp-7.0",
       "category": "restricted/kernel",
@@ -1024,15 +1101,11 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-535-server-7.0.0-1006-gcp (= 7.0.0-1006.6~24.04.2)",
-          "nvidia-kernel-common-535-server (>= 535.309.01)"
+          "linux-modules-nvidia-580-server-gcp-edge"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-535-server (= 535.309.01-0ubuntu0.24.04.1)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -1631,6 +1704,28 @@
       }
     },
     {
+      "id": "a9307712bf554b3aeb64",
+      "name": "linux-buildinfo-6.8.0-1050-gkeop",
+      "version": "6.8.0",
+      "release": "1050.54",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gkeop",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 3719168,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "a931382ae22e47b931cb",
       "name": "feisty-session-splashes",
       "version": "0.15",
@@ -2165,7 +2260,7 @@
       "id": "a93fa5ff705468077f84",
       "name": "linux-modules-nvidia-570-server-open-oracle-edge",
       "version": "7.0.0",
-      "release": "1006.6~24.04.3",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server-open for the oracle flavour (dummy transitional package)",
@@ -2215,7 +2310,7 @@
       "id": "a941d5f61b2d0269ddb7",
       "name": "language-pack-gnome-da",
       "epoch": "1",
-      "version": "24.04+20260127",
+      "version": "24.04+20260905",
       "architecture": "all",
       "summary": "GNOME translation updates for language Danish",
       "description": "GNOME translation updates for language Danish",
@@ -2226,19 +2321,19 @@
       "dependencies": {
         "requires": [
           "language-pack-da",
-          "language-pack-gnome-da-base (>= 1:24.04+20260127)"
+          "language-pack-gnome-da-base (>= 1:24.04+20260905)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "language-pack-da (<< 1:24.04+20260127)",
-          "language-pack-da-base (<< 1:24.04+20260127)",
-          "language-pack-gnome-da (<< 1:24.04+20260127)",
+          "language-pack-da (<< 1:24.04+20260905)",
+          "language-pack-da-base (<< 1:24.04+20260905)",
+          "language-pack-gnome-da (<< 1:24.04+20260905)",
           "language-pack-gnome-da-base",
-          "language-pack-kde-da (<< 1:24.04+20260127)",
-          "language-pack-kde-da-base (<< 1:24.04+20260127)"
+          "language-pack-kde-da (<< 1:24.04+20260905)",
+          "language-pack-kde-da-base (<< 1:24.04+20260905)"
         ]
       }
     },
@@ -2983,6 +3078,74 @@
       }
     },
     {
+      "id": "a95536f9bafdaf25136e",
+      "name": "linux-aws-7.0-tools-7.0.0-1012",
+      "version": "7.0.0",
+      "release": "1012.12~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 7.0.0-1012",
+      "description": "Linux kernel version specific tools for version 7.0.0-1012",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-aws-7.0",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 29460480,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.39)",
+          "libcap2 (>= 1:2.10)",
+          "libdebuginfod1t64 (>= 0.180)",
+          "libdw1t64 (>= 0.161)",
+          "libelf1t64 (>= 0.144)",
+          "libgcc-s1 (>= 4.2)",
+          "libllvm19",
+          "liblzma5 (>= 5.1.1alpha+20120614)",
+          "libnl-3-200 (>= 3.2.7)",
+          "libnl-genl-3-200 (>= 3.2.21)",
+          "libnuma1 (>= 2.0.11)",
+          "libpci3 (>= 1:3.8.0)",
+          "libpython3.12t64 (>= 3.12.1)",
+          "libslang2 (>= 2.2.4)",
+          "libssl3t64 (>= 3.0.0)",
+          "libstdc++6 (>= 5.2)",
+          "libtraceevent1 (>= 1:1.3.0)",
+          "libudev1 (>= 183)",
+          "libzstd1 (>= 1.5.5)",
+          "linux-tools-common",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "a955631859d176253a01",
+      "name": "linux-lib-rust-6.8.0-142-generic",
+      "version": "6.8.0",
+      "release": "142.142",
+      "architecture": "amd64",
+      "summary": "Rust library files related to Linux kernel version 6.8.0",
+      "description": "Rust library files related to Linux kernel version 6.8.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 88935424,
+      "dependencies": {
+        "requires": [
+          "coreutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "a9557a62de82efda0f7b",
       "name": "libkxml2-java-doc",
       "version": "2.3.0+ds1",
@@ -3242,6 +3405,34 @@
       }
     },
     {
+      "id": "a958fde552622acba670",
+      "name": "linux-modules-nvidia-535-vgpu-guest-open-vmware-6.17",
+      "version": "6.17.0",
+      "release": "1004.4",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-535-vgpu-guest-open for the vmware-6.17 flavour",
+      "description": "Extra drivers for nvidia-535-vgpu-guest-open for the vmware-6.17 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-vgpu-modules-vmware-6.17",
+      "category": "universe/kernel",
+      "repository": "official",
+      "installedSize": 18432,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-535-vgpu-guest-open-6.17.0-1004-vmware (= 6.17.0-1004.4)",
+          "nvidia-kernel-common-535-vgpu-guest (>= 535.288.01)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-535-vgpu-guest-open (= 535.288.01-0ubuntu0.24.04.1)",
+          "nvidia-prebuilt-kernel"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "a959d107db074bc49f34",
       "name": "sackd",
       "version": "23.11.4",
@@ -3456,24 +3647,24 @@
       "id": "a95e0048d77792263056",
       "name": "linux-modules-nvidia-595-server-oracle-7.0",
       "version": "7.0.0",
-      "release": "1006.6~24.04.3",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-server for the oracle-7.0 flavour",
       "description": "Extra drivers for nvidia-595-server for the oracle-7.0 flavour",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-oracle-7.0",
-      "category": "universe/kernel",
+      "category": "restricted/kernel",
       "repository": "official",
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-server-7.0.0-1006-oracle (= 7.0.0-1006.6~24.04.3)",
-          "nvidia-kernel-common-595-server (>= 595.71.05)"
+          "linux-modules-nvidia-595-server-7.0.0-1013-oracle (= 7.0.0-1013.13~24.04.1)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-server (= 595.71.05-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-server (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -3688,7 +3879,7 @@
       "id": "a962915713d6f40c8fc8",
       "name": "linux-modules-nvidia-575-server-azure-edge",
       "version": "7.0.0",
-      "release": "1008.8~24.04.2+1",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the azure flavour (dummy transitional package)",
@@ -4949,7 +5140,7 @@
       "id": "a98451e24318e944e75c",
       "name": "libgl1-mesa-dri",
       "version": "25.2.8",
-      "release": "0ubuntu0.24.04.2",
+      "release": "0ubuntu0.24.04.3",
       "architecture": "amd64",
       "summary": "free implementation of the OpenGL API -- DRI modules",
       "description": "free implementation of the OpenGL API -- DRI modules",
@@ -4962,7 +5153,7 @@
       "dependencies": {
         "requires": [
           "libc6 (>= 2.34)",
-          "libgbm1 (= 25.2.8-0ubuntu0.24.04.2)",
+          "libgbm1 (= 25.2.8-0ubuntu0.24.04.3)",
           "libvulkan1"
         ],
         "recommends": [],
@@ -5677,7 +5868,7 @@
       "name": "openssh-tests",
       "epoch": "1",
       "version": "9.6p1",
-      "release": "3ubuntu13.18",
+      "release": "3ubuntu13.19",
       "architecture": "amd64",
       "summary": "OpenSSH regression tests",
       "description": "OpenSSH regression tests",
@@ -5691,9 +5882,9 @@
         "requires": [
           "libc6 (>= 2.38)",
           "libssl3t64 (>= 3.0.0)",
-          "openssh-client (= 1:9.6p1-3ubuntu13.18)",
-          "openssh-server (= 1:9.6p1-3ubuntu13.18)",
-          "openssh-sftp-server (= 1:9.6p1-3ubuntu13.18)",
+          "openssh-client (= 1:9.6p1-3ubuntu13.19)",
+          "openssh-server (= 1:9.6p1-3ubuntu13.19)",
+          "openssh-sftp-server (= 1:9.6p1-3ubuntu13.19)",
           "openssl",
           "putty-tools (>= 0.67-2)",
           "python3-twisted",
@@ -5856,6 +6047,30 @@
           "libruby3.2 (>= 3.2.2)",
           "libstdc++6 (>= 13.1)",
           "ruby-mini-portile2 (>= 2.8.5)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "a9a1e0e66fb28c082df7",
+      "name": "linux-image-uc-6.8.0-1062-nvidia",
+      "version": "6.8.0",
+      "release": "1062.65",
+      "architecture": "amd64",
+      "summary": "Signed kernel image nvidia for Ubuntu Core",
+      "description": "Signed kernel image nvidia for Ubuntu Core",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-nvidia",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 66643968,
+      "dependencies": {
+        "requires": [
+          "linux-modules-6.8.0-1062-nvidia"
         ],
         "recommends": [],
         "suggests": [],
@@ -6088,25 +6303,25 @@
     {
       "id": "a9a871776ec9a0258ac5",
       "name": "linux-modules-nvidia-595-oracle",
-      "version": "6.17.0",
-      "release": "1020.20",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595 for the oracle flavour",
       "description": "Extra drivers for nvidia-595 for the oracle flavour",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-oracle-6.17",
+      "sourcePackage": "linux-restricted-modules-oracle-7.0",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 18432,
+      "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-6.17.0-1020-oracle (= 6.17.0-1020.20)",
-          "nvidia-kernel-common-595 (>= 595.84)"
+          "linux-modules-nvidia-595-7.0.0-1013-oracle (= 7.0.0-1013.13~24.04.1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595 (= 595.84-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595 (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -6116,13 +6331,13 @@
     {
       "id": "a9a88bdc030247d56d95",
       "name": "linux-modules-nvidia-570-server-open-azure",
-      "version": "6.17.0",
-      "release": "1022.22",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server-open for the azure flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-azure-6.17",
+      "sourcePackage": "linux-restricted-modules-azure-7.0",
       "category": "restricted/kernel",
       "repository": "official",
       "installedSize": 18432,
@@ -6307,7 +6522,7 @@
       "id": "a9aaff11a812ab45ba51",
       "name": "linux-headers-generic-6.8",
       "version": "6.8.0",
-      "release": "138.138",
+      "release": "146.146",
       "architecture": "amd64",
       "summary": "Generic Linux kernel headers",
       "description": "Generic Linux kernel headers",
@@ -6318,7 +6533,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-headers-6.8.0-138-generic"
+          "linux-headers-6.8.0-146-generic"
         ],
         "recommends": [],
         "suggests": [],
@@ -7278,7 +7493,7 @@
     {
       "id": "a9bfe17eecb03857b2be",
       "name": "libnvidia-compute-595",
-      "version": "595.84",
+      "version": "595.91.07",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "NVIDIA libcompute package",
@@ -7288,13 +7503,13 @@
       "sourcePackage": "nvidia-graphics-drivers-595",
       "category": "multiverse/libs",
       "repository": "official",
-      "installedSize": 426481664,
+      "installedSize": 426469376,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.34)",
           "libgcc-s1 (>= 4.3)",
           "libssl3t64 (>= 3.0.0)",
-          "nvidia-kernel-common-595-595.84",
+          "nvidia-kernel-common-595-595.91.07",
           "ocl-icd-libopencl1"
         ],
         "recommends": [],
@@ -7331,11 +7546,11 @@
           "libcuda-9.0-1",
           "libcuda-9.1-1",
           "libcuda-9.2-1",
-          "libcuda.so.1 (= 595.84-0ubuntu0.24.04.1)",
-          "libcuda1 (= 595.84-0ubuntu0.24.04.1)",
+          "libcuda.so.1 (= 595.91.07-0ubuntu0.24.04.1)",
+          "libcuda1 (= 595.91.07-0ubuntu0.24.04.1)",
           "libnvidia-compute",
-          "libnvidia-ml.so.1 (= 595.84-0ubuntu0.24.04.1)",
-          "libnvidia-ml1 (= 595.84-0ubuntu0.24.04.1)",
+          "libnvidia-ml.so.1 (= 595.91.07-0ubuntu0.24.04.1)",
+          "libnvidia-ml1 (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-opencl-icd",
           "opencl-icd"
         ],

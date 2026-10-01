@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T09:27:06.000Z",
+  "generatedAt": "2026-10-01T11:00:31.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "cb",
   "items": [
@@ -97,7 +97,7 @@
       "id": "cb0496d2405b0ad190ab",
       "name": "linux-modules-nvidia-590-server-open-azure-7.0",
       "version": "7.0.0",
-      "release": "1008.8~24.04.2+1",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server-open for the azure flavour (dummy transitional package)",
@@ -1078,8 +1078,8 @@
     {
       "id": "cb16695dab94a94e72c7",
       "name": "openjdk-25-dbg",
-      "version": "25.0.4+7",
-      "release": "1~24.04",
+      "version": "25.0.4.1+1",
+      "release": "1~24.04.4",
       "architecture": "amd64",
       "summary": "Java runtime based on OpenJDK (debugging symbols)",
       "description": "Java runtime based on OpenJDK (debugging symbols)",
@@ -1088,16 +1088,16 @@
       "sourcePackage": "openjdk-25",
       "category": "universe/debug",
       "repository": "official",
-      "installedSize": 389708800,
+      "installedSize": 389711872,
       "dependencies": {
         "requires": [
-          "openjdk-25-jre-headless (= 25.0.4+7-1~24.04)"
+          "openjdk-25-jre-headless (= 25.0.4.1+1-1~24.04.4)"
         ],
         "recommends": [
-          "openjdk-25-jre (= 25.0.4+7-1~24.04)"
+          "openjdk-25-jre (= 25.0.4.1+1-1~24.04.4)"
         ],
         "suggests": [
-          "openjdk-25-jdk (= 25.0.4+7-1~24.04)"
+          "openjdk-25-jdk (= 25.0.4.1+1-1~24.04.4)"
         ],
         "provides": [],
         "conflicts": [],
@@ -1509,7 +1509,7 @@
       "id": "cb1eac3d23cd6614bc82",
       "name": "linux-modules-nvidia-595-open-azure-fde-edge",
       "version": "7.0.0",
-      "release": "1007.7~24.04.3+1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the azure-fde-edge flavour",
       "description": "Extra drivers for nvidia-595-open for the azure-fde-edge flavour",
@@ -1520,13 +1520,13 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-7.0.0-1007-azure-fde (= 7.0.0-1007.7~24.04.3+1)",
-          "nvidia-kernel-common-595 (>= 595.84)"
+          "linux-modules-nvidia-595-open-7.0.0-1013-azure-fde (= 7.0.0-1013.13~24.04.1+1)",
+          "nvidia-kernel-common-595 (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-open (= 595.84-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-open (= 595.91.07-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -1537,7 +1537,7 @@
       "id": "cb1ebcad66393328f549",
       "name": "linux-modules-nvidia-535-nvidia-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "1061.64.1",
+      "release": "1064.67.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535 for the nvidia-lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535 for the nvidia-lowlatency flavour (dummy transitional package)",
@@ -1699,7 +1699,7 @@
       "id": "cb240eb4d61027c42b8c",
       "name": "linux-headers-intel-iotg",
       "version": "6.8.0",
-      "release": "138.138",
+      "release": "146.146",
       "architecture": "amd64",
       "summary": "Intel-Iotg Linux kernel headers (transitional package)",
       "description": "Intel-Iotg Linux kernel headers (transitional package)",
@@ -1802,13 +1802,13 @@
     {
       "id": "cb29791ac4f96f20040e",
       "name": "linux-modules-nvidia-535-server-azure",
-      "version": "6.17.0",
-      "release": "1022.22",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server for the azure flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-azure-6.17",
+      "sourcePackage": "linux-restricted-modules-azure-7.0",
       "category": "restricted/kernel",
       "repository": "official",
       "installedSize": 18432,
@@ -2944,6 +2944,51 @@
       }
     },
     {
+      "id": "cb4140b192e3acebf436",
+      "name": "linux-image-unsigned-6.8.0-1050-gkeop",
+      "version": "6.8.0",
+      "release": "1050.54",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gkeop",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 16014336,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1050-gkeop"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo",
+          "initramfs-tools | linux-initramfs-tool"
+        ],
+        "suggests": [
+          "fdutils",
+          "linux-gkeop-doc-6.8.0 | linux-gkeop-source-6.8.0",
+          "linux-gkeop-tools",
+          "linux-headers-6.8.0-1050-gkeop"
+        ],
+        "provides": [
+          "fuse-module",
+          "linux-image",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1050-gkeop"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "cb433b7b40b1a477a4a4",
       "name": "r-cran-prophet",
       "version": "1.0+dfsg",
@@ -3111,6 +3156,31 @@
           "libstdc++-dev-mips-cross",
           "libstdc++-dev-mips-dcv1"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "cb49dbf751407c8d5623",
+      "name": "linux-lowlatency-cloud-tools-6.8.0-139",
+      "version": "6.8.0",
+      "release": "139.139.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific cloud tools for version 6.8.0-139",
+      "description": "Linux kernel version specific cloud tools for version 6.8.0-139",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-lowlatency",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 976896,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.34)",
+          "linux-cloud-tools-common"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -3681,7 +3751,7 @@
       "name": "erlang-dev",
       "epoch": "1",
       "version": "25.3.2.8+dfsg",
-      "release": "1ubuntu4.6",
+      "release": "1ubuntu4.7",
       "architecture": "amd64",
       "summary": "Erlang/OTP development libraries and headers",
       "description": "Erlang/OTP development libraries and headers",
@@ -3690,10 +3760,10 @@
       "sourcePackage": "erlang",
       "category": "interpreters",
       "repository": "official",
-      "installedSize": 3119104,
+      "installedSize": 3121152,
       "dependencies": {
         "requires": [
-          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.6)"
+          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.7)"
         ],
         "recommends": [],
         "suggests": [
@@ -3704,14 +3774,14 @@
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
-          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
+          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
           "erlang-base-hipe",
-          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
+          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
           "erlang-mode (<< 1:12.b.1-dfsg-2)",
-          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
-          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.6)",
-          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.6)"
+          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.7)"
         ]
       }
     },
@@ -4504,6 +4574,30 @@
       }
     },
     {
+      "id": "cb689806e8839433361a",
+      "name": "linux-objects-nvidia-580-server-open-6.8.0-1065-aws",
+      "version": "6.8.0",
+      "release": "1065.68",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1065 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1065 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-aws",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26260480,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "cb693f0e269a4ca2a867",
       "name": "libghc-path-pieces-doc",
       "version": "0.2.1",
@@ -4938,7 +5032,7 @@
       "id": "cb7619285aae669303be",
       "name": "libcivetweb-dev",
       "version": "1.16+dfsg",
-      "release": "1build1",
+      "release": "1ubuntu0.1",
       "architecture": "amd64",
       "summary": "embeddable web server with optional CGI, SSL and Lua support (devel)",
       "description": "embeddable web server with optional CGI, SSL and Lua support (devel)",
@@ -4950,7 +5044,7 @@
       "installedSize": 132096,
       "dependencies": {
         "requires": [
-          "libcivetweb1 (= 1.16+dfsg-1build1)"
+          "libcivetweb1 (= 1.16+dfsg-1ubuntu0.1)"
         ],
         "recommends": [],
         "suggests": [],
@@ -5064,16 +5158,16 @@
     {
       "id": "cb77316242a5cc1a050a",
       "name": "linux-modules-nvidia-590-open-nvidia-hwe-24.04",
-      "version": "6.17.0",
-      "release": "1031.31",
+      "version": "7.0.0",
+      "release": "1019.19~24.04.2+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-open for the nvidia flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-nvidia-6.17",
+      "sourcePackage": "linux-restricted-modules-nvidia-7.0",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 27648,
+      "installedSize": 19456,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-595-open-nvidia-hwe-24.04"
@@ -6988,6 +7082,30 @@
         "suggests": [
           "libghc-th-utilities-prof"
         ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "cba711c16a4e7e6e70ab",
+      "name": "linux-objects-nvidia-595-server-open-6.8.0-1066-azure-fde",
+      "version": "6.8.0",
+      "release": "1066.73",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1066 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1066 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26354688,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
         "provides": [],
         "conflicts": [],
         "replaces": []
@@ -9028,6 +9146,29 @@
       }
     },
     {
+      "id": "cbce80e8297eb3e149a4",
+      "name": "linux-firmware-amd-graphics",
+      "version": "20240318.git3b128b60",
+      "release": "0ubuntu3.3",
+      "architecture": "all",
+      "summary": "Firmware for AMD/ATI graphics",
+      "description": "Firmware for AMD/ATI graphics",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "category": "misc",
+      "repository": "official",
+      "installedSize": 29936640,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": [
+          "linux-firmware (<< 20240318.git3b128b60.0ubuntu3)"
+        ]
+      }
+    },
+    {
       "id": "cbcee18ed24a11732c2d",
       "name": "thunderbird-locale-is",
       "epoch": "2",
@@ -9082,7 +9223,7 @@
       "id": "cbd1d522a11dc48cf32a",
       "name": "libclick-0.4-0",
       "version": "0.5.2",
-      "release": "2ubuntu4",
+      "release": "2ubuntu4.1",
       "architecture": "amd64",
       "summary": "run-time Click package management library",
       "description": "run-time Click package management library",
@@ -9166,19 +9307,43 @@
     {
       "id": "cbd3b2abe9374d2540e4",
       "name": "linux-modules-nvidia-575-server-open-oracle",
-      "version": "6.17.0",
-      "release": "1020.20",
+      "version": "7.0.0",
+      "release": "1013.13~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server-open for the oracle flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-restricted-modules-oracle-6.17",
+      "sourcePackage": "linux-restricted-modules-oracle-7.0",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 18432,
+      "installedSize": 24576,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-server-open-oracle"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "cbd48038bf9a0bc98db4",
+      "name": "linux-tools-6.8.0-1062-gke",
+      "version": "6.8.0",
+      "release": "1062.70",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 6.8.0-1062",
+      "description": "Linux kernel version specific tools for version 6.8.0-1062",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gke",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 883712,
+      "dependencies": {
+        "requires": [
+          "linux-gke-tools-6.8.0-1062"
         ],
         "recommends": [],
         "suggests": [],
@@ -9496,6 +9661,30 @@
           "gccgo-11-mipsisa32r6el-linux-gnu (= 11.5.0-1ubuntu1~24.04cross1)",
           "lib64go-11-dev-mipsr6el-cross (>= 11.5.0-1ubuntu1~24.04cross1)",
           "libn32go-11-dev-mipsr6el-cross (>= 11.5.0-1ubuntu1~24.04cross1)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "cbe263d27a1f29c78a07",
+      "name": "linux-cloud-tools-6.8.0-142-lowlatency",
+      "version": "6.8.0",
+      "release": "142.142.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific cloud tools for version 6.8.0-142",
+      "description": "Linux kernel version specific cloud tools for version 6.8.0-142",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-lowlatency",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 892928,
+      "dependencies": {
+        "requires": [
+          "linux-lowlatency-cloud-tools-6.8.0-142"
         ],
         "recommends": [],
         "suggests": [],
@@ -9965,7 +10154,7 @@
       "id": "cbee0e93f8517d472caf",
       "name": "language-pack-gnome-en",
       "epoch": "1",
-      "version": "24.04+20260127",
+      "version": "24.04+20260905",
       "architecture": "all",
       "summary": "GNOME translation updates for language English",
       "description": "GNOME translation updates for language English",
@@ -9976,19 +10165,19 @@
       "dependencies": {
         "requires": [
           "language-pack-en",
-          "language-pack-gnome-en-base (>= 1:24.04+20260127)"
+          "language-pack-gnome-en-base (>= 1:24.04+20260905)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "language-pack-en (<< 1:24.04+20260127)",
-          "language-pack-en-base (<< 1:24.04+20260127)",
-          "language-pack-gnome-en (<< 1:24.04+20260127)",
+          "language-pack-en (<< 1:24.04+20260905)",
+          "language-pack-en-base (<< 1:24.04+20260905)",
+          "language-pack-gnome-en (<< 1:24.04+20260905)",
           "language-pack-gnome-en-base",
-          "language-pack-kde-en (<< 1:24.04+20260127)",
-          "language-pack-kde-en-base (<< 1:24.04+20260127)"
+          "language-pack-kde-en (<< 1:24.04+20260905)",
+          "language-pack-kde-en-base (<< 1:24.04+20260905)"
         ]
       }
     },
