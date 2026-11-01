@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "35",
   "items": [
@@ -307,6 +307,30 @@
         "requires": [
           "libjdom2-java (>= 2.0.5)",
           "libslf4j-java (>= 1.7.25)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3507a45b65543a9ac8cc",
+      "name": "linux-objects-nvidia-595-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-38 (objects)",
+      "description": "Linux kernel nvidia modules for version 7.0.0-38 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 185937920,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -692,6 +716,30 @@
         "replaces": [
           "libtsan0-mips64r6el-cross (<< 11.2.0-11)"
         ]
+      }
+    },
+    {
+      "id": "350f8b75aeb9332acf8b",
+      "name": "linux-objects-nvidia-610-7.0.0-1017-azure",
+      "version": "7.0.0",
+      "release": "1017.17~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1017 (objects)",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1017 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 202700800,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -2641,7 +2689,7 @@
       "id": "353c02fbef3659ddaf0a",
       "name": "bluez-test-scripts",
       "version": "5.72",
-      "release": "0ubuntu5.5",
+      "release": "0ubuntu5.8",
       "architecture": "all",
       "summary": "test scripts of bluez",
       "description": "test scripts of bluez",
@@ -2914,7 +2962,7 @@
       "id": "3543605ebb3e9e572df0",
       "name": "linux-modules-nvidia-580-server-6.8.0-146-generic",
       "version": "6.8.0",
-      "release": "146.146+1",
+      "release": "146.146+2",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-146",
       "description": "Linux kernel nvidia modules for version 6.8.0-146",
@@ -2927,8 +2975,8 @@
         "requires": [
           "debconf (>= 0.5) | debconf-2.0",
           "linux-image-6.8.0-146-generic | linux-image-unsigned-6.8.0-146-generic",
-          "linux-objects-nvidia-580-server-6.8.0-146-generic (= 6.8.0-146.146+1)",
-          "linux-signatures-nvidia-6.8.0-146-generic (= 6.8.0-146.146+1)",
+          "linux-objects-nvidia-580-server-6.8.0-146-generic (= 6.8.0-146.146+2)",
+          "linux-signatures-nvidia-6.8.0-146-generic (= 6.8.0-146.146+2)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -3885,10 +3933,10 @@
       "id": "355e27239396985caee1",
       "name": "linux-modules-nvidia-610-nvidia-lowlatency",
       "version": "6.8.0",
-      "release": "1064.67.1",
+      "release": "1064.67.1+1",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-610 for the nvidia-lowlatency flavour",
-      "description": "Extra drivers for nvidia-610 for the nvidia-lowlatency flavour",
+      "summary": "Extra drivers for nvidia-610 for the nvidia-lowlatency flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-610 for the nvidia-lowlatency flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-nvidia-lowlatency",
       "category": "restricted/kernel",
@@ -3896,15 +3944,11 @@
       "installedSize": 27648,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-6.8.0-1064-nvidia-lowlatency (= 6.8.0-1064.67.1)",
-          "nvidia-kernel-common-610 (>= 610.57.04)"
+          "linux-modules-nvidia-615-open-nvidia-lowlatency"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -4204,7 +4248,7 @@
       "id": "356abe76186dd86f1149",
       "name": "linux-image-ibm-6.8",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68",
       "architecture": "amd64",
       "summary": "IBM Cloud Platform (ibm) Linux kernel image",
       "description": "IBM Cloud Platform (ibm) Linux kernel image",
@@ -4215,14 +4259,14 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-image-6.8.0-1066-ibm",
-          "linux-modules-extra-6.8.0-1066-ibm"
+          "linux-image-6.8.0-1067-ibm",
+          "linux-modules-extra-6.8.0-1067-ibm"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
           "spl-modules (= 2.2.2-0ubuntu9.5)",
-          "virtualbox-guest-modules (= 6.8.0-1066)",
+          "virtualbox-guest-modules (= 6.8.0-1067)",
           "wireguard-modules (= 1.0.0)",
           "zfs-modules (= 2.2.2-0ubuntu9.5)"
         ],
@@ -4885,7 +4929,7 @@
       "name": "xvfb",
       "epoch": "2",
       "version": "21.1.12",
-      "release": "1ubuntu1.8",
+      "release": "1ubuntu1.9",
       "architecture": "amd64",
       "summary": "Virtual Framebuffer 'fake' X server",
       "description": "Virtual Framebuffer 'fake' X server",
@@ -4910,7 +4954,7 @@
           "libxfont2 (>= 1:2.0.1)",
           "x11-xkb-utils",
           "xauth",
-          "xserver-common (>= 2:21.1.12-1ubuntu1.8)"
+          "xserver-common (>= 2:21.1.12-1ubuntu1.9)"
         ],
         "recommends": [
           "libgl1-mesa-dri"
@@ -6025,6 +6069,30 @@
       }
     },
     {
+      "id": "3596dd2c97a55806d968",
+      "name": "linux-objects-nvidia-615-open-6.8.0-1064-nvidia-lowlatency",
+      "version": "6.8.0",
+      "release": "1064.67.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27873280,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3597df671b626e0a1f86",
       "name": "linux-lowlatency-cloud-tools-6.8.0-117",
       "version": "6.8.0",
@@ -6683,6 +6751,30 @@
       }
     },
     {
+      "id": "35a7c72558eceff236d1",
+      "name": "linux-objects-nvidia-580-server-6.8.0-1071-gcp",
+      "version": "6.8.0",
+      "release": "1071.79+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1071 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1071 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-gcp",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 197321728,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "35a7e063f38dc94111fb",
       "name": "linux-modules-extra-6.17.0-1022-azure",
       "version": "6.17.0",
@@ -7029,6 +7121,34 @@
       }
     },
     {
+      "id": "35af3947eb4bf7a5fe54",
+      "name": "linux-main-modules-usbio-7.0.0-42-generic",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Signed usbio module for 7.0.0-42",
+      "description": "Signed usbio module for 7.0.0-42",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-signed-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 38912,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-image-7.0.0-42-generic | linux-image-unsigned-7.0.0-42-generic"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "intel-usbio-dkms",
+          "usbio-modules"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "35b03d4f0327325b90dd",
       "name": "libghc-x11-doc",
       "version": "1.10.3",
@@ -7221,6 +7341,32 @@
       }
     },
     {
+      "id": "35b2f0babb2fc090c3ac",
+      "name": "linux-modules-nvidia-580-open-6.8.0-1068-azure-fde",
+      "version": "6.8.0",
+      "release": "1068.75+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1068",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1068",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26263552,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1068-azure-fde | linux-image-unsigned-6.8.0-1068-azure-fde",
+          "nvidia-kernel-common-580 (<= 580.178.04-1)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "35b30a6f3421d9f04a1b",
       "name": "libice6",
       "epoch": "2",
@@ -7359,31 +7505,25 @@
       "id": "35b4659694f0a9068aff",
       "name": "libnvidia-cfg1-565-server",
       "version": "565.57.01",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
-      "summary": "NVIDIA binary OpenGL/GLX configuration library",
-      "description": "NVIDIA binary OpenGL/GLX configuration library",
+      "summary": "NVIDIA binary OpenGL/GLX configuration library (transitional package)",
+      "description": "NVIDIA binary OpenGL/GLX configuration library (transitional package)",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-565-server",
       "category": "restricted/libs",
       "repository": "official",
-      "installedSize": 442368,
+      "installedSize": 32768,
       "dependencies": {
         "requires": [
-          "libc6 (>= 2.34)"
+          "libnvidia-cfg1-580-server"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "libnvidia-cfg1-any"
-        ],
-        "conflicts": [
-          "libnvidia-cfg1-any"
-        ],
-        "replaces": [
-          "libnvidia-cfg1-any"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -7600,7 +7740,7 @@
       "id": "35b9bda667a4780ed9c6",
       "name": "linux-modules-nvidia-570-oem-24.04b",
       "version": "6.17.0",
-      "release": "1032.32+1",
+      "release": "1033.33+3",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-oem-24.04b (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-oem-24.04b (dummy transitional package)",
@@ -7608,7 +7748,7 @@
       "sourcePackage": "linux-restricted-modules-oem-6.17",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-570-oem-24.04d"
@@ -8213,7 +8353,7 @@
       "id": "35c4159559171ddb15a6",
       "name": "linux-objects-nvidia-580-open-7.0.0-1013-oracle",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 7.0.0-1013 (objects)",
       "description": "Linux kernel nvidia modules for version 7.0.0-1013 (objects)",
@@ -8808,7 +8948,7 @@
       "id": "35d229e04dabffdeeab1",
       "name": "linux-modules-nvidia-550-nvidia-hwe-24.04",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550 for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550 for the nvidia flavour (dummy transitional package)",
@@ -9899,8 +10039,8 @@
     {
       "id": "35f7beac1eb7e129bad5",
       "name": "librte-vdpa-nfp24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-vdpa-nfp runtime library)",
       "description": "Data Plane Development Kit (librte-vdpa-nfp runtime library)",
@@ -9917,7 +10057,7 @@
           "libfdt1 (>= 1.7.0)",
           "libnuma1 (>= 2.0.11)",
           "librte-bus-pci24 (>= 23.11)",
-          "librte-common-nfp24 (>= 23.11.4)",
+          "librte-common-nfp24 (>= 23.11.7)",
           "librte-cryptodev24 (>= 18.05)",
           "librte-dmadev24 (>= 21.11)",
           "librte-eal24 (>= 23.11)",

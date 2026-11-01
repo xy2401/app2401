@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "bc",
   "items": [
@@ -853,7 +853,7 @@
       "id": "bc1047170c0b2e82881f",
       "name": "linux-modules-nvidia-535-server-open-gke",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1066.74+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the gke flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the gke flavour (dummy transitional package)",
@@ -1443,7 +1443,7 @@
       "id": "bc1cf38b138080f58014",
       "name": "linux-objects-nvidia-595-server-6.8.0-146-generic",
       "version": "6.8.0",
-      "release": "146.146+1",
+      "release": "146.146+2",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-146 (objects)",
       "description": "Linux kernel nvidia modules for version 6.8.0-146 (objects)",
@@ -3949,10 +3949,10 @@
       "id": "bc57086211612cf4db77",
       "name": "linux-modules-nvidia-610-open-generic-7.0",
       "version": "7.0.0",
-      "release": "34.34~24.04.1+1",
+      "release": "42.42~24.04.1",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-610-open for the generic-7.0 flavour",
-      "description": "Extra drivers for nvidia-610-open for the generic-7.0 flavour",
+      "summary": "Extra drivers for nvidia-610-open for the generic flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-610-open for the generic flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-hwe-7.0",
       "category": "restricted/kernel",
@@ -3960,15 +3960,11 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-open-7.0.0-34-generic (= 7.0.0-34.34~24.04.1+1)",
-          "nvidia-kernel-common-610 (>= 610.57.04)"
+          "linux-modules-nvidia-615-open-generic-7.0"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-610-open (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -4430,7 +4426,7 @@
       "id": "bc630bdeda8d4dcb8d99",
       "name": "nvidia-driver-465",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.5",
+      "release": "0ubuntu0.24.04.6",
       "architecture": "amd64",
       "summary": "Transitional package for nvidia-driver-470",
       "description": "Transitional package for nvidia-driver-470",
@@ -4732,7 +4728,7 @@
       "id": "bc6cdebf8d31466ba4ac",
       "name": "linux-modules-nvidia-595-open-nvidia-6.8",
       "version": "6.8.0",
-      "release": "1064.67",
+      "release": "1064.67+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the nvidia-6.8 flavour",
       "description": "Extra drivers for nvidia-595-open for the nvidia-6.8 flavour",
@@ -4743,13 +4739,13 @@
       "installedSize": 27648,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-6.8.0-1064-nvidia (= 6.8.0-1064.67)",
-          "nvidia-kernel-common-595 (>= 595.91.07)"
+          "linux-modules-nvidia-595-open-6.8.0-1064-nvidia (= 6.8.0-1064.67+1)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-open (= 595.91.07-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-open (= 595.99.02-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -5683,7 +5679,7 @@
       "id": "bc831b2c0c2eeaeca520",
       "name": "linux-gcp-edge",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1",
       "architecture": "amd64",
       "summary": "Complete Google Cloud Platform (GCP) Linux kernel and headers",
       "description": "Complete Google Cloud Platform (GCP) Linux kernel and headers",
@@ -5694,11 +5690,11 @@
       "installedSize": 14336,
       "dependencies": {
         "requires": [
-          "linux-headers-gcp-edge (= 7.0.0-1013.13~24.04.1)",
-          "linux-image-gcp-edge (= 7.0.0-1013.13~24.04.1)"
+          "linux-headers-gcp-edge (= 7.0.0-1014.14~24.04.1)",
+          "linux-image-gcp-edge (= 7.0.0-1014.14~24.04.1)"
         ],
         "recommends": [
-          "linux-tools-7.0.0-1013-gcp",
+          "linux-tools-7.0.0-1014-gcp",
           "ubuntu-kernel-accessories"
         ],
         "suggests": [],
@@ -6122,6 +6118,28 @@
           "nvidia-kernel-common-535 (<= 535.288.01-1)",
           "nvidia-kernel-common-535 (>= 535.288.01)"
         ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "bc8c583cacfd23c23586",
+      "name": "linux-buildinfo-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 7.0.0",
+      "description": "Linux kernel buildinfo for version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 3136512,
+      "dependencies": {
+        "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
@@ -6745,6 +6763,36 @@
         "provides": [],
         "conflicts": [],
         "replaces": []
+      }
+    },
+    {
+      "id": "bc9e3aa30698e7700e4d",
+      "name": "libnvidia-nscq-615",
+      "version": "615.71.09",
+      "release": "0ubuntu0.24.04.1",
+      "architecture": "amd64",
+      "summary": "NVSwitch Configuration and Query library",
+      "description": "NVSwitch Configuration and Query library",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "category": "multiverse/libs",
+      "repository": "official",
+      "installedSize": 1649664,
+      "dependencies": {
+        "requires": [
+          "nvidia-kernel-common-615-server-615.71.09"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libnvidia-nscq",
+          "nscq"
+        ],
+        "conflicts": [
+          "libnvidia-nscq"
+        ],
+        "replaces": [
+          "libnvidia-nscq"
+        ]
       }
     },
     {
@@ -8608,7 +8656,7 @@
       "id": "bcc9b5d31271598039cf",
       "name": "linux-modules-nvidia-575-gcp-edge",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575 for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575 for the gcp flavour (dummy transitional package)",
@@ -8620,6 +8668,34 @@
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-gcp-edge"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "bccb083688cedcb0f6da",
+      "name": "linux-modules-nvidia-595-server-6.8.0-1071-gcp",
+      "version": "6.8.0",
+      "release": "1071.79+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1071",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1071",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-gcp",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 34816,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1071-gcp | linux-image-unsigned-6.8.0-1071-gcp",
+          "linux-objects-nvidia-595-server-6.8.0-1071-gcp (= 6.8.0-1071.79+2)",
+          "linux-signatures-nvidia-6.8.0-1071-gcp (= 6.8.0-1071.79+2)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
@@ -9998,7 +10074,7 @@
       "id": "bced3b28c46e174a7a9a",
       "name": "mutter-14-tests",
       "version": "46.2",
-      "release": "1ubuntu0.24.04.16",
+      "release": "1ubuntu0.24.04.18",
       "architecture": "amd64",
       "summary": "Tests for GNOME's window manager library",
       "description": "Tests for GNOME's window manager library",
@@ -10022,15 +10098,15 @@
           "libgles2",
           "libglib2.0-0t64 (>= 2.79.0)",
           "libgtk-3-0t64 (>= 3.21.5)",
-          "libmutter-14-0 (= 46.2-1ubuntu0.24.04.16)",
-          "libmutter-test-14 (= 46.2-1ubuntu0.24.04.16)",
+          "libmutter-14-0 (= 46.2-1ubuntu0.24.04.18)",
+          "libmutter-test-14 (= 46.2-1ubuntu0.24.04.18)",
           "libpipewire-0.3-0t64 (>= 0.3.33)",
           "libwayland-client0 (>= 1.21.0)",
           "libwayland-cursor0 (>= 1.21.0)",
           "libwayland-server0 (>= 1.21.0)",
           "libx11-6",
           "libxext6",
-          "mutter (= 46.2-1ubuntu0.24.04.16)",
+          "mutter (= 46.2-1ubuntu0.24.04.18)",
           "python3",
           "python3-dbus",
           "python3-dbusmock",
@@ -10765,7 +10841,7 @@
       "id": "bcfad9d97fe8c749e0b3",
       "name": "linux-modules-nvidia-590-server-azure-fde-7.0",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1016.16~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server for the azure-fde flavour (dummy transitional package)",
@@ -10813,7 +10889,7 @@
       "id": "bcfc8ce77e60691156fa",
       "name": "libde265-examples",
       "version": "1.0.15",
-      "release": "1ubuntu0.1",
+      "release": "1ubuntu0.2",
       "architecture": "amd64",
       "summary": "Open H.265 video codec implementation - examples",
       "description": "Open H.265 video codec implementation - examples",
@@ -10826,7 +10902,7 @@
       "dependencies": {
         "requires": [
           "libc6 (>= 2.38)",
-          "libde265-0 (= 1.0.15-1ubuntu0.1)",
+          "libde265-0 (= 1.0.15-1ubuntu0.2)",
           "libgcc-s1 (>= 3.3.1)",
           "libqt5core5t64 (>= 5.15.1)",
           "libqt5gui5t64 (>= 5.0.2) | libqt5gui5-gles (>= 5.0.2)",
@@ -10860,6 +10936,34 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "bcfdfe8c05d81b48acfd",
+      "name": "linux-modules-nvidia-615-server-open-azure-edge",
+      "version": "7.0.0",
+      "release": "1017.17~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-server-open for the azure-edge flavour",
+      "description": "Extra drivers for nvidia-615-server-open for the azure-edge flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 18432,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-server-open-7.0.0-1017-azure (= 7.0.0-1017.17~24.04.1+1)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-server-open (= 615.71.09-0ubuntu0.24.04.1)",
+          "nvidia-prebuilt-kernel"
+        ],
         "conflicts": [],
         "replaces": []
       }

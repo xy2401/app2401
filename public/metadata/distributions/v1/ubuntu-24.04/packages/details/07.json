@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "07",
   "items": [
@@ -421,7 +421,7 @@
       "id": "070e29c9d208d7aa96d4",
       "name": "linux-headers-aws-7.0",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1",
       "architecture": "amd64",
       "summary": "Linux kernel headers for Amazon Web Services (AWS) systems.",
       "description": "Linux kernel headers for Amazon Web Services (AWS) systems.",
@@ -432,7 +432,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-headers-7.0.0-1013-aws"
+          "linux-headers-7.0.0-1014-aws"
         ],
         "recommends": [],
         "suggests": [],
@@ -1681,7 +1681,7 @@
       "id": "0729a9fd79c591cbe1a4",
       "name": "mesa-common-dev",
       "version": "25.2.8",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
       "summary": "Developer documentation for Mesa",
       "description": "Developer documentation for Mesa",
@@ -1705,6 +1705,30 @@
         "replaces": [
           "libegl1-mesa-dev (<< 18.2.5-2)"
         ]
+      }
+    },
+    {
+      "id": "0729bf94c95330d46854",
+      "name": "linux-azure-headers-6.8.0-1071",
+      "version": "6.8.0",
+      "release": "1071.79",
+      "architecture": "all",
+      "summary": "Header files related to Linux kernel version 6.8.0",
+      "description": "Header files related to Linux kernel version 6.8.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 86519808,
+      "dependencies": {
+        "requires": [
+          "coreutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -2612,6 +2636,55 @@
       }
     },
     {
+      "id": "07400b74e53e9db39bd8",
+      "name": "linux-image-unsigned-6.8.0-1071-azure",
+      "version": "6.8.0",
+      "release": "1071.79",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15989760,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1071-azure"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub"
+        ],
+        "suggests": [
+          "fdutils",
+          "initramfs-tools | linux-initramfs-tool",
+          "linux-azure-doc-6.8.0 | linux-azure-source-6.8.0",
+          "linux-azure-tools",
+          "linux-headers-6.8.0-1071-azure"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1071-azure"
+        ],
+        "replaces": []
+      }
+    },
+    {
       "id": "07405a9d969a19ee8177",
       "name": "libestr0",
       "version": "0.1.11",
@@ -2716,7 +2789,7 @@
       "name": "erlang-x11",
       "epoch": "1",
       "version": "25.3.2.8+dfsg",
-      "release": "1ubuntu4.7",
+      "release": "1ubuntu4.8",
       "architecture": "all",
       "summary": "Erlang/OTP applications that require X Window System",
       "description": "Erlang/OTP applications that require X Window System",
@@ -2725,7 +2798,7 @@
       "sourcePackage": "erlang",
       "category": "universe/interpreters",
       "repository": "official",
-      "installedSize": 34816,
+      "installedSize": 35840,
       "dependencies": {
         "requires": [
           "erlang-base:any",
@@ -2746,6 +2819,34 @@
           "erlang-manpages"
         ],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "07431d2007f507dea682",
+      "name": "linux-modules-nvidia-615-server-open-lowlatency-6.8",
+      "version": "6.8.0",
+      "release": "147.147.1+2",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-server-open for the lowlatency-6.8 flavour",
+      "description": "Extra drivers for nvidia-615-server-open for the lowlatency-6.8 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26624,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-server-open-6.8.0-147-lowlatency (= 6.8.0-147.147.1+2)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-server-open (= 615.71.09-0ubuntu0.24.04.2)",
+          "nvidia-prebuilt-kernel"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -2815,8 +2916,8 @@
       "id": "074645d97c29abc0fe3e",
       "name": "neutron-server",
       "epoch": "2",
-      "version": "24.1.0",
-      "release": "0ubuntu1.2",
+      "version": "24.2.2",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "all",
       "summary": "Neutron is a virtual network service for Openstack - server",
       "description": "Neutron is a virtual network service for Openstack - server",
@@ -2830,7 +2931,7 @@
         "requires": [
           "adduser",
           "openvswitch-common",
-          "python3-neutron (= 2:24.1.0-0ubuntu1.2)"
+          "python3-neutron (= 2:24.2.2-0ubuntu0.24.04.1)"
         ],
         "recommends": [
           "neutron-plugin-ml2"
@@ -3112,6 +3213,30 @@
       }
     },
     {
+      "id": "074bc3eeb9348b87e0ff",
+      "name": "linux-signatures-nvidia-6.8.0-147-lowlatency",
+      "version": "6.8.0",
+      "release": "147.147.1+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel signatures for nvidia modules for version 6.8.0-147-lowlatency",
+      "description": "Linux kernel signatures for nvidia modules for version 6.8.0-147-lowlatency",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 51200,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-147-lowlatency | linux-image-unsigned-6.8.0-147-lowlatency"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "074c787290ab4f2c364a",
       "name": "librust-swayipc-types+thiserror-dev",
       "version": "1.0.0",
@@ -3143,6 +3268,34 @@
           "librust-swayipc-types-1.0.0+default-dev (= 1.0.0-1)",
           "librust-swayipc-types-1.0.0+error-dev (= 1.0.0-1)",
           "librust-swayipc-types-1.0.0+thiserror-dev (= 1.0.0-1)"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "074dc1701abb38ce4cf4",
+      "name": "linux-modules-nvidia-615-server-open-azure-fde-6.8",
+      "version": "6.8.0",
+      "release": "1069.76+2",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-server-open for the azure-fde-6.8 flavour",
+      "description": "Extra drivers for nvidia-615-server-open for the azure-fde-6.8 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 19456,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-server-open-6.8.0-1069-azure-fde (= 6.8.0-1069.76+2)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-server-open (= 615.71.09-0ubuntu0.24.04.2)",
+          "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
         "replaces": []
@@ -3955,6 +4108,27 @@
       }
     },
     {
+      "id": "076121c454d8f4a5c2ac",
+      "name": "linux-main-signed-hwe-7.0",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Build interlock package. You do not want to install this package.",
+      "description": "Build interlock package. You do not want to install this package.",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 8192,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "0761d6955f9e5ca0fc09",
       "name": "golang-github-coreos-go-iptables-dev",
       "version": "0.6.0",
@@ -4101,7 +4275,7 @@
       "id": "0762c4d2d43158262ca4",
       "name": "linux-modules-nvidia-570-ibm-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the ibm flavour (dummy transitional package)",
@@ -4109,7 +4283,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-ibm-lts-24.04"
@@ -5163,7 +5337,7 @@
       "id": "077dbba47fb364282bc4",
       "name": "linux-image-vmware",
       "version": "6.8.0",
-      "release": "1005.5",
+      "release": "1008.8",
       "architecture": "amd64",
       "summary": "VMWare Linux kernel image",
       "description": "VMWare Linux kernel image",
@@ -5176,8 +5350,8 @@
         "requires": [
           "amd64-microcode",
           "intel-microcode",
-          "linux-image-6.8.0-1005-vmware",
-          "linux-modules-extra-6.8.0-1005-vmware"
+          "linux-image-6.8.0-1008-vmware",
+          "linux-modules-extra-6.8.0-1008-vmware"
         ],
         "recommends": [
           "thermald"
@@ -5185,11 +5359,11 @@
         "suggests": [],
         "provides": [
           "ivsc-modules (= 0~git202311021215.73a044d9)",
-          "spl-modules (= 2.2.2-0ubuntu9.4)",
+          "spl-modules (= 2.2.2-0ubuntu9.5)",
           "v4l2loopback-modules (= 0.12.7-2ubuntu5.1)",
-          "virtualbox-guest-modules (= 6.8.0-1005)",
+          "virtualbox-guest-modules (= 6.8.0-1008)",
           "wireguard-modules (= 1.0.0)",
-          "zfs-modules (= 2.2.2-0ubuntu9.4)"
+          "zfs-modules (= 2.2.2-0ubuntu9.5)"
         ],
         "conflicts": [],
         "replaces": []
@@ -5313,7 +5487,7 @@
       "id": "07801e39f020ae811ece",
       "name": "linux-libc-dev",
       "version": "6.8.0",
-      "release": "146.146",
+      "release": "147.147",
       "architecture": "amd64",
       "summary": "Linux Kernel Headers for development",
       "description": "Linux Kernel Headers for development",
@@ -5321,7 +5495,7 @@
       "sourcePackage": "linux",
       "category": "devel",
       "repository": "official",
-      "installedSize": 7787520,
+      "installedSize": 7842816,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -5366,10 +5540,10 @@
       "id": "0780d0fa10453e11509c",
       "name": "nvidia-driver-565-server-open",
       "version": "565.57.01",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
-      "summary": "NVIDIA driver (open kernel) metapackage",
-      "description": "NVIDIA driver (open kernel) metapackage",
+      "summary": "NVIDIA driver (open kernel) metapackage (transitional package)",
+      "description": "NVIDIA driver (open kernel) metapackage (transitional package)",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-565-server",
@@ -5378,31 +5552,9 @@
       "installedSize": 32768,
       "dependencies": {
         "requires": [
-          "libnvidia-cfg1-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-compute-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-decode-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-encode-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-extra-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-fbc1-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-gl-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "nvidia-compute-utils-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "nvidia-dkms-565-server-open (<= 565.57.01-1)",
-          "nvidia-dkms-565-server-open (>= 565.57.01)",
-          "nvidia-kernel-common-565-server (<= 565.57.01-1)",
-          "nvidia-kernel-common-565-server (>= 565.57.01)",
-          "nvidia-kernel-source-565-server-open (= 565.57.01-0ubuntu0.24.04.3)",
-          "nvidia-utils-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "xserver-xorg-video-nvidia-565-server (= 565.57.01-0ubuntu0.24.04.3)"
+          "nvidia-driver-580-server-open"
         ],
-        "recommends": [
-          "libnvidia-compute-565-server:i386 (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-decode-565-server:i386 (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-encode-565-server:i386 (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-fbc1-565-server:i386 (= 565.57.01-0ubuntu0.24.04.3)",
-          "libnvidia-gl-565-server:i386 (= 565.57.01-0ubuntu0.24.04.3)",
-          "nvidia-prime (>= 0.8)",
-          "nvidia-settings"
-        ],
+        "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [],
@@ -5818,7 +5970,7 @@
       "id": "0788d6af5bd8a473dc63",
       "name": "linux-objects-nvidia-595-6.8.0-1070-gcp",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1070.78+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-1070 (objects)",
       "description": "Linux kernel nvidia modules for version 6.8.0-1070 (objects)",
@@ -5826,7 +5978,7 @@
       "sourcePackage": "linux-restricted-modules-gcp",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 185005056,
+      "installedSize": 185009152,
       "dependencies": {
         "requires": [
           "binutils"
@@ -5883,6 +6035,30 @@
         "recommends": [
           "postgresql"
         ],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0789a62eaf809fee6955",
+      "name": "linux-modules-iwlwifi-6.8.0-147-generic",
+      "version": "6.8.0",
+      "release": "147.147",
+      "architecture": "amd64",
+      "summary": "Linux kernel iwlwifi modules for version 6.8.0-147",
+      "description": "Linux kernel iwlwifi modules for version 6.8.0-147",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 2280448,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-147-generic | linux-image-unsigned-6.8.0-147-generic"
+        ],
+        "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [],
@@ -6305,7 +6481,7 @@
       "id": "078f82a6e4ccd194f55c",
       "name": "php8.3-odbc",
       "version": "8.3.6",
-      "release": "0ubuntu0.24.04.11",
+      "release": "0ubuntu0.24.04.13",
       "architecture": "amd64",
       "summary": "ODBC module for PHP",
       "description": "ODBC module for PHP",
@@ -6320,7 +6496,7 @@
           "libc6 (>= 2.38)",
           "libodbc2 (>= 2.3.1)",
           "php-common (>= 1:81~)",
-          "php8.3-common (= 8.3.6-0ubuntu0.24.04.11)",
+          "php8.3-common (= 8.3.6-0ubuntu0.24.04.13)",
           "ucf"
         ],
         "recommends": [],
@@ -6838,8 +7014,8 @@
     {
       "id": "0796b2e9124bf39d59b3",
       "name": "librte-mbuf24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-mbuf2 runtime library)",
       "description": "Data Plane Development Kit (librte-mbuf2 runtime library)",
@@ -7693,7 +7869,7 @@
     {
       "id": "07ab41a10209e3fc29f1",
       "name": "ubuntu-advantage-tools",
-      "version": "37.2ubuntu~24.04.1",
+      "version": "38ubuntu0~24.04",
       "architecture": "all",
       "summary": "transitional dummy package for ubuntu-pro-client",
       "description": "transitional dummy package for ubuntu-pro-client",
@@ -7705,7 +7881,7 @@
       "dependencies": {
         "requires": [
           "debconf (>= 0.5) | debconf-2.0",
-          "ubuntu-pro-client (>= 37.2ubuntu~24.04.1)"
+          "ubuntu-pro-client (>= 38ubuntu0~24.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -7998,6 +8174,30 @@
       "dependencies": {
         "requires": [
           "nvidia-compute-utils-535"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "07b2205a6a79f516ab38",
+      "name": "linux-objects-nvidia-595-server-open-6.8.0-1067-ibm",
+      "version": "6.8.0",
+      "release": "1067.68+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1067 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1067 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26355712,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],

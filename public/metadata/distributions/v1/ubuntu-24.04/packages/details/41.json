@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "41",
   "items": [
@@ -224,7 +224,7 @@
     {
       "id": "41064d56847b8ffd91d8",
       "name": "aspnetcore-runtime-10.0",
-      "version": "10.0.12",
+      "version": "10.0.14",
       "release": "0ubuntu1~24.04.1",
       "architecture": "amd64",
       "summary": "ASP.NET Core runtime",
@@ -234,7 +234,7 @@
       "sourcePackage": "dotnet10",
       "category": "devel",
       "repository": "official",
-      "installedSize": 24302592,
+      "installedSize": 24357888,
       "dependencies": {
         "requires": [
           "dotnet-runtime-10.0"
@@ -371,6 +371,34 @@
           "libqt5printsupport5t64 (>= 5.0.2)",
           "libqt5widgets5t64 (>= 5.15.1)",
           "libstdc++6 (>= 13.1)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "4107dc98f2a84c6ee86a",
+      "name": "linux-modules-nvidia-595-server-6.8.0-1064-oracle",
+      "version": "6.8.0",
+      "release": "1064.67+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-oracle",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 33792,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1064-oracle | linux-image-unsigned-6.8.0-1064-oracle",
+          "linux-objects-nvidia-595-server-6.8.0-1064-oracle (= 6.8.0-1064.67+2)",
+          "linux-signatures-nvidia-6.8.0-1064-oracle (= 6.8.0-1064.67+2)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
@@ -557,7 +585,7 @@
       "id": "410b3217721133652c8a",
       "name": "linux-modules-nvidia-575-server-open-azure-lts-24.04",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server-open for the azure flavour (dummy transitional package)",
@@ -5031,7 +5059,7 @@
       "id": "41792c88489dc31dc0f9",
       "name": "linux-modules-nvidia-595-open-nvidia-7.0",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the nvidia-7.0 flavour",
       "description": "Extra drivers for nvidia-595-open for the nvidia-7.0 flavour",
@@ -5042,13 +5070,13 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-7.0.0-1019-nvidia (= 7.0.0-1019.19~24.04.2+1)",
-          "nvidia-kernel-common-595 (>= 595.91.07)"
+          "linux-modules-nvidia-595-open-7.0.0-1024-nvidia (= 7.0.0-1024.25~24.04.1)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-open (= 595.91.07-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-open (= 595.99.02-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -5110,26 +5138,23 @@
       "id": "4179df53a8f32449a15a",
       "name": "linux-modules-vision-generic-hwe-24.04",
       "version": "7.0.0",
-      "release": "34.34~24.04.1",
+      "release": "42.42~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for vision for the generic flavour",
       "description": "Extra drivers for vision for the generic flavour",
-      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-meta-hwe-7.0",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-signed-hwe-7.0",
       "category": "kernel",
       "repository": "official",
-      "installedSize": 9216,
+      "installedSize": 8192,
       "dependencies": {
         "requires": [
-          "linux-modules-vision-7.0.0-34-generic"
+          "kmod",
+          "linux-main-modules-vision-7.0.0-42-generic"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "intel-vision-dkms (= 0~git202511121832.a8d772f2-0ubuntu1)",
-          "vision-modules (= 0~git202511121832.a8d772f2-0ubuntu1)",
-          "vision-prebuilt-kernel (= 0~git202511121832.a8d772f2-0ubuntu1)"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -5622,6 +5647,28 @@
       }
     },
     {
+      "id": "41874a18f4cfe956c01f",
+      "name": "linux-buildinfo-6.17.0-1033-oem",
+      "version": "6.17.0",
+      "release": "1033.33",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 6.17.0",
+      "description": "Linux kernel buildinfo for version 6.17.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-oem-6.17",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 3222528,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "41881ab179c84f45b3f6",
       "name": "gobjc-12-s390x-linux-gnu",
       "version": "12.4.0",
@@ -5749,7 +5796,7 @@
       "id": "41898a588a1b3c8ce2aa",
       "name": "linux-modules-iwlwifi-gke",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1066.74",
       "architecture": "amd64",
       "summary": "Extra drivers for iwlwifi for the gke flavour",
       "description": "Extra drivers for iwlwifi for the gke flavour",
@@ -5760,7 +5807,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-iwlwifi-6.8.0-1065-gke"
+          "linux-modules-iwlwifi-6.8.0-1066-gke"
         ],
         "recommends": [],
         "suggests": [],
@@ -6595,6 +6642,54 @@
       }
     },
     {
+      "id": "419fd595159c62526a27",
+      "name": "libnvidia-gl-615-server",
+      "version": "615.71.09",
+      "release": "0ubuntu0.24.04.2",
+      "architecture": "amd64",
+      "summary": "NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD",
+      "description": "NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD",
+      "homepage": "http://www.nvidia.com",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "nvidia-graphics-drivers-615-server",
+      "category": "multiverse/libs",
+      "repository": "official",
+      "installedSize": 450316288,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.34)",
+          "libdrm2 (>= 2.4.75)",
+          "libgbm1 (>= 17.1.0~rc2)",
+          "libgcc-s1 (>= 4.2)",
+          "libnvidia-common-615-server",
+          "libnvidia-compute-615-server (>= 615.71.09)",
+          "libnvidia-egl-wayland1",
+          "libstdc++6 (>= 5)",
+          "libwayland-client0 (>= 1.20.0)",
+          "libx11-6",
+          "libx11-xcb1 (>= 2:1.8.7)",
+          "libxcb-dri3-0 (>= 1.13)",
+          "libxcb-present0",
+          "libxcb1 (>= 1.12)",
+          "libxext6",
+          "nvidia-kernel-common-615-server-615.71.09"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libegl-vendor",
+          "libglx-vendor",
+          "libnvidia-gl"
+        ],
+        "conflicts": [
+          "libnvidia-gl"
+        ],
+        "replaces": [
+          "libnvidia-gl"
+        ]
+      }
+    },
+    {
       "id": "41a07618db9f0ec80b0b",
       "name": "libjameica-util-java-doc",
       "version": "2.8",
@@ -6625,7 +6720,7 @@
       "id": "41a0824396e3464c5064",
       "name": "linux-modules-nvidia-535-gcp",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535 for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535 for the gcp flavour (dummy transitional package)",
@@ -7183,7 +7278,7 @@
       "id": "41af7a9cdf27a993b8c2",
       "name": "linux-modules-nvidia-580-server-azure-edge",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1+1",
+      "release": "1017.17~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server for the azure-edge flavour",
       "description": "Extra drivers for nvidia-580-server for the azure-edge flavour",
@@ -7194,7 +7289,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-7.0.0-1014-azure (= 7.0.0-1014.14~24.04.1+1)",
+          "linux-modules-nvidia-580-server-7.0.0-1017-azure (= 7.0.0-1017.17~24.04.1+1)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -8116,7 +8211,7 @@
       "name": "erlang-reltool",
       "epoch": "1",
       "version": "25.3.2.8+dfsg",
-      "release": "1ubuntu4.7",
+      "release": "1ubuntu4.8",
       "architecture": "amd64",
       "summary": "Erlang/OTP release management tool",
       "description": "Erlang/OTP release management tool",
@@ -8125,12 +8220,12 @@
       "sourcePackage": "erlang",
       "category": "universe/interpreters",
       "repository": "official",
-      "installedSize": 519168,
+      "installedSize": 520192,
       "dependencies": {
         "requires": [
-          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-tools (= 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-wx (= 1:25.3.2.8+dfsg-1ubuntu4.7)"
+          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-tools (= 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-wx (= 1:25.3.2.8+dfsg-1ubuntu4.8)"
         ],
         "recommends": [],
         "suggests": [
@@ -8141,18 +8236,18 @@
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-base-hipe",
-          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-doc (<< 1:25.3.2.8+dfsg)",
           "erlang-doc (>> 1:25.3.2.8+dfsg-999)",
-          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-manpages (<= 1:11.b.1-2)",
           "erlang-mode (<< 1:12.b.1-dfsg-2)",
-          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.7)"
+          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.8)"
         ]
       }
     },
@@ -8241,7 +8336,7 @@
       "id": "41c467dafa8166df0d63",
       "name": "linux-modules-nvidia-595-server-ibm-classic",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-server for the ibm-classic flavour",
       "description": "Extra drivers for nvidia-595-server for the ibm-classic flavour",
@@ -8249,10 +8344,10 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-server-6.8.0-1066-ibm (= 6.8.0-1066.67)",
+          "linux-modules-nvidia-595-server-6.8.0-1067-ibm (= 6.8.0-1067.68+2)",
           "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
@@ -8434,7 +8529,7 @@
       "id": "41c861520ea1b3c7185f",
       "name": "linux-image-nvidia-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "NVIDIA Linux kernel image",
       "description": "NVIDIA Linux kernel image",
@@ -8448,9 +8543,9 @@
           "amd64-microcode",
           "intel-microcode",
           "linux-firmware",
-          "linux-image-7.0.0-1019-nvidia",
-          "linux-modules-7.0.0-1019-nvidia",
-          "linux-modules-nvidia-fs-7.0.0-1019-nvidia"
+          "linux-image-7.0.0-1024-nvidia",
+          "linux-modules-7.0.0-1024-nvidia",
+          "linux-modules-nvidia-fs-7.0.0-1024-nvidia"
         ],
         "recommends": [
           "thermald"
@@ -8460,7 +8555,7 @@
           "ivsc-modules (= 0~git202311021215.73a044d9)",
           "spl-modules (= 2.4.1-1ubuntu5.1)",
           "v4l2loopback-modules (= 0.15.3-1ubuntu2)",
-          "virtualbox-guest-modules (= 7.0.0-1019)",
+          "virtualbox-guest-modules (= 7.0.0-1024)",
           "wireguard-modules (= 1.0.0)",
           "zfs-modules (= 2.4.1-1ubuntu5.1)"
         ],
@@ -8916,7 +9011,7 @@
       "id": "41cfc65634ce4f999ea3",
       "name": "linux-modules-nvidia-535-server-azure-fde-7.0",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1016.16~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server for the azure-fde flavour (dummy transitional package)",
@@ -9237,6 +9332,30 @@
       "dependencies": {
         "requires": [
           "ruby | ruby-interpreter"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "41d9ed6dc104d08b74b3",
+      "name": "linux-objects-nvidia-615-server-open-6.8.0-1065-gke",
+      "version": "6.8.0",
+      "release": "1065.73+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1065 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1065 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-gke",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27839488,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -9569,7 +9688,7 @@
       "id": "41e290d20ce2cd610207",
       "name": "squidclient",
       "version": "6.14",
-      "release": "0ubuntu0.24.04.4",
+      "release": "0ubuntu0.24.04.5",
       "architecture": "amd64",
       "summary": "Full featured Web Proxy cache (HTTP proxy) - HTTP(S) message utility",
       "description": "Full featured Web Proxy cache (HTTP proxy) - HTTP(S) message utility",

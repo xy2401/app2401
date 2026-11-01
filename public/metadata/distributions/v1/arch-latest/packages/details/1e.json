@@ -1,24 +1,24 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "arch",
   "shard": "1e",
   "items": [
     {
-      "id": "1e026ad775ba8221889b",
-      "name": "liquidsfz-standalone",
-      "version": "0.4.1-1",
-      "architecture": "amd64",
-      "summary": "SFZ Sampler - standalone",
-      "description": "SFZ Sampler - standalone",
-      "homepage": "https://github.com/swesterfeld/liquidsfz",
-      "license": "MPL-2.0",
+      "id": "1e0140e83ad081c1ed75",
+      "name": "vncdotool",
+      "version": "1.4.2-1",
+      "architecture": "any",
+      "summary": "A command line VNC client",
+      "description": "A command line VNC client",
+      "homepage": "https://github.com/sibson/vncdotool",
+      "license": "MIT",
       "repository": "extra",
-      "installedSize": 51400,
-      "downloadSize": 20837,
+      "installedSize": 661628,
+      "downloadSize": 123664,
       "dependencies": {
         "requires": [
-          "glibc  jack  libgcc  libliquidsfz  libstdc++  libsndfile  libsndfile.so=1-64  readline  libreadline.so=8-64"
+          "python-pillow  python-twisted  python-pycryptodomex"
         ],
         "recommends": [],
         "suggests": [],
@@ -28,45 +28,74 @@
       }
     },
     {
-      "id": "1e06d15f8690b7847a22",
-      "name": "pelican",
-      "version": "4.11.0-3",
+      "id": "1e015b2c7aafb85ee6a4",
+      "name": "jupyter-nbclient",
+      "version": "0.11.0-1",
       "architecture": "any",
-      "summary": "A tool to generate a static blog, with restructured text (or markdown) input files.",
-      "description": "A tool to generate a static blog, with restructured text (or markdown) input files.",
-      "homepage": "https://blog.getpelican.com/",
-      "license": "AGPL-3.0-or-later",
+      "summary": "A tool for running Jupyter Notebooks in different execution contexts",
+      "description": "A tool for running Jupyter Notebooks in different execution contexts",
+      "homepage": "https://github.com/jupyter/nbclient",
+      "license": "BSD-3-Clause",
       "repository": "extra",
-      "installedSize": 1661157,
-      "downloadSize": 477451,
+      "installedSize": 267363,
+      "downloadSize": 56337,
       "dependencies": {
         "requires": [
-          "python  python-blinker  python-dateutil  python-docutils  python-feedgenerator  python-jinja  python-ordered-set  python-pygments  python-rich  python-unidecode  python-watchfiles"
+          "jupyter-nbformat  python  python-jupyter-client  python-jupyter-core  python-traitlets"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e03e89ab2c24174b38d",
+      "name": "gtk3",
+      "version": "1:3.24.52-2",
+      "architecture": "amd64",
+      "summary": "GObject-based multi-platform GUI toolkit",
+      "description": "GObject-based multi-platform GUI toolkit",
+      "homepage": "https://www.gtk.org/",
+      "license": "LGPL-2.1-or-later",
+      "repository": "extra",
+      "installedSize": 55806938,
+      "downloadSize": 9365862,
+      "dependencies": {
+        "requires": [
+          "adwaita-fonts  adwaita-icon-theme  at-spi2-core  cairo  dconf  desktop-file-utils  fontconfig  fribidi  gdk-pixbuf2  glib2  glibc  harfbuzz  iso-codes  libcloudproviders  libcolord  libcups  libegl  libepoxy  libgl  librsvg  libx11  libxcomposite  libxcursor  libxdamage  libxext  libxfixes  libxi  libxinerama  libxkbcommon  libxrandr  libxrender  pango  shared-mime-info  tinysparql  wayland  zlib  gtk-update-icon-cache"
         ],
         "recommends": [],
         "suggests": [
-          "pandoc: for pelican-import auto convert  python-beautifulsoup4: importing from wordpress/dotclear/posterous  python-feedparser: importing from feeds  python-invoke: Task parallelism  python-typogrify: typographical enhancements  asciidoc: AsciiDoc support  python-markdown: Markdown support  lftp: uploading through FTP  openssh: uploading through SSH  python-ghp-import: uploading through gh-pages  rsync: uploading through rsync+SSH  s3cmd: uploading through S3"
+          "papers: default print previewer  evince: legacy print previewer"
         ],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
+        "provides": [
+          "gtk3-print-backends  libgailutil-3.so=0-64  libgdk-3.so=0-64  libgtk-3.so=0-64"
+        ],
+        "conflicts": [
+          "gtk3-print-backends"
+        ],
+        "replaces": [
+          "gtk3-print-backends"
+        ]
       }
     },
     {
-      "id": "1e0704b4c21a26dfea5e",
-      "name": "python-pyls-spyder",
-      "version": "0.4.0-8",
-      "architecture": "any",
-      "summary": "Spyder extensions for the Python Language Server",
-      "description": "Spyder extensions for the Python Language Server",
-      "homepage": "https://github.com/spyder-ide/pyls-spyder",
-      "license": "MIT",
+      "id": "1e088f0d1cd9a611efdb",
+      "name": "dpkg",
+      "version": "1.23.11-1",
+      "architecture": "amd64",
+      "summary": "The Debian Package Manager tools",
+      "description": "The Debian Package Manager tools",
+      "homepage": "https://tracker.debian.org/pkg/dpkg",
+      "license": "GPL-2.0-or-later",
       "repository": "extra",
-      "installedSize": 36127,
-      "downloadSize": 13347,
+      "installedSize": 7625615,
+      "downloadSize": 1747254,
       "dependencies": {
         "requires": [
-          "python  python-lsp-server"
+          "bzip2  glibc  libgcc  libmd  libstdc++  ncurses  perl  xz  zlib-ng  zstd"
         ],
         "recommends": [],
         "suggests": [],
@@ -76,20 +105,592 @@
       }
     },
     {
-      "id": "1e0b0888f50c9757aa73",
-      "name": "xf86-input-wacom",
-      "version": "1.2.4-1",
+      "id": "1e1749bae51de42e4f6c",
+      "name": "portaudio",
+      "version": "1:19.7.0-4",
       "architecture": "amd64",
-      "summary": "X.Org Wacom tablet driver",
-      "description": "X.Org Wacom tablet driver",
-      "homepage": "https://github.com/linuxwacom/xf86-input-wacom",
-      "license": "GPL-2.0-or-later",
+      "summary": "A free, cross-platform, open source, audio I/O library.",
+      "description": "A free, cross-platform, open source, audio I/O library.",
+      "homepage": "https://github.com/portaudio/portaudio/",
+      "license": "MIT",
       "repository": "extra",
-      "installedSize": 243251,
-      "downloadSize": 93997,
+      "installedSize": 344975,
+      "downloadSize": 102521,
       "dependencies": {
         "requires": [
-          "libxi  libxinerama  libxrandr  systemd-libs  libx11  glibc"
+          "glibc  libgcc  libstdc++  alsa-lib  libasound.so=2-64  jack  libjack.so=0-64"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libportaudio.so=2-64  libportaudiocpp.so=0-64"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e1af05ae710cf212495",
+      "name": "kafka",
+      "version": "4.4.0-1",
+      "architecture": "any",
+      "summary": "An open-source distributed event streaming platform",
+      "description": "An open-source distributed event streaming platform",
+      "homepage": "https://kafka.apache.org/",
+      "license": "Apache-2.0",
+      "repository": "extra",
+      "installedSize": 140462687,
+      "downloadSize": 133682305,
+      "dependencies": {
+        "requires": [
+          "bash  java-runtime>=11"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e22b33e5708f27aae89",
+      "name": "openmotif",
+      "version": "2.3.8-4",
+      "architecture": "amd64",
+      "summary": "Open Motif",
+      "description": "Open Motif",
+      "homepage": "https://motif.ics.com/",
+      "license": "LGPL-2.1-or-later",
+      "repository": "extra",
+      "installedSize": 6596339,
+      "downloadSize": 2714200,
+      "dependencies": {
+        "requires": [
+          "fontconfig  glibc  libjpeg-turbo  libpng  libx11  libxext  libxft  libxmu  libxp  libxt"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "lesstif"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e2438e98e24bfc6e24d",
+      "name": "kde-graphics-meta",
+      "version": "26.08-2",
+      "architecture": "any",
+      "summary": "Meta package for KDE graphics applications",
+      "description": "Meta package for KDE graphics applications",
+      "homepage": "https://www.archlinux.org/",
+      "license": "None",
+      "repository": "extra",
+      "installedSize": 0,
+      "downloadSize": 2369,
+      "dependencies": {
+        "requires": [
+          "arianna  gwenview  kamera  kcolorchooser  kgraphviewer  kimagemapeditor  koko  kolourpaint  kruler  okular  skanlite  svgpart  kdegraphics-thumbnailers"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": [
+          "kdegraphics-meta  kdewebdev-meta"
+        ]
+      }
+    },
+    {
+      "id": "1e280795e0e0e2488c41",
+      "name": "stardict",
+      "version": "3.0.7-4",
+      "architecture": "amd64",
+      "summary": "International dictionary software",
+      "description": "International dictionary software",
+      "homepage": "http://stardict-4.sourceforge.net/",
+      "license": "GPL-3.0-or-later",
+      "repository": "extra",
+      "installedSize": 11730275,
+      "downloadSize": 2123031,
+      "dependencies": {
+        "requires": [
+          "gtk3  libsigc++  libcanberra"
+        ],
+        "recommends": [],
+        "suggests": [
+          "enchant: spell checker plugin  espeak-ng: text to speech plugin"
+        ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e2b0ff0faf74c54a0ac",
+      "name": "vlc-plugin-freetype",
+      "version": "3.0.24-1",
+      "architecture": "amd64",
+      "summary": "Free and open source cross-platform multimedia player and framework - subtitle and on screen display text rendering support",
+      "description": "Free and open source cross-platform multimedia player and framework - subtitle and on screen display text rendering support",
+      "homepage": "https://www.videolan.org/vlc/",
+      "license": "GPL-2.0-or-later  LGPL-2.1-or-later",
+      "repository": "extra",
+      "installedSize": 79816,
+      "downloadSize": 42950,
+      "dependencies": {
+        "requires": [
+          "fontconfig  freetype2  fribidi  glibc  harfbuzz  libvlc  libvlccore.so=9-64  vlc-plugins-base"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e2e64ad1a83c2bc23b9",
+      "name": "bird",
+      "version": "3.4.0-1",
+      "architecture": "amd64",
+      "summary": "RIP, OSPF, BGP, MPLS, BFD, Babel routing daemon",
+      "description": "RIP, OSPF, BGP, MPLS, BFD, Babel routing daemon",
+      "homepage": "https://bird.network.cz/",
+      "license": "GPL-2.0-or-later",
+      "repository": "extra",
+      "installedSize": 1937674,
+      "downloadSize": 738709,
+      "dependencies": {
+        "requires": [
+          "glibc  libgcc  libssh  ncurses  readline"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": [
+          "bird6"
+        ]
+      }
+    },
+    {
+      "id": "1e31a100edf605b66c8a",
+      "name": "deepin-network-core",
+      "version": "2.0.108-1",
+      "architecture": "amd64",
+      "summary": "DDE network library and plugins",
+      "description": "DDE network library and plugins",
+      "homepage": "https://github.com/linuxdeepin/dde-network-core",
+      "license": "CC-BY-4.0  CC0-1.0  GPL-3.0-or-later  LGPL-3.0-or-later",
+      "repository": "extra",
+      "installedSize": 5246653,
+      "downloadSize": 1216795,
+      "dependencies": {
+        "requires": [
+          "deepin-control-center  glibc  libgcc  libstdc++  dtk6core  dtk6declarative  dtk6log  dtk6widget  qt6-base  qt6-declarative  networkmanager-qt  systemd-libs"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e3440657d6103006826",
+      "name": "shfs-utils",
+      "version": "0.35-8",
+      "architecture": "amd64",
+      "summary": "SHell FileSystem Linux utils",
+      "description": "SHell FileSystem Linux utils",
+      "homepage": "http://shfs.sourceforge.net/",
+      "license": "GPL",
+      "repository": "extra",
+      "installedSize": 62896,
+      "downloadSize": 15587,
+      "dependencies": {
+        "requires": [
+          "glibc  openssh"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e3e8bcafd669f066203",
+      "name": "pyopencl-headers",
+      "version": "1:2025.2.7-2",
+      "architecture": "amd64",
+      "summary": "A complete, object-oriented language binding of OpenCL to Python",
+      "description": "A complete, object-oriented language binding of OpenCL to Python",
+      "homepage": "https://documen.tician.de/pyopencl/",
+      "license": "Apache-2.0  BSD-3-Clause  MIT  MIT",
+      "repository": "extra",
+      "installedSize": 87661,
+      "downloadSize": 29578,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e3f84bc0208fec98de5",
+      "name": "pcsc-tools",
+      "version": "1.7.5-1",
+      "architecture": "amd64",
+      "summary": "PC/SC Architecture smartcard tools",
+      "description": "PC/SC Architecture smartcard tools",
+      "homepage": "https://pcsc-tools.apdu.fr/",
+      "license": "GPL",
+      "repository": "extra",
+      "installedSize": 739730,
+      "downloadSize": 191918,
+      "dependencies": {
+        "requires": [
+          "pcsclite  pcsc-perl  glib-perl"
+        ],
+        "recommends": [],
+        "suggests": [
+          "perl-gtk3: gscriptor  perl-libintl-perl: gscriptor"
+        ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e4432ed52758bc0ae47",
+      "name": "python-pydantic-extra-types",
+      "version": "2.11.2-1",
+      "architecture": "any",
+      "summary": "Extra pydantic types",
+      "description": "Extra pydantic types",
+      "homepage": "https://github.com/pydantic/pydantic-extra-types",
+      "license": "MIT",
+      "repository": "extra",
+      "installedSize": 1111684,
+      "downloadSize": 157500,
+      "dependencies": {
+        "requires": [
+          "python  python-pydantic  python-pydantic-core"
+        ],
+        "recommends": [],
+        "suggests": [
+          "python-cron-converter: for cron support  python-pendulum: for datetime support  python-phonenumbers: for phone number support  python-pycountry: for country code support  python-pymongo: for MongoDB support  python-pytz: for timezone support  python-semver: for semantic versioning support  python-tzdata: for timezone support  python-ulid: for ULID support"
+        ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e457955db70eb1d3981",
+      "name": "wasi-libc++",
+      "version": "23.1.4-1",
+      "architecture": "amd64",
+      "summary": "LLVM C++ standard library (WASI)",
+      "description": "LLVM C++ standard library (WASI)",
+      "homepage": "https://llvm.org/",
+      "license": "Apache-2.0 WITH LLVM-exception",
+      "repository": "extra",
+      "installedSize": 64139382,
+      "downloadSize": 5217902,
+      "dependencies": {
+        "requires": [
+          "wasi-libc  wasi-compiler-rt  wasi-libc++abi=23.1.4-1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e4b7be3760104bd3af7",
+      "name": "aspell-pt",
+      "version": "20251001-2",
+      "architecture": "amd64",
+      "summary": "Portuguese and Brazilian Portuguese dictionary for aspell",
+      "description": "Portuguese and Brazilian Portuguese dictionary for aspell",
+      "homepage": "http://aspell.net/",
+      "license": "GPL2",
+      "repository": "extra",
+      "installedSize": 54149769,
+      "downloadSize": 11639093,
+      "dependencies": {
+        "requires": [
+          "aspell"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "aspell-pt_br"
+        ],
+        "replaces": [
+          "aspell-pt_br"
+        ]
+      }
+    },
+    {
+      "id": "1e542ef7d0b8b0d2877d",
+      "name": "libgbinder",
+      "version": "1.1.54-1",
+      "architecture": "amd64",
+      "summary": "GLib-style interface to binder",
+      "description": "GLib-style interface to binder",
+      "homepage": "https://github.com/mer-hybris/libgbinder",
+      "license": "BSD-3-Clause",
+      "repository": "extra",
+      "installedSize": 237328,
+      "downloadSize": 72786,
+      "dependencies": {
+        "requires": [
+          "libglibutil  glib2  glibc"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libgbinder.so=1-64"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e5fa9b0de36a12f0c3b",
+      "name": "haskell-yaml",
+      "version": "0.11.11.2-290",
+      "architecture": "amd64",
+      "summary": "Support for parsing and rendering YAML documents.",
+      "description": "Support for parsing and rendering YAML documents.",
+      "homepage": "https://github.com/snoyberg/yaml/",
+      "license": "BSD",
+      "repository": "extra",
+      "installedSize": 950805,
+      "downloadSize": 184523,
+      "dependencies": {
+        "requires": [
+          "ghc-libs  haskell-aeson  haskell-attoparsec  haskell-conduit  haskell-libyaml  haskell-optparse-applicative  haskell-resourcet  haskell-scientific  haskell-unordered-containers  haskell-vector"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e66fd0968fabd5831e9",
+      "name": "leveldb",
+      "version": "1.23-4",
+      "architecture": "amd64",
+      "summary": "A fast and lightweight key/value database library",
+      "description": "A fast and lightweight key/value database library",
+      "homepage": "https://github.com/google/leveldb/",
+      "license": "BSD-3-Clause",
+      "repository": "extra",
+      "installedSize": 477513,
+      "downloadSize": 173977,
+      "dependencies": {
+        "requires": [
+          "snappy"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e703a1d7bd2e8ba4ed3",
+      "name": "vimix-cursors",
+      "version": "2020_02_24-6",
+      "architecture": "any",
+      "summary": "An X Cursor theme inspired by Material design and based on capitaine-cursors",
+      "description": "An X Cursor theme inspired by Material design and based on capitaine-cursors",
+      "homepage": "https://github.com/vinceliuice/Vimix-cursors",
+      "license": "GPL-3.0-or-later",
+      "repository": "extra",
+      "installedSize": 6605994,
+      "downloadSize": 318868,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e717036ecb34bfbf43e",
+      "name": "aspell-hu",
+      "version": "0.99.4.2-7",
+      "architecture": "amd64",
+      "summary": "Hungarian spellcheck dictionary for aspell",
+      "description": "Hungarian spellcheck dictionary for aspell",
+      "homepage": "http://aspell.net/",
+      "license": "GPL",
+      "repository": "extra",
+      "installedSize": 7098636,
+      "downloadSize": 1727568,
+      "dependencies": {
+        "requires": [
+          "aspell"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e7a2516d4674c01d058",
+      "name": "syncthingtray-plasma",
+      "version": "2.1.9-1",
+      "architecture": "amd64",
+      "summary": "Tray application for Syncthing - Plasma 6 applet",
+      "description": "Tray application for Syncthing - Plasma 6 applet",
+      "homepage": "https://github.com/Martchus/syncthingtray",
+      "license": "GPL-2.0-or-later",
+      "repository": "extra",
+      "installedSize": 277601,
+      "downloadSize": 75747,
+      "dependencies": {
+        "requires": [
+          "syncthingtray=2.1.9  c++utilities  glibc  libgcc  libplasma  libstdc++  kconfig  kcoreaddons  kdeclarative  kirigami  ksvg  qt6-base  qt6-declarative  qtforkawesome  qtutilities"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e7d337534f99201bf75",
+      "name": "python-pytest-twisted",
+      "version": "1.14.3-4",
+      "architecture": "any",
+      "summary": "A twisted plugin for py.test",
+      "description": "A twisted plugin for py.test",
+      "homepage": "https://github.com/pytest-dev/pytest-twisted",
+      "license": "BSD-3-Clause",
+      "repository": "extra",
+      "installedSize": 78914,
+      "downloadSize": 21776,
+      "dependencies": {
+        "requires": [
+          "python-pytest  python-greenlet  python-decorator  python-twisted"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e7e32deed22f9c72284",
+      "name": "wasm-bindgen",
+      "version": "0.2.128-1",
+      "architecture": "amd64",
+      "summary": "Interoperating JS and Rust code",
+      "description": "Interoperating JS and Rust code",
+      "homepage": "https://github.com/rustwasm/wasm-bindgen",
+      "license": "Apache-2.0  MIT",
+      "repository": "extra",
+      "installedSize": 19440019,
+      "downloadSize": 3890486,
+      "dependencies": {
+        "requires": [
+          "rust-wasm  nodejs  openssl"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": [
+          "wasm-bindgen-cli"
+        ]
+      }
+    },
+    {
+      "id": "1e7e9d04b8a93b6e7772",
+      "name": "texlive-games",
+      "version": "2026.1-1",
+      "architecture": "any",
+      "summary": "TeX Live - Games typesetting",
+      "description": "TeX Live - Games typesetting",
+      "homepage": "https://tug.org/texlive/",
+      "license": "GPL",
+      "repository": "extra",
+      "installedSize": 17679228,
+      "downloadSize": 11418086,
+      "dependencies": {
+        "requires": [
+          "texlive-bin  texlive-latex"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "texlive-bartel-chess-fonts  texlive-chess  texlive-chess-problem-diagrams  texlive-chessboard  texlive-chessfss  texlive-chinesechess  texlive-crossword  texlive-crosswrd  texlive-customdice  texlive-egameps  texlive-eigo  texlive-gamebook  texlive-gamebooklib  texlive-go  texlive-hanoi  texlive-havannah  texlive-hexboard  texlive-hexgame  texlive-hmtrump  texlive-horoscop  texlive-jeuxcartes  texlive-jigsaw  texlive-labyrinth  texlive-logicpuzzle  texlive-mahjong  texlive-mathador  texlive-maze  texlive-multi-sudoku  texlive-musikui  texlive-nimsticks  texlive-onedown  texlive-othello  texlive-othelloboard  texlive-pas-crosswords  texlive-pgf-go  texlive-playcards  texlive-psgo  texlive-quizztex  texlive-realtranspose  texlive-reverxii  texlive-rouequestions  texlive-rpgicons  texlive-rubik  texlive-schwalbe-chess  texlive-scrabble  texlive-sgame  texlive-skak  texlive-skaknew  texlive-soup  texlive-sudoku  texlive-sudokubundle  texlive-tangramtikz  texlive-thematicpuzzle  texlive-tictactoe  texlive-tikz-triminos  texlive-trivialpursuit  texlive-twoxtwogame  texlive-wargame  texlive-weiqi  texlive-wordle  texlive-xq  texlive-xskak"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e87a7184fb9d0aa6b4d",
+      "name": "bleachbit",
+      "version": "6.0.6-1",
+      "architecture": "any",
+      "summary": "Deletes unneeded files to free disk space and maintain privacy",
+      "description": "Deletes unneeded files to free disk space and maintain privacy",
+      "homepage": "https://www.bleachbit.org/",
+      "license": "GPL-3.0-or-later",
+      "repository": "extra",
+      "installedSize": 6003084,
+      "downloadSize": 1061421,
+      "dependencies": {
+        "requires": [
+          "glib2  gtk3  pango  python  python-chardet  python-gobject  python-psutil  python-requests  python-urllib3"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e9113c63e64f09fbbb0",
+      "name": "xf86-input-libinput",
+      "version": "1.5.0-1",
+      "architecture": "amd64",
+      "summary": "Generic input driver for the X.Org server based on libinput",
+      "description": "Generic input driver for the X.Org server based on libinput",
+      "homepage": "http://xorg.freedesktop.org/",
+      "license": "MIT",
+      "repository": "extra",
+      "installedSize": 105608,
+      "downloadSize": 42945,
+      "dependencies": {
+        "requires": [
+          "libinput  glibc"
         ],
         "recommends": [],
         "suggests": [],
@@ -101,418 +702,17 @@
       }
     },
     {
-      "id": "1e0e5b5c33d401ccf653",
-      "name": "elf2uf2-rs",
-      "version": "2.2.0-2",
-      "architecture": "amd64",
-      "summary": "Convert ELF files to UF2 for USB Flashing Bootloaders",
-      "description": "Convert ELF files to UF2 for USB Flashing Bootloaders",
-      "homepage": "https://github.com/JoNil/elf2uf2-rs",
-      "license": "0BSD",
-      "repository": "extra",
-      "installedSize": 1073134,
-      "downloadSize": 398630,
-      "dependencies": {
-        "requires": [
-          "glibc  libgcc  libudev.so=1-64"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e16fdbc2909928b6558",
-      "name": "vlc-plugin-aalib",
-      "version": "3.0.23_2-16",
-      "architecture": "amd64",
-      "summary": "Free and open source cross-platform multimedia player and framework - ASCII art video output plugin",
-      "description": "Free and open source cross-platform multimedia player and framework - ASCII art video output plugin",
-      "homepage": "https://www.videolan.org/vlc/",
-      "license": "GPL-2.0-or-later  LGPL-2.1-or-later",
-      "repository": "extra",
-      "installedSize": 14280,
-      "downloadSize": 9616,
-      "dependencies": {
-        "requires": [
-          "aalib  glibc  libvlc  libvlccore.so=9-64  libx11  vlc-plugins-base"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e23d273a10b812409bd",
-      "name": "mpc",
-      "version": "0.35-2",
-      "architecture": "amd64",
-      "summary": "Minimalist command line interface to MPD",
-      "description": "Minimalist command line interface to MPD",
-      "homepage": "https://www.musicpd.org/clients/mpc/",
-      "license": "GPL-2.0-or-later",
-      "repository": "extra",
-      "installedSize": 126917,
-      "downloadSize": 50995,
-      "dependencies": {
-        "requires": [
-          "glibc  libmpdclient  libmpdclient.so=2-64"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e23dee447283ca71431",
-      "name": "openjdk17-doc",
-      "version": "17.0.20.1.u1-1",
-      "architecture": "amd64",
-      "summary": "OpenJDK Java 17 documentation",
-      "description": "OpenJDK Java 17 documentation",
-      "homepage": "https://openjdk.java.net/",
-      "license": "LicenseRef-Java",
-      "repository": "extra",
-      "installedSize": 276127276,
-      "downloadSize": 11345881,
-      "dependencies": {
-        "requires": [
-          "jdk17-openjdk=17.0.20.1.u1-1"
-        ],
-        "recommends": [],
-        "suggests": [
-          "gvfs: open links e.g. hyperlinks"
-        ],
-        "provides": [
-          "openjdk17-doc=17.0.20.1.u1-1"
-        ],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e2b7e45aeda5303851d",
-      "name": "elementary-icon-theme",
-      "version": "9.0.0-1",
+      "id": "1e95c6ee3fbddfe988ff",
+      "name": "netsurf-buildsystem",
+      "version": "1.10-3",
       "architecture": "any",
-      "summary": "Named, vector icons for elementary OS",
-      "description": "Named, vector icons for elementary OS",
-      "homepage": "https://github.com/elementary/icons",
-      "license": "GPL-3.0-only",
-      "repository": "extra",
-      "installedSize": 38393537,
-      "downloadSize": 2959405,
-      "dependencies": {
-        "requires": [
-          "hicolor-icon-theme"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e33628e8c485da537f1",
-      "name": "xorg-xkbcomp",
-      "version": "1.5.0-1",
-      "architecture": "amd64",
-      "summary": "X Keyboard description compiler",
-      "description": "X Keyboard description compiler",
-      "homepage": "https://gitlab.freedesktop.org/xorg/app/xkbcomp",
-      "license": "LicenseRef-xkbcomp",
-      "repository": "extra",
-      "installedSize": 223360,
-      "downloadSize": 93470,
-      "dependencies": {
-        "requires": [
-          "libxkbfile  libx11  glibc"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e3c664e6b45c11fdbed",
-      "name": "haskell-ghc-lib-parser",
-      "version": "9.6.6.20240701-1",
-      "architecture": "amd64",
-      "summary": "The GHC API, decoupled from GHC versions",
-      "description": "The GHC API, decoupled from GHC versions",
-      "homepage": "https://github.com/digital-asset/ghc-lib",
-      "license": "BSD",
-      "repository": "extra",
-      "installedSize": 106912639,
-      "downloadSize": 14626139,
-      "dependencies": {
-        "requires": [
-          "ghc-libs"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e3ed74fef49f04f759e",
-      "name": "metasploit",
-      "version": "6.5.5-1",
-      "architecture": "amd64",
-      "summary": "Advanced open-source platform for developing, testing, and using exploit code",
-      "description": "Advanced open-source platform for developing, testing, and using exploit code",
-      "homepage": "https://www.metasploit.com/",
-      "license": "BSD-3-Clause",
-      "repository": "extra",
-      "installedSize": 483890540,
-      "downloadSize": 146946001,
-      "dependencies": {
-        "requires": [
-          "git  inetutils  libpcap  libxml2  libxslt  postgresql-libs  ruby  ruby-bundler  ruby-erb  sqlite"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e43e0b8e3e654b1e8fe",
-      "name": "vdpauinfo",
-      "version": "1.5-3",
-      "architecture": "amd64",
-      "summary": "Command line utility for querying the capabilities of a VDPAU device",
-      "description": "Command line utility for querying the capabilities of a VDPAU device",
-      "homepage": "https://gitlab.freedesktop.org/vdpau/vdpauinfo",
+      "summary": "NetSurf build system files",
+      "description": "NetSurf build system files",
+      "homepage": "https://download.netsurf-browser.org/libs/releases/",
       "license": "MIT",
       "repository": "extra",
-      "installedSize": 27948,
-      "downloadSize": 10515,
-      "dependencies": {
-        "requires": [
-          "glibc  libgcc  libstdc++  libvdpau  libx11"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e4b17f0795da057706f",
-      "name": "lcdproc",
-      "version": "0.5.9-11",
-      "architecture": "amd64",
-      "summary": "Utility to drive one or more LCD (and LCD-like) devices",
-      "description": "Utility to drive one or more LCD (and LCD-like) devices",
-      "homepage": "http://lcdproc.omnipotent.net/",
-      "license": "GPL",
-      "repository": "extra",
-      "installedSize": 1454821,
-      "downloadSize": 330018,
-      "dependencies": {
-        "requires": [
-          "libftdi-compat"
-        ],
-        "recommends": [],
-        "suggests": [
-          "perl: needed for some lcdproc tools"
-        ],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e50d833922b6771d318",
-      "name": "python-rjsmin",
-      "version": "1.2.5-2",
-      "architecture": "amd64",
-      "summary": "Fast javascript minifier for Python",
-      "description": "Fast javascript minifier for Python",
-      "homepage": "https://github.com/ndparker/rjsmin",
-      "license": "Apache-2.0",
-      "repository": "extra",
-      "installedSize": 123118,
-      "downloadSize": 26748,
-      "dependencies": {
-        "requires": [
-          "glibc  python"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e59ed3a71da06922899",
-      "name": "maturin",
-      "version": "1.15.0-1",
-      "architecture": "amd64",
-      "summary": "Build and publish crates with pyo3, rust-cpython and cffi bindings",
-      "description": "Build and publish crates with pyo3, rust-cpython and cffi bindings",
-      "homepage": "https://github.com/PyO3/maturin",
-      "license": "Apache-2.0 OR MIT",
-      "repository": "extra",
-      "installedSize": 25180592,
-      "downloadSize": 7334019,
-      "dependencies": {
-        "requires": [
-          "libgcc  glibc  rust  xz"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e5ba3d336ff64d437c4",
-      "name": "ruby-minima",
-      "version": "2.5.2-2",
-      "architecture": "any",
-      "summary": "A Jekyll plugin to generate an Atom feed of your Jekyll posts",
-      "description": "A Jekyll plugin to generate an Atom feed of your Jekyll posts",
-      "homepage": "https://github.com/jekyll/minima",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 47349,
-      "downloadSize": 19610,
-      "dependencies": {
-        "requires": [
-          "ruby  ruby-jekyll  ruby-jekyll-feed  ruby-jekyll-seo-tag"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e5c0ac3ce642ad48f68",
-      "name": "pstoedit",
-      "version": "4.3-1",
-      "architecture": "amd64",
-      "summary": "Translates PostScript and PDF graphics into other vector formats",
-      "description": "Translates PostScript and PDF graphics into other vector formats",
-      "homepage": "https://www.pstoedit.com",
-      "license": "GPL-2.0-only",
-      "repository": "extra",
-      "installedSize": 2135186,
-      "downloadSize": 728311,
-      "dependencies": {
-        "requires": [
-          "gcc-libs  gd  imagemagick  plotutils"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e5ef2021636109c37d6",
-      "name": "python-pyparsing",
-      "version": "3.3.3-1",
-      "architecture": "any",
-      "summary": "General parsing module for Python",
-      "description": "General parsing module for Python",
-      "homepage": "https://github.com/pyparsing/pyparsing/",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 1694885,
-      "downloadSize": 270764,
-      "dependencies": {
-        "requires": [
-          "python"
-        ],
-        "recommends": [],
-        "suggests": [
-          "python-railroad-diagrams: for generating Railroad Diagrams  python-jinja: for generating Railroad Diagrams"
-        ],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e67f80680f5dd60db68",
-      "name": "vim-csound",
-      "version": "0.8.1-4",
-      "architecture": "any",
-      "summary": "Csound tools for Vim",
-      "description": "Csound tools for Vim",
-      "homepage": "https://github.com/luisjure/csound-vim",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 1906180,
-      "downloadSize": 290655,
-      "dependencies": {
-        "requires": [
-          "vim-plugin-runtime"
-        ],
-        "recommends": [],
-        "suggests": [
-          "bash: for opcodelistfromcsound-z.sh  csound: Use vim with csound  python: for opcodelistfromcsound-z.py"
-        ],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e69baa5fa1842ac2728",
-      "name": "jdupes",
-      "version": "1.31.2-1",
-      "architecture": "amd64",
-      "summary": "A program for identifying duplicate files residing within specified directories",
-      "description": "A program for identifying duplicate files residing within specified directories",
-      "homepage": "https://www.jdupes.com",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 75390,
-      "downloadSize": 38676,
-      "dependencies": {
-        "requires": [
-          "glibc  libjodycode>=4  xxhash"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e6e8c4239ee7d2e1bc5",
-      "name": "bam",
-      "version": "0.5.1-3",
-      "architecture": "amd64",
-      "summary": "A fast and flexible build system using Lua",
-      "description": "A fast and flexible build system using Lua",
-      "homepage": "https://github.com/matricks/bam",
-      "license": "ZLIB",
-      "repository": "extra",
-      "installedSize": 344761,
-      "downloadSize": 137521,
+      "installedSize": 62302,
+      "downloadSize": 18385,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -523,170 +723,20 @@
       }
     },
     {
-      "id": "1e701f999b0391446096",
-      "name": "latte-integrale",
-      "version": "1.7.6-5",
-      "architecture": "amd64",
-      "summary": "Computer software dedicated to the problems of counting lattice points and integration inside convex polytopes",
-      "description": "Computer software dedicated to the problems of counting lattice points and integration inside convex polytopes",
-      "homepage": "https://www.math.ucdavis.edu/~latte/",
-      "license": "GPL-2.0-or-later",
-      "repository": "extra",
-      "installedSize": 33878504,
-      "downloadSize": 7979393,
-      "dependencies": {
-        "requires": [
-          "4ti2  cddlib  glibc  gmp  libstdc++  libgcc  lidia  ntl"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e715d185230b418abb6",
-      "name": "serd-docs",
-      "version": "0.32.10-1",
-      "architecture": "amd64",
-      "summary": "Lightweight C library for RDF syntax supporting reading/ writing Turtle and NTriples - documentation",
-      "description": "Lightweight C library for RDF syntax supporting reading/ writing Turtle and NTriples - documentation",
-      "homepage": "https://drobilla.net/software/serd.html",
-      "license": "0BSD OR ISC  BSD-3-Clause  ISC",
-      "repository": "extra",
-      "installedSize": 669537,
-      "downloadSize": 51459,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e7632646f9c87b34aa9",
-      "name": "perl-goocanvas2-cairotypes",
-      "version": "0.001-10",
-      "architecture": "amd64",
-      "summary": "Bridge between GooCanvas2 and Cairo types",
-      "description": "Bridge between GooCanvas2 and Cairo types",
-      "homepage": "https://metacpan.org/release/GooCanvas2-CairoTypes",
-      "license": "PerlArtistic  GPL",
-      "repository": "extra",
-      "installedSize": 60317,
-      "downloadSize": 29230,
-      "dependencies": {
-        "requires": [
-          "goocanvas  perl-gtk3"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e7a5d63f406eebeb09b",
-      "name": "nextcloud-client",
-      "version": "2:34.0.4-1",
-      "architecture": "amd64",
-      "summary": "Nextcloud desktop client",
-      "description": "Nextcloud desktop client",
-      "homepage": "https://nextcloud.com/",
-      "license": "GPL-2.0-or-later",
-      "repository": "extra",
-      "installedSize": 26325062,
-      "downloadSize": 5229341,
-      "dependencies": {
-        "requires": [
-          "hicolor-icon-theme  karchive  kdbusaddons  kdsingleapplication  kguiaddons  libcanberra  libcloudproviders  libp11  openssl  qt6-5compat  qt6-base  qt6-declarative  qt6-svg  qt6-webengine  qt6-websockets  qtkeychain-qt6  sqlite  xcb-util-cursor  xdg-utils"
-        ],
-        "recommends": [],
-        "suggests": [
-          "kio: integration with Dolphin  nemo-python: integration with Nemo  nautilus-python: integration with Nautilus  python-caja: integration with Caja"
-        ],
-        "provides": [
-          "nextcloud-client-cloudproviders"
-        ],
-        "conflicts": [
-          "nextcloud-client-cloudproviders"
-        ],
-        "replaces": [
-          "nextcloud-client-cloudproviders"
-        ]
-      }
-    },
-    {
-      "id": "1e7d9916805e38e5a8bc",
-      "name": "thunderbird-i18n-is",
-      "version": "156.0.1-1",
-      "architecture": "amd64",
-      "summary": "Icelandic language pack for Thunderbird",
-      "description": "Icelandic language pack for Thunderbird",
-      "homepage": "https://www.thunderbird.net/",
-      "license": "MPL-2.0  GPL-2.0-only  LGPL-2.1-only",
-      "repository": "extra",
-      "installedSize": 511736,
-      "downloadSize": 443520,
-      "dependencies": {
-        "requires": [
-          "thunderbird>=156.0.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e7eedbbf09c1e729a30",
-      "name": "ruby-ronn-ng",
-      "version": "0.10.1-6",
+      "id": "1e97aef03ac05fe4524f",
+      "name": "ruby-bundler",
+      "version": "4.0.3-1",
       "architecture": "any",
-      "summary": "Manual page formatter that generates man pages from markdown",
-      "description": "Manual page formatter that generates man pages from markdown",
-      "homepage": "https://github.com/apjanke/ronn-ng",
+      "summary": "Manages an application's dependencies through its entire life, across many machines, systematically and repeatably",
+      "description": "Manages an application's dependencies through its entire life, across many machines, systematically and repeatably",
+      "homepage": "https://bundler.io",
       "license": "MIT",
       "repository": "extra",
-      "installedSize": 222768,
-      "downloadSize": 67467,
+      "installedSize": 1719971,
+      "downloadSize": 420334,
       "dependencies": {
         "requires": [
-          "ruby  ruby-rdiscount  ruby-mustache  ruby-kramdown  ruby-kramdown-parser-gfm  ruby-nokogiri  ruby-erb"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "ruby-ronn"
-        ],
-        "conflicts": [
-          "ruby-ronn"
-        ],
-        "replaces": [
-          "ruby-ronn"
-        ]
-      }
-    },
-    {
-      "id": "1e804306c480801cfc68",
-      "name": "zola",
-      "version": "0.23.6-1",
-      "architecture": "amd64",
-      "summary": "An opinionated static site generator",
-      "description": "An opinionated static site generator",
-      "homepage": "https://github.com/getzola/zola",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 51520379,
-      "downloadSize": 12332112,
-      "dependencies": {
-        "requires": [
-          "libgcc  glibc  oniguruma  zstd"
+          "ruby"
         ],
         "recommends": [],
         "suggests": [],
@@ -696,89 +746,20 @@
       }
     },
     {
-      "id": "1e82c1b914cbff75a68d",
-      "name": "python-cliff",
-      "version": "4.16.0-1",
+      "id": "1e9a93dae76f663f1570",
+      "name": "gyp",
+      "version": "20240207.1615ec32-2",
       "architecture": "any",
-      "summary": "Command Line Interface Formulation Framework",
-      "description": "Command Line Interface Formulation Framework",
-      "homepage": "https://docs.openstack.org/cliff/latest/",
-      "license": "Apache-2.0",
-      "repository": "extra",
-      "installedSize": 1071783,
-      "downloadSize": 155351,
-      "dependencies": {
-        "requires": [
-          "python-autopage  python-cmd2  python-prettytable  python-stevedore  python-yaml"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e891233b524d62ddc58",
-      "name": "mmc-utils",
-      "version": "1.0-1",
-      "architecture": "amd64",
-      "summary": "Userspace tools for MMC/SD devices",
-      "description": "Userspace tools for MMC/SD devices",
-      "homepage": "https://mmc-utils.readthedocs.io",
-      "license": "GPL-2.0-only",
-      "repository": "extra",
-      "installedSize": 115618,
-      "downloadSize": 47294,
-      "dependencies": {
-        "requires": [
-          "glibc"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e8e17082498e1e7503b",
-      "name": "retroarch-assets-xmb",
-      "version": "1:20260813.223050.g73106363e14e-1",
-      "architecture": "any",
-      "summary": "XMB UI/UX assets for RetroArch",
-      "description": "XMB UI/UX assets for RetroArch",
-      "homepage": "http://www.libretro.com/",
-      "license": "CC-BY-4.0",
-      "repository": "extra",
-      "installedSize": 64462959,
-      "downloadSize": 47303912,
-      "dependencies": {
-        "requires": [
-          "retroarch"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e90a7ea46108717e9e6",
-      "name": "python-protobuf",
-      "version": "36.1-1",
-      "architecture": "amd64",
-      "summary": "Python 3 bindings for Google Protocol Buffers",
-      "description": "Python 3 bindings for Google Protocol Buffers",
-      "homepage": "https://developers.google.com/protocol-buffers/",
+      "summary": "Generate Your Projects meta-build system",
+      "description": "Generate Your Projects meta-build system",
+      "homepage": "https://gyp.gsrc.io/",
       "license": "BSD-3-Clause",
       "repository": "extra",
-      "installedSize": 3947978,
-      "downloadSize": 520967,
+      "installedSize": 3466817,
+      "downloadSize": 608122,
       "dependencies": {
         "requires": [
-          "protobuf=36.1  python"
+          "ninja  python"
         ],
         "recommends": [],
         "suggests": [],
@@ -788,66 +769,45 @@
       }
     },
     {
-      "id": "1e922effffc1b3a5c724",
-      "name": "posix-xsi",
-      "version": "2017-6",
-      "architecture": "any",
-      "summary": "metapackage providing the POSIX shell and utilities (XCU): X/Open System Interfaces",
-      "description": "metapackage providing the POSIX shell and utilities (XCU): X/Open System Interfaces",
-      "homepage": "https://pubs.opengroup.org/onlinepubs/9699919799/",
-      "license": "None",
-      "repository": "extra",
-      "installedSize": 0,
-      "downloadSize": 3004,
-      "dependencies": {
-        "requires": [
-          "posix  util-linux  ncompress  coreutils  psmisc  procps-ng  ncurses  gzip  uucp"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e93eccfe2b6e16c0f57",
-      "name": "python-zlib-ng",
-      "version": "1.0.0-2",
+      "id": "1e9bd5bdbb421961912e",
+      "name": "cross",
+      "version": "0.2.5-3",
       "architecture": "amd64",
-      "summary": "A drop-in replacement for Python's zlib and gzip modules using zlib-ng",
-      "description": "A drop-in replacement for Python's zlib and gzip modules using zlib-ng",
-      "homepage": "https://github.com/pycompression/python-zlib-ng",
-      "license": "PSF-2.0",
+      "summary": "'Zero setup' cross compilation and 'cross testing' of Rust crates",
+      "description": "'Zero setup' cross compilation and 'cross testing' of Rust crates",
+      "homepage": "https://github.com/rust-embedded/cross",
+      "license": "Apache-2.0  MIT",
       "repository": "extra",
-      "installedSize": 176629,
-      "downloadSize": 48497,
+      "installedSize": 1760023,
+      "downloadSize": 677843,
       "dependencies": {
         "requires": [
-          "glibc  python  zlib-ng"
+          "glibc  libgcc  rustup"
         ],
         "recommends": [],
-        "suggests": [],
+        "suggests": [
+          "docker: provide container  podman: provide container"
+        ],
         "provides": [],
         "conflicts": [],
         "replaces": []
       }
     },
     {
-      "id": "1e952f23c7305647bfa3",
-      "name": "riscv32-elf-gdb",
-      "version": "17.1-2",
+      "id": "1e9cc7b3367b6ec44ec8",
+      "name": "openvr",
+      "version": "2.15.6-2",
       "architecture": "amd64",
-      "summary": "The GNU Debugger for the RISCV32 (bare-metal) target",
-      "description": "The GNU Debugger for the RISCV32 (bare-metal) target",
-      "homepage": "https://www.gnu.org/software/gdb/",
-      "license": "GPL3",
+      "summary": "API and runtime that allows access to VR hardware from multiple vendors",
+      "description": "API and runtime that allows access to VR hardware from multiple vendors",
+      "homepage": "https://github.com/ValveSoftware/openvr",
+      "license": "BSD-3-Clause",
       "repository": "extra",
-      "installedSize": 9853659,
-      "downloadSize": 3697830,
+      "installedSize": 745806,
+      "downloadSize": 116793,
       "dependencies": {
         "requires": [
-          "xz  ncurses  expat  python  guile  gdb-common  mpfr  libelf  source-highlight"
+          "jsoncpp  libgl"
         ],
         "recommends": [],
         "suggests": [],
@@ -857,112 +817,20 @@
       }
     },
     {
-      "id": "1e99e150ce3b8a574695",
-      "name": "python-multivolumefile",
-      "version": "0.2.3-10",
-      "architecture": "any",
-      "summary": "Multi volume file wrapper library",
-      "description": "Multi volume file wrapper library",
-      "homepage": "https://github.com/miurahr/multivolume",
-      "license": "LGPL",
-      "repository": "extra",
-      "installedSize": 94298,
-      "downloadSize": 25952,
-      "dependencies": {
-        "requires": [
-          "python"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e9bc7a4a0a03b08f15f",
-      "name": "haskell-fuzzy",
-      "version": "0.1.1.0-209",
+      "id": "1e9dea40f3bd9e42c405",
+      "name": "efibootmgr",
+      "version": "18-4",
       "architecture": "amd64",
-      "summary": "Filters a list based on a fuzzy string search.",
-      "description": "Filters a list based on a fuzzy string search.",
-      "homepage": "https://github.com/joom/fuzzy",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 56985,
-      "downloadSize": 18822,
-      "dependencies": {
-        "requires": [
-          "ghc-libs  haskell-monoid-subclasses"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e9f4064740083efdd0f",
-      "name": "sword",
-      "version": "1.9.0-18",
-      "architecture": "amd64",
-      "summary": "Library for Bible study programs",
-      "description": "Library for Bible study programs",
-      "homepage": "https://www.crosswire.org/sword/",
-      "license": "GPL",
-      "repository": "extra",
-      "installedSize": 3369629,
-      "downloadSize": 837093,
-      "dependencies": {
-        "requires": [
-          "curl  clucene  xz"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1e9f843287c3acdf2954",
-      "name": "readest",
-      "version": "0.12.10-1",
-      "architecture": "amd64",
-      "summary": "Modern, feature-rich ebook reader",
-      "description": "Modern, feature-rich ebook reader",
-      "homepage": "https://github.com/readest/readest",
-      "license": "AGPL-3.0-or-later",
-      "repository": "extra",
-      "installedSize": 386235225,
-      "downloadSize": 142205915,
-      "dependencies": {
-        "requires": [
-          "cairo  desktop-file-utils  libgcc  fontconfig  gdk-pixbuf2  glib2  glibc  gtk3  hicolor-icon-theme  libsoup3  openssl  pango  webkit2gtk-4.1  gst-plugins-good"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ea1bfb965325f7788f4",
-      "name": "gnome-color-manager",
-      "version": "3.36.2-2",
-      "architecture": "amd64",
-      "summary": "GNOME Color Profile Tools",
-      "description": "GNOME Color Profile Tools",
-      "homepage": "https://gitlab.gnome.org/GNOME/gnome-color-manager",
+      "summary": "Linux user-space application to modify the EFI Boot Manager",
+      "description": "Linux user-space application to modify the EFI Boot Manager",
+      "homepage": "https://github.com/rhboot/efibootmgr",
       "license": "GPL-2.0-or-later",
-      "repository": "extra",
-      "installedSize": 3216539,
-      "downloadSize": 1077496,
+      "repository": "core",
+      "installedSize": 85863,
+      "downloadSize": 31411,
       "dependencies": {
         "requires": [
-          "cairo  colord  libgcc  gdk-pixbuf2  glib2  glibc  gtk3  hicolor-icon-theme  lcms2  libcolord  pango"
+          "glibc  popt  efivar  libefiboot.so=1-64  libefivar.so=1-64"
         ],
         "recommends": [],
         "suggests": [],
@@ -972,118 +840,20 @@
       }
     },
     {
-      "id": "1ea4d57fba8bbe0675aa",
-      "name": "kde-utilities-meta",
-      "version": "26.08-1",
-      "architecture": "any",
-      "summary": "Meta package for KDE utilities applications",
-      "description": "Meta package for KDE utilities applications",
-      "homepage": "https://www.archlinux.org/",
-      "license": "None",
-      "repository": "extra",
-      "installedSize": 0,
-      "downloadSize": 2483,
-      "dependencies": {
-        "requires": [
-          "ark  filelight  francis  isoimagewriter  kalk  kalm  kate  kbackup  kcalc  kcharselect  kclock  kdebugsettings  kdf  kdialog  keditbookmarks  keepsecret  keysmith  kfind  kgpg  kongress  konsole  krecorder  kteatime  ktimer  ktrip  kwalletmanager  kweather  markdownpart  qrca  skanpage  sweeper  telly-skout  yakuake"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": [
-          "kdeutils-meta"
-        ]
-      }
-    },
-    {
-      "id": "1ea53056f2e7eb35b37d",
-      "name": "python-pytest-run-parallel",
-      "version": "0.10.0-1",
-      "architecture": "any",
-      "summary": "A simple pytest plugin to run tests concurrently",
-      "description": "A simple pytest plugin to run tests concurrently",
-      "homepage": "https://github.com/Quansight-Labs/pytest-run-parallel",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 159608,
-      "downloadSize": 39521,
-      "dependencies": {
-        "requires": [
-          "python  python-pytest"
-        ],
-        "recommends": [],
-        "suggests": [
-          "python-psutil: for identifying the number of available cores"
-        ],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ea977cb31bd9b5e2433",
-      "name": "showmethekey",
-      "version": "1.21.0-1",
+      "id": "1ea428700c1253797cba",
+      "name": "kiwix-desktop",
+      "version": "2.5.1-2",
       "architecture": "amd64",
-      "summary": "A screenkey alternative that works under Wayland via libinput.",
-      "description": "A screenkey alternative that works under Wayland via libinput.",
-      "homepage": "https://showmethekey.alynx.one/",
-      "license": "Apache-2.0",
-      "repository": "extra",
-      "installedSize": 171436,
-      "downloadSize": 59869,
-      "dependencies": {
-        "requires": [
-          "cairo  dconf  glib2  glibc  gtk4  hicolor-icon-theme  json-glib  libadwaita  libevdev  libgcc  libinput  libx11  libxkbcommon  pango  polkit  systemd-libs"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1eab665522edd19b6e91",
-      "name": "lokalize",
-      "version": "26.08.1-1",
-      "architecture": "amd64",
-      "summary": "Computer-Aided Translation System",
-      "description": "Computer-Aided Translation System",
-      "homepage": "https://apps.kde.org/lokalize/",
-      "license": "GPL-2.0-or-later  LGPL-2.0-or-later",
-      "repository": "extra",
-      "installedSize": 8094108,
-      "downloadSize": 2479017,
-      "dependencies": {
-        "requires": [
-          "glibc  hunspell  kcolorscheme  kcompletion  kconfig  kconfigwidgets  kcoreaddons  kcrash  kdbusaddons  ki18n  kiconthemes  kio  kitemviews  knotifications  ktextwidgets  kwidgetsaddons  kxmlgui  libstdc++  qt6-base  sonnet"
-        ],
-        "recommends": [],
-        "suggests": [
-          "languagetool: spell and grammar checking  sh: for some scripts"
-        ],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1eabc220417732d26ffb",
-      "name": "eq10q",
-      "version": "2.2-8",
-      "architecture": "amd64",
-      "summary": "Audio plugin bundle over the LV2 standard for Linux",
-      "description": "Audio plugin bundle over the LV2 standard for Linux",
-      "homepage": "http://eq10q.sourceforge.net/",
+      "summary": "Offline reader for Web content, especially intended to make Wikipedia available offline",
+      "description": "Offline reader for Web content, especially intended to make Wikipedia available offline",
+      "homepage": "https://github.com/kiwix/kiwix-desktop",
       "license": "GPL-3.0-or-later",
       "repository": "extra",
-      "installedSize": 679828,
-      "downloadSize": 89677,
+      "installedSize": 1726551,
+      "downloadSize": 585123,
       "dependencies": {
         "requires": [
-          "glibc  fftw  libfftw3.so=3-64"
+          "libkiwix>=14.2.0  qt6-base  qt6-webengine  aria2"
         ],
         "recommends": [],
         "suggests": [],
@@ -1093,70 +863,231 @@
       }
     },
     {
-      "id": "1eb98b3908529f7c9b5f",
-      "name": "python-opentelemetry-sdk",
-      "version": "1.44.0-1",
-      "architecture": "any",
-      "summary": "OpenTelemetry Python SDK",
-      "description": "OpenTelemetry Python SDK",
-      "homepage": "https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-sdk",
-      "license": "Apache-2.0",
-      "repository": "extra",
-      "installedSize": 1738432,
-      "downloadSize": 252789,
-      "dependencies": {
-        "requires": [
-          "python  python-opentelemetry-api  python-opentelemetry-semantic-conventions  python-typing_extensions"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ebc023c6bc752113dce",
-      "name": "archinstall",
-      "version": "4.5-1",
-      "architecture": "any",
-      "summary": "Just another guided/automated Arch Linux installer with a twist",
-      "description": "Just another guided/automated Arch Linux installer with a twist",
-      "homepage": "https://github.com/archlinux/archinstall",
+      "id": "1ea5ede17c3eba069217",
+      "name": "valabind",
+      "version": "2.1.0-1",
+      "architecture": "amd64",
+      "summary": "Create bindings from vapi to nodejs, python, swig, c++",
+      "description": "Create bindings from vapi to nodejs, python, swig, c++",
+      "homepage": "https://github.com/radare/valabind",
       "license": "GPL-3.0-only",
       "repository": "extra",
-      "installedSize": 8295294,
-      "downloadSize": 1105469,
+      "installedSize": 269154,
+      "downloadSize": 99172,
       "dependencies": {
         "requires": [
-          "arch-install-scripts  btrfs-progs  coreutils  cryptsetup  dosfstools  e2fsprogs  glibc  kbd  libcrypt.so  libxcrypt  pciutils  procps-ng  python  python-cryptography  python-pydantic  python-pyparted  python-textual  python-markdown-it-py  python-linkify-it-py  systemd  util-linux  xfsprogs  lvm2  f2fs-tools  libfido2"
+          "sh  glibc  glib2  vala  swig  libvala-0.56.so=0-64"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ea9f91fbe699a98c7ea",
+      "name": "haskell-hls-class-plugin",
+      "version": "2.4.0.0-31",
+      "architecture": "amd64",
+      "summary": "Class/instance management plugin for Haskell Language Server",
+      "description": "Class/instance management plugin for Haskell Language Server",
+      "homepage": "https://github.com/haskell/haskell-language-server#readme",
+      "license": "Apache-2.0",
+      "repository": "extra",
+      "installedSize": 763069,
+      "downloadSize": 134593,
+      "dependencies": {
+        "requires": [
+          "ghc-libs  haskell-aeson  haskell-extra  haskell-ghc  haskell-ghc-exactprint  haskell-ghcide  haskell-hls-graph  haskell-hls-plugin-api  haskell-lens  haskell-lsp"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1eb442c2b1ab4fa85e20",
+      "name": "dropbear-scp",
+      "version": "2026.94-1",
+      "architecture": "amd64",
+      "summary": "Lightweight application for copying files over SSH",
+      "description": "Lightweight application for copying files over SSH",
+      "homepage": "https://github.com/mkj/dropbear",
+      "license": "MIT",
+      "repository": "extra",
+      "installedSize": 43596,
+      "downloadSize": 20258,
+      "dependencies": {
+        "requires": [
+          "glibc"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "scp"
+        ],
+        "conflicts": [
+          "openssh"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1eb8334f079eace230dd",
+      "name": "xxhash",
+      "version": "0.8.4-1",
+      "architecture": "amd64",
+      "summary": "Extremely fast non-cryptographic hash algorithm",
+      "description": "Extremely fast non-cryptographic hash algorithm",
+      "homepage": "https://cyan4973.github.io/xxHash/",
+      "license": "GPL2  BSD",
+      "repository": "extra",
+      "installedSize": 443052,
+      "downloadSize": 108215,
+      "dependencies": {
+        "requires": [
+          "glibc"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libxxhash.so=0-64"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ebc477e5ad0e7478702",
+      "name": "lua51-semver",
+      "version": "1.2.1-3",
+      "architecture": "any",
+      "summary": "an implementation of semantic versioning (semver.org 2.0.0) in pure Lua",
+      "description": "an implementation of semantic versioning (semver.org 2.0.0) in pure Lua",
+      "homepage": "https://github.com/kikito/semver.lua",
+      "license": "MIT",
+      "repository": "extra",
+      "installedSize": 12324,
+      "downloadSize": 7436,
+      "dependencies": {
+        "requires": [
+          "lua51"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ec2df47c299692faa16",
+      "name": "read-edid",
+      "version": "3.0.2-5",
+      "architecture": "amd64",
+      "summary": "Program that can get information from a PNP monitor",
+      "description": "Program that can get information from a PNP monitor",
+      "homepage": "http://www.polypux.org/projects/read-edid/",
+      "license": "GPL",
+      "repository": "extra",
+      "installedSize": 53446,
+      "downloadSize": 18363,
+      "dependencies": {
+        "requires": [
+          "libx86>=0.99"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ec44aef29a5c4858524",
+      "name": "wlr-protocols",
+      "version": "r112.a741f0a-1",
+      "architecture": "any",
+      "summary": "Wayland protocols designed for use in wlroots (and other compositors).",
+      "description": "Wayland protocols designed for use in wlroots (and other compositors).",
+      "homepage": "https://gitlab.freedesktop.org/wlroots/wlr-protocols",
+      "license": "MIT",
+      "repository": "extra",
+      "installedSize": 110487,
+      "downloadSize": 22366,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ec569201a794def76f5",
+      "name": "python-dkim",
+      "version": "1.1.8-3",
+      "architecture": "any",
+      "summary": "Python library that implements DKIM and ARC email signing and verification",
+      "description": "Python library that implements DKIM and ARC email signing and verification",
+      "homepage": "https://launchpad.net/dkimpy",
+      "license": "ZLIB",
+      "repository": "extra",
+      "installedSize": 342934,
+      "downloadSize": 81333,
+      "dependencies": {
+        "requires": [
+          "python-dnspython"
         ],
         "recommends": [],
         "suggests": [
-          "python-systemd: for systemd-journald support"
+          "python-aiodns: for asycnio  python-authres: for ARC  python-pynacl: for use of ed25519 capability"
         ],
-        "provides": [
-          "python-archinstall"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
     },
     {
-      "id": "1ebe34a333933af97e5a",
-      "name": "gambas3-gb-media-form",
-      "version": "3.22.1-2",
+      "id": "1ec6b44dd93582409daf",
+      "name": "mididings-docs",
+      "version": "20260601-2",
       "architecture": "amd64",
-      "summary": "Media player control component",
-      "description": "Media player control component",
-      "homepage": "http://gambas.sourceforge.net/",
-      "license": "GPL-2.0-or-later",
+      "summary": "A MIDI router & processor (documentation)",
+      "description": "A MIDI router & processor (documentation)",
+      "homepage": "https://github.com/mididings/mididings",
+      "license": "GFDL-1.3-or-later",
       "repository": "extra",
-      "installedSize": 30140,
-      "downloadSize": 17013,
+      "installedSize": 924561,
+      "downloadSize": 143637,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ec7ad49513a58549986",
+      "name": "haskell-universe-base",
+      "version": "1.1.4-169",
+      "architecture": "amd64",
+      "summary": "A class for finite and recursively enumerable types.",
+      "description": "A class for finite and recursively enumerable types.",
+      "homepage": "https://github.com/dmwit/universe",
+      "license": "BSD",
+      "repository": "extra",
+      "installedSize": 310979,
+      "downloadSize": 61014,
       "dependencies": {
         "requires": [
-          "gambas3-runtime  gambas3-gb-media  gambas3-gui"
+          "ghc-libs  haskell-tagged"
         ],
         "recommends": [],
         "suggests": [],
@@ -1166,17 +1097,186 @@
       }
     },
     {
-      "id": "1ec565fcaf888d1a5f29",
-      "name": "python-kiwisolver",
-      "version": "1.5.1-1",
+      "id": "1eca7b6a3e7a7bb4eef4",
+      "name": "nvidia-settings",
+      "version": "615.78.08-1",
       "architecture": "amd64",
-      "summary": "A fast implementation of the Cassowary constraint solver",
-      "description": "A fast implementation of the Cassowary constraint solver",
-      "homepage": "https://github.com/nucleic/kiwi",
+      "summary": "Tool for configuring the NVIDIA graphics driver",
+      "description": "Tool for configuring the NVIDIA graphics driver",
+      "homepage": "https://github.com/NVIDIA/nvidia-settings",
+      "license": "GPL-2.0-only",
+      "repository": "extra",
+      "installedSize": 1624248,
+      "downloadSize": 804266,
+      "dependencies": {
+        "requires": [
+          "jansson  gtk3  libxv  libvdpau  nvidia-utils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ecab869f54e89769b3a",
+      "name": "libreoffice-still-eu",
+      "version": "26.2.6-1",
+      "architecture": "any",
+      "summary": "Basque language pack for LibreOffice still",
+      "description": "Basque language pack for LibreOffice still",
+      "homepage": "https://www.documentfoundation.org",
+      "license": "LGPL-3.0-or-later",
+      "repository": "extra",
+      "installedSize": 36620540,
+      "downloadSize": 3386362,
+      "dependencies": {
+        "requires": [
+          "libreoffice-still"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libreoffice-eu  libreoffice-still-i18n=26.2.6-1"
+        ],
+        "conflicts": [
+          "libreoffice-eu"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ed002aa1f1e21f6f446",
+      "name": "erlang-et",
+      "version": "29.1.1-1",
+      "architecture": "amd64",
+      "summary": "An event tracer for Erlang programs",
+      "description": "An event tracer for Erlang programs",
+      "homepage": "https://erlang.org/",
+      "license": "Apache-2.0",
+      "repository": "extra",
+      "installedSize": 438891,
+      "downloadSize": 216230,
+      "dependencies": {
+        "requires": [
+          "erlang-core  erlang-runtime_tools  erlang-wx"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "erlang-nox"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ed0f04ccd9adfe231b4",
+      "name": "python-accessible-pygments",
+      "version": "0.0.5-3",
+      "architecture": "any",
+      "summary": "Collection of accessible pygments styles",
+      "description": "Collection of accessible pygments styles",
+      "homepage": "https://github.com/Quansight-Labs/accessible-pygments",
       "license": "BSD-3-Clause",
       "repository": "extra",
-      "installedSize": 161390,
-      "downloadSize": 56797,
+      "installedSize": 1685163,
+      "downloadSize": 1332436,
+      "dependencies": {
+        "requires": [
+          "python-pygments"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ed1065abc761b941af4",
+      "name": "strike",
+      "version": "2.0.0-2",
+      "architecture": "amd64",
+      "summary": "A simple minimal IDE for the Linux phones",
+      "description": "A simple minimal IDE for the Linux phones",
+      "homepage": "https://mauikit.org/",
+      "license": "LGPL-3.0-only",
+      "repository": "extra",
+      "installedSize": 2702582,
+      "downloadSize": 1613318,
+      "dependencies": {
+        "requires": [
+          "glibc  kcoreaddons  ki18n  kirigami  libstdc++  mauikit  mauikit-filebrowsing  mauikit-texteditor  mauikit-terminal  qt6-base  qt6-declarative"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ee4615064e07266dfa4",
+      "name": "rucola",
+      "version": "0.10.0-1",
+      "architecture": "amd64",
+      "summary": "Terminal-based markdown note manager",
+      "description": "Terminal-based markdown note manager",
+      "homepage": "https://github.com/Linus-Mussmaecher/rucola",
+      "license": "GPL-3.0-only",
+      "repository": "extra",
+      "installedSize": 5172677,
+      "downloadSize": 1704391,
+      "dependencies": {
+        "requires": [
+          "glibc  libgcc  libgit2  libssh2  openssl"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": [
+          "rucola-notes"
+        ]
+      }
+    },
+    {
+      "id": "1ee63254fabecfca1982",
+      "name": "haskell-summoner-tui",
+      "version": "2.2.0.0-42",
+      "architecture": "amd64",
+      "summary": "Tool for scaffolding fully configured batteries-included production-level Haskell projects using TUI.",
+      "description": "Tool for scaffolding fully configured batteries-included production-level Haskell projects using TUI.",
+      "homepage": "https://github.com/kowainik/summoner",
+      "license": "MPL-2.0",
+      "repository": "extra",
+      "installedSize": 929162,
+      "downloadSize": 178915,
+      "dependencies": {
+        "requires": [
+          "ghc-libs  haskell-brick  haskell-colourista  haskell-microlens  haskell-microlens-th  haskell-relude  haskell-summoner  haskell-validation-selective  haskell-vty  haskell-vty-crossplatform"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ee7a55d76daec4ed121",
+      "name": "python-whitenoise",
+      "version": "6.12.0-1",
+      "architecture": "any",
+      "summary": "Radically simplified static file serving for WSGI applications",
+      "description": "Radically simplified static file serving for WSGI applications",
+      "homepage": "https://github.com/evansd/whitenoise",
+      "license": "MIT",
+      "repository": "extra",
+      "installedSize": 193560,
+      "downloadSize": 46976,
       "dependencies": {
         "requires": [
           "python"
@@ -1189,498 +1289,98 @@
       }
     },
     {
-      "id": "1ec7ae63eaa5f31d83ff",
-      "name": "libsmbios",
-      "version": "2.4.3-9",
+      "id": "1ee8a1a6b12b8ea7d3f7",
+      "name": "kio",
+      "version": "6.31.0-1",
       "architecture": "amd64",
-      "summary": "A library for providing access to as much BIOS information as possible",
-      "description": "A library for providing access to as much BIOS information as possible",
-      "homepage": "https://github.com/dell/libsmbios",
-      "license": "GPL  custom",
-      "repository": "extra",
-      "installedSize": 1175103,
-      "downloadSize": 214022,
-      "dependencies": {
-        "requires": [
-          "glibc"
-        ],
-        "recommends": [],
-        "suggests": [
-          "python: tools"
-        ],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ecd316c45861e6610a9",
-      "name": "ruby-unicode-display_width",
-      "version": "3.3.0-1",
-      "architecture": "any",
-      "summary": "Determines the monospace display width of a string in Ruby",
-      "description": "Determines the monospace display width of a string in Ruby",
-      "homepage": "https://github.com/janlelis/unicode-display_width",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 72794,
-      "downloadSize": 24125,
-      "dependencies": {
-        "requires": [
-          "ruby  ruby-unicode-emoji"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ed33380888e5d8e7b89",
-      "name": "libgooglepinyin",
-      "version": "0.1.2-7",
-      "architecture": "amd64",
-      "summary": "A fork from google pinyin on android",
-      "description": "A fork from google pinyin on android",
-      "homepage": "https://code.google.com/archive/p/libgooglepinyin/",
-      "license": "Apache-2.0",
-      "repository": "extra",
-      "installedSize": 1335953,
-      "downloadSize": 713357,
-      "dependencies": {
-        "requires": [
-          "glibc  libgcc  libstdc++"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ed387ddce5d990be6ea",
-      "name": "lzo",
-      "version": "2.10-5",
-      "architecture": "amd64",
-      "summary": "Portable lossless data compression library",
-      "description": "Portable lossless data compression library",
-      "homepage": "https://www.oberhumer.com/opensource/lzo",
-      "license": "GPL",
-      "repository": "core",
-      "installedSize": 395669,
-      "downloadSize": 89912,
-      "dependencies": {
-        "requires": [
-          "glibc"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "liblzo2.so=2-64  libminilzo.so=0-64"
-        ],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ed64477d3f8707dcf09",
-      "name": "gcc-d",
-      "version": "16.2.1+r23+gd564253eb6c8-1",
-      "architecture": "amd64",
-      "summary": "D frontend for GCC",
-      "description": "D frontend for GCC",
-      "homepage": "https://gcc.gnu.org",
-      "license": "GPL-3.0-or-later WITH GCC-exception-3.1  GFDL-1.3-or-later",
-      "repository": "core",
-      "installedSize": 131930942,
-      "downloadSize": 23470448,
-      "dependencies": {
-        "requires": [
-          "gcc=16.2.1+r23+gd564253eb6c8-1  glibc>=2.27  gmp  libgphobos  libisl.so=23-64  libmpc  mpfr  zlib  zstd"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "gdc"
-        ],
-        "conflicts": [],
-        "replaces": [
-          "gdc"
-        ]
-      }
-    },
-    {
-      "id": "1ed6a067d0c6f37093de",
-      "name": "python-ruff",
-      "version": "0.16.9-1",
-      "architecture": "amd64",
-      "summary": "An extremely fast Python linter, written in Rust",
-      "description": "An extremely fast Python linter, written in Rust",
-      "homepage": "https://github.com/astral-sh/ruff",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 515520,
-      "downloadSize": 55890,
-      "dependencies": {
-        "requires": [
-          "python  ruff"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ed8a6edc20905389363",
-      "name": "onnxruntime-opt-rocm",
-      "version": "1.29.0-3",
-      "architecture": "amd64",
-      "summary": "Cross-platform, high performance scoring engine for ML models (with ROCm and AVX2 CPU optimizations)",
-      "description": "Cross-platform, high performance scoring engine for ML models (with ROCm and AVX2 CPU optimizations)",
-      "homepage": "https://github.com/microsoft/onnxruntime",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 28490769,
-      "downloadSize": 7723218,
-      "dependencies": {
-        "requires": [
-          "cpuinfo  protobuf  glibc  libgcc  libstdc++  rocm-hip-sdk  roctracer  rccl  migraphx"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "onnxruntime=1.29.0"
-        ],
-        "conflicts": [
-          "onnxruntime"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1edbdfeff7ff2b85d072",
-      "name": "lua53-vstruct",
-      "version": "2.2.0-3",
-      "architecture": "any",
-      "summary": "Lua library to manipulate binary data",
-      "description": "Lua library to manipulate binary data",
-      "homepage": "https://github.com/ToxicFrog/vstruct",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 79237,
-      "downloadSize": 29464,
-      "dependencies": {
-        "requires": [
-          "lua53"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1edce805343c9c68cd5a",
-      "name": "r8168-lts",
-      "version": "8.057.00-3",
-      "architecture": "amd64",
-      "summary": "A kernel module for Realtek 8168 network cards for linux-lts",
-      "description": "A kernel module for Realtek 8168 network cards for linux-lts",
-      "homepage": "https://www.realtek.com/Download/List?cate_id=584",
-      "license": "GPL-2.0-only",
-      "repository": "extra",
-      "installedSize": 113095,
-      "downloadSize": 115726,
-      "dependencies": {
-        "requires": [
-          "glibc  linux-lts"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ede844d5bee22daa5bd",
-      "name": "perl-text-tabs-wrap",
-      "version": "2024.001-3",
-      "architecture": "any",
-      "summary": "Format tabs & lines in documents",
-      "description": "Format tabs & lines in documents",
-      "homepage": "https://metacpan.org/dist/Text-Tabs+Wrap",
-      "license": "TTWL",
-      "repository": "extra",
-      "installedSize": 18624,
-      "downloadSize": 13256,
-      "dependencies": {
-        "requires": [
-          "perl"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "perl-text-tabs  perl-text-wrap"
-        ],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ede999d8063b447e380",
-      "name": "python-hiredis",
-      "version": "3.3.1-1",
-      "architecture": "amd64",
-      "summary": "Non-blocking redis client for python",
-      "description": "Non-blocking redis client for python",
-      "homepage": "https://pypi.org/project/hiredis/",
-      "license": "MIT",
-      "repository": "extra",
-      "installedSize": 37084,
-      "downloadSize": 15799,
-      "dependencies": {
-        "requires": [
-          "glibc  hiredis  python"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1edf76adad6ff194e469",
-      "name": "signstar-sign",
-      "version": "0.2.0-1",
-      "architecture": "amd64",
-      "summary": "A command line tool for creating signatures for signing requests",
-      "description": "A command line tool for creating signatures for signing requests",
-      "homepage": "https://signstar.archlinux.page/signstar-sign",
-      "license": "Apache-2.0 OR MIT",
-      "repository": "extra",
-      "installedSize": 5060114,
-      "downloadSize": 2034078,
-      "dependencies": {
-        "requires": [
-          "glibc  libgcc  libusb"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ee2b470a32fdffcd3ae",
-      "name": "ttf-ubuntu-font-family",
-      "version": "1:0.83-2",
-      "architecture": "any",
-      "summary": "Ubuntu font family",
-      "description": "Ubuntu font family",
-      "homepage": "https://design.ubuntu.com/font/",
-      "license": "custom:Ubuntu Font Licence 1.0",
-      "repository": "extra",
-      "installedSize": 4144586,
-      "downloadSize": 1543908,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ee45fe3c92005ed2ae4",
-      "name": "perl-moo",
-      "version": "2.005005-6",
-      "architecture": "any",
-      "summary": "Minimalist Object Orientation (with Moose compatiblity)",
-      "description": "Minimalist Object Orientation (with Moose compatiblity)",
-      "homepage": "https://metacpan.org/release/Moo",
-      "license": "PerlArtistic  GPL",
-      "repository": "extra",
-      "installedSize": 114464,
-      "downloadSize": 45638,
-      "dependencies": {
-        "requires": [
-          "perl-class-method-modifiers>=1.1  perl-devel-globaldestruction>=0.11  perl-import-into>=1.002  perl-module-runtime>=0.014  perl-role-tiny>=2  perl-sub-quote"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ee4666493cc6bfdbbea",
-      "name": "vlc-plugins-extra",
-      "version": "3.0.23_2-16",
-      "architecture": "amd64",
-      "summary": "Free and open source cross-platform multimedia player and framework - extra plugins",
-      "description": "Free and open source cross-platform multimedia player and framework - extra plugins",
-      "homepage": "https://www.videolan.org/vlc/",
-      "license": "GPL-2.0-or-later  LGPL-2.1-or-later",
-      "repository": "extra",
-      "installedSize": 53072,
-      "downloadSize": 23737,
-      "dependencies": {
-        "requires": [
-          "glibc  libvlc  libvlccore.so=9-64  libxcb  vlc-plugin-aalib  vlc-plugin-aom  vlc-plugin-aribb24  vlc-plugin-aribb25  vlc-plugin-ass  vlc-plugin-avahi  vlc-plugin-bluray  vlc-plugin-caca  vlc-plugin-cddb  vlc-plugin-chromecast  vlc-plugin-dca  vlc-plugin-dvb  vlc-plugin-dvd  vlc-plugin-ffmpeg  vlc-plugin-freetype  vlc-plugin-gme  vlc-plugin-kate  vlc-plugin-lirc  vlc-plugin-live555  vlc-plugin-mad  vlc-plugin-mdns  vlc-plugin-modplug  vlc-plugin-mpeg2  vlc-plugin-mtp  vlc-plugin-musepack  vlc-plugin-nfs  vlc-plugin-samplerate  vlc-plugin-sdl  vlc-plugin-sftp  vlc-plugin-soxr  vlc-plugin-srt  vlc-plugin-udev  vlc-plugin-upnp  vlc-plugin-zvbi  vlc-plugins-base"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": [
-          "vlc-plugin-quicksync"
-        ]
-      }
-    },
-    {
-      "id": "1ee65f10b398508d6fb8",
-      "name": "lm32-elf-gcc",
-      "version": "15.2.0-1",
-      "architecture": "amd64",
-      "summary": "The GNU Compiler Collection - cross compiler for LatticeMico32 (bare-metal) target",
-      "description": "The GNU Compiler Collection - cross compiler for LatticeMico32 (bare-metal) target",
-      "homepage": "https://gcc.gnu.org/",
-      "license": "GPL-3.0-with-GCC-exception AND GFDL-1.3-or-later",
-      "repository": "extra",
-      "installedSize": 606806894,
-      "downloadSize": 44003638,
-      "dependencies": {
-        "requires": [
-          "lm32-elf-binutils  zlib  libmpc  libisl  zstd"
-        ],
-        "recommends": [],
-        "suggests": [
-          "lm32-elf-newlib: Standard C library optimized for embedded systems"
-        ],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1ee95011e08aaae0f16b",
-      "name": "libpg_query",
-      "version": "18.0.0-1",
-      "architecture": "amd64",
-      "summary": "C library for accessing the PostgreSQL parser outside of the server environment",
-      "description": "C library for accessing the PostgreSQL parser outside of the server environment",
-      "homepage": "https://github.com/pganalyze/libpg_query",
-      "license": "BSD-3-Clause",
-      "repository": "extra",
-      "installedSize": 3149814,
-      "downloadSize": 649202,
-      "dependencies": {
-        "requires": [
-          "glibc  protobuf-c  xxhash"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1eeaa762b0ce62fc6e39",
-      "name": "kmidimon",
-      "version": "1.4.1-1",
-      "architecture": "amd64",
-      "summary": "A MIDI monitor for Linux using ALSA sequencer",
-      "description": "A MIDI monitor for Linux using ALSA sequencer",
-      "homepage": "https://kmidimon.sourceforge.io/",
-      "license": "GPL-2.0-or-later",
-      "repository": "extra",
-      "installedSize": 1029035,
-      "downloadSize": 392901,
-      "dependencies": {
-        "requires": [
-          "gcc-libs  glibc  hicolor-icon-theme  qt6-5compat  qt6-base  drumstick  libdrumstick-alsa.so=2-64  libdrumstick-file.so=2-64"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1eeb22f322f40b75c11f",
-      "name": "lilypond",
-      "version": "1:2.26.0-1",
-      "architecture": "amd64",
-      "summary": "Music engraving program, devoted to producing the highest-quality sheet music possible",
-      "description": "Music engraving program, devoted to producing the highest-quality sheet music possible",
-      "homepage": "https://lilypond.org",
-      "license": "GFDL-1.3  GPL-3.0-or-later  OFL-1.1",
-      "repository": "extra",
-      "installedSize": 28684369,
-      "downloadSize": 6653088,
-      "dependencies": {
-        "requires": [
-          "fontconfig  libfontconfig.so=1-64  freetype2  libfreetype.so=6-64  ghostscript  glib2  libgobject-2.0.so=0-64  glibc  libglib-2.0.so=0-64  gsfonts  guile  harfbuzz  libharfbuzz.so=0-64  libgcc  libgcc_s.so=1-64  libstdc++  libstdc++.so=6-64  pango  libpango-1.0.so=0-64  libpangoft2-1.0.so=0-64"
-        ],
-        "recommends": [],
-        "suggests": [
-          "python: for lilypond-book and other scripts  tex-gyre-fonts: for extra fonts  ttf-dejavu: for extra fonts"
-        ],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1eee9717b14fa72af685",
-      "name": "haskell-quickcheck-classes",
-      "version": "0.6.5.0-406",
-      "architecture": "amd64",
-      "summary": "QuickCheck common typeclasses",
-      "description": "QuickCheck common typeclasses",
-      "homepage": "https://github.com/andrewthad/quickcheck-classes#readme",
-      "license": "BSD",
-      "repository": "extra",
-      "installedSize": 410488,
-      "downloadSize": 82568,
-      "dependencies": {
-        "requires": [
-          "ghc-libs  haskell-quickcheck  haskell-aeson  haskell-primitive  haskell-primitive-addr  haskell-quickcheck-classes-base  haskell-semigroupoids  haskell-semirings  haskell-vector"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
-      }
-    },
-    {
-      "id": "1efff3697614de50da5c",
-      "name": "kglobalaccel",
-      "version": "6.30.0-1",
-      "architecture": "amd64",
-      "summary": "Add support for global workspace shortcuts",
-      "description": "Add support for global workspace shortcuts",
+      "summary": "Resource and network access abstraction",
+      "description": "Resource and network access abstraction",
       "homepage": "https://develop.kde.org/products/frameworks/",
       "license": "LGPL-2.0-only  LGPL-3.0-only",
       "repository": "extra",
-      "installedSize": 312340,
-      "downloadSize": 102562,
+      "installedSize": 20808406,
+      "downloadSize": 4012990,
       "dependencies": {
         "requires": [
-          "libstdc++  glibc  qt6-base"
+          "acl  libstdc++  glibc  karchive  kbookmarks  kcolorscheme  kcompletion  kconfig  kcoreaddons  kcrash  kdbusaddons  kguiaddons  ki18n  kiconthemes  kitemviews  kjobwidgets  kservice  kwallet  kwidgetsaddons  kwindowsystem  libxml2  libxslt  qt6-base  solid  util-linux-libs"
+        ],
+        "recommends": [],
+        "suggests": [
+          "audiocd-kio: for accessing audio CDs  kded: proxy management and cookie storage  kdoctools: for the help kioslave  kio-extras: extra protocols support (sftp",
+          "fish and more)  kio-fuse: to mount remote filesystems via FUSE  switcheroo-control: hybrid GPU support"
+        ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ee9e0b2ef4b0d5064e1",
+      "name": "xfce4-dev-tools",
+      "version": "4.20.0-2",
+      "architecture": "amd64",
+      "summary": "Xfce developer tools",
+      "description": "Xfce developer tools",
+      "homepage": "https://docs.xfce.org/xfce/xfce4-dev-tools/start",
+      "license": "GPL-2.0-or-later",
+      "repository": "extra",
+      "installedSize": 80944,
+      "downloadSize": 27185,
+      "dependencies": {
+        "requires": [
+          "glib2  gtk-doc"
+        ],
+        "recommends": [],
+        "suggests": [
+          "docker: xfce-build helper script"
+        ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1eea90c8fb1d3b79c563",
+      "name": "toxcore",
+      "version": "1:0.2.23-1",
+      "architecture": "amd64",
+      "summary": "Secure, configuration-free, P2P Skype replacement backend",
+      "description": "Secure, configuration-free, P2P Skype replacement backend",
+      "homepage": "https://tox.chat",
+      "license": "GPL-3.0-or-later",
+      "repository": "extra",
+      "installedSize": 1320642,
+      "downloadSize": 405961,
+      "dependencies": {
+        "requires": [
+          "glibc  libconfig  libsodium  libvpx  opus"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "tox"
+        ],
+        "conflicts": [
+          "tox"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1ef93d4708e79d297533",
+      "name": "libnetfilter_queue",
+      "version": "1.0.5-2",
+      "architecture": "amd64",
+      "summary": "Userspace API to packets that have been queued by the kernel packet filter",
+      "description": "Userspace API to packets that have been queued by the kernel packet filter",
+      "homepage": "https://www.netfilter.org/projects/libnetfilter_queue/",
+      "license": "GPL",
+      "repository": "extra",
+      "installedSize": 46329,
+      "downloadSize": 16210,
+      "dependencies": {
+        "requires": [
+          "libnfnetlink  libmnl"
         ],
         "recommends": [],
         "suggests": [],

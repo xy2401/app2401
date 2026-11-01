@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "f6",
   "items": [
@@ -1196,7 +1196,7 @@
       "id": "f62119fc5050bef4ce2f",
       "name": "linux-tools-vmware",
       "version": "6.8.0",
-      "release": "1005.5",
+      "release": "1008.8",
       "architecture": "amd64",
       "summary": "VMWare Linux kernel tools",
       "description": "VMWare Linux kernel tools",
@@ -1207,7 +1207,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-tools-6.8.0-1005-vmware"
+          "linux-tools-6.8.0-1008-vmware"
         ],
         "recommends": [],
         "suggests": [],
@@ -1368,7 +1368,7 @@
       "id": "f6235338a40bb135ed85",
       "name": "linux-signatures-nvidia-6.8.0-1064-nvidia-lowlatency",
       "version": "6.8.0",
-      "release": "1064.67.1",
+      "release": "1064.67.1+1",
       "architecture": "amd64",
       "summary": "Linux kernel signatures for nvidia modules for version 6.8.0-1064-nvidia-lowlatency",
       "description": "Linux kernel signatures for nvidia modules for version 6.8.0-1064-nvidia-lowlatency",
@@ -1376,7 +1376,7 @@
       "sourcePackage": "linux-restricted-signatures-nvidia-lowlatency",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 58368,
+      "installedSize": 51200,
       "dependencies": {
         "requires": [
           "linux-image-6.8.0-1064-nvidia-lowlatency | linux-image-unsigned-6.8.0-1064-nvidia-lowlatency"
@@ -1384,6 +1384,34 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "f62398561bfc8d17babd",
+      "name": "linux-modules-nvidia-615-server-open-vmware-6.17",
+      "version": "6.17.0",
+      "release": "1004.4+3",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-server-open for the vmware-6.17 flavour",
+      "description": "Extra drivers for nvidia-615-server-open for the vmware-6.17 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware-6.17",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 18432,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-server-open-6.17.0-1004-vmware (= 6.17.0-1004.4+3)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-server-open (= 615.71.09-0ubuntu0.24.04.1)",
+          "nvidia-prebuilt-kernel"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -2963,136 +2991,25 @@
       "id": "f64c4863ff7466ee40ef",
       "name": "libnvidia-compute-610",
       "version": "610.57.04",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
-      "summary": "NVIDIA libcompute package",
-      "description": "NVIDIA libcompute package",
+      "summary": "NVIDIA libcompute package (transitional package)",
+      "description": "NVIDIA libcompute package (transitional package)",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-610",
       "category": "multiverse/libs",
       "repository": "official",
-      "installedSize": 476632064,
+      "installedSize": 37888,
       "dependencies": {
         "requires": [
-          "libc6 (>= 2.34)",
-          "libgcc-s1 (>= 4.3)",
-          "libssl3t64 (>= 3.0.0)",
-          "nvidia-kernel-common-610-610.57.04",
-          "ocl-icd-libopencl1"
+          "libnvidia-compute-615"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "libcuda-10.0-1",
-          "libcuda-10.1-1",
-          "libcuda-10.2-1",
-          "libcuda-11.0-1",
-          "libcuda-11.1-1",
-          "libcuda-11.2-1",
-          "libcuda-11.3-1",
-          "libcuda-11.4-1",
-          "libcuda-11.5-1",
-          "libcuda-11.6-1",
-          "libcuda-11.7-1",
-          "libcuda-11.8-1",
-          "libcuda-12.0-1",
-          "libcuda-12.1-1",
-          "libcuda-12.2-1",
-          "libcuda-12.3-1",
-          "libcuda-12.4-1",
-          "libcuda-12.5-1",
-          "libcuda-12.6-1",
-          "libcuda-12.7-1",
-          "libcuda-12.8-1",
-          "libcuda-5.0-1",
-          "libcuda-5.5-1",
-          "libcuda-6.0-1",
-          "libcuda-6.5-1",
-          "libcuda-7.0-1",
-          "libcuda-7.5-1",
-          "libcuda-8.0-1",
-          "libcuda-9.0-1",
-          "libcuda-9.1-1",
-          "libcuda-9.2-1",
-          "libcuda.so.1 (= 610.57.04-0ubuntu0.24.04.3)",
-          "libcuda1 (= 610.57.04-0ubuntu0.24.04.3)",
-          "libnvidia-compute",
-          "libnvidia-ml.so.1 (= 610.57.04-0ubuntu0.24.04.3)",
-          "libnvidia-ml1 (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-opencl-icd",
-          "opencl-icd"
-        ],
-        "conflicts": [
-          "libcuda-10.0-1",
-          "libcuda-10.1-1",
-          "libcuda-10.2-1",
-          "libcuda-11.0-1",
-          "libcuda-11.1-1",
-          "libcuda-11.2-1",
-          "libcuda-11.3-1",
-          "libcuda-11.4-1",
-          "libcuda-11.5-1",
-          "libcuda-11.6-1",
-          "libcuda-11.7-1",
-          "libcuda-11.8-1",
-          "libcuda-12.0-1",
-          "libcuda-12.1-1",
-          "libcuda-12.2-1",
-          "libcuda-12.3-1",
-          "libcuda-12.4-1",
-          "libcuda-12.5-1",
-          "libcuda-12.6-1",
-          "libcuda-12.7-1",
-          "libcuda-12.8-1",
-          "libcuda-5.0-1",
-          "libcuda-5.5-1",
-          "libcuda-6.0-1",
-          "libcuda-6.5-1",
-          "libcuda-7.0-1",
-          "libcuda-7.5-1",
-          "libcuda-8.0-1",
-          "libcuda-9.0-1",
-          "libcuda-9.1-1",
-          "libcuda-9.2-1",
-          "libnvidia-compute",
-          "nvidia-opencl-icd"
-        ],
-        "replaces": [
-          "libcuda-10.0-1",
-          "libcuda-10.1-1",
-          "libcuda-10.2-1",
-          "libcuda-11.0-1",
-          "libcuda-11.1-1",
-          "libcuda-11.2-1",
-          "libcuda-11.3-1",
-          "libcuda-11.4-1",
-          "libcuda-11.5-1",
-          "libcuda-11.6-1",
-          "libcuda-11.7-1",
-          "libcuda-11.8-1",
-          "libcuda-12.0-1",
-          "libcuda-12.1-1",
-          "libcuda-12.2-1",
-          "libcuda-12.3-1",
-          "libcuda-12.4-1",
-          "libcuda-12.5-1",
-          "libcuda-12.6-1",
-          "libcuda-12.7-1",
-          "libcuda-12.8-1",
-          "libcuda-5.0-1",
-          "libcuda-5.5-1",
-          "libcuda-6.0-1",
-          "libcuda-6.5-1",
-          "libcuda-7.0-1",
-          "libcuda-7.5-1",
-          "libcuda-8.0-1",
-          "libcuda-9.0-1",
-          "libcuda-9.1-1",
-          "libcuda-9.2-1",
-          "libnvidia-compute",
-          "nvidia-opencl-icd"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -4345,7 +4262,7 @@
       "id": "f678a73375b03335b188",
       "name": "linux-objects-nvidia-580-6.17.0-1004-vmware",
       "version": "6.17.0",
-      "release": "1004.4+2",
+      "release": "1004.4+3",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.17.0-1004 (objects)",
       "description": "Linux kernel nvidia modules for version 6.17.0-1004 (objects)",
@@ -4506,7 +4423,7 @@
       "id": "f67cb26b289a5661457a",
       "name": "linux-modules-nvidia-590-server-open-gcp-7.0",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server-open for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server-open for the gcp flavour (dummy transitional package)",
@@ -4648,10 +4565,10 @@
       "id": "f67f9a14e5b21cfeada4",
       "name": "linux-modules-nvidia-610-azure-6.8",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-610 for the azure-6.8 flavour",
-      "description": "Extra drivers for nvidia-610 for the azure-6.8 flavour",
+      "summary": "Extra drivers for nvidia-610 for the azure flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-610 for the azure flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-azure",
       "category": "restricted/kernel",
@@ -4659,15 +4576,11 @@
       "installedSize": 21504,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-6.8.0-1070-azure (= 6.8.0-1070.78)",
-          "nvidia-kernel-common-610 (>= 610.57.04)"
+          "linux-modules-nvidia-615-open-azure-6.8"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -4778,7 +4691,7 @@
       "id": "f68602cd189572007714",
       "name": "linux-modules-nvidia-535-server-open-oracle",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the oracle flavour (dummy transitional package)",
@@ -5204,7 +5117,7 @@
       "id": "f6917c6394c475d2be8f",
       "name": "linux-modules-nvidia-595-open-nvidia-hwe-24.04",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the nvidia-hwe-24.04 flavour",
       "description": "Extra drivers for nvidia-595-open for the nvidia-hwe-24.04 flavour",
@@ -5215,13 +5128,13 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-7.0.0-1019-nvidia (= 7.0.0-1019.19~24.04.2+1)",
-          "nvidia-kernel-common-595 (>= 595.91.07)"
+          "linux-modules-nvidia-595-open-7.0.0-1024-nvidia (= 7.0.0-1024.25~24.04.1)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-open (= 595.91.07-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-open (= 595.99.02-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -8474,6 +8387,32 @@
       }
     },
     {
+      "id": "f6eb637dc9b79b9dd740",
+      "name": "linux-modules-nvidia-615-open-6.8.0-1066-aws",
+      "version": "6.8.0",
+      "release": "1066.69+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1066",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1066",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-aws",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27838464,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1066-aws | linux-image-unsigned-6.8.0-1066-aws",
+          "nvidia-kernel-common-615 (<= 615.71.09-1)",
+          "nvidia-kernel-common-615 (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "f6ebb05d6458da8773a7",
       "name": "fcitx5-table-rustrad",
       "version": "5.1.0",
@@ -8940,7 +8879,7 @@
       "id": "f6fab6f7581e45e62c76",
       "name": "linux-objects-nvidia-580-server-7.0.0-1019-nvidia",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1019.19~24.04.2+2",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 7.0.0-1019 (objects)",
       "description": "Linux kernel nvidia modules for version 7.0.0-1019 (objects)",

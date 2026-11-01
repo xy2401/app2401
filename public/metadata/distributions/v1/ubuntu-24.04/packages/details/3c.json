@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "3c",
   "items": [
@@ -705,8 +705,8 @@
     {
       "id": "3c113509e2e08d8b83f1",
       "name": "librte-net-cnxk24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-net-cnxk runtime library)",
       "description": "Data Plane Development Kit (librte-net-cnxk runtime library)",
@@ -1212,7 +1212,7 @@
       "id": "3c261c54453f5a5473c8",
       "name": "linux-image-uc-generic-7.0",
       "version": "7.0.0",
-      "release": "34.34~24.04.1",
+      "release": "42.42~24.04.1",
       "architecture": "amd64",
       "summary": "Generic Linux kernel image for Ubuntu Core",
       "description": "Generic Linux kernel image for Ubuntu Core",
@@ -1225,7 +1225,10 @@
         "requires": [
           "firmware-sof-signed",
           "linux-firmware",
-          "linux-image-uc-7.0.0-34-generic",
+          "linux-image-uc-7.0.0-42-generic",
+          "linux-main-modules-v4l2loopback-7.0.0-42-generic",
+          "linux-main-modules-zfs-7.0.0-42-generic",
+          "linux-modules-7.0.0-42-generic",
           "wireless-regdb"
         ],
         "recommends": [],
@@ -1923,6 +1926,32 @@
       }
     },
     {
+      "id": "3c34e2fbb6db4ef32a15",
+      "name": "linux-modules-nvidia-615-open-6.8.0-1071-gcp",
+      "version": "6.8.0",
+      "release": "1071.79+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1071",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1071",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-gcp",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27838464,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1071-gcp | linux-image-unsigned-6.8.0-1071-gcp",
+          "nvidia-kernel-common-615 (<= 615.71.09-1)",
+          "nvidia-kernel-common-615 (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3c3500e1164e407b1383",
       "name": "libnet-luminis-build-plugin-java",
       "version": "0.2.0",
@@ -2036,7 +2065,7 @@
       "name": "git-gui",
       "epoch": "1",
       "version": "2.43.0",
-      "release": "1ubuntu7.3",
+      "release": "1ubuntu7.4",
       "architecture": "all",
       "summary": "fast, scalable, distributed revision control system (GUI)",
       "description": "fast, scalable, distributed revision control system (GUI)",
@@ -2069,7 +2098,7 @@
       "id": "3c39abfc44a49d233e4d",
       "name": "linux-modules-nvidia-570-open-gke-6.8",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1066.74+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-open for the gke flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-open for the gke flavour (dummy transitional package)",
@@ -2452,7 +2481,7 @@
       "name": "erlang-erl-docgen",
       "epoch": "1",
       "version": "25.3.2.8+dfsg",
-      "release": "1ubuntu4.7",
+      "release": "1ubuntu4.8",
       "architecture": "amd64",
       "summary": "Erlang/OTP documentation stylesheets",
       "description": "Erlang/OTP documentation stylesheets",
@@ -2461,12 +2490,12 @@
       "sourcePackage": "erlang",
       "category": "universe/interpreters",
       "repository": "official",
-      "installedSize": 666624,
+      "installedSize": 667648,
       "dependencies": {
         "requires": [
-          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-edoc (= 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-xmerl (= 1:25.3.2.8+dfsg-1ubuntu4.7)"
+          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-edoc (= 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-xmerl (= 1:25.3.2.8+dfsg-1ubuntu4.8)"
         ],
         "recommends": [],
         "suggests": [
@@ -2479,18 +2508,18 @@
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-base-hipe",
-          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-doc (<< 1:25.3.2.8+dfsg)",
           "erlang-doc (>> 1:25.3.2.8+dfsg-999)",
-          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-manpages (<= 1:11.b.1-2)",
           "erlang-mode (<< 1:12.b.1-dfsg-2)",
-          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.7)"
+          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.8)"
         ]
       }
     },
@@ -2671,6 +2700,42 @@
         "provides": [],
         "conflicts": [],
         "replaces": []
+      }
+    },
+    {
+      "id": "3c47c34783f6f5e22e5b",
+      "name": "nvidia-compute-utils-615-server",
+      "version": "615.71.09",
+      "release": "0ubuntu0.24.04.2",
+      "architecture": "amd64",
+      "summary": "NVIDIA compute utilities",
+      "description": "NVIDIA compute utilities",
+      "homepage": "http://www.nvidia.com",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "nvidia-graphics-drivers-615-server",
+      "category": "multiverse/libs",
+      "repository": "official",
+      "installedSize": 618496,
+      "dependencies": {
+        "requires": [
+          "adduser",
+          "libc6 (>= 2.34)",
+          "libnvidia-compute-615-server"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-compute-utils",
+          "nvidia-persistenced"
+        ],
+        "conflicts": [
+          "nvidia-compute-utils",
+          "nvidia-persistenced"
+        ],
+        "replaces": [
+          "nvidia-compute-utils",
+          "nvidia-persistenced"
+        ]
       }
     },
     {
@@ -3607,6 +3672,48 @@
       }
     },
     {
+      "id": "3c55eabd671fb8c6359b",
+      "name": "linux-lowlatency-tools-6.8.0-147",
+      "version": "6.8.0",
+      "release": "147.147.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 6.8.0-147",
+      "description": "Linux kernel version specific tools for version 6.8.0-147",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-lowlatency",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 17086464,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libcap2 (>= 1:2.10)",
+          "libdw1t64 (>= 0.161)",
+          "libelf1t64 (>= 0.144)",
+          "liblzma5 (>= 5.1.1alpha+20120614)",
+          "libnl-3-200 (>= 3.2.7)",
+          "libnl-genl-3-200 (>= 3.2.21)",
+          "libnuma1 (>= 2.0.11)",
+          "libpci3 (>= 1:3.8.0)",
+          "libpython3.12t64 (>= 3.12.1)",
+          "libslang2 (>= 2.2.4)",
+          "libssl3t64 (>= 3.0.0)",
+          "libstdc++6 (>= 4.1.1)",
+          "libtraceevent1 (>= 1:1.3.0)",
+          "libudev1 (>= 183)",
+          "libunwind8",
+          "libzstd1 (>= 1.5.5)",
+          "linux-tools-common",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3c562058b1614aa0e798",
       "name": "libsop-java-java",
       "version": "7.0.1",
@@ -4418,26 +4525,22 @@
       "id": "3c66990334fe11aeffec",
       "name": "linux-modules-nvidia-610-open-oem-24.04d",
       "version": "6.17.0",
-      "release": "1032.32+1",
+      "release": "1033.33+3",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-610-open for the oem-24.04d flavour",
-      "description": "Extra drivers for nvidia-610-open for the oem-24.04d flavour",
+      "summary": "Extra drivers for nvidia-610-open for the oem flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-610-open for the oem flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-oem-6.17",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-open-6.17.0-1032-oem (= 6.17.0-1032.32+1)",
-          "nvidia-kernel-common-610 (>= 610.57.04)"
+          "linux-modules-nvidia-615-open-oem-24.04d"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-610-open (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -6300,6 +6403,30 @@
       }
     },
     {
+      "id": "3c9dc99f0c5799204e2c",
+      "name": "linux-tools-6.8.0-1066-gke",
+      "version": "6.8.0",
+      "release": "1066.74",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 6.8.0-1066",
+      "description": "Linux kernel version specific tools for version 6.8.0-1066",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gke",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 951296,
+      "dependencies": {
+        "requires": [
+          "linux-gke-tools-6.8.0-1066"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3c9ed6d8630abd58e3f9",
       "name": "libfvde1t64",
       "version": "20190104",
@@ -7892,8 +8019,8 @@
     {
       "id": "3cc15130fa657795f00c",
       "name": "librte-common-idpf24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-common-idpf runtime library)",
       "description": "Data Plane Development Kit (librte-common-idpf runtime library)",
@@ -8440,6 +8567,30 @@
           "libc6 (>= 2.14)",
           "libpci3 (>= 1:3.5.1)",
           "libx86-1 (>= 1.1+ds1)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3ccdcdb08001c5ff72b3",
+      "name": "linux-objects-nvidia-595-server-6.8.0-146-lowlatency",
+      "version": "6.8.0",
+      "release": "146.146.1+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-146 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-146 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 184672256,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -9530,7 +9681,7 @@
       "id": "3ce82caae0fe14adc2ad",
       "name": "libsoup-3.0-tests",
       "version": "3.4.4",
-      "release": "5ubuntu0.8",
+      "release": "5ubuntu0.9",
       "architecture": "amd64",
       "summary": "HTTP library implementation in C -- installed tests",
       "description": "HTTP library implementation in C -- installed tests",
@@ -9539,7 +9690,7 @@
       "sourcePackage": "libsoup3",
       "category": "universe/misc",
       "repository": "official",
-      "installedSize": 3453952,
+      "installedSize": 3519488,
       "dependencies": {
         "requires": [
           "apache2",
@@ -9552,7 +9703,7 @@
           "libnghttp2-14 (>= 1.50.0)",
           "libnss-myhostname",
           "libpsl5t64 (>= 0.16.0)",
-          "libsoup-3.0-0 (= 3.4.4-5ubuntu0.8)",
+          "libsoup-3.0-0 (= 3.4.4-5ubuntu0.9)",
           "libsqlite3-0 (>= 3.5.9)",
           "php",
           "python3",
@@ -9742,6 +9893,30 @@
           "libbio-cluster-perl",
           "libbio-perl-perl",
           "perl:any"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3ced27e0b3e0f4a70c02",
+      "name": "linux-hwe-7.0-headers-7.0.0-38",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4",
+      "architecture": "all",
+      "summary": "Header files related to Linux kernel version 7.0.0",
+      "description": "Header files related to Linux kernel version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-hwe-7.0",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 94666752,
+      "dependencies": {
+        "requires": [
+          "coreutils"
         ],
         "recommends": [],
         "suggests": [],

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "fedora",
   "shard": "fd",
   "items": [
@@ -8,21 +8,21 @@
       "id": "fd04c4264e03cc62750b",
       "name": "kf6-sonnet-devel",
       "epoch": "0",
-      "version": "6.30.0",
+      "version": "6.31.0",
       "release": "1.fc44",
       "architecture": "i686",
       "summary": "Development files for kf6-sonnet",
       "description": "The kf6-sonnet-devel package contains libraries and header files for\ndeveloping applications that use kf6-sonnet.",
       "homepage": "https://invent.kde.org/frameworks/sonnet",
       "license": "BSD-3-Clause AND CC0-1.0 AND LGPL-2.0-or-later AND LGPL-2.1-or-later",
-      "sourcePackage": "kf6-sonnet-6.30.0-1.fc44.src.rpm",
+      "sourcePackage": "kf6-sonnet-6.31.0-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 287588,
-      "downloadSize": 66554,
+      "installedSize": 293851,
+      "downloadSize": 66845,
       "dependencies": {
         "requires": [
           "cmake-filesystem(x86-32)",
-          "kf6-sonnet = 6.30.0-1.fc44",
+          "kf6-sonnet = 6.31.0-1.fc44",
           "libKF6SonnetCore.so.6",
           "libKF6SonnetUi.so.6",
           "libQt6Core.so.6",
@@ -41,10 +41,10 @@
         "recommends": [],
         "suggests": [],
         "provides": [
-          "cmake(KF6Sonnet) = 6.30.0",
-          "cmake(kf6sonnet) = 6.30.0",
-          "kf6-sonnet-devel = 6.30.0-1.fc44",
-          "kf6-sonnet-devel(x86-32) = 6.30.0-1.fc44"
+          "cmake(KF6Sonnet) = 6.31.0",
+          "cmake(kf6sonnet) = 6.31.0",
+          "kf6-sonnet-devel = 6.31.0-1.fc44",
+          "kf6-sonnet-devel(x86-32) = 6.31.0-1.fc44"
         ],
         "conflicts": [],
         "replaces": []
@@ -54,17 +54,17 @@
       "id": "fd0a8061e408f89e41a6",
       "name": "pipewire-pulseaudio",
       "epoch": "0",
-      "version": "1.6.9",
+      "version": "1.6.11",
       "release": "1.fc44",
       "architecture": "amd64",
       "summary": "PipeWire PulseAudio implementation",
       "description": "This package provides a PulseAudio implementation based on PipeWire",
       "homepage": "https://pipewire.org/",
       "license": "MIT",
-      "sourcePackage": "pipewire-1.6.9-1.fc44.src.rpm",
+      "sourcePackage": "pipewire-1.6.11-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 475387,
-      "downloadSize": 225841,
+      "installedSize": 475438,
+      "downloadSize": 226120,
       "dependencies": {
         "requires": [
           "/bin/sh",
@@ -82,17 +82,17 @@
           "libm.so.6()(64bit)",
           "libm.so.6(GLIBC_2.2.5)(64bit)",
           "libpipewire-0.3.so.0()(64bit)",
-          "pipewire-libs(x86-64) = 1.6.9-1.fc44",
+          "pipewire-libs(x86-64) = 1.6.11-1.fc44",
           "rtld(GNU_HASH)"
         ],
         "recommends": [
-          "pipewire(x86-64) = 1.6.9-1.fc44"
+          "pipewire(x86-64) = 1.6.11-1.fc44"
         ],
         "suggests": [],
         "provides": [
           "libpipewire-module-protocol-pulse.so()(64bit)",
-          "pipewire-pulseaudio = 1.6.9-1.fc44",
-          "pipewire-pulseaudio(x86-64) = 1.6.9-1.fc44",
+          "pipewire-pulseaudio = 1.6.11-1.fc44",
+          "pipewire-pulseaudio(x86-64) = 1.6.11-1.fc44",
           "pulseaudio-daemon",
           "pulseaudio-module-bluetooth",
           "pulseaudio-module-jack"
@@ -618,36 +618,135 @@
       }
     },
     {
+      "id": "fdd8f16e900e8c290e08",
+      "name": "picard",
+      "epoch": "0",
+      "version": "3.0.2",
+      "release": "1.fc44",
+      "architecture": "amd64",
+      "summary": "MusicBrainz-based audio tagger",
+      "description": "Picard is an audio tagging application using data from the MusicBrainz\ndatabase. The tagger is album or release oriented, rather than\ntrack-oriented.",
+      "homepage": "https://github.com/musicbrainz/picard",
+      "license": "GPL-2.0-or-later",
+      "sourcePackage": "picard-3.0.2-1.fc44.src.rpm",
+      "repository": "updates",
+      "installedSize": 23901429,
+      "downloadSize": 6331395,
+      "dependencies": {
+        "requires": [
+          "(python3.14dist(charset-normalizer) >= 3.3 with python3.14dist(charset-normalizer) < 4)",
+          "(python3.14dist(discid) >= 1 with python3.14dist(discid) < 2)",
+          "(python3.14dist(markdown) >= 3.2 with python3.14dist(markdown) < 4)",
+          "(python3.14dist(mutagen) >= 1.45 with python3.14dist(mutagen) < 2)",
+          "(python3.14dist(pygit2) >= 1.19 with python3.14dist(pygit2) < 2)",
+          "(python3.14dist(pyjwt) >= 2 with python3.14dist(pyjwt) < 3)",
+          "(python3.14dist(pyyaml) < 7~~ with python3.14dist(pyyaml) >= 5.1)",
+          "/usr/bin/python3",
+          "hicolor-icon-theme",
+          "libc.so.6(GLIBC_2.4)(64bit)",
+          "python(abi) = 3.14",
+          "python3.14dist(pyqt6) >= 6.6.1",
+          "python3.14dist(tomlkit) >= 0.12.4",
+          "rtld(GNU_HASH)"
+        ],
+        "recommends": [
+          "rsgain"
+        ],
+        "suggests": [],
+        "provides": [
+          "application()",
+          "application(org.musicbrainz.Picard.desktop)",
+          "metainfo()",
+          "metainfo(org.musicbrainz.Picard.appdata.xml)",
+          "mimehandler(application/ogg)",
+          "mimehandler(application/x-flac)",
+          "mimehandler(audio/aac)",
+          "mimehandler(audio/ac3)",
+          "mimehandler(audio/aiff)",
+          "mimehandler(audio/ape)",
+          "mimehandler(audio/dsf)",
+          "mimehandler(audio/flac)",
+          "mimehandler(audio/midi)",
+          "mimehandler(audio/mp4)",
+          "mimehandler(audio/mpeg)",
+          "mimehandler(audio/mpeg4)",
+          "mimehandler(audio/mpg)",
+          "mimehandler(audio/ogg)",
+          "mimehandler(audio/vorbis)",
+          "mimehandler(audio/x-aac)",
+          "mimehandler(audio/x-aiff)",
+          "mimehandler(audio/x-ape)",
+          "mimehandler(audio/x-flac)",
+          "mimehandler(audio/x-flac+ogg)",
+          "mimehandler(audio/x-m4a)",
+          "mimehandler(audio/x-midi)",
+          "mimehandler(audio/x-mp3)",
+          "mimehandler(audio/x-mpc)",
+          "mimehandler(audio/x-mpeg)",
+          "mimehandler(audio/x-ms-wma)",
+          "mimehandler(audio/x-ms-wmv)",
+          "mimehandler(audio/x-musepack)",
+          "mimehandler(audio/x-oggflac)",
+          "mimehandler(audio/x-speex)",
+          "mimehandler(audio/x-speex+ogg)",
+          "mimehandler(audio/x-tak)",
+          "mimehandler(audio/x-tta)",
+          "mimehandler(audio/x-vorbis)",
+          "mimehandler(audio/x-vorbis+ogg)",
+          "mimehandler(audio/x-wav)",
+          "mimehandler(audio/x-wavpack)",
+          "mimehandler(audio/x-wma)",
+          "mimehandler(video/x-ms-asf)",
+          "mimehandler(video/x-theora)",
+          "mimehandler(video/x-wmv)",
+          "picard = 3.0.2-1.fc44",
+          "picard(x86-64) = 3.0.2-1.fc44",
+          "python3.14dist(picard) = 3.0.2",
+          "python3dist(picard) = 3.0.2"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "fddd7a304562d3d681b5",
       "name": "kiwi-cli",
       "epoch": "0",
-      "version": "11.0.2",
-      "release": "1.fc44",
+      "version": "11.1.1",
+      "release": "2.fc44",
       "architecture": "noarch",
       "summary": "Flexible operating system appliance image builder",
       "description": "The KIWI Image System provides an operating system image builder\nfor Linux supported hardware platforms as well as for virtualization\nand cloud systems like Xen, KVM, VMware, EC2 and more.",
       "homepage": "http://osinside.github.io/kiwi/",
       "license": "GPL-3.0-or-later",
-      "sourcePackage": "kiwi-11.0.2-1.fc44.src.rpm",
+      "sourcePackage": "kiwi-11.1.1-2.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 25619,
-      "downloadSize": 33770,
+      "installedSize": 31546,
+      "downloadSize": 40471,
       "dependencies": {
         "requires": [
-          "(kiwi-selinux = 11.0.2-1.fc44 if selinux-policy)",
+          "(kiwi-selinux = 11.1.1-2.fc44 if selinux-policy)",
           "bash-completion",
-          "python3-kiwi = 11.0.2-1.fc44"
+          "python3-kiwi = 11.1.1-2.fc44"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "config(kiwi-cli) = 11.0.2-1.fc44",
-          "kiwi = 11.0.2-1.fc44",
-          "kiwi-cli = 11.0.2-1.fc44",
-          "kiwi-schema = 8.2"
+          "config(kiwi-cli) = 11.1.1-2.fc44",
+          "kiwi = 11.1.1-2.fc44",
+          "kiwi-boxed-plugin = 0.2.60-2",
+          "kiwi-cli = 11.1.1-2.fc44",
+          "kiwi-schema = 8.5",
+          "kiwi-stackbuild-plugin = 1.0.14-2"
         ],
-        "conflicts": [],
-        "replaces": []
+        "conflicts": [
+          "kiwi-boxed-plugin < 0.2.60-2",
+          "kiwi-stackbuild-plugin < 1.0.14-2"
+        ],
+        "replaces": [
+          "kiwi-boxed-plugin < 0.2.60-2",
+          "kiwi-stackbuild-plugin < 1.0.14-2"
+        ]
       }
     },
     {

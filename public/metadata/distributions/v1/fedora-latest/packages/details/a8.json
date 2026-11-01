@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "fedora",
   "shard": "a8",
   "items": [
@@ -48,6 +48,42 @@
         "replaces": [
           "postgresql18"
         ]
+      }
+    },
+    {
+      "id": "a82f5889900347f9126a",
+      "name": "shim-ia32",
+      "epoch": "0",
+      "version": "16.1",
+      "release": "7",
+      "architecture": "amd64",
+      "summary": "First-stage UEFI bootloader",
+      "description": "Initial UEFI bootloader that handles chaining to a trusted full\nbootloader under secure boot environments. This package contains the\nversion signed by the UEFI signing service.",
+      "homepage": "https://github.com/rhboot/shim/",
+      "license": "BSD-3-Clause",
+      "sourcePackage": "shim-16.1-7.src.rpm",
+      "repository": "updates",
+      "installedSize": 1592953,
+      "downloadSize": 436620,
+      "dependencies": {
+        "requires": [
+          "efi-filesystem",
+          "grub2-efi-ia32 >= 2.06-63",
+          "mokutil >= 1:0.3.0-15"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "bundled(openssl) = 1.0.2j",
+          "shim-ia32 = 16.1-7",
+          "shim-ia32(x86-64) = 16.1-7",
+          "shim-signed-ia32 = 16.1-7"
+        ],
+        "conflicts": [
+          "fwupd < 1.5.8",
+          "grub2-efi-ia32 < 2.06-63"
+        ],
+        "replaces": []
       }
     },
     {
@@ -430,17 +466,17 @@
       "id": "a8bb6f08c91f5726d2a4",
       "name": "php-xml",
       "epoch": "0",
-      "version": "8.5.11",
+      "version": "8.5.12",
       "release": "1.fc44",
       "architecture": "amd64",
       "summary": "A module for PHP applications which use XML",
       "description": "The php-xml package contains dynamic shared objects which add support\nto PHP for manipulating XML documents using the DOM tree,\nand performing XSL transformations on XML documents.",
       "homepage": "http://www.php.net/",
       "license": "PHP-3.01",
-      "sourcePackage": "php-8.5.11-1.fc44.src.rpm",
+      "sourcePackage": "php-8.5.12-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 719342,
-      "downloadSize": 253703,
+      "installedSize": 723454,
+      "downloadSize": 255010,
       "dependencies": {
         "requires": [
           "libc.so.6(GLIBC_2.33)(64bit)",
@@ -472,21 +508,21 @@
           "libxslt.so.1(LIBXML2_1.0.18)(64bit)",
           "libxslt.so.1(LIBXML2_1.0.22)(64bit)",
           "libxslt.so.1(LIBXML2_1.0.24)(64bit)",
-          "php-common(x86-64) = 8.5.11-1.fc44",
+          "php-common(x86-64) = 8.5.12-1.fc44",
           "rtld(GNU_HASH)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "config(php-xml) = 8.5.11-1.fc44",
+          "config(php-xml) = 8.5.12-1.fc44",
           "php-dom",
           "php-dom(x86-64)",
           "php-domxml",
           "php-domxml(x86-64)",
           "php-simplexml",
           "php-simplexml(x86-64)",
-          "php-xml = 8.5.11-1.fc44",
-          "php-xml(x86-64) = 8.5.11-1.fc44",
+          "php-xml = 8.5.12-1.fc44",
+          "php-xml(x86-64) = 8.5.12-1.fc44",
           "php-xmlreader",
           "php-xmlreader(x86-64)",
           "php-xmlwriter",
@@ -502,32 +538,32 @@
       "id": "a8bc8ca1d7cf644a40c1",
       "name": "kf6-networkmanager-qt-devel",
       "epoch": "0",
-      "version": "6.30.0",
+      "version": "6.31.0",
       "release": "1.fc44",
       "architecture": "i686",
       "summary": "Development files for kf6-networkmanager-qt",
       "description": "Qt libraries and header files for developing applications\nthat use NetworkManager.",
       "homepage": "https://invent.kde.org/frameworks/networkmanager-qt",
       "license": "LGPL-2.0-or-later AND GPL-2.0-only AND GPL-3.0-only AND LGPL-2.1-only AND LGPL-3.0-only AND (GPL-2.0-only OR GPL-3.0-only) AND (LGPL-2.1-only OR LGPL-3.0-only) AND CC0-1.0",
-      "sourcePackage": "kf6-networkmanager-qt-6.30.0-1.fc44.src.rpm",
+      "sourcePackage": "kf6-networkmanager-qt-6.31.0-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 1689121,
-      "downloadSize": 159192,
+      "installedSize": 1689124,
+      "downloadSize": 159135,
       "dependencies": {
         "requires": [
           "cmake(Qt6Core)",
           "cmake-filesystem(x86-32)",
-          "kf6-networkmanager-qt(x86-32) = 6.30.0-1.fc44",
+          "kf6-networkmanager-qt(x86-32) = 6.31.0-1.fc44",
           "libKF6NetworkManagerQt.so.6",
           "pkgconfig(libnm)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "cmake(KF6NetworkManagerQt) = 6.30.0",
-          "cmake(kf6networkmanagerqt) = 6.30.0",
-          "kf6-networkmanager-qt-devel = 6.30.0-1.fc44",
-          "kf6-networkmanager-qt-devel(x86-32) = 6.30.0-1.fc44"
+          "cmake(KF6NetworkManagerQt) = 6.31.0",
+          "cmake(kf6networkmanagerqt) = 6.31.0",
+          "kf6-networkmanager-qt-devel = 6.31.0-1.fc44",
+          "kf6-networkmanager-qt-devel(x86-32) = 6.31.0-1.fc44"
         ],
         "conflicts": [],
         "replaces": []

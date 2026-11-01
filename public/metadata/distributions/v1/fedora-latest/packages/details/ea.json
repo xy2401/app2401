@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "fedora",
   "shard": "ea",
   "items": [
@@ -53,17 +53,17 @@
       "id": "ea03fcce94d6839e51bf",
       "name": "pdns-recursor",
       "epoch": "0",
-      "version": "5.4.6",
-      "release": "2.fc44",
+      "version": "5.4.8",
+      "release": "1.fc44",
       "architecture": "amd64",
       "summary": "Modern, advanced and high performance recursing/non authoritative name server",
       "description": "PowerDNS Recursor is a non authoritative/recursing DNS server. Use this\npackage if you need a dns cache for your network.",
       "homepage": "https://powerdns.com",
       "license": "GPL-2.0-only",
-      "sourcePackage": "pdns-recursor-5.4.6-2.fc44.src.rpm",
+      "sourcePackage": "pdns-recursor-5.4.8-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 19519005,
-      "downloadSize": 6265616,
+      "installedSize": 20099334,
+      "downloadSize": 6435824,
       "dependencies": {
         "requires": [
           "/bin/sh",
@@ -123,11 +123,11 @@
         "recommends": [],
         "suggests": [],
         "provides": [
-          "config(pdns-recursor) = 5.4.6-2.fc44",
+          "config(pdns-recursor) = 5.4.8-1.fc44",
           "group(pdns-recursor)",
-          "pdns-recursor = 5.4.6-2.fc44",
-          "pdns-recursor(x86-64) = 5.4.6-2.fc44",
-          "powerdns-recursor = 5.4.6-2.fc44",
+          "pdns-recursor = 5.4.8-1.fc44",
+          "pdns-recursor(x86-64) = 5.4.8-1.fc44",
+          "powerdns-recursor = 5.4.8-1.fc44",
           "user(pdns-recursor) = dSBwZG5zLXJlY3Vyc29yIC0gJ1Bvd2VyRE5TIFJlY3Vyc29yIHVzZXInIC0gLQAA"
         ],
         "conflicts": [],
@@ -372,17 +372,17 @@
       "id": "ea3f750047fde14796ac",
       "name": "cockpit-storaged",
       "epoch": "0",
-      "version": "367",
+      "version": "370",
       "release": "1.fc44",
       "architecture": "noarch",
       "summary": "Cockpit user interface for storage, using udisks",
       "description": "The Cockpit component for managing storage.  This package uses udisks.",
       "homepage": "https://cockpit-project.org/",
       "license": "LGPL-2.1-or-later AND GPL-3.0-or-later AND MIT AND CC-BY-SA-3.0 AND BSD-3-Clause",
-      "sourcePackage": "cockpit-367-1.fc44.src.rpm",
+      "sourcePackage": "cockpit-370-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 924726,
-      "downloadSize": 935649,
+      "installedSize": 935934,
+      "downloadSize": 944756,
       "dependencies": {
         "requires": [
           "/bin/sh",
@@ -400,7 +400,7 @@
         ],
         "suggests": [],
         "provides": [
-          "cockpit-storaged = 367-1.fc44",
+          "cockpit-storaged = 370-1.fc44",
           "metainfo()",
           "metainfo(org.cockpit_project.cockpit_storaged.metainfo.xml)"
         ],
@@ -750,6 +750,41 @@
           "mimehandler(video/webm)",
           "mimehandler(video/x-matroska)",
           "mimehandler(video/x-ms-wmv)"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "ea93e7f81afbb5aa1ea1",
+      "name": "fuse3",
+      "epoch": "0",
+      "version": "3.18.3",
+      "release": "1.fc44",
+      "architecture": "amd64",
+      "summary": "File System in Userspace (FUSE) v3 utilities",
+      "description": "With FUSE it is possible to implement a fully functional filesystem in a\nuserspace program. This package contains the FUSE v3 userspace tools to\nmount a FUSE filesystem.",
+      "homepage": "https://github.com/libfuse/libfuse/",
+      "license": "GPL-1.0-or-later",
+      "sourcePackage": "fuse3-3.18.3-1.fc44.src.rpm",
+      "repository": "updates",
+      "installedSize": 142390,
+      "downloadSize": 64702,
+      "dependencies": {
+        "requires": [
+          "filesystem(unmerged-sbin-symlinks)",
+          "fuse-common",
+          "fuse3-libs(x86-64) = 3.18.3-1.fc44",
+          "libc.so.6(GLIBC_2.38)(64bit)",
+          "libfuse3.so.4()(64bit)",
+          "libfuse3.so.4(FUSE_3.3)(64bit)",
+          "rtld(GNU_HASH)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "fuse3 = 3.18.3-1.fc44",
+          "fuse3(x86-64) = 3.18.3-1.fc44"
         ],
         "conflicts": [],
         "replaces": []

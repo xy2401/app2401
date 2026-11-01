@@ -1,331 +1,408 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "alpine",
   "shard": "09",
   "items": [
     {
-      "id": "090359aaa792d6f1fa3e",
-      "name": "lximage-qt",
-      "version": "2.4.0-r0",
+      "id": "09018f32a1d8bb018da8",
+      "name": "vlc-dev",
+      "version": "3.0.23-r4",
       "architecture": "amd64",
-      "summary": "The image viewer and screenshot tool for LXQt",
-      "description": "The image viewer and screenshot tool for LXQt",
-      "homepage": "https://github.com/lxqt/lximage-qt",
-      "license": "LGPL-2.0-or-later",
-      "maintainer": "Antoni Aloy <aaloytorrens@gmail.com>",
-      "sourcePackage": "lximage-qt",
+      "summary": "Multi-platform MPEG, VCD/DVD, and DivX player (development files)",
+      "description": "Multi-platform MPEG, VCD/DVD, and DivX player (development files)",
+      "homepage": "https://www.videolan.org/vlc/",
+      "license": "GPL-2.0-or-later",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "vlc",
       "repository": "official",
-      "installedSize": 517953,
-      "downloadSize": 185174,
+      "installedSize": 1026812,
+      "downloadSize": 246093,
       "dependencies": {
         "requires": [
+          "pkgconfig",
+          "vlc-libs=3.0.23-r4"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "pc:libvlc=3.0.23",
+          "pc:vlc-plugin=3.0.23"
+        ],
+        "conflicts": [
+          "2f84aabf43eaad9e3b494d648a3e733c150503a3"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "090250e319d6f97048f7",
+      "name": "mate-themes",
+      "version": "3.22.26-r1",
+      "architecture": "amd64",
+      "summary": "MATE themes",
+      "description": "MATE themes",
+      "homepage": "https://github.com/mate-desktop/mate-themes",
+      "license": "LGPL-2.1-or-later",
+      "maintainer": "Alan Lacerda <alacerda@alpinelinux.org>",
+      "sourcePackage": "mate-themes",
+      "repository": "official",
+      "installedSize": 80759962,
+      "downloadSize": 13759661,
+      "dependencies": {
+        "requires": [
+          "mate-common"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "2e3d5aa532c670e5e6baacf891d0ddb0dcfc9f69"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0903efc85215f50c4c25",
+      "name": "openldap-back-sql",
+      "version": "2.6.15-r0",
+      "architecture": "amd64",
+      "summary": "OpenLDAP sql backend",
+      "description": "OpenLDAP sql backend",
+      "homepage": "https://www.openldap.org/",
+      "license": "OLDAP-2.8",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "openldap",
+      "repository": "official",
+      "installedSize": 149655,
+      "downloadSize": 59495,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1",
+          "so:liblber.so.2",
+          "so:libldap.so.2",
+          "so:libodbc.so.2"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "dff61c85c6c68e2c5fb8abac65f0dd97d4ad8763"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0908061bf4a3ef101e5a",
+      "name": "postgresql16-doc",
+      "version": "16.15-r0",
+      "architecture": "amd64",
+      "summary": "A sophisticated object-relational DBMS, version 16 (documentation)",
+      "description": "A sophisticated object-relational DBMS, version 16 (documentation)",
+      "homepage": "https://www.postgresql.org/",
+      "license": "PostgreSQL",
+      "maintainer": "Jakub Jirutka <jakub@jirutka.cz>",
+      "sourcePackage": "postgresql16",
+      "repository": "official",
+      "installedSize": 2152626,
+      "downloadSize": 508715,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "postgresql-doc"
+        ],
+        "conflicts": [
+          "acdc67ac50fcbf90af37919162c22a0df6398460"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0908bbdc888509bc45fb",
+      "name": "kiconthemes",
+      "version": "6.26.0-r0",
+      "architecture": "amd64",
+      "summary": "Support for icon themes",
+      "description": "Support for icon themes",
+      "homepage": "https://community.kde.org/Frameworks",
+      "license": "LGPL-2.1-only",
+      "maintainer": "team/kde <bribbers@disroot.org>",
+      "sourcePackage": "kiconthemes",
+      "repository": "official",
+      "installedSize": 436899,
+      "downloadSize": 160244,
+      "dependencies": {
+        "requires": [
+          "so:libKF6Archive.so.6",
+          "so:libKF6BreezeIcons.so.6",
+          "so:libKF6ColorScheme.so.6",
+          "so:libKF6ConfigCore.so.6",
+          "so:libKF6ConfigGui.so.6",
+          "so:libKF6I18n.so.6",
+          "so:libKF6WidgetsAddons.so.6",
           "so:libQt6Core.so.6",
           "so:libQt6DBus.so.6",
           "so:libQt6Gui.so.6",
-          "so:libQt6Network.so.6",
-          "so:libQt6PrintSupport.so.6",
-          "so:libQt6SvgWidgets.so.6",
+          "so:libQt6Qml.so.6",
+          "so:libQt6Quick.so.6",
           "so:libQt6Widgets.so.6",
-          "so:libX11.so.6",
-          "so:libXfixes.so.3",
           "so:libc.musl-x86_64.so.1",
-          "so:libexif.so.12",
-          "so:libfm-qt6.so.17",
-          "so:libgio-2.0.so.0",
-          "so:libglib-2.0.so.0",
-          "so:libgobject-2.0.so.0",
           "so:libstdc++.so.6"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "cmd:lximage-qt=2.4.0-r0"
+          "cmd:kiconfinder6=6.26.0-r0",
+          "so:libKF6IconThemes.so.6=6.26.0",
+          "so:libKF6IconWidgets.so.6=6.26.0"
         ],
         "conflicts": [
-          "fec3574ed2ddd7e482b3e81f0290e63478d58985"
+          "df9df7dd0c1867bcf62727115cc6dfc22ac7f46f"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0906b06541903f5cebf8",
-      "name": "py3-stack_data",
-      "version": "0.6.3-r3",
+      "id": "090fa7d41f0b9374075e",
+      "name": "safeeyes-pyc",
+      "version": "3.3.1-r1",
       "architecture": "amd64",
-      "summary": "library that extracts data from stack frames and tracebacks",
-      "description": "library that extracts data from stack frames and tracebacks",
-      "homepage": "https://github.com/alexmojaki/stack_data",
-      "license": "MIT",
-      "maintainer": "Kevin Daudt <kdaudt@alpinelinux.org>",
-      "sourcePackage": "py3-stack_data",
+      "summary": "Precompiled Python bytecode for safeeyes",
+      "description": "Precompiled Python bytecode for safeeyes",
+      "homepage": "https://slgobinath.github.io/safeeyes/",
+      "license": "GPL-3.0-only",
+      "maintainer": "Anjandev Momi <anjan@momi.ca>",
+      "sourcePackage": "safeeyes",
       "repository": "official",
-      "installedSize": 75324,
-      "downloadSize": 23778,
+      "installedSize": 383769,
+      "downloadSize": 141213,
       "dependencies": {
         "requires": [
-          "py3-asttokens",
-          "py3-executing",
-          "py3-pure_eval",
-          "python3",
           "python3~3.14"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "py3.14:stack_data=0.6.3-r3"
-        ],
+        "provides": [],
         "conflicts": [
-          "ed27fc49e62e1a0c6df07f25f88a41905df1af0b"
+          "0650236258b26f309968f228d6eb4c5962e0b493"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0906b6c8c8effdc776e7",
-      "name": "pcsc-perl-doc",
-      "version": "1.4.16-r2",
+      "id": "0910796fc3f303a57a65",
+      "name": "apache-mod-auth-kerb",
+      "version": "5.4-r9",
       "architecture": "amd64",
-      "summary": "Perl library allows to communicate with a smart card using PC/SC (documentation)",
-      "description": "Perl library allows to communicate with a smart card using PC/SC (documentation)",
-      "homepage": "https://pcsc-perl.apdu.fr/",
-      "license": "GPL-2.0",
-      "maintainer": "Patrycja Rosa <alpine@ptrcnull.me>",
-      "sourcePackage": "pcsc-perl",
+      "summary": "A Kerberos authentication module for the Apache Http Server",
+      "description": "A Kerberos authentication module for the Apache Http Server",
+      "homepage": "https://sourceforge.net/projects/modauthkerb/",
+      "license": "BSD-3-Clause AND MIT",
+      "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
+      "sourcePackage": "apache-mod-auth-kerb",
       "repository": "official",
-      "installedSize": 8371,
-      "downloadSize": 10266,
+      "installedSize": 64428,
+      "downloadSize": 24451,
+      "dependencies": {
+        "requires": [
+          "apache2",
+          "so:libc.musl-x86_64.so.1",
+          "so:libcom_err.so.2",
+          "so:libgssapi_krb5.so.2",
+          "so:libkrb5.so.3"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "3673b97db20af3e0361c4776c57d219e90824b09"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0915e9fa8833756493c0",
+      "name": "znc-modperl",
+      "version": "1.10.3-r0",
+      "architecture": "amd64",
+      "summary": "Perl module for ZNC",
+      "description": "Perl module for ZNC",
+      "homepage": "https://wiki.znc.in/ZNC",
+      "license": "Apache-2.0",
+      "maintainer": "Runxi Yu <me@runxiyu.org>",
+      "sourcePackage": "znc",
+      "repository": "official",
+      "installedSize": 3428466,
+      "downloadSize": 937855,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1",
+          "so:libgcc_s.so.1",
+          "so:libperl.so",
+          "so:libstdc++.so.6",
+          "znc=1.10.3-r0"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "7fcdbe67dae9717f32fa7456b5348e3ab6bb58f4"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "091a0d73541a3afa85c5",
+      "name": "mptcpd-dev",
+      "version": "0.14-r0",
+      "architecture": "amd64",
+      "summary": "Multipath TCP Daemon (development files)",
+      "description": "Multipath TCP Daemon (development files)",
+      "homepage": "https://mptcpd.mptcp.dev",
+      "license": "BSD-3-Clause",
+      "maintainer": "Matthieu Baerts (NGI0) <matttbe@kernel.org>",
+      "sourcePackage": "mptcpd",
+      "repository": "official",
+      "installedSize": 49877,
+      "downloadSize": 11492,
+      "dependencies": {
+        "requires": [
+          "mptcpd=0.14-r0",
+          "pc:ell>=0.30",
+          "pkgconfig"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "pc:mptcpd=0.14"
+        ],
+        "conflicts": [
+          "dfe72c7d2716d34cb84da841006409c8a44f9953"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "091a7963fa5df6293e5f",
+      "name": "perl-json-maybexs-doc",
+      "version": "1.004008-r0",
+      "architecture": "amd64",
+      "summary": "Use L<Cpanel::JSON::XS> with a fallback to L<JSON::XS> and L<JSON::PP> (documentation)",
+      "description": "Use L<Cpanel::JSON::XS> with a fallback to L<JSON::XS> and L<JSON::PP> (documentation)",
+      "homepage": "https://metacpan.org/release/JSON-MaybeXS/",
+      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
+      "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
+      "sourcePackage": "perl-json-maybexs",
+      "repository": "official",
+      "installedSize": 4164,
+      "downloadSize": 6032,
       "dependencies": {
         "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "e2c933d8b5bbfdbe0516416dbef9b75906f8fe06"
+          "f08676f48d8f1772931960882e2c1627c128b549"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0907502298d6f633d40a",
-      "name": "py3-aioitertools",
-      "version": "0.13.0-r0",
+      "id": "091cbf0d2efaec26565d",
+      "name": "guix-fish-completion",
+      "version": "1.5.0-r2",
       "architecture": "amd64",
-      "summary": "Implementation of itertools, builtins, and more for AsyncIO and mixed-type iterables",
-      "description": "Implementation of itertools, builtins, and more for AsyncIO and mixed-type iterables",
-      "homepage": "https://github.com/omnilib/aioitertools",
-      "license": "MIT",
-      "maintainer": "Noel Kuntze <noel.kuntze@contauro.com>",
-      "sourcePackage": "py3-aioitertools",
+      "summary": "Fish completions for guix",
+      "description": "Fish completions for guix",
+      "homepage": "https://guix.gnu.org",
+      "license": "GPL-3.0-or-later",
+      "maintainer": "Sören Tempel <soeren+alpine@soeren-tempel.net>",
+      "sourcePackage": "guix",
       "repository": "official",
-      "installedSize": 91084,
-      "downloadSize": 21385,
+      "installedSize": 77566,
+      "downloadSize": 13911,
       "dependencies": {
-        "requires": [
-          "python3",
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "py3.14:aioitertools=0.13.0-r0"
-        ],
-        "conflicts": [
-          "cf4b64866a8ece23ec950ae7735f385430c277e3"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "090881734e3c03461630",
-      "name": "lua5.3-lunix",
-      "version": "20190403-r0",
-      "architecture": "amd64",
-      "summary": "Comprehensive Unix API Module for Lua 5.3",
-      "description": "Comprehensive Unix API Module for Lua 5.3",
-      "homepage": "https://github.com/wahern/lunix",
-      "license": "MIT",
-      "maintainer": "Jakub Jirutka <jakub@jirutka.cz>",
-      "sourcePackage": "lua-lunix",
-      "repository": "official",
-      "installedSize": 104739,
-      "downloadSize": 42777,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1"
-        ],
+        "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "8483267129989d93de7bb529dcc15f47bd2d1b8c"
+          "7c0f76b18414c13a37b51341ba738fb9a32ea67e"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0908fece8da08d29cd66",
-      "name": "tree-sitter-ruby",
-      "version": "0.23.1-r1",
+      "id": "091e35b186ec2a53ff33",
+      "name": "lightdm-gtk-greeter-doc",
+      "version": "2.0.9-r0",
       "architecture": "amd64",
-      "summary": "Ruby grammar for tree-sitter",
-      "description": "Ruby grammar for tree-sitter",
-      "homepage": "https://github.com/tree-sitter/tree-sitter-ruby",
-      "license": "MIT",
-      "maintainer": "Jakub Jirutka <jakub@jirutka.cz>",
-      "sourcePackage": "tree-sitter-ruby",
+      "summary": "Gtk based greeter for lightdm. (documentation)",
+      "description": "Gtk based greeter for lightdm. (documentation)",
+      "homepage": "https://launchpad.net/lightdm-gtk-greeter",
+      "license": "GPL-3.0-or-later",
+      "maintainer": "Taner Tas <taner76@gmail.com>",
+      "sourcePackage": "lightdm-gtk-greeter",
       "repository": "official",
-      "installedSize": 2111431,
-      "downloadSize": 169397,
+      "installedSize": 9679,
+      "downloadSize": 3347,
       "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1"
-        ],
+        "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "4790002770e0422255a1b25c3b025e056681fd0a"
+          "84662fae598933e9c130b69a4da5317d7b058708"
         ],
         "replaces": []
       }
     },
     {
-      "id": "090b95bd7872bde49d4a",
-      "name": "ssu-sysinfo",
-      "version": "1.5.0-r0",
+      "id": "091f3fc9ab75cf28299d",
+      "name": "rcon-bash-completion",
+      "version": "0.6-r2",
       "architecture": "amd64",
-      "summary": "Mer's ssu-sysinfo",
-      "description": "Mer's ssu-sysinfo",
-      "homepage": "https://github.com/sailfishos/ssu-sysinfo",
-      "license": "LGPL-2.1-or-later AND BSD-3-Clause",
-      "maintainer": "Bart Ribbers <bribbers@disroot.org>",
-      "sourcePackage": "ssu-sysinfo",
+      "summary": "Bash completions for rcon",
+      "description": "Bash completions for rcon",
+      "homepage": "https://github.com/n0la/rcon",
+      "license": "BSD-2-Clause",
+      "maintainer": "TBK <alpine@jjtc.eu>",
+      "sourcePackage": "rcon",
       "repository": "official",
-      "installedSize": 69200,
-      "downloadSize": 23162,
+      "installedSize": 795,
+      "downloadSize": 2013,
       "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1"
-        ],
+        "requires": [],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "cmd:ssu-sysinfo=1.5.0-r0",
-          "so:libssusysinfo.so.1=1.0.0"
-        ],
+        "provides": [],
         "conflicts": [
-          "6543bd2a6d6148f85b41ce4870445ae9e50d5d64"
+          "1d3309e8b216ba0ad47070eac7ebf97876d2252e"
         ],
         "replaces": []
       }
     },
     {
-      "id": "090f41f2e0a54edc00a9",
-      "name": "py3-magic",
-      "version": "0.4.27-r4",
-      "architecture": "amd64",
-      "summary": "Python3 wrapper for libmagic",
-      "description": "Python3 wrapper for libmagic",
-      "homepage": "https://pypi.org/project/python-magic/",
-      "license": "MIT",
-      "maintainer": "Stuart Cardall <developer@it-offshore.co.uk>",
-      "sourcePackage": "py3-magic",
-      "repository": "official",
-      "installedSize": 36780,
-      "downloadSize": 14162,
-      "dependencies": {
-        "requires": [
-          "libmagic",
-          "python3",
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "py-magic=0.4.27-r4",
-          "py3.14:magic=0.4.27-r4"
-        ],
-        "conflicts": [
-          "0920df355c2ab01133306336e5c5f1d411f0a45a"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "091351aa2e84bfa4793f",
-      "name": "testdisk",
-      "version": "7.2-r1",
-      "architecture": "amd64",
-      "summary": "A data recovery suite",
-      "description": "A data recovery suite",
-      "homepage": "https://www.cgsecurity.org/wiki/TestDisk",
-      "license": "GPL-2.0-or-later",
-      "maintainer": "Leonardo Arena <rnalrd@alpinelinux.org>",
-      "sourcePackage": "testdisk",
-      "repository": "official",
-      "installedSize": 1122648,
-      "downloadSize": 503971,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1",
-          "so:libext2fs.so.2",
-          "so:libjpeg.so.8",
-          "so:libncursesw.so.6",
-          "so:libntfs-3g.so.89",
-          "so:libz.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:fidentify=7.2-r1",
-          "cmd:photorec=7.2-r1",
-          "cmd:testdisk=7.2-r1"
-        ],
-        "conflicts": [
-          "b6ef17666df708d5251bcb8b75babe2cce54c956"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0916f942698a1177a1a6",
-      "name": "kollision",
+      "id": "091fdfb6e33cee266f6c",
+      "name": "kde-applications-games",
       "version": "26.04.2-r0",
       "architecture": "amd64",
-      "summary": "A simple ball dodging game",
-      "description": "A simple ball dodging game",
-      "homepage": "https://kde.org/applications/games/kollision/",
-      "license": "GPL-2.0-or-later AND GFDL-1.2-only",
+      "summary": "KDE Applications meta package",
+      "description": "KDE Applications meta package",
+      "homepage": "https://kde.org/applications/",
+      "license": "GPL-3.0-or-later",
       "maintainer": "team/kde <bribbers@disroot.org>",
-      "sourcePackage": "kollision",
+      "sourcePackage": "kde-applications",
       "repository": "official",
-      "installedSize": 336737,
-      "downloadSize": 226073,
+      "installedSize": 0,
+      "downloadSize": 1270,
       "dependencies": {
-        "requires": [
-          "so:libKDEGames6.so.6",
-          "so:libKF6ConfigCore.so.6",
-          "so:libKF6ConfigGui.so.6",
-          "so:libKF6ConfigWidgets.so.6",
-          "so:libKF6CoreAddons.so.6",
-          "so:libKF6Crash.so.6",
-          "so:libKF6DBusAddons.so.6",
-          "so:libKF6I18n.so.6",
-          "so:libKF6IconThemes.so.6",
-          "so:libKF6WidgetsAddons.so.6",
-          "so:libKF6XmlGui.so.6",
-          "so:libQt6Core.so.6",
-          "so:libQt6Gui.so.6",
-          "so:libQt6Widgets.so.6",
-          "so:libc.musl-x86_64.so.1",
-          "so:libstdc++.so.6"
-        ],
+        "requires": [],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "cmd:kollision=26.04.2-r0"
-        ],
+        "provides": [],
         "conflicts": [
           "0c950cc7ffe199a787be2d0256d8fee91df20f06"
         ],
@@ -333,153 +410,73 @@
       }
     },
     {
-      "id": "091757f791d1f20b2e90",
-      "name": "lua5.2-bcrypt",
-      "version": "2.3-r0",
+      "id": "09203683f6ad5f1719f4",
+      "name": "kconfig-doc",
+      "version": "6.26.0-r0",
       "architecture": "amd64",
-      "summary": "A Lua wrapper for bcrypt (for Lua 5.2)",
-      "description": "A Lua wrapper for bcrypt (for Lua 5.2)",
-      "homepage": "https://github.com/mikejsavage/lua-bcrypt",
-      "license": "MIT",
-      "maintainer": "Will Sinatra <wpsinatra@gmail.com>",
-      "sourcePackage": "lua-bcrypt",
+      "summary": "Configuration system (documentation)",
+      "description": "Configuration system (documentation)",
+      "homepage": "https://community.kde.org/Frameworks",
+      "license": "LGPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.1-or-later",
+      "maintainer": "team/kde <bribbers@disroot.org>",
+      "sourcePackage": "kconfig",
       "repository": "official",
-      "installedSize": 22208,
-      "downloadSize": 11731,
+      "installedSize": 2234744,
+      "downloadSize": 432819,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "df9df7dd0c1867bcf62727115cc6dfc22ac7f46f"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09209e8f67476cae0cc4",
+      "name": "ctop",
+      "version": "0.7.7-r38",
+      "architecture": "amd64",
+      "summary": "Top-like interface for container metrics",
+      "description": "Top-like interface for container metrics",
+      "homepage": "https://ctop.sh/",
+      "license": "MIT",
+      "maintainer": "Shyam Sunder <sgsunder1@gmail.com>",
+      "sourcePackage": "ctop",
+      "repository": "official",
+      "installedSize": 16256448,
+      "downloadSize": 5856473,
       "dependencies": {
         "requires": [
-          "lua5.2",
           "so:libc.musl-x86_64.so.1"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [],
+        "provides": [
+          "cmd:ctop=0.7.7-r38"
+        ],
         "conflicts": [
-          "7827740ac1def71962d94a324e84c9862165672d"
+          "c02e0c037b032adc0301e2027ad0f3a1c0b98a7a"
         ],
         "replaces": []
       }
     },
     {
-      "id": "09189ae9e332c32d7ecd",
-      "name": "perl-extutils-cchecker-doc",
-      "version": "0.12-r1",
+      "id": "0921ea1237f1b8d65672",
+      "name": "pass-git-helper-pyc",
+      "version": "4.3.0-r0",
       "architecture": "amd64",
-      "summary": "Perl module configuration-time utilities for using C headers, libraries, or OS features (documentation)",
-      "description": "Perl module configuration-time utilities for using C headers, libraries, or OS features (documentation)",
-      "homepage": "https://metacpan.org/release/ExtUtils-CChecker/",
-      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
-      "maintainer": "Sheila Aman <sheila@vulpine.house>",
-      "sourcePackage": "perl-extutils-cchecker",
-      "repository": "official",
-      "installedSize": 5221,
-      "downloadSize": 7095,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "3af2dbd380f3bcf8f70150c18ed792654502569c"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "091ac88e921944516117",
-      "name": "py3-httpbin-pyc",
-      "version": "0.10.2-r4",
-      "architecture": "amd64",
-      "summary": "Precompiled Python bytecode for py3-httpbin",
-      "description": "Precompiled Python bytecode for py3-httpbin",
-      "homepage": "https://github.com/psf/httpbin",
-      "license": "ISC",
-      "maintainer": "Luca Weiss <luca@lucaweiss.eu>",
-      "sourcePackage": "py3-httpbin",
-      "repository": "official",
-      "installedSize": 77728,
-      "downloadSize": 32960,
-      "dependencies": {
-        "requires": [
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "297b4b621c54344e71fadcc60658435364fe1e3f"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "091b302436f975975769",
-      "name": "libdatovka-doc",
-      "version": "0.7.3-r0",
-      "architecture": "amd64",
-      "summary": "Client library for accessing SOAP services of ISDS (Czech Data Boxes) (documentation)",
-      "description": "Client library for accessing SOAP services of ISDS (Czech Data Boxes) (documentation)",
-      "homepage": "https://www.datovka.cz/",
-      "license": "LGPL-3.0-or-later AND GPL-3.0-or-later",
-      "maintainer": "Jakub Jirutka <jakub@jirutka.cz>",
-      "sourcePackage": "libdatovka",
-      "repository": "official",
-      "installedSize": 14605,
-      "downloadSize": 16541,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "f500aeaedad078418b6467289e848c9e7394c840"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "091d0742568e96b82645",
-      "name": "libltc",
-      "version": "1.3.2-r1",
-      "architecture": "amd64",
-      "summary": "provides functionality to encode and decode LTC audio",
-      "description": "provides functionality to encode and decode LTC audio",
-      "homepage": "https://github.com/x42/libltc",
+      "summary": "Precompiled Python bytecode for pass-git-helper",
+      "description": "Precompiled Python bytecode for pass-git-helper",
+      "homepage": "https://github.com/languitar/pass-git-helper",
       "license": "LGPL-3.0-only",
-      "maintainer": "Magnus Sandin <magnus.sandin@valitron.se>",
-      "sourcePackage": "libltc",
+      "maintainer": "Galen Abell <galen@galenabell.com>",
+      "sourcePackage": "pass-git-helper",
       "repository": "official",
-      "installedSize": 22128,
-      "downloadSize": 10418,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "so:libltc.so.11=11.2.0"
-        ],
-        "conflicts": [
-          "5d861bcd81e4681fded33a96762e66095a1ebbed"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "091f938fcc43f0a45812",
-      "name": "pipx-pyc",
-      "version": "1.14.0-r0",
-      "architecture": "amd64",
-      "summary": "Precompiled Python bytecode for pipx",
-      "description": "Precompiled Python bytecode for pipx",
-      "homepage": "https://github.com/pypa/pipx",
-      "license": "MIT",
-      "maintainer": "Achill Gilgenast <achill@achill.org>",
-      "sourcePackage": "pipx",
-      "repository": "official",
-      "installedSize": 438586,
-      "downloadSize": 179249,
+      "installedSize": 34514,
+      "downloadSize": 15042,
       "dependencies": {
         "requires": [
           "python3~3.14"
@@ -488,383 +485,247 @@
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "6e7270f938242bfd252888ada14b30789c243dce"
+          "843ded51a1a4a4c428c0649e7437301ce4148398"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0920043ea150679c6870",
-      "name": "perl-test-requiresinternet-doc",
-      "version": "0.05-r4",
+      "id": "09228b124e66f93e2e3c",
+      "name": "soapy-sdr",
+      "version": "0.8.1-r4",
       "architecture": "amd64",
-      "summary": "Easily test network connectivity (documentation)",
-      "description": "Easily test network connectivity (documentation)",
-      "homepage": "https://metacpan.org/release/Test-RequiresInternet/",
-      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
+      "summary": "Soapy SDR - vendor and platform neutral SDR support library",
+      "description": "Soapy SDR - vendor and platform neutral SDR support library",
+      "homepage": "https://github.com/pothosware/SoapySDR",
+      "license": "BSL-1.0",
+      "maintainer": "Marian Buschsieweke <marian.buschsieweke@posteo.net>",
+      "sourcePackage": "soapy-sdr",
+      "repository": "official",
+      "installedSize": 55912,
+      "downloadSize": 25379,
+      "dependencies": {
+        "requires": [
+          "so:libSoapySDR.so.0.8",
+          "so:libc.musl-x86_64.so.1",
+          "so:libgcc_s.so.1",
+          "so:libstdc++.so.6"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:SoapySDRUtil=0.8.1-r4"
+        ],
+        "conflicts": [
+          "04598de77687cbb3f6e722a4a6731932c102e5f9"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0924a51a64027e0a64e0",
+      "name": "php83-xml",
+      "version": "8.3.36-r0",
+      "architecture": "amd64",
+      "summary": "PHP83 extension: XML",
+      "description": "PHP83 extension: XML",
+      "homepage": "https://www.php.net/",
+      "license": "PHP-3.01 BSD-3-Clause LGPL-2.0-or-later MIT Zend-2.0",
+      "maintainer": "Andy Postnikov <apostnikov@gmail.com>",
+      "sourcePackage": "php83",
+      "repository": "official",
+      "installedSize": 55366,
+      "downloadSize": 19570,
+      "dependencies": {
+        "requires": [
+          "php83-common",
+          "so:libc.musl-x86_64.so.1",
+          "so:libxml2.so.2"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "php-xml"
+        ],
+        "conflicts": [
+          "1df840e1434c42c8fb0f439fc0f69a8fc32eebee"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "092639d3c3e4ccea6fc1",
+      "name": "libraw-tools",
+      "version": "0.22.2-r0",
+      "architecture": "amd64",
+      "summary": "tools for LibRaw",
+      "description": "tools for LibRaw",
+      "homepage": "https://www.libraw.org/",
+      "license": "CDDL-1.0 OR LGPL-2.1-only",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "libraw",
+      "repository": "official",
+      "installedSize": 191576,
+      "downloadSize": 45918,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1",
+          "so:libgcc_s.so.1",
+          "so:libgomp.so.1",
+          "so:libjpeg.so.8",
+          "so:libraw.so.25",
+          "so:libraw_r.so.25",
+          "so:libstdc++.so.6"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:4channels=0.22.2-r0",
+          "cmd:dcraw_emu=0.22.2-r0",
+          "cmd:dcraw_half=0.22.2-r0",
+          "cmd:half_mt=0.22.2-r0",
+          "cmd:mem_image=0.22.2-r0",
+          "cmd:multirender_test=0.22.2-r0",
+          "cmd:postprocessing_benchmark=0.22.2-r0",
+          "cmd:raw-identify=0.22.2-r0",
+          "cmd:rawtextdump=0.22.2-r0",
+          "cmd:simple_dcraw=0.22.2-r0",
+          "cmd:unprocessed_raw=0.22.2-r0"
+        ],
+        "conflicts": [
+          "db4806b0ac10d3d792ab381504508a13c530484b"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0927ae7958666d37e290",
+      "name": "freeradius-dhcp",
+      "version": "3.0.27-r3",
+      "architecture": "amd64",
+      "summary": "DHCP module for FreeRADIUS server",
+      "description": "DHCP module for FreeRADIUS server",
+      "homepage": "https://freeradius.org/",
+      "license": "GPL-2.0-or-later",
       "maintainer": "Leonardo Arena <rnalrd@alpinelinux.org>",
-      "sourcePackage": "perl-test-requiresinternet",
+      "sourcePackage": "freeradius",
       "repository": "official",
-      "installedSize": 1677,
-      "downloadSize": 3517,
+      "installedSize": 89071,
+      "downloadSize": 28618,
       "dependencies": {
-        "requires": [],
+        "requires": [
+          "freeradius=3.0.27-r3",
+          "so:libc.musl-x86_64.so.1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "so:libfreeradius-dhcp.so=0",
+          "so:proto_dhcp.so=0",
+          "so:rlm_dhcp.so=0"
+        ],
+        "conflicts": [
+          "6c9b01e0bdbc8c20d0cd701bf1e9a33013b2c67f"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0928a853ddec7dd36377",
+      "name": "texmf-dist-plaingeneric",
+      "version": "2026.0-r0",
+      "architecture": "amd64",
+      "summary": "texmf-dist: Plain (La)TeX packages",
+      "description": "texmf-dist: Plain (La)TeX packages",
+      "homepage": "https://tug.org/texlive/",
+      "license": "LPPL-1.0 AND LPPL-1.1 AND LPPL-1.2 AND LPPL-1.3a AND LPPL-1.3c AND GPL-2.0-only",
+      "maintainer": "Marian Buschsieweke <marian.buschsieweke@posteo.net>",
+      "sourcePackage": "texmf-dist",
+      "repository": "official",
+      "installedSize": 45765040,
+      "downloadSize": 8024276,
+      "dependencies": {
+        "requires": [
+          "texmf-dist"
+        ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "4ece6fc07c96d6859dde2ecc31b323fb3b355638"
+          "2b511f11629b28efb590224357123663870311fa"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0920f600cb053b05de5d",
-      "name": "indent",
-      "version": "2.2.13-r2",
+      "id": "092a48f1289d7abb6f20",
+      "name": "genext2fs",
+      "version": "1.6.2-r0",
       "architecture": "amd64",
-      "summary": "An indenting utility",
-      "description": "An indenting utility",
-      "homepage": "https://www.gnu.org/software/indent/",
-      "license": "GPL-3.0-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "indent",
-      "repository": "official",
-      "installedSize": 69168,
-      "downloadSize": 33132,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1",
-          "so:libintl.so.8"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:indent=2.2.13-r2"
-        ],
-        "conflicts": [
-          "26b3f5d2fd94fcd53da50ede8eb76f71c6442392"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09262e85400ab3c70797",
-      "name": "gedit-dev",
-      "version": "50.0-r0",
-      "architecture": "amd64",
-      "summary": "An easy-to-use and general-purpose text editor (development files)",
-      "description": "An easy-to-use and general-purpose text editor (development files)",
-      "homepage": "https://gedit-text-editor.org",
+      "summary": "Generate ext2 filesystems as a normal user",
+      "description": "Generate ext2 filesystems as a normal user",
+      "homepage": "https://genext2fs.sourceforge.net/",
       "license": "GPL-2.0-only",
-      "maintainer": "mio <miyopan@e.email>",
-      "sourcePackage": "gedit",
-      "repository": "official",
-      "installedSize": 43724,
-      "downloadSize": 10072,
-      "dependencies": {
-        "requires": [
-          "gedit=50.0-r0",
-          "pc:gio-2.0>=2.76",
-          "pc:gtk+-3.0>=3.7.10",
-          "pc:libgedit-tepl-6>=6.14.0",
-          "pc:libpeas-gtk-1.0",
-          "pkgconfig"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "pc:gedit=50.0"
-        ],
-        "conflicts": [
-          "467f82b9156cd69e9f9eb20ca22750c260a3379d"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0926a54bbfb7c0bb09d2",
-      "name": "ytnef",
-      "version": "2.1.2-r0",
-      "architecture": "amd64",
-      "summary": "TNEF Stream Reader - for winmail.dat files",
-      "description": "TNEF Stream Reader - for winmail.dat files",
-      "homepage": "https://github.com/Yeraze/ytnef",
-      "license": "GPL-2.0-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "ytnef",
-      "repository": "official",
-      "installedSize": 48194,
-      "downloadSize": 15959,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1",
-          "so:libytnef.so.0"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:ytnef=2.1.2-r0",
-          "cmd:ytnefprint=2.1.2-r0",
-          "cmd:ytnefprocess=2.1.2-r0"
-        ],
-        "conflicts": [
-          "6169b371e8002239645850f61b933def58e42589"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "092bee2423de35b5ba19",
-      "name": "spdk-dev",
-      "version": "25.05-r3",
-      "architecture": "amd64",
-      "summary": "Storage Performance Development Kit (development files)",
-      "description": "Storage Performance Development Kit (development files)",
-      "homepage": "https://spdk.io/",
-      "license": "BSD-3-Clause",
       "maintainer": "Duncan Bellamy <dunk@denkimushi.com>",
-      "sourcePackage": "spdk",
+      "sourcePackage": "genext2fs",
       "repository": "official",
-      "installedSize": 1445928,
-      "downloadSize": 300326,
+      "installedSize": 51856,
+      "downloadSize": 26172,
       "dependencies": {
         "requires": [
-          "pkgconfig",
-          "spdk=25.05-r3"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "pc:spdk_accel=16.0",
-          "pc:spdk_accel_error=2.0",
-          "pc:spdk_accel_ioat=6.0",
-          "pc:spdk_accel_modules=1.0",
-          "pc:spdk_bdev=17.0",
-          "pc:spdk_bdev_aio=6.0",
-          "pc:spdk_bdev_delay=6.0",
-          "pc:spdk_bdev_error=6.0",
-          "pc:spdk_bdev_ftl=6.0",
-          "pc:spdk_bdev_gpt=6.0",
-          "pc:spdk_bdev_lvol=6.0",
-          "pc:spdk_bdev_malloc=6.0",
-          "pc:spdk_bdev_modules=1.0",
-          "pc:spdk_bdev_null=6.0",
-          "pc:spdk_bdev_nvme=7.1",
-          "pc:spdk_bdev_passthru=6.0",
-          "pc:spdk_bdev_raid=6.0",
-          "pc:spdk_bdev_split=6.0",
-          "pc:spdk_bdev_virtio=6.0",
-          "pc:spdk_bdev_zone_block=6.0",
-          "pc:spdk_blob=12.0",
-          "pc:spdk_blob_bdev=12.0",
-          "pc:spdk_blobfs=11.0",
-          "pc:spdk_blobfs_bdev=6.0",
-          "pc:spdk_conf=6.0",
-          "pc:spdk_dma=5.0",
-          "pc:spdk_dpdklibs=1.0",
-          "pc:spdk_env_dpdk=15.1",
-          "pc:spdk_env_dpdk_rpc=6.0",
-          "pc:spdk_event=14.0",
-          "pc:spdk_event_accel=6.0",
-          "pc:spdk_event_bdev=6.0",
-          "pc:spdk_event_fsdev=1.0",
-          "pc:spdk_event_iobuf=3.0",
-          "pc:spdk_event_iscsi=6.0",
-          "pc:spdk_event_keyring=1.0",
-          "pc:spdk_event_nbd=6.0",
-          "pc:spdk_event_nvmf=6.0",
-          "pc:spdk_event_scheduler=4.0",
-          "pc:spdk_event_scsi=6.0",
-          "pc:spdk_event_sock=5.0",
-          "pc:spdk_event_vhost_blk=3.0",
-          "pc:spdk_event_vhost_scsi=3.0",
-          "pc:spdk_event_vmd=6.0",
-          "pc:spdk_fsdev=2.0",
-          "pc:spdk_fsdev_aio=1.0",
-          "pc:spdk_ftl=9.0",
-          "pc:spdk_fuse_dispatcher=1.0",
-          "pc:spdk_init=6.0",
-          "pc:spdk_ioat=7.0",
-          "pc:spdk_iscsi=8.0",
-          "pc:spdk_json=6.1",
-          "pc:spdk_jsonrpc=6.0",
-          "pc:spdk_keyring=2.0",
-          "pc:spdk_keyring_file=2.0",
-          "pc:spdk_keyring_modules=1.0",
-          "pc:spdk_log=7.1",
-          "pc:spdk_lvol=11.0",
-          "pc:spdk_nbd=7.0",
-          "pc:spdk_notify=6.0",
-          "pc:spdk_nvme=15.0",
-          "pc:spdk_nvmf=20.0",
-          "pc:spdk_rpc=7.0",
-          "pc:spdk_scheduler_dpdk_governor=4.0",
-          "pc:spdk_scheduler_dynamic=4.0",
-          "pc:spdk_scheduler_gscheduler=4.0",
-          "pc:spdk_scheduler_modules=1.0",
-          "pc:spdk_scsi=9.0",
-          "pc:spdk_sock=11.0",
-          "pc:spdk_sock_modules=1.0",
-          "pc:spdk_sock_posix=6.0",
-          "pc:spdk_syslibs=1.0",
-          "pc:spdk_thread=11.0",
-          "pc:spdk_trace=11.0",
-          "pc:spdk_trace_parser=6.0",
-          "pc:spdk_ut=2.0",
-          "pc:spdk_ut_mock=6.0",
-          "pc:spdk_util=10.1",
-          "pc:spdk_vfio_user=5.0",
-          "pc:spdk_vhost=8.0",
-          "pc:spdk_virtio=7.0",
-          "pc:spdk_vmd=6.0"
-        ],
-        "conflicts": [
-          "824cc4603c3cda863612134375bcf0ce3c9d6026"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "093349357d896e0f387a",
-      "name": "qt6-qtwayland",
-      "version": "6.11.1-r0",
-      "architecture": "amd64",
-      "summary": "Provides APIs for Wayland",
-      "description": "Provides APIs for Wayland",
-      "homepage": "https://qt.io/",
-      "license": "LGPL-2.1-only AND LGPL-3.0-only AND GPL-3.0-only AND Qt-GPL-exception-1.0",
-      "maintainer": "Bart Ribbers <bribbers@disroot.org>",
-      "sourcePackage": "qt6-qtwayland",
-      "repository": "official",
-      "installedSize": 3389471,
-      "downloadSize": 872377,
-      "dependencies": {
-        "requires": [
-          "so:libEGL.so.1",
-          "so:libGL.so.1",
-          "so:libQt6Core.so.6",
-          "so:libQt6DBus.so.6",
-          "so:libQt6Gui.so.6",
-          "so:libQt6OpenGL.so.6",
-          "so:libQt6Qml.so.6",
-          "so:libQt6Quick.so.6",
-          "so:libQt6Svg.so.6",
-          "so:libQt6WaylandClient.so.6",
-          "so:libc.musl-x86_64.so.1",
-          "so:libstdc++.so.6",
-          "so:libwayland-client.so.0",
-          "so:libwayland-server.so.0",
-          "so:libxkbcommon.so.0"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "so:libQt6WaylandCompositor.so.6=6.11.1",
-          "so:libQt6WaylandCompositorIviapplication.so.6=6.11.1",
-          "so:libQt6WaylandCompositorPresentationTime.so.6=6.11.1",
-          "so:libQt6WaylandCompositorWLShell.so.6=6.11.1",
-          "so:libQt6WaylandCompositorXdgShell.so.6=6.11.1",
-          "so:libQt6WaylandEglCompositorHwIntegration.so.6=6.11.1"
-        ],
-        "conflicts": [
-          "6a90a193c394ac5e57468bbf61e7176aa894927e"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0934e78cb295eb3b1d6d",
-      "name": "elogind-lang",
-      "version": "255.24-r0",
-      "architecture": "amd64",
-      "summary": "Languages for package elogind",
-      "description": "Languages for package elogind",
-      "homepage": "https://github.com/elogind/elogind",
-      "license": "GPL-2.0-or-later LGPL-2.1-or-later",
-      "maintainer": "team/alpine-desktop <pabloyoyoista@postmarketos.org>",
-      "sourcePackage": "elogind",
-      "repository": "official",
-      "installedSize": 426826,
-      "downloadSize": 60906,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "f7e4c2c1ed47d57461b9cb50cd11cc2bc8168ad3"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09372ec909fd60b71690",
-      "name": "proftpd-mod_ctrls_admin",
-      "version": "1.3.9c-r0",
-      "architecture": "amd64",
-      "summary": "ProFTPd module: mod_ctrls_admin",
-      "description": "ProFTPd module: mod_ctrls_admin",
-      "homepage": "https://github.com/proftpd/proftpd",
-      "license": "GPL-2.0-or-later",
-      "maintainer": "Simon Frankenberger <simon-alpine@fraho.eu>",
-      "sourcePackage": "proftpd",
-      "repository": "official",
-      "installedSize": 31025,
-      "downloadSize": 12438,
-      "dependencies": {
-        "requires": [
-          "proftpd",
+          "so:libarchive.so.13",
           "so:libc.musl-x86_64.so.1"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [],
+        "provides": [
+          "cmd:genext2fs=1.6.2-r0"
+        ],
         "conflicts": [
-          "1a993d84fe4fbef50c086c9529c96031ddd45056"
+          "afa1176eccaf003419f18c4699aef81d32bfc25c"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0938ee8425872b00e686",
-      "name": "busybox-doc",
-      "version": "1.37.0-r31",
+      "id": "092b4fa97a2b9e6e5ef6",
+      "name": "minidlna-doc",
+      "version": "1.3.3-r3",
       "architecture": "amd64",
-      "summary": "Size optimized toolbox of many common UNIX utilities (documentation)",
-      "description": "Size optimized toolbox of many common UNIX utilities (documentation)",
-      "homepage": "https://busybox.net/",
-      "license": "GPL-2.0-only",
-      "maintainer": "Sören Tempel <soeren+alpine@soeren-tempel.net>",
-      "sourcePackage": "busybox",
+      "summary": "DLNA/UPnP-AV compliant media server (documentation)",
+      "description": "DLNA/UPnP-AV compliant media server (documentation)",
+      "homepage": "https://sourceforge.net/projects/minidlna/",
+      "license": "GPL-2.0-or-later AND BSD-3-Clause",
+      "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
+      "sourcePackage": "minidlna",
       "repository": "official",
-      "installedSize": 47050,
-      "downloadSize": 46564,
+      "installedSize": 3554,
+      "downloadSize": 5484,
       "dependencies": {
         "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "c3ef5d10e6ef6528852c51f0564963e2f8c1be19"
+          "a09825449dc82baee0073965af1703e826977b8c"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0939c44ff72a74a1acd1",
-      "name": "ode",
-      "version": "0.16.6-r0",
+      "id": "092df10ba5835b3d197c",
+      "name": "mate-screensaver-dev",
+      "version": "1.28.0-r0",
       "architecture": "amd64",
-      "summary": "A free, industrial quality library for simulating rigid body dynamics",
-      "description": "A free, industrial quality library for simulating rigid body dynamics",
-      "homepage": "https://ode.org/",
-      "license": "LGPL-2.1-or-later OR BSD-3-Clause",
-      "maintainer": "Hannes Braun <hannes@hannesbraun.net>",
-      "sourcePackage": "ode",
+      "summary": "Screen saver and locker for MATE (development files)",
+      "description": "Screen saver and locker for MATE (development files)",
+      "homepage": "https://github.com/mate-desktop/mate-screensaver",
+      "license": "GPL-2.0-or-later",
+      "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
+      "sourcePackage": "mate-screensaver",
       "repository": "official",
-      "installedSize": 2342511,
-      "downloadSize": 585234,
+      "installedSize": 402,
+      "downloadSize": 1819,
       "dependencies": {
         "requires": [
           "pkgconfig"
@@ -872,89 +733,84 @@
         "recommends": [],
         "suggests": [],
         "provides": [
-          "cmd:ode-config=0.16.6-r0",
-          "pc:ode=0.16.6"
+          "pc:mate-screensaver=1.28.0"
         ],
         "conflicts": [
-          "edc20dc9d28a98120dd5fdde468fc25498a23f93"
+          "c0aa7bd54b5a7a0172ddd59b8a5f1baef266aee5"
         ],
         "replaces": []
       }
     },
     {
-      "id": "093b66df4e21eb71d6fe",
-      "name": "bareos-webui-apache2",
-      "version": "25.0.3-r0",
+      "id": "092e78017eb58d25f631",
+      "name": "jruby-libs",
+      "version": "9.3.15.0-r0",
       "architecture": "amd64",
-      "summary": "Bareos - Backup Archiving REcovery Open Sourced",
-      "description": "Bareos - Backup Archiving REcovery Open Sourced",
-      "homepage": "https://www.bareos.com/",
-      "license": "AGPL-3.0-only",
-      "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
-      "sourcePackage": "bareos",
+      "summary": "JRuby's standard libraries",
+      "description": "JRuby's standard libraries",
+      "homepage": "https://www.jruby.org/",
+      "license": "EPL-2.0 OR GPL-2.0-or-later OR LGPL-2.1-or-later AND Ruby",
+      "maintainer": "Jakub Jirutka <jakub@jirutka.cz>",
+      "sourcePackage": "jruby",
       "repository": "official",
-      "installedSize": 2012,
-      "downloadSize": 2512,
+      "installedSize": 20886828,
+      "downloadSize": 13821265,
       "dependencies": {
-        "requires": [
-          "apache-mod-fcgid",
-          "apache2",
-          "bareos-webui",
-          "php83-fpm"
-        ],
+        "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "6c7ddc7f58e193b7af11858d4e7cfbcd77b01c06"
+          "c5d44595f0b6663e001ef7515610542ac508e131"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0942336926523c8ee26d",
-      "name": "libseccomp",
-      "version": "2.6.0-r2",
+      "id": "092f0900517d8ab1d35e",
+      "name": "aws-sdk-cpp-batch",
+      "version": "1.11.700-r1",
       "architecture": "amd64",
-      "summary": "interface to the Linux Kernel's syscall filtering mechanism",
-      "description": "interface to the Linux Kernel's syscall filtering mechanism",
-      "homepage": "https://github.com/seccomp/libseccomp",
-      "license": "LGPL-2.1-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "libseccomp",
+      "summary": "Amazon Web Services SDK for C++ (batch)",
+      "description": "Amazon Web Services SDK for C++ (batch)",
+      "homepage": "https://github.com/aws/aws-sdk-cpp",
+      "license": "Apache-2.0",
+      "maintainer": "Holger Jaekel <holger.jaekel@gmx.de>",
+      "sourcePackage": "aws-sdk-cpp",
       "repository": "official",
-      "installedSize": 167584,
-      "downloadSize": 50295,
+      "installedSize": 689856,
+      "downloadSize": 203759,
       "dependencies": {
         "requires": [
-          "so:libc.musl-x86_64.so.1"
+          "so:libaws-cpp-sdk-core.so.1.11",
+          "so:libc.musl-x86_64.so.1",
+          "so:libstdc++.so.6"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "cmd:scmp_sys_resolver=2.6.0-r2",
-          "so:libseccomp.so.2=2.6.0"
+          "so:libaws-cpp-sdk-batch.so.1.11=1.11.700"
         ],
         "conflicts": [
-          "5c5f3eb6cfaaa7596d548e4de2ec8dbe95d5b206"
+          "478a855643f97b70072fd107847c738f115c68a9"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0944dd83f26180ed7456",
-      "name": "py3-matplotlib-venn-pyc",
-      "version": "1.1.2-r1",
+      "id": "09305d78d30c121a2d99",
+      "name": "py3-ghp-import-pyc",
+      "version": "2.1.0-r5",
       "architecture": "amd64",
-      "summary": "Precompiled Python bytecode for py3-matplotlib-venn",
-      "description": "Precompiled Python bytecode for py3-matplotlib-venn",
-      "homepage": "https://github.com/konstantint/matplotlib-venn",
-      "license": "MIT",
-      "maintainer": "Iztok Fister, Jr. <iztok@iztok-jr-fister.eu>",
-      "sourcePackage": "py3-matplotlib-venn",
+      "summary": "Precompiled Python bytecode for py3-ghp-import",
+      "description": "Precompiled Python bytecode for py3-ghp-import",
+      "homepage": "https://github.com/c-w/ghp-import",
+      "license": "Apache-2.0",
+      "maintainer": "David Demelier <markand@malikania.fr>",
+      "sourcePackage": "py3-ghp-import",
       "repository": "official",
-      "installedSize": 172748,
-      "downloadSize": 61696,
+      "installedSize": 15697,
+      "downloadSize": 9074,
       "dependencies": {
         "requires": [
           "python3~3.14"
@@ -963,399 +819,689 @@
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "f4df4c97fcc3f1bfd8f350c541206aa3b869b6a5"
+          "4f62068837e98ccd86831274902e8174a3a29d39"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0946525cb592f8f20ea5",
-      "name": "perl-devel-overloadinfo-doc",
-      "version": "0.008-r0",
+      "id": "09311bcb42a3779bcad6",
+      "name": "shapelib-tools",
+      "version": "1.6.2-r0",
       "architecture": "amd64",
-      "summary": "introspect overloaded operators (documentation)",
-      "description": "introspect overloaded operators (documentation)",
-      "homepage": "https://metacpan.org/release/Devel-OverloadInfo/",
+      "summary": "C library for reading, writing and updating ESRI Shapefiles, and the associated attribute file (utilities)",
+      "description": "C library for reading, writing and updating ESRI Shapefiles, and the associated attribute file (utilities)",
+      "homepage": "http://shapelib.maptools.org/",
+      "license": "LGPL-2.0-only OR MIT",
+      "maintainer": "Wen Heping <wenhepingalpine@sohu.com>",
+      "sourcePackage": "shapelib",
+      "repository": "official",
+      "installedSize": 322200,
+      "downloadSize": 56417,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1",
+          "so:libshp.so.4",
+          "so:libstdc++.so.6"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:Shape_PointInPoly=1.6.2-r0",
+          "cmd:csv2shp=1.6.2-r0",
+          "cmd:dbfadd=1.6.2-r0",
+          "cmd:dbfcat=1.6.2-r0",
+          "cmd:dbfcreate=1.6.2-r0",
+          "cmd:dbfdump=1.6.2-r0",
+          "cmd:dbfinfo=1.6.2-r0",
+          "cmd:shpadd=1.6.2-r0",
+          "cmd:shpcat=1.6.2-r0",
+          "cmd:shpcentrd=1.6.2-r0",
+          "cmd:shpcreate=1.6.2-r0",
+          "cmd:shpdata=1.6.2-r0",
+          "cmd:shpdump=1.6.2-r0",
+          "cmd:shpdxf=1.6.2-r0",
+          "cmd:shpfix=1.6.2-r0",
+          "cmd:shpinfo=1.6.2-r0",
+          "cmd:shprewind=1.6.2-r0",
+          "cmd:shpsort=1.6.2-r0",
+          "cmd:shptreedump=1.6.2-r0",
+          "cmd:shputils=1.6.2-r0",
+          "cmd:shpwkb=1.6.2-r0"
+        ],
+        "conflicts": [
+          "91848610340dafaf55da9f99b4d12f9e03c72e2b"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "093190d4fec834ae4543",
+      "name": "lua5.4-dbi-postgresql",
+      "version": "0.7.5-r0",
+      "architecture": "amd64",
+      "summary": "database interface library for Lua 5.4 and postgresql",
+      "description": "database interface library for Lua 5.4 and postgresql",
+      "homepage": "https://github.com/mwild1/luadbi",
+      "license": "MIT",
+      "maintainer": "Leonardo Arena <rnalrd@alpinelinux.org>",
+      "sourcePackage": "lua-dbi",
+      "repository": "official",
+      "installedSize": 24103,
+      "downloadSize": 9482,
+      "dependencies": {
+        "requires": [
+          "lua5.4",
+          "so:libc.musl-x86_64.so.1",
+          "so:libpq.so.5"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "1e7047704616b94ab76bce183749e8db22d59f4f"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09333b605252447f0f7c",
+      "name": "containers-common-doc",
+      "version": "0.64.2-r0",
+      "architecture": "amd64",
+      "summary": "Man pages for container tools",
+      "description": "Man pages for container tools",
+      "homepage": "https://github.com/containers/common",
+      "license": "Apache-2.0",
+      "maintainer": "Michał Polański <michal@polanski.me>",
+      "sourcePackage": "containers-common",
+      "repository": "official",
+      "installedSize": 59267,
+      "downloadSize": 62483,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "2b9df01bba02bb91b4f30c349de313ed271236af"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09337ae1d5fb875125f9",
+      "name": "verco",
+      "version": "6.12.0-r1",
+      "architecture": "amd64",
+      "summary": "Simple Git/Mercurial/PlasticSCM tui client based on keyboard shortcuts",
+      "description": "Simple Git/Mercurial/PlasticSCM tui client based on keyboard shortcuts",
+      "homepage": "https://git.sr.ht/~lessa/verco",
+      "license": "GPL-3.0-or-later",
+      "maintainer": "omni <omni+alpine@hack.org>",
+      "sourcePackage": "verco",
+      "repository": "official",
+      "installedSize": 537472,
+      "downloadSize": 251216,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1",
+          "so:libgcc_s.so.1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:verco=6.12.0-r1"
+        ],
+        "conflicts": [
+          "61ae423541162b37098c30f3fcb16d1f69002426"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "093464e96a0e6cdb16ab",
+      "name": "zix-libs",
+      "version": "0.8.0-r0",
+      "architecture": "amd64",
+      "summary": "lightweight C99 portability and data structure library (libraries)",
+      "description": "lightweight C99 portability and data structure library (libraries)",
+      "homepage": "http://drobilla.net/category/zix",
+      "license": "ISC",
+      "maintainer": "David Demelier <markand@malikania.fr>",
+      "sourcePackage": "zix",
+      "repository": "official",
+      "installedSize": 46856,
+      "downloadSize": 21037,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "so:libzix-0.so.0=0.8.0"
+        ],
+        "conflicts": [
+          "50bcdef493280b1fcd5106d99ee81fd6b72fa8e2"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "093866c51e1cec245188",
+      "name": "kea-dev",
+      "version": "3.0.3-r0",
+      "architecture": "amd64",
+      "summary": "DHCPv4 and DHCPv6 server from ISC (development files)",
+      "description": "DHCPv4 and DHCPv6 server from ISC (development files)",
+      "homepage": "https://kea.isc.org/",
+      "license": "MPL-2.0",
+      "maintainer": "Jakub Jirutka <jakub@jirutka.cz>",
+      "sourcePackage": "kea",
+      "repository": "official",
+      "installedSize": 4259026,
+      "downloadSize": 895918,
+      "dependencies": {
+        "requires": [
+          "boost-dev",
+          "kea-common=3.0.3-r0",
+          "kea-dhcp-ddns=3.0.3-r0",
+          "kea-hook-lease-query=3.0.3-r0",
+          "kea-hook-mysql=3.0.3-r0",
+          "kea-hook-pgsql=3.0.3-r0",
+          "log4cplus-dev",
+          "pc:libpq",
+          "pc:log4cplus",
+          "pc:mariadb",
+          "pc:openssl",
+          "pkgconfig",
+          "so:libc.musl-x86_64.so.1",
+          "so:libgcc_s.so.1",
+          "so:libkea-exceptions.so.45",
+          "so:libkea-log.so.75",
+          "so:libkea-util.so.102",
+          "so:libstdc++.so.6"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:kea-msg-compiler=3.0.3-r0",
+          "pc:kea=3.0.3"
+        ],
+        "conflicts": [
+          "7ee1c142d7d688512e1af517f3b6453cbeaed829"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0939d7e2e3f395cae836",
+      "name": "nerdlog",
+      "version": "1.10.0-r12",
+      "architecture": "amd64",
+      "summary": "A fast, remote-first, multi-host log TUI, timeline histogram & no central server",
+      "description": "A fast, remote-first, multi-host log TUI, timeline histogram & no central server",
+      "homepage": "https://github.com/dimonomid/nerdlog",
+      "license": "BSD-2-Clause",
+      "maintainer": "omni <omni+alpine@hack.org>",
+      "sourcePackage": "nerdlog",
+      "repository": "official",
+      "installedSize": 8107176,
+      "downloadSize": 3068025,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:nerdlog=1.10.0-r12"
+        ],
+        "conflicts": [
+          "c02e0c037b032adc0301e2027ad0f3a1c0b98a7a"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "093ad6505254b0b3cd7d",
+      "name": "lld20",
+      "version": "20.1.8-r1",
+      "architecture": "amd64",
+      "summary": "The LLVM Linker",
+      "description": "The LLVM Linker",
+      "homepage": "https://llvm.org/",
+      "license": "Apache-2.0",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "lld20",
+      "repository": "official",
+      "installedSize": 101480,
+      "downloadSize": 11521,
+      "dependencies": {
+        "requires": [
+          "so:libLLVM.so.20.1",
+          "so:libc.musl-x86_64.so.1",
+          "so:libgcc_s.so.1",
+          "so:liblldCOFF.so.20.1",
+          "so:liblldCommon.so.20.1",
+          "so:liblldELF.so.20.1",
+          "so:liblldMachO.so.20.1",
+          "so:liblldMinGW.so.20.1",
+          "so:liblldWasm.so.20.1",
+          "so:libscudo.so",
+          "so:libstdc++.so.6"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:ld.lld=20.1.8-r1",
+          "cmd:ld64.lld=20.1.8-r1",
+          "cmd:lld-link=20.1.8-r1",
+          "cmd:lld=20.1.8-r1",
+          "cmd:wasm-ld=20.1.8-r1"
+        ],
+        "conflicts": [
+          "f568a1a88293bb77119606df5d9bd27f1630406a"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "093b089509b8932a01b1",
+      "name": "gnome-bluetooth-doc",
+      "version": "47.2-r0",
+      "architecture": "amd64",
+      "summary": "The GNOME Bluetooth Subsystem (documentation)",
+      "description": "The GNOME Bluetooth Subsystem (documentation)",
+      "homepage": "https://gitlab.gnome.org/GNOME/gnome-bluetooth",
+      "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
+      "maintainer": "team/gnome <achill@achill.org>",
+      "sourcePackage": "gnome-bluetooth",
+      "repository": "official",
+      "installedSize": 779,
+      "downloadSize": 2514,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "aa5f85d16ddde8bb77f70c6bbd6571c97580fcf2"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "093d497c317efd3d1e5b",
+      "name": "py3-minimock-pyc",
+      "version": "1.3.0-r1",
+      "architecture": "amd64",
+      "summary": "Precompiled Python bytecode for py3-minimock",
+      "description": "Precompiled Python bytecode for py3-minimock",
+      "homepage": "https://pypi.org/project/MiniMock/",
+      "license": "MIT",
+      "maintainer": "Oliver Smith <ollieparanoid@postmarketos.org>",
+      "sourcePackage": "py3-minimock",
+      "repository": "official",
+      "installedSize": 24556,
+      "downloadSize": 11971,
+      "dependencies": {
+        "requires": [
+          "python3~3.14"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "9728f1e2d8f4021427d51f83daaa2b169a7246e4"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0941a504e2191b3764ac",
+      "name": "perl-module-loader",
+      "version": "0.04-r1",
+      "architecture": "amd64",
+      "summary": "finding and loading modules in a given namespace",
+      "description": "finding and loading modules in a given namespace",
+      "homepage": "https://metacpan.org/release/Module-Loader/",
       "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
       "maintainer": "Timothy Legge <timlegge@gmail.com>",
-      "sourcePackage": "perl-devel-overloadinfo",
+      "sourcePackage": "perl-module-loader",
       "repository": "official",
-      "installedSize": 2001,
-      "downloadSize": 3845,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "af0a63f5fff23fdfd924df937122d2a03eeca7c4"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "094d9bca79621a45cfee",
-      "name": "deluge-gtk",
-      "version": "2.2.0-r3",
-      "architecture": "amd64",
-      "summary": "lightweight, Free Software, cross-platform BitTorrent client (gtk ui)",
-      "description": "lightweight, Free Software, cross-platform BitTorrent client (gtk ui)",
-      "homepage": "https://deluge-torrent.org/",
-      "license": "GPL-3.0-or-later",
-      "maintainer": "Achill Gilgenast <achill@achill.org>",
-      "sourcePackage": "deluge",
-      "repository": "official",
-      "installedSize": 2275611,
-      "downloadSize": 495223,
-      "dependencies": {
-        "requires": [
-          "deluge=2.2.0-r3",
-          "gtk+3.0",
-          "librsvg",
-          "py3-cairo",
-          "py3-gobject3",
-          "python3~3.14",
-          "xdg-utils"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:deluge-gtk=2.2.0-r3"
-        ],
-        "conflicts": [
-          "16632fc97b4e61e47a1ccf79bd6afac06f264b31"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0950b85e076dac62c142",
-      "name": "gptfdisk-doc",
-      "version": "1.0.10-r1",
-      "architecture": "amd64",
-      "summary": "Text-mode partitioning tool that works on Globally Unique Identifier (GUID) Partition Table (GPT) disks (documentation)",
-      "description": "Text-mode partitioning tool that works on Globally Unique Identifier (GUID) Partition Table (GPT) disks (documentation)",
-      "homepage": "https://www.rodsbooks.com/gdisk",
-      "license": "GPL-2.0-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "gptfdisk",
-      "repository": "official",
-      "installedSize": 32318,
-      "downloadSize": 34473,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "8abdd4e0df7233a8ce5956cac6b5e8bd55ae52c6"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0950eaa612bed790ee03",
-      "name": "py3-pytest-order",
-      "version": "1.4.0-r0",
-      "architecture": "amd64",
-      "summary": "pytest plugin that allows to customize the test execution order",
-      "description": "pytest plugin that allows to customize the test execution order",
-      "homepage": "https://github.com/pytest-dev/pytest-order",
-      "license": "MIT",
-      "maintainer": "Hannes Braun <hannes@hannesbraun.net>",
-      "sourcePackage": "py3-pytest-order",
-      "repository": "official",
-      "installedSize": 48602,
-      "downloadSize": 14976,
-      "dependencies": {
-        "requires": [
-          "py3-pytest",
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "py3.14:pytest_order=1.4.0-r0"
-        ],
-        "conflicts": [
-          "6c92c59c80e5a00432065553ee62311840458abd"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09579e91253ffc20e009",
-      "name": "perl-xml-libxslt-doc",
-      "version": "2.003000-r2",
-      "architecture": "amd64",
-      "summary": "Interface to GNOME libxslt library (documentation)",
-      "description": "Interface to GNOME libxslt library (documentation)",
-      "homepage": "https://metacpan.org/release/XML-LibXSLT/",
-      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
-      "sourcePackage": "perl-xml-libxslt",
-      "repository": "official",
-      "installedSize": 9582,
-      "downloadSize": 11477,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "a9e2a2dc46f377eb25884f7fea9834492de7f518"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "095aa785352641d8a619",
-      "name": "nim-gdb",
-      "version": "2.2.0-r0",
-      "architecture": "amd64",
-      "summary": "A systems and applications programming language (gdb printers)",
-      "description": "A systems and applications programming language (gdb printers)",
-      "homepage": "https://nim-lang.org/",
-      "license": "MIT",
-      "maintainer": "Jakub Jirutka <jakub@jirutka.cz>",
-      "sourcePackage": "nim",
-      "repository": "official",
-      "installedSize": 67732,
-      "downloadSize": 15003,
-      "dependencies": {
-        "requires": [
-          "gdb",
-          "nim"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:nim-gdb=2.2.0-r0"
-        ],
-        "conflicts": [
-          "730f2f5bdc97be98b2beee33f55134c622e6189c"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "095f03d0f05c65f90ffc",
-      "name": "rtkit-openrc",
-      "version": "0.14-r0",
-      "architecture": "amd64",
-      "summary": "D-Bus system service that enables real time scheduling on request (OpenRC init scripts)",
-      "description": "D-Bus system service that enables real time scheduling on request (OpenRC init scripts)",
-      "homepage": "https://gitlab.freedesktop.org/pipewire/rtkit",
-      "license": "GPL-3.0-only AND MIT",
-      "maintainer": "Marian Buschsieweke <marian.buschsieweke@posteo.net>",
-      "sourcePackage": "rtkit",
-      "repository": "official",
-      "installedSize": 317,
-      "downloadSize": 1940,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "489d7c2fb6131db5800b5d1d177ad308e367b69d"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0960862ff304b78e63a3",
-      "name": "easyrpg-player-bash-completion",
-      "version": "0.8.1.1-r0",
-      "architecture": "amd64",
-      "summary": "Bash completions for easyrpg-player",
-      "description": "Bash completions for easyrpg-player",
-      "homepage": "https://easyrpg.org/player/",
-      "license": "MIT",
-      "maintainer": "knuxify <knuxify@gmail.com>",
-      "sourcePackage": "easyrpg-player",
-      "repository": "official",
-      "installedSize": 2748,
-      "downloadSize": 2694,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "37a18357ffc177014ad12ae27b3a9db553862ff5"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09608aa64a264406d74c",
-      "name": "py3-pydbus-pyc",
-      "version": "0.6.0-r7",
-      "architecture": "amd64",
-      "summary": "Precompiled Python bytecode for py3-pydbus",
-      "description": "Precompiled Python bytecode for py3-pydbus",
-      "homepage": "https://github.com/LEW21/pydbus",
-      "license": "LGPL-2.1-or-later",
-      "maintainer": "Luca Weiss <luca@lucaweiss.eu>",
-      "sourcePackage": "py3-pydbus",
-      "repository": "official",
-      "installedSize": 68701,
-      "downloadSize": 30551,
-      "dependencies": {
-        "requires": [
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "37ae0bb043bd454dd4cbd995cc0d74a4e56f7e58"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0961b034428ef2a4d128",
-      "name": "py3-aiohttp-oauthlib",
-      "version": "0.1.0-r1",
-      "architecture": "amd64",
-      "summary": "oauthlib for aiohttp clients",
-      "description": "oauthlib for aiohttp clients",
-      "homepage": "https://git.sr.ht/~whynothugo/aiohttp-oauthlib",
-      "license": "ISC",
-      "maintainer": "Willow Barraco <contact@willowbarraco.fr>",
-      "sourcePackage": "py3-aiohttp-oauthlib",
-      "repository": "official",
-      "installedSize": 25204,
-      "downloadSize": 9102,
-      "dependencies": {
-        "requires": [
-          "py3-aiohttp",
-          "py3-oauthlib",
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "py3.14:aiohttp_oauthlib=0.1.0-r1"
-        ],
-        "conflicts": [
-          "481edb23205c13384693a18b2c6d5cbc89216bb3"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "096467b1a9c344874c2a",
-      "name": "gtksourceview4-lang",
-      "version": "4.8.4-r4",
-      "architecture": "amd64",
-      "summary": "Languages for package gtksourceview4",
-      "description": "Languages for package gtksourceview4",
-      "homepage": "https://gitlab.gnome.org/GNOME/gtksourceview/-/tree/gtksourceview-4-8",
-      "license": "GPL-2.0-or-later",
-      "sourcePackage": "gtksourceview4",
-      "repository": "official",
-      "installedSize": 1593957,
-      "downloadSize": 563959,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "c97799aa548f601eb43cfd276ba52f1a9da85d48"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0965901183f522bb4cfa",
-      "name": "ffmpeg6-dbg",
-      "version": "6.1.4-r2",
-      "architecture": "amd64",
-      "summary": "Complete and free Internet live audio and video broadcasting solution for Linux/Unix (debug symbols)",
-      "description": "Complete and free Internet live audio and video broadcasting solution for Linux/Unix (debug symbols)",
-      "homepage": "https://ffmpeg.org/",
-      "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
-      "maintainer": "Achill Gilgenast <achill@achill.org>",
-      "sourcePackage": "ffmpeg6",
-      "repository": "official",
-      "installedSize": 98425048,
-      "downloadSize": 35754837,
-      "dependencies": {
-        "requires": [
-          "!ffmpeg6-libavcodec<6.1.4-r2",
-          "!ffmpeg6-libavcodec>6.1.4-r2",
-          "!ffmpeg6-libavdevice<6.1.4-r2",
-          "!ffmpeg6-libavdevice>6.1.4-r2",
-          "!ffmpeg6-libavfilter<6.1.4-r2",
-          "!ffmpeg6-libavfilter>6.1.4-r2",
-          "!ffmpeg6-libavformat<6.1.4-r2",
-          "!ffmpeg6-libavformat>6.1.4-r2",
-          "!ffmpeg6-libavutil<6.1.4-r2",
-          "!ffmpeg6-libavutil>6.1.4-r2",
-          "!ffmpeg6-libpostproc<6.1.4-r2",
-          "!ffmpeg6-libpostproc>6.1.4-r2",
-          "!ffmpeg6-libswresample<6.1.4-r2",
-          "!ffmpeg6-libswresample>6.1.4-r2",
-          "!ffmpeg6-libswscale<6.1.4-r2",
-          "!ffmpeg6-libswscale>6.1.4-r2",
-          "!ffmpeg6<6.1.4-r2",
-          "!ffmpeg6>6.1.4-r2"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "58165463f1a19bd4c0bbe70e461460a4981822ae"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "096597634ccc0d529c69",
-      "name": "perl-future-mojo",
-      "version": "1.003-r1",
-      "architecture": "amd64",
-      "summary": "Use Future with Mojo::IOLoop",
-      "description": "Use Future with Mojo::IOLoop",
-      "homepage": "https://metacpan.org/release/Future-Mojo/",
-      "license": "Artistic-2.0",
-      "sourcePackage": "perl-future-mojo",
-      "repository": "official",
-      "installedSize": 6874,
-      "downloadSize": 4175,
+      "installedSize": 6020,
+      "downloadSize": 4462,
       "dependencies": {
         "requires": [
           "perl",
-          "perl-future",
-          "perl-mojolicious",
-          "perl-role-tiny"
+          "perl-module-runtime",
+          "perl-path-iterator-rule"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "a9e2a2dc46f377eb25884f7fea9834492de7f518"
+          "efc6ae3b4703310ac78d557c59f1cfc0bb30c0e0"
         ],
         "replaces": []
       }
     },
     {
-      "id": "096ac50e5c4142e34aa9",
-      "name": "plasma-sdk-zsh-completion",
-      "version": "6.6.6-r0",
+      "id": "094215608d94a644601a",
+      "name": "lua-pty",
+      "version": "1.2.2-r3",
       "architecture": "amd64",
-      "summary": "Zsh completions for plasma-sdk",
-      "description": "Zsh completions for plasma-sdk",
-      "homepage": "https://kde.org/plasma-desktop/",
+      "summary": "Lua module to control other programs via PTYs",
+      "description": "Lua module to control other programs via PTYs",
+      "homepage": "https://www.tset.de/lpty/",
+      "license": "MIT",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "lua-pty",
+      "repository": "official",
+      "installedSize": 0,
+      "downloadSize": 1283,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "155a2831e67d8a5d2d119963430e960c8b8e9a97"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09455d8de85513961004",
+      "name": "liblksctp",
+      "version": "1.0.19-r5",
+      "architecture": "amd64",
+      "summary": "User-space access to Linux Kernel SCTP (libraries)",
+      "description": "User-space access to Linux Kernel SCTP (libraries)",
+      "homepage": "https://lksctp.sourceforge.net/",
+      "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "lksctp-tools",
+      "repository": "official",
+      "installedSize": 28918,
+      "downloadSize": 7905,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "so:libsctp.so.1=1.0.19"
+        ],
+        "conflicts": [
+          "1001ece743e48fd38683f838fd236e9655f07a16"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0946905d435a344b61cb",
+      "name": "nextcloud32-firstrunwizard",
+      "version": "32.0.15-r0",
+      "architecture": "amd64",
+      "summary": "Nextcloud First run wizard app",
+      "description": "Nextcloud First run wizard app",
+      "homepage": "https://nextcloud.com/",
+      "license": "AGPL-3.0-only",
+      "maintainer": "Leonardo Arena <rnalrd@alpinelinux.org>",
+      "sourcePackage": "nextcloud32",
+      "repository": "official",
+      "installedSize": 10439219,
+      "downloadSize": 3898852,
+      "dependencies": {
+        "requires": [
+          "nextcloud32"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "7805e4fb29efc937492a3173e55dc72ecd9fcdaf"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "094ccbd8da03371cf7e1",
+      "name": "gnome-online-accounts-dbg",
+      "version": "3.58.1-r0",
+      "architecture": "amd64",
+      "summary": "Single sign-on framework for GNOME (debug symbols)",
+      "description": "Single sign-on framework for GNOME (debug symbols)",
+      "homepage": "https://gitlab.gnome.org/GNOME/gnome-online-accounts/-/wikis/home",
+      "license": "GPL-2.0-or-later",
+      "maintainer": "team/gnome <ncopa@alpinelinux.org>",
+      "sourcePackage": "gnome-online-accounts",
+      "repository": "official",
+      "installedSize": 2465136,
+      "downloadSize": 961394,
+      "dependencies": {
+        "requires": [
+          "!gnome-online-accounts<3.58.1-r0",
+          "!gnome-online-accounts>3.58.1-r0"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "23c0b6111451a76df7f12b9115e3ef80ced7d7e8"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "095116d2d206f77d56f9",
+      "name": "yt-dlp-ejs-rt-quickjs",
+      "version": "0.8.0-r1",
+      "architecture": "amd64",
+      "summary": "External JavaScript for yt-dlp",
+      "description": "External JavaScript for yt-dlp",
+      "homepage": "https://github.com/yt-dlp/ejs",
+      "license": "Unlicense",
+      "maintainer": "lauren n. liberda <lauren@selfisekai.rocks>",
+      "sourcePackage": "yt-dlp-ejs",
+      "repository": "official",
+      "installedSize": 1,
+      "downloadSize": 1613,
+      "dependencies": {
+        "requires": [
+          "/bin/sh",
+          "quickjs"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "yt-dlp-ejs-rt=0.8.0-r1"
+        ],
+        "conflicts": [
+          "266e1a8b4edc9788596516c9b2d4c48a4cddd6f5"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "095285e968589d7e2078",
+      "name": "papers-dev",
+      "version": "50.2-r0",
+      "architecture": "amd64",
+      "summary": "simple document viewer for GNOME desktop (development files)",
+      "description": "simple document viewer for GNOME desktop (development files)",
+      "homepage": "https://apps.gnome.org/Papers/",
+      "license": "GPL-2.0-or-later",
+      "maintainer": "team/gnome <achill@achill.org>",
+      "sourcePackage": "papers",
+      "repository": "official",
+      "installedSize": 1010716,
+      "downloadSize": 92358,
+      "dependencies": {
+        "requires": [
+          "gobject-introspection-dev",
+          "gtk4.0-dev",
+          "libadwaita-dev",
+          "libspectre-dev",
+          "papers-libs=50.2-r0",
+          "pc:gio-2.0>=2.75.0",
+          "pc:gthread-2.0>=2.75.0",
+          "pc:gtk4>=4.17.1",
+          "pc:libadwaita-1>=1.8",
+          "pkgconfig",
+          "poppler-dev",
+          "tiff-dev"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "pc:papers-document-4.0=50.2",
+          "pc:papers-view-4.0=50.2"
+        ],
+        "conflicts": [
+          "218ffbe2478226425806b63ccae1dcb44b6a925b"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0952bebf07455515bea7",
+      "name": "mapplauncherd-dev",
+      "version": "4.2.16-r1",
+      "architecture": "amd64",
+      "summary": "A daemon that helps to launch applications faster (development files)",
+      "description": "A daemon that helps to launch applications faster (development files)",
+      "homepage": "https://github.com/sailfishos/mapplauncherd",
+      "license": "LGPL-2.1-only",
+      "maintainer": "Bart Ribbers <bribbers@disroot.org>",
+      "sourcePackage": "mapplauncherd",
+      "repository": "official",
+      "installedSize": 31998,
+      "downloadSize": 10191,
+      "dependencies": {
+        "requires": [
+          "dbus-dev",
+          "glib-dev",
+          "libcap-dev",
+          "mapplauncherd=4.2.16-r1",
+          "ninja",
+          "pkgconfig"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "pc:applauncherd=4.2.3"
+        ],
+        "conflicts": [
+          "3f66cede6b7e56b95bdbdf0cf94a4fc3367401a8"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0954aba7b1b1ccca15cb",
+      "name": "liblouis-dev",
+      "version": "3.38.0-r0",
+      "architecture": "amd64",
+      "summary": "Braille translator and back-translator (development files)",
+      "description": "Braille translator and back-translator (development files)",
+      "homepage": "https://liblouis.io/",
+      "license": "GPL-3.0-or-later",
+      "maintainer": "John Vogel <jvogel@stygian.me>",
+      "sourcePackage": "liblouis",
+      "repository": "official",
+      "installedSize": 15132,
+      "downloadSize": 6503,
+      "dependencies": {
+        "requires": [
+          "liblouis=3.38.0-r0",
+          "pkgconfig"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "pc:liblouis=3.38.0"
+        ],
+        "conflicts": [
+          "47ac5434e1efb450556e47d7cae2d7ae05e52438"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0965bbebcfda4a0b9ac9",
+      "name": "kdiagram-lang",
+      "version": "3.0.1-r0",
+      "architecture": "amd64",
+      "summary": "Languages for package kdiagram",
+      "description": "Languages for package kdiagram",
+      "homepage": "https://kontact.kde.org/",
       "license": "GPL-2.0-or-later",
       "maintainer": "team/kde <bribbers@disroot.org>",
-      "sourcePackage": "plasma-sdk",
+      "sourcePackage": "kdiagram",
       "repository": "official",
-      "installedSize": 3160,
-      "downloadSize": 3238,
+      "installedSize": 72946,
+      "downloadSize": 25071,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "44ce39a091100c59a3bd90df6c0312d302be3171"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0966478c3e4048a02120",
+      "name": "py3-parver",
+      "version": "0.5-r2",
+      "architecture": "amd64",
+      "summary": "Parse and manipulate PEP 440 version numbers",
+      "description": "Parse and manipulate PEP 440 version numbers",
+      "homepage": "https://github.com/RazerM/parver",
+      "license": "MIT",
+      "maintainer": "Michał Polański <michal@polanski.me>",
+      "sourcePackage": "py3-parver",
+      "repository": "official",
+      "installedSize": 55344,
+      "downloadSize": 15799,
+      "dependencies": {
+        "requires": [
+          "py3-arpeggio",
+          "py3-attrs",
+          "python3~3.14"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "py3.14:parver=0.5-r2"
+        ],
+        "conflicts": [
+          "d6eddc91229c73df138da7ee23e8794670da6f93"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09685b2ded44f194f9b1",
+      "name": "libplasma-doc",
+      "version": "6.6.6-r0",
+      "architecture": "amd64",
+      "summary": "Plasma library and runtime components based upon KDE Frameworks and Qt (documentation)",
+      "description": "Plasma library and runtime components based upon KDE Frameworks and Qt (documentation)",
+      "homepage": "https://community.kde.org/Frameworks",
+      "license": "LGPL-2.1-or-later AND GPL-2.0-or-later",
+      "maintainer": "team/kde <bribbers@disroot.org>",
+      "sourcePackage": "libplasma",
+      "repository": "official",
+      "installedSize": 539846,
+      "downloadSize": 297509,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -1368,75 +1514,67 @@
       }
     },
     {
-      "id": "096b1704b8cd1b4b05e7",
-      "name": "xf86-input-wacom-systemd",
-      "version": "1.2.4-r1",
+      "id": "0968ab55c6b2bb30172c",
+      "name": "zabbix-mysql",
+      "version": "7.4.12-r2",
       "architecture": "amd64",
-      "summary": "X.org Wacom tablet input driver (systemd files)",
-      "description": "X.org Wacom tablet input driver (systemd files)",
-      "homepage": "https://github.com/linuxwacom/xf86-input-wacom",
-      "license": "GPL-2.0-or-later",
-      "maintainer": "Bart Ribbers <bribbers@disroot.org>",
-      "sourcePackage": "xf86-input-wacom",
+      "summary": "Zabbix server with mysql database support",
+      "description": "Zabbix server with mysql database support",
+      "homepage": "https://www.zabbix.com/",
+      "license": "AGPL-3.0-only",
+      "maintainer": "Kevin Daudt <kdaudt@alpinelinux.org>",
+      "sourcePackage": "zabbix",
       "repository": "official",
-      "installedSize": 167,
-      "downloadSize": 1779,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "3fcc7e7518167f2b37006f3a4824161e47a57d4d"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "096cd26d7a52975bf5c3",
-      "name": "librist",
-      "version": "0.2.15-r0",
-      "architecture": "amd64",
-      "summary": "Reliable Internet Stream Transport (RIST)",
-      "description": "Reliable Internet Stream Transport (RIST)",
-      "homepage": "https://www.rist.tv/",
-      "license": "BSD-2-Clause",
-      "maintainer": "Kevin Wang <kevin@muxable.com>",
-      "sourcePackage": "librist",
-      "repository": "official",
-      "installedSize": 153392,
-      "downloadSize": 72240,
+      "installedSize": 9775744,
+      "downloadSize": 3443254,
       "dependencies": {
         "requires": [
+          "!zabbix-pgsql",
+          "!zabbix-sqlite",
+          "so:libOpenIPMI.so.0",
+          "so:libOpenIPMIposix.so.0",
           "so:libc.musl-x86_64.so.1",
-          "so:libcjson.so.1",
-          "so:libmbedcrypto.so.16"
+          "so:libcrypto.so.3",
+          "so:libcurl.so.4",
+          "so:libevent_core-2.1.so.7",
+          "so:libevent_extra-2.1.so.7",
+          "so:libevent_pthreads-2.1.so.7",
+          "so:libmariadb.so.3",
+          "so:libnetsnmp.so.45",
+          "so:libodbc.so.2",
+          "so:libpcre2-8.so.0",
+          "so:libssh2.so.1",
+          "so:libssl.so.3",
+          "so:libxml2.so.2",
+          "so:libz.so.1",
+          "zabbix"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "so:librist.so.4=4.6.3"
+          "cmd:zabbix_proxy=7.4.12-r2",
+          "cmd:zabbix_server=7.4.12-r2"
         ],
         "conflicts": [
-          "d9adfca901be95a0c4203f2770ee9730b47db3a6"
+          "c02e0c037b032adc0301e2027ad0f3a1c0b98a7a"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0971ec308cf80cba78e1",
-      "name": "aws-sdk-cpp-verifiedpermissions",
+      "id": "096954ad6c5390cb7cfc",
+      "name": "aws-sdk-cpp-geo-places",
       "version": "1.11.700-r1",
       "architecture": "amd64",
-      "summary": "Amazon Web Services SDK for C++ (verifiedpermissions)",
-      "description": "Amazon Web Services SDK for C++ (verifiedpermissions)",
+      "summary": "Amazon Web Services SDK for C++ (geo-places)",
+      "description": "Amazon Web Services SDK for C++ (geo-places)",
       "homepage": "https://github.com/aws/aws-sdk-cpp",
       "license": "Apache-2.0",
       "maintainer": "Holger Jaekel <holger.jaekel@gmx.de>",
       "sourcePackage": "aws-sdk-cpp",
       "repository": "official",
-      "installedSize": 480960,
-      "downloadSize": 135568,
+      "installedSize": 353984,
+      "downloadSize": 114737,
       "dependencies": {
         "requires": [
           "so:libaws-cpp-sdk-core.so.1.11",
@@ -1446,7 +1584,7 @@
         "recommends": [],
         "suggests": [],
         "provides": [
-          "so:libaws-cpp-sdk-verifiedpermissions.so.1.11=1.11.700"
+          "so:libaws-cpp-sdk-geo-places.so.1.11=1.11.700"
         ],
         "conflicts": [
           "478a855643f97b70072fd107847c738f115c68a9"
@@ -1455,18 +1593,520 @@
       }
     },
     {
-      "id": "09726199b5ea8285017f",
-      "name": "kefir-static",
-      "version": "0.5.0-r1",
+      "id": "0969889d835d413fa59e",
+      "name": "fragments-lang",
+      "version": "3.0.1-r0",
       "architecture": "amd64",
-      "summary": "C17 compiler implementation from scratch (static library)",
-      "description": "C17 compiler implementation from scratch (static library)",
-      "homepage": "https://kefir.protopopov.lv/",
-      "license": "GPL-3.0-only AND BSD-3-Clause",
-      "sourcePackage": "kefir",
+      "summary": "Languages for package fragments",
+      "description": "Languages for package fragments",
+      "homepage": "https://gitlab.gnome.org/World/Fragments",
+      "license": "GPL-3.0-or-later",
+      "maintainer": "NekoCWD <nekodevelopper@gmail.com>",
+      "sourcePackage": "fragments",
       "repository": "official",
-      "installedSize": 6853490,
-      "downloadSize": 1476168,
+      "installedSize": 779151,
+      "downloadSize": 225879,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "8541725826a6630a89e9c2c613e313992f268821"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "0969b8ce6ad8d2d6cb01",
+      "name": "apk-tools",
+      "version": "3.0.8-r0",
+      "architecture": "amd64",
+      "summary": "Alpine Package Keeper - package manager for alpine",
+      "description": "Alpine Package Keeper - package manager for alpine",
+      "homepage": "https://gitlab.alpinelinux.org/alpine/apk-tools",
+      "license": "GPL-2.0-only",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "apk-tools",
+      "repository": "official",
+      "installedSize": 115096,
+      "downloadSize": 55395,
+      "dependencies": {
+        "requires": [
+          "ca-certificates-bundle",
+          "libapk=3.0.8-r0",
+          "libcrypto3>=3.5",
+          "musl>=1.2.3_git20230424",
+          "so:libapk.so.3.0.0",
+          "so:libc.musl-x86_64.so.1",
+          "so:libz.so.1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "apk-tools3=3.0.8-r0",
+          "cmd:apk=3.0.8-r0"
+        ],
+        "conflicts": [
+          "4588b452722bd4800efdc6cce4f6e980e02a997f"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09720a1d8dae7e2fd1df",
+      "name": "ruby-xdg",
+      "version": "9.5.0-r0",
+      "architecture": "amd64",
+      "summary": "xdg base directory standard library for ruby",
+      "description": "xdg base directory standard library for ruby",
+      "homepage": "https://www.alchemists.io/projects/xdg/",
+      "license": "Hippocratic-2.1",
+      "maintainer": "Kevin Daudt <kdaudt@alpinelinux.org>",
+      "sourcePackage": "ruby-xdg",
+      "repository": "official",
+      "installedSize": 29719,
+      "downloadSize": 12075,
+      "dependencies": {
+        "requires": [
+          "ruby"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "6b9a5ac64f26e09365612701060210c0956e4714"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "097561153d43dc2e57bb",
+      "name": "clang20-extra-tools",
+      "version": "20.1.8-r3",
+      "architecture": "amd64",
+      "summary": "Extra tools built using Clang's tooling APIs",
+      "description": "Extra tools built using Clang's tooling APIs",
+      "homepage": "https://llvm.org/",
+      "license": "Apache-2.0 WITH LLVM-exception",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "clang20",
+      "repository": "official",
+      "installedSize": 99498164,
+      "downloadSize": 38713723,
+      "dependencies": {
+        "requires": [
+          "so:libLLVM.so.20.1",
+          "so:libc.musl-x86_64.so.1",
+          "so:libclang-cpp.so.20.1",
+          "so:libclang.so.20.1",
+          "so:libgcc_s.so.1",
+          "so:libstdc++.so.6",
+          "so:libxml2.so.2"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "ae31ee6bd9b88ee679224bbb0105585725b33cdc"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "097ac207346910034082",
+      "name": "dfc",
+      "version": "3.1.1-r5",
+      "architecture": "amd64",
+      "summary": "Report file system space usage information with style",
+      "description": "Report file system space usage information with style",
+      "homepage": "https://projects.gw-computing.net/projects/dfc",
+      "license": "BSD-3-Clause",
+      "maintainer": "Bart Ribbers <bribbers@disroot.org>",
+      "sourcePackage": "dfc",
+      "repository": "official",
+      "installedSize": 41096,
+      "downloadSize": 19591,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:dfc=3.1.1-r5"
+        ],
+        "conflicts": [
+          "ffc779268024defd6961cc2fad7d377e5f3f332f"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "097c5c7618bbe7e3e9fc",
+      "name": "perl-role-basic",
+      "version": "0.16-r0",
+      "architecture": "amd64",
+      "summary": "Just roles. Nothing else.",
+      "description": "Just roles. Nothing else.",
+      "homepage": "https://metacpan.org/release/Role-Basic/",
+      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
+      "maintainer": "Leonardo Arena <rnalrd@alpinelinux.org>",
+      "sourcePackage": "perl-role-basic",
+      "repository": "official",
+      "installedSize": 34389,
+      "downloadSize": 13766,
+      "dependencies": {
+        "requires": [
+          "perl"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "3374d774c8056e486b72fa5175c78f90b652a243"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "098174f9bc6ce967baf3",
+      "name": "modemmanager-systemd",
+      "version": "1.25.95_git20260527-r1",
+      "architecture": "amd64",
+      "summary": "ModemManager library (systemd files)",
+      "description": "ModemManager library (systemd files)",
+      "homepage": "https://www.freedesktop.org/wiki/Software/ModemManager",
+      "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
+      "maintainer": "Achill Gilgenast <achill@achill.org>",
+      "sourcePackage": "modemmanager",
+      "repository": "official",
+      "installedSize": 515,
+      "downloadSize": 1993,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "c17ec2f14e8e3e294abca534fb4b34a62c80fd30"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09820cebddfe84ad2743",
+      "name": "kustomize-fish-completion",
+      "version": "5.8.1-r4",
+      "architecture": "amd64",
+      "summary": "Fish completions for kustomize",
+      "description": "Fish completions for kustomize",
+      "homepage": "https://kustomize.io/",
+      "license": "Apache-2.0",
+      "maintainer": "Michał Polański <michal@polanski.me>",
+      "sourcePackage": "kustomize",
+      "repository": "official",
+      "installedSize": 9969,
+      "downloadSize": 4427,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "c02e0c037b032adc0301e2027ad0f3a1c0b98a7a"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "098412194f8c1d792fc2",
+      "name": "librime-dev",
+      "version": "1.17.0-r0",
+      "architecture": "amd64",
+      "summary": "Rime input method engine (development files)",
+      "description": "Rime input method engine (development files)",
+      "homepage": "https://github.com/rime/librime",
+      "license": "BSD-3-Clause",
+      "maintainer": "mio <miyopan@e.email>",
+      "sourcePackage": "librime",
+      "repository": "official",
+      "installedSize": 34574,
+      "downloadSize": 9420,
+      "dependencies": {
+        "requires": [
+          "librime-tools=1.17.0-r0",
+          "librime=1.17.0-r0",
+          "pkgconfig"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "pc:rime=1.17.0"
+        ],
+        "conflicts": [
+          "65db2cd14d199004f2286ec7fd2931b25f4645fe"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09844e93dad5af027946",
+      "name": "aws-sdk-cpp-proton",
+      "version": "1.11.700-r1",
+      "architecture": "amd64",
+      "summary": "Amazon Web Services SDK for C++ (proton)",
+      "description": "Amazon Web Services SDK for C++ (proton)",
+      "homepage": "https://github.com/aws/aws-sdk-cpp",
+      "license": "Apache-2.0",
+      "maintainer": "Holger Jaekel <holger.jaekel@gmx.de>",
+      "sourcePackage": "aws-sdk-cpp",
+      "repository": "official",
+      "installedSize": 206528,
+      "downloadSize": 65762,
+      "dependencies": {
+        "requires": [
+          "so:libaws-cpp-sdk-core.so.1.11",
+          "so:libc.musl-x86_64.so.1",
+          "so:libstdc++.so.6"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "so:libaws-cpp-sdk-proton.so.1.11=1.11.700"
+        ],
+        "conflicts": [
+          "478a855643f97b70072fd107847c738f115c68a9"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "098742056e51103a70bc",
+      "name": "profanity-doc",
+      "version": "0.18.1-r0",
+      "architecture": "amd64",
+      "summary": "Ncurses based XMPP client (documentation)",
+      "description": "Ncurses based XMPP client (documentation)",
+      "homepage": "https://github.com/profanity-im/profanity",
+      "license": "GPL-3.0-or-later",
+      "maintainer": "Galen Abell <galen@galenabell.com>",
+      "sourcePackage": "profanity",
+      "repository": "official",
+      "installedSize": 53475,
+      "downloadSize": 61497,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "63c9075fcabd2c696d5294cf065a17a2af214e81"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "098acd831d5588d6f51e",
+      "name": "qt5-qtbase-doc",
+      "version": "5.15.18_git20251101-r0",
+      "architecture": "amd64",
+      "summary": "Qt5 - QtBase components (documentation)",
+      "description": "Qt5 - QtBase components (documentation)",
+      "homepage": "https://qt.io/developers/",
+      "license": "LGPL-2.1-only AND LGPL-3.0-only AND GPL-3.0-only AND Qt-GPL-exception-1.0",
+      "maintainer": "Bart Ribbers <bribbers@disroot.org>",
+      "sourcePackage": "qt5-qtbase",
+      "repository": "official",
+      "installedSize": 342510,
+      "downloadSize": 179471,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "2be453c7ad76c8c217e1425cec1b7981cb8285cb"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09947bb62731cfa8f4bd",
+      "name": "fzy-doc",
+      "version": "1.1-r1",
+      "architecture": "amd64",
+      "summary": "A better fuzzy finder (documentation)",
+      "description": "A better fuzzy finder (documentation)",
+      "homepage": "https://github.com/jhawthorn/fzy",
+      "license": "MIT",
+      "maintainer": "John Vogel <jvogel@stygian.me>",
+      "sourcePackage": "fzy",
+      "repository": "official",
+      "installedSize": 2220,
+      "downloadSize": 3791,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "4ee232775e38f9a68f4b4cfe81f77e8936ec6e92"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "099bfc22ca134d29a4d6",
+      "name": "emacs-emacsql",
+      "version": "3.1.1_git20240714-r1",
+      "architecture": "amd64",
+      "summary": "High-level SQL database frontend",
+      "description": "High-level SQL database frontend",
+      "homepage": "https://github.com/magit/emacsql",
+      "license": "Unlicense",
+      "sourcePackage": "emacs-emacsql",
+      "repository": "official",
+      "installedSize": 81891,
+      "downloadSize": 23151,
+      "dependencies": {
+        "requires": [
+          "cmd:emacs"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "a9e2a2dc46f377eb25884f7fea9834492de7f518"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "099d5fc4bda55610d05c",
+      "name": "py3-z3",
+      "version": "4.16.0-r1",
+      "architecture": "amd64",
+      "summary": "Python bindings for z3",
+      "description": "Python bindings for z3",
+      "homepage": "https://github.com/Z3Prover/z3",
+      "license": "MIT",
+      "maintainer": "Sören Tempel <soeren+alpine@soeren-tempel.net>",
+      "sourcePackage": "z3",
+      "repository": "official",
+      "installedSize": 651645,
+      "downloadSize": 105404,
+      "dependencies": {
+        "requires": [
+          "python3",
+          "python3~3.14",
+          "z3"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "py3.14:z3=4.16.0-r1"
+        ],
+        "conflicts": [
+          "dd02c6c52a8c73b807526db57c4f24277b08906e"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "099d7ecca7e4c0687375",
+      "name": "swish-e-dev",
+      "version": "2.4.7-r19",
+      "architecture": "amd64",
+      "summary": "Simple Web Indexing System for Humans - Enhanced (development files)",
+      "description": "Simple Web Indexing System for Humans - Enhanced (development files)",
+      "homepage": "http://www.swish-e.org/",
+      "license": "GPL-2.0-or-later",
+      "maintainer": "Michael Mason <ms13sp@gmail.com>",
+      "sourcePackage": "swish-e",
+      "repository": "official",
+      "installedSize": 538260,
+      "downloadSize": 143770,
+      "dependencies": {
+        "requires": [
+          "pkgconfig",
+          "swish-e=2.4.7-r19"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:swish-config=2.4.7-r19",
+          "pc:swish-e=2.4.7"
+        ],
+        "conflicts": [
+          "525ea2482be614f75c3957ceb838b056b15d2120"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "099dc641821fd880e218",
+      "name": "perl-cpanel-json-xs-doc",
+      "version": "4.41-r0",
+      "architecture": "amd64",
+      "summary": "cPanel fork of JSON::XS, fast and correct serializing (documentation)",
+      "description": "cPanel fork of JSON::XS, fast and correct serializing (documentation)",
+      "homepage": "https://metacpan.org/release/Cpanel-JSON-XS/",
+      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
+      "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
+      "sourcePackage": "perl-cpanel-json-xs",
+      "repository": "official",
+      "installedSize": 41869,
+      "downloadSize": 44272,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "8d5bfb6c0354209ad705d6ca9ad69b74af5661c8"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "099eb8d15ba6efd8ccb2",
+      "name": "mbuffer-doc",
+      "version": "20251025-r0",
+      "architecture": "amd64",
+      "summary": "tool for measuring and buffering data streams (documentation)",
+      "description": "tool for measuring and buffering data streams (documentation)",
+      "homepage": "https://www.maier-komor.de/mbuffer.html",
+      "license": "GPL-3.0-or-later",
+      "maintainer": "Katie Holly <holly@fuslvz.ws>",
+      "sourcePackage": "mbuffer",
+      "repository": "official",
+      "installedSize": 4225,
+      "downloadSize": 6036,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "749f6aea6c2c42e9ed9acaaf8eb5381d1cdc9858"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09a2dd3397ff7d56b892",
+      "name": "perl-test-settings-doc",
+      "version": "0.003-r1",
+      "architecture": "amd64",
+      "summary": "Ask or tell when certain types of tests should be run (documentation)",
+      "description": "Ask or tell when certain types of tests should be run (documentation)",
+      "homepage": "https://metacpan.org/release/Test-Settings/",
+      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
+      "sourcePackage": "perl-test-settings",
+      "repository": "official",
+      "installedSize": 4331,
+      "downloadSize": 6224,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -1479,118 +2119,208 @@
       }
     },
     {
-      "id": "0972ee9d0b88f06aa165",
-      "name": "ioping-doc",
-      "version": "1.3-r0",
+      "id": "09a353fb3526a9f1b781",
+      "name": "ocaml-jsonm",
+      "version": "1.0.2-r3",
       "architecture": "amd64",
-      "summary": "A simple disk i/o latency measurement tool (documentation)",
-      "description": "A simple disk i/o latency measurement tool (documentation)",
-      "homepage": "https://github.com/koct9i/ioping",
-      "license": "GPL-3.0-or-later",
-      "maintainer": "Henrik Riomar <henrik.riomar@gmail.com>",
-      "sourcePackage": "ioping",
+      "summary": "Non-blocking streaming JSON codec",
+      "description": "Non-blocking streaming JSON codec",
+      "homepage": "https://erratique.ch/software/jsonm",
+      "license": "ISC",
+      "sourcePackage": "ocaml-jsonm",
       "repository": "official",
-      "installedSize": 3603,
-      "downloadSize": 5409,
+      "installedSize": 303312,
+      "downloadSize": 121538,
+      "dependencies": {
+        "requires": [
+          "ocaml4-impl:Stdlib:29fc6b4fd90dc91235156e20d0575996",
+          "ocaml4-impl:Stdlib__Buffer:351bbcd723fb0bb6210a31e971e57df9",
+          "ocaml4-impl:Stdlib__Bytes:50f51ee2f9b2a7289cc3bf0f46ab6395",
+          "ocaml4-impl:Stdlib__Format:4eb26b454f876b6c736f035ca734474c",
+          "ocaml4-impl:Stdlib__List:3312a7ef7979b9ba637b596a2ee4aaaf",
+          "ocaml4-impl:Stdlib__Printf:8c5702c36eb72935ca7ad73bd0e5393b",
+          "ocaml4-impl:Stdlib__Uchar:91d2a70d8c2c97a55eb709d829093e9e",
+          "ocaml4-impl:Uutf:ac7d9842bc198a7a1850ee1175040197",
+          "ocaml4-intf:CamlinternalFormatBasics:8f8f634558798ee408df3c50a5539b15",
+          "ocaml4-intf:Stdlib:79b0e9d3b6f7fed07eb3cc2abb961b91",
+          "ocaml4-intf:Stdlib__Buffer:4b09c9a6d0622bbf5a3829234b481822",
+          "ocaml4-intf:Stdlib__Bytes:3d02c33317c0108c61e7a5eefa37519a",
+          "ocaml4-intf:Stdlib__Char:62afe57b49defcc078960a68b9efbbee",
+          "ocaml4-intf:Stdlib__Either:26845df28d19584687a38a1ab814c3f9",
+          "ocaml4-intf:Stdlib__Format:b6edb97b685819e873481fe05723c8bc",
+          "ocaml4-intf:Stdlib__List:ee222542f6f8195441543b8b399b64b9",
+          "ocaml4-intf:Stdlib__Printf:bc8af6214197dc8f40eaa738a4cd6a28",
+          "ocaml4-intf:Stdlib__Seq:b63511032211eae4b567ba313cd72962",
+          "ocaml4-intf:Stdlib__String:4933e1d855f54bfed0231b038f0dbb87",
+          "ocaml4-intf:Stdlib__Uchar:c0dde02a556a6d79e363ad365d165d57",
+          "ocaml4-intf:Uutf:501098e6230660d9080cd573763dc3d9"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "ocaml4-impl:Jsonm:0ae97df2ee1f6282ebea394bfd83df98=1.0.2-r3",
+          "ocaml4-intf:Jsonm:bfcc2983ad9d559d5a76a508ae4ba45b=1.0.2-r3"
+        ],
+        "conflicts": [
+          "4ae9a791d2bd5743dea1f054f14e8c178c81e0f8"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09a93a69cc61b984be8a",
+      "name": "perl-sys-meminfo-doc",
+      "version": "0.99-r10",
+      "architecture": "amd64",
+      "summary": "Query the total free and used physical memory (documentation)",
+      "description": "Query the total free and used physical memory (documentation)",
+      "homepage": "https://metacpan.org/dist/Sys-MemInfo",
+      "license": "Perl",
+      "maintainer": "Stuart Cardall <developer@it-offshore.co.uk>",
+      "sourcePackage": "perl-sys-meminfo",
+      "repository": "official",
+      "installedSize": 1685,
+      "downloadSize": 3504,
       "dependencies": {
         "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "3e8bb74a86bf8134b59b703d97edc2bd23517714"
+          "73f15dd15737412cabd93c4b988bdef74464a283"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0974a793fcfc9242bb4b",
-      "name": "lua5.5-linotify",
-      "version": "0.5-r3",
+      "id": "09ae6e5dbd9ae7f8169e",
+      "name": "thinkfan-openrc",
+      "version": "2.0.0-r1",
       "architecture": "amd64",
-      "summary": "Inotify bindings for Lua (for Lua 5.5)",
-      "description": "Inotify bindings for Lua (for Lua 5.5)",
-      "homepage": "https://github.com/hoelzro/linotify",
-      "license": "MIT",
-      "maintainer": "Will Sinatra <wpsinatra@gmail.com>",
-      "sourcePackage": "lua-linotify",
+      "summary": "A simple, lightweight fan control program (OpenRC init scripts)",
+      "description": "A simple, lightweight fan control program (OpenRC init scripts)",
+      "homepage": "https://github.com/vmatare/thinkfan",
+      "license": "GPL-3.0-only",
+      "maintainer": "Magnus Sandin <magnus.sandin@valitron.se>",
+      "sourcePackage": "thinkfan",
       "repository": "official",
-      "installedSize": 14184,
-      "downloadSize": 6119,
+      "installedSize": 313,
+      "downloadSize": 1798,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "e65fbd9bbd9ffdfa954b378ae43fcbcde46ccecb"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09b3d96c86cb0ab467d4",
+      "name": "linux-firmware-amd-ucode",
+      "version": "20260519-r0",
+      "architecture": "amd64",
+      "summary": "firmware files for linux (amd-ucode folder)",
+      "description": "firmware files for linux (amd-ucode folder)",
+      "homepage": "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary",
+      "license": "custom",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "linux-firmware",
+      "repository": "official",
+      "installedSize": 306445,
+      "downloadSize": 249048,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "linux-firmware-any"
+        ],
+        "conflicts": [
+          "0d703a66341886130fe4e46c51cd4f161d8b96b8"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09b3e4413bd9825bc0ce",
+      "name": "py3-libpyshell-pyc",
+      "version": "0.5.0-r1",
+      "architecture": "amd64",
+      "summary": "Precompiled Python bytecode for py3-libpyshell",
+      "description": "Precompiled Python bytecode for py3-libpyshell",
+      "homepage": "https://github.com/skogsbaer/libPyshell",
+      "license": "BSD-3-Clause",
+      "maintainer": "Hannes Braun <hannes@hannesbraun.net>",
+      "sourcePackage": "py3-libpyshell",
+      "repository": "official",
+      "installedSize": 48319,
+      "downloadSize": 20653,
       "dependencies": {
         "requires": [
-          "lua5.5",
-          "so:libc.musl-x86_64.so.1"
+          "python3~3.14"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "9cc4a6adeb7ad74a2774f08350202e99b26e91bd"
+          "2c102427d73bb67fdb7e6c9cb62899b38b29b2f5"
         ],
         "replaces": []
       }
     },
     {
-      "id": "0974d125bef23e68053f",
-      "name": "raptor2-dev",
-      "version": "2.0.16-r1",
+      "id": "09b4b8fc66ddf6b1ec75",
+      "name": "libtiffxx",
+      "version": "4.7.2-r0",
       "architecture": "amd64",
-      "summary": "RDF parser toolkit for Redland (development files)",
-      "description": "RDF parser toolkit for Redland (development files)",
-      "homepage": "https://librdf.org/raptor",
-      "license": "LGPL-2.1-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "raptor2",
+      "summary": "C++ binding to libtiff",
+      "description": "C++ binding to libtiff",
+      "homepage": "https://gitlab.com/libtiff/libtiff",
+      "license": "libtiff",
+      "maintainer": "Michael Mason <ms13sp@gmail.com>",
+      "sourcePackage": "tiff",
       "repository": "official",
-      "installedSize": 811484,
-      "downloadSize": 223349,
-      "dependencies": {
-        "requires": [
-          "curl-dev",
-          "libxml2-dev",
-          "libxslt-dev",
-          "pkgconfig",
-          "raptor2=2.0.16-r1",
-          "yajl-dev"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "pc:raptor2=2.0.16"
-        ],
-        "conflicts": [
-          "c9319703e85b9f6fd7cc86bc4061131fa371577b"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "097811e9fcb9dc6c14b8",
-      "name": "libgudev",
-      "version": "238-r1",
-      "architecture": "amd64",
-      "summary": "GObject-based wrapper library for libudev",
-      "description": "GObject-based wrapper library for libudev",
-      "homepage": "https://gitlab.gnome.org/GNOME/libgudev",
-      "license": "LGPL-2.1-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "libgudev",
-      "repository": "official",
-      "installedSize": 51316,
-      "downloadSize": 15571,
+      "installedSize": 14176,
+      "downloadSize": 4680,
       "dependencies": {
         "requires": [
           "so:libc.musl-x86_64.so.1",
-          "so:libglib-2.0.so.0",
-          "so:libgobject-2.0.so.0",
-          "so:libudev.so.1"
+          "so:libstdc++.so.6",
+          "so:libtiff.so.6"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "so:libgudev-1.0.so.0=0.3.0"
+          "so:libtiffxx.so.6=6.3.0"
         ],
+        "conflicts": [
+          "bbcfbafeadf5dac4744d065ac69338c1b58fc0d1"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09b55b540f72045df427",
+      "name": "easytag-lang",
+      "version": "2.4.3-r7",
+      "architecture": "amd64",
+      "summary": "Languages for package easytag",
+      "description": "Languages for package easytag",
+      "homepage": "https://gitlab.gnome.org/GNOME/easytag",
+      "license": "GPL-2.0-only AND GPL-3.0-only",
+      "maintainer": "David Demelier <markand@malikania.fr>",
+      "sourcePackage": "easytag",
+      "repository": "official",
+      "installedSize": 2809372,
+      "downloadSize": 942860,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [
           "c97799aa548f601eb43cfd276ba52f1a9da85d48"
         ],
@@ -1598,1096 +2328,25 @@
       }
     },
     {
-      "id": "097c57909c2ebdf3a1ce",
-      "name": "dpdk-event-skeleton",
-      "version": "24.11.6-r0",
-      "architecture": "amd64",
-      "summary": "DPDK library: dpdk-event-skeleton",
-      "description": "DPDK library: dpdk-event-skeleton",
-      "homepage": "https://dpdk.org/",
-      "license": "BSD-3-Clause AND GPL-2.0-only",
-      "maintainer": "Duncan Bellamy <dunk@denkimushi.com>",
-      "sourcePackage": "dpdk",
-      "repository": "official",
-      "installedSize": 14920,
-      "downloadSize": 5766,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1",
-          "so:libfdt.so.1",
-          "so:libnuma.so.1",
-          "so:librte_bus_pci.so.25",
-          "so:librte_bus_vdev.so.25",
-          "so:librte_eal.so.25",
-          "so:librte_eventdev.so.25",
-          "so:librte_log.so.25",
-          "so:librte_pci.so.25"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "so:librte_event_skeleton.so.25=25.0"
-        ],
-        "conflicts": [
-          "e5f4fc89145c67df1912edd9d6dc4962832e1d8a"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "097cf37ead5ec67d5e2f",
-      "name": "kpackage5-doc",
-      "version": "5.116.0-r0",
-      "architecture": "amd64",
-      "summary": "Framework that lets applications manage user installable packages of non-binary assets (documentation)",
-      "description": "Framework that lets applications manage user installable packages of non-binary assets (documentation)",
-      "homepage": "https://community.kde.org/Frameworks",
-      "license": "LGPL-2.1-or-later",
-      "maintainer": "team/kde <bribbers@disroot.org>",
-      "sourcePackage": "kpackage5",
-      "repository": "official",
-      "installedSize": 295511,
-      "downloadSize": 175885,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "44ce39a091100c59a3bd90df6c0312d302be3171"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0980ee6ff9c729e61731",
-      "name": "py3-vici-pyc",
-      "version": "6.0.7-r1",
-      "architecture": "amd64",
-      "summary": "Precompiled Python bytecode for py3-vici",
-      "description": "Precompiled Python bytecode for py3-vici",
-      "homepage": "https://www.strongswan.org/",
-      "license": "GPL-2.0-or-later WITH OpenSSL-Exception",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "strongswan",
-      "repository": "official",
-      "installedSize": 42538,
-      "downloadSize": 17581,
-      "dependencies": {
-        "requires": [
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "34f6e5257dd95941afc755529b81cc4069cc2bfd"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0981264eea3aa00ef185",
-      "name": "dev86",
-      "version": "0.16.21-r4",
-      "architecture": "amd64",
-      "summary": "A real mode 80x86 assembler and linker",
-      "description": "A real mode 80x86 assembler and linker",
-      "homepage": "https://github.com/lkundrak/dev86/",
-      "license": "GPL-2.0-or-later AND LGPL-2.0-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "dev86",
-      "repository": "official",
-      "installedSize": 928831,
-      "downloadSize": 367573,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:ar86=0.16.21-r4",
-          "cmd:as86=0.16.21-r4",
-          "cmd:bcc=0.16.21-r4",
-          "cmd:ld86=0.16.21-r4",
-          "cmd:nm86=0.16.21-r4",
-          "cmd:objdump86=0.16.21-r4",
-          "cmd:size86=0.16.21-r4"
-        ],
-        "conflicts": [
-          "e5f37b108ddad98851840f3bc13bdd37fcf191ac"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "098323a473809fdd8462",
-      "name": "yyjson-static",
-      "version": "0.12.0-r1",
-      "architecture": "amd64",
-      "summary": "High performance JSON library written in ANSI C (static library)",
-      "description": "High performance JSON library written in ANSI C (static library)",
-      "homepage": "https://github.com/ibireme/yyjson",
-      "license": "MIT",
-      "maintainer": "Achill Gilgenast <achill@achill.org>",
-      "sourcePackage": "yyjson",
-      "repository": "official",
-      "installedSize": 346102,
-      "downloadSize": 140705,
-      "dependencies": {
-        "requires": [
-          "yyjson-dev"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "21b05914806e37e3e9de9d1e5a037fc688cbebd6"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0985c9c28f27ca95b51b",
-      "name": "sane-backend-microtek2",
-      "version": "1.4.0-r4",
-      "architecture": "amd64",
-      "summary": "SANE backend for Microtek scanners with SCSI-2 command set",
-      "description": "SANE backend for Microtek scanners with SCSI-2 command set",
-      "homepage": "http://www.sane-project.org/",
-      "license": "GPL-2.0-or-later GPL-2.0-or-later-with-sane-exception Public-Domain",
-      "maintainer": "Achill Gilgenast <achill@achill.org>",
-      "sourcePackage": "sane",
-      "repository": "official",
-      "installedSize": 130299,
-      "downloadSize": 58411,
-      "dependencies": {
-        "requires": [
-          "sane",
-          "so:libc.musl-x86_64.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "6bbd45b4dd10f4ec6cd6d99265aba2de11569522"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "098607c8fa3c021a79cd",
-      "name": "ecryptfs-utils-dev",
-      "version": "111-r19",
-      "architecture": "amd64",
-      "summary": "Enterprise-class stacked cryptographic filesystem for Linux (development files)",
-      "description": "Enterprise-class stacked cryptographic filesystem for Linux (development files)",
-      "homepage": "http://ecryptfs.org/",
-      "license": "GPL-2.0-or-later",
-      "maintainer": "Timo Teräs <timo.teras@iki.fi>",
-      "sourcePackage": "ecryptfs-utils",
-      "repository": "official",
-      "installedSize": 21779,
-      "downloadSize": 8213,
-      "dependencies": {
-        "requires": [
-          "ecryptfs-utils=111-r19",
-          "keyutils-dev",
-          "linux-headers",
-          "linux-pam-dev",
-          "nss-dev",
-          "pkgconfig"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "pc:libecryptfs=111"
-        ],
-        "conflicts": [
-          "e2c933d8b5bbfdbe0516416dbef9b75906f8fe06"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09877a973a9c048a2b5c",
-      "name": "perl-devel-confess",
-      "version": "0.009004-r1",
-      "architecture": "amd64",
-      "summary": "Include stack traces on all warnings and errors",
-      "description": "Include stack traces on all warnings and errors",
-      "homepage": "https://metacpan.org/release/Devel-Confess/",
-      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
-      "sourcePackage": "perl-devel-confess",
-      "repository": "official",
-      "installedSize": 29544,
-      "downloadSize": 11545,
-      "dependencies": {
-        "requires": [
-          "perl"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "a9e2a2dc46f377eb25884f7fea9834492de7f518"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0988eefbffb13b3410e3",
-      "name": "ioping",
-      "version": "1.3-r0",
-      "architecture": "amd64",
-      "summary": "A simple disk i/o latency measurement tool",
-      "description": "A simple disk i/o latency measurement tool",
-      "homepage": "https://github.com/koct9i/ioping",
-      "license": "GPL-3.0-or-later",
-      "maintainer": "Henrik Riomar <henrik.riomar@gmail.com>",
-      "sourcePackage": "ioping",
-      "repository": "official",
-      "installedSize": 32528,
-      "downloadSize": 13061,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:ioping=1.3-r0"
-        ],
-        "conflicts": [
-          "3e8bb74a86bf8134b59b703d97edc2bd23517714"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "098c9a8311625770744e",
-      "name": "sdl2_ttf",
-      "version": "2.24.0-r0",
-      "architecture": "amd64",
-      "summary": "A library which allows you to use TrueType fonts in your SDL applications",
-      "description": "A library which allows you to use TrueType fonts in your SDL applications",
-      "homepage": "https://github.com/libsdl-org/SDL_ttf",
-      "license": "Zlib",
-      "maintainer": "Hannes Braun <hannes@hannesbraun.net>",
-      "sourcePackage": "sdl2_ttf",
-      "repository": "official",
-      "installedSize": 50816,
-      "downloadSize": 21605,
-      "dependencies": {
-        "requires": [
-          "so:libSDL2-2.0.so.0",
-          "so:libc.musl-x86_64.so.1",
-          "so:libfreetype.so.6",
-          "so:libharfbuzz.so.0"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "so:libSDL2_ttf-2.0.so.0=0.2400.0"
-        ],
-        "conflicts": [
-          "ca654f95878cf5fe0d632e33367bf06f8c692b62"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0993441d54ff5056a030",
-      "name": "pdf4qt",
-      "version": "1.5.3.1-r0",
-      "architecture": "amd64",
-      "summary": "Open source PDF editor",
-      "description": "Open source PDF editor",
-      "homepage": "https://jakubmelka.github.io/",
-      "license": "MIT",
-      "maintainer": "Antoine Martin (ayakael) <dev@ayakael.net>",
-      "sourcePackage": "pdf4qt",
-      "repository": "official",
-      "installedSize": 18733098,
-      "downloadSize": 9359817,
-      "dependencies": {
-        "requires": [
-          "so:libQt6Core.so.6",
-          "so:libQt6Gui.so.6",
-          "so:libQt6PrintSupport.so.6",
-          "so:libQt6Svg.so.6",
-          "so:libQt6TextToSpeech.so.6",
-          "so:libQt6Widgets.so.6",
-          "so:libQt6Xml.so.6",
-          "so:libblend2d.so",
-          "so:libc.musl-x86_64.so.1",
-          "so:libcrypto.so.3",
-          "so:libfreetype.so.6",
-          "so:libgcc_s.so.1",
-          "so:libjpeg.so.8",
-          "so:liblcms2.so.2",
-          "so:libopenjp2.so.7",
-          "so:libstdc++.so.6",
-          "so:libtbb.so.12",
-          "so:libz.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:Pdf4QtDiff=1.5.3.1-r0",
-          "cmd:Pdf4QtEditor=1.5.3.1-r0",
-          "cmd:Pdf4QtLaunchPad=1.5.3.1-r0",
-          "cmd:Pdf4QtPageMaster=1.5.3.1-r0",
-          "cmd:Pdf4QtViewer=1.5.3.1-r0",
-          "cmd:PdfTool=1.5.3.1-r0",
-          "so:libAudioBookPlugin.so.1.5.3.1=1.5.3.1",
-          "so:libDimensionsPlugin.so.1.5.3.1=1.5.3.1",
-          "so:libEditorPlugin.so.1.5.3.1=1.5.3.1",
-          "so:libObjectInspectorPlugin.so.1.5.3.1=1.5.3.1",
-          "so:libOutputPreviewPlugin.so.1.5.3.1=1.5.3.1",
-          "so:libPdf4QtLibCore.so.1.5.3.1=1.5.3.1",
-          "so:libPdf4QtLibGui.so.1.5.3.1=1.5.3.1",
-          "so:libPdf4QtLibWidgets.so.1.5.3.1=1.5.3.1",
-          "so:libRedactPlugin.so.1.5.3.1=1.5.3.1",
-          "so:libSignaturePlugin.so.1.5.3.1=1.5.3.1",
-          "so:libSoftProofingPlugin.so.1.5.3.1=1.5.3.1"
-        ],
-        "conflicts": [
-          "40e4514df6799298302cf2e417391cc80c9dabef"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0995e0061cd131b06df3",
-      "name": "maliit-framework",
-      "version": "2.3.0-r5",
-      "architecture": "amd64",
-      "summary": "Core libraries of Maliit and server",
-      "description": "Core libraries of Maliit and server",
-      "homepage": "https://github.com/maliit/framework",
-      "license": "LGPL-2.1-only",
-      "maintainer": "Bart Ribbers <bribbers@disroot.org>",
-      "sourcePackage": "maliit-framework",
-      "repository": "official",
-      "installedSize": 1194397,
-      "downloadSize": 372686,
-      "dependencies": {
-        "requires": [
-          "so:libQt5Core.so.5",
-          "so:libQt5DBus.so.5",
-          "so:libQt5Gui.so.5",
-          "so:libQt5Qml.so.5",
-          "so:libQt5Quick.so.5",
-          "so:libQt5WaylandClient.so.5",
-          "so:libc.musl-x86_64.so.1",
-          "so:libgcc_s.so.1",
-          "so:libgio-2.0.so.0",
-          "so:libglib-2.0.so.0",
-          "so:libgobject-2.0.so.0",
-          "so:libstdc++.so.6",
-          "so:libudev.so.1",
-          "so:libwayland-client.so.0",
-          "so:libxcb-xfixes.so.0",
-          "so:libxcb.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:maliit-server=2.3.0-r5",
-          "so:libmaliit-glib.so.2=2.3.0",
-          "so:libmaliit-plugins.so.2=2.3.0"
-        ],
-        "conflicts": [
-          "b66df9ab4d2b6270897cb184e2b43c179480dccc"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "0996ccd02fa99ec48885",
-      "name": "py3-opytimizer",
-      "version": "3.1.4-r1",
-      "architecture": "amd64",
-      "summary": "A Python library consisting of nature-inspired meta-heuristic optimization algorithms",
-      "description": "A Python library consisting of nature-inspired meta-heuristic optimization algorithms",
-      "homepage": "https://github.com/gugarosa/opytimizer",
-      "license": "Apache-2.0",
-      "maintainer": "Iztok Fister, Jr. <iztok@iztok-jr-fister.eu>",
-      "sourcePackage": "py3-opytimizer",
-      "repository": "official",
-      "installedSize": 661988,
-      "downloadSize": 120841,
-      "dependencies": {
-        "requires": [
-          "py3-dill",
-          "py3-matplotlib",
-          "py3-networkx",
-          "py3-numpy",
-          "py3-opytimark",
-          "py3-tqdm",
-          "python3",
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "py3.14:opytimizer=3.1.4-r1"
-        ],
-        "conflicts": [
-          "96f50a9a7fc256731299fb176ec6fe00afd537c3"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "099d648c34cb885e2e6b",
-      "name": "dbus-dev",
-      "version": "1.16.2-r2",
-      "architecture": "amd64",
-      "summary": "Freedesktop.org message bus system (development files)",
-      "description": "Freedesktop.org message bus system (development files)",
-      "homepage": "https://www.freedesktop.org/Software/dbus",
-      "license": "AFL-2.1 OR GPL-2.0-or-later",
-      "maintainer": "team/alpine-desktop <achill@achill.org>",
-      "sourcePackage": "dbus",
-      "repository": "official",
-      "installedSize": 131026,
-      "downloadSize": 28146,
-      "dependencies": {
-        "requires": [
-          "dbus-libs=1.16.2-r2",
-          "pkgconfig"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "pc:dbus-1=1.16.2"
-        ],
-        "conflicts": [
-          "0dac2d7bf76016e3bb78ccc734edbb157a1d4b51"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "099eb29514f5439b6cff",
-      "name": "victoria-metrics-openrc",
-      "version": "1.136.10-r1",
-      "architecture": "amd64",
-      "summary": "Fast, cost-effective and scalable time series database (LTS) (OpenRC init scripts)",
-      "description": "Fast, cost-effective and scalable time series database (LTS) (OpenRC init scripts)",
-      "homepage": "https://github.com/VictoriaMetrics/VictoriaMetrics",
-      "license": "Apache-2.0",
-      "maintainer": "Konstantin Kulikov <k.kulikov2@gmail.com>",
-      "sourcePackage": "victoria-metrics",
-      "repository": "official",
-      "installedSize": 1536,
-      "downloadSize": 2519,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "1e1aed58b7720fcb6b1859043d543b33019d8c4f"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "099f5b2e8d19488c3aa6",
-      "name": "kcoreaddons-dev",
-      "version": "6.26.0-r0",
-      "architecture": "amd64",
-      "summary": "Addons to QtCore (development files)",
-      "description": "Addons to QtCore (development files)",
-      "homepage": "https://community.kde.org/Frameworks",
-      "license": "LGPL-2.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only)",
-      "maintainer": "team/kde <bribbers@disroot.org>",
-      "sourcePackage": "kcoreaddons",
-      "repository": "official",
-      "installedSize": 346521,
-      "downloadSize": 88699,
-      "dependencies": {
-        "requires": [
-          "kcoreaddons=6.26.0-r0",
-          "pc:Qt6Core",
-          "pkgconfig",
-          "qt6-qtbase-dev",
-          "qt6-qtdeclarative-dev"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "pc:KF6CoreAddons=6.26.0"
-        ],
-        "conflicts": [
-          "df9df7dd0c1867bcf62727115cc6dfc22ac7f46f"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09a254dda7dadbd33267",
-      "name": "py3-citeproc-py",
-      "version": "0.9.0-r1",
-      "architecture": "amd64",
-      "summary": "Yet another Python CSL Processor",
-      "description": "Yet another Python CSL Processor",
-      "homepage": "https://github.com/brechtm/citeproc-py",
-      "license": "BSD-2-Clause",
-      "maintainer": "Iztok Fister, Jr. <iztok@iztok-jr-fister.eu>",
-      "sourcePackage": "py3-citeproc-py",
-      "repository": "official",
-      "installedSize": 822939,
-      "downloadSize": 113665,
-      "dependencies": {
-        "requires": [
-          "py3-lxml",
-          "python3",
-          "python3~3.14",
-          "rnc2rng"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:csl_unsorted=0.9.0-r1",
-          "py3.14:citeproc=0.9.0-r1"
-        ],
-        "conflicts": [
-          "40df98de81be70089542b1321ff8c645dbc56e59"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09a41764934635206e26",
-      "name": "apache2-lua",
-      "version": "2.4.68-r0",
-      "architecture": "amd64",
-      "summary": "Lua support for the Apache HTTP server",
-      "description": "Lua support for the Apache HTTP server",
-      "homepage": "https://httpd.apache.org/",
-      "license": "Apache-2.0",
-      "maintainer": "Kaarle Ritvanen <kunkku@alpinelinux.org>",
-      "sourcePackage": "apache2",
-      "repository": "official",
-      "installedSize": 112497,
-      "downloadSize": 43936,
-      "dependencies": {
-        "requires": [
-          "apache2",
-          "so:libc.musl-x86_64.so.1",
-          "so:liblua.so.5"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "62d253c6fd1bc3c9264fbaace9840bf3a62acb17"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09a544910aeafb4d4940",
-      "name": "py3-oletools",
-      "version": "0.60.2-r1",
-      "architecture": "amd64",
-      "summary": "tools to analyze security characteristics of MS Office and OLE files",
-      "description": "tools to analyze security characteristics of MS Office and OLE files",
-      "homepage": "https://www.decalage.info/python/oletools",
-      "license": "BSD-2-Clause AND MIT",
-      "maintainer": "Duncan Bellamy <dunk@denkimushi.com>",
-      "sourcePackage": "py3-oletools",
-      "repository": "official",
-      "installedSize": 1803976,
-      "downloadSize": 836405,
-      "dependencies": {
-        "requires": [
-          "py3-colorclass",
-          "py3-easygui",
-          "py3-msoffcrypto-tool",
-          "py3-olefile",
-          "py3-parsing",
-          "py3-pcodedmp",
-          "py3-prettytable",
-          "py3-xxxswf",
-          "python3",
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:ezhexviewer=0.60.2-r1",
-          "cmd:ftguess=0.60.2-r1",
-          "cmd:mraptor=0.60.2-r1",
-          "cmd:msodde=0.60.2-r1",
-          "cmd:olebrowse=0.60.2-r1",
-          "cmd:oledir=0.60.2-r1",
-          "cmd:olefile=0.60.2-r1",
-          "cmd:oleid=0.60.2-r1",
-          "cmd:olemap=0.60.2-r1",
-          "cmd:olemeta=0.60.2-r1",
-          "cmd:oleobj=0.60.2-r1",
-          "cmd:oletimes=0.60.2-r1",
-          "cmd:olevba=0.60.2-r1",
-          "cmd:pyxswf=0.60.2-r1",
-          "cmd:rtfobj=0.60.2-r1",
-          "py3.14:oletools=0.60.2-r1"
-        ],
-        "conflicts": [
-          "4ae702edf4ca9ab5c6fc871f40c9758ac1438a9e"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09aa7ef09a338490301c",
-      "name": "hinsightd-openrc",
-      "version": "0.9.21-r0",
-      "architecture": "amd64",
-      "summary": "hinsightd a http/1.1 webserver with (hopefully) minimal goals (OpenRC init scripts)",
-      "description": "hinsightd a http/1.1 webserver with (hopefully) minimal goals (OpenRC init scripts)",
-      "homepage": "https://tiotags.gitlab.io/hinsightd/",
-      "license": "BSD-3-Clause",
-      "maintainer": "Alexandru Campeanu <tiotags1@gmail.com>",
-      "sourcePackage": "hinsightd",
-      "repository": "official",
-      "installedSize": 1714,
-      "downloadSize": 2416,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "15144ffdf6f864fc307f772687796834e4cc69cf"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09ac267f8cf12492d5de",
-      "name": "py3-hamlib-pyc",
-      "version": "4.7.1-r0",
-      "architecture": "amd64",
-      "summary": "Precompiled Python bytecode for py3-hamlib",
-      "description": "Precompiled Python bytecode for py3-hamlib",
-      "homepage": "https://hamlib.github.io/",
-      "license": "LGPL-2.0-or-later",
-      "maintainer": "Bradford D. Boyle <bradford.d.boyle@gmail.com>",
-      "sourcePackage": "hamlib",
-      "repository": "official",
-      "installedSize": 688003,
-      "downloadSize": 138925,
-      "dependencies": {
-        "requires": [
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "25d81ff83afe380f7ff9758f86436e88d7dd01cb"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09aca9c93968636280ad",
-      "name": "mdns-scan-doc",
-      "version": "0.5-r0",
-      "architecture": "amd64",
-      "summary": "Scan for mDNS/DNS-SD services published on the local network (documentation)",
-      "description": "Scan for mDNS/DNS-SD services published on the local network (documentation)",
-      "homepage": "https://0pointer.de/lennart/projects/mdns-scan/",
-      "license": "GPL-2.0-or-later",
-      "maintainer": "Michał Polański <michal@polanski.me>",
-      "sourcePackage": "mdns-scan",
-      "repository": "official",
-      "installedSize": 1027,
-      "downloadSize": 2805,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "b957b00d831812f7009459e7b20df40acf81041e"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09b06ae729bbe6fef676",
-      "name": "libdc1394-doc",
-      "version": "2.2.7-r0",
-      "architecture": "amd64",
-      "summary": "High level programming interface to control IEEE 1394 based cameras (documentation)",
-      "description": "High level programming interface to control IEEE 1394 based cameras (documentation)",
-      "homepage": "https://damien.douxchamps.net/ieee1394/libdc1394/",
-      "license": "LGPL-2.1-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "libdc1394",
-      "repository": "official",
-      "installedSize": 3737,
-      "downloadSize": 5953,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "6867e384dbfbd0b8efadbca989e9778190e89496"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09b1dae00915b72500ce",
-      "name": "aspell",
-      "version": "0.60.8.2-r0",
-      "architecture": "amd64",
-      "summary": "A spell checker designed to eventually replace Ispell",
-      "description": "A spell checker designed to eventually replace Ispell",
-      "homepage": "http://aspell.net/",
-      "license": "LGPL-2.1-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "aspell",
-      "repository": "official",
-      "installedSize": 121008,
-      "downloadSize": 53605,
-      "dependencies": {
-        "requires": [
-          "so:libaspell.so.15",
-          "so:libc.musl-x86_64.so.1",
-          "so:libintl.so.8",
-          "so:libncursesw.so.6",
-          "so:libstdc++.so.6"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:aspell=0.60.8.2-r0"
-        ],
-        "conflicts": [
-          "f88fdcc5a18c55f9864a41a24a471f129306a934"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09b4ec11a1c8c200cde9",
-      "name": "py3-zc.lockfile-pyc",
-      "version": "4.0-r1",
-      "architecture": "amd64",
-      "summary": "Precompiled Python bytecode for py3-zc.lockfile",
-      "description": "Precompiled Python bytecode for py3-zc.lockfile",
-      "homepage": "https://github.com/zopefoundation/zc.lockfile",
-      "license": "MIT",
-      "maintainer": "Duncan Bellamy <dunk@denkimushi.com>",
-      "sourcePackage": "py3-zc.lockfile",
-      "repository": "official",
-      "installedSize": 13942,
-      "downloadSize": 7762,
-      "dependencies": {
-        "requires": [
-          "python3~3.14"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "33e698a061172da1c00e559b4f9e096958e0dadd"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09b782b4df976aa2cd13",
-      "name": "php84-sqlite3",
-      "version": "8.4.26-r0",
-      "architecture": "amd64",
-      "summary": "PHP84 extension: SQLite3",
-      "description": "PHP84 extension: SQLite3",
-      "homepage": "https://www.php.net/",
-      "license": "PHP-3.01 BSD-3-Clause LGPL-2.0-or-later MIT Zend-2.0",
-      "maintainer": "Andy Postnikov <apostnikov@gmail.com>",
-      "sourcePackage": "php84",
-      "repository": "official",
-      "installedSize": 63410,
-      "downloadSize": 23724,
-      "dependencies": {
-        "requires": [
-          "php84-common",
-          "so:libc.musl-x86_64.so.1",
-          "so:libsqlite3.so.0"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "php-sqlite3"
-        ],
-        "conflicts": [
-          "67fdf26750bd9f6c9bc89c750a3cd420f05de13b"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09b7aa1a1cd5b2c746e8",
-      "name": "meli",
-      "version": "0.8.13-r0",
-      "architecture": "amd64",
-      "summary": "terminal e-mail client",
-      "description": "terminal e-mail client",
-      "homepage": "https://meli-email.org/",
-      "license": "GPL-3.0-or-later",
-      "maintainer": "omni <omni+alpine@hack.org>",
-      "sourcePackage": "meli",
-      "repository": "official",
-      "installedSize": 11473336,
-      "downloadSize": 5050085,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1",
-          "so:libcrypto.so.3",
-          "so:libcurl.so.4",
-          "so:libgcc_s.so.1",
-          "so:libssl.so.3"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:meli=0.8.13-r0"
-        ],
-        "conflicts": [
-          "51a92a07471950fdec51e369276a5d490e94b147"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09bc1d2a374ec7d3f221",
-      "name": "gtk+3.0-dev",
-      "version": "3.24.52-r0",
-      "architecture": "amd64",
-      "summary": "The GTK+ Toolkit (v3) (development files)",
-      "description": "The GTK+ Toolkit (v3) (development files)",
-      "homepage": "https://www.gtk.org/",
-      "license": "LGPL-2.1-or-later",
-      "maintainer": "team/gnome <newbyte@postmarketos.org>",
-      "sourcePackage": "gtk+3.0",
-      "repository": "official",
-      "installedSize": 14151586,
-      "downloadSize": 1625559,
-      "dependencies": {
-        "requires": [
-          "gdk-pixbuf-dev",
-          "glib-dev",
-          "gtk+3.0=3.24.52-r0",
-          "libepoxy-dev",
-          "libxext-dev",
-          "libxi-dev",
-          "libxinerama-dev",
-          "libxkbcommon-dev",
-          "pc:atk",
-          "pc:atk-bridge-2.0",
-          "pc:atk>=2.35.1",
-          "pc:cairo",
-          "pc:cairo-gobject>=1.14.0",
-          "pc:cairo-xlib",
-          "pc:cairo>=1.14.0",
-          "pc:epoxy>=1.4",
-          "pc:fontconfig",
-          "pc:fribidi>=0.19.7",
-          "pc:gdk-pixbuf-2.0>=2.30.0",
-          "pc:gio-2.0>=2.57.2",
-          "pc:gio-unix-2.0>=2.57.2",
-          "pc:pango>=1.41.0",
-          "pc:pangocairo>=1.41.0",
-          "pc:pangoft2",
-          "pc:wayland-client>=1.14.91",
-          "pc:wayland-cursor>=1.14.91",
-          "pc:wayland-egl",
-          "pc:x11",
-          "pc:xcomposite",
-          "pc:xcursor",
-          "pc:xdamage",
-          "pc:xext",
-          "pc:xfixes",
-          "pc:xi",
-          "pc:xinerama",
-          "pc:xkbcommon>=0.2.0",
-          "pc:xrandr",
-          "pc:zlib",
-          "pkgconfig",
-          "so:libc.musl-x86_64.so.1",
-          "so:libgdk-3.so.0",
-          "so:libgdk_pixbuf-2.0.so.0",
-          "so:libgio-2.0.so.0",
-          "so:libglib-2.0.so.0",
-          "so:libgobject-2.0.so.0",
-          "so:libgtk-3.so.0",
-          "so:libintl.so.8",
-          "wayland-libs-client",
-          "wayland-libs-cursor",
-          "wayland-protocols"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:gtk-builder-tool=3.24.52-r0",
-          "cmd:gtk-encode-symbolic-svg=3.24.52-r0",
-          "cmd:gtk-query-settings=3.24.52-r0",
-          "pc:gail-3.0=3.24.52",
-          "pc:gdk-3.0=3.24.52",
-          "pc:gdk-broadway-3.0=3.24.52",
-          "pc:gdk-wayland-3.0=3.24.52",
-          "pc:gdk-x11-3.0=3.24.52",
-          "pc:gtk+-3.0=3.24.52",
-          "pc:gtk+-broadway-3.0=3.24.52",
-          "pc:gtk+-unix-print-3.0=3.24.52",
-          "pc:gtk+-wayland-3.0=3.24.52",
-          "pc:gtk+-x11-3.0=3.24.52"
-        ],
-        "conflicts": [
-          "81ac3343fbf0ae01ce4105c13ae592294cad8843"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09c0024dff191f992a5f",
-      "name": "ceph18-mgr-k8events",
-      "version": "18.2.7-r7",
-      "architecture": "amd64",
-      "summary": "kubernetes events module for ceph-mgr",
-      "description": "kubernetes events module for ceph-mgr",
-      "homepage": "https://ceph.io/en/",
-      "license": "LGPL-2.1-only AND LGPL-2.0-or-later AND GPL-2.0-only AND GPL-3.0-only AND CC-BY-SA-1.0 AND BSL-1.0 AND GPL-2.0-or-later WITH Autoconf-exception-2.0 AND BSD-3-Clause AND MIT AND custom",
-      "maintainer": "Duncan Bellamy <dunk@denkimushi.com>",
-      "sourcePackage": "ceph18",
-      "repository": "official",
-      "installedSize": 61412,
-      "downloadSize": 18057,
-      "dependencies": {
-        "requires": [
-          "ceph18-mgr=18.2.7-r7",
-          "py3-kubernetes",
-          "py3-yaml"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "773fc25d7c79ca36ed929814850be50d60443eba"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09c376ec2376e8b0c456",
-      "name": "texmf-dist-langczechslovak-doc",
-      "version": "2026.0-r0",
-      "architecture": "amd64",
-      "summary": "texmf-dist: Czech/Slovak (man pages)",
-      "description": "texmf-dist: Czech/Slovak (man pages)",
-      "homepage": "https://tug.org/texlive/",
-      "license": "LPPL-1.0 AND LPPL-1.1 AND LPPL-1.2 AND LPPL-1.3a AND LPPL-1.3c AND GPL-2.0-only",
-      "maintainer": "Marian Buschsieweke <marian.buschsieweke@posteo.net>",
-      "sourcePackage": "texmf-dist",
-      "repository": "official",
-      "installedSize": 2812,
-      "downloadSize": 4643,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "2b511f11629b28efb590224357123663870311fa"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09c406ecc7f43e941001",
-      "name": "x2goclient-doc",
-      "version": "4.1.2.3-r0",
-      "architecture": "amd64",
-      "summary": "A graphical client (Qt5) for the X2Go system (documentation)",
-      "description": "A graphical client (Qt5) for the X2Go system (documentation)",
-      "homepage": "https://wiki.x2go.org/doku.php",
-      "license": "GPL-2.0",
-      "maintainer": "Aron Barath <aron-alpine@mailbox.org>",
-      "sourcePackage": "x2goclient",
-      "repository": "official",
-      "installedSize": 4288,
-      "downloadSize": 6100,
-      "dependencies": {
-        "requires": [],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "f32c85da7ffe4cda0e8b2894cc0f07f2f6b58f82"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09c7c6d332f17c7ebc62",
-      "name": "perl-module-util",
-      "version": "1.09-r5",
-      "architecture": "amd64",
-      "summary": "Module name tools and transformations",
-      "description": "Module name tools and transformations",
-      "homepage": "https://metacpan.org/release/Module-Util/",
-      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
-      "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
-      "sourcePackage": "perl-module-util",
-      "repository": "official",
-      "installedSize": 15716,
-      "downloadSize": 7464,
-      "dependencies": {
-        "requires": [
-          "perl"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:pm_which=1.09-r5"
-        ],
-        "conflicts": [
-          "4ece6fc07c96d6859dde2ecc31b323fb3b355638"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09cc70fd4764bd3b54dd",
-      "name": "qemu-mips64el",
+      "id": "09bc890b207dcb641899",
+      "name": "qemu-x86_64",
       "version": "11.0.3-r0",
       "architecture": "amd64",
-      "summary": "Qemu mips64el emulator",
-      "description": "Qemu mips64el emulator",
+      "summary": "Qemu x86_64 emulator",
+      "description": "Qemu x86_64 emulator",
       "homepage": "https://qemu.org/",
       "license": "GPL-2.0-only AND LGPL-2.1-only",
       "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
       "sourcePackage": "qemu",
       "repository": "official",
-      "installedSize": 4154421,
-      "downloadSize": 1517437,
+      "installedSize": 3790032,
+      "downloadSize": 1456765,
       "dependencies": {
         "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "cmd:qemu-mips64el=11.0.3-r0"
+          "cmd:qemu-x86_64=11.0.3-r0"
         ],
         "conflicts": [
           "51049924607603c9d9b7132c187a7f31085d7a12"
@@ -2696,90 +2355,129 @@
       }
     },
     {
-      "id": "09cd73877b24f4199d80",
-      "name": "perl-template-toolkit",
-      "version": "3.105-r0",
+      "id": "09be3eeb595f69d3b957",
+      "name": "tesseract-ocr-data-slk",
+      "version": "5.5.2-r0",
       "architecture": "amd64",
-      "summary": "comprehensive template processing system",
-      "description": "comprehensive template processing system",
-      "homepage": "https://metacpan.org/release/Template-Toolkit/",
-      "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
+      "summary": "Tesseract language data for slk",
+      "description": "Tesseract language data for slk",
+      "homepage": "https://github.com/tesseract-ocr/tesseract/releases",
+      "license": "Apache-2.0",
       "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
-      "sourcePackage": "perl-template-toolkit",
+      "sourcePackage": "tesseract-ocr",
       "repository": "official",
-      "installedSize": 783069,
-      "downloadSize": 193257,
+      "installedSize": 14100356,
+      "downloadSize": 5984508,
       "dependencies": {
         "requires": [
-          "perl",
-          "perl-appconfig",
-          "so:libc.musl-x86_64.so.1"
+          "tesseract-ocr=5.5.2-r0"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "cmd:tpage=3.105-r0",
-          "cmd:ttree=3.105-r0"
-        ],
+        "provides": [],
         "conflicts": [
-          "c127a87d58d19beee35ab562b38b0b237d7cbbe2"
+          "88850a34f2f6651da71b267289f38cfdad477505"
         ],
         "replaces": []
       }
     },
     {
-      "id": "09d2791d5bbdfe9c4414",
-      "name": "exo-libs",
-      "version": "4.20.0-r0",
+      "id": "09c21b4f5383132f8f13",
+      "name": "ruby-ipaddress",
+      "version": "0.8.3-r3",
       "architecture": "amd64",
-      "summary": "Extensions to Xfce by os-cillation (libraries)",
-      "description": "Extensions to Xfce by os-cillation (libraries)",
-      "homepage": "https://docs.xfce.org/xfce/exo/start",
-      "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "exo",
-      "repository": "official",
-      "installedSize": 198528,
-      "downloadSize": 78837,
-      "dependencies": {
-        "requires": [
-          "so:libatk-1.0.so.0",
-          "so:libc.musl-x86_64.so.1",
-          "so:libcairo.so.2",
-          "so:libgdk-3.so.0",
-          "so:libgdk_pixbuf-2.0.so.0",
-          "so:libgio-2.0.so.0",
-          "so:libglib-2.0.so.0",
-          "so:libgobject-2.0.so.0",
-          "so:libgtk-3.so.0",
-          "so:libintl.so.8",
-          "so:libxfce4util.so.7"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "so:libexo-2.so.0=0.1.0"
-        ],
-        "conflicts": [
-          "31e7aacc5ace446f28a537ed062e7cff27547587"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09d76ac1745700682d2a",
-      "name": "py3-click-command-tree-pyc",
-      "version": "1.1.1-r2",
-      "architecture": "amd64",
-      "summary": "Precompiled Python bytecode for py3-click-command-tree",
-      "description": "Precompiled Python bytecode for py3-click-command-tree",
-      "homepage": "https://github.com/whwright/click-command-tree",
+      "summary": "Ruby library to handle IP addresses in a modern and productive way",
+      "description": "Ruby library to handle IP addresses in a modern and productive way",
+      "homepage": "https://github.com/ipaddress-gem/ipaddress",
       "license": "MIT",
-      "maintainer": "Bart Ribbers <bribbers@disroot.org>",
-      "sourcePackage": "py3-click-command-tree",
+      "maintainer": "Jakub Jirutka <jakub@jirutka.cz>",
+      "sourcePackage": "ruby-ipaddress",
       "repository": "official",
-      "installedSize": 3389,
-      "downloadSize": 3614,
+      "installedSize": 64957,
+      "downloadSize": 17309,
+      "dependencies": {
+        "requires": [
+          "ruby"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "db6431d8ab76f9e2e33c797706d5491cf689c890"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09c9d440aa78de62b418",
+      "name": "lua5.2-pgmoon",
+      "version": "1.17.0-r0",
+      "architecture": "amd64",
+      "summary": "A pure Lua Postgres driver for use in OpenResty & more (for Lua 5.2)",
+      "description": "A pure Lua Postgres driver for use in OpenResty & more (for Lua 5.2)",
+      "homepage": "https://github.com/leafo/pgmoon",
+      "license": "MIT",
+      "maintainer": "Will Sinatra <wpsinatra@gmail.com>",
+      "sourcePackage": "lua-pgmoon",
+      "repository": "official",
+      "installedSize": 104246,
+      "downloadSize": 30332,
+      "dependencies": {
+        "requires": [
+          "lua5.2"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "774fea92b92c700a87d49c2cf9debcf51036bb45"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09c9ff0f2e6834893514",
+      "name": "libretro-beetle-ngp",
+      "version": "0_git20241021-r0",
+      "architecture": "amd64",
+      "summary": "standalone port of Mednafen NGP to the libretro API",
+      "description": "standalone port of Mednafen NGP to the libretro API",
+      "homepage": "https://github.com/libretro/beetle-ngp-libretro",
+      "license": "GPL-2.0-only",
+      "maintainer": "David Demelier <markand@malikania.fr>",
+      "sourcePackage": "libretro-beetle-ngp",
+      "repository": "official",
+      "installedSize": 271816,
+      "downloadSize": 101100,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1",
+          "so:libgcc_s.so.1",
+          "so:libstdc++.so.6"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "a0bc1b46f24b2bebd1bd6b4047a2d470cb8dd595"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09ce24f43c521c896a06",
+      "name": "py3-dt-schema-pyc",
+      "version": "2025.12-r1",
+      "architecture": "amd64",
+      "summary": "Precompiled Python bytecode for py3-dt-schema",
+      "description": "Precompiled Python bytecode for py3-dt-schema",
+      "homepage": "https://github.com/devicetree-org/dt-schema",
+      "license": "BSD-2-Clause",
+      "maintainer": "Iskren Chernev <me@iskren.info>",
+      "sourcePackage": "py3-dt-schema",
+      "repository": "official",
+      "installedSize": 122071,
+      "downloadSize": 56087,
       "dependencies": {
         "requires": [
           "python3~3.14"
@@ -2788,190 +2486,124 @@
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "acf218729e5fab59fbadd0c159aa09fcad73a201"
+          "8ceb0df394905275a084eb99f598386b127ed630"
         ],
         "replaces": []
       }
     },
     {
-      "id": "09d868d9863e20e3a6b1",
-      "name": "kio5-dbg",
-      "version": "5.116.0-r0",
+      "id": "09ce745642f58098130a",
+      "name": "logstalgia",
+      "version": "1.1.5-r1",
       "architecture": "amd64",
-      "summary": "Resource and network access abstraction (debug symbols)",
-      "description": "Resource and network access abstraction (debug symbols)",
-      "homepage": "https://community.kde.org/Frameworks",
-      "license": "LGPL-2.1-only AND LGPL-2.1-or-later AND (LGPL-2.1-only OR LGPL-3.0-only)",
-      "maintainer": "team/kde <bribbers@disroot.org>",
-      "sourcePackage": "kio5",
+      "summary": "A website access log visualisation tool",
+      "description": "A website access log visualisation tool",
+      "homepage": "https://logstalgia.io/",
+      "license": "GPL-3.0-or-later",
+      "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
+      "sourcePackage": "logstalgia",
       "repository": "official",
-      "installedSize": 143739072,
-      "downloadSize": 56300713,
+      "installedSize": 4830468,
+      "downloadSize": 2230820,
       "dependencies": {
         "requires": [
-          "!kio5-kwallet<5.116.0-r0",
-          "!kio5-kwallet>5.116.0-r0",
-          "!kio5<5.116.0-r0",
-          "!kio5>5.116.0-r0"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "44ce39a091100c59a3bd90df6c0312d302be3171"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09db32995eafd63031d5",
-      "name": "gflags-dev",
-      "version": "2.3.0-r0",
-      "architecture": "amd64",
-      "summary": "The gflags package contains a C++ library that implements commandline flags processing. (development files)",
-      "description": "The gflags package contains a C++ library that implements commandline flags processing. (development files)",
-      "homepage": "https://gflags.github.io/gflags/",
-      "license": "BSD-3-Clause",
-      "maintainer": "wener <wenermail@gmail.com>",
-      "sourcePackage": "gflags",
-      "repository": "official",
-      "installedSize": 518424,
-      "downloadSize": 143061,
-      "dependencies": {
-        "requires": [
-          "gflags=2.3.0-r0",
-          "pkgconfig"
+          "so:libGL.so.1",
+          "so:libGLEW.so.2.3",
+          "so:libGLU.so.1",
+          "so:libSDL2-2.0.so.0",
+          "so:libSDL2_image-2.0.so.0",
+          "so:libboost_filesystem.so.1.84.0",
+          "so:libc.musl-x86_64.so.1",
+          "so:libfreetype.so.6",
+          "so:libgcc_s.so.1",
+          "so:libpcre2-8.so.0",
+          "so:libpng16.so.16",
+          "so:libstdc++.so.6"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "pc:gflags=2.3.0"
+          "cmd:logstalgia=1.1.5-r1"
         ],
         "conflicts": [
-          "475260aef7eb251a5bcedd7c85f4b647ed4789af"
+          "fbd9ad4d02deba044955bc89b055804a12705327"
         ],
         "replaces": []
       }
     },
     {
-      "id": "09e3db1adad4b45f1bab",
-      "name": "audit-static",
-      "version": "4.1.2-r6",
+      "id": "09d9ceed2f6319f95041",
+      "name": "folks-lang",
+      "version": "0.15.12-r1",
       "architecture": "amd64",
-      "summary": "User space tools for kernel auditing (static library)",
-      "description": "User space tools for kernel auditing (static library)",
-      "homepage": "https://people.redhat.com/sgrubb/audit/",
+      "summary": "Languages for package folks",
+      "description": "Languages for package folks",
+      "homepage": "https://gitlab.gnome.org/GNOME/folks",
       "license": "LGPL-2.1-or-later",
-      "maintainer": "Achill Gilgenast <achill@achill.org>",
-      "sourcePackage": "audit",
+      "maintainer": "team/gnome <achill@achill.org>",
+      "sourcePackage": "folks",
       "repository": "official",
-      "installedSize": 1017872,
-      "downloadSize": 393319,
-      "dependencies": {
-        "requires": [
-          "audit-dev"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [],
-        "conflicts": [
-          "92a89b25f588b9343e35f3282d195366a23ccde0"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09e3e341c33f1c20d9af",
-      "name": "xfce4-mpc-plugin-lang",
-      "version": "0.6.0-r0",
-      "architecture": "amd64",
-      "summary": "Languages for package xfce4-mpc-plugin",
-      "description": "Languages for package xfce4-mpc-plugin",
-      "homepage": "https://docs.xfce.org/panel-plugins/xfce4-mpc-plugin/start",
-      "license": "ISC",
-      "maintainer": "Saijin-Naib <Saijin-Naib_package-maintenance@outlook.com>",
-      "sourcePackage": "xfce4-mpc-plugin",
-      "repository": "official",
-      "installedSize": 134119,
-      "downloadSize": 39072,
+      "installedSize": 1284289,
+      "downloadSize": 262852,
       "dependencies": {
         "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "62790f513f8a80ce5456a492247256861ad61e3d"
+          "e36588e0e82b1aaa20d042f68449857eaea084ff"
         ],
         "replaces": []
       }
     },
     {
-      "id": "09e4689e2fe99de99dc7",
-      "name": "vim",
-      "version": "9.2.1091-r0",
+      "id": "09dcdd959ccd0d83f861",
+      "name": "raku-base64",
+      "version": "0.1.0-r3",
       "architecture": "amd64",
-      "summary": "Improved vi-style text editor",
-      "description": "Improved vi-style text editor",
-      "homepage": "https://www.vim.org/",
-      "license": "Vim",
-      "maintainer": "mio <miyopan@e.email>",
-      "sourcePackage": "vim",
+      "summary": "Lazy base64 encoding and decoding routines",
+      "description": "Lazy base64 encoding and decoding routines",
+      "homepage": "https://github.com/ugexe/Raku-Base64",
+      "license": "Artistic-2.0",
+      "sourcePackage": "raku-base64",
       "repository": "official",
-      "installedSize": 3462224,
-      "downloadSize": 1812927,
+      "installedSize": 45804,
+      "downloadSize": 20522,
       "dependencies": {
         "requires": [
-          "so:libc.musl-x86_64.so.1",
-          "so:libncursesw.so.6",
-          "vim-common=9.2.1091-r0",
-          "xxd=9.2.1091-r0"
+          "rakudo"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "cmd:ex=9.2.1091-r0",
-          "cmd:rview=9.2.1091-r0",
-          "cmd:rvim=9.2.1091-r0",
-          "cmd:view=9.2.1091-r0",
-          "cmd:vim=9.2.1091-r0"
-        ],
+        "provides": [],
         "conflicts": [
-          "b7c31805c49a6e75b725aee8601e2e99e1d693e9"
+          "a9e2a2dc46f377eb25884f7fea9834492de7f518"
         ],
         "replaces": []
       }
     },
     {
-      "id": "09e59e5ae4cd2cdb9af4",
-      "name": "libvirt-glib",
-      "version": "5.0.0-r0",
+      "id": "09df04b52da7cdac8118",
+      "name": "libhandy1-dbg",
+      "version": "1.8.3-r0",
       "architecture": "amd64",
-      "summary": "libvirt glib integration for events",
-      "description": "libvirt glib integration for events",
-      "homepage": "https://libvirt.org/",
+      "summary": "Library full of GTK+ widgets for mobile phones (debug symbols)",
+      "description": "Library full of GTK+ widgets for mobile phones (debug symbols)",
+      "homepage": "https://gitlab.gnome.org/GNOME/libhandy",
       "license": "LGPL-2.0-or-later",
-      "maintainer": "Francesco Colista <fcolista@alpinelinux.org>",
-      "sourcePackage": "libvirt-glib",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "libhandy1",
       "repository": "official",
-      "installedSize": 562092,
-      "downloadSize": 167484,
+      "installedSize": 2366008,
+      "downloadSize": 958578,
       "dependencies": {
         "requires": [
-          "so:libc.musl-x86_64.so.1",
-          "so:libgio-2.0.so.0",
-          "so:libglib-2.0.so.0",
-          "so:libgobject-2.0.so.0",
-          "so:libintl.so.8",
-          "so:libvirt.so.0",
-          "so:libxml2.so.2"
+          "!libhandy1<1.8.3-r0",
+          "!libhandy1>1.8.3-r0"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "so:libvirt-gconfig-1.0.so.0=0.5000.0",
-          "so:libvirt-glib-1.0.so.0=0.5000.0",
-          "so:libvirt-gobject-1.0.so.0=0.5000.0"
-        ],
+        "provides": [],
         "conflicts": [
           "6bd45b53fb316dc01bda59f5feaf1e127eb64f22"
         ],
@@ -2979,282 +2611,414 @@
       }
     },
     {
-      "id": "09e5e439c5956e57745f",
-      "name": "nagios-plugins-rpc",
-      "version": "2.5-r0",
+      "id": "09e0c8e6d17355c2ab46",
+      "name": "gnome-sudoku",
+      "version": "50.2.1-r0",
       "architecture": "amd64",
-      "summary": "Nagios plugin check_rpc",
-      "description": "Nagios plugin check_rpc",
-      "homepage": "https://nagios-plugins.org/",
-      "license": "GPL-3.0-only",
-      "maintainer": "Jeff Bilyk <jbilyk@gmail.com>",
-      "sourcePackage": "nagios-plugins",
+      "summary": "Test your logic skills in this number grid puzzle",
+      "description": "Test your logic skills in this number grid puzzle",
+      "homepage": "https://gitlab.gnome.org/GNOME/gnome-sudoku/-/wikis/home",
+      "license": "GPL-3.0-or-later",
+      "maintainer": "Achill Gilgenast <achill@achill.org>",
+      "sourcePackage": "gnome-sudoku",
       "repository": "official",
-      "installedSize": 9668,
-      "downloadSize": 4954,
+      "installedSize": 346444,
+      "downloadSize": 125926,
       "dependencies": {
         "requires": [
-          "nagios-plugins",
+          "so:libadwaita-1.so.0",
+          "so:libc.musl-x86_64.so.1",
+          "so:libcairo.so.2",
+          "so:libgee-0.8.so.2",
+          "so:libgio-2.0.so.0",
+          "so:libglib-2.0.so.0",
+          "so:libgobject-2.0.so.0",
+          "so:libgtk-4.so.1",
+          "so:libintl.so.8",
+          "so:libjson-glib-1.0.so.0",
+          "so:libpango-1.0.so.0",
+          "so:libpangocairo-1.0.so.0",
+          "so:libqqwing.so.2",
+          "so:libstdc++.so.6"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:gnome-sudoku=50.2.1-r0"
+        ],
+        "conflicts": [
+          "94e0cec3a72f9435705c2fb93807a13a5081ee6c"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09e1687462435091192f",
+      "name": "prometheus-libvirt-exporter-openrc",
+      "version": "2.3.3-r26",
+      "architecture": "amd64",
+      "summary": "Prometheus libvirt exporter (OpenRC init scripts)",
+      "description": "Prometheus libvirt exporter (OpenRC init scripts)",
+      "homepage": "https://github.com/Tinkoff/libvirt-exporter",
+      "license": "Apache-2.0",
+      "maintainer": "Marino Pascual <mpascual@philips.com>",
+      "sourcePackage": "prometheus-libvirt-exporter",
+      "repository": "official",
+      "installedSize": 468,
+      "downloadSize": 1941,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "c02e0c037b032adc0301e2027ad0f3a1c0b98a7a"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09e4a0b549fcd2da6703",
+      "name": "syslog-ng-geoip",
+      "version": "4.11.0-r0",
+      "architecture": "amd64",
+      "summary": "Next generation logging daemon (geoip module)",
+      "description": "Next generation logging daemon (geoip module)",
+      "homepage": "https://www.syslog-ng.com/products/open-source-log-management/",
+      "license": "GPL-2.0-or-later",
+      "maintainer": "Jakub Jirutka <jakub@jirutka.cz>",
+      "sourcePackage": "syslog-ng",
+      "repository": "official",
+      "installedSize": 47120,
+      "downloadSize": 14159,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1",
+          "so:libevtlog-4.11.so.0",
+          "so:libglib-2.0.so.0",
+          "so:libmaxminddb.so.0",
+          "so:libsyslog-ng-4.11.so.0"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "07352b71cd49e7207884ef9eb3e8e83d1a2b7699"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09e50a718236153cc0ee",
+      "name": "xfce4-xkb-plugin",
+      "version": "0.9.0-r1",
+      "architecture": "amd64",
+      "summary": "plugin to switch keyboard layouts for the Xfce4 panel",
+      "description": "plugin to switch keyboard layouts for the Xfce4 panel",
+      "homepage": "https://goodies.xfce.org/projects/panel-plugins/xfce4-xkb-plugin",
+      "license": "GPL-2.0-or-later",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "xfce4-xkb-plugin",
+      "repository": "official",
+      "installedSize": 946687,
+      "downloadSize": 300096,
+      "dependencies": {
+        "requires": [
+          "so:libX11.so.6",
+          "so:libc.musl-x86_64.so.1",
+          "so:libcairo.so.2",
+          "so:libgarcon-1.so.0",
+          "so:libgdk-3.so.0",
+          "so:libgdk_pixbuf-2.0.so.0",
+          "so:libglib-2.0.so.0",
+          "so:libgobject-2.0.so.0",
+          "so:libgtk-3.so.0",
+          "so:libpango-1.0.so.0",
+          "so:libpangocairo-1.0.so.0",
+          "so:librsvg-2.so.2",
+          "so:libwnck-3.so.0",
+          "so:libxfce4panel-2.0.so.4",
+          "so:libxfce4ui-2.so.0",
+          "so:libxfce4util.so.7",
+          "so:libxfconf-0.so.3",
+          "so:libxklavier.so.16"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "d401b1fa2a4c418d1865a9751d48c94ddd298a9a"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09e7e75f608c5d4d0911",
+      "name": "liferea",
+      "version": "1.16.12-r0",
+      "architecture": "amd64",
+      "summary": "Desktop news aggregator for online news feeds and weblogs",
+      "description": "Desktop news aggregator for online news feeds and weblogs",
+      "homepage": "https://lzone.de/liferea",
+      "license": "GPL-2.0-or-later",
+      "maintainer": "Erwan Rouchet <lucidiot@brainshit.fr>",
+      "sourcePackage": "liferea",
+      "repository": "official",
+      "installedSize": 1579185,
+      "downloadSize": 425313,
+      "dependencies": {
+        "requires": [
+          "libpeas2-python3",
+          "py3-gobject3",
+          "so:libc.musl-x86_64.so.1",
+          "so:libfribidi.so.0",
+          "so:libgdk-3.so.0",
+          "so:libgdk_pixbuf-2.0.so.0",
+          "so:libgio-2.0.so.0",
+          "so:libgirepository-2.0.so.0",
+          "so:libglib-2.0.so.0",
+          "so:libgobject-2.0.so.0",
+          "so:libgtk-3.so.0",
+          "so:libintl.so.8",
+          "so:libjavascriptcoregtk-4.1.so.0",
+          "so:libjson-glib-1.0.so.0",
+          "so:libpango-1.0.so.0",
+          "so:libpeas-2.so.0",
+          "so:libsoup-3.0.so.0",
+          "so:libsqlite3.so.0",
+          "so:libwebkit2gtk-4.1.so.0",
+          "so:libxml2.so.2",
+          "so:libxslt.so.1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "cmd:liferea-add-feed=1.16.12-r0",
+          "cmd:liferea=1.16.12-r0"
+        ],
+        "conflicts": [
+          "79c7cf4bea78cf996d11f84ec4e1173954d12511"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09e96ca2938d3039ef0d",
+      "name": "libflac",
+      "version": "1.4.3-r2",
+      "architecture": "amd64",
+      "summary": "Free Lossless Audio Codec (libFLAC)",
+      "description": "Free Lossless Audio Codec (libFLAC)",
+      "homepage": "https://xiph.org/flac/",
+      "license": "BSD-3-Clause AND GPL-2.0-or-later",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "flac",
+      "repository": "official",
+      "installedSize": 423640,
+      "downloadSize": 205362,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1",
+          "so:libogg.so.0"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "so:libFLAC.so.12=12.1.0"
+        ],
+        "conflicts": [
+          "253ee9b07f7696cc02f7dda9df81793e506a6c2d"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09eaef722c3c00a23737",
+      "name": "zizmor-doc",
+      "version": "1.25.2-r0",
+      "architecture": "amd64",
+      "summary": "A static analysis tool for GitHub Actions (documentation)",
+      "description": "A static analysis tool for GitHub Actions (documentation)",
+      "homepage": "https://github.com/zizmorcore/zizmor",
+      "license": "MIT",
+      "maintainer": "Thiago Perrotta <tbperrotta@gmail.com>",
+      "sourcePackage": "zizmor",
+      "repository": "official",
+      "installedSize": 1109,
+      "downloadSize": 2331,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [
+          "baa837f208b877330d6b0dc7fb6aebc40e67d0ef"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09f2d0fdf2de32dcaa64",
+      "name": "kxmlgui5",
+      "version": "5.116.0-r0",
+      "architecture": "amd64",
+      "summary": "User configurable main windows",
+      "description": "User configurable main windows",
+      "homepage": "https://community.kde.org/Frameworks",
+      "license": "LGPL-2.1-only AND LGPL-2.1-or-later",
+      "maintainer": "team/kde <bribbers@disroot.org>",
+      "sourcePackage": "kxmlgui5",
+      "repository": "official",
+      "installedSize": 1016756,
+      "downloadSize": 369051,
+      "dependencies": {
+        "requires": [
+          "so:libKF5ConfigCore.so.5",
+          "so:libKF5ConfigGui.so.5",
+          "so:libKF5ConfigWidgets.so.5",
+          "so:libKF5CoreAddons.so.5",
+          "so:libKF5GlobalAccel.so.5",
+          "so:libKF5GuiAddons.so.5",
+          "so:libKF5I18n.so.5",
+          "so:libKF5IconThemes.so.5",
+          "so:libKF5ItemViews.so.5",
+          "so:libKF5WidgetsAddons.so.5",
+          "so:libQt5Core.so.5",
+          "so:libQt5DBus.so.5",
+          "so:libQt5Gui.so.5",
+          "so:libQt5Network.so.5",
+          "so:libQt5PrintSupport.so.5",
+          "so:libQt5Widgets.so.5",
+          "so:libQt5Xml.so.5",
+          "so:libc.musl-x86_64.so.1",
+          "so:libstdc++.so.6"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "so:libKF5XmlGui.so.5=5.116.0"
+        ],
+        "conflicts": [
+          "44ce39a091100c59a3bd90df6c0312d302be3171"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09f4afe6749bdffbd4f8",
+      "name": "fann-fixed",
+      "version": "2.2.0-r4",
+      "architecture": "amd64",
+      "summary": "Fast Artificial Neural Network Library (fixed)",
+      "description": "Fast Artificial Neural Network Library (fixed)",
+      "homepage": "https://github.com/libfann/fann/",
+      "license": "LGPL-2.0-or-later",
+      "maintainer": "Valery Kartel <valery.kartel@gmail.com>",
+      "sourcePackage": "fann",
+      "repository": "official",
+      "installedSize": 54984,
+      "downloadSize": 22458,
+      "dependencies": {
+        "requires": [
+          "so:libc.musl-x86_64.so.1"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "so:libfixedfann.so.2=2.2.0"
+        ],
+        "conflicts": [
+          "536f8e2b18d2ea0220f749a517fc726728dbc27b"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09fbce726ccac4093846",
+      "name": "py3-swagger-spec-validator",
+      "version": "3.0.4-r4",
+      "architecture": "amd64",
+      "summary": "Validation of Swagger specifications",
+      "description": "Validation of Swagger specifications",
+      "homepage": "https://pypi.python.org/project/swagger-spec-validator",
+      "license": "Apache-2.0",
+      "maintainer": "Antoine Martin (ayakael) <dev@ayakael.net>",
+      "sourcePackage": "py3-swagger-spec-validator",
+      "repository": "official",
+      "installedSize": 133617,
+      "downloadSize": 24340,
+      "dependencies": {
+        "requires": [
+          "py3-importlib-resources",
+          "py3-jsonschema",
+          "py3-typing-extensions",
+          "py3-yaml",
+          "python3~3.14"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "py3.14:swagger_spec_validator=3.0.4-r4"
+        ],
+        "conflicts": [
+          "4a201614214227d2c7f842eaa67dd34f926b4836"
+        ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "09fd903aa2ee3c4a82c7",
+      "name": "perl-ref-util",
+      "version": "0.204-r5",
+      "architecture": "amd64",
+      "summary": "Utility functions for checking references",
+      "description": "Utility functions for checking references",
+      "homepage": "https://metacpan.org/release/Ref-Util/",
+      "license": "MIT",
+      "sourcePackage": "perl-ref-util",
+      "repository": "official",
+      "installedSize": 19524,
+      "downloadSize": 7172,
+      "dependencies": {
+        "requires": [
           "perl"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [
-          "0343799335b4cf76f8ab6cee52f1fd4eb0614d51"
+          "a9e2a2dc46f377eb25884f7fea9834492de7f518"
         ],
         "replaces": []
       }
     },
     {
-      "id": "09e661d961157ef7514e",
-      "name": "cargo-expand",
-      "version": "1.0.122-r0",
+      "id": "09fe2b88a77f8f1a69dd",
+      "name": "py3-injector",
+      "version": "0.21.0-r3",
       "architecture": "amd64",
-      "summary": "Cargo subcommand to show result of macro expansion",
-      "description": "Cargo subcommand to show result of macro expansion",
-      "homepage": "https://github.com/dtolnay/cargo-expand",
-      "license": "MIT OR Apache-2.0",
-      "maintainer": "Matthias Ahouansou <matthias@ahouansou.cz>",
-      "sourcePackage": "cargo-expand",
-      "repository": "official",
-      "installedSize": 4769384,
-      "downloadSize": 2648234,
-      "dependencies": {
-        "requires": [
-          "cargo",
-          "so:libc.musl-x86_64.so.1",
-          "so:libgcc_s.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:cargo-expand=1.0.122-r0"
-        ],
-        "conflicts": [
-          "c27454039d211f2be587ae5a3fb487afcff6dd82"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09e865fe1280e28bd510",
-      "name": "incus-utils",
-      "version": "7.0.1-r1",
-      "architecture": "amd64",
-      "summary": "Incus utilities and scripts",
-      "description": "Incus utilities and scripts",
-      "homepage": "https://github.com/lxc/incus",
-      "license": "Apache-2.0",
-      "maintainer": "Leonardo Arena <rnalrd@alpinelinux.org>",
-      "sourcePackage": "incus",
-      "repository": "official",
-      "installedSize": 100299093,
-      "downloadSize": 38593782,
-      "dependencies": {
-        "requires": [
-          "incus",
-          "jq",
-          "losetup",
-          "py3-lxc",
-          "so:libacl.so.1",
-          "so:libc.musl-x86_64.so.1",
-          "so:libgcc_s.so.1",
-          "so:libintl.so.8",
-          "so:libsqlite3.so.0"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:empty-incus.sh=7.0.1-r1",
-          "cmd:fuidshift=7.0.1-r1",
-          "cmd:generate-config=7.0.1-r1",
-          "cmd:generate-database=7.0.1-r1",
-          "cmd:incus-benchmark=7.0.1-r1",
-          "cmd:incus-migrate=7.0.1-r1",
-          "cmd:incus-simplestreams=7.0.1-r1",
-          "cmd:mini-oidc=7.0.1-r1",
-          "cmd:sysinfo=7.0.1-r1",
-          "cmd:tls2jwt=7.0.1-r1"
-        ],
-        "conflicts": [
-          "1e1aed58b7720fcb6b1859043d543b33019d8c4f"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09e90122b890fac0c848",
-      "name": "py3-vine",
-      "version": "5.1.0-r1",
-      "architecture": "amd64",
-      "summary": "futures and promises implementation for python",
-      "description": "futures and promises implementation for python",
-      "homepage": "https://github.com/celery/vine",
+      "summary": "Python dependency injection framework, inspired by Guice",
+      "description": "Python dependency injection framework, inspired by Guice",
+      "homepage": "https://github.com/alecthomas/injector",
       "license": "BSD-3-Clause",
-      "maintainer": "Antoine Martin (ayakael) <dev@ayakael.net>",
-      "sourcePackage": "py3-vine",
+      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
+      "sourcePackage": "py3-injector",
       "repository": "official",
-      "installedSize": 23264,
-      "downloadSize": 9924,
+      "installedSize": 65222,
+      "downloadSize": 20445,
       "dependencies": {
         "requires": [
+          "py3-typing-extensions",
           "python3",
           "python3~3.14"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "py-vine=5.1.0-r1",
-          "py3.14:vine=5.1.0-r1"
+          "py3.14:injector=0.21.0-r3"
         ],
         "conflicts": [
-          "d847525bc75765cd197dcd35a5f28ff3268f1021"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09ef981f0a4495dd8556",
-      "name": "pcaudiolib",
-      "version": "1.3-r0",
-      "architecture": "amd64",
-      "summary": "C API to different audio devices",
-      "description": "C API to different audio devices",
-      "homepage": "https://github.com/espeak-ng/pcaudiolib",
-      "license": "GPL-3.0-or-later",
-      "maintainer": "Dekedro <dekedro@protonmail.com>",
-      "sourcePackage": "pcaudiolib",
-      "repository": "official",
-      "installedSize": 13936,
-      "downloadSize": 5266,
-      "dependencies": {
-        "requires": [
-          "so:libasound.so.2",
-          "so:libc.musl-x86_64.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "so:libpcaudio.so.0=0.0.1"
-        ],
-        "conflicts": [
-          "9a322ab451b1f8116748f7db5cfbc11286e8ae61"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09efc1f7e20a89ca9bcc",
-      "name": "indi-3rdparty-gphoto",
-      "version": "2.1.5.1-r2",
-      "architecture": "amd64",
-      "summary": "gphoto 3rd party INDI driver",
-      "description": "gphoto 3rd party INDI driver",
-      "homepage": "https://github.com/indilib/indi-3rdparty",
-      "license": "LGPL-2.1-only",
-      "maintainer": "Clayton Craft <clayton@craftyguy.net>",
-      "sourcePackage": "indi-3rdparty",
-      "repository": "official",
-      "installedSize": 248993,
-      "downloadSize": 94796,
-      "dependencies": {
-        "requires": [
-          "so:libc.musl-x86_64.so.1",
-          "so:libcfitsio.so.10",
-          "so:libgcc_s.so.1",
-          "so:libgphoto2.so.6",
-          "so:libgphoto2_port.so.12",
-          "so:libindidriver.so.2",
-          "so:libjpeg.so.8",
-          "so:libraw.so.25",
-          "so:libstdc++.so.6"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:gphoto_camera_test=2.1.5.1-r2",
-          "cmd:indi_canon_ccd=2.1.5.1-r2",
-          "cmd:indi_fuji_ccd=2.1.5.1-r2",
-          "cmd:indi_gphoto_ccd=2.1.5.1-r2",
-          "cmd:indi_nikon_ccd=2.1.5.1-r2",
-          "cmd:indi_pentax_ccd=2.1.5.1-r2",
-          "cmd:indi_sony_ccd=2.1.5.1-r2"
-        ],
-        "conflicts": [
-          "3783875737965168611c4990c06af950f16fcd4f"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09f2fe35761284b67776",
-      "name": "openbox-dev",
-      "version": "3.6.1-r8",
-      "architecture": "amd64",
-      "summary": "A highly configurable and standards-compliant X11 window manager (development files)",
-      "description": "A highly configurable and standards-compliant X11 window manager (development files)",
-      "homepage": "http://openbox.org",
-      "license": "GPL-2.0-or-later",
-      "maintainer": "Natanael Copa <ncopa@alpinelinux.org>",
-      "sourcePackage": "openbox",
-      "repository": "official",
-      "installedSize": 63814,
-      "downloadSize": 17037,
-      "dependencies": {
-        "requires": [
-          "libxcursor-dev",
-          "libxinerama-dev",
-          "libxrandr-dev",
-          "openbox-libs=3.6.1-r8",
-          "pc:glib-2.0",
-          "pc:imlib2",
-          "pc:librsvg-2.0",
-          "pc:libxml-2.0",
-          "pc:pangoxft",
-          "pc:xft",
-          "pkgconfig",
-          "startup-notification-dev"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "pc:obrender-3.5=3.6",
-          "pc:obt-3.5=3.6"
-        ],
-        "conflicts": [
-          "6867e384dbfbd0b8efadbca989e9778190e89496"
-        ],
-        "replaces": []
-      }
-    },
-    {
-      "id": "09fac72c0071a206838c",
-      "name": "signal-tlsd",
-      "version": "0.1.1-r0",
-      "architecture": "amd64",
-      "summary": "Standalone Rust implementation of Signal's domain fronting TLS proxy",
-      "description": "Standalone Rust implementation of Signal's domain fronting TLS proxy",
-      "homepage": "https://github.com/kpcyrd/signal-tlsd",
-      "license": "MIT-0",
-      "maintainer": "kpcyrd <git@rxv.cc>",
-      "sourcePackage": "signal-tlsd",
-      "repository": "official",
-      "installedSize": 3470944,
-      "downloadSize": 1446044,
-      "dependencies": {
-        "requires": [
-          "/bin/sh",
-          "so:libc.musl-x86_64.so.1",
-          "so:libgcc_s.so.1"
-        ],
-        "recommends": [],
-        "suggests": [],
-        "provides": [
-          "cmd:signal-tlsd=0.1.1-r0"
-        ],
-        "conflicts": [
-          "fc0f8862fc8b6bf25eae35d77368c1aacfa77caf"
+          "b8967265837be6296e06e45b50dd491c17bf11b4"
         ],
         "replaces": []
       }

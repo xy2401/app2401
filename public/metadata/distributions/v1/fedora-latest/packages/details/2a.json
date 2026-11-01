@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "fedora",
   "shard": "2a",
   "items": [
@@ -142,6 +142,53 @@
       }
     },
     {
+      "id": "2a3523775de9a3c01a8c",
+      "name": "wine",
+      "epoch": "0",
+      "version": "11.20",
+      "release": "1.fc44",
+      "architecture": "amd64",
+      "summary": "A compatibility layer for windows applications",
+      "description": "Wine as a compatibility layer for UNIX to run Windows applications. This\npackage includes a program loader, which allows unmodified Windows\n3.x/9x/NT binaries to run on x86 and x86_64 Unixes. Wine can use native system\n.dll files if they are available.\n\nIn Fedora wine is a meta-package which will install everything needed for wine\nto work smoothly. Smaller setups can be achieved by installing some of the\nwine-* sub packages.",
+      "homepage": "https://www.winehq.org/",
+      "license": "LGPL-2.1-or-later",
+      "sourcePackage": "wine-11.20-1.fc44.src.rpm",
+      "repository": "updates",
+      "installedSize": 0,
+      "downloadSize": 11361,
+      "dependencies": {
+        "requires": [
+          "/usr/bin/ntlm_auth",
+          "mesa-dri-drivers(x86-64)",
+          "mingw32-wine-gecko = 2.47.4",
+          "mingw64-wine-gecko = 2.47.4",
+          "wine-cms(x86-64) = 11.20-1.fc44",
+          "wine-common = 11.20-1.fc44",
+          "wine-core(x86-64) = 11.20-1.fc44",
+          "wine-desktop = 11.20-1.fc44",
+          "wine-ldap(x86-64) = 11.20-1.fc44",
+          "wine-mono = 11.3.0",
+          "wine-opencl(x86-64) = 11.20-1.fc44",
+          "wine-pulseaudio(x86-64) = 11.20-1.fc44",
+          "wine-smartcard(x86-64) = 11.20-1.fc44",
+          "wine-twain(x86-64) = 11.20-1.fc44",
+          "wine-winefonts = 11.20-1.fc44"
+        ],
+        "recommends": [
+          "dosbox-staging",
+          "gstreamer1-plugins-good(x86-64)",
+          "wine-dxvk(x86-64)"
+        ],
+        "suggests": [],
+        "provides": [
+          "wine = 11.20-1.fc44",
+          "wine(x86-64) = 11.20-1.fc44"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "2a657ff16dcb5f1416b3",
       "name": "perl-Font-TTF",
       "epoch": "0",
@@ -264,23 +311,23 @@
       "id": "2a6919e9cfbc71921950",
       "name": "mod_ssl",
       "epoch": "1",
-      "version": "2.4.68",
+      "version": "2.4.69",
       "release": "1.fc44",
       "architecture": "amd64",
       "summary": "SSL/TLS module for the Apache HTTP Server",
       "description": "The mod_ssl module provides strong cryptography for the Apache HTTP\nserver via the Secure Sockets Layer (SSL) and Transport Layer\nSecurity (TLS) protocols.",
       "homepage": "https://httpd.apache.org/",
       "license": "Apache-2.0 AND (BSD-3-Clause AND metamail AND HPND-sell-variant AND Spencer-94)",
-      "sourcePackage": "httpd-2.4.68-1.fc44.src.rpm",
+      "sourcePackage": "httpd-2.4.69-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 263266,
-      "downloadSize": 110221,
+      "installedSize": 263234,
+      "downloadSize": 110549,
       "dependencies": {
         "requires": [
           "/usr/bin/bash",
           "/usr/bin/hostname",
           "/usr/bin/sh",
-          "httpd-core = 2.4.68-1.fc44",
+          "httpd-core = 2.4.69-1.fc44",
           "httpd-filesystem",
           "httpd-mmn = 20120211x8664",
           "libc.so.6(GLIBC_2.38)(64bit)",
@@ -289,15 +336,14 @@
           "libssl.so.3()(64bit)",
           "libssl.so.3(OPENSSL_3.0.0)(64bit)",
           "rtld(GNU_HASH)",
-          "sscg >= 3.0.3",
-          "user(apache)"
+          "sscg >= 3.0.3"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "config(mod_ssl) = 1:2.4.68-1.fc44",
-          "mod_ssl = 1:2.4.68-1.fc44",
-          "mod_ssl(x86-64) = 1:2.4.68-1.fc44"
+          "config(mod_ssl) = 1:2.4.69-1.fc44",
+          "mod_ssl = 1:2.4.69-1.fc44",
+          "mod_ssl(x86-64) = 1:2.4.69-1.fc44"
         ],
         "conflicts": [
           "mod_nss",
@@ -310,33 +356,33 @@
       "id": "2a6b9f410410f8f32a1c",
       "name": "bind-utils",
       "epoch": "32",
-      "version": "9.18.50",
+      "version": "9.18.51^git20261003.d0a87358",
       "release": "2.fc44",
       "architecture": "amd64",
       "summary": "Utilities for querying DNS name servers",
       "description": "Bind-utils contains a collection of utilities for querying DNS (Domain\nName System) name servers to find out information about Internet\nhosts. These tools will provide you with the IP addresses for given\nhost names, as well as other information about registered domains and\nnetwork addresses.\n\nYou should install bind-utils if you need to get information from DNS name\nservers.",
       "homepage": "https://www.isc.org/downloads/bind/",
       "license": "MPL-2.0 AND ISC AND MIT AND BSD-3-Clause AND BSD-2-Clause",
-      "sourcePackage": "bind-9.18.50-2.fc44.src.rpm",
+      "sourcePackage": "bind-9.18.51^git20261003.d0a87358-2.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 675826,
-      "downloadSize": 230595,
+      "installedSize": 676276,
+      "downloadSize": 231044,
       "dependencies": {
         "requires": [
-          "bind-libs(x86-64) = 32:9.18.50-2.fc44",
+          "bind-libs(x86-64) = 32:9.18.51^git20261003.d0a87358-2.fc44",
           "filesystem(unmerged-sbin-symlinks)",
-          "libbind9-9.18.50.so()(64bit)",
+          "libbind9-9.18.51-dev.so()(64bit)",
           "libc.so.6(GLIBC_2.38)(64bit)",
-          "libdns-9.18.50.so()(64bit)",
+          "libdns-9.18.51-dev.so()(64bit)",
           "libidn2.so.0()(64bit)",
           "libidn2.so.0(IDN2_0.0.0)(64bit)",
-          "libirs-9.18.50.so()(64bit)",
-          "libisc-9.18.50.so()(64bit)",
-          "libisccfg-9.18.50.so()(64bit)",
+          "libirs-9.18.51-dev.so()(64bit)",
+          "libisc-9.18.51-dev.so()(64bit)",
+          "libisccfg-9.18.51-dev.so()(64bit)",
           "libkrb5.so.3()(64bit)",
           "libkrb5.so.3(krb5_3_MIT)(64bit)",
           "liblmdb.so.0.0.0()(64bit)",
-          "libns-9.18.50.so()(64bit)",
+          "libns-9.18.51-dev.so()(64bit)",
           "libprotobuf-c.so.1()(64bit)",
           "libprotobuf-c.so.1(LIBPROTOBUF_C_1.0.0)(64bit)",
           "rtld(GNU_HASH)"
@@ -344,9 +390,9 @@
         "recommends": [],
         "suggests": [],
         "provides": [
-          "bind-utils = 32:9.18.50-2.fc44",
-          "bind-utils(x86-64) = 32:9.18.50-2.fc44",
-          "dnsutils = 32:9.18.50-2.fc44"
+          "bind-utils = 32:9.18.51^git20261003.d0a87358-2.fc44",
+          "bind-utils(x86-64) = 32:9.18.51^git20261003.d0a87358-2.fc44",
+          "dnsutils = 32:9.18.51^git20261003.d0a87358-2.fc44"
         ],
         "conflicts": [],
         "replaces": [

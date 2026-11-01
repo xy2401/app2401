@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "e0",
   "items": [
@@ -714,6 +714,34 @@
       }
     },
     {
+      "id": "e01174e06f9873abf073",
+      "name": "linux-modules-nvidia-595-7.0.0-42-generic",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-42",
+      "description": "Linux kernel nvidia modules for version 7.0.0-42",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-42-generic | linux-image-unsigned-7.0.0-42-generic",
+          "linux-objects-nvidia-595-7.0.0-42-generic (= 7.0.0-42.42~24.04.1)",
+          "linux-signatures-nvidia-7.0.0-42-generic (= 7.0.0-42.42~24.04.1)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "e011c48cd7360bbbd5df",
       "name": "libibmad-dev",
       "version": "50.0",
@@ -736,6 +764,55 @@
         "provides": [],
         "conflicts": [],
         "replaces": []
+      }
+    },
+    {
+      "id": "e012af90a8cf30b684b1",
+      "name": "libnvidia-gl-615",
+      "version": "615.71.09",
+      "release": "0ubuntu0.24.04.2",
+      "architecture": "amd64",
+      "summary": "NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD",
+      "description": "NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD",
+      "homepage": "http://www.nvidia.com",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "nvidia-graphics-drivers-615",
+      "category": "multiverse/libs",
+      "repository": "official",
+      "installedSize": 450319360,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.34)",
+          "libdrm2 (>= 2.4.75)",
+          "libgbm1 (>= 17.1.0~rc2)",
+          "libgcc-s1 (>= 4.2)",
+          "libnvidia-common-615",
+          "libnvidia-compute-615 (>= 615.71.09)",
+          "libnvidia-egl-wayland1",
+          "libstdc++6 (>= 5)",
+          "libwayland-client0 (>= 1.20.0)",
+          "libx11-6",
+          "libx11-xcb1 (>= 2:1.8.7)",
+          "libxcb-dri3-0 (>= 1.13)",
+          "libxcb-present0",
+          "libxcb1 (>= 1.12)",
+          "libxext6",
+          "nvidia-kernel-common-615-615.71.09"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libegl-vendor",
+          "libglx-vendor",
+          "libnvidia-gl"
+        ],
+        "conflicts": [
+          "libnvidia-egl-gbm1",
+          "libnvidia-gl"
+        ],
+        "replaces": [
+          "libnvidia-gl"
+        ]
       }
     },
     {
@@ -1609,7 +1686,7 @@
       "id": "e02cef2513bdcf32c7f6",
       "name": "linux-modules-nvidia-575-open-generic-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "34.34~24.04.1+1",
+      "release": "42.42~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-open for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-open for the generic flavour (dummy transitional package)",
@@ -3400,7 +3477,7 @@
     {
       "id": "e050f1771c8d78385990",
       "name": "snap-confine",
-      "version": "2.76.3+ubuntu24.04",
+      "version": "2.77.1+ubuntu24.04",
       "architecture": "amd64",
       "summary": "Transitional package for snapd",
       "description": "Transitional package for snapd",
@@ -3409,10 +3486,10 @@
       "sourcePackage": "snapd",
       "category": "universe/utils",
       "repository": "official",
-      "installedSize": 142336,
+      "installedSize": 145408,
       "dependencies": {
         "requires": [
-          "snapd (= 2.76.3+ubuntu24.04)"
+          "snapd (= 2.77.1+ubuntu24.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -3877,7 +3954,7 @@
       "id": "e05afa5d7ec565664dcb",
       "name": "dh-apparmor",
       "version": "4.0.1really4.0.1",
-      "release": "0ubuntu0.24.04.8",
+      "release": "0ubuntu0.24.04.9",
       "architecture": "all",
       "summary": "AppArmor debhelper routines",
       "description": "AppArmor debhelper routines",
@@ -4076,37 +4153,51 @@
       "id": "e05d48f2ee4e6aee2dd1",
       "name": "nvidia-utils-470-server",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.1",
+      "release": "0ubuntu0.24.04.5",
       "architecture": "amd64",
-      "summary": "NVIDIA Server Driver support binaries",
-      "description": "NVIDIA Server Driver support binaries",
+      "summary": "NVIDIA driver support binaries",
+      "description": "NVIDIA driver support binaries",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-470-server",
       "category": "restricted/libs",
       "repository": "official",
-      "installedSize": 1214464,
+      "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "libc6 (>= 2.34)",
-          "libnvidia-compute-470-server"
+          "nvidia-utils-535"
         ],
         "recommends": [],
-        "suggests": [
-          "nvidia-driver-470-server"
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "e05da679829c82255f79",
+      "name": "linux-modules-nvidia-615-open-6.8.0-1066-ibm",
+      "version": "6.8.0",
+      "release": "1066.67+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1066",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1066",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27838464,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1066-ibm | linux-image-unsigned-6.8.0-1066-ibm",
+          "nvidia-kernel-common-615 (<= 615.71.09-1)",
+          "nvidia-kernel-common-615 (>= 615.71.09)"
         ],
-        "provides": [
-          "nvidia-smi",
-          "nvidia-utils"
-        ],
-        "conflicts": [
-          "nvidia-smi",
-          "nvidia-utils"
-        ],
-        "replaces": [
-          "nvidia-smi",
-          "nvidia-utils"
-        ]
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -4253,7 +4344,7 @@
       "id": "e05ed4ade5be1e0cd817",
       "name": "linux-headers-oracle-lts-24.04",
       "version": "6.8.0",
-      "release": "1063.66",
+      "release": "1064.67",
       "architecture": "amd64",
       "summary": "Linux kernel headers for Oracle systems.",
       "description": "Linux kernel headers for Oracle systems.",
@@ -4264,7 +4355,7 @@
       "installedSize": 14336,
       "dependencies": {
         "requires": [
-          "linux-headers-6.8.0-1063-oracle"
+          "linux-headers-6.8.0-1064-oracle"
         ],
         "recommends": [],
         "suggests": [],
@@ -5582,7 +5673,7 @@
       "id": "e07c37609d68339b6650",
       "name": "linux-headers-azure-fde-edge",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1016.16~24.04.1",
       "architecture": "amd64",
       "summary": "Linux kernel headers for Azure systems.",
       "description": "Linux kernel headers for Azure systems.",
@@ -5593,7 +5684,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-headers-7.0.0-1013-azure-fde"
+          "linux-headers-7.0.0-1016-azure-fde"
         ],
         "recommends": [],
         "suggests": [],
@@ -5883,6 +5974,40 @@
         "provides": [],
         "conflicts": [],
         "replaces": []
+      }
+    },
+    {
+      "id": "e08492d7e8fc22128581",
+      "name": "nvidia-kernel-common-615",
+      "version": "615.71.09",
+      "release": "0ubuntu0.24.04.2",
+      "architecture": "amd64",
+      "summary": "Shared files used with the kernel module",
+      "description": "Shared files used with the kernel module",
+      "homepage": "http://www.nvidia.com",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "nvidia-graphics-drivers-615",
+      "category": "multiverse/libs",
+      "repository": "official",
+      "installedSize": 5855232,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libpciaccess0 (>= 0.10.7)",
+          "nvidia-firmware-615-615.71.09"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-kernel-common",
+          "nvidia-kernel-common-615-615.71.09"
+        ],
+        "conflicts": [
+          "nvidia-kernel-common"
+        ],
+        "replaces": [
+          "nvidia-kernel-common"
+        ]
       }
     },
     {
@@ -6187,6 +6312,34 @@
       }
     },
     {
+      "id": "e089b3d2be00d7566c2b",
+      "name": "linux-modules-nvidia-580-server-6.8.0-146-lowlatency",
+      "version": "6.8.0",
+      "release": "146.146.1+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-146",
+      "description": "Linux kernel nvidia modules for version 6.8.0-146",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 35840,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-146-lowlatency | linux-image-unsigned-6.8.0-146-lowlatency",
+          "linux-objects-nvidia-580-server-6.8.0-146-lowlatency (= 6.8.0-146.146.1+2)",
+          "linux-signatures-nvidia-6.8.0-146-lowlatency (= 6.8.0-146.146.1+2)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "e089ff1afb1aca5a9dfb",
       "name": "libglobus-gssapi-error2t64",
       "version": "6.3",
@@ -6298,6 +6451,34 @@
       "dependencies": {
         "requires": [
           "wordpress"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "e08c32f8d4c395b99257",
+      "name": "linux-modules-nvidia-580-server-6.8.0-147-lowlatency",
+      "version": "6.8.0",
+      "release": "147.147.1+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-147",
+      "description": "Linux kernel nvidia modules for version 6.8.0-147",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 35840,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-147-lowlatency | linux-image-unsigned-6.8.0-147-lowlatency",
+          "linux-objects-nvidia-580-server-6.8.0-147-lowlatency (= 6.8.0-147.147.1+2)",
+          "linux-signatures-nvidia-6.8.0-147-lowlatency (= 6.8.0-147.147.1+2)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -7442,7 +7623,7 @@
       "id": "e0aba8f591503f24b15b",
       "name": "linux-modules-nvidia-535-server-open-ibm-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the ibm flavour (dummy transitional package)",
@@ -7450,7 +7631,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-server-open-ibm-lts-24.04"
@@ -10841,6 +11022,32 @@
           "glslang-dev",
           "libshaderc1 (= 2023.8-1build1)",
           "spirv-headers"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "e0ffc1e6bbdd4fc258fc",
+      "name": "linux-modules-nvidia-580-server-open-7.0.0-1014-gcp",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1014",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1014",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-gcp-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 25714688,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-1014-gcp | linux-image-unsigned-7.0.0-1014-gcp",
+          "nvidia-kernel-common-580-server (<= 580.178.04-1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],

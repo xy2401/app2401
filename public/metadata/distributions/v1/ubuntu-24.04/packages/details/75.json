@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "75",
   "items": [
@@ -864,7 +864,7 @@
       "id": "751a2888b3d096bc1eee",
       "name": "linux-modules-nvidia-590-server-gcp",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server for the gcp flavour (dummy transitional package)",
@@ -1576,7 +1576,7 @@
       "id": "752d5d46dc288e9d8c32",
       "name": "linux-modules-nvidia-570-server-open-azure-7.0",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1+1",
+      "release": "1017.17~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server-open for the azure flavour (dummy transitional package)",
@@ -1761,6 +1761,32 @@
         "suggests": [
           "pulseaudio-utils"
         ],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "752f0d74806844a212d9",
+      "name": "linux-modules-nvidia-615-server-open-6.8.0-1069-azure-fde",
+      "version": "6.8.0",
+      "release": "1069.76+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1069",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1069",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27838464,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1069-azure-fde | linux-image-unsigned-6.8.0-1069-azure-fde",
+          "nvidia-kernel-common-615-server (<= 615.71.09-1)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
         "provides": [],
         "conflicts": [],
         "replaces": []
@@ -2735,7 +2761,7 @@
       "id": "75490ee35b13285ff82e",
       "name": "linux-modules-nvidia-570-server-nvidia-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "1064.67.1",
+      "release": "1064.67.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the nvidia-lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the nvidia-lowlatency flavour (dummy transitional package)",
@@ -4202,7 +4228,7 @@
       "id": "75726f40992e3e1e51ba",
       "name": "libpoppler-glib8t64",
       "version": "24.02.0",
-      "release": "1ubuntu9.9",
+      "release": "1ubuntu9.11",
       "architecture": "amd64",
       "summary": "PDF rendering library (GLib-based shared library)",
       "description": "PDF rendering library (GLib-based shared library)",
@@ -4218,13 +4244,13 @@
           "libcairo2 (>= 1.17.8)",
           "libfreetype6 (>= 2.2.1)",
           "libglib2.0-0t64 (>= 2.79.0)",
-          "libpoppler134 (= 24.02.0-1ubuntu9.9)",
+          "libpoppler134 (= 24.02.0-1ubuntu9.11)",
           "libstdc++6 (>= 11)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "libpoppler-glib8 (= 24.02.0-1ubuntu9.9)"
+          "libpoppler-glib8 (= 24.02.0-1ubuntu9.11)"
         ],
         "conflicts": [],
         "replaces": [
@@ -4429,42 +4455,32 @@
       "id": "7576b1a6f242e54ae9b0",
       "name": "libnvidia-decode-610",
       "version": "610.57.04",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
-      "summary": "NVIDIA Video Decoding runtime libraries",
-      "description": "NVIDIA Video Decoding runtime libraries",
+      "summary": "NVIDIA Video Decoding runtime libraries (transitional package)",
+      "description": "NVIDIA Video Decoding runtime libraries (transitional package)",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-610",
       "category": "multiverse/libs",
       "repository": "official",
-      "installedSize": 28273664,
+      "installedSize": 37888,
       "dependencies": {
         "requires": [
-          "libc6 (>= 2.34)",
-          "libnvidia-compute-610 (= 610.57.04-0ubuntu0.24.04.3)",
-          "libx11-6",
-          "libxext6",
-          "nvidia-kernel-common-610-610.57.04"
+          "libnvidia-decode-615"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "libnvidia-decode"
-        ],
-        "conflicts": [
-          "libnvidia-decode"
-        ],
-        "replaces": [
-          "libnvidia-decode"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
       "id": "7577d040340439641764",
       "name": "linux-lowlatency-hwe-20.04-edge",
       "version": "6.8.0",
-      "release": "142.142.1",
+      "release": "147.147.1",
       "architecture": "amd64",
       "summary": "Complete lowlatency Linux kernel (dummy transitional package)",
       "description": "Complete lowlatency Linux kernel (dummy transitional package)",
@@ -4872,7 +4888,7 @@
       "id": "7584639dca7db94035b6",
       "name": "linux-headers-gke-6.8",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1066.74",
       "architecture": "amd64",
       "summary": "Linux kernel headers for gke systems.",
       "description": "Linux kernel headers for gke systems.",
@@ -4883,7 +4899,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-headers-6.8.0-1065-gke"
+          "linux-headers-6.8.0-1066-gke"
         ],
         "recommends": [],
         "suggests": [],
@@ -5091,7 +5107,7 @@
       "name": "xserver-xorg-dev",
       "epoch": "2",
       "version": "21.1.12",
-      "release": "1ubuntu1.8",
+      "release": "1ubuntu1.9",
       "architecture": "amd64",
       "summary": "Xorg X server - development files",
       "description": "Xorg X server - development files",
@@ -5237,8 +5253,8 @@
     {
       "id": "7590c253844e66a2e158",
       "name": "librte-ring24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-ring runtime library)",
       "description": "Data Plane Development Kit (librte-ring runtime library)",
@@ -6003,7 +6019,7 @@
       "id": "759fac26f2789f6648c9",
       "name": "linux-modules-nvidia-580-server-azure-fde",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1016.16~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server for the azure-fde flavour",
       "description": "Extra drivers for nvidia-580-server for the azure-fde flavour",
@@ -6014,7 +6030,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-7.0.0-1013-azure-fde (= 7.0.0-1013.13~24.04.1+1)",
+          "linux-modules-nvidia-580-server-7.0.0-1016-azure-fde (= 7.0.0-1016.16~24.04.1+1)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -6079,7 +6095,7 @@
       "id": "75a4e7195e9d85aeebef",
       "name": "linux-modules-nvidia-535-open-ibm-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the ibm flavour (dummy transitional package)",
@@ -6087,7 +6103,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-open-ibm-lts-24.04"
@@ -6887,7 +6903,7 @@
       "id": "75b6691744510acdc20c",
       "name": "linux-headers-azure-fde-7.0",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1016.16~24.04.1",
       "architecture": "amd64",
       "summary": "Linux kernel headers for Azure systems.",
       "description": "Linux kernel headers for Azure systems.",
@@ -6898,7 +6914,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-headers-7.0.0-1013-azure-fde"
+          "linux-headers-7.0.0-1016-azure-fde"
         ],
         "recommends": [],
         "suggests": [],
@@ -7002,7 +7018,7 @@
       "id": "75b7d3b4695f21acaf2e",
       "name": "libglib2.0-0t64",
       "version": "2.80.0",
-      "release": "6ubuntu3.9",
+      "release": "6ubuntu3.10",
       "architecture": "amd64",
       "summary": "GLib library of C routines",
       "description": "GLib library of C routines",
@@ -7030,12 +7046,12 @@
           "low-memory-monitor"
         ],
         "provides": [
-          "libgio-2.0-0 (= 2.80.0-6ubuntu3.9)",
-          "libglib-2.0-0 (= 2.80.0-6ubuntu3.9)",
-          "libglib2.0-0 (= 2.80.0-6ubuntu3.9)",
-          "libgmodule-2.0-0 (= 2.80.0-6ubuntu3.9)",
-          "libgobject-2.0-0 (= 2.80.0-6ubuntu3.9)",
-          "libgthread-2.0-0 (= 2.80.0-6ubuntu3.9)"
+          "libgio-2.0-0 (= 2.80.0-6ubuntu3.10)",
+          "libglib-2.0-0 (= 2.80.0-6ubuntu3.10)",
+          "libglib2.0-0 (= 2.80.0-6ubuntu3.10)",
+          "libgmodule-2.0-0 (= 2.80.0-6ubuntu3.10)",
+          "libgobject-2.0-0 (= 2.80.0-6ubuntu3.10)",
+          "libgthread-2.0-0 (= 2.80.0-6ubuntu3.10)"
         ],
         "conflicts": [],
         "replaces": [
@@ -7639,7 +7655,7 @@
       "id": "75c2118c18446919f190",
       "name": "linux-modules-iwlwifi-azure-edge",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1",
+      "release": "1017.17~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for iwlwifi for the azure flavour",
       "description": "Extra drivers for iwlwifi for the azure flavour",
@@ -7650,14 +7666,14 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-modules-iwlwifi-7.0.0-1014-azure"
+          "linux-modules-iwlwifi-7.0.0-1017-azure"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "backport-iwlwifi-dkms (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3)",
-          "iwlwifi-modules (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3)",
-          "iwlwifi-prebuilt-kernel (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3)"
+          "backport-iwlwifi-dkms (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3.26.04.2)",
+          "iwlwifi-modules (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3.26.04.2)",
+          "iwlwifi-prebuilt-kernel (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3.26.04.2)"
         ],
         "conflicts": [],
         "replaces": []
@@ -8240,7 +8256,7 @@
       "id": "75d65ed213f20ffdb383",
       "name": "libnvidia-fbc1-465",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.5",
+      "release": "0ubuntu0.24.04.6",
       "architecture": "amd64",
       "summary": "Transitional package for libnvidia-fbc1-470",
       "description": "Transitional package for libnvidia-fbc1-470",
@@ -8886,6 +8902,30 @@
           "libqt5widgets5t64 (>= 5.15.1)",
           "libstdc++6 (>= 5.2)",
           "libudisks2-qt5-0 (>= 5.0.6)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "75ec73020e38c8756b07",
+      "name": "linux-gcp-headers-6.8.0-1071",
+      "version": "6.8.0",
+      "release": "1071.79",
+      "architecture": "amd64",
+      "summary": "Header files related to Linux kernel version 6.8.0",
+      "description": "Header files related to Linux kernel version 6.8.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gcp",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 86837248,
+      "dependencies": {
+        "requires": [
+          "coreutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -9641,6 +9681,28 @@
         "requires": [
           "linux-modules-nvidia-570-server-azure-fde-6.8"
         ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "75fc1b69ab1a2e644537",
+      "name": "linux-modules-6.8.0-1066-gke",
+      "version": "6.8.0",
+      "release": "1066.74",
+      "architecture": "amd64",
+      "summary": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel extra modules for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gke",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 37957632,
+      "dependencies": {
+        "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],

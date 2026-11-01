@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "74",
   "items": [
@@ -1162,7 +1162,7 @@
       "id": "74206b6167365d0fc5a9",
       "name": "gir1.2-mutter-14",
       "version": "46.2",
-      "release": "1ubuntu0.24.04.16",
+      "release": "1ubuntu0.24.04.18",
       "architecture": "amd64",
       "summary": "GObject introspection data for Mutter",
       "description": "GObject introspection data for Mutter",
@@ -1185,7 +1185,7 @@
           "gir1.2-pangocairo-1.0 (>= 1.46.0)",
           "gir1.2-xfixes-4.0",
           "gir1.2-xlib-2.0",
-          "libmutter-14-0 (= 46.2-1ubuntu0.24.04.16)"
+          "libmutter-14-0 (= 46.2-1ubuntu0.24.04.18)"
         ],
         "recommends": [],
         "suggests": [],
@@ -1432,7 +1432,7 @@
       "id": "7428476ee85788c3ca81",
       "name": "linux-modules-nvidia-590-server-nvidia-6.8",
       "version": "6.8.0",
-      "release": "1064.67",
+      "release": "1064.67+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server for the nvidia flavour (dummy transitional package)",
@@ -1554,6 +1554,34 @@
         ],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "742e654d0bccda1d307a",
+      "name": "linux-modules-nvidia-615-server-open-nvidia-lowlatency-6.8",
+      "version": "6.8.0",
+      "release": "1064.67.1+1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-server-open for the nvidia-lowlatency-6.8 flavour",
+      "description": "Extra drivers for nvidia-615-server-open for the nvidia-lowlatency-6.8 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-server-open-6.8.0-1064-nvidia-lowlatency (= 6.8.0-1064.67.1+1)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-server-open (= 615.71.09-0ubuntu0.24.04.1)",
+          "nvidia-prebuilt-kernel"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -1807,7 +1835,7 @@
       "id": "7439b022e266bf81b882",
       "name": "linux-modules-nvidia-580-open-7.0.0-1019-nvidia",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1019.19~24.04.2+2",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 7.0.0-1019",
       "description": "Linux kernel nvidia modules for version 7.0.0-1019",
@@ -3602,10 +3630,10 @@
       "id": "7477167be705f2192984",
       "name": "linux-modules-nvidia-610-open-nvidia-7.0",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-610-open for the nvidia-7.0 flavour",
-      "description": "Extra drivers for nvidia-610-open for the nvidia-7.0 flavour",
+      "summary": "Extra drivers for nvidia-610-open for the nvidia flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-610-open for the nvidia flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-nvidia-7.0",
       "category": "restricted/kernel",
@@ -3613,15 +3641,11 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-open-7.0.0-1019-nvidia (= 7.0.0-1019.19~24.04.2+1)",
-          "nvidia-kernel-common-610 (>= 610.57.04)"
+          "linux-modules-nvidia-615-open-nvidia-7.0"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-610-open (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -3844,6 +3868,32 @@
       "dependencies": {
         "requires": [
           "libfwnt1t64 (= 20181227-1.2build1)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "747e60bdf5cde7cf7264",
+      "name": "linux-modules-nvidia-595-server-open-6.8.0-1064-oracle",
+      "version": "6.8.0",
+      "release": "1064.67+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-oracle",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26358784,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1064-oracle | linux-image-unsigned-6.8.0-1064-oracle",
+          "nvidia-kernel-common-595-server (<= 595.91.07-1)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
         "suggests": [],
@@ -5071,7 +5121,7 @@
       "id": "749aa7b24d2290ae3fc6",
       "name": "linux-modules-nvidia-570-server-nvidia-hwe-24.04",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the nvidia flavour (dummy transitional package)",
@@ -8047,6 +8097,30 @@
       "dependencies": {
         "requires": [
           "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "74e4650be6099eaba06b",
+      "name": "linux-modules-usbio-6.8.0-147-generic",
+      "version": "6.8.0",
+      "release": "147.147",
+      "architecture": "amd64",
+      "summary": "Linux kernel usbio modules for version 6.8.0-147",
+      "description": "Linux kernel usbio modules for version 6.8.0-147",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 739328,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-147-generic | linux-image-unsigned-6.8.0-147-generic"
         ],
         "recommends": [],
         "suggests": [],

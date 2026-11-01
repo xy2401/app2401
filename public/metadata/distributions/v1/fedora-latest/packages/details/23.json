@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "fedora",
   "shard": "23",
   "items": [
@@ -149,33 +149,65 @@
       }
     },
     {
+      "id": "23383fa0b794b0334f1a",
+      "name": "mingw32-winpthreads",
+      "epoch": "0",
+      "version": "13.0.0",
+      "release": "4.fc44",
+      "architecture": "noarch",
+      "summary": "MinGW pthread library for the win32 target",
+      "description": "The POSIX 1003.1-2001 standard defines an application programming\ninterface (API) for writing multithreaded applications. This interface\nis known more commonly as pthreads. A good number of modern operating\nsystems include a threading library of some kind: Solaris (UI)\nthreads, Win32 threads, DCE threads, DECthreads, or any of the draft\nrevisions of the pthreads standard. The trend is that most of these\nsystems are slowly adopting the pthreads standard API, with\napplication developers following suit to reduce porting woes.\n\nWin32 does not, and is unlikely to ever, support pthreads\nnatively. This project seeks to provide a freely available and\nhigh-quality solution to this problem.",
+      "homepage": "http://mingw-w64.sourceforge.net/",
+      "license": "BSD-3-Clause AND MIT AND LicenseRef-Fedora-Public-Domain",
+      "sourcePackage": "mingw-winpthreads-13.0.0-4.fc44.src.rpm",
+      "repository": "updates",
+      "installedSize": 373061,
+      "downloadSize": 59210,
+      "dependencies": {
+        "requires": [
+          "mingw32(kernel32.dll)",
+          "mingw32(msvcrt.dll)",
+          "mingw32-crt",
+          "mingw32-filesystem >= 95"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "mingw32(libwinpthread-1.dll)",
+          "mingw32-winpthreads = 13.0.0-4.fc44"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "2345387320ace1eeea73",
       "name": "kf6-kstatusnotifieritem-devel",
       "epoch": "0",
-      "version": "6.30.0",
+      "version": "6.31.0",
       "release": "1.fc44",
       "architecture": "amd64",
       "summary": "Development files for kf6-kstatusnotifieritem",
       "description": "The kf6-kstatusnotifieritem-devel package contains libraries and header files for\ndeveloping applications that use kf6-kstatusnotifieritem.",
       "homepage": "https://invent.kde.org/frameworks/kstatusnotifieritem",
       "license": "CC0-1.0 AND LGPL-2.0-or-later",
-      "sourcePackage": "kf6-kstatusnotifieritem-6.30.0-1.fc44.src.rpm",
+      "sourcePackage": "kf6-kstatusnotifieritem-6.31.0-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 81884,
-      "downloadSize": 24005,
+      "installedSize": 81887,
+      "downloadSize": 24008,
       "dependencies": {
         "requires": [
           "cmake-filesystem(x86-64)",
-          "kf6-kstatusnotifieritem(x86-64) = 6.30.0-1.fc44",
+          "kf6-kstatusnotifieritem(x86-64) = 6.31.0-1.fc44",
           "libKF6StatusNotifierItem.so.6()(64bit)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "cmake(KF6StatusNotifierItem) = 6.30.0",
-          "cmake(kf6statusnotifieritem) = 6.30.0",
-          "kf6-kstatusnotifieritem-devel = 6.30.0-1.fc44",
-          "kf6-kstatusnotifieritem-devel(x86-64) = 6.30.0-1.fc44"
+          "cmake(KF6StatusNotifierItem) = 6.31.0",
+          "cmake(kf6statusnotifieritem) = 6.31.0",
+          "kf6-kstatusnotifieritem-devel = 6.31.0-1.fc44",
+          "kf6-kstatusnotifieritem-devel(x86-64) = 6.31.0-1.fc44"
         ],
         "conflicts": [],
         "replaces": []
@@ -218,28 +250,132 @@
       "id": "238444eb2644fa0feb6d",
       "name": "mlxsw_spectrum-firmware",
       "epoch": "0",
-      "version": "20260916",
+      "version": "20261019",
       "release": "1.fc44",
       "architecture": "noarch",
       "summary": "Firmware for Mellanox Spectrum 1/2/3 Switches",
       "description": "Firmware for Mellanox Spectrumi series 1/2/3 ethernet switches.",
       "homepage": "http://www.kernel.org/",
       "license": "LicenseRef-Fedora-Firmware",
-      "sourcePackage": "linux-firmware-20260916-1.fc44.src.rpm",
+      "sourcePackage": "linux-firmware-20261019-1.fc44.src.rpm",
       "repository": "updates",
       "installedSize": 106991950,
-      "downloadSize": 107043137,
+      "downloadSize": 107047343,
       "dependencies": {
         "requires": [
-          "linux-firmware-whence = 20260916-1.fc44"
+          "linux-firmware-whence = 20261019-1.fc44"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "mlxsw_spectrum-firmware = 20260916-1.fc44"
+          "mlxsw_spectrum-firmware = 20261019-1.fc44"
         ],
         "conflicts": [],
         "replaces": []
+      }
+    },
+    {
+      "id": "23955ac5747a3ee0e097",
+      "name": "brasero",
+      "epoch": "0",
+      "version": "3.12.4",
+      "release": "1.fc44",
+      "architecture": "amd64",
+      "summary": "Gnome CD/DVD burning application",
+      "description": "Simple and easy to use CD/DVD burning application for the Gnome\ndesktop.",
+      "homepage": "https://wiki.gnome.org/Apps/Brasero",
+      "license": "GPL-3.0-or-later AND LGPL-2.0-or-later AND GPL-2.0-only AND CC-BY-SA-2.0 AND GPL-2.0-or-later WITH GStreamer-exception-2008",
+      "sourcePackage": "brasero-3.12.4-1.fc44.src.rpm",
+      "repository": "updates",
+      "installedSize": 13127484,
+      "downloadSize": 3516469,
+      "dependencies": {
+        "requires": [
+          "brasero-libs(x86-64) = 3.12.4-1.fc44",
+          "cdrdao",
+          "dvd+rw-tools",
+          "genisoimage",
+          "libbrasero-burn3.so.1()(64bit)",
+          "libbrasero-media3.so.1()(64bit)",
+          "libbrasero-utils3.so.1()(64bit)",
+          "libburn.so.4()(64bit)",
+          "libburn.so.4(LIBBURN4)(64bit)",
+          "libc.so.6(GLIBC_2.38)(64bit)",
+          "libgdk-3.so.0()(64bit)",
+          "libgdk_pixbuf-2.0.so.0()(64bit)",
+          "libgio-2.0.so.0()(64bit)",
+          "libglib-2.0.so.0()(64bit)",
+          "libgmodule-2.0.so.0()(64bit)",
+          "libgobject-2.0.so.0()(64bit)",
+          "libgstreamer-1.0.so.0()(64bit)",
+          "libgstvideo-1.0.so.0()(64bit)",
+          "libgtk-3.so.0()(64bit)",
+          "libisofs.so.6()(64bit)",
+          "libisofs.so.6(LIBISOFS6)(64bit)",
+          "libpango-1.0.so.0()(64bit)",
+          "libtinysparql-3.0.so.0()(64bit)",
+          "libtotem-plparser.so.18()(64bit)",
+          "libtotem-plparser.so.18(LIBTOTEM_PL_PARSER_MINI_1.0)(64bit)",
+          "libxml2.so.2()(64bit)",
+          "libxml2.so.2(LIBXML2_2.4.30)(64bit)",
+          "libxml2.so.2(LIBXML2_2.6.0)(64bit)",
+          "libxml2.so.2(LIBXML2_2.6.5)(64bit)",
+          "rtld(GNU_HASH)",
+          "wodim"
+        ],
+        "recommends": [
+          "icedax"
+        ],
+        "suggests": [],
+        "provides": [
+          "application()",
+          "application(brasero.desktop)",
+          "brasero = 3.12.4-1.fc44",
+          "brasero(x86-64) = 3.12.4-1.fc44",
+          "libbrasero-audio2cue.so()(64bit)",
+          "libbrasero-burn-uri.so()(64bit)",
+          "libbrasero-cdda2wav.so()(64bit)",
+          "libbrasero-cdrdao.so()(64bit)",
+          "libbrasero-cdrecord.so()(64bit)",
+          "libbrasero-checksum-file.so()(64bit)",
+          "libbrasero-checksum.so()(64bit)",
+          "libbrasero-dvdauthor.so()(64bit)",
+          "libbrasero-dvdcss.so()(64bit)",
+          "libbrasero-dvdrwformat.so()(64bit)",
+          "libbrasero-genisoimage.so()(64bit)",
+          "libbrasero-growisofs.so()(64bit)",
+          "libbrasero-libburn.so()(64bit)",
+          "libbrasero-libisofs.so()(64bit)",
+          "libbrasero-local-track.so()(64bit)",
+          "libbrasero-mkisofs.so()(64bit)",
+          "libbrasero-normalize.so()(64bit)",
+          "libbrasero-readcd.so()(64bit)",
+          "libbrasero-readom.so()(64bit)",
+          "libbrasero-transcode.so()(64bit)",
+          "libbrasero-vcdimager.so()(64bit)",
+          "libbrasero-vob.so()(64bit)",
+          "libbrasero-wodim.so()(64bit)",
+          "metainfo()",
+          "metainfo(org.gnome.Brasero.metainfo.xml)",
+          "mimehandler(application/x-brasero)",
+          "mimehandler(application/x-cd-image)",
+          "mimehandler(application/x-cdrdao-toc)",
+          "mimehandler(application/x-cue)",
+          "mimehandler(application/x-toc)",
+          "mimehandler(audio/x-mp3-playlist)",
+          "mimehandler(audio/x-mpegurl)",
+          "mimehandler(audio/x-ms-asx)",
+          "mimehandler(audio/x-scpls)",
+          "mimehandler(x-content/audio-cdda)",
+          "mimehandler(x-content/image-picturecd)",
+          "mimehandler(x-content/video-dvd)",
+          "mimehandler(x-content/video-svcd)",
+          "mimehandler(x-content/video-vcd)"
+        ],
+        "conflicts": [],
+        "replaces": [
+          "brasero-nautilus < 3.12.4-1.fc44"
+        ]
       }
     },
     {
@@ -280,23 +416,23 @@
       "id": "23dd79963e97e49dcda1",
       "name": "kf6-kpeople-doc",
       "epoch": "0",
-      "version": "6.30.0",
+      "version": "6.31.0",
       "release": "1.fc44",
       "architecture": "noarch",
       "summary": "Developer Documentation files for kf6-kpeople",
       "description": "Developer Documentation files for kf6-kpeople for use with KDevelop or QtCreator.",
       "homepage": "https://invent.kde.org/frameworks/kpeople",
       "license": "CC0-1.0 AND LGPL-2.1-or-later",
-      "sourcePackage": "kf6-kpeople-6.30.0-1.fc44.src.rpm",
+      "sourcePackage": "kf6-kpeople-6.31.0-1.fc44.src.rpm",
       "repository": "updates",
       "installedSize": 311296,
-      "downloadSize": 84167,
+      "downloadSize": 84170,
       "dependencies": {
         "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "kf6-kpeople-doc = 6.30.0-1.fc44"
+          "kf6-kpeople-doc = 6.31.0-1.fc44"
         ],
         "conflicts": [],
         "replaces": []

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "e7",
   "items": [
@@ -439,7 +439,7 @@
       "id": "e70888c95654bce6f62f",
       "name": "linux-modules-nvidia-570-oracle",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the oracle flavour (dummy transitional package)",
@@ -549,7 +549,7 @@
       "id": "e70b94b7be1a538534f2",
       "name": "linux-modules-iwlwifi-azure",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1",
+      "release": "1017.17~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for iwlwifi for the azure flavour",
       "description": "Extra drivers for iwlwifi for the azure flavour",
@@ -560,14 +560,14 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-modules-iwlwifi-7.0.0-1014-azure"
+          "linux-modules-iwlwifi-7.0.0-1017-azure"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "backport-iwlwifi-dkms (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3)",
-          "iwlwifi-modules (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3)",
-          "iwlwifi-prebuilt-kernel (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3)"
+          "backport-iwlwifi-dkms (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3.26.04.2)",
+          "iwlwifi-modules (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3.26.04.2)",
+          "iwlwifi-prebuilt-kernel (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3.26.04.2)"
         ],
         "conflicts": [],
         "replaces": []
@@ -2330,6 +2330,30 @@
       }
     },
     {
+      "id": "e73f4f0b937bd88ba6a0",
+      "name": "linux-lib-rust-6.8.0-147-generic",
+      "version": "6.8.0",
+      "release": "147.147",
+      "architecture": "amd64",
+      "summary": "Rust library files related to Linux kernel version 6.8.0",
+      "description": "Rust library files related to Linux kernel version 6.8.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 89017344,
+      "dependencies": {
+        "requires": [
+          "coreutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "e7400407945c4b1bae9c",
       "name": "octave-divand",
       "version": "1.1.2+dfsg",
@@ -3366,7 +3390,7 @@
     {
       "id": "e75bc1e0f01e4a0cbfef",
       "name": "libnvidia-extra-595",
-      "version": "595.91.07",
+      "version": "595.99.02",
       "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Extra libraries for the NVIDIA driver",
@@ -3374,13 +3398,13 @@
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-595",
-      "category": "multiverse/libs",
+      "category": "restricted/libs",
       "repository": "official",
       "installedSize": 216064,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.34)",
-          "nvidia-kernel-common-595-595.91.07"
+          "nvidia-kernel-common-595-595.99.02"
         ],
         "recommends": [],
         "suggests": [],
@@ -4552,6 +4576,34 @@
       }
     },
     {
+      "id": "e7774ec772ef9dabd2b1",
+      "name": "linux-modules-nvidia-615-server-open-ibm",
+      "version": "6.8.0",
+      "release": "1067.68+2",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-server-open for the ibm flavour",
+      "description": "Extra drivers for nvidia-615-server-open for the ibm flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 20480,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-server-open-6.8.0-1067-ibm (= 6.8.0-1067.68+2)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-server-open (= 615.71.09-0ubuntu0.24.04.2)",
+          "nvidia-prebuilt-kernel"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "e777f52feccc19dec11e",
       "name": "libghc-cassava-dev",
       "version": "0.5.3.0",
@@ -5166,6 +5218,39 @@
       }
     },
     {
+      "id": "e78237270187f3038ced",
+      "name": "linux-headers-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4",
+      "architecture": "amd64",
+      "summary": "Linux kernel headers for version 7.0.0",
+      "description": "Linux kernel headers for version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-hwe-7.0",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 32089088,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libdw1t64 (>= 0.171)",
+          "libelf1t64 (>= 0.144)",
+          "libgcc-s1 (>= 4.2)",
+          "libssl3t64 (>= 3.0.0)",
+          "linux-hwe-7.0-headers-7.0.0-38",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "linux-headers",
+          "linux-headers-3.0"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "e783f072f0ad41e80888",
       "name": "node-agent-base",
       "version": "7.1.0~0~2023071921",
@@ -5662,7 +5747,7 @@
       "id": "e790b5c31f3a3278470a",
       "name": "linux-image-uc-oem-24.04c",
       "version": "6.17.0",
-      "release": "1032.32",
+      "release": "1033.33",
       "architecture": "amd64",
       "summary": "OEM Linux kernel image for Ubuntu Core (transitional package)",
       "description": "OEM Linux kernel image for Ubuntu Core (transitional package)",
@@ -7886,7 +7971,7 @@
       "id": "e7d3316dc4f913c02641",
       "name": "linux-tools-gkeop-6.8",
       "version": "6.8.0",
-      "release": "1051.55",
+      "release": "1052.56",
       "architecture": "amd64",
       "summary": "GKEOP Linux kernel tools",
       "description": "GKEOP Linux kernel tools",
@@ -7897,7 +7982,7 @@
       "installedSize": 10240,
       "dependencies": {
         "requires": [
-          "linux-tools-6.8.0-1051-gkeop"
+          "linux-tools-6.8.0-1052-gkeop"
         ],
         "recommends": [],
         "suggests": [],
@@ -8538,7 +8623,7 @@
       "id": "e7e28fceb9b1b04507ba",
       "name": "linux-modules-nvidia-550-open-azure-lts-24.04",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550-open for the azure flavour (dummy transitional package)",
@@ -8764,7 +8849,7 @@
       "id": "e7e7dc1491d22e09f238",
       "name": "linux-modules-nvidia-595-server-7.0.0-1013-oracle",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 7.0.0-1013",
       "description": "Linux kernel nvidia modules for version 7.0.0-1013",
@@ -8777,8 +8862,8 @@
         "requires": [
           "debconf (>= 0.5) | debconf-2.0",
           "linux-image-7.0.0-1013-oracle | linux-image-unsigned-7.0.0-1013-oracle",
-          "linux-objects-nvidia-595-server-7.0.0-1013-oracle (= 7.0.0-1013.13~24.04.1)",
-          "linux-signatures-nvidia-7.0.0-1013-oracle (= 7.0.0-1013.13~24.04.1)",
+          "linux-objects-nvidia-595-server-7.0.0-1013-oracle (= 7.0.0-1013.13~24.04.1+1)",
+          "linux-signatures-nvidia-7.0.0-1013-oracle (= 7.0.0-1013.13~24.04.1+1)",
           "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
@@ -8956,7 +9041,7 @@
       "id": "e7eacd9055cf52ad6e7a",
       "name": "linux-modules-nvidia-580-server-azure-lts-24.04",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server for the azure-lts-24.04 flavour",
       "description": "Extra drivers for nvidia-580-server for the azure-lts-24.04 flavour",
@@ -8967,7 +9052,7 @@
       "installedSize": 21504,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-6.8.0-1070-azure (= 6.8.0-1070.78)",
+          "linux-modules-nvidia-580-server-6.8.0-1071-azure (= 6.8.0-1071.79+2)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -9418,7 +9503,7 @@
       "id": "e7f9185bec76435ccc29",
       "name": "php8.3-imap",
       "version": "8.3.6",
-      "release": "0ubuntu0.24.04.11",
+      "release": "0ubuntu0.24.04.13",
       "architecture": "amd64",
       "summary": "IMAP module for PHP",
       "description": "IMAP module for PHP",
@@ -9433,7 +9518,7 @@
           "libc-client2007e",
           "libc6 (>= 2.38)",
           "php-common (>= 1:81~)",
-          "php8.3-common (= 8.3.6-0ubuntu0.24.04.11)",
+          "php8.3-common (= 8.3.6-0ubuntu0.24.04.13)",
           "ucf"
         ],
         "recommends": [],

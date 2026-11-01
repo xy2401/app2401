@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "44",
   "items": [
@@ -644,7 +644,7 @@
       "id": "440fb61cd82a0fcb9467",
       "name": "linux-modules-nvidia-590-server-open-vmware-6.8",
       "version": "6.8.0",
-      "release": "1005.5+1",
+      "release": "1008.8+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server-open for the vmware flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server-open for the vmware flavour (dummy transitional package)",
@@ -1018,7 +1018,7 @@
       "id": "4415aa51b99cd02ebfde",
       "name": "libnvidia-extra-470",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.5",
+      "release": "0ubuntu0.24.04.6",
       "architecture": "amd64",
       "summary": "Extra libraries for the NVIDIA driver",
       "description": "Extra libraries for the NVIDIA driver",
@@ -1027,16 +1027,23 @@
       "sourcePackage": "nvidia-graphics-drivers-470",
       "category": "restricted/libs",
       "repository": "official",
-      "installedSize": 21504,
+      "installedSize": 126976,
       "dependencies": {
         "requires": [
-          "libnvidia-extra-535"
+          "libc6 (>= 2.34)"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
+        "provides": [
+          "libnvidia-extra"
+        ],
+        "conflicts": [
+          "libnvidia-extra"
+        ],
+        "replaces": [
+          "libnvidia-common-470 (<< 440.64-0ubuntu3~)",
+          "libnvidia-extra"
+        ]
       }
     },
     {
@@ -1260,7 +1267,7 @@
       "name": "libreoffice-l10n-si",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Sinhala language package",
       "description": "office productivity suite -- Sinhala language package",
@@ -1269,7 +1276,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 2697216,
+      "installedSize": 2698240,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -2040,6 +2047,29 @@
           "libc6 (>= 2.2.5)",
           "libmkl-locale (= 2020.4.304-4)"
         ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "4434201506d6a880b480",
+      "name": "golang-1.25-src",
+      "version": "1.25.14",
+      "release": "1~ubuntu0.24.04.1",
+      "architecture": "all",
+      "summary": "Go programming language - source files",
+      "description": "Go programming language - source files",
+      "homepage": "https://go.dev/",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "sourcePackage": "golang-1.25",
+      "category": "universe/golang",
+      "repository": "official",
+      "installedSize": 143277056,
+      "dependencies": {
+        "requires": [],
         "recommends": [],
         "suggests": [],
         "provides": [],
@@ -3718,7 +3748,7 @@
       "id": "4461ad70dfc7f259a2c5",
       "name": "linux-modules-nvidia-575-nvidia-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575 for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575 for the nvidia flavour (dummy transitional package)",
@@ -3835,7 +3865,7 @@
       "id": "4466bb3432562bba7ffe",
       "name": "linux-modules-nvidia-575-gcp",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575 for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575 for the gcp flavour (dummy transitional package)",
@@ -3985,6 +4015,34 @@
         "replaces": [
           "cpp-11-arm-linux-gnueabi (<< 7.1.1-8)"
         ]
+      }
+    },
+    {
+      "id": "446fa9607e2db6dc0824",
+      "name": "linux-main-modules-evdi-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4",
+      "architecture": "amd64",
+      "summary": "Signed evdi module for 7.0.0-38",
+      "description": "Signed evdi module for 7.0.0-38",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-signed-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 64512,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-image-7.0.0-38-generic | linux-image-unsigned-7.0.0-38-generic"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "evdi-dkms",
+          "evdi-modules"
+        ],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -4652,6 +4710,48 @@
       }
     },
     {
+      "id": "447f14c981c19c69fcd7",
+      "name": "linux-azure-fde-tools-6.8.0-1068",
+      "version": "6.8.0",
+      "release": "1068.75",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 6.8.0-1068",
+      "description": "Linux kernel version specific tools for version 6.8.0-1068",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure-fde",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 15779840,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libcap2 (>= 1:2.10)",
+          "libdw1t64 (>= 0.161)",
+          "libelf1t64 (>= 0.144)",
+          "liblzma5 (>= 5.1.1alpha+20120614)",
+          "libnl-3-200 (>= 3.2.7)",
+          "libnl-genl-3-200 (>= 3.2.21)",
+          "libnuma1 (>= 2.0.11)",
+          "libpci3 (>= 1:3.8.0)",
+          "libpython3.12t64 (>= 3.12.1)",
+          "libslang2 (>= 2.2.4)",
+          "libssl3t64 (>= 3.0.0)",
+          "libstdc++6 (>= 4.1.1)",
+          "libtraceevent1 (>= 1:1.3.0)",
+          "libudev1 (>= 183)",
+          "libunwind8",
+          "libzstd1 (>= 1.5.5)",
+          "linux-tools-common",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "4481a66aa94a5b3058cb",
       "name": "xemacs21-bin",
       "version": "21.4.24",
@@ -5235,6 +5335,38 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "4490a3ad5bfb6f5c94ea",
+      "name": "linux-headers-6.8.0-147-generic",
+      "version": "6.8.0",
+      "release": "147.147",
+      "architecture": "amd64",
+      "summary": "Linux kernel headers for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel headers for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 29511680,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libelf1t64 (>= 0.144)",
+          "libgcc-s1 (>= 4.2)",
+          "libssl3t64 (>= 3.0.0)",
+          "linux-headers-6.8.0-147",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "linux-headers",
+          "linux-headers-3.0"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -6346,7 +6478,7 @@
       "id": "44a8aa988f403cbb8c0c",
       "name": "linux-tools-azure",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1",
+      "release": "1017.17~24.04.1",
       "architecture": "amd64",
       "summary": "Linux kernel versioned tools for Azure systems.",
       "description": "Linux kernel versioned tools for Azure systems.",
@@ -6357,7 +6489,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-tools-7.0.0-1014-azure"
+          "linux-tools-7.0.0-1017-azure"
         ],
         "recommends": [],
         "suggests": [],
@@ -6622,7 +6754,7 @@
       "id": "44afa951067e41c8e100",
       "name": "linux-modules-nvidia-590-open-ibm-6.8",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-open for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-open for the ibm flavour (dummy transitional package)",
@@ -6630,7 +6762,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-595-open-ibm-6.8"
@@ -7007,7 +7139,7 @@
       "id": "44ba6656606a8d2168b7",
       "name": "linux-modules-nvidia-595-lowlatency",
       "version": "6.8.0",
-      "release": "142.142.1+1",
+      "release": "147.147.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595 for the lowlatency flavour",
       "description": "Extra drivers for nvidia-595 for the lowlatency flavour",
@@ -7018,13 +7150,13 @@
       "installedSize": 26624,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-6.8.0-142-lowlatency (= 6.8.0-142.142.1+1)",
-          "nvidia-kernel-common-595 (>= 595.91.07)"
+          "linux-modules-nvidia-595-6.8.0-147-lowlatency (= 6.8.0-147.147.1+2)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595 (= 595.91.07-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595 (= 595.99.02-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -7128,7 +7260,7 @@
       "id": "44be6a7f3b9c0e3cc6ee",
       "name": "linux-modules-nvidia-535-open-oem-6.17",
       "version": "6.17.0",
-      "release": "1032.32+1",
+      "release": "1033.33+3",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the oem flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the oem flavour (dummy transitional package)",
@@ -7136,7 +7268,7 @@
       "sourcePackage": "linux-restricted-modules-oem-6.17",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-open-oem-6.17"
@@ -7152,7 +7284,7 @@
       "id": "44bea294321b274f698c",
       "name": "linux-modules-nvidia-535-server-open-nvidia-6.8",
       "version": "6.8.0",
-      "release": "1064.67",
+      "release": "1064.67+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the nvidia flavour (dummy transitional package)",
@@ -7882,7 +8014,7 @@
       "id": "44d0a60276ed0055e502",
       "name": "systemd-coredump",
       "version": "255.4",
-      "release": "1ubuntu8.17",
+      "release": "1ubuntu8.18",
       "architecture": "amd64",
       "summary": "tools for storing and retrieving coredumps",
       "description": "tools for storing and retrieving coredumps",
@@ -7897,7 +8029,7 @@
           "libc6 (>= 2.34)",
           "liblz4-1 (>= 0.0~r130)",
           "liblzma5 (>= 5.1.1alpha+20120614)",
-          "libsystemd-shared (= 255.4-1ubuntu8.17)",
+          "libsystemd-shared (= 255.4-1ubuntu8.18)",
           "libzstd1 (>= 1.5.5)",
           "systemd"
         ],
@@ -8226,7 +8358,7 @@
       "id": "44db969bee485a7fc639",
       "name": "linux-modules-nvidia-575-server-aws-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.69",
+      "release": "1067.70+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the aws flavour (dummy transitional package)",
@@ -8234,7 +8366,7 @@
       "sourcePackage": "linux-restricted-modules-aws",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 24576,
+      "installedSize": 25600,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-server-aws-lts-24.04"
@@ -8279,7 +8411,7 @@
       "id": "44ddf9f04578ba01c32e",
       "name": "linux-modules-nvidia-535-open-ibm-classic",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the ibm flavour (dummy transitional package)",
@@ -8287,7 +8419,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-open-ibm-classic"
@@ -8883,7 +9015,7 @@
       "id": "44f0837d0c03ef17ff22",
       "name": "linux-modules-nvidia-575-oem-24.04a",
       "version": "6.17.0",
-      "release": "1032.32+1",
+      "release": "1033.33+3",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-oem-24.04a (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-oem-24.04a (dummy transitional package)",
@@ -8891,7 +9023,7 @@
       "sourcePackage": "linux-restricted-modules-oem-6.17",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-575-oem-24.04d"
@@ -8978,7 +9110,7 @@
       "id": "44f441372b36b9fc1e41",
       "name": "linux-modules-ipu6-generic-6.8",
       "version": "6.8.0",
-      "release": "146.146",
+      "release": "147.147",
       "architecture": "amd64",
       "summary": "Extra drivers for ipu6 for the generic flavour",
       "description": "Extra drivers for ipu6 for the generic flavour",
@@ -8989,7 +9121,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-ipu6-6.8.0-146-generic"
+          "linux-modules-ipu6-6.8.0-147-generic"
         ],
         "recommends": [],
         "suggests": [],

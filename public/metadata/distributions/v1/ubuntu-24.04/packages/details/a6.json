@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "a6",
   "items": [
@@ -316,7 +316,7 @@
       "id": "a607abb72ab60836c328",
       "name": "ovmf-legacy",
       "version": "2024.02",
-      "release": "2ubuntu0.9",
+      "release": "2ubuntu0.10",
       "architecture": "all",
       "summary": "UEFI firmware for 64-bit x86 VMs, enabling legacy features",
       "description": "UEFI firmware for 64-bit x86 VMs, enabling legacy features",
@@ -586,7 +586,7 @@
       "id": "a60eb020615b98fdaa7e",
       "name": "python3-tornado",
       "version": "6.4.0",
-      "release": "1ubuntu0.5",
+      "release": "1ubuntu0.6",
       "architecture": "amd64",
       "summary": "scalable, non-blocking web server and tools - Python 3 package",
       "description": "scalable, non-blocking web server and tools - Python 3 package",
@@ -595,7 +595,7 @@
       "sourcePackage": "python-tornado",
       "category": "python",
       "repository": "official",
-      "installedSize": 1736704,
+      "installedSize": 1786880,
       "dependencies": {
         "requires": [
           "ca-certificates",
@@ -989,7 +989,7 @@
       "name": "libreoffice-l10n-tn",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Tswana language package",
       "description": "office productivity suite -- Tswana language package",
@@ -998,7 +998,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 1659904,
+      "installedSize": 1660928,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -1348,7 +1348,7 @@
       "name": "libreoffice-l10n-km",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Khmer language package",
       "description": "office productivity suite -- Khmer language package",
@@ -1357,7 +1357,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 4178944,
+      "installedSize": 4179968,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -2055,7 +2055,7 @@
       "name": "git-mediawiki",
       "epoch": "1",
       "version": "2.43.0",
-      "release": "1ubuntu7.3",
+      "release": "1ubuntu7.4",
       "architecture": "all",
       "summary": "fast, scalable, distributed revision control system (MediaWiki remote helper)",
       "description": "fast, scalable, distributed revision control system (MediaWiki remote helper)",
@@ -2857,6 +2857,34 @@
       }
     },
     {
+      "id": "a6432764be93b0abbe0a",
+      "name": "linux-modules-nvidia-615-open-aws-lts-24.04",
+      "version": "6.8.0",
+      "release": "1067.70+2",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-open for the aws-lts-24.04 flavour",
+      "description": "Extra drivers for nvidia-615-open for the aws-lts-24.04 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-aws",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 25600,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-open-6.8.0-1067-aws (= 6.8.0-1067.70+2)",
+          "nvidia-kernel-common-615 (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-open (= 615.71.09-0ubuntu0.24.04.2)",
+          "nvidia-prebuilt-kernel"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "a6462c0f1a26f38eb4bc",
       "name": "cdparanoia",
       "version": "3.10.2+debian",
@@ -2946,6 +2974,34 @@
           "gcc-11-cross-base-mipsen (= 11.5.0-1ubuntu1~24.04cross1)",
           "libgcc-11-dev-mips64r6el-cross (= 11.5.0-1ubuntu1~24.04cross1)",
           "libgo19-mips64r6el-cross (>= 11.5.0-1ubuntu1~24.04cross1)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "a649bea2b399863f05bc",
+      "name": "linux-modules-nvidia-610-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-38",
+      "description": "Linux kernel nvidia modules for version 7.0.0-38",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-38-generic | linux-image-unsigned-7.0.0-38-generic",
+          "linux-objects-nvidia-610-7.0.0-38-generic (= 7.0.0-38.38~24.04.4)",
+          "linux-signatures-nvidia-7.0.0-38-generic (= 7.0.0-38.38~24.04.4)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -4910,7 +4966,7 @@
       "id": "a678c985fe893c8fc69c",
       "name": "linux-modules-nvidia-580-server-gcp-lts-24.04",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server for the gcp-lts-24.04 flavour",
       "description": "Extra drivers for nvidia-580-server for the gcp-lts-24.04 flavour",
@@ -4921,7 +4977,7 @@
       "installedSize": 25600,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-6.8.0-1070-gcp (= 6.8.0-1070.78)",
+          "linux-modules-nvidia-580-server-6.8.0-1071-gcp (= 6.8.0-1071.79+2)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -5774,8 +5830,8 @@
     {
       "id": "a68eb53a104ae8d1e463",
       "name": "librte-net-dpaa24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-net-dpaa runtime library)",
       "description": "Data Plane Development Kit (librte-net-dpaa runtime library)",
@@ -5791,7 +5847,7 @@
           "libc6 (>= 2.38)",
           "libfdt1 (>= 1.7.0)",
           "libnuma1 (>= 2.0.11)",
-          "librte-bus-dpaa24 (>= 23.11.4)",
+          "librte-bus-dpaa24 (>= 23.11.7)",
           "librte-bus-pci24 (>= 20.11)",
           "librte-bus-vdev24 (>= 22.11)",
           "librte-common-dpaax24 (>= 20.08)",
@@ -5804,7 +5860,7 @@
           "librte-kvargs24 (>= 23.11)",
           "librte-log24 (>= 23.11)",
           "librte-mbuf24 (>= 23.11)",
-          "librte-mempool-dpaa24 (>= 23.11.4)",
+          "librte-mempool-dpaa24 (>= 23.11.7)",
           "librte-mempool24 (>= 23.11)",
           "librte-meter24 (>= 23.11)",
           "librte-net24 (>= 23.11)",
@@ -7934,7 +7990,7 @@
       "id": "a6c603bc2ab54c69e62e",
       "name": "efi-shell-aa64",
       "version": "2024.02",
-      "release": "2ubuntu0.9",
+      "release": "2ubuntu0.10",
       "architecture": "all",
       "summary": "UEFI Shell for 64-bit ARM architecture",
       "description": "UEFI Shell for 64-bit ARM architecture",
@@ -8236,7 +8292,7 @@
       "name": "libreoffice-style-sukapura",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Sukapura symbol style",
       "description": "office productivity suite -- Sukapura symbol style",
@@ -8245,7 +8301,7 @@
       "sourcePackage": "libreoffice",
       "category": "universe/editors",
       "repository": "official",
-      "installedSize": 15347712,
+      "installedSize": 15348736,
       "dependencies": {
         "requires": [],
         "recommends": [
@@ -8309,6 +8365,34 @@
         "provides": [
           "festival-voice"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "a6cb23b21c275e5d16ac",
+      "name": "linux-modules-nvidia-595-6.8.0-1064-oracle",
+      "version": "6.8.0",
+      "release": "1064.67+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-oracle",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 33792,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1064-oracle | linux-image-unsigned-6.8.0-1064-oracle",
+          "linux-objects-nvidia-595-6.8.0-1064-oracle (= 6.8.0-1064.67+2)",
+          "linux-signatures-nvidia-6.8.0-1064-oracle (= 6.8.0-1064.67+2)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -9060,7 +9144,7 @@
       "id": "a6db8ac0e8e27f2f41d1",
       "name": "linux-modules-nvidia-575-server-lowlatency",
       "version": "6.8.0",
-      "release": "142.142.1+1",
+      "release": "147.147.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the lowlatency flavour (dummy transitional package)",
@@ -9685,7 +9769,7 @@
       "id": "a6ea2142a1af6006aa72",
       "name": "linux-modules-nvidia-575-azure-fde",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1016.16~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575 for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575 for the azure-fde flavour (dummy transitional package)",
@@ -9913,7 +9997,7 @@
       "id": "a6ed500279cdd975b9be",
       "name": "linux-signatures-nvidia-7.0.0-1013-oracle",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Linux kernel signatures for nvidia modules for version 7.0.0-1013-oracle",
       "description": "Linux kernel signatures for nvidia modules for version 7.0.0-1013-oracle",
@@ -9921,7 +10005,7 @@
       "sourcePackage": "linux-restricted-signatures-oracle-7.0",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 58368,
+      "installedSize": 51200,
       "dependencies": {
         "requires": [
           "linux-image-7.0.0-1013-oracle | linux-image-unsigned-7.0.0-1013-oracle"

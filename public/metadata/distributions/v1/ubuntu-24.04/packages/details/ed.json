@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "ed",
   "items": [
@@ -278,33 +278,25 @@
       "id": "ed0850523c9e1bf6816b",
       "name": "libnvidia-extra-610",
       "version": "610.57.04",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
-      "summary": "Extra libraries for the NVIDIA driver",
-      "description": "Extra libraries for the NVIDIA driver",
+      "summary": "Extra libraries for the NVIDIA driver (transitional package)",
+      "description": "Extra libraries for the NVIDIA driver (transitional package)",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-610",
       "category": "multiverse/libs",
       "repository": "official",
-      "installedSize": 187392,
+      "installedSize": 37888,
       "dependencies": {
         "requires": [
-          "libc6 (>= 2.34)",
-          "nvidia-kernel-common-610-610.57.04"
+          "libnvidia-extra-615"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "libnvidia-extra"
-        ],
-        "conflicts": [
-          "libnvidia-extra"
-        ],
-        "replaces": [
-          "libnvidia-common-610 (<< 440.64-0ubuntu3~)",
-          "libnvidia-extra"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -2369,6 +2361,34 @@
       }
     },
     {
+      "id": "ed365eea08b11e09d82b",
+      "name": "linux-main-modules-ipu7-unsigned-7.0.0-42-generic",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Unsigned ipu7 module for 7.0.0-42",
+      "description": "Unsigned ipu7 module for 7.0.0-42",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-modules-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 83968,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-image-7.0.0-42-generic | linux-image-unsigned-7.0.0-42-generic"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "intel-ipu7-dkms",
+          "ipu7-modules"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "ed38724a732e2f3b1d9f",
       "name": "linux-image-unsigned-6.8.0-1057-ibm",
       "version": "6.8.0",
@@ -3366,7 +3386,7 @@
       "id": "ed5137c7e8d76e10b1f4",
       "name": "udev",
       "version": "255.4",
-      "release": "1ubuntu8.17",
+      "release": "1ubuntu8.18",
       "architecture": "amd64",
       "summary": "/dev/ and hotplug management daemon",
       "description": "/dev/ and hotplug management daemon",
@@ -3384,9 +3404,9 @@
           "libcap2 (>= 1:2.10)",
           "libkmod2 (>= 15)",
           "libselinux1 (>= 3.1~)",
-          "libudev1 (= 255.4-1ubuntu8.17)",
+          "libudev1 (= 255.4-1ubuntu8.18)",
           "systemd | systemd-standalone-sysusers | systemd-sysusers",
-          "systemd-dev (>= 255.4-1ubuntu8.17)"
+          "systemd-dev (>= 255.4-1ubuntu8.18)"
         ],
         "recommends": [
           "systemd-hwe-hwdb"
@@ -3831,7 +3851,7 @@
       "id": "ed634708e07b330f17ab",
       "name": "linux-modules-nvidia-535-server-open-azure-fde-6.8",
       "version": "6.8.0",
-      "release": "1066.73",
+      "release": "1069.76+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the azure-fde flavour (dummy transitional package)",
@@ -3994,8 +4014,8 @@
     {
       "id": "ed67366b16d22c84929b",
       "name": "librte-event-dpaa24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-event-dpaa runtime library)",
       "description": "Data Plane Development Kit (librte-event-dpaa runtime library)",
@@ -4011,7 +4031,7 @@
           "libc6 (>= 2.15)",
           "libfdt1 (>= 1.7.0)",
           "libnuma1 (>= 2.0.11)",
-          "librte-bus-dpaa24 (>= 23.11.4)",
+          "librte-bus-dpaa24 (>= 23.11.7)",
           "librte-bus-pci24 (>= 20.11)",
           "librte-bus-vdev24 (>= 22.11)",
           "librte-common-dpaax24 (>= 20.08)",
@@ -4025,7 +4045,7 @@
           "librte-kvargs24 (>= 23.11)",
           "librte-log24 (>= 23.11)",
           "librte-mbuf24 (>= 23.11)",
-          "librte-mempool-dpaa24 (>= 23.11.4)",
+          "librte-mempool-dpaa24 (>= 23.11.7)",
           "librte-mempool24 (>= 18.05)",
           "librte-meter24 (>= 23.11)",
           "librte-net-dpaa24 (>= 20.11)",
@@ -4050,7 +4070,7 @@
       "id": "ed67c34356f71dc61730",
       "name": "linux-modules-nvidia-590-azure-fde-edge",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1016.16~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the azure-fde flavour (dummy transitional package)",
@@ -6034,7 +6054,7 @@
       "id": "ed92d9d1dfd9a8bca01c",
       "name": "linux-modules-nvidia-570-open-oem-24.04c",
       "version": "6.17.0",
-      "release": "1032.32+1",
+      "release": "1033.33+3",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-open-oem-24.04c (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-open-oem-24.04c (dummy transitional package)",
@@ -6042,7 +6062,7 @@
       "sourcePackage": "linux-restricted-modules-oem-6.17",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-570-open-oem-24.04d"
@@ -7810,7 +7830,7 @@
       "id": "edbbef54451f631cbf7b",
       "name": "linux-modules-nvidia-575-server-ibm-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the ibm flavour (dummy transitional package)",
@@ -7818,7 +7838,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-server-ibm-lts-24.04"
@@ -7887,7 +7907,7 @@
       "id": "edbd3f8467d4f2d281f9",
       "name": "linux-image-ibm-classic",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68",
       "architecture": "amd64",
       "summary": "IBM Cloud Platform (ibm) Linux kernel image",
       "description": "IBM Cloud Platform (ibm) Linux kernel image",
@@ -7898,14 +7918,14 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-image-6.8.0-1066-ibm",
-          "linux-modules-extra-6.8.0-1066-ibm"
+          "linux-image-6.8.0-1067-ibm",
+          "linux-modules-extra-6.8.0-1067-ibm"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
           "spl-modules (= 2.2.2-0ubuntu9.5)",
-          "virtualbox-guest-modules (= 6.8.0-1066)",
+          "virtualbox-guest-modules (= 6.8.0-1067)",
           "wireguard-modules (= 1.0.0)",
           "zfs-modules (= 2.2.2-0ubuntu9.5)"
         ],
@@ -8272,7 +8292,7 @@
       "id": "edccea216b8a57ff2921",
       "name": "nvidia-headless-no-dkms-470-server",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.1",
+      "release": "0ubuntu0.24.04.5",
       "architecture": "amd64",
       "summary": "NVIDIA headless metapackage - no DKMS",
       "description": "NVIDIA headless metapackage - no DKMS",
@@ -8284,26 +8304,13 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "libnvidia-cfg1-470-server (= 470.256.02-0ubuntu0.24.04.1)",
-          "libnvidia-compute-470-server (= 470.256.02-0ubuntu0.24.04.1)",
-          "nvidia-compute-utils-470-server (= 470.256.02-0ubuntu0.24.04.1)",
-          "nvidia-kernel-common-470-server (<= 470.256.02-1)",
-          "nvidia-kernel-common-470-server (>= 470.256.02)",
-          "nvidia-kernel-source-470-server (= 470.256.02-0ubuntu0.24.04.1)"
+          "nvidia-headless-no-dkms-535"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-384"
-        ],
-        "conflicts": [
-          "nvidia-384 (<< 390.25)",
-          "nvidia-390 (<< 390.25-0ubuntu1)"
-        ],
-        "replaces": [
-          "nvidia-384 (<< 390.25)",
-          "nvidia-390 (<< 390.25-0ubuntu1)"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -8456,7 +8463,7 @@
       "id": "edd1d338a71adc9bea59",
       "name": "linux-headers-azure-7.0",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1",
+      "release": "1017.17~24.04.1",
       "architecture": "amd64",
       "summary": "Linux kernel headers for Azure systems.",
       "description": "Linux kernel headers for Azure systems.",
@@ -8467,7 +8474,7 @@
       "installedSize": 9216,
       "dependencies": {
         "requires": [
-          "linux-headers-7.0.0-1014-azure"
+          "linux-headers-7.0.0-1017-azure"
         ],
         "recommends": [],
         "suggests": [],
@@ -9052,7 +9059,7 @@
       "id": "ede2bb3eb674f7a1f215",
       "name": "linux-modules-nvidia-575-server-generic-7.0",
       "version": "7.0.0",
-      "release": "34.34~24.04.1+1",
+      "release": "42.42~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the generic flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the generic flavour (dummy transitional package)",
@@ -9593,7 +9600,7 @@
       "id": "edeffe0c7729522c973b",
       "name": "linux-modules-nvidia-535-open-nvidia-hwe-24.04",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the nvidia flavour (dummy transitional package)",

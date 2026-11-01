@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "c5",
   "items": [
@@ -1381,7 +1381,7 @@
       "id": "c518fd6a7d63af300c67",
       "name": "linux-headers-gkeop",
       "version": "6.8.0",
-      "release": "1051.55",
+      "release": "1052.56",
       "architecture": "amd64",
       "summary": "GKEOP Linux kernel headers",
       "description": "GKEOP Linux kernel headers",
@@ -1392,7 +1392,7 @@
       "installedSize": 10240,
       "dependencies": {
         "requires": [
-          "linux-headers-6.8.0-1051-gkeop"
+          "linux-headers-6.8.0-1052-gkeop"
         ],
         "recommends": [],
         "suggests": [],
@@ -2465,6 +2465,30 @@
       }
     },
     {
+      "id": "c5352df2343c181e8a68",
+      "name": "linux-objects-nvidia-595-open-6.8.0-1068-azure-fde",
+      "version": "6.8.0",
+      "release": "1068.75+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1068 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1068 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26359808,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "c5379a3ff94bd121e66b",
       "name": "libghc-contravariant-doc",
       "version": "1.5.5",
@@ -2845,39 +2869,35 @@
       "id": "c53cec0484e53b8b24a3",
       "name": "nvidia-kernel-source-565-server-open",
       "version": "565.57.01",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
-      "summary": "NVIDIA kernel source package",
-      "description": "NVIDIA kernel source package",
+      "summary": "NVIDIA kernel source package (transitional package)",
+      "description": "NVIDIA kernel source package (transitional package)",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-565-server",
       "category": "restricted/libs",
       "repository": "official",
-      "installedSize": 25060352,
+      "installedSize": 32768,
       "dependencies": {
-        "requires": [],
+        "requires": [
+          "nvidia-kernel-source-580-server-open"
+        ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-kernel-source"
-        ],
-        "conflicts": [
-          "nvidia-kernel-source"
-        ],
-        "replaces": [
-          "nvidia-kernel-source"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
       "id": "c53d2720fdebe48625ee",
       "name": "linux-modules-nvidia-610-gcp",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1+2",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-610 for the gcp flavour",
-      "description": "Extra drivers for nvidia-610 for the gcp flavour",
+      "summary": "Extra drivers for nvidia-610 for the gcp flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-610 for the gcp flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-gcp-7.0",
       "category": "restricted/kernel",
@@ -2885,15 +2905,11 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-7.0.0-1013-gcp (= 7.0.0-1013.13~24.04.1)",
-          "nvidia-kernel-common-610 (>= 610.57.04)"
+          "linux-modules-nvidia-615-open-gcp"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -3501,35 +3517,25 @@
       "id": "c5491a9f7068258da995",
       "name": "nvidia-dkms-610-open",
       "version": "610.57.04",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
-      "summary": "NVIDIA DKMS package (open kernel module)",
-      "description": "NVIDIA DKMS package (open kernel module)",
+      "summary": "NVIDIA DKMS package (open kernel module) (transitional package)",
+      "description": "NVIDIA DKMS package (open kernel module) (transitional package)",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-610",
       "category": "multiverse/libs",
       "repository": "official",
-      "installedSize": 54272,
+      "installedSize": 37888,
       "dependencies": {
         "requires": [
-          "dkms",
-          "nvidia-kernel-common-610 (<= 610.57.04-1)",
-          "nvidia-kernel-common-610 (>= 610.57.04)",
-          "nvidia-kernel-source-610-open (<= 610.57.04-1)",
-          "nvidia-kernel-source-610-open (>= 610.57.04)"
+          "nvidia-dkms-615-open"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-kernel"
-        ],
-        "conflicts": [
-          "nvidia-dkms-kernel"
-        ],
-        "replaces": [
-          "nvidia-dkms-kernel"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -4908,7 +4914,7 @@
       "name": "libridl-java",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "transitional package for LibreOffice UNO runtime environment",
       "description": "transitional package for LibreOffice UNO runtime environment",
@@ -4917,7 +4923,7 @@
       "sourcePackage": "libreoffice",
       "category": "universe/java",
       "repository": "official",
-      "installedSize": 71680,
+      "installedSize": 72704,
       "dependencies": {
         "requires": [
           "liblibreoffice-java"
@@ -5519,7 +5525,7 @@
       "id": "c574d65f6f34f006895a",
       "name": "linux-modules-nvidia-580-server-open-gke-6.8",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1066.74+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server-open for the gke-6.8 flavour",
       "description": "Extra drivers for nvidia-580-server-open for the gke-6.8 flavour",
@@ -5530,7 +5536,7 @@
       "installedSize": 26624,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-open-6.8.0-1065-gke (= 6.8.0-1065.73)",
+          "linux-modules-nvidia-580-server-open-6.8.0-1066-gke (= 6.8.0-1066.74+2)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -5547,7 +5553,7 @@
       "id": "c57515363c6fd0d56b5e",
       "name": "linux-modules-nvidia-590-server-open-azure-lts-24.04",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server-open for the azure flavour (dummy transitional package)",
@@ -5628,7 +5634,7 @@
       "id": "c5764cb0995f6a50649b",
       "name": "linux-cloud-tools-lowlatency",
       "version": "6.8.0",
-      "release": "142.142.1",
+      "release": "147.147.1",
       "architecture": "amd64",
       "summary": "lowlatency Linux kernel cloud tools",
       "description": "lowlatency Linux kernel cloud tools",
@@ -5639,7 +5645,7 @@
       "installedSize": 16384,
       "dependencies": {
         "requires": [
-          "linux-cloud-tools-6.8.0-142-lowlatency"
+          "linux-cloud-tools-6.8.0-147-lowlatency"
         ],
         "recommends": [],
         "suggests": [],
@@ -5913,7 +5919,7 @@
       "id": "c5803517e6cf5b5c5934",
       "name": "linux-modules-nvidia-570-aws-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.69",
+      "release": "1067.70+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the aws flavour (dummy transitional package)",
@@ -5921,7 +5927,7 @@
       "sourcePackage": "linux-restricted-modules-aws",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 24576,
+      "installedSize": 25600,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-aws-lts-24.04"
@@ -6396,7 +6402,7 @@
       "id": "c5909850b199e92a84a8",
       "name": "linux-modules-nvidia-570-server-aws",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the aws flavour (dummy transitional package)",
@@ -6472,7 +6478,7 @@
       "id": "c5923e830ba66e8156bd",
       "name": "linux-modules-nvidia-590-azure-7.0",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1+1",
+      "release": "1017.17~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the azure flavour (dummy transitional package)",
@@ -6973,7 +6979,7 @@
       "id": "c59a958a59f4609a07be",
       "name": "libopeniscsiusr-dev",
       "version": "2.1.9",
-      "release": "3ubuntu5.4",
+      "release": "3ubuntu5.5",
       "architecture": "all",
       "summary": "iSCSI userspace library headers",
       "description": "iSCSI userspace library headers",
@@ -7447,7 +7453,7 @@
       "id": "c5a47f9e4d3ca63e59a7",
       "name": "linux-modules-nvidia-570-nvidia-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the nvidia flavour (dummy transitional package)",
@@ -8392,6 +8398,34 @@
       }
     },
     {
+      "id": "c5be8ca7638a68b84905",
+      "name": "linux-modules-nvidia-615-open-nvidia-hwe-24.04-edge",
+      "version": "7.0.0",
+      "release": "1024.25~24.04.1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-open for the nvidia-hwe-24.04-edge flavour",
+      "description": "Extra drivers for nvidia-615-open for the nvidia-hwe-24.04-edge flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-nvidia-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 19456,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-open-7.0.0-1024-nvidia (= 7.0.0-1024.25~24.04.1)",
+          "nvidia-kernel-common-615 (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-open (= 615.71.09-0ubuntu0.24.04.2)",
+          "nvidia-prebuilt-kernel"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "c5bfbf7946ec415a71a3",
       "name": "tryton-modules-timesheet",
       "version": "6.0.2",
@@ -8977,7 +9011,7 @@
       "id": "c5cb36c0919f467ec058",
       "name": "python3-apparmor",
       "version": "4.0.1really4.0.1",
-      "release": "0ubuntu0.24.04.8",
+      "release": "0ubuntu0.24.04.9",
       "architecture": "all",
       "summary": "AppArmor Python3 utility library",
       "description": "AppArmor Python3 utility library",
@@ -9455,6 +9489,30 @@
         "requires": [
           "libc6 (>= 2.4)",
           "libextractor3 (>= 0.6.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "c5d4f2c554e568e12e4f",
+      "name": "linux-objects-nvidia-615-open-6.8.0-1067-aws",
+      "version": "6.8.0",
+      "release": "1067.70+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1067 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1067 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-aws",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27838464,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -10705,8 +10763,8 @@
     {
       "id": "c5ee3d3d443b3ab4b818",
       "name": "librte-fib24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (libfib runtime library)",
       "description": "Data Plane Development Kit (libfib runtime library)",
@@ -11273,8 +11331,8 @@
     {
       "id": "c5f8b425b377bbf90012",
       "name": "librte-rib24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librib runtime library)",
       "description": "Data Plane Development Kit (librib runtime library)",

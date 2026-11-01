@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "collections": [
     {
@@ -1982,14 +1982,14 @@
         "en": "cuda-drivers-fabricmanager-565"
       },
       "descriptions": {
-        "en": "Meta-package for FM and Driver"
+        "en": "Meta-package for FM and Driver (transitional package)"
       },
       "visible": true,
       "default": false,
       "installTarget": "cuda-drivers-fabricmanager-565",
       "members": [
         {
-          "name": "nvidia-fabricmanager-565",
+          "name": "cuda-drivers-fabricmanager-580",
           "role": "default"
         }
       ],
@@ -2095,6 +2095,27 @@
       "members": [
         {
           "name": "nvidia-fabricmanager-595",
+          "role": "default"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "metapackage:cuda-drivers-fabricmanager-615",
+      "sourceId": "cuda-drivers-fabricmanager-615",
+      "type": "metapackage",
+      "names": {
+        "en": "cuda-drivers-fabricmanager-615"
+      },
+      "descriptions": {
+        "en": "Meta-package for FM and Driver"
+      },
+      "visible": true,
+      "default": false,
+      "installTarget": "cuda-drivers-fabricmanager-615",
+      "members": [
+        {
+          "name": "nvidia-fabricmanager-615",
           "role": "default"
         }
       ],
@@ -10099,29 +10120,25 @@
       "children": []
     },
     {
-      "id": "metapackage:libnvidia-compute-565-server",
-      "sourceId": "libnvidia-compute-565-server",
+      "id": "metapackage:libnvidia-cfg1-615-server",
+      "sourceId": "libnvidia-cfg1-615-server",
       "type": "metapackage",
       "names": {
-        "en": "libnvidia-compute-565-server"
+        "en": "libnvidia-cfg1-615-server"
       },
       "descriptions": {
-        "en": "NVIDIA libcompute package"
+        "en": "NVIDIA binary OpenGL/GLX configuration library"
       },
       "visible": true,
       "default": false,
-      "installTarget": "libnvidia-compute-565-server",
+      "installTarget": "libnvidia-cfg1-615-server",
       "members": [
         {
           "name": "libc6",
           "role": "default"
         },
         {
-          "name": "libgcc-s1",
-          "role": "default"
-        },
-        {
-          "name": "libssl3t64",
+          "name": "nvidia-kernel-common-615-server-615.71.09",
           "role": "default"
         }
       ],
@@ -10202,66 +10219,41 @@
       "children": []
     },
     {
-      "id": "metapackage:libnvidia-decode-470-server",
-      "sourceId": "libnvidia-decode-470-server",
+      "id": "metapackage:libnvidia-compute-615-server",
+      "sourceId": "libnvidia-compute-615-server",
       "type": "metapackage",
       "names": {
-        "en": "libnvidia-decode-470-server"
+        "en": "libnvidia-compute-615-server"
       },
       "descriptions": {
-        "en": "NVIDIA Video Decoding runtime libraries"
+        "en": "NVIDIA libcompute package"
       },
       "visible": true,
       "default": false,
-      "installTarget": "libnvidia-decode-470-server",
+      "installTarget": "libnvidia-compute-615-server",
       "members": [
         {
           "name": "libc6",
           "role": "default"
         },
         {
-          "name": "libnvidia-compute-470-server",
+          "name": "libgcc-s1",
           "role": "default"
         },
         {
-          "name": "libx11-6",
+          "name": "libssl3t64",
           "role": "default"
         },
         {
-          "name": "libxext6",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:libnvidia-decode-565-server",
-      "sourceId": "libnvidia-decode-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "libnvidia-decode-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA Video Decoding runtime libraries"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "libnvidia-decode-565-server",
-      "members": [
-        {
-          "name": "libc6",
+          "name": "libstdc++6",
           "role": "default"
         },
         {
-          "name": "libnvidia-compute-565-server",
+          "name": "nvidia-kernel-common-615-server-615.71.09",
           "role": "default"
         },
         {
-          "name": "libx11-6",
-          "role": "default"
-        },
-        {
-          "name": "libxext6",
+          "name": "ocl-icd-libopencl1",
           "role": "default"
         }
       ],
@@ -10342,50 +10334,37 @@
       "children": []
     },
     {
-      "id": "metapackage:libnvidia-encode-470-server",
-      "sourceId": "libnvidia-encode-470-server",
+      "id": "metapackage:libnvidia-decode-615-server",
+      "sourceId": "libnvidia-decode-615-server",
       "type": "metapackage",
       "names": {
-        "en": "libnvidia-encode-470-server"
+        "en": "libnvidia-decode-615-server"
       },
       "descriptions": {
-        "en": "NVENC Video Encoding runtime library"
+        "en": "NVIDIA Video Decoding runtime libraries"
       },
       "visible": true,
       "default": false,
-      "installTarget": "libnvidia-encode-470-server",
+      "installTarget": "libnvidia-decode-615-server",
       "members": [
         {
           "name": "libc6",
           "role": "default"
         },
         {
-          "name": "libnvidia-decode-470-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:libnvidia-encode-565-server",
-      "sourceId": "libnvidia-encode-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "libnvidia-encode-565-server"
-      },
-      "descriptions": {
-        "en": "NVENC Video Encoding runtime library"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "libnvidia-encode-565-server",
-      "members": [
-        {
-          "name": "libc6",
+          "name": "libnvidia-compute-615-server",
           "role": "default"
         },
         {
-          "name": "libnvidia-decode-565-server",
+          "name": "libx11-6",
+          "role": "default"
+        },
+        {
+          "name": "libxext6",
+          "role": "default"
+        },
+        {
+          "name": "nvidia-kernel-common-615-server-615.71.09",
           "role": "default"
         }
       ],
@@ -10450,6 +10429,35 @@
       "children": []
     },
     {
+      "id": "metapackage:libnvidia-encode-615-server",
+      "sourceId": "libnvidia-encode-615-server",
+      "type": "metapackage",
+      "names": {
+        "en": "libnvidia-encode-615-server"
+      },
+      "descriptions": {
+        "en": "NVENC Video Encoding runtime library"
+      },
+      "visible": true,
+      "default": false,
+      "installTarget": "libnvidia-encode-615-server",
+      "members": [
+        {
+          "name": "libc6",
+          "role": "default"
+        },
+        {
+          "name": "libnvidia-decode-615-server",
+          "role": "default"
+        },
+        {
+          "name": "nvidia-kernel-common-615-server-615.71.09",
+          "role": "default"
+        }
+      ],
+      "children": []
+    },
+    {
       "id": "metapackage:libnvidia-extra-580-server",
       "sourceId": "libnvidia-extra-580-server",
       "type": "metapackage",
@@ -10500,62 +10508,25 @@
       "children": []
     },
     {
-      "id": "metapackage:libnvidia-fbc1-470-server",
-      "sourceId": "libnvidia-fbc1-470-server",
+      "id": "metapackage:libnvidia-extra-615-server",
+      "sourceId": "libnvidia-extra-615-server",
       "type": "metapackage",
       "names": {
-        "en": "libnvidia-fbc1-470-server"
+        "en": "libnvidia-extra-615-server"
       },
       "descriptions": {
-        "en": "NVIDIA OpenGL-based Framebuffer Capture runtime library"
+        "en": "Extra libraries for the NVIDIA Server Driver"
       },
       "visible": true,
       "default": false,
-      "installTarget": "libnvidia-fbc1-470-server",
+      "installTarget": "libnvidia-extra-615-server",
       "members": [
         {
           "name": "libc6",
           "role": "default"
         },
         {
-          "name": "libgl1",
-          "role": "default"
-        },
-        {
-          "name": "libx11-6",
-          "role": "default"
-        },
-        {
-          "name": "libxext6",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:libnvidia-fbc1-565-server",
-      "sourceId": "libnvidia-fbc1-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "libnvidia-fbc1-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA OpenGL-based Framebuffer Capture runtime library"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "libnvidia-fbc1-565-server",
-      "members": [
-        {
-          "name": "libc6",
-          "role": "default"
-        },
-        {
-          "name": "libx11-6",
-          "role": "default"
-        },
-        {
-          "name": "libxext6",
+          "name": "nvidia-kernel-common-615-server-615.71.09",
           "role": "default"
         }
       ],
@@ -10628,37 +10599,21 @@
       "children": []
     },
     {
-      "id": "metapackage:libnvidia-gl-470-server",
-      "sourceId": "libnvidia-gl-470-server",
+      "id": "metapackage:libnvidia-fbc1-615-server",
+      "sourceId": "libnvidia-fbc1-615-server",
       "type": "metapackage",
       "names": {
-        "en": "libnvidia-gl-470-server"
+        "en": "libnvidia-fbc1-615-server"
       },
       "descriptions": {
-        "en": "NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD"
+        "en": "NVIDIA OpenGL-based Framebuffer Capture runtime library"
       },
       "visible": true,
       "default": false,
-      "installTarget": "libnvidia-gl-470-server",
+      "installTarget": "libnvidia-fbc1-615-server",
       "members": [
         {
           "name": "libc6",
-          "role": "default"
-        },
-        {
-          "name": "libegl1",
-          "role": "default"
-        },
-        {
-          "name": "libgcc-s1",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-common-470-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-egl-wayland1",
           "role": "default"
         },
         {
@@ -10668,70 +10623,9 @@
         {
           "name": "libxext6",
           "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:libnvidia-gl-565-server",
-      "sourceId": "libnvidia-gl-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "libnvidia-gl-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "libnvidia-gl-565-server",
-      "members": [
-        {
-          "name": "libc6",
-          "role": "default"
         },
         {
-          "name": "libdrm2",
-          "role": "default"
-        },
-        {
-          "name": "libgbm1",
-          "role": "default"
-        },
-        {
-          "name": "libgcc-s1",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-common-565-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-egl-wayland1",
-          "role": "default"
-        },
-        {
-          "name": "libx11-6",
-          "role": "default"
-        },
-        {
-          "name": "libx11-xcb1",
-          "role": "default"
-        },
-        {
-          "name": "libxcb-dri3-0",
-          "role": "default"
-        },
-        {
-          "name": "libxcb-present0",
-          "role": "default"
-        },
-        {
-          "name": "libxcb1",
-          "role": "default"
-        },
-        {
-          "name": "libxext6",
+          "name": "nvidia-kernel-common-615-server-615.71.09",
           "role": "default"
         }
       ],
@@ -10888,33 +10782,81 @@
       "children": []
     },
     {
-      "id": "metapackage:libnvidia-ifr1-470-server",
-      "sourceId": "libnvidia-ifr1-470-server",
+      "id": "metapackage:libnvidia-gl-615-server",
+      "sourceId": "libnvidia-gl-615-server",
       "type": "metapackage",
       "names": {
-        "en": "libnvidia-ifr1-470-server"
+        "en": "libnvidia-gl-615-server"
       },
       "descriptions": {
-        "en": "NVIDIA OpenGL-based Inband Frame Readback runtime library"
+        "en": "NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD"
       },
       "visible": true,
       "default": false,
-      "installTarget": "libnvidia-ifr1-470-server",
+      "installTarget": "libnvidia-gl-615-server",
       "members": [
         {
           "name": "libc6",
           "role": "default"
         },
         {
-          "name": "libgl1",
+          "name": "libdrm2",
           "role": "default"
         },
         {
-          "name": "libnvidia-gl-470-server",
+          "name": "libgbm1",
+          "role": "default"
+        },
+        {
+          "name": "libgcc-s1",
+          "role": "default"
+        },
+        {
+          "name": "libnvidia-common-615-server",
+          "role": "default"
+        },
+        {
+          "name": "libnvidia-compute-615-server",
+          "role": "default"
+        },
+        {
+          "name": "libnvidia-egl-wayland1",
+          "role": "default"
+        },
+        {
+          "name": "libstdc++6",
+          "role": "default"
+        },
+        {
+          "name": "libwayland-client0",
           "role": "default"
         },
         {
           "name": "libx11-6",
+          "role": "default"
+        },
+        {
+          "name": "libx11-xcb1",
+          "role": "default"
+        },
+        {
+          "name": "libxcb-dri3-0",
+          "role": "default"
+        },
+        {
+          "name": "libxcb-present0",
+          "role": "default"
+        },
+        {
+          "name": "libxcb1",
+          "role": "default"
+        },
+        {
+          "name": "libxext6",
+          "role": "default"
+        },
+        {
+          "name": "nvidia-kernel-common-615-server-615.71.09",
           "role": "default"
         }
       ],
@@ -11889,7 +11831,7 @@
       "installTarget": "linux-cloud-tools-azure",
       "members": [
         {
-          "name": "linux-cloud-tools-7.0.0-1014-azure",
+          "name": "linux-cloud-tools-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -11973,7 +11915,7 @@
       "installTarget": "linux-cloud-tools-azure-6.8",
       "members": [
         {
-          "name": "linux-cloud-tools-6.8.0-1070-azure",
+          "name": "linux-cloud-tools-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -11994,7 +11936,7 @@
       "installTarget": "linux-cloud-tools-azure-7.0",
       "members": [
         {
-          "name": "linux-cloud-tools-7.0.0-1014-azure",
+          "name": "linux-cloud-tools-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -12015,7 +11957,7 @@
       "installTarget": "linux-cloud-tools-azure-edge",
       "members": [
         {
-          "name": "linux-cloud-tools-7.0.0-1014-azure",
+          "name": "linux-cloud-tools-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -12036,7 +11978,7 @@
       "installTarget": "linux-cloud-tools-azure-fde",
       "members": [
         {
-          "name": "linux-cloud-tools-7.0.0-1013-azure-fde",
+          "name": "linux-cloud-tools-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -12099,7 +12041,7 @@
       "installTarget": "linux-cloud-tools-azure-fde-6.8",
       "members": [
         {
-          "name": "linux-cloud-tools-6.8.0-1066-azure-fde",
+          "name": "linux-cloud-tools-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -12120,7 +12062,7 @@
       "installTarget": "linux-cloud-tools-azure-fde-7.0",
       "members": [
         {
-          "name": "linux-cloud-tools-7.0.0-1013-azure-fde",
+          "name": "linux-cloud-tools-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -12141,7 +12083,7 @@
       "installTarget": "linux-cloud-tools-azure-fde-edge",
       "members": [
         {
-          "name": "linux-cloud-tools-7.0.0-1013-azure-fde",
+          "name": "linux-cloud-tools-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -12162,7 +12104,7 @@
       "installTarget": "linux-cloud-tools-azure-fde-lts-24.04",
       "members": [
         {
-          "name": "linux-cloud-tools-6.8.0-1066-azure-fde",
+          "name": "linux-cloud-tools-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -12183,7 +12125,7 @@
       "installTarget": "linux-cloud-tools-azure-lts-24.04",
       "members": [
         {
-          "name": "linux-cloud-tools-6.8.0-1070-azure",
+          "name": "linux-cloud-tools-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -12204,7 +12146,7 @@
       "installTarget": "linux-headers-azure",
       "members": [
         {
-          "name": "linux-headers-7.0.0-1014-azure",
+          "name": "linux-headers-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -12288,7 +12230,7 @@
       "installTarget": "linux-headers-azure-6.8",
       "members": [
         {
-          "name": "linux-headers-6.8.0-1070-azure",
+          "name": "linux-headers-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -12309,7 +12251,7 @@
       "installTarget": "linux-headers-azure-7.0",
       "members": [
         {
-          "name": "linux-headers-7.0.0-1014-azure",
+          "name": "linux-headers-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -12330,7 +12272,7 @@
       "installTarget": "linux-headers-azure-edge",
       "members": [
         {
-          "name": "linux-headers-7.0.0-1014-azure",
+          "name": "linux-headers-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -12351,7 +12293,7 @@
       "installTarget": "linux-headers-azure-fde",
       "members": [
         {
-          "name": "linux-headers-7.0.0-1013-azure-fde",
+          "name": "linux-headers-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -12414,7 +12356,7 @@
       "installTarget": "linux-headers-azure-fde-6.8",
       "members": [
         {
-          "name": "linux-headers-6.8.0-1066-azure-fde",
+          "name": "linux-headers-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -12435,7 +12377,7 @@
       "installTarget": "linux-headers-azure-fde-7.0",
       "members": [
         {
-          "name": "linux-headers-7.0.0-1013-azure-fde",
+          "name": "linux-headers-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -12456,7 +12398,7 @@
       "installTarget": "linux-headers-azure-fde-edge",
       "members": [
         {
-          "name": "linux-headers-7.0.0-1013-azure-fde",
+          "name": "linux-headers-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -12477,7 +12419,7 @@
       "installTarget": "linux-headers-azure-fde-lts-24.04",
       "members": [
         {
-          "name": "linux-headers-6.8.0-1066-azure-fde",
+          "name": "linux-headers-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -12498,7 +12440,7 @@
       "installTarget": "linux-headers-azure-lts-24.04",
       "members": [
         {
-          "name": "linux-headers-6.8.0-1070-azure",
+          "name": "linux-headers-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -12540,7 +12482,7 @@
       "installTarget": "linux-image-azure",
       "members": [
         {
-          "name": "linux-image-7.0.0-1014-azure",
+          "name": "linux-image-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -12624,7 +12566,7 @@
       "installTarget": "linux-image-azure-6.8",
       "members": [
         {
-          "name": "linux-image-6.8.0-1070-azure",
+          "name": "linux-image-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -12645,7 +12587,7 @@
       "installTarget": "linux-image-azure-7.0",
       "members": [
         {
-          "name": "linux-image-7.0.0-1014-azure",
+          "name": "linux-image-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -12666,7 +12608,7 @@
       "installTarget": "linux-image-azure-edge",
       "members": [
         {
-          "name": "linux-image-7.0.0-1014-azure",
+          "name": "linux-image-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -12687,7 +12629,7 @@
       "installTarget": "linux-image-azure-fde",
       "members": [
         {
-          "name": "linux-image-7.0.0-1013-azure-fde",
+          "name": "linux-image-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -12771,7 +12713,7 @@
       "installTarget": "linux-image-azure-fde-6.8",
       "members": [
         {
-          "name": "linux-image-6.8.0-1066-azure-fde",
+          "name": "linux-image-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -12792,7 +12734,7 @@
       "installTarget": "linux-image-azure-fde-7.0",
       "members": [
         {
-          "name": "linux-image-7.0.0-1013-azure-fde",
+          "name": "linux-image-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -12813,7 +12755,7 @@
       "installTarget": "linux-image-azure-fde-edge",
       "members": [
         {
-          "name": "linux-image-7.0.0-1013-azure-fde",
+          "name": "linux-image-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -12834,7 +12776,7 @@
       "installTarget": "linux-image-azure-fde-lts-24.04",
       "members": [
         {
-          "name": "linux-image-6.8.0-1066-azure-fde",
+          "name": "linux-image-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -12855,7 +12797,7 @@
       "installTarget": "linux-image-azure-lts-24.04",
       "members": [
         {
-          "name": "linux-image-6.8.0-1070-azure",
+          "name": "linux-image-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -13002,7 +12944,7 @@
       "installTarget": "linux-modules-extra-azure-6.8",
       "members": [
         {
-          "name": "linux-modules-extra-6.8.0-1070-azure",
+          "name": "linux-modules-extra-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -13107,7 +13049,7 @@
       "installTarget": "linux-modules-extra-azure-fde-6.8",
       "members": [
         {
-          "name": "linux-modules-extra-6.8.0-1066-azure-fde",
+          "name": "linux-modules-extra-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -13149,7 +13091,7 @@
       "installTarget": "linux-modules-extra-azure-fde-lts-24.04",
       "members": [
         {
-          "name": "linux-modules-extra-6.8.0-1066-azure-fde",
+          "name": "linux-modules-extra-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -13170,7 +13112,7 @@
       "installTarget": "linux-modules-extra-azure-lts-24.04",
       "members": [
         {
-          "name": "linux-modules-extra-6.8.0-1070-azure",
+          "name": "linux-modules-extra-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -13191,7 +13133,7 @@
       "installTarget": "linux-tools-azure",
       "members": [
         {
-          "name": "linux-tools-7.0.0-1014-azure",
+          "name": "linux-tools-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -13275,7 +13217,7 @@
       "installTarget": "linux-tools-azure-6.8",
       "members": [
         {
-          "name": "linux-tools-6.8.0-1070-azure",
+          "name": "linux-tools-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -13296,7 +13238,7 @@
       "installTarget": "linux-tools-azure-7.0",
       "members": [
         {
-          "name": "linux-tools-7.0.0-1014-azure",
+          "name": "linux-tools-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -13317,7 +13259,7 @@
       "installTarget": "linux-tools-azure-edge",
       "members": [
         {
-          "name": "linux-tools-7.0.0-1014-azure",
+          "name": "linux-tools-7.0.0-1017-azure",
           "role": "default"
         }
       ],
@@ -13338,7 +13280,7 @@
       "installTarget": "linux-tools-azure-fde",
       "members": [
         {
-          "name": "linux-tools-7.0.0-1013-azure-fde",
+          "name": "linux-tools-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -13401,7 +13343,7 @@
       "installTarget": "linux-tools-azure-fde-6.8",
       "members": [
         {
-          "name": "linux-tools-6.8.0-1066-azure-fde",
+          "name": "linux-tools-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -13422,7 +13364,7 @@
       "installTarget": "linux-tools-azure-fde-7.0",
       "members": [
         {
-          "name": "linux-tools-7.0.0-1013-azure-fde",
+          "name": "linux-tools-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -13443,7 +13385,7 @@
       "installTarget": "linux-tools-azure-fde-edge",
       "members": [
         {
-          "name": "linux-tools-7.0.0-1013-azure-fde",
+          "name": "linux-tools-7.0.0-1016-azure-fde",
           "role": "default"
         }
       ],
@@ -13464,7 +13406,7 @@
       "installTarget": "linux-tools-azure-fde-lts-24.04",
       "members": [
         {
-          "name": "linux-tools-6.8.0-1066-azure-fde",
+          "name": "linux-tools-6.8.0-1069-azure-fde",
           "role": "default"
         }
       ],
@@ -13485,7 +13427,7 @@
       "installTarget": "linux-tools-azure-lts-24.04",
       "members": [
         {
-          "name": "linux-tools-6.8.0-1070-azure",
+          "name": "linux-tools-6.8.0-1071-azure",
           "role": "default"
         }
       ],
@@ -15648,64 +15590,6 @@
       "children": []
     },
     {
-      "id": "metapackage:nvidia-compute-utils-470-server",
-      "sourceId": "nvidia-compute-utils-470-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-compute-utils-470-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA compute utilities"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-compute-utils-470-server",
-      "members": [
-        {
-          "name": "adduser",
-          "role": "default"
-        },
-        {
-          "name": "libc6",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-compute-470-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:nvidia-compute-utils-565-server",
-      "sourceId": "nvidia-compute-utils-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-compute-utils-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA compute utilities"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-compute-utils-565-server",
-      "members": [
-        {
-          "name": "adduser",
-          "role": "default"
-        },
-        {
-          "name": "libc6",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-compute-565-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
       "id": "metapackage:nvidia-compute-utils-580-server",
       "sourceId": "nvidia-compute-utils-580-server",
       "type": "metapackage",
@@ -15764,78 +15648,29 @@
       "children": []
     },
     {
-      "id": "metapackage:nvidia-dkms-470-server",
-      "sourceId": "nvidia-dkms-470-server",
+      "id": "metapackage:nvidia-compute-utils-615-server",
+      "sourceId": "nvidia-compute-utils-615-server",
       "type": "metapackage",
       "names": {
-        "en": "nvidia-dkms-470-server"
+        "en": "nvidia-compute-utils-615-server"
       },
       "descriptions": {
-        "en": "NVIDIA DKMS package"
+        "en": "NVIDIA compute utilities"
       },
       "visible": true,
       "default": false,
-      "installTarget": "nvidia-dkms-470-server",
+      "installTarget": "nvidia-compute-utils-615-server",
       "members": [
         {
-          "name": "dkms",
+          "name": "adduser",
           "role": "default"
         },
         {
-          "name": "nvidia-kernel-common-470-server",
+          "name": "libc6",
           "role": "default"
         },
         {
-          "name": "nvidia-kernel-common-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-source-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-source-470-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:nvidia-dkms-565-server",
-      "sourceId": "nvidia-dkms-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-dkms-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA DKMS package"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-dkms-565-server",
-      "members": [
-        {
-          "name": "dkms",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-firmware-565-server-565.57.01",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-source-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-source-565-server",
+          "name": "libnvidia-compute-615-server",
           "role": "default"
         }
       ],
@@ -15918,164 +15753,6 @@
         },
         {
           "name": "nvidia-kernel-source-595-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:nvidia-driver-470-server",
-      "sourceId": "nvidia-driver-470-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-driver-470-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA Server Driver metapackage"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-driver-470-server",
-      "members": [
-        {
-          "name": "libnvidia-cfg1-470-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-compute-470-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-decode-470-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-encode-470-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-extra-470-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-fbc1-470-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-gl-470-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-ifr1-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-compute-utils-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-dkms-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-dkms-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-source-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-utils-470-server",
-          "role": "default"
-        },
-        {
-          "name": "xserver-xorg-video-nvidia-470-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:nvidia-driver-565-server",
-      "sourceId": "nvidia-driver-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-driver-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA Server Driver metapackage"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-driver-565-server",
-      "members": [
-        {
-          "name": "libnvidia-cfg1-565-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-compute-565-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-decode-565-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-encode-565-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-extra-565-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-fbc1-565-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-gl-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-compute-utils-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-dkms-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-dkms-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-source-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-utils-565-server",
-          "role": "default"
-        },
-        {
-          "name": "xserver-xorg-video-nvidia-565-server",
           "role": "default"
         }
       ],
@@ -16236,56 +15913,6 @@
       "children": []
     },
     {
-      "id": "metapackage:nvidia-headless-470-server",
-      "sourceId": "nvidia-headless-470-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-headless-470-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA headless metapackage"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-headless-470-server",
-      "members": [
-        {
-          "name": "nvidia-dkms-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-headless-no-dkms-470-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:nvidia-headless-565-server",
-      "sourceId": "nvidia-headless-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-headless-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA headless metapackage"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-headless-565-server",
-      "members": [
-        {
-          "name": "nvidia-dkms-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-headless-no-dkms-565-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
       "id": "metapackage:nvidia-headless-580-server",
       "sourceId": "nvidia-headless-580-server",
       "type": "metapackage",
@@ -16330,88 +15957,6 @@
         },
         {
           "name": "nvidia-headless-no-dkms-595-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:nvidia-headless-no-dkms-470-server",
-      "sourceId": "nvidia-headless-no-dkms-470-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-headless-no-dkms-470-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA headless metapackage - no DKMS"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-headless-no-dkms-470-server",
-      "members": [
-        {
-          "name": "libnvidia-cfg1-470-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-compute-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-compute-utils-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-470-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-source-470-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:nvidia-headless-no-dkms-565-server",
-      "sourceId": "nvidia-headless-no-dkms-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-headless-no-dkms-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA headless metapackage - no DKMS"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-headless-no-dkms-565-server",
-      "members": [
-        {
-          "name": "libnvidia-cfg1-565-server",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-compute-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-compute-utils-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-common-565-server",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-kernel-source-565-server",
           "role": "default"
         }
       ],
@@ -16500,64 +16045,6 @@
       "children": []
     },
     {
-      "id": "metapackage:nvidia-kernel-common-470-server",
-      "sourceId": "nvidia-kernel-common-470-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-kernel-common-470-server"
-      },
-      "descriptions": {
-        "en": "Shared files used with the kernel module"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-kernel-common-470-server",
-      "members": [
-        {
-          "name": "libc6",
-          "role": "default"
-        },
-        {
-          "name": "libpciaccess0",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:nvidia-kernel-common-565-server",
-      "sourceId": "nvidia-kernel-common-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-kernel-common-565-server"
-      },
-      "descriptions": {
-        "en": "Shared files used with the kernel module"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-kernel-common-565-server",
-      "members": [
-        {
-          "name": "libc6",
-          "role": "default"
-        },
-        {
-          "name": "libgcc-s1",
-          "role": "default"
-        },
-        {
-          "name": "libpciaccess0",
-          "role": "default"
-        },
-        {
-          "name": "nvidia-firmware-565-server-565.57.01",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
       "id": "metapackage:nvidia-kernel-common-580-server",
       "sourceId": "nvidia-kernel-common-580-server",
       "type": "metapackage",
@@ -16616,50 +16103,29 @@
       "children": []
     },
     {
-      "id": "metapackage:nvidia-utils-470-server",
-      "sourceId": "nvidia-utils-470-server",
+      "id": "metapackage:nvidia-kernel-common-615-server",
+      "sourceId": "nvidia-kernel-common-615-server",
       "type": "metapackage",
       "names": {
-        "en": "nvidia-utils-470-server"
+        "en": "nvidia-kernel-common-615-server"
       },
       "descriptions": {
-        "en": "NVIDIA Server Driver support binaries"
+        "en": "Shared files used with the kernel module"
       },
       "visible": true,
       "default": false,
-      "installTarget": "nvidia-utils-470-server",
+      "installTarget": "nvidia-kernel-common-615-server",
       "members": [
         {
           "name": "libc6",
           "role": "default"
         },
         {
-          "name": "libnvidia-compute-470-server",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:nvidia-utils-565-server",
-      "sourceId": "nvidia-utils-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "nvidia-utils-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA Server Driver support binaries"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "nvidia-utils-565-server",
-      "members": [
-        {
-          "name": "libc6",
+          "name": "libpciaccess0",
           "role": "default"
         },
         {
-          "name": "libnvidia-compute-565-server",
+          "name": "nvidia-firmware-615-server-615.71.09",
           "role": "default"
         }
       ],
@@ -16718,6 +16184,35 @@
         },
         {
           "name": "nvidia-kernel-common-595-server-595.91.07",
+          "role": "default"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "metapackage:nvidia-utils-615-server",
+      "sourceId": "nvidia-utils-615-server",
+      "type": "metapackage",
+      "names": {
+        "en": "nvidia-utils-615-server"
+      },
+      "descriptions": {
+        "en": "NVIDIA Server Driver support binaries"
+      },
+      "visible": true,
+      "default": false,
+      "installTarget": "nvidia-utils-615-server",
+      "members": [
+        {
+          "name": "libc6",
+          "role": "default"
+        },
+        {
+          "name": "libnvidia-compute-615-server",
+          "role": "default"
+        },
+        {
+          "name": "nvidia-kernel-common-615-server-615.71.09",
           "role": "default"
         }
       ],
@@ -27355,72 +26850,6 @@
       "children": []
     },
     {
-      "id": "metapackage:xserver-xorg-video-nvidia-470-server",
-      "sourceId": "xserver-xorg-video-nvidia-470-server",
-      "type": "metapackage",
-      "names": {
-        "en": "xserver-xorg-video-nvidia-470-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA binary Xorg driver"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "xserver-xorg-video-nvidia-470-server",
-      "members": [
-        {
-          "name": "libc6",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-cfg1-470-server",
-          "role": "default"
-        },
-        {
-          "name": "xorg-video-abi-25",
-          "role": "default"
-        },
-        {
-          "name": "xserver-xorg-core",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "metapackage:xserver-xorg-video-nvidia-565-server",
-      "sourceId": "xserver-xorg-video-nvidia-565-server",
-      "type": "metapackage",
-      "names": {
-        "en": "xserver-xorg-video-nvidia-565-server"
-      },
-      "descriptions": {
-        "en": "NVIDIA binary Xorg driver"
-      },
-      "visible": true,
-      "default": false,
-      "installTarget": "xserver-xorg-video-nvidia-565-server",
-      "members": [
-        {
-          "name": "libc6",
-          "role": "default"
-        },
-        {
-          "name": "libnvidia-cfg1-565-server",
-          "role": "default"
-        },
-        {
-          "name": "xorg-video-abi-25",
-          "role": "default"
-        },
-        {
-          "name": "xserver-xorg-core",
-          "role": "default"
-        }
-      ],
-      "children": []
-    },
-    {
       "id": "metapackage:xserver-xorg-video-nvidia-580-server",
       "sourceId": "xserver-xorg-video-nvidia-580-server",
       "type": "metapackage",
@@ -27473,6 +26902,39 @@
         },
         {
           "name": "libnvidia-cfg1-595-server",
+          "role": "default"
+        },
+        {
+          "name": "xorg-video-abi-25",
+          "role": "default"
+        },
+        {
+          "name": "xserver-xorg-core",
+          "role": "default"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "metapackage:xserver-xorg-video-nvidia-615-server",
+      "sourceId": "xserver-xorg-video-nvidia-615-server",
+      "type": "metapackage",
+      "names": {
+        "en": "xserver-xorg-video-nvidia-615-server"
+      },
+      "descriptions": {
+        "en": "NVIDIA binary Xorg driver"
+      },
+      "visible": true,
+      "default": false,
+      "installTarget": "xserver-xorg-video-nvidia-615-server",
+      "members": [
+        {
+          "name": "libc6",
+          "role": "default"
+        },
+        {
+          "name": "libnvidia-cfg1-615-server",
           "role": "default"
         },
         {

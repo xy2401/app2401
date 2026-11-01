@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "d5",
   "items": [
@@ -808,10 +808,10 @@
       "id": "d5145dafe72dc756d335",
       "name": "linux-modules-nvidia-610-gcp-lts-24.04",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-610 for the gcp-lts-24.04 flavour",
-      "description": "Extra drivers for nvidia-610 for the gcp-lts-24.04 flavour",
+      "summary": "Extra drivers for nvidia-610 for the gcp flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-610 for the gcp flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-gcp",
       "category": "restricted/kernel",
@@ -819,15 +819,11 @@
       "installedSize": 25600,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-6.8.0-1070-gcp (= 6.8.0-1070.78)",
-          "nvidia-kernel-common-610 (>= 610.57.04)"
+          "linux-modules-nvidia-615-open-gcp-lts-24.04"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -1049,6 +1045,34 @@
           "lib32stdc++6-9-dbg-x32-cross",
           "lib32stdc++6-dbg-x32-cross"
         ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "d5174b34fb9185b7029d",
+      "name": "linux-modules-nvidia-580-server-6.8.0-1008-vmware",
+      "version": "6.8.0",
+      "release": "1008.8+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1008",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1008",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-vmware",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 35840,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1008-vmware | linux-image-unsigned-6.8.0-1008-vmware",
+          "linux-objects-nvidia-580-server-6.8.0-1008-vmware (= 6.8.0-1008.8+1)",
+          "linux-signatures-nvidia-6.8.0-1008-vmware (= 6.8.0-1008.8+1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
         "replaces": []
       }
     },
@@ -1689,6 +1713,50 @@
       }
     },
     {
+      "id": "d527ca4282d785358bab",
+      "name": "linux-hwe-7.0-tools-7.0.0-42",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 7.0.0-42",
+      "description": "Linux kernel version specific tools for version 7.0.0-42",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-hwe-7.0",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 43143168,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.39)",
+          "libcap2 (>= 1:2.10)",
+          "libdebuginfod1t64 (>= 0.180)",
+          "libdw1t64 (>= 0.161)",
+          "libelf1t64 (>= 0.144)",
+          "libgcc-s1 (>= 4.2)",
+          "libllvm19",
+          "liblzma5 (>= 5.1.1alpha+20120614)",
+          "libnl-3-200 (>= 3.2.7)",
+          "libnl-genl-3-200 (>= 3.2.21)",
+          "libnuma1 (>= 2.0.11)",
+          "libpci3 (>= 1:3.8.0)",
+          "libpython3.12t64 (>= 3.12.1)",
+          "libslang2 (>= 2.2.4)",
+          "libssl3t64 (>= 3.0.0)",
+          "libstdc++6 (>= 5.2)",
+          "libtraceevent1 (>= 1:1.3.0)",
+          "libudev1 (>= 183)",
+          "libzstd1 (>= 1.5.5)",
+          "linux-tools-common",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "d5280bd7eb2201370bd3",
       "name": "armagetronad",
       "version": "0.2.9.1.1",
@@ -1926,7 +1994,7 @@
       "id": "d531899cd064eb8c2331",
       "name": "linux-modules-nvidia-550-open-vmware",
       "version": "6.8.0",
-      "release": "1005.5+1",
+      "release": "1008.8+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550-open for the vmware flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550-open for the vmware flavour (dummy transitional package)",
@@ -2065,8 +2133,8 @@
     {
       "id": "d535098add5c4f583897",
       "name": "librte-net-ipn3ke24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-net-ipn3ke runtime library)",
       "description": "Data Plane Development Kit (librte-net-ipn3ke runtime library)",
@@ -2655,6 +2723,32 @@
       }
     },
     {
+      "id": "d54210be060a9f859de3",
+      "name": "golang-1.25",
+      "version": "1.25.14",
+      "release": "1~ubuntu0.24.04.1",
+      "architecture": "all",
+      "summary": "Go programming language compiler - metapackage",
+      "description": "Go programming language compiler - metapackage",
+      "homepage": "https://go.dev/",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "category": "universe/golang",
+      "repository": "official",
+      "installedSize": 38912,
+      "dependencies": {
+        "requires": [
+          "golang-1.25-doc (>= 1.25.14-1~ubuntu0.24.04.1)",
+          "golang-1.25-go (>= 1.25.14-1~ubuntu0.24.04.1)",
+          "golang-1.25-src (>= 1.25.14-1~ubuntu0.24.04.1)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "d542c4621d6fb156a76e",
       "name": "linux-modules-nvidia-580-open-6.17.0-1010-gcp",
       "version": "6.17.0",
@@ -2684,7 +2778,7 @@
       "id": "d543563f67d50b4fcbb8",
       "name": "linux-modules-nvidia-595-6.8.0-1065-gke",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1065.73+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-1065",
       "description": "Linux kernel nvidia modules for version 6.8.0-1065",
@@ -2697,9 +2791,9 @@
         "requires": [
           "debconf (>= 0.5) | debconf-2.0",
           "linux-image-6.8.0-1065-gke | linux-image-unsigned-6.8.0-1065-gke",
-          "linux-objects-nvidia-595-6.8.0-1065-gke (= 6.8.0-1065.73)",
-          "linux-signatures-nvidia-6.8.0-1065-gke (= 6.8.0-1065.73)",
-          "nvidia-kernel-common-595 (>= 595.91.07)"
+          "linux-objects-nvidia-595-6.8.0-1065-gke (= 6.8.0-1065.73+1)",
+          "linux-signatures-nvidia-6.8.0-1065-gke (= 6.8.0-1065.73+1)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
         ],
         "recommends": [],
         "suggests": [],
@@ -3512,7 +3606,7 @@
       "id": "d553bb81e15ad4f3d6b8",
       "name": "linux-headers-lowlatency-hwe-20.04",
       "version": "6.8.0",
-      "release": "142.142.1",
+      "release": "147.147.1",
       "architecture": "amd64",
       "summary": "lowlatency Linux kernel headers (dummy transitional package)",
       "description": "lowlatency Linux kernel headers (dummy transitional package)",
@@ -3536,7 +3630,7 @@
       "id": "d554a83d15264609086d",
       "name": "linux-modules-nvidia-575-server-open-oracle-lts-24.04",
       "version": "6.8.0",
-      "release": "1063.66",
+      "release": "1064.67+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server-open for the oracle flavour (dummy transitional package)",
@@ -3630,7 +3724,7 @@
     {
       "id": "d5580d2c57c90dd0930c",
       "name": "ubuntu-core-snapd-units",
-      "version": "2.76.3+ubuntu24.04",
+      "version": "2.77.1+ubuntu24.04",
       "architecture": "all",
       "summary": "transitional dummy package",
       "description": "transitional dummy package",
@@ -3639,7 +3733,7 @@
       "sourcePackage": "snapd",
       "category": "universe/devel",
       "repository": "official",
-      "installedSize": 138240,
+      "installedSize": 141312,
       "dependencies": {
         "requires": [
           "snapd"
@@ -5282,6 +5376,30 @@
       }
     },
     {
+      "id": "d580781eedd916c710e9",
+      "name": "linux-cloud-tools-6.8.0-146-lowlatency",
+      "version": "6.8.0",
+      "release": "146.146.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific cloud tools for version 6.8.0-146",
+      "description": "Linux kernel version specific cloud tools for version 6.8.0-146",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-lowlatency",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 905216,
+      "dependencies": {
+        "requires": [
+          "linux-lowlatency-cloud-tools-6.8.0-146"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "d580bb95e658bd862244",
       "name": "python3-full",
       "version": "3.12.3",
@@ -5351,7 +5469,7 @@
       "id": "d58320b864e7a3835a65",
       "name": "linux-modules-nvidia-575-server-open-oracle-edge",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server-open for the oracle flavour (dummy transitional package)",
@@ -5666,7 +5784,7 @@
       "name": "libreoffice-l10n-zu",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Zulu language package",
       "description": "office productivity suite -- Zulu language package",
@@ -5675,7 +5793,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 1808384,
+      "installedSize": 1809408,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -5883,7 +6001,7 @@
       "id": "d58ffb1870792b42ac2c",
       "name": "linux-modules-nvidia-535-server-ibm-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server for the ibm flavour (dummy transitional package)",
@@ -5891,7 +6009,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-server-ibm-lts-24.04"
@@ -9186,6 +9304,31 @@
       }
     },
     {
+      "id": "d5e94cd326b83edbfbaf",
+      "name": "linux-modules-vision-unsigned-generic-7.0",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for vision for the generic flavour",
+      "description": "Extra drivers for vision for the generic flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-modules-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 8192,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-main-modules-vision-unsigned-7.0.0-42-generic"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "d5e955585489a7e6b178",
       "name": "libaudio-xmmsclient-perl",
       "version": "0.8+dfsg",
@@ -9386,7 +9529,7 @@
       "id": "d5ec8a82a137204b618f",
       "name": "apache2-doc",
       "version": "2.4.58",
-      "release": "1ubuntu8.15",
+      "release": "1ubuntu8.17",
       "architecture": "all",
       "summary": "Apache HTTP Server (on-site documentation)",
       "description": "Apache HTTP Server (on-site documentation)",
@@ -9395,7 +9538,7 @@
       "sourcePackage": "apache2",
       "category": "doc",
       "repository": "official",
-      "installedSize": 25729024,
+      "installedSize": 25730048,
       "dependencies": {
         "requires": [],
         "recommends": [
@@ -9564,6 +9707,28 @@
         "provides": [
           "tachyon-bin"
         ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "d5efaa5e5d3f8e4a5edb",
+      "name": "linux-buildinfo-6.8.0-1066-gke",
+      "version": "6.8.0",
+      "release": "1066.74",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gke",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 3504128,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "8e",
   "items": [
@@ -33,7 +33,7 @@
       "name": "samba-testsuite",
       "epoch": "2",
       "version": "4.19.5+dfsg",
-      "release": "4ubuntu9.7",
+      "release": "4ubuntu9.8",
       "architecture": "amd64",
       "summary": "test suite from Samba",
       "description": "test suite from Samba",
@@ -57,10 +57,10 @@
           "libtdb1 (>= 1.4.9~)",
           "libtevent0t64 (>= 0.15.0)",
           "libwbclient0 (>= 2:4.0.3+dfsg1)",
-          "python3-samba (= 2:4.19.5+dfsg-4ubuntu9.7)",
+          "python3-samba (= 2:4.19.5+dfsg-4ubuntu9.8)",
           "samba-common-bin",
-          "samba-libs (= 2:4.19.5+dfsg-4ubuntu9.7)",
-          "winbind (= 2:4.19.5+dfsg-4ubuntu9.7)"
+          "samba-libs (= 2:4.19.5+dfsg-4ubuntu9.8)",
+          "winbind (= 2:4.19.5+dfsg-4ubuntu9.8)"
         ],
         "recommends": [],
         "suggests": [
@@ -71,6 +71,32 @@
         "replaces": [
           "samba-libs (<< 2:4.19.0~)"
         ]
+      }
+    },
+    {
+      "id": "8e0261d56ded685f3f68",
+      "name": "linux-modules-nvidia-595-server-open-6.8.0-1067-aws",
+      "version": "6.8.0",
+      "release": "1067.70+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1067",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1067",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-aws",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26361856,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1067-aws | linux-image-unsigned-6.8.0-1067-aws",
+          "nvidia-kernel-common-595-server (<= 595.91.07-1)",
+          "nvidia-kernel-common-595-server (>= 595.91.07)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -458,26 +484,22 @@
       "id": "8e0b1140349609701aef",
       "name": "linux-modules-nvidia-610-oem-24.04d",
       "version": "6.17.0",
-      "release": "1032.32+1",
+      "release": "1033.33+3",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-610 for the oem-24.04d flavour",
-      "description": "Extra drivers for nvidia-610 for the oem-24.04d flavour",
+      "summary": "Extra drivers for nvidia-610 for the oem flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-610 for the oem flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-oem-6.17",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-6.17.0-1032-oem (= 6.17.0-1032.32+1)",
-          "nvidia-kernel-common-610 (>= 610.57.04)"
+          "linux-modules-nvidia-615-open-oem-24.04d"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-610 (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -1871,7 +1893,7 @@
       "id": "8e391fbca6a3f076c360",
       "name": "linux-modules-nvidia-595-server-gcp-lts-24.04",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-server for the gcp-lts-24.04 flavour",
       "description": "Extra drivers for nvidia-595-server for the gcp-lts-24.04 flavour",
@@ -1882,7 +1904,7 @@
       "installedSize": 25600,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-server-6.8.0-1070-gcp (= 6.8.0-1070.78)",
+          "linux-modules-nvidia-595-server-6.8.0-1071-gcp (= 6.8.0-1071.79+2)",
           "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
@@ -2599,6 +2621,30 @@
       "dependencies": {
         "requires": [
           "libvw0 (= 8.6.1.dfsg1-1build3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "8e4bfa791261253a2df8",
+      "name": "linux-objects-nvidia-615-server-open-6.8.0-146-generic",
+      "version": "6.8.0",
+      "release": "146.146+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-146 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-146 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27830272,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -3353,7 +3399,7 @@
       "id": "8e5e61e9bd9b7f49f794",
       "name": "libnvidia-cfg1-470-server",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.1",
+      "release": "0ubuntu0.24.04.5",
       "architecture": "amd64",
       "summary": "NVIDIA binary OpenGL/GLX configuration library",
       "description": "NVIDIA binary OpenGL/GLX configuration library",
@@ -3362,22 +3408,16 @@
       "sourcePackage": "nvidia-graphics-drivers-470-server",
       "category": "restricted/libs",
       "repository": "official",
-      "installedSize": 247808,
+      "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "libc6 (>= 2.34)"
+          "libnvidia-cfg1-535"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "libnvidia-cfg1-any"
-        ],
-        "conflicts": [
-          "libnvidia-cfg1-any"
-        ],
-        "replaces": [
-          "libnvidia-cfg1-any"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -3557,6 +3597,30 @@
       }
     },
     {
+      "id": "8e613af5834ce4652778",
+      "name": "linux-objects-nvidia-580-server-7.0.0-1016-azure-fde",
+      "version": "7.0.0",
+      "release": "1016.16~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1016 (objects)",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1016 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 199811072,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "8e617d9e66a8efa743c1",
       "name": "libghc-text-manipulate-dev",
       "version": "0.3.1.0",
@@ -3621,7 +3685,7 @@
       "id": "8e6304b68f9f79d78a61",
       "name": "linux-modules-nvidia-595-azure",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1+1",
+      "release": "1017.17~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595 for the azure flavour",
       "description": "Extra drivers for nvidia-595 for the azure flavour",
@@ -3632,13 +3696,13 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-7.0.0-1014-azure (= 7.0.0-1014.14~24.04.1+1)",
-          "nvidia-kernel-common-595 (>= 595.91.07)"
+          "linux-modules-nvidia-595-7.0.0-1017-azure (= 7.0.0-1017.17~24.04.1+1)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595 (= 595.91.07-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595 (= 595.99.02-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -3801,7 +3865,7 @@
       "id": "8e68c8468db9f928b451",
       "name": "linux-image-oem-24.04a",
       "version": "6.17.0",
-      "release": "1032.32",
+      "release": "1033.33",
       "architecture": "amd64",
       "summary": "OEM Linux kernel image (transitional package)",
       "description": "OEM Linux kernel image (transitional package)",
@@ -3996,7 +4060,7 @@
       "id": "8e6c0742b61e346f96a3",
       "name": "linux-modules-nvidia-580-server-open-6.8.0-146-generic",
       "version": "6.8.0",
-      "release": "146.146+1",
+      "release": "146.146+2",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-146",
       "description": "Linux kernel nvidia modules for version 6.8.0-146",
@@ -5037,7 +5101,7 @@
       "id": "8e845de940f8c8124578",
       "name": "linux-modules-nvidia-590-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "142.142.1+1",
+      "release": "147.147.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the lowlatency flavour (dummy transitional package)",
@@ -5617,7 +5681,7 @@
       "name": "libreoffice-uiconfig-report-builder",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "UI data (\"config\") for the LibreOffice Report Builder",
       "description": "UI data (\"config\") for the LibreOffice Report Builder",
@@ -5626,7 +5690,7 @@
       "sourcePackage": "libreoffice",
       "category": "universe/misc",
       "repository": "official",
-      "installedSize": 264192,
+      "installedSize": 265216,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -5656,6 +5720,34 @@
         "requires": [
           "ruby | ruby-interpreter",
           "ruby-tins"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "8e93b090ce340c8fbc31",
+      "name": "linux-modules-nvidia-580-server-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-38",
+      "description": "Linux kernel nvidia modules for version 7.0.0-38",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-38-generic | linux-image-unsigned-7.0.0-38-generic",
+          "linux-objects-nvidia-580-server-7.0.0-38-generic (= 7.0.0-38.38~24.04.4+1)",
+          "linux-signatures-nvidia-7.0.0-38-generic (= 7.0.0-38.38~24.04.4+1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -5696,7 +5788,7 @@
       "id": "8e9406413a1329b416a2",
       "name": "linux-modules-nvidia-590-server-ibm-classic",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server for the ibm flavour (dummy transitional package)",
@@ -5704,7 +5796,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-595-server-ibm-classic"
@@ -5916,6 +6008,32 @@
           "libchewing1-dev",
           "libchewing2-dev"
         ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "8e9b50f20367691aa221",
+      "name": "linux-modules-nvidia-615-server-open-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-38",
+      "description": "Linux kernel nvidia modules for version 7.0.0-38",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 30504960,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-38-generic | linux-image-unsigned-7.0.0-38-generic",
+          "nvidia-kernel-common-615-server (<= 615.71.09-1)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
         "replaces": []
       }
     },
@@ -7360,7 +7478,7 @@
       "name": "erlang-runtime-tools",
       "epoch": "1",
       "version": "25.3.2.8+dfsg",
-      "release": "1ubuntu4.7",
+      "release": "1ubuntu4.8",
       "architecture": "amd64",
       "summary": "Erlang/OTP runtime tracing/debugging tools",
       "description": "Erlang/OTP runtime tracing/debugging tools",
@@ -7369,11 +7487,11 @@
       "sourcePackage": "erlang",
       "category": "interpreters",
       "repository": "official",
-      "installedSize": 425984,
+      "installedSize": 427008,
       "dependencies": {
         "requires": [
-          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-mnesia (= 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-base (= 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-mnesia (= 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "libc6 (>= 2.38)"
         ],
         "recommends": [],
@@ -7385,18 +7503,18 @@
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-base (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-base-hipe",
-          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-dev (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-doc (<< 1:25.3.2.8+dfsg)",
           "erlang-doc (>> 1:25.3.2.8+dfsg-999)",
-          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-manpages (<= 1:11.b.1-2)",
           "erlang-mode (<< 1:12.b.1-dfsg-2)",
-          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.7)"
+          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-src (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.8)"
         ]
       }
     },
@@ -8205,7 +8323,7 @@
       "name": "xserver-xorg-legacy",
       "epoch": "2",
       "version": "21.1.12",
-      "release": "1ubuntu1.8",
+      "release": "1ubuntu1.9",
       "architecture": "amd64",
       "summary": "setuid root Xorg server wrapper",
       "description": "setuid root Xorg server wrapper",
@@ -8219,7 +8337,7 @@
         "requires": [
           "debconf (>= 0.5) | debconf-2.0",
           "libc6 (>= 2.34)",
-          "xserver-common (>= 2:21.1.12-1ubuntu1.8)"
+          "xserver-common (>= 2:21.1.12-1ubuntu1.9)"
         ],
         "recommends": [],
         "suggests": [],
@@ -8235,7 +8353,7 @@
       "id": "8ec1895fb01e308594d6",
       "name": "libpoppler-glib-dev",
       "version": "24.02.0",
-      "release": "1ubuntu9.9",
+      "release": "1ubuntu9.11",
       "architecture": "amd64",
       "summary": "PDF rendering library -- development files (GLib interface)",
       "description": "PDF rendering library -- development files (GLib interface)",
@@ -8247,11 +8365,11 @@
       "installedSize": 911360,
       "dependencies": {
         "requires": [
-          "gir1.2-poppler-0.18 (= 24.02.0-1ubuntu9.9)",
+          "gir1.2-poppler-0.18 (= 24.02.0-1ubuntu9.11)",
           "libcairo2-dev (>= 1.16.0)",
           "libglib2.0-dev (>= 2.64)",
-          "libpoppler-dev (= 24.02.0-1ubuntu9.9)",
-          "libpoppler-glib8t64 (= 24.02.0-1ubuntu9.9)"
+          "libpoppler-dev (= 24.02.0-1ubuntu9.11)",
+          "libpoppler-glib8t64 (= 24.02.0-1ubuntu9.11)"
         ],
         "recommends": [],
         "suggests": [
@@ -8290,7 +8408,7 @@
       "id": "8ec335a2fbe749057fb0",
       "name": "linux-modules-nvidia-570-server-gcp-7.0",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the gcp flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the gcp flavour (dummy transitional package)",
@@ -8812,7 +8930,7 @@
       "id": "8ed320c1d0029a4e6f67",
       "name": "linux-modules-nvidia-580-server-open-6.17.0-1004-vmware",
       "version": "6.17.0",
-      "release": "1004.4+2",
+      "release": "1004.4+3",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.17.0-1004",
       "description": "Linux kernel nvidia modules for version 6.17.0-1004",
@@ -9747,26 +9865,23 @@
       "id": "8eedd5614d77b2b5018f",
       "name": "linux-modules-iwlwifi-generic-hwe-24.04",
       "version": "7.0.0",
-      "release": "34.34~24.04.1",
+      "release": "42.42~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for iwlwifi for the generic flavour",
       "description": "Extra drivers for iwlwifi for the generic flavour",
-      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-meta-hwe-7.0",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-signed-hwe-7.0",
       "category": "kernel",
       "repository": "official",
-      "installedSize": 9216,
+      "installedSize": 8192,
       "dependencies": {
         "requires": [
-          "linux-modules-iwlwifi-7.0.0-34-generic"
+          "kmod",
+          "linux-main-modules-iwlwifi-7.0.0-42-generic"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "backport-iwlwifi-dkms (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3.26.04.2)",
-          "iwlwifi-modules (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3.26.04.2)",
-          "iwlwifi-prebuilt-kernel (= 1:0~103.14434-gitdf6b5bf4-0ubuntu3.26.04.2)"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -9977,7 +10092,7 @@
       "id": "8ef189818a9cba809714",
       "name": "linux-modules-nvidia-550-azure-fde-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.73",
+      "release": "1069.76+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550 for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550 for the azure-fde flavour (dummy transitional package)",
@@ -9989,6 +10104,55 @@
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-azure-fde-lts-24.04"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "8ef28e69ab6bbb1680e6",
+      "name": "linux-modules-ipu6-unsigned-generic-hwe-24.04-edge",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for ipu6 for the generic flavour",
+      "description": "Extra drivers for ipu6 for the generic flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-modules-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 8192,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-main-modules-ipu6-unsigned-7.0.0-42-generic"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "8ef28e900a48d031a233",
+      "name": "linux-azure-7.0-headers-7.0.0-1017",
+      "version": "7.0.0",
+      "release": "1017.17~24.04.1",
+      "architecture": "all",
+      "summary": "Header files related to Linux kernel version 7.0.0",
+      "description": "Header files related to Linux kernel version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure-7.0",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 94657536,
+      "dependencies": {
+        "requires": [
+          "coreutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -10185,6 +10349,30 @@
       }
     },
     {
+      "id": "8ef65667a2225a56cc19",
+      "name": "linux-image-uc-6.8.0-1067-aws",
+      "version": "6.8.0",
+      "release": "1067.70",
+      "architecture": "amd64",
+      "summary": "Signed kernel image aws for Ubuntu Core",
+      "description": "Signed kernel image aws for Ubuntu Core",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-signed-aws",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 58490880,
+      "dependencies": {
+        "requires": [
+          "linux-modules-6.8.0-1067-aws"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "8ef8e5b0654837670181",
       "name": "language-pack-da-base",
       "epoch": "1",
@@ -10261,7 +10449,7 @@
       "id": "8efc0989110fa1c1404e",
       "name": "linux-modules-nvidia-570-server-ibm-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the ibm flavour (dummy transitional package)",
@@ -10269,7 +10457,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-server-ibm-lts-24.04"

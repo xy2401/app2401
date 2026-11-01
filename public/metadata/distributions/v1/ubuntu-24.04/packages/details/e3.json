@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "e3",
   "items": [
@@ -1147,8 +1147,8 @@
     {
       "id": "e31a015de3c2c007c75c",
       "name": "librte-telemetry24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-telemetry runtime library)",
       "description": "Data Plane Development Kit (librte-telemetry runtime library)",
@@ -1365,7 +1365,7 @@
       "name": "libnss3-tools",
       "epoch": "2",
       "version": "3.98",
-      "release": "1ubuntu0.2",
+      "release": "1ubuntu0.3",
       "architecture": "amd64",
       "summary": "Network Security Service tools",
       "description": "Network Security Service tools",
@@ -2151,7 +2151,7 @@
       "id": "e3343f73239ba498114c",
       "name": "linux-objects-nvidia-595-6.8.0-1064-nvidia-lowlatency",
       "version": "6.8.0",
-      "release": "1064.67.1",
+      "release": "1064.67.1+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-1064 (objects)",
       "description": "Linux kernel nvidia modules for version 6.8.0-1064 (objects)",
@@ -2159,7 +2159,7 @@
       "sourcePackage": "linux-restricted-modules-nvidia-lowlatency",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 184707072,
+      "installedSize": 184711168,
       "dependencies": {
         "requires": [
           "binutils"
@@ -2392,8 +2392,8 @@
     {
       "id": "e33aad2fe26795363baf",
       "name": "dpdk-doc",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "all",
       "summary": "Data Plane Development Kit (documentation)",
       "description": "Data Plane Development Kit (documentation)",
@@ -2402,7 +2402,7 @@
       "sourcePackage": "dpdk",
       "category": "universe/doc",
       "repository": "official",
-      "installedSize": 83045376,
+      "installedSize": 83209216,
       "dependencies": {
         "requires": [
           "fonts-font-awesome",
@@ -2533,6 +2533,30 @@
       }
     },
     {
+      "id": "e33fdc1c3c4114296053",
+      "name": "linux-tools-6.8.0-1067-ibm",
+      "version": "6.8.0",
+      "release": "1067.68",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 6.8.0-1067",
+      "description": "Linux kernel version specific tools for version 6.8.0-1067",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-ibm",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 877568,
+      "dependencies": {
+        "requires": [
+          "linux-ibm-tools-6.8.0-1067"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "e3407e30ddc4206595ff",
       "name": "ruby-rspec-rails",
       "version": "5.0.2",
@@ -2615,7 +2639,7 @@
       "id": "e3427e79207c183e917a",
       "name": "linux-modules-nvidia-570-aws-6.8",
       "version": "6.8.0",
-      "release": "1066.69",
+      "release": "1067.70+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the aws flavour (dummy transitional package)",
@@ -2623,7 +2647,7 @@
       "sourcePackage": "linux-restricted-modules-aws",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 24576,
+      "installedSize": 25600,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-aws-6.8"
@@ -4671,8 +4695,8 @@
     {
       "id": "e370e93a205696e97a6e",
       "name": "librte-baseband-la12xx24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-baseband-la12x runtime library)",
       "description": "Data Plane Development Kit (librte-baseband-la12x runtime library)",
@@ -6798,7 +6822,7 @@
       "id": "e3a3b1eea25891b7af7b",
       "name": "nvidia-kernel-common-470-server",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.1",
+      "release": "0ubuntu0.24.04.5",
       "architecture": "amd64",
       "summary": "Shared files used with the kernel module",
       "description": "Shared files used with the kernel module",
@@ -6807,24 +6831,16 @@
       "sourcePackage": "nvidia-graphics-drivers-470-server",
       "category": "restricted/libs",
       "repository": "official",
-      "installedSize": 36896768,
+      "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "libc6 (>= 2.38)",
-          "libpciaccess0 (>= 0.10.7)"
+          "nvidia-kernel-common-535"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-kernel-common"
-        ],
-        "conflicts": [
-          "nvidia-kernel-common"
-        ],
-        "replaces": [
-          "nvidia-dkms-470-server (<< 390.48-0ubuntu3~)",
-          "nvidia-kernel-common"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -6969,8 +6985,8 @@
     {
       "id": "e3a64689d39f663df552",
       "name": "librte-dispatcher24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-dispatcher runtime library)",
       "description": "Data Plane Development Kit (librte-dispatcher runtime library)",
@@ -7555,7 +7571,7 @@
       "id": "e3add614d8561913247f",
       "name": "linux-modules-nvidia-590-open-nvidia-7.0",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-open for the nvidia flavour (dummy transitional package)",
@@ -8940,7 +8956,7 @@
       "name": "libreoffice-l10n-sr",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Serbian language package",
       "description": "office productivity suite -- Serbian language package",
@@ -8949,7 +8965,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 5744640,
+      "installedSize": 5745664,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -9336,7 +9352,7 @@
       "id": "e3d9d53b8b3851d52256",
       "name": "linux-modules-nvidia-575-server-aws-6.8",
       "version": "6.8.0",
-      "release": "1066.69",
+      "release": "1067.70+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the aws flavour (dummy transitional package)",
@@ -9344,7 +9360,7 @@
       "sourcePackage": "linux-restricted-modules-aws",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 24576,
+      "installedSize": 25600,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-server-aws-6.8"
@@ -9837,7 +9853,7 @@
       "id": "e3ea0fcce69427f6cef3",
       "name": "linux-modules-nvidia-580-server-open-oracle",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server-open for the oracle flavour",
       "description": "Extra drivers for nvidia-580-server-open for the oracle flavour",
@@ -9848,7 +9864,7 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-open-7.0.0-1013-oracle (= 7.0.0-1013.13~24.04.1)",
+          "linux-modules-nvidia-580-server-open-7.0.0-1013-oracle (= 7.0.0-1013.13~24.04.1+1)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -9949,8 +9965,8 @@
     {
       "id": "e3ed106d9ac739d83de5",
       "name": "librte-bus-vdev24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-bus-vdev runtime library)",
       "description": "Data Plane Development Kit (librte-bus-vdev runtime library)",
@@ -10084,7 +10100,7 @@
       "id": "e3ef0f7139415549d197",
       "name": "linux-modules-nvidia-570-azure-edge",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1+1",
+      "release": "1017.17~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570 for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570 for the azure flavour (dummy transitional package)",

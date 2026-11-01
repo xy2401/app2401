@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "debian-stable",
   "shard": "3d",
   "items": [
@@ -1661,7 +1661,7 @@
       "name": "libreoffice-help-el",
       "epoch": "4",
       "version": "25.2.3",
-      "release": "2+deb13u7",
+      "release": "2+deb13u8",
       "architecture": "all",
       "summary": "office productivity suite -- Greek help",
       "description": "office productivity suite -- Greek help",
@@ -1674,7 +1674,7 @@
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:6.1.0~)",
-          "libreoffice-help-common (= 4:25.2.3-2+deb13u7)",
+          "libreoffice-help-common (= 4:25.2.3-2+deb13u8)",
           "libreoffice-l10n-el"
         ],
         "recommends": [
@@ -2978,7 +2978,7 @@
       "name": "erlang-eunit",
       "epoch": "1",
       "version": "27.3.4.1+dfsg",
-      "release": "1+deb13u3",
+      "release": "1+deb13u4",
       "architecture": "amd64",
       "summary": "Erlang/OTP module for unit testing",
       "description": "Erlang/OTP module for unit testing",
@@ -2987,10 +2987,10 @@
       "sourcePackage": "erlang",
       "category": "interpreters",
       "repository": "official",
-      "installedSize": 272384,
+      "installedSize": 271360,
       "dependencies": {
         "requires": [
-          "erlang-base (= 1:27.3.4.1+dfsg-1+deb13u3)"
+          "erlang-base (= 1:27.3.4.1+dfsg-1+deb13u4)"
         ],
         "recommends": [],
         "suggests": [
@@ -3000,18 +3000,18 @@
         "provides": [],
         "conflicts": [],
         "replaces": [
-          "erlang (<< 1:27.3.4.1+dfsg-1+deb13u3)",
-          "erlang-base (<< 1:27.3.4.1+dfsg-1+deb13u3)",
+          "erlang (<< 1:27.3.4.1+dfsg-1+deb13u4)",
+          "erlang-base (<< 1:27.3.4.1+dfsg-1+deb13u4)",
           "erlang-base-hipe",
-          "erlang-dev (<< 1:27.3.4.1+dfsg-1+deb13u3)",
+          "erlang-dev (<< 1:27.3.4.1+dfsg-1+deb13u4)",
           "erlang-doc (<< 1:27.3.4.1+dfsg)",
           "erlang-doc (>> 1:27.3.4.1+dfsg-999)",
-          "erlang-examples (<< 1:27.3.4.1+dfsg-1+deb13u3)",
+          "erlang-examples (<< 1:27.3.4.1+dfsg-1+deb13u4)",
           "erlang-manpages (<= 1:11.b.1-2)",
           "erlang-mode (<< 1:12.b.1-dfsg-2)",
-          "erlang-nox (<< 1:27.3.4.1+dfsg-1+deb13u3)",
-          "erlang-src (<< 1:27.3.4.1+dfsg-1+deb13u3)",
-          "erlang-x11 (<< 1:27.3.4.1+dfsg-1+deb13u3)"
+          "erlang-nox (<< 1:27.3.4.1+dfsg-1+deb13u4)",
+          "erlang-src (<< 1:27.3.4.1+dfsg-1+deb13u4)",
+          "erlang-x11 (<< 1:27.3.4.1+dfsg-1+deb13u4)"
         ]
       }
     },
@@ -3741,7 +3741,7 @@
     {
       "id": "3d65376ae2136a990e98",
       "name": "linux-image-rt-amd64",
-      "version": "6.12.111",
+      "version": "6.12.113",
       "release": "1",
       "architecture": "amd64",
       "summary": "Linux for 64-bit PCs (meta-package)",
@@ -3754,12 +3754,12 @@
       "installedSize": 13312,
       "dependencies": {
         "requires": [
-          "linux-image-6.12.111+deb13-rt-amd64 (= 6.12.111-1)"
+          "linux-image-6.12.113+deb13-rt-amd64 (= 6.12.113-1)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "linux-latest-modules-6.12.111+deb13-rt-amd64",
+          "linux-latest-modules-6.12.113+deb13-rt-amd64",
           "virtualbox-guest-modules",
           "wireguard-modules (= 1.0.0)"
         ],
@@ -6964,6 +6964,43 @@
       }
     },
     {
+      "id": "3dc4e0f3fea0588a5c4d",
+      "name": "linux-image-6.12.113+deb13-rt-amd64",
+      "version": "6.12.113",
+      "release": "1",
+      "architecture": "amd64",
+      "summary": "Linux 6.12 for 64-bit PCs (signed), PREEMPT_RT",
+      "description": "Linux 6.12 for 64-bit PCs (signed), PREEMPT_RT",
+      "homepage": "https://www.kernel.org/",
+      "maintainer": "Debian Kernel Team <debian-kernel@lists.debian.org>",
+      "sourcePackage": "linux-signed-amd64",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 111414272,
+      "dependencies": {
+        "requires": [
+          "initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool",
+          "kmod"
+        ],
+        "recommends": [
+          "apparmor"
+        ],
+        "suggests": [
+          "debian-kernel-handbook",
+          "firmware-linux-free",
+          "grub-pc | grub-efi-amd64 | extlinux",
+          "linux-doc-6.12"
+        ],
+        "provides": [],
+        "conflicts": [
+          "linux-image-6.12.113+deb13-rt-amd64-unsigned"
+        ],
+        "replaces": [
+          "linux-image-6.12.113+deb13-rt-amd64-unsigned"
+        ]
+      }
+    },
+    {
       "id": "3dc51e68d1d5d4a4082f",
       "name": "libervia-tui",
       "version": "0.9.0~hg4352",
@@ -8556,7 +8593,7 @@
       "id": "3df6eb97a0edd2992b42",
       "name": "liblzma-dev",
       "version": "5.8.1",
-      "release": "1+deb13u1",
+      "release": "1+deb13u2",
       "architecture": "amd64",
       "summary": "XZ-format compression library - development files",
       "description": "XZ-format compression library - development files",
@@ -8565,10 +8602,10 @@
       "sourcePackage": "xz-utils",
       "category": "libdevel",
       "repository": "official",
-      "installedSize": 863232,
+      "installedSize": 864256,
       "dependencies": {
         "requires": [
-          "liblzma5 (= 5.8.1-1+deb13u1)"
+          "liblzma5 (= 5.8.1-1+deb13u2)"
         ],
         "recommends": [],
         "suggests": [

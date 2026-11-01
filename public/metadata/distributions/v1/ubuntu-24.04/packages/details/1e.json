@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "1e",
   "items": [
@@ -8,7 +8,7 @@
       "id": "1e01149568dd66414e36",
       "name": "linux-modules-nvidia-570-server-aws-7.0",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the aws flavour (dummy transitional package)",
@@ -501,7 +501,7 @@
       "name": "libreoffice-l10n-fr",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- French language package",
       "description": "office productivity suite -- French language package",
@@ -510,7 +510,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 4658176,
+      "installedSize": 4659200,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -1479,10 +1479,36 @@
       }
     },
     {
+      "id": "1e28e3cadd109895ea51",
+      "name": "linux-modules-nvidia-615-open-6.8.0-146-lowlatency",
+      "version": "6.8.0",
+      "release": "146.146.1+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-146",
+      "description": "Linux kernel nvidia modules for version 6.8.0-146",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27831296,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-146-lowlatency | linux-image-unsigned-6.8.0-146-lowlatency",
+          "nvidia-kernel-common-615 (<= 615.71.09-1)",
+          "nvidia-kernel-common-615 (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "1e28f2b875cc9e78d9da",
       "name": "libglx-mesa0",
       "version": "25.2.8",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
       "summary": "free implementation of the OpenGL API -- GLX vendor library",
       "description": "free implementation of the OpenGL API -- GLX vendor library",
@@ -1508,7 +1534,7 @@
           "libxcb1",
           "libxext6",
           "libxxf86vm1",
-          "mesa-libgallium (= 25.2.8-0ubuntu0.24.04.3)"
+          "mesa-libgallium (= 25.2.8-0ubuntu0.24.04.4)"
         ],
         "recommends": [],
         "suggests": [],
@@ -2025,7 +2051,7 @@
       "id": "1e351fd8f0c85827b096",
       "name": "libxml2-dev",
       "version": "2.9.14+dfsg",
-      "release": "1.3ubuntu3.9",
+      "release": "1.3ubuntu3.10",
       "architecture": "amd64",
       "summary": "GNOME XML library - development files",
       "description": "GNOME XML library - development files",
@@ -2034,11 +2060,11 @@
       "sourcePackage": "libxml2",
       "category": "libdevel",
       "repository": "official",
-      "installedSize": 3346432,
+      "installedSize": 3347456,
       "dependencies": {
         "requires": [
           "libicu-dev",
-          "libxml2 (= 2.9.14+dfsg-1.3ubuntu3.9)"
+          "libxml2 (= 2.9.14+dfsg-1.3ubuntu3.10)"
         ],
         "recommends": [],
         "suggests": [
@@ -2294,6 +2320,39 @@
       }
     },
     {
+      "id": "1e39a33b3f8e7790981e",
+      "name": "libnvidia-encode-615-server",
+      "version": "615.71.09",
+      "release": "0ubuntu0.24.04.2",
+      "architecture": "amd64",
+      "summary": "NVENC Video Encoding runtime library",
+      "description": "NVENC Video Encoding runtime library",
+      "homepage": "http://www.nvidia.com",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "nvidia-graphics-drivers-615-server",
+      "category": "multiverse/libs",
+      "repository": "official",
+      "installedSize": 337920,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.3)",
+          "libnvidia-decode-615-server (>= 615.71.09)",
+          "nvidia-kernel-common-615-server-615.71.09"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "libnvidia-encode"
+        ],
+        "conflicts": [
+          "libnvidia-encode"
+        ],
+        "replaces": [
+          "libnvidia-encode"
+        ]
+      }
+    },
+    {
       "id": "1e39ecc3e8e2a1850afb",
       "name": "lib64go-13-dev-x32-cross",
       "version": "13.3.0",
@@ -2475,6 +2534,31 @@
           "libfile-sharedir-perl",
           "libpath-tiny-perl",
           "perl:any"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e3d0cdfc30aeaf6b1d4",
+      "name": "linux-modules-v4l2loopback-unsigned-generic-7.0",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for v4l2loopback for the generic flavour",
+      "description": "Extra drivers for v4l2loopback for the generic flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-modules-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 8192,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-main-modules-v4l2loopback-unsigned-7.0.0-42-generic"
         ],
         "recommends": [],
         "suggests": [],
@@ -2880,6 +2964,34 @@
           "libparallel-forkmanager-perl",
           "mha4mysql-node",
           "perl:any"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e45ce8d49b4241f2213",
+      "name": "linux-modules-nvidia-580-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-38",
+      "description": "Linux kernel nvidia modules for version 7.0.0-38",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-38-generic | linux-image-unsigned-7.0.0-38-generic",
+          "linux-objects-nvidia-580-7.0.0-38-generic (= 7.0.0-38.38~24.04.4+1)",
+          "linux-signatures-nvidia-7.0.0-38-generic (= 7.0.0-38.38~24.04.4+1)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -3963,10 +4075,34 @@
       }
     },
     {
+      "id": "1e626227d7db4c67f7f3",
+      "name": "linux-azure-fde-headers-6.8.0-1069",
+      "version": "6.8.0",
+      "release": "1069.76",
+      "architecture": "all",
+      "summary": "Header files related to Linux kernel version 6.8.0",
+      "description": "Header files related to Linux kernel version 6.8.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure-fde",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 86265856,
+      "dependencies": {
+        "requires": [
+          "coreutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "1e62dc8dccbf20074e77",
       "name": "linux-modules-nvidia-590-nvidia",
       "version": "6.8.0",
-      "release": "1064.67",
+      "release": "1064.67+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the nvidia flavour (dummy transitional package)",
@@ -4663,7 +4799,7 @@
       "name": "fonts-opensymbol",
       "epoch": "4",
       "version": "102.12+LibO24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "OpenSymbol TrueType font",
       "description": "OpenSymbol TrueType font",
@@ -4672,7 +4808,7 @@
       "sourcePackage": "libreoffice",
       "category": "fonts",
       "repository": "official",
-      "installedSize": 290816,
+      "installedSize": 291840,
       "dependencies": {
         "requires": [],
         "recommends": [
@@ -4737,6 +4873,30 @@
         "recommends": [
           "zip"
         ],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "1e75076dc8ea8fdfff11",
+      "name": "linux-objects-nvidia-580-server-6.8.0-1071-azure",
+      "version": "6.8.0",
+      "release": "1071.79+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1071 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1071 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 197317632,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [],
@@ -5120,7 +5280,7 @@
       "id": "1e7e463b5da4bbdcc323",
       "name": "linux-modules-nvidia-570-server-open-azure-fde",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1016.16~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server-open for the azure-fde flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server-open for the azure-fde flavour (dummy transitional package)",
@@ -5789,7 +5949,7 @@
       "id": "1e88d37a584f51e7dae1",
       "name": "linux-modules-nvidia-550-open-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "142.142.1+1",
+      "release": "147.147.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550-open for the lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550-open for the lowlatency flavour (dummy transitional package)",
@@ -5875,7 +6035,7 @@
       "id": "1e8c99f5ffd24e79e6f2",
       "name": "libcurl4t64",
       "version": "8.5.0",
-      "release": "2ubuntu10.15",
+      "release": "2ubuntu10.16",
       "architecture": "amd64",
       "summary": "easy-to-use client-side URL transfer library (OpenSSL flavour)",
       "description": "easy-to-use client-side URL transfer library (OpenSSL flavour)",
@@ -5884,7 +6044,7 @@
       "sourcePackage": "curl",
       "category": "libs",
       "repository": "official",
-      "installedSize": 949248,
+      "installedSize": 950272,
       "dependencies": {
         "requires": [
           "libbrotli1 (>= 0.6.0)",
@@ -5905,7 +6065,7 @@
         ],
         "suggests": [],
         "provides": [
-          "libcurl4 (= 8.5.0-2ubuntu10.15)"
+          "libcurl4 (= 8.5.0-2ubuntu10.16)"
         ],
         "conflicts": [
           "libcurl3"
@@ -6819,7 +6979,7 @@
       "name": "libreoffice-gnome",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "amd64",
       "summary": "office productivity suite -- GNOME integration",
       "description": "office productivity suite -- GNOME integration",
@@ -6828,14 +6988,14 @@
       "sourcePackage": "libreoffice",
       "category": "gnome",
       "repository": "official",
-      "installedSize": 314368,
+      "installedSize": 315392,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.32)",
           "libgcc-s1 (>= 3.0)",
           "libglib2.0-0t64 (>= 2.79.0)",
           "libreoffice-common (>= 1:7.0.0~alpha~)",
-          "libreoffice-core (= 4:24.2.7-0ubuntu0.24.04.6)",
+          "libreoffice-core (= 4:24.2.7-0ubuntu0.24.04.7)",
           "libstdc++6 (>= 5)",
           "libuno-cppu3t64 (>= 4.4.0~alpha)",
           "libuno-cppuhelpergcc3-3t64 (>= 4.0.0~alpha)",
@@ -6920,7 +7080,7 @@
       "id": "1e99d686f03f73e23efd",
       "name": "linux-modules-nvidia-570-server-azure",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1+1",
+      "release": "1017.17~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server for the azure flavour (dummy transitional package)",
@@ -7176,7 +7336,7 @@
       "id": "1ea1175b2910b8725eca",
       "name": "xserver-xorg-video-nvidia-465",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.5",
+      "release": "0ubuntu0.24.04.6",
       "architecture": "amd64",
       "summary": "Transitional package for xserver-xorg-video-nvidia-470",
       "description": "Transitional package for xserver-xorg-video-nvidia-470",
@@ -7355,7 +7515,7 @@
     {
       "id": "1ea28e7a715196bd4154",
       "name": "snapd",
-      "version": "2.76.3+ubuntu24.04",
+      "version": "2.77.1+ubuntu24.04",
       "architecture": "amd64",
       "summary": "Daemon and tooling that enable snap packages",
       "description": "Daemon and tooling that enable snap packages",
@@ -7363,7 +7523,7 @@
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "category": "devel",
       "repository": "official",
-      "installedSize": 133386240,
+      "installedSize": 118751232,
       "dependencies": {
         "requires": [
           "adduser",
@@ -11104,7 +11264,7 @@
       "id": "1ef49a4e29327dd089cc",
       "name": "linux-modules-nvidia-590-open-vmware",
       "version": "6.8.0",
-      "release": "1005.5+1",
+      "release": "1008.8+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-open for the vmware flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-open for the vmware flavour (dummy transitional package)",

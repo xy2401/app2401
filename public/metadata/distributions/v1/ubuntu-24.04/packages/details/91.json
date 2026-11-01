@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "91",
   "items": [
@@ -902,7 +902,7 @@
       "id": "9114d41f23b08b601384",
       "name": "linux-modules-nvidia-590-aws-6.8",
       "version": "6.8.0",
-      "release": "1066.69",
+      "release": "1067.70+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590 for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590 for the aws flavour (dummy transitional package)",
@@ -910,7 +910,7 @@
       "sourcePackage": "linux-restricted-modules-aws",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 24576,
+      "installedSize": 25600,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-595-aws-6.8"
@@ -2865,7 +2865,7 @@
       "id": "91440a94223384b49335",
       "name": "linux-modules-nvidia-535-server-vmware-6.8",
       "version": "6.8.0",
-      "release": "1005.5+1",
+      "release": "1008.8+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server for the vmware flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server for the vmware flavour (dummy transitional package)",
@@ -3123,6 +3123,30 @@
           "gcc-14-mips64el-linux-gnuabi64-base (= 14.2.0-4ubuntu2~24.04cross1)",
           "gobjc++-14-mips64el-linux-gnuabi64 (= 14.2.0-4ubuntu2~24.04cross1)",
           "gobjc-14-multilib-mips64el-linux-gnuabi64 (= 14.2.0-4ubuntu2~24.04cross1)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "914a8376240a28600ccc",
+      "name": "linux-objects-nvidia-580-6.8.0-1068-azure-fde",
+      "version": "6.8.0",
+      "release": "1068.75+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1068 (objects)",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1068 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-azure-fde",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 197312512,
+      "dependencies": {
+        "requires": [
+          "binutils"
         ],
         "recommends": [],
         "suggests": [],
@@ -3873,7 +3897,7 @@
       "name": "libreoffice-l10n-fi",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Finnish language package",
       "description": "office productivity suite -- Finnish language package",
@@ -3882,7 +3906,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 3827712,
+      "installedSize": 3828736,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -4825,7 +4849,7 @@
       "id": "916732c4b25726d6cfee",
       "name": "nginx-light",
       "version": "1.24.0",
-      "release": "2ubuntu7.18",
+      "release": "2ubuntu7.19",
       "architecture": "all",
       "summary": "nginx web/proxy server (basic version)",
       "description": "nginx web/proxy server (basic version)",
@@ -4838,8 +4862,8 @@
       "dependencies": {
         "requires": [
           "libnginx-mod-http-echo (>= 1:0.63-5~)",
-          "nginx (<< 1.24.0-2ubuntu7.18.1~)",
-          "nginx (>= 1.24.0-2ubuntu7.18)"
+          "nginx (<< 1.24.0-2ubuntu7.19.1~)",
+          "nginx (>= 1.24.0-2ubuntu7.19)"
         ],
         "recommends": [],
         "suggests": [],
@@ -4965,8 +4989,8 @@
     {
       "id": "916a5aec61696068e8d3",
       "name": "librte-dma-hisilicon24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-dma-hisilicon runtime library)",
       "description": "Data Plane Development Kit (librte-dma-hisilicon runtime library)",
@@ -5050,29 +5074,25 @@
       "id": "916d1f3d2b325ffb9844",
       "name": "nvidia-kernel-source-610-open",
       "version": "610.57.04",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
-      "summary": "NVIDIA kernel source package",
-      "description": "NVIDIA kernel source package",
+      "summary": "NVIDIA kernel source package (transitional package)",
+      "description": "NVIDIA kernel source package (transitional package)",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-610",
       "category": "multiverse/libs",
       "repository": "official",
-      "installedSize": 31867904,
+      "installedSize": 37888,
       "dependencies": {
-        "requires": [],
+        "requires": [
+          "nvidia-kernel-source-615-open"
+        ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-kernel-source"
-        ],
-        "conflicts": [
-          "nvidia-kernel-source"
-        ],
-        "replaces": [
-          "nvidia-kernel-source"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -5162,7 +5182,7 @@
       "id": "91752c49f1b99edb0190",
       "name": "linux-modules-nvidia-580-azure-edge",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1+1",
+      "release": "1017.17~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580 for the azure-edge flavour",
       "description": "Extra drivers for nvidia-580 for the azure-edge flavour",
@@ -5173,7 +5193,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-7.0.0-1014-azure (= 7.0.0-1014.14~24.04.1+1)",
+          "linux-modules-nvidia-580-7.0.0-1017-azure (= 7.0.0-1017.17~24.04.1+1)",
           "nvidia-kernel-common-580 (>= 580.178.04)"
         ],
         "recommends": [],
@@ -5191,7 +5211,7 @@
       "name": "libreoffice-l10n-nn",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Norwegian_nynorsk language package",
       "description": "office productivity suite -- Norwegian_nynorsk language package",
@@ -5200,7 +5220,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 4330496,
+      "installedSize": 4331520,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -6264,7 +6284,7 @@
       "name": "libreoffice-l10n-he",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Hebrew language package",
       "description": "office productivity suite -- Hebrew language package",
@@ -6273,7 +6293,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 3439616,
+      "installedSize": 3440640,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -6734,7 +6754,7 @@
       "id": "91a59b139bc049f1b431",
       "name": "bluetooth",
       "version": "5.72",
-      "release": "0ubuntu5.5",
+      "release": "0ubuntu5.8",
       "architecture": "all",
       "summary": "Bluetooth support (metapackage)",
       "description": "Bluetooth support (metapackage)",
@@ -7078,7 +7098,7 @@
       "id": "91b1d4b186cae440e014",
       "name": "linux-modules-nvidia-550-oem-24.04c",
       "version": "6.17.0",
-      "release": "1032.32+1",
+      "release": "1033.33+3",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550-oem-24.04c (dummy transitional package)",
       "description": "Extra drivers for nvidia-550-oem-24.04c (dummy transitional package)",
@@ -7086,7 +7106,7 @@
       "sourcePackage": "linux-restricted-modules-oem-6.17",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-550-oem-24.04d"
@@ -8465,6 +8485,32 @@
       }
     },
     {
+      "id": "91d57d061984daf3781a",
+      "name": "linux-modules-nvidia-580-server-open-6.8.0-1066-gke",
+      "version": "6.8.0",
+      "release": "1066.74+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1066",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1066",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-gke",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26263552,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1066-gke | linux-image-unsigned-6.8.0-1066-gke",
+          "nvidia-kernel-common-580-server (<= 580.178.04-1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "91d6ffe03c8ffbf5c057",
       "name": "opensaml-tools",
       "version": "3.2.1",
@@ -9333,7 +9379,7 @@
       "id": "91ea2269803c2178c0e1",
       "name": "linux-tools-ibm-lts-24.04",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68",
       "architecture": "amd64",
       "summary": "IBM Cloud Platform (ibm) Linux kernel tools",
       "description": "IBM Cloud Platform (ibm) Linux kernel tools",
@@ -9344,7 +9390,7 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-tools-6.8.0-1066-ibm"
+          "linux-tools-6.8.0-1067-ibm"
         ],
         "recommends": [],
         "suggests": [],

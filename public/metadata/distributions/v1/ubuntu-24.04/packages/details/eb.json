@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "eb",
   "items": [
@@ -278,7 +278,7 @@
       "id": "eb0569394ee4331deb7a",
       "name": "linux-modules-ipu7-oem-24.04c",
       "version": "6.17.0",
-      "release": "1032.32",
+      "release": "1033.33",
       "architecture": "amd64",
       "summary": "Extra drivers for ipu7 for the oem flavour (transitional package)",
       "description": "Extra drivers for ipu7 for the oem flavour (transitional package)",
@@ -654,7 +654,7 @@
       "id": "eb0bad619d478b5c3d36",
       "name": "linux-modules-nvidia-575-server-lowlatency-6.8",
       "version": "6.8.0",
-      "release": "142.142.1+1",
+      "release": "147.147.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the lowlatency flavour (dummy transitional package)",
@@ -938,6 +938,34 @@
         ],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "eb13f9ae99296d875682",
+      "name": "linux-modules-nvidia-615-open-generic-7.0",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-open for the generic-7.0 flavour",
+      "description": "Extra drivers for nvidia-615-open for the generic-7.0 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 18432,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-open-7.0.0-42-generic (= 7.0.0-42.42~24.04.1)",
+          "nvidia-kernel-common-615 (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-open (= 615.71.09-0ubuntu0.24.04.2)",
+          "nvidia-prebuilt-kernel"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -1540,6 +1568,55 @@
         "suggests": [],
         "provides": [],
         "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "eb21eb8084b39c655afb",
+      "name": "linux-image-unsigned-6.8.0-1068-azure-fde",
+      "version": "6.8.0",
+      "release": "1068.75",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel image for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure-fde",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 15665152,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-6.8.0-1068-azure-fde"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub"
+        ],
+        "suggests": [
+          "fdutils",
+          "initramfs-tools | linux-initramfs-tool",
+          "linux-azure-fde-doc-6.8.0 | linux-azure-fde-source-6.8.0",
+          "linux-azure-fde-tools",
+          "linux-headers-6.8.0-1068-azure-fde"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-6.8.0-1068-azure-fde"
+        ],
         "replaces": []
       }
     },
@@ -2490,6 +2567,34 @@
       }
     },
     {
+      "id": "eb39a6b550f5a99e432d",
+      "name": "linux-main-modules-usbio-unsigned-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4",
+      "architecture": "amd64",
+      "summary": "Unsigned usbio module for 7.0.0-38",
+      "description": "Unsigned usbio module for 7.0.0-38",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-modules-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 35840,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-image-7.0.0-38-generic | linux-image-unsigned-7.0.0-38-generic"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "intel-usbio-dkms",
+          "usbio-modules"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "eb3a5f13c94d2b337e1f",
       "name": "linux-objects-nvidia-580-6.8.0-1062-nvidia-lowlatency",
       "version": "6.8.0",
@@ -3053,7 +3158,7 @@
       "id": "eb44df9be8353ea04b27",
       "name": "linux-modules-evdi-oem-6.17",
       "version": "6.17.0",
-      "release": "1032.32",
+      "release": "1033.33",
       "architecture": "amd64",
       "summary": "Extra drivers for evdi for the oem flavour",
       "description": "Extra drivers for evdi for the oem flavour",
@@ -3064,7 +3169,7 @@
       "installedSize": 10240,
       "dependencies": {
         "requires": [
-          "linux-modules-evdi-6.17.0-1032-oem"
+          "linux-modules-evdi-6.17.0-1033-oem"
         ],
         "recommends": [],
         "suggests": [],
@@ -4014,7 +4119,7 @@
       "name": "git-all",
       "epoch": "1",
       "version": "2.43.0",
-      "release": "1ubuntu7.3",
+      "release": "1ubuntu7.4",
       "architecture": "all",
       "summary": "fast, scalable, distributed revision control system (all subpackages)",
       "description": "fast, scalable, distributed revision control system (all subpackages)",
@@ -4691,7 +4796,7 @@
     {
       "id": "eb6ee62bca69337b57b8",
       "name": "tzdata-icu",
-      "version": "2026c",
+      "version": "2026e",
       "release": "0ubuntu0.24.04.1",
       "architecture": "all",
       "summary": "ICU time zone and daylight-saving time data",
@@ -4701,7 +4806,7 @@
       "sourcePackage": "tzdata",
       "category": "universe/localization",
       "repository": "official",
-      "installedSize": 495616,
+      "installedSize": 501760,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -5360,8 +5465,8 @@
     {
       "id": "eb7ac06353a111737423",
       "name": "librte-net-tap24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-net-tap runtime library)",
       "description": "Data Plane Development Kit (librte-net-tap runtime library)",
@@ -5486,7 +5591,7 @@
       "id": "eb7cf1ad5d010562def1",
       "name": "linux-modules-nvidia-595-server-vmware-6.8",
       "version": "6.8.0",
-      "release": "1005.5+1",
+      "release": "1008.8+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-server for the vmware-6.8 flavour",
       "description": "Extra drivers for nvidia-595-server for the vmware-6.8 flavour",
@@ -5497,7 +5602,7 @@
       "installedSize": 26624,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-server-6.8.0-1005-vmware (= 6.8.0-1005.5+1)",
+          "linux-modules-nvidia-595-server-6.8.0-1008-vmware (= 6.8.0-1008.8+1)",
           "nvidia-kernel-common-595-server (>= 595.91.07)"
         ],
         "recommends": [],
@@ -5785,8 +5890,8 @@
     {
       "id": "eb837d4bcaf9eec61cfc",
       "name": "librte-net-ngbe24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-net-ngbe runtime library)",
       "description": "Data Plane Development Kit (librte-net-ngbe runtime library)",
@@ -6192,6 +6297,34 @@
         "conflicts": [
           "libadns0"
         ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "eb8d184e74cd0cb4f4a3",
+      "name": "linux-modules-nvidia-610-7.0.0-1014-aws",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1014",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1014",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-aws-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27648,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-7.0.0-1014-aws | linux-image-unsigned-7.0.0-1014-aws",
+          "linux-objects-nvidia-610-7.0.0-1014-aws (= 7.0.0-1014.14~24.04.1)",
+          "linux-signatures-nvidia-7.0.0-1014-aws (= 7.0.0-1014.14~24.04.1)",
+          "nvidia-kernel-common-610 (>= 610.57.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
         "replaces": []
       }
     },
@@ -6691,6 +6824,32 @@
       }
     },
     {
+      "id": "eb9a5d58f5f89a1d160a",
+      "name": "linux-modules-nvidia-595-open-7.0.0-1024-nvidia",
+      "version": "7.0.0",
+      "release": "1024.25~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1024",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1024",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-nvidia-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 25820160,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-1024-nvidia | linux-image-unsigned-7.0.0-1024-nvidia",
+          "nvidia-kernel-common-595 (<= 595.99.02-1)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "eb9b7c525a37fb4047c0",
       "name": "ruby-test-unit",
       "version": "3.6.2",
@@ -7152,6 +7311,28 @@
         "recommends": [
           "javascript-common"
         ],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "eba6aec5740cf91a358e",
+      "name": "linux-buildinfo-6.8.0-1067-ibm",
+      "version": "6.8.0",
+      "release": "1067.68",
+      "architecture": "amd64",
+      "summary": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel buildinfo for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-ibm",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 3432448,
+      "dependencies": {
+        "requires": [],
+        "recommends": [],
         "suggests": [],
         "provides": [],
         "conflicts": [],
@@ -8307,7 +8488,7 @@
       "id": "ebc9f1a3c586f930a0ca",
       "name": "linux-modules-nvidia-535-ibm-6.8",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535 for the ibm flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535 for the ibm flavour (dummy transitional package)",
@@ -8315,7 +8496,7 @@
       "sourcePackage": "linux-restricted-modules-ibm",
       "category": "restricted/kernel",
       "repository": "official",
-      "installedSize": 19456,
+      "installedSize": 20480,
       "dependencies": {
         "requires": [
           "linux-modules-nvidia-580-ibm-6.8"
@@ -8609,7 +8790,7 @@
       "id": "ebd05d00b59b7d6bab71",
       "name": "linux-modules-nvidia-550-gke-6.8",
       "version": "6.8.0",
-      "release": "1065.73",
+      "release": "1066.74+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-550 for the gke flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-550 for the gke flavour (dummy transitional package)",
@@ -9076,7 +9257,7 @@
       "name": "libreoffice-help-hi",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Hindi help",
       "description": "office productivity suite -- Hindi help",
@@ -9085,11 +9266,11 @@
       "sourcePackage": "libreoffice",
       "category": "doc",
       "repository": "official",
-      "installedSize": 29415424,
+      "installedSize": 29416448,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:6.1.0~)",
-          "libreoffice-help-common (= 4:24.2.7-0ubuntu0.24.04.6)",
+          "libreoffice-help-common (= 4:24.2.7-0ubuntu0.24.04.7)",
           "libreoffice-l10n-hi"
         ],
         "recommends": [
@@ -9441,6 +9622,55 @@
         "suggests": [],
         "provides": [],
         "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "ebed7277cf160110ca0d",
+      "name": "linux-image-unsigned-7.0.0-1017-azure",
+      "version": "7.0.0",
+      "release": "1017.17~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel image for version 7.0.0",
+      "description": "Linux kernel image for version 7.0.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-azure-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 17367040,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-base (>= 4.5ubuntu1~16.04.1)",
+          "linux-modules-7.0.0-1017-azure"
+        ],
+        "recommends": [
+          "grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub"
+        ],
+        "suggests": [
+          "fdutils",
+          "initramfs-tools | linux-initramfs-tool",
+          "linux-azure-7.0-doc-7.0.0 | linux-azure-7.0-source-7.0.0",
+          "linux-azure-7.0-tools",
+          "linux-headers-7.0.0-1017-azure"
+        ],
+        "provides": [
+          "fuse-module",
+          "ivtv-modules",
+          "kvm-api-4",
+          "linux-image",
+          "redhat-cluster-modules",
+          "spl-dkms",
+          "spl-modules",
+          "v4l2loopback-dkms",
+          "v4l2loopback-modules",
+          "virtualbox-guest-modules",
+          "zfs-dkms",
+          "zfs-modules"
+        ],
+        "conflicts": [
+          "linux-image-7.0.0-1017-azure"
+        ],
         "replaces": []
       }
     },

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "da",
   "items": [
@@ -265,8 +265,8 @@
     {
       "id": "da0766ebf18674ac69af",
       "name": "librte-dma-dpaa24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-dma-dpaa runtime library)",
       "description": "Data Plane Development Kit (librte-dma-dpaa runtime library)",
@@ -282,7 +282,7 @@
           "libc6 (>= 2.4)",
           "libfdt1 (>= 1.7.0)",
           "libnuma1 (>= 2.0.11)",
-          "librte-bus-dpaa24 (>= 23.11.4)",
+          "librte-bus-dpaa24 (>= 23.11.7)",
           "librte-common-dpaax24 (>= 20.08)",
           "librte-cryptodev24 (>= 18.05)",
           "librte-dmadev24 (>= 21.11)",
@@ -686,7 +686,7 @@
       "id": "da1233bd69f1fe55bca7",
       "name": "linux-objects-nvidia-595-server-open-6.8.0-1063-oracle",
       "version": "6.8.0",
-      "release": "1063.66",
+      "release": "1063.66+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-1063 (objects)",
       "description": "Linux kernel nvidia modules for version 6.8.0-1063 (objects)",
@@ -735,10 +735,10 @@
       "id": "da1375cab8ac45b88714",
       "name": "linux-modules-nvidia-610-open-azure-lts-24.04",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
-      "summary": "Extra drivers for nvidia-610-open for the azure-lts-24.04 flavour",
-      "description": "Extra drivers for nvidia-610-open for the azure-lts-24.04 flavour",
+      "summary": "Extra drivers for nvidia-610-open for the azure flavour (dummy transitional package)",
+      "description": "Extra drivers for nvidia-610-open for the azure flavour (dummy transitional package)",
       "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
       "sourcePackage": "linux-restricted-modules-azure",
       "category": "restricted/kernel",
@@ -746,15 +746,11 @@
       "installedSize": 21504,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-610-open-6.8.0-1070-azure (= 6.8.0-1070.78)",
-          "nvidia-kernel-common-610 (>= 610.57.04)"
+          "linux-modules-nvidia-615-open-azure-lts-24.04"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-dkms-610-open (= 610.57.04-0ubuntu0.24.04.3)",
-          "nvidia-prebuilt-kernel"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -1523,7 +1519,7 @@
       "name": "libx11-dev",
       "epoch": "2",
       "version": "1.8.7",
-      "release": "1build1",
+      "release": "1ubuntu0.1",
       "architecture": "amd64",
       "summary": "X11 client-side library (development headers)",
       "description": "X11 client-side library (development headers)",
@@ -1531,10 +1527,10 @@
       "sourcePackage": "libx11",
       "category": "libdevel",
       "repository": "official",
-      "installedSize": 2538496,
+      "installedSize": 2540544,
       "dependencies": {
         "requires": [
-          "libx11-6 (= 2:1.8.7-1build1)",
+          "libx11-6 (= 2:1.8.7-1ubuntu0.1)",
           "libxau-dev",
           "libxcb1-dev",
           "libxdmcp-dev",
@@ -2727,38 +2723,25 @@
       "id": "da4b2b0fce7133c76667",
       "name": "xserver-xorg-video-nvidia-565-server",
       "version": "565.57.01",
-      "release": "0ubuntu0.24.04.3",
+      "release": "0ubuntu0.24.04.4",
       "architecture": "amd64",
-      "summary": "NVIDIA binary Xorg driver",
-      "description": "NVIDIA binary Xorg driver",
+      "summary": "NVIDIA binary Xorg driver (transitional package)",
+      "description": "NVIDIA binary Xorg driver (transitional package)",
       "homepage": "http://www.nvidia.com",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "sourcePackage": "nvidia-graphics-drivers-565-server",
       "category": "restricted/x11",
       "repository": "official",
-      "installedSize": 6774784,
+      "installedSize": 32768,
       "dependencies": {
         "requires": [
-          "libc6 (>= 2.34)",
-          "libnvidia-cfg1-565-server (= 565.57.01-0ubuntu0.24.04.3)",
-          "xorg-video-abi-25 | xorg-video-abi-24 | xorg-video-abi-23 | xorg-video-abi-20 | xorg-video-abi-19 | xorg-video-abi-18 | xorg-video-abi-15 | xorg-video-abi-14 | xorg-video-abi-13 | xorg-video-abi-12 | xorg-video-abi-11 | xorg-video-abi-10 | xorg-video-abi-8 | xorg-video-abi-6.0",
-          "xserver-xorg-core (>= 2:1.19.6-1ubuntu2~)"
+          "xserver-xorg-video-nvidia-580-server"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "nvidia-driver-binary",
-          "xorg-driver-binary",
-          "xorg-driver-video"
-        ],
-        "conflicts": [
-          "nvidia-driver-binary",
-          "xorg-driver-binary"
-        ],
-        "replaces": [
-          "nvidia-driver-binary",
-          "xorg-driver-binary"
-        ]
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -3135,7 +3118,7 @@
       "id": "da572369f174c45c7b82",
       "name": "systemd-dev",
       "version": "255.4",
-      "release": "1ubuntu8.17",
+      "release": "1ubuntu8.18",
       "architecture": "all",
       "summary": "systemd development files",
       "description": "systemd development files",
@@ -3976,7 +3959,7 @@
       "name": "libreoffice-base-nogui",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "amd64",
       "summary": "office productivity suite -- database (no GUI variant)",
       "description": "office productivity suite -- database (no GUI variant)",
@@ -3985,15 +3968,15 @@
       "sourcePackage": "libreoffice",
       "category": "universe/database",
       "repository": "official",
-      "installedSize": 1083392,
+      "installedSize": 1084416,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.32)",
           "libgcc-s1 (>= 3.0)",
-          "libreoffice-base-core (= 4:24.2.7-0ubuntu0.24.04.6)",
-          "libreoffice-base-drivers (= 4:24.2.7-0ubuntu0.24.04.6)",
+          "libreoffice-base-core (= 4:24.2.7-0ubuntu0.24.04.7)",
+          "libreoffice-base-drivers (= 4:24.2.7-0ubuntu0.24.04.7)",
           "libreoffice-common (>= 1:7.0.0~alpha~)",
-          "libreoffice-core-nogui (= 4:24.2.7-0ubuntu0.24.04.6) | libreoffice-core (= 4:24.2.7-0ubuntu0.24.04.6)",
+          "libreoffice-core-nogui (= 4:24.2.7-0ubuntu0.24.04.7) | libreoffice-core (= 4:24.2.7-0ubuntu0.24.04.7)",
           "libstdc++6 (>= 11)",
           "libuno-cppu3t64 (>= 4.4.0~alpha)",
           "libuno-cppuhelpergcc3-3t64 (>= 4.0.0~alpha)",
@@ -4145,7 +4128,7 @@
       "id": "da6f6bc50d89a87173c3",
       "name": "linux-modules-nvidia-580-server-open-aws-7.0",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server-open for the aws-7.0 flavour",
       "description": "Extra drivers for nvidia-580-server-open for the aws-7.0 flavour",
@@ -4156,7 +4139,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-open-7.0.0-1013-aws (= 7.0.0-1013.13~24.04.1+1)",
+          "linux-modules-nvidia-580-server-open-7.0.0-1014-aws (= 7.0.0-1014.14~24.04.1+1)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -4709,6 +4692,34 @@
       "dependencies": {
         "requires": [
           "python3:any"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "da781d3334b255774117",
+      "name": "linux-modules-nvidia-580-6.8.0-1067-ibm",
+      "version": "6.8.0",
+      "release": "1067.68+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1067",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1067",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-ibm",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 29696,
+      "dependencies": {
+        "requires": [
+          "debconf (>= 0.5) | debconf-2.0",
+          "linux-image-6.8.0-1067-ibm | linux-image-unsigned-6.8.0-1067-ibm",
+          "linux-objects-nvidia-580-6.8.0-1067-ibm (= 6.8.0-1067.68+2)",
+          "linux-signatures-nvidia-6.8.0-1067-ibm (= 6.8.0-1067.68+2)",
+          "nvidia-kernel-common-580 (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -5297,6 +5308,30 @@
       }
     },
     {
+      "id": "da8768d5401503acf7a8",
+      "name": "linux-signatures-nvidia-6.8.0-146-lowlatency",
+      "version": "6.8.0",
+      "release": "146.146.1+2",
+      "architecture": "amd64",
+      "summary": "Linux kernel signatures for nvidia modules for version 6.8.0-146-lowlatency",
+      "description": "Linux kernel signatures for nvidia modules for version 6.8.0-146-lowlatency",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 51200,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-146-lowlatency | linux-image-unsigned-6.8.0-146-lowlatency"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "da8798cb6b8b337b73ec",
       "name": "python3-h5py",
       "version": "3.10.0",
@@ -5411,6 +5446,32 @@
         "replaces": [
           "libtsan2-arc-cross (<< 12-20211113-2~)"
         ]
+      }
+    },
+    {
+      "id": "da8af3c528648d4be52b",
+      "name": "linux-modules-nvidia-615-server-open-6.8.0-1064-nvidia-lowlatency",
+      "version": "6.8.0",
+      "release": "1064.67.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1064",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-nvidia-lowlatency",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 27872256,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1064-nvidia-lowlatency | linux-image-unsigned-6.8.0-1064-nvidia-lowlatency",
+          "nvidia-kernel-common-615-server (<= 615.71.09-1)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -6744,7 +6805,7 @@
       "id": "dab123f67ba5c247cd94",
       "name": "linux-tools-oem-22.04",
       "version": "6.8.0",
-      "release": "146.146",
+      "release": "147.147",
       "architecture": "amd64",
       "summary": "OEM Linux kernel tools (dummy transitional package)",
       "description": "OEM Linux kernel tools (dummy transitional package)",
@@ -7350,7 +7411,7 @@
       "id": "daca35a7a0fb9aa0332a",
       "name": "linux-modules-nvidia-580-open-generic-6.8",
       "version": "6.8.0",
-      "release": "146.146+1",
+      "release": "147.147+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-open for the generic-6.8 flavour",
       "description": "Extra drivers for nvidia-580-open for the generic-6.8 flavour",
@@ -7361,7 +7422,7 @@
       "installedSize": 26624,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-open-6.8.0-146-generic (= 6.8.0-146.146+1)",
+          "linux-modules-nvidia-580-open-6.8.0-147-generic (= 6.8.0-147.147+1)",
           "nvidia-kernel-common-580 (>= 580.178.04)"
         ],
         "recommends": [],
@@ -9179,6 +9240,31 @@
           "libucto2 (<< 0.9.6-2)",
           "ucto (<< 0.9.6-1)"
         ]
+      }
+    },
+    {
+      "id": "daf7476e77fa33546e96",
+      "name": "linux-modules-iwlwifi-unsigned-generic-hwe-24.04",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for iwlwifi for the generic flavour",
+      "description": "Extra drivers for iwlwifi for the generic flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-modules-hwe-7.0",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 8192,
+      "dependencies": {
+        "requires": [
+          "kmod",
+          "linux-main-modules-iwlwifi-unsigned-7.0.0-42-generic"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {

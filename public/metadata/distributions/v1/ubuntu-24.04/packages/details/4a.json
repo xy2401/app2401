@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "4a",
   "items": [
@@ -441,26 +441,23 @@
       "id": "4a0f0ec960b5f8cdde5a",
       "name": "linux-modules-ipu7-generic-hwe-24.04",
       "version": "7.0.0",
-      "release": "34.34~24.04.1",
+      "release": "42.42~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for ipu7 for the generic flavour",
       "description": "Extra drivers for ipu7 for the generic flavour",
-      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
-      "sourcePackage": "linux-meta-hwe-7.0",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-main-signed-hwe-7.0",
       "category": "kernel",
       "repository": "official",
-      "installedSize": 9216,
+      "installedSize": 8192,
       "dependencies": {
         "requires": [
-          "linux-modules-ipu7-7.0.0-34-generic"
+          "kmod",
+          "linux-main-modules-ipu7-7.0.0-42-generic"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [
-          "intel-ipu7-dkms (= 0~git202602091007.a88b1909-0ubuntu1.1)",
-          "ipu7-modules (= 0~git202602091007.a88b1909-0ubuntu1.1)",
-          "ipu7-prebuilt-kernel (= 0~git202602091007.a88b1909-0ubuntu1.1)"
-        ],
+        "provides": [],
         "conflicts": [],
         "replaces": []
       }
@@ -1175,7 +1172,7 @@
       "id": "4a2aaab02850067b67cb",
       "name": "python3-libxml2",
       "version": "2.9.14+dfsg",
-      "release": "1.3ubuntu3.9",
+      "release": "1.3ubuntu3.10",
       "architecture": "amd64",
       "summary": "GNOME XML library - Python3 bindings",
       "description": "GNOME XML library - Python3 bindings",
@@ -1872,7 +1869,7 @@
       "id": "4a3c75e16f535723e9a6",
       "name": "libnvidia-common-460",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.5",
+      "release": "0ubuntu0.24.04.6",
       "architecture": "all",
       "summary": "Transitional package for libnvidia-common-470",
       "description": "Transitional package for libnvidia-common-470",
@@ -2583,8 +2580,8 @@
     {
       "id": "4a4934aa959af29054e1",
       "name": "librte-mempool24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-mempool runtime library)",
       "description": "Data Plane Development Kit (librte-mempool runtime library)",
@@ -2800,10 +2797,34 @@
       }
     },
     {
+      "id": "4a4d292176163f996bdf",
+      "name": "linux-modules-iwlwifi-6.8.0-147-lowlatency",
+      "version": "6.8.0",
+      "release": "147.147.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel iwlwifi modules for version 6.8.0-147",
+      "description": "Linux kernel iwlwifi modules for version 6.8.0-147",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-lowlatency",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 2529280,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-147-lowlatency | linux-image-unsigned-6.8.0-147-lowlatency"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "4a4d3151eb00e7fdffff",
       "name": "linux-modules-usbio-generic",
       "version": "6.8.0",
-      "release": "146.146",
+      "release": "147.147",
       "architecture": "amd64",
       "summary": "Extra drivers for usbio for the generic flavour",
       "description": "Extra drivers for usbio for the generic flavour",
@@ -2814,7 +2835,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-usbio-6.8.0-146-generic"
+          "linux-modules-usbio-6.8.0-147-generic"
         ],
         "recommends": [],
         "suggests": [],
@@ -2950,6 +2971,34 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "4a526bc6da01e422575a",
+      "name": "linux-modules-nvidia-615-open-aws",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-open for the aws flavour",
+      "description": "Extra drivers for nvidia-615-open for the aws flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-aws-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 18432,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-open-7.0.0-1014-aws (= 7.0.0-1014.14~24.04.1+1)",
+          "nvidia-kernel-common-615 (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-open (= 615.71.09-0ubuntu0.24.04.1)",
+          "nvidia-prebuilt-kernel"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -4307,8 +4356,8 @@
       "id": "4a7311023ff32f85d2c2",
       "name": "neutron-sriov-agent",
       "epoch": "2",
-      "version": "24.1.0",
-      "release": "0ubuntu1.2",
+      "version": "24.2.2",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "all",
       "summary": "Neutron is a virtual network service for Openstack - SR-IOV agent",
       "description": "Neutron is a virtual network service for Openstack - SR-IOV agent",
@@ -4320,7 +4369,7 @@
       "installedSize": 35840,
       "dependencies": {
         "requires": [
-          "python3-neutron (= 2:24.1.0-0ubuntu1.2)"
+          "python3-neutron (= 2:24.2.2-0ubuntu0.24.04.1)"
         ],
         "recommends": [],
         "suggests": [],
@@ -4500,7 +4549,7 @@
       "id": "4a785a95b35d11d7c557",
       "name": "linux-modules-nvidia-535-open-oracle",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1013.13~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the oracle flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the oracle flavour (dummy transitional package)",
@@ -4685,8 +4734,8 @@
     {
       "id": "4a7f1a8f9d7a0338a589",
       "name": "librte-net-af-xdp24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-net-af-xdp runtime library)",
       "description": "Data Plane Development Kit (librte-net-af-xdp runtime library)",
@@ -4724,6 +4773,30 @@
         "conflicts": [
           "libdpdk0"
         ],
+        "replaces": []
+      }
+    },
+    {
+      "id": "4a7ffa7475268b50f4c0",
+      "name": "linux-objects-nvidia-580-open-7.0.0-42-generic",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-42 (objects)",
+      "description": "Linux kernel nvidia modules for version 7.0.0-42 (objects)",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 28012544,
+      "dependencies": {
+        "requires": [
+          "binutils"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
         "replaces": []
       }
     },
@@ -5008,7 +5081,7 @@
       "name": "libreoffice-sdbc-postgresql",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "amd64",
       "summary": "PostgreSQL SDBC driver for LibreOffice",
       "description": "PostgreSQL SDBC driver for LibreOffice",
@@ -5017,7 +5090,7 @@
       "sourcePackage": "libreoffice",
       "category": "universe/misc",
       "repository": "official",
-      "installedSize": 1143808,
+      "installedSize": 1144832,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.38)",
@@ -5412,7 +5485,7 @@
       "id": "4a8e5e4cd05de490fe67",
       "name": "linux-cloud-tools-generic-6.8",
       "version": "6.8.0",
-      "release": "146.146",
+      "release": "147.147",
       "architecture": "amd64",
       "summary": "Generic Linux kernel cloud tools",
       "description": "Generic Linux kernel cloud tools",
@@ -5423,7 +5496,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-cloud-tools-6.8.0-146-generic"
+          "linux-cloud-tools-6.8.0-147-generic"
         ],
         "recommends": [],
         "suggests": [],
@@ -6092,8 +6165,8 @@
     {
       "id": "4a9b5240a0df15b4275f",
       "name": "librte-mldev24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-mldev runtime library)",
       "description": "Data Plane Development Kit (librte-mldev runtime library)",
@@ -6811,6 +6884,32 @@
           "libdatetime-perl",
           "libdatetime-timezone-perl",
           "perl:any"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "4aaf55bbebd99c86f90b",
+      "name": "linux-modules-nvidia-580-server-open-7.0.0-38-generic",
+      "version": "7.0.0",
+      "release": "38.38~24.04.4+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-38",
+      "description": "Linux kernel nvidia modules for version 7.0.0-38",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 28021760,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-38-generic | linux-image-unsigned-7.0.0-38-generic",
+          "nvidia-kernel-common-580-server (<= 580.178.04-1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
         "suggests": [],
@@ -7675,6 +7774,32 @@
       }
     },
     {
+      "id": "4ac4a79620ff3d972eef",
+      "name": "linux-modules-nvidia-595-open-6.8.0-1008-vmware",
+      "version": "6.8.0",
+      "release": "1008.8+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 6.8.0-1008",
+      "description": "Linux kernel nvidia modules for version 6.8.0-1008",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-vmware",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 26355712,
+      "dependencies": {
+        "requires": [
+          "linux-image-6.8.0-1008-vmware | linux-image-unsigned-6.8.0-1008-vmware",
+          "nvidia-kernel-common-595 (<= 595.99.02-1)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "4ac51234e9b74a3f815e",
       "name": "hunspell-sw",
       "epoch": "1",
@@ -7929,7 +8054,7 @@
       "name": "designate",
       "epoch": "1",
       "version": "18.0.0",
-      "release": "0ubuntu1",
+      "release": "0ubuntu1.1",
       "architecture": "all",
       "summary": "OpenStack DNS as a Service - metapackage",
       "description": "OpenStack DNS as a Service - metapackage",
@@ -7937,12 +8062,12 @@
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "category": "net",
       "repository": "official",
-      "installedSize": 11264,
+      "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "designate-agent (= 1:18.0.0-0ubuntu1)",
-          "designate-api (= 1:18.0.0-0ubuntu1)",
-          "designate-central (= 1:18.0.0-0ubuntu1)"
+          "designate-agent (= 1:18.0.0-0ubuntu1.1)",
+          "designate-api (= 1:18.0.0-0ubuntu1.1)",
+          "designate-central (= 1:18.0.0-0ubuntu1.1)"
         ],
         "recommends": [],
         "suggests": [],
@@ -8033,7 +8158,7 @@
       "id": "4ace3862c12234d9a1ba",
       "name": "libglib2.0-bin",
       "version": "2.80.0",
-      "release": "6ubuntu3.9",
+      "release": "6ubuntu3.10",
       "architecture": "amd64",
       "summary": "Programs for the GLib library",
       "description": "Programs for the GLib library",
@@ -8047,7 +8172,7 @@
         "requires": [
           "libc6 (>= 2.38)",
           "libelf1t64 (>= 0.142)",
-          "libglib2.0-0t64 (= 2.80.0-6ubuntu3.9)",
+          "libglib2.0-0t64 (= 2.80.0-6ubuntu3.10)",
           "libglib2.0-data"
         ],
         "recommends": [],
@@ -8402,7 +8527,7 @@
       "id": "4ad53b1dc1fe09b4503b",
       "name": "linux-headers-ibm-6.8",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1067.68",
       "architecture": "amd64",
       "summary": "IBM Cloud Platform (ibm) Linux kernel headers",
       "description": "IBM Cloud Platform (ibm) Linux kernel headers",
@@ -8413,7 +8538,7 @@
       "installedSize": 12288,
       "dependencies": {
         "requires": [
-          "linux-headers-6.8.0-1066-ibm"
+          "linux-headers-6.8.0-1067-ibm"
         ],
         "recommends": [],
         "suggests": [],
@@ -8591,6 +8716,32 @@
       }
     },
     {
+      "id": "4ad6b02e061c934df145",
+      "name": "linux-modules-nvidia-580-server-open-7.0.0-1017-azure",
+      "version": "7.0.0",
+      "release": "1017.17~24.04.1+1",
+      "architecture": "amd64",
+      "summary": "Linux kernel nvidia modules for version 7.0.0-1017",
+      "description": "Linux kernel nvidia modules for version 7.0.0-1017",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-signatures-azure-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 25714688,
+      "dependencies": {
+        "requires": [
+          "linux-image-7.0.0-1017-azure | linux-image-unsigned-7.0.0-1017-azure",
+          "nvidia-kernel-common-580-server (<= 580.178.04-1)",
+          "nvidia-kernel-common-580-server (>= 580.178.04)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "4ad71a11f71be99129d6",
       "name": "golang-github-bits-and-blooms-bitset-dev",
       "version": "1.5.0",
@@ -8639,10 +8790,38 @@
       }
     },
     {
+      "id": "4ad99a032c6229157305",
+      "name": "linux-modules-nvidia-615-open-generic-hwe-24.04",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-open for the generic-hwe-24.04 flavour",
+      "description": "Extra drivers for nvidia-615-open for the generic-hwe-24.04 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 18432,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-open-7.0.0-42-generic (= 7.0.0-42.42~24.04.1)",
+          "nvidia-kernel-common-615 (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-open (= 615.71.09-0ubuntu0.24.04.2)",
+          "nvidia-prebuilt-kernel"
+        ],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "4ada34d39ffa599f253c",
       "name": "librte-net-bnx2x24",
-      "version": "23.11.4",
-      "release": "0ubuntu0.24.04.2",
+      "version": "23.11.7",
+      "release": "0ubuntu0.24.04.1",
       "architecture": "amd64",
       "summary": "Data Plane Development Kit (librte-net-bnx2x runtime library)",
       "description": "Data Plane Development Kit (librte-net-bnx2x runtime library)",
@@ -8807,7 +8986,7 @@
       "id": "4ade794ac862d6a30ed0",
       "name": "linux-cloud-tools-virtual",
       "version": "6.8.0",
-      "release": "146.146",
+      "release": "147.147",
       "architecture": "amd64",
       "summary": "Virtual Linux kernel cloud tools",
       "description": "Virtual Linux kernel cloud tools",
@@ -8818,7 +8997,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-cloud-tools-6.8.0-146-generic"
+          "linux-cloud-tools-6.8.0-147-generic"
         ],
         "recommends": [],
         "suggests": [],

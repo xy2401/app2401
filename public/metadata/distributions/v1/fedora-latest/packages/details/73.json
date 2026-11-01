@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "fedora",
   "shard": "73",
   "items": [
@@ -139,6 +139,40 @@
         ],
         "conflicts": [],
         "replaces": []
+      }
+    },
+    {
+      "id": "737ca53d5a5b37891af9",
+      "name": "blender-luxcorerender",
+      "epoch": "0",
+      "version": "2.11.2",
+      "release": "4.fc44",
+      "architecture": "noarch",
+      "summary": "Blender 4.2+ integration extension",
+      "description": "Blender extension for exporting scenes and materials to LuxCore Renderer.\nSupports Cycles material conversion and interactive rendering.\n\nThe extension is installed in Blender's system extension repository and is\navailable to all users. Enable BlendLuxCore in Blender's Add-ons preferences.\nIt uses the system-provided LuxCore Python bindings.",
+      "homepage": "https://luxcorerender.org/",
+      "license": "GPL-3.0-or-later",
+      "sourcePackage": "luxcorerender-2.11.2-4.fc44.src.rpm",
+      "repository": "updates",
+      "installedSize": 14893463,
+      "downloadSize": 4253630,
+      "dependencies": {
+        "requires": [
+          "blender >= 4.2",
+          "luxcorerender = 2.11.2-4.fc44"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "blender-luxcorerender = 2.11.2-4.fc44",
+          "luxcorerender-blender = 2.11.0-4.fc44",
+          "metainfo()",
+          "metainfo(org.luxcorerender.blendluxcore.metainfo.xml)"
+        ],
+        "conflicts": [],
+        "replaces": [
+          "luxcorerender-blender < 2.11.0"
+        ]
       }
     },
     {
@@ -507,31 +541,33 @@
       "id": "73d213a12f8790a4bc0a",
       "name": "kf6-prison-devel",
       "epoch": "0",
-      "version": "6.30.0",
+      "version": "6.31.0",
       "release": "1.fc44",
       "architecture": "amd64",
       "summary": "Development files for kf6-prison",
       "description": "The kf6-prison-devel package contains libraries and header files for\ndeveloping applications that use kf6-prison.",
       "homepage": "https://invent.kde.org/frameworks/prison",
       "license": "BSD-3-Clause AND CC0-1.0 AND MIT",
-      "sourcePackage": "kf6-prison-6.30.0-1.fc44.src.rpm",
+      "sourcePackage": "kf6-prison-6.31.0-1.fc44.src.rpm",
       "repository": "updates",
-      "installedSize": 94074,
-      "downloadSize": 31559,
+      "installedSize": 100394,
+      "downloadSize": 33479,
       "dependencies": {
         "requires": [
           "cmake-filesystem(x86-64)",
-          "kf6-prison = 6.30.0-1.fc44",
+          "kf6-prison = 6.31.0-1.fc44",
           "libKF6Prison.so.6()(64bit)",
           "libKF6PrisonScanner.so.6()(64bit)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "cmake(KF6Prison) = 6.30.0",
-          "cmake(kf6prison) = 6.30.0",
-          "kf6-prison-devel = 6.30.0-1.fc44",
-          "kf6-prison-devel(x86-64) = 6.30.0-1.fc44"
+          "cmake(KF6Prison) = 6.31.0",
+          "cmake(KF6PrisonScanner) = 6.31.0",
+          "cmake(kf6prison) = 6.31.0",
+          "cmake(kf6prisonscanner) = 6.31.0",
+          "kf6-prison-devel = 6.31.0-1.fc44",
+          "kf6-prison-devel(x86-64) = 6.31.0-1.fc44"
         ],
         "conflicts": [],
         "replaces": []

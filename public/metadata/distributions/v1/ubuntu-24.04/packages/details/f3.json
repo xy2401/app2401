@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "f3",
   "items": [
@@ -350,7 +350,7 @@
       "id": "f3086eb024b96d7366a9",
       "name": "linux-modules-nvidia-535-open-aws",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1+1",
+      "release": "1014.14~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the aws flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the aws flavour (dummy transitional package)",
@@ -481,7 +481,7 @@
       "id": "f30ce92a1543cf80d5b9",
       "name": "xrdp",
       "version": "0.9.24",
-      "release": "4",
+      "release": "4ubuntu0.1",
       "architecture": "amd64",
       "summary": "Remote Desktop Protocol (RDP) server",
       "description": "Remote Desktop Protocol (RDP) server",
@@ -3214,7 +3214,7 @@
       "id": "f342fa2066bbd760fd24",
       "name": "libpoppler-dev",
       "version": "24.02.0",
-      "release": "1ubuntu9.9",
+      "release": "1ubuntu9.11",
       "architecture": "amd64",
       "summary": "PDF rendering library -- development files",
       "description": "PDF rendering library -- development files",
@@ -3226,7 +3226,7 @@
       "installedSize": 29696,
       "dependencies": {
         "requires": [
-          "libpoppler134 (= 24.02.0-1ubuntu9.9)"
+          "libpoppler134 (= 24.02.0-1ubuntu9.11)"
         ],
         "recommends": [],
         "suggests": [],
@@ -4664,7 +4664,7 @@
       "id": "f364481d62a535d48df2",
       "name": "libnvidia-decode-470",
       "version": "470.256.02",
-      "release": "0ubuntu0.24.04.5",
+      "release": "0ubuntu0.24.04.6",
       "architecture": "amd64",
       "summary": "NVIDIA Video Decoding runtime libraries",
       "description": "NVIDIA Video Decoding runtime libraries",
@@ -4673,16 +4673,25 @@
       "sourcePackage": "nvidia-graphics-drivers-470",
       "category": "restricted/libs",
       "repository": "official",
-      "installedSize": 21504,
+      "installedSize": 6255616,
       "dependencies": {
         "requires": [
-          "libnvidia-decode-535"
+          "libc6 (>= 2.34)",
+          "libnvidia-compute-470 (= 470.256.02-0ubuntu0.24.04.6)",
+          "libx11-6",
+          "libxext6"
         ],
         "recommends": [],
         "suggests": [],
-        "provides": [],
-        "conflicts": [],
-        "replaces": []
+        "provides": [
+          "libnvidia-decode"
+        ],
+        "conflicts": [
+          "libnvidia-decode"
+        ],
+        "replaces": [
+          "libnvidia-decode"
+        ]
       }
     },
     {
@@ -5501,7 +5510,7 @@
       "name": "libx11-6",
       "epoch": "2",
       "version": "1.8.7",
-      "release": "1build1",
+      "release": "1ubuntu0.1",
       "architecture": "amd64",
       "summary": "X11 client-side library",
       "description": "X11 client-side library",
@@ -5509,7 +5518,7 @@
       "sourcePackage": "libx11",
       "category": "libs",
       "repository": "official",
-      "installedSize": 1394688,
+      "installedSize": 1399808,
       "dependencies": {
         "requires": [
           "libc6 (>= 2.38)",
@@ -5550,7 +5559,7 @@
       "name": "libreoffice-help-zh-cn",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Chinese_simplified help",
       "description": "office productivity suite -- Chinese_simplified help",
@@ -5559,11 +5568,11 @@
       "sourcePackage": "libreoffice",
       "category": "doc",
       "repository": "official",
-      "installedSize": 28875776,
+      "installedSize": 28876800,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:6.1.0~)",
-          "libreoffice-help-common (= 4:24.2.7-0ubuntu0.24.04.6)",
+          "libreoffice-help-common (= 4:24.2.7-0ubuntu0.24.04.7)",
           "libreoffice-l10n-zh-cn"
         ],
         "recommends": [
@@ -6034,7 +6043,7 @@
       "id": "f389ffe27ed1154f257f",
       "name": "linux-modules-nvidia-570-server-open-vmware-6.17",
       "version": "6.17.0",
-      "release": "1004.4+2",
+      "release": "1004.4+3",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-570-server-open for the vmware flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-570-server-open for the vmware flavour (dummy transitional package)",
@@ -6445,6 +6454,30 @@
       "installedSize": 272384,
       "dependencies": {
         "requires": [],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "f38fce0dd607f08966ec",
+      "name": "linux-modules-6.17.0-1033-oem",
+      "version": "6.17.0",
+      "release": "1033.33",
+      "architecture": "amd64",
+      "summary": "Linux kernel modules for version 6.17.0",
+      "description": "Linux kernel modules for version 6.17.0",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-oem-6.17",
+      "category": "kernel",
+      "repository": "official",
+      "installedSize": 162192384,
+      "dependencies": {
+        "requires": [
+          "wireless-regdb"
+        ],
         "recommends": [],
         "suggests": [],
         "provides": [],
@@ -7744,7 +7777,7 @@
       "name": "libreoffice-l10n-ko",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Korean language package",
       "description": "office productivity suite -- Korean language package",
@@ -7753,7 +7786,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 3730432,
+      "installedSize": 3731456,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -10421,7 +10454,7 @@
       "id": "f3f26c5ea9b738d98ab8",
       "name": "linux-modules-nvidia-580-server-vmware-6.8",
       "version": "6.8.0",
-      "release": "1005.5+1",
+      "release": "1008.8+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server for the vmware-6.8 flavour",
       "description": "Extra drivers for nvidia-580-server for the vmware-6.8 flavour",
@@ -10432,7 +10465,7 @@
       "installedSize": 26624,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-6.8.0-1005-vmware (= 6.8.0-1005.5+1)",
+          "linux-modules-nvidia-580-server-6.8.0-1008-vmware (= 6.8.0-1008.8+1)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -10496,6 +10529,34 @@
         "replaces": [
           "eggdrop (<< 1.6.16-3)"
         ]
+      }
+    },
+    {
+      "id": "f3f39a9a7848c51b46e5",
+      "name": "linux-modules-nvidia-615-server-open-generic-7.0",
+      "version": "7.0.0",
+      "release": "42.42~24.04.1",
+      "architecture": "amd64",
+      "summary": "Extra drivers for nvidia-615-server-open for the generic-7.0 flavour",
+      "description": "Extra drivers for nvidia-615-server-open for the generic-7.0 flavour",
+      "maintainer": "Canonical Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-restricted-modules-hwe-7.0",
+      "category": "restricted/kernel",
+      "repository": "official",
+      "installedSize": 18432,
+      "dependencies": {
+        "requires": [
+          "linux-modules-nvidia-615-server-open-7.0.0-42-generic (= 7.0.0-42.42~24.04.1)",
+          "nvidia-kernel-common-615-server (>= 615.71.09)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "nvidia-dkms-615-server-open (= 615.71.09-0ubuntu0.24.04.2)",
+          "nvidia-prebuilt-kernel"
+        ],
+        "conflicts": [],
+        "replaces": []
       }
     },
     {
@@ -10712,7 +10773,7 @@
       "id": "f3fa078a6b2a81aef626",
       "name": "linux-modules-nvidia-535-server-open-azure",
       "version": "7.0.0",
-      "release": "1014.14~24.04.1+1",
+      "release": "1017.17~24.04.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-server-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-server-open for the azure flavour (dummy transitional package)",

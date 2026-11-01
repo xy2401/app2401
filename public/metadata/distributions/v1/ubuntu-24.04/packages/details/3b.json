@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-01T11:00:31.000Z",
+  "generatedAt": "2026-11-01T11:20:15.000Z",
   "distributionId": "ubuntu-24.04",
   "shard": "3b",
   "items": [
@@ -499,7 +499,7 @@
       "id": "3b0aa61c001781d38e4a",
       "name": "linux-modules-nvidia-580-server-generic-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "34.34~24.04.1+1",
+      "release": "42.42~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server for the generic-hwe-24.04-edge flavour",
       "description": "Extra drivers for nvidia-580-server for the generic-hwe-24.04-edge flavour",
@@ -510,7 +510,7 @@
       "installedSize": 18432,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-7.0.0-34-generic (= 7.0.0-34.34~24.04.1+1)",
+          "linux-modules-nvidia-580-server-7.0.0-42-generic (= 7.0.0-42.42~24.04.1)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -2442,7 +2442,7 @@
       "id": "3b33f952a88bae8bbbd0",
       "name": "linux-modules-nvidia-580-server-gcp",
       "version": "7.0.0",
-      "release": "1013.13~24.04.1",
+      "release": "1014.14~24.04.1+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server for the gcp flavour",
       "description": "Extra drivers for nvidia-580-server for the gcp flavour",
@@ -2453,7 +2453,7 @@
       "installedSize": 24576,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-7.0.0-1013-gcp (= 7.0.0-1013.13~24.04.1)",
+          "linux-modules-nvidia-580-server-7.0.0-1014-gcp (= 7.0.0-1014.14~24.04.1+2)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -2853,6 +2853,37 @@
         "recommends": [],
         "suggests": [],
         "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
+      "id": "3b40f8a6d2872295de3b",
+      "name": "linux-headers-6.8.0-1066-gke",
+      "version": "6.8.0",
+      "release": "1066.74",
+      "architecture": "amd64",
+      "summary": "Linux kernel headers for version 6.8.0 on 64 bit x86 SMP",
+      "description": "Linux kernel headers for version 6.8.0 on 64 bit x86 SMP",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-gke",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 29057024,
+      "dependencies": {
+        "requires": [
+          "libc6 (>= 2.38)",
+          "libelf1t64 (>= 0.144)",
+          "libssl3t64 (>= 3.0.0)",
+          "linux-gke-headers-6.8.0-1066",
+          "zlib1g (>= 1:1.2.3.3)"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [
+          "linux-headers",
+          "linux-headers-3.0"
+        ],
         "conflicts": [],
         "replaces": []
       }
@@ -3795,7 +3826,7 @@
       "id": "3b5e44ee7fe7309fbbfe",
       "name": "linux-modules-nvidia-580-server-6.8.0-1066-ibm",
       "version": "6.8.0",
-      "release": "1066.67",
+      "release": "1066.67+1",
       "architecture": "amd64",
       "summary": "Linux kernel nvidia modules for version 6.8.0-1066",
       "description": "Linux kernel nvidia modules for version 6.8.0-1066",
@@ -3808,8 +3839,8 @@
         "requires": [
           "debconf (>= 0.5) | debconf-2.0",
           "linux-image-6.8.0-1066-ibm | linux-image-unsigned-6.8.0-1066-ibm",
-          "linux-objects-nvidia-580-server-6.8.0-1066-ibm (= 6.8.0-1066.67)",
-          "linux-signatures-nvidia-6.8.0-1066-ibm (= 6.8.0-1066.67)",
+          "linux-objects-nvidia-580-server-6.8.0-1066-ibm (= 6.8.0-1066.67+1)",
+          "linux-signatures-nvidia-6.8.0-1066-ibm (= 6.8.0-1066.67+1)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -4292,10 +4323,34 @@
       }
     },
     {
+      "id": "3b6b884c729bfe2045a7",
+      "name": "linux-tools-7.0.0-1014-aws",
+      "version": "7.0.0",
+      "release": "1014.14~24.04.1",
+      "architecture": "amd64",
+      "summary": "Linux kernel version specific tools for version 7.0.0-1014",
+      "description": "Linux kernel version specific tools for version 7.0.0-1014",
+      "maintainer": "Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>",
+      "sourcePackage": "linux-aws-7.0",
+      "category": "devel",
+      "repository": "official",
+      "installedSize": 598016,
+      "dependencies": {
+        "requires": [
+          "linux-aws-7.0-tools-7.0.0-1014"
+        ],
+        "recommends": [],
+        "suggests": [],
+        "provides": [],
+        "conflicts": [],
+        "replaces": []
+      }
+    },
+    {
       "id": "3b6c7b07a5840f4f5181",
       "name": "linux-modules-nvidia-575-server-nvidia-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server for the nvidia flavour (dummy transitional package)",
@@ -4499,7 +4554,7 @@
       "name": "erlang-src",
       "epoch": "1",
       "version": "25.3.2.8+dfsg",
-      "release": "1ubuntu4.7",
+      "release": "1ubuntu4.8",
       "architecture": "all",
       "summary": "Erlang/OTP applications sources",
       "description": "Erlang/OTP applications sources",
@@ -4508,11 +4563,11 @@
       "sourcePackage": "erlang",
       "category": "universe/interpreters",
       "repository": "official",
-      "installedSize": 42008576,
+      "installedSize": 42030080,
       "dependencies": {
         "requires": [
-          "erlang-base:any (<< 1:25.3.2.8+dfsg-1ubuntu4.7.0)",
-          "erlang-base:any (>= 1:25.3.2.8+dfsg-1ubuntu4.7)"
+          "erlang-base:any (<< 1:25.3.2.8+dfsg-1ubuntu4.8.0)",
+          "erlang-base:any (>= 1:25.3.2.8+dfsg-1ubuntu4.8)"
         ],
         "recommends": [],
         "suggests": [
@@ -4524,14 +4579,14 @@
         "conflicts": [],
         "replaces": [
           "erlang-base-hipe:any",
-          "erlang-base:any (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-dev:any (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-erl-docgen:any (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
+          "erlang-base:any (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-dev:any (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-erl-docgen:any (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-examples (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
           "erlang-mode (<< 1:12.b.1-dfsg-2)",
-          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.7)",
-          "erlang:any (<< 1:25.3.2.8+dfsg-1ubuntu4.7)"
+          "erlang-nox (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang-x11 (<< 1:25.3.2.8+dfsg-1ubuntu4.8)",
+          "erlang:any (<< 1:25.3.2.8+dfsg-1ubuntu4.8)"
         ]
       }
     },
@@ -4925,7 +4980,7 @@
       "id": "3b7f04481c6b9624c0e5",
       "name": "linux-modules-nvidia-590-server-nvidia-lowlatency",
       "version": "6.8.0",
-      "release": "1064.67.1",
+      "release": "1064.67.1+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-590-server for the nvidia-lowlatency flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-590-server for the nvidia-lowlatency flavour (dummy transitional package)",
@@ -6701,7 +6756,7 @@
       "name": "libreoffice-uiconfig-draw",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "UI data (\"config\") for LibreOffice Draw",
       "description": "UI data (\"config\") for LibreOffice Draw",
@@ -6710,7 +6765,7 @@
       "sourcePackage": "libreoffice",
       "category": "misc",
       "repository": "official",
-      "installedSize": 4146176,
+      "installedSize": 4147200,
       "dependencies": {
         "requires": [],
         "recommends": [],
@@ -6728,7 +6783,7 @@
       "id": "3bacd264a4aceb7ba4cd",
       "name": "linux-modules-nvidia-575-server-open-azure-6.8",
       "version": "6.8.0",
-      "release": "1070.78",
+      "release": "1071.79+2",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-575-server-open for the azure flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-575-server-open for the azure flavour (dummy transitional package)",
@@ -7328,7 +7383,7 @@
       "name": "designate-pool-manager",
       "epoch": "1",
       "version": "18.0.0",
-      "release": "0ubuntu1",
+      "release": "0ubuntu1.1",
       "architecture": "all",
       "summary": "OpenStack DNS as a Service - pool manager",
       "description": "OpenStack DNS as a Service - pool manager",
@@ -7337,10 +7392,10 @@
       "sourcePackage": "designate",
       "category": "net",
       "repository": "official",
-      "installedSize": 31744,
+      "installedSize": 32768,
       "dependencies": {
         "requires": [
-          "python3-designate (= 1:18.0.0-0ubuntu1)"
+          "python3-designate (= 1:18.0.0-0ubuntu1.1)"
         ],
         "recommends": [],
         "suggests": [],
@@ -7402,7 +7457,7 @@
       "id": "3bbf23bc00deeb8097d2",
       "name": "linux-modules-nvidia-595-open-vmware",
       "version": "6.8.0",
-      "release": "1005.5+1",
+      "release": "1008.8+1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-595-open for the vmware flavour",
       "description": "Extra drivers for nvidia-595-open for the vmware flavour",
@@ -7413,13 +7468,13 @@
       "installedSize": 26624,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-595-open-6.8.0-1005-vmware (= 6.8.0-1005.5+1)",
-          "nvidia-kernel-common-595 (>= 595.91.07)"
+          "linux-modules-nvidia-595-open-6.8.0-1008-vmware (= 6.8.0-1008.8+1)",
+          "nvidia-kernel-common-595 (>= 595.99.02)"
         ],
         "recommends": [],
         "suggests": [],
         "provides": [
-          "nvidia-dkms-595-open (= 595.91.07-0ubuntu0.24.04.1)",
+          "nvidia-dkms-595-open (= 595.99.02-0ubuntu0.24.04.1)",
           "nvidia-prebuilt-kernel"
         ],
         "conflicts": [],
@@ -7714,7 +7769,7 @@
       "name": "bind9",
       "epoch": "1",
       "version": "9.18.39",
-      "release": "0ubuntu0.24.04.7",
+      "release": "0ubuntu0.24.04.8",
       "architecture": "amd64",
       "summary": "Internet Domain Name Server",
       "description": "Internet Domain Name Server",
@@ -7722,12 +7777,12 @@
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "category": "net",
       "repository": "official",
-      "installedSize": 965632,
+      "installedSize": 966656,
       "dependencies": {
         "requires": [
           "adduser",
-          "bind9-libs (= 1:9.18.39-0ubuntu0.24.04.7)",
-          "bind9-utils (= 1:9.18.39-0ubuntu0.24.04.7)",
+          "bind9-libs (= 1:9.18.39-0ubuntu0.24.04.8)",
+          "bind9-utils (= 1:9.18.39-0ubuntu0.24.04.8)",
           "debconf | debconf-2.0",
           "dns-root-data",
           "iproute2",
@@ -8076,7 +8131,7 @@
       "name": "libreoffice-l10n-sk",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Slovak language package",
       "description": "office productivity suite -- Slovak language package",
@@ -8085,7 +8140,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 4597760,
+      "installedSize": 4598784,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
@@ -8294,7 +8349,7 @@
       "id": "3bcf9150f8f2bead2521",
       "name": "linux-modules-nvidia-580-server-open-nvidia-hwe-24.04-edge",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-580-server-open for the nvidia-hwe-24.04-edge flavour",
       "description": "Extra drivers for nvidia-580-server-open for the nvidia-hwe-24.04-edge flavour",
@@ -8305,7 +8360,7 @@
       "installedSize": 19456,
       "dependencies": {
         "requires": [
-          "linux-modules-nvidia-580-server-open-7.0.0-1019-nvidia (= 7.0.0-1019.19~24.04.2+1)",
+          "linux-modules-nvidia-580-server-open-7.0.0-1024-nvidia (= 7.0.0-1024.25~24.04.1)",
           "nvidia-kernel-common-580-server (>= 580.178.04)"
         ],
         "recommends": [],
@@ -8582,7 +8637,7 @@
       "id": "3bd76731d586b0af36a4",
       "name": "linux-modules-nvidia-535-open-nvidia-7.0",
       "version": "7.0.0",
-      "release": "1019.19~24.04.2+1",
+      "release": "1024.25~24.04.1",
       "architecture": "amd64",
       "summary": "Extra drivers for nvidia-535-open for the nvidia flavour (dummy transitional package)",
       "description": "Extra drivers for nvidia-535-open for the nvidia flavour (dummy transitional package)",
@@ -8924,7 +8979,7 @@
       "id": "3bde9ee25b34c7f40f79",
       "name": "qemu-efi-arm",
       "version": "2024.02",
-      "release": "2ubuntu0.9",
+      "release": "2ubuntu0.10",
       "architecture": "all",
       "summary": "UEFI firmware for 32-bit ARM virtual machines",
       "description": "UEFI firmware for 32-bit ARM virtual machines",
@@ -9304,7 +9359,7 @@
       "name": "libreoffice-l10n-bg",
       "epoch": "4",
       "version": "24.2.7",
-      "release": "0ubuntu0.24.04.6",
+      "release": "0ubuntu0.24.04.7",
       "architecture": "all",
       "summary": "office productivity suite -- Bulgarian language package",
       "description": "office productivity suite -- Bulgarian language package",
@@ -9313,7 +9368,7 @@
       "sourcePackage": "libreoffice",
       "category": "localization",
       "repository": "official",
-      "installedSize": 5754880,
+      "installedSize": 5755904,
       "dependencies": {
         "requires": [
           "libreoffice-common (>= 1:7.0.0~alpha~)",
